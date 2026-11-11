@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 # Local pilot: fresh local D1, both seeds, one full pipeline run, then a summary of what was
 # written and why anything was held. Nothing is deployed and AUTO_PUBLISH stays "false".
-# Needs ANTHROPIC_API_KEY in the environment (cloud environment secret or your shell);
-# without it the run stops after news collection.
+# Needs ANTHROPIC_API_KEY in the environment, or ISCHOOLWIKI_ANTHROPIC_KEY (cloud sessions filter
+# out ANTHROPIC_API_KEY from environment variables); without a key the run stops after news collection.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PORT=${PORT:-8787}
 TOKEN="pilot-$(date +%s)"
+ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY:-${ISCHOOLWIKI_ANTHROPIC_KEY:-}}"
 
 if [ -z "${ANTHROPIC_API_KEY:-}" ]; then
-  echo "ANTHROPIC_API_KEY is not set: collection only, no extraction or writing." >&2
+  echo "Neither ANTHROPIC_API_KEY nor ISCHOOLWIKI_ANTHROPIC_KEY is set: collection only, no extraction or writing." >&2
 fi
 # .dev.vars is git-ignored; written fresh so the key never lands in the repo or the command line.
 umask 077
