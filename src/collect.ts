@@ -27,6 +27,43 @@ export function parseFeed(xml: string): FeedItem[] {
   });
 }
 
+// For schools without RSS: article links on a news index page, limited to the same host and
+// the index's own path section, with the date taken from the /news/YYYY/M/D/ URL pattern.
+export function parseNewsIndex(html: string, indexUrl: string): FeedItem[] {
+  const base = new URL(indexUrl);
+  const section = base.pathname.replace(/[^/]*$/, "");
+  const seen = new Map<string, FeedItem>();
+  for (const m of html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    let url: URL;
+    try {
+      url = new URL(decodeEntities(m[1]!), base);
+    } catch {
+      continue;
+    }
+    const date = url.pathname.match(/\/news\/(\d{4})\/(\d{1,2})(?:\/(\d{1,2}))?\//);
+    if (url.host !== base.host || !url.pathname.startsWith(section) || !date) continue;
+    url.hash = "";
+    url.search = "";
+    const href = url.toString();
+    const text = decodeEntities(m[2]!.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+    const prev = seen.get(href);
+    if (prev && prev.title.length >= text.length) continue;
+    const slugTitle = url.pathname.split("/").filter(Boolean).pop()!.replace(/-/g, " ");
+    const [, y, mo, d] = date;
+    seen.set(href, {
+      url: href,
+      title: text.length >= 8 ? text : slugTitle,
+      summary: null,
+      published_at: new Date(Date.UTC(Number(y), Number(mo) - 1, Number(d ?? 1))).toISOString(),
+    });
+  }
+  return [...seen.values()];
+}
+
+export function parseNewsSource(body: string, url: string): FeedItem[] {
+  return /^\s*(<\?xml|<rss|<feed)/i.test(body) ? parseFeed(body) : parseNewsIndex(body, url);
+}
+
 function tag(block: string, name: string): string {
   const m = block.match(new RegExp(`<${name}\\b[^>]*>([\\s\\S]*?)<\\/${name}>`, "i"));
   if (!m) return "";

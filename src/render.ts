@@ -1,3 +1,5 @@
+import { OPERATOR } from "./operator";
+
 export function esc(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
@@ -68,6 +70,7 @@ header,main,footer{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-
 header{padding-block:1.25rem;border-bottom:1px solid var(--line);display:flex;gap:1rem;flex-wrap:wrap;align-items:baseline;font-family:system-ui,sans-serif}
 header a.home{font-weight:700;color:var(--fg);text-decoration:none;font-size:1.1rem}header nav{display:flex;gap:1rem;font-size:.95rem}
 main{padding-block:2rem}a{color:var(--accent)}h1{font-size:2rem;line-height:1.2;text-wrap:balance;margin:0 0 .75rem}h2{font-size:1.35rem;margin-top:2rem}
+.notice{border:1px solid var(--line);border-radius:6px;padding:.6rem .8rem;color:var(--muted);font:14px/1.5 system-ui,sans-serif}
 .tldr{border-left:3px solid var(--accent);padding:.25rem 0 .25rem 1rem;color:var(--fg);font-size:1.05rem}
 .meta,.sources{color:var(--muted);font:14px/1.5 system-ui,sans-serif}table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif}
 .scroll{overflow-x:auto}th,td{border-bottom:1px solid var(--line);padding:.5rem;text-align:left;vertical-align:top}
@@ -98,7 +101,9 @@ ${(meta.schema ?? []).map(jsonLd).join("\n")}
 <body>
 <header><a class="home" href="/">${esc(meta.site.name)}</a><nav><a href="/blog/">Articles</a><a href="/ko/blog/">한국어</a></nav></header>
 <main>${body}</main>
-<footer>${esc(meta.site.name)} — reference articles about international schools in Asia, written from schools' published information. Each article lists its sources.</footer>
+<footer>${meta.lang === "ko"
+    ? `${esc(meta.site.name)}는 학교가 공개한 자료로 작성한 아시아 국제학교 참고 사이트이며, 글마다 출처를 밝힙니다. 운영: ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/ko/about">운영자 정보</a>`
+    : `${esc(meta.site.name)} publishes reference pages about international schools in Asia, written from schools' published information; each page lists its sources. Operated by ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/about">About</a>`}</footer>
 </body>
 </html>`;
 }

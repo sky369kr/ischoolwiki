@@ -1,4 +1,5 @@
 import { runPipeline, unpublish, type Env, type School } from "./pipeline";
+import { CLIENT_NOTICE, OPERATOR } from "./operator";
 import { esc, markdownToHtml, page } from "./render";
 
 interface ArticleRow {
@@ -48,6 +49,7 @@ async function site(env: Env, url: URL): Promise<Response> {
   if (p === "/rss.xml") return xml(await rss(env));
   if (p === "/llms.txt") return text(await llmsTxt(env));
   if (p === "/") return html(await home(env, s));
+  if ((m = p.match(/^\/(?:(ko)\/)?about\/?$/))) return html(about(s, m[1] ?? "en"));
   if ((m = p.match(/^\/(?:(ko)\/)?blog\/?$/))) return html(await blogIndex(env, s, m[1] ?? "en"));
   if ((m = p.match(/^\/(?:(ko)\/)?blog\/([a-z0-9-]+)\/?$/))) return html(await articlePage(env, s, m[1] ?? "en", m[2]!));
   if ((m = p.match(/^\/wiki\/([a-z0-9-]+)\/?$/))) return html(await wikiPage(env, s, m[1]!));
@@ -71,6 +73,32 @@ async function home(env: Env, s: Site): Promise<string> {
 <h2>Compare by city</h2><ul class="plain">${cities.map((c) => `<li><a href="/compare/${c.city_slug}-international-schools">International schools in ${esc(c.city)}, ${esc(c.country)}</a> <span class="meta">${c.n} schools</span></li>`).join("")}</ul>
 <h2>Latest articles</h2>${articleList(latest, "en")}`;
   return page({ site: s, lang: "en", path: "/", title: "International schools in Asia", description: "Profiles, city comparisons and articles about international schools in Asia, with sources." }, body);
+}
+
+function about(s: Site, lang: string): string {
+  const ko = lang === "ko";
+  const rows: [string, string][] = ko
+    ? [["상호", OPERATOR.name], ["대표자", OPERATOR.representative], ["사업자등록번호", OPERATOR.registrationNumber], ["서비스 브랜드", OPERATOR.brand]]
+    : [["Business name", OPERATOR.name], ["Representative", OPERATOR.representative], ["Korean business registration no.", OPERATOR.registrationNumber], ["Brand", OPERATOR.brand]];
+  const body = ko
+    ? `<h1>운영자 정보</h1>
+<p>${esc(s.name)}는 ${esc(OPERATOR.name)}가 운영합니다. 같은 회사가 ${esc(OPERATOR.brand)}라는 이름으로 국제학교에 유료 AI 가시성(AEO/GEO) 서비스를 제공합니다. 이 사이트에 소개된 학교 중 일부는 그 서비스의 고객이며, 고객 학교의 페이지와 글에는 그 사실을 표시합니다.</p>
+<h2>작성 방식</h2>
+<p>글은 학교가 공개한 자료에서 확인한 사실만으로 AI가 작성하고, 발행 전에 모든 숫자와 고유명사를 출처 자료와 자동으로 대조합니다. 대조에 실패한 글은 발행하지 않습니다. 각 글 끝에 출처를 적습니다.</p>`
+    : `<h1>About ${esc(s.name)}</h1>
+<p>${esc(s.name)} is operated by ${esc(OPERATOR.name)}, a Korean company that also sells paid AI-visibility (AEO/GEO) services to international schools under the brand ${esc(OPERATOR.brand)}. Some schools covered here are clients of that service; their pages and articles say so.</p>
+<h2>How pages are written</h2>
+<p>Articles are drafted by AI using only facts confirmed in each school's published material. Before publication every figure and proper name is checked automatically against those sources, and an article that fails the check is not published. Each article lists its sources.</p>`;
+  const table = `<h2>${ko ? "사업자 정보" : "Business details"}</h2><div class="scroll"><table><tbody>${rows.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</tbody></table></div>`;
+  return page(
+    { site: s, lang, path: ko ? "/ko/about" : "/about", title: ko ? "운영자 정보" : "About", description: ko ? `${s.name} 운영자 정보` : `Who operates ${s.name}`, alternates: [{ lang: "en", path: "/about" }, { lang: "ko", path: "/ko/about" }] },
+    body + table,
+  );
+}
+
+function clientNotice(school: School | null, lang: string): string {
+  if (!school?.is_client) return "";
+  return `<p class="notice">${esc(lang === "ko" ? CLIENT_NOTICE.ko : CLIENT_NOTICE.en)}</p>`;
 }
 
 function articleList(rows: ArticleRow[], lang: string): string {
@@ -119,6 +147,7 @@ async function articlePage(env: Env, s: Site, lang: string, slug: string): Promi
   const body = `<article>
 <h1>${esc(a.title)}</h1>
 <p class="meta">${esc(a.published_at.slice(0, 10))}${school ? ` · <a href="/wiki/${school.slug}">${esc(school.name)}</a>` : ""}</p>
+${clientNotice(school, lang)}
 <p class="tldr">${esc(a.tldr)}</p>
 ${markdownToHtml(a.body_md)}
 ${faq.length ? `<h2>${labels.faq}</h2>${faq.map((f) => `<h3>${esc(f.question)}</h3><p>${esc(f.answer)}</p>`).join("")}` : ""}
@@ -141,6 +170,7 @@ async function wikiPage(env: Env, s: Site, slug: string): Promise<string> {
   }];
   const body = `<h1>${esc(school.name)}</h1>
 <p class="meta">${esc(school.city)}, ${esc(school.country)}${school.website ? ` · <a href="${esc(school.website)}" rel="noopener">Official website</a>` : ""} · <a href="/compare/${school.city_slug}-international-schools">Compare schools in ${esc(school.city)}</a></p>
+${clientNotice(school, "en")}
 <h2>Key facts</h2>
 ${facts.length ? `<div class="scroll"><table><thead><tr><th>Item</th><th>Value</th><th>As of</th><th>Source</th></tr></thead><tbody>${facts.map((f) => `<tr><td>${esc(humanKey(f.key))}</td><td>${esc(f.value)}${f.unit ? ` ${esc(f.unit)}` : ""}</td><td>${esc(f.as_of?.slice(0, 10) ?? "")}</td><td><a href="${esc(f.source_url)}" rel="nofollow noopener">link</a></td></tr>`).join("")}</tbody></table></div>` : `<p class="meta">No verified facts recorded yet.</p>`}
 <h2>Articles</h2>${articleList(articles, "en")}`;
@@ -185,7 +215,7 @@ async function sitemap(env: Env): Promise<string> {
   const rows = await published(env, "ORDER BY published_at DESC");
   const { results: schools } = await env.DB.prepare("SELECT slug, city_slug FROM schools WHERE active = 1").all<{ slug: string; city_slug: string }>();
   const urls = [
-    "/", "/blog/", "/ko/blog/",
+    "/", "/about", "/ko/about", "/blog/", "/ko/blog/",
     ...schools.map((x) => `/wiki/${x.slug}`),
     ...[...new Set(schools.map((x) => x.city_slug))].map((c) => `/compare/${c}-international-schools`),
     ...rows.map((a) => (a.lang === "en" ? `/blog/${a.slug}` : `/${a.lang}/blog/${a.slug}`)),

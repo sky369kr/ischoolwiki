@@ -1,4 +1,4 @@
-import { extractFacts, htmlToText, parseFeed } from "./collect";
+import { extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, translateArticle, writeArticle } from "./generate";
 import { verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
@@ -21,6 +21,7 @@ export interface School {
   country: string;
   website: string | null;
   news_feed: string | null;
+  is_client: number;
 }
 
 export interface RunReport {
@@ -59,7 +60,7 @@ async function collectNews(env: Env, school: School): Promise<string> {
   if (!school.news_feed) return "no feed configured";
   const res = await fetch(school.news_feed, { headers: { "user-agent": USER_AGENT } });
   if (!res.ok) throw new Error(`feed returned ${res.status}`);
-  const items = parseFeed(await res.text());
+  const items = parseNewsSource(await res.text(), school.news_feed);
   let added = 0;
   for (const item of items) {
     const r = await env.DB.prepare(
