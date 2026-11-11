@@ -48,6 +48,9 @@ const GENERIC_PROPER = new Set(
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
     "November", "December", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
     "Asia", "Europe", "Nord", "Anglia", "Education", "Oxbridge", "Ivy", "League", "Russell", "Group",
+    "City",
+    // ISO currency codes and common aliases; the amounts next to them are still checked as numbers.
+    "RMB", "CNY", "USD", "EUR", "GBP", "HKD", "SGD", "KRW", "JPY", "VND", "THB", "MYR", "IDR", "PHP", "TWD",
   ].map((w) => w.toLowerCase()),
 );
 
@@ -88,10 +91,12 @@ function articleText(d: ArticleDraft): string {
   return [d.title, d.tldr, d.body_md, ...d.faq.flatMap((f) => [f.question, f.answer])].join("\n");
 }
 
-// Markdown list and heading markers ("1.", "##") are structure, not claims.
+// Markdown list and heading markers ("1.", "##") are structure, not claims. Table rows become one
+// line per cell, so each cell starts like a sentence; separator rows ("|---|") disappear.
 function stripMarkdownStructure(text: string): string {
   return text
     .split("\n")
+    .flatMap((line) => (/^\s*\|/.test(line) ? line.split("|").filter((c) => !/^\s*:?-*:?\s*$/.test(c)) : [line]))
     .map((line) => line.replace(/^\s*(#{1,6}\s+|\d+[.)]\s+|[-*+]\s+)/, ""))
     .join("\n")
     .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1");
@@ -141,11 +146,31 @@ function allowedWords(ctx: VerifyContext): Set<string> {
   add(ctx.school.city);
   add(ctx.school.country);
   ctx.entities.forEach(add);
-  ctx.facts.forEach((f) => add(f.value));
+  ctx.facts.forEach((f) => add(`${f.value} ${f.unit ?? ""}`));
   return words;
 }
 
 const CONNECTORS = new Set(["of", "and", "the", "for", "de", "&", "at", "in"]);
+
+// Words that open questions and sentences ("Does BSB Shunyi ...?", "The ..."). At the start of a
+// sentence they are never part of a name, so the name after them is checked on its own.
+const SENTENCE_OPENERS = new Set(
+  [
+    "a", "an", "the", "do", "does", "did", "is", "are", "was", "were", "can", "could", "will", "would",
+    "should", "may", "must", "has", "have", "had", "what", "when", "where", "which", "who", "whom",
+    "whose", "why", "how", "if", "yes", "no", "this", "these", "that", "those", "its", "their",
+  ],
+);
+
+// A word passes when every capitalized piece of it is known: "American-style" and "P.R." are
+// checked as "American" and "P", "R". A lowercase piece ("style") is not a name.
+function isKnownWord(w: string, allowed: Set<string>): boolean {
+  const lw = w.toLowerCase();
+  if (CONNECTORS.has(lw) || allowed.has(lw)) return true;
+  const parts = w.split(/[.\-]+/).filter(Boolean);
+  if (parts.length < 2) return false;
+  return parts.every((p) => !isCapitalized(p) || allowed.has(p.toLowerCase()));
+}
 
 // Sentence-initial words are skipped (they are capitalized anyway), so a lone invented
 // name at the very start of a sentence is not caught; the prompt asks for sentence-case
@@ -159,17 +184,14 @@ export function unknownEntities(text: string, ctx: VerifyContext): string[] {
     let run: string[] = [];
     const flush = () => {
       while (run.length && CONNECTORS.has(run[run.length - 1]!.toLowerCase())) run.pop();
-      const bad = run.filter((w) => {
-        const lw = bare(w).toLowerCase();
-        return isCapitalized(bare(w)) && !CONNECTORS.has(lw) && !allowed.has(lw);
-      });
+      const bad = run.filter((w) => isCapitalized(bare(w)) && !isKnownWord(bare(w), allowed));
       if (bad.length) found.add(run.map(bare).join(" "));
       run = [];
     };
     words.forEach((raw, i) => {
       const w = bare(raw);
       if (!w) return flush();
-      if (i === 0 && !(words[1] && isCapitalized(bare(words[1])))) return;
+      if (i === 0 && (SENTENCE_OPENERS.has(w.toLowerCase()) || !(words[1] && isCapitalized(bare(words[1]))))) return;
       if (isCapitalized(w)) run.push(raw);
       else if (run.length && CONNECTORS.has(w.toLowerCase())) run.push(raw);
       else flush();

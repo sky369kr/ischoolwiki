@@ -85,4 +85,36 @@ describe("verifyArticle", () => {
     );
     expect(r.problems).toEqual([expect.objectContaining({ kind: "unsupported_number", detail: expect.stringContaining('"37"') })]);
   });
+  it("allows currency codes, unit words, hyphenated and dotted forms of known words", () => {
+    const fees = { ...ctx, facts: [...ctx.facts, { id: 4, key: "fee", value: "249,500", unit: "RMB per year, Kindergarten, P.R. China", source_url: "https://example.org/fees" }] };
+    const r = verifyArticle(
+      draft("Fees are 249,500 RMB (CNY) per year for Kindergarten. It follows a British-style curriculum in Beijing, P.R. China."),
+      fees,
+    );
+    expect(r.problems).toEqual([]);
+  });
+
+  it("treats table cells and question openers as sentence starts", () => {
+    const r = verifyArticle(
+      draft("| Stage | Annual fee |\n|---|---|\n| Primary | USD 32,000 |", {
+        faq: [{ question: "Does British School of Beijing teach Mandarin?", answer: "Yes, Mandarin is taught." }],
+      }),
+      ctx,
+    );
+    expect(r.problems).toEqual([]);
+  });
+
+  it("still holds invented names after an opener, in a table cell or inside a hyphenated word", () => {
+    const r = verifyArticle(
+      draft("A Monster Mash took place.\n\n| Event | Notes |\n|---|---|\n| Spring Gala | Held at Westfield Hall |\n\nIt is a Harvard-style programme.", {
+        faq: [{ question: "Did Stanford visit?", answer: "No." }],
+      }),
+      ctx,
+    );
+    const names = r.problems.filter((p) => p.kind === "unknown_entity").map((p) => p.detail).join(" ");
+    expect(names).toContain("Monster Mash");
+    expect(names).toContain("Westfield Hall");
+    expect(names).toContain("Harvard-style");
+    expect(names).toContain("Stanford");
+  });
 });

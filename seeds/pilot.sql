@@ -15,3 +15,9 @@ INSERT INTO schools (slug, name, city, city_slug, country, website, news_feed, i
    'partner-china-dalian-american-international-school', 1)
 ON CONFLICT (slug) DO UPDATE SET website = excluded.website, news_feed = excluded.news_feed, ispp_school_id = excluded.ispp_school_id,
   is_client = excluded.is_client;
+
+-- Short names the schools go by, so articles may use them. DAIS is listed in myispp's own aliases
+-- for the school; "BSB Shunyi" is the school's own short name in its website path and fee PDFs.
+INSERT OR IGNORE INTO entities (school_slug, name, source_url) VALUES
+  ('bsb-shunyi', 'BSB Shunyi', 'https://www.nordangliaeducation.com/bsb-shunyi'),
+  ('dais', 'DAIS', 'https://myispp.com/data/master.json');
