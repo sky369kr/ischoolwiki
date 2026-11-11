@@ -93,7 +93,7 @@ const ExtractionSchema = z.object({
 const EXTRACT_SYSTEM = `You extract verifiable facts about one school from a page the school published.
 Return only facts the page states outright about this school: results, enrolment, fees, programmes offered, admissions, awards, campus changes, dates.
 For each fact give a snake_case key, the value exactly as written on the page, a unit (empty string if none), and quote: the exact sentence or phrase from the page that states it, copied character for character.
-Also list proper names the page mentions in connection with the school (programmes, universities graduates entered, named facilities, partners), each with its exact quote.
+Also list proper names the page mentions in connection with the school (programmes, universities graduates entered, named facilities, partners, named school events, festivals and holidays the school marks, competitions), each with its exact quote.
 Leave out opinions, marketing claims ("world-class"), and anything about other schools. An empty list is a correct answer.`;
 
 export interface ExtractedFact { key: string; value: string; unit: string | null; quote: string }

@@ -152,13 +152,14 @@ function allowedWords(ctx: VerifyContext): Set<string> {
 
 const CONNECTORS = new Set(["of", "and", "the", "for", "de", "&", "at", "in"]);
 
-// Words that open questions and sentences ("Does BSB Shunyi ...?", "The ..."). At the start of a
+// Words that open questions and sentences ("Does BSB Shunyi ...?", "The ...", "On October 31 ..."). At the start of a
 // sentence they are never part of a name, so the name after them is checked on its own.
 const SENTENCE_OPENERS = new Set(
   [
     "a", "an", "the", "do", "does", "did", "is", "are", "was", "were", "can", "could", "will", "would",
     "should", "may", "must", "has", "have", "had", "what", "when", "where", "which", "who", "whom",
     "whose", "why", "how", "if", "yes", "no", "this", "these", "that", "those", "its", "their",
+    "on", "during", "after", "before", "from", "since", "by", "with", "until", "for", "at", "in",
   ],
 );
 

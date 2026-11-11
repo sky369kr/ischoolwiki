@@ -104,6 +104,17 @@ describe("verifyArticle", () => {
     expect(r.problems).toEqual([]);
   });
 
+  it("treats a leading preposition as a sentence start", () => {
+    const r = verifyArticle(draft("On October 31, students visited the campus. During March, families toured it."), ctx);
+    expect(r.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+  });
+
+  it("still holds an invented name after a leading preposition", () => {
+    const r = verifyArticle(draft("After Westfield Gala, families went home."), ctx);
+    const names = r.problems.filter((p) => p.kind === "unknown_entity").map((p) => p.detail).join(" ");
+    expect(names).toContain("Westfield Gala");
+  });
+
   it("still holds invented names after an opener, in a table cell or inside a hyphenated word", () => {
     const r = verifyArticle(
       draft("A Monster Mash took place.\n\n| Event | Notes |\n|---|---|\n| Spring Gala | Held at Westfield Hall |\n\nIt is a Harvard-style programme.", {
