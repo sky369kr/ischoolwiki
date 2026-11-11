@@ -97,3 +97,4 @@ npx wrangler secret put ADMIN_TOKEN
 - [x] 운영자 정보 `/about`, `/ko/about`, 하단 표기. 상호·대표자·사업자등록번호·브랜드만 공개하고 주소는 뺌 (`src/operator.ts`)
 - [x] 고객 학교 표시: `schools.is_client = 1`이면 그 학교의 개요·글 페이지에 유료 서비스 관계를 밝히는 문구가 나옴
 - [ ] 파일럿으로 실제 Claude API 호출을 끝까지 돌려 보고 보류율 확인 → 그 뒤 `AUTO_PUBLISH = "true"`
+  - `./scripts/pilot.sh`: 로컬 D1을 새로 만들고 시드를 넣은 뒤 파이프라인을 한 번 돌려 글·보류 사유를 보여 줌. `ANTHROPIC_API_KEY`가 환경에 있어야 함(클라우드 환경 시크릿). 키 없이 돌린 2026-11-11 시험에서 myispp 가져오기(DAIS 10건)와 뉴스 수집(BSB 20건, DAIS 11건)까지 확인
