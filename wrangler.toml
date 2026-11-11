@@ -1,0 +1,29 @@
+name = "ischoolwiki"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Route is attached only at deploy time, after the user approves going public.
+# routes = [{ pattern = "ischoolwiki.com/*", zone_name = "ischoolwiki.com" }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ischoolwiki"
+database_id = "REPLACE_AFTER_wrangler_d1_create"
+migrations_dir = "migrations"
+
+[triggers]
+# 01:17 UTC daily: collect news, then generate/verify/publish.
+crons = ["17 1 * * *"]
+
+[vars]
+SITE_URL = "https://ischoolwiki.com"
+SITE_NAME = "iSchoolWiki"
+MAX_POSTS_PER_SCHOOL_PER_MONTH = "5"
+# "false" keeps the pipeline writing held/verified drafts without publishing.
+AUTO_PUBLISH = "false"
+
+# Secrets (set with `wrangler secret put`, never in this file or in chat):
+#   ANTHROPIC_API_KEY  - article generation
+#   ADMIN_TOKEN        - bearer token for /admin/* routes
+#   ALERT_WEBHOOK_URL  - optional; receives a JSON POST when an article is held
