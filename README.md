@@ -55,6 +55,10 @@ npx wrangler d1 execute ischoolwiki --local --file seeds/pilot.sql
 ```
 
 ```bash
+npx wrangler d1 execute ischoolwiki --local --file seeds/bsb-shunyi-fees.sql
+```
+
+```bash
 npx wrangler dev --var ADMIN_TOKEN:localtest
 ```
 
@@ -86,8 +90,9 @@ npx wrangler secret put ADMIN_TOKEN
 - [x] D1 스키마, Cron 파이프라인, 자동 검증, 버전·일괄 내리기
 - [x] 테스트 25개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
 - [x] myispp 기본 팩트 어댑터 (`src/ispp.ts`). 조사 결과 `ispp-school-api` Worker는 게시글·회원 API라 학교 데이터가 없고, 학교 데이터는 myispp.com의 정적 `/data/master.json`에 있음. `tuition-collector` Worker(KV)는 제3자 사이트에서 긁은 값이고 출처 URL이 없어 쓰지 않음
-- [ ] BSB Shunyi는 myispp의 학비 출처가 URL이 아니라 문구여서 팩트 0건. myispp 쪽에 실제 PDF URL이 들어가면 자동으로 들어옴
-- [x] 원격 D1 `ischoolwiki` 생성(APAC), 마이그레이션 0001~0003 적용 (`d1_migrations`에 기록되어 있어 `npm run db:migrate:remote`가 다시 실행하지 않음). 원격에 시드는 아직 넣지 않음
+- [x] BSB Shunyi 학비: myispp의 출처가 URL이 아니어서 어댑터로는 0건. 대신 학교가 공개한 2026-2027 학비 PDF 두 개(학비표·학비 정책)에서 40건을 `seeds/bsb-shunyi-fees.sql`로 넣음(`source_kind = 'manual'`, 은행 계좌·연락처는 제외). myispp 가져오기는 `ispp_api`만 지우므로 이 팩트는 유지됨. 다음 학년도 학비표가 나오면 이 시드를 새로 만들어야 함
+- [x] 원격 D1 `ischoolwiki` 생성(APAC), 마이그레이션 0001~0003 적용 (`d1_migrations`에 기록되어 있어 `npm run db:migrate:remote`가 다시 실행하지 않음). 원격에 `seeds/pilot.sql`, `seeds/bsb-shunyi-fees.sql` 적용. DAIS의 `ispp_api` 팩트는 배포 후 첫 실행 때 들어옴
+- [x] 파일럿 두 학교 모두 유료 고객(`is_client = 1`, 2026-11-11 운영자 확인)
 - [x] 파일럿 두 학교 주소 (`seeds/pilot.sql`). 둘 다 RSS가 없어 뉴스 목록 페이지를 읽음. 로컬 실행에서 BSB Shunyi 20건, DAIS 11건 수집 확인
 - [x] 운영자 정보 `/about`, `/ko/about`, 하단 표기. 상호·대표자·사업자등록번호·브랜드만 공개하고 주소는 뺌 (`src/operator.ts`)
 - [x] 고객 학교 표시: `schools.is_client = 1`이면 그 학교의 개요·글 페이지에 유료 서비스 관계를 밝히는 문구가 나옴
