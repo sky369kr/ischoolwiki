@@ -1,4 +1,4 @@
-import { runPipeline, unpublish, type Env, type School } from "./pipeline";
+import { runPipeline, syncIspp, unpublish, type Env, type School } from "./pipeline";
 import { CLIENT_NOTICE, OPERATOR } from "./operator";
 import { esc, markdownToHtml, page } from "./render";
 
@@ -252,6 +252,7 @@ async function admin(req: Request, env: Env, url: URL): Promise<Response> {
     return new Response("Unauthorized", { status: 401 });
   }
   if (req.method === "POST" && url.pathname === "/admin/run") return Response.json(await runPipeline(env));
+  if (req.method === "POST" && url.pathname === "/admin/import-ispp") return Response.json({ ispp: await syncIspp(env) });
   if (req.method === "POST" && url.pathname === "/admin/unpublish") {
     const body = (await req.json()) as { run_id?: string; article_id?: number; reason?: string };
     if (!body.run_id && typeof body.article_id !== "number") return new Response("run_id or article_id required", { status: 400 });

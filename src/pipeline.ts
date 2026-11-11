@@ -1,5 +1,6 @@
 import { extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, translateArticle, writeArticle } from "./generate";
+import { fetchIsppMaster, importIsppFacts } from "./ispp";
 import { verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
 export interface Env {
@@ -22,10 +23,12 @@ export interface School {
   website: string | null;
   news_feed: string | null;
   is_client: number;
+  ispp_school_id: string | null;
 }
 
 export interface RunReport {
   run_id: string;
+  ispp: string[];
   schools: { slug: string; steps: string[] }[];
 }
 
@@ -36,8 +39,8 @@ const PAGE_CHAR_LIMIT = 60000;
 
 export async function runPipeline(env: Env, now = new Date()): Promise<RunReport> {
   const runId = `run_${now.toISOString()}`;
-  const report: RunReport = { run_id: runId, schools: [] };
   const { results: schools } = await env.DB.prepare("SELECT * FROM schools WHERE active = 1").all<School>();
+  const report: RunReport = { run_id: runId, ispp: await syncIspp(env, schools), schools: [] };
   for (const school of schools) {
     const steps: string[] = [];
     report.schools.push({ slug: school.slug, steps });
@@ -54,6 +57,15 @@ export async function runPipeline(env: Env, now = new Date()): Promise<RunReport
     }
   }
   return report;
+}
+
+export async function syncIspp(env: Env, schools?: School[]): Promise<string[]> {
+  try {
+    const list = schools ?? (await env.DB.prepare("SELECT * FROM schools WHERE active = 1").all<School>()).results;
+    return await importIsppFacts(env.DB, list, () => fetchIsppMaster(USER_AGENT));
+  } catch (err) {
+    return [`failed - ${err instanceof Error ? err.message : String(err)}`];
+  }
 }
 
 async function collectNews(env: Env, school: School): Promise<string> {

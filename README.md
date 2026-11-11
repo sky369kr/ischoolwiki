@@ -11,7 +11,7 @@ ischoolwiki.com: 아시아 국제학교 위키 + 도시별 비교 + 오토 블�
 | `/blog/`, `/blog/{slug}` | 영어 글. TL;DR, FAQ, 출처 목록 |
 | `/ko/blog/`, `/ko/blog/{slug}` | 한국어 번역 |
 | `/sitemap.xml`, `/rss.xml`, `/llms.txt`, `/robots.txt` | 발행된 글 기준 자동 생성 |
-| `/admin/run`, `/admin/held`, `/admin/unpublish` | `Authorization: Bearer $ADMIN_TOKEN` 필요 |
+| `/admin/run`, `/admin/import-ispp`, `/admin/held`, `/admin/unpublish` | `Authorization: Bearer $ADMIN_TOKEN` 필요 |
 
 글 페이지에는 BlogPosting(+SpeakableSpecification), FAQPage, BreadcrumbList, 학교 페이지에는 EducationalOrganization, 비교 페이지에는 ItemList JSON-LD가 들어갑니다.
 
@@ -19,6 +19,7 @@ ischoolwiki.com: 아시아 국제학교 위키 + 도시별 비교 + 오토 블�
 
 학교마다 한 번에 하나씩, 아래 순서로 돕니다. 한 단계가 실패해도 다음 학교는 계속 진행합니다.
 
+0. **myispp 기본 팩트** `src/ispp.ts` — 실행마다 한 번 `https://myispp.com/data/master.json`을 읽어 `schools.ispp_school_id`가 있는 학교의 `ispp_api` 팩트를 통째로 바꿉니다. 학비 데이터(`isdFees`)만 쓰고, myispp 상태가 `verified`이며 `isdFees.source`가 **그 학교 자체 도메인의 https URL**일 때만 넣습니다. 추정치(`tuitionRange`), 계산값(`firstYearCost`, `earlyBird`), 출처 없는 필드, 금액 없는 항목, 영어 이름이 없는 항목은 넣지 않습니다. 학년·학년도는 `unit`에 넣어 검증기가 글 속 숫자로 확인할 수 있게 합니다. myispp를 못 읽으면 아무것도 지우지 않습니다.
 1. **수집** `src/collect.ts` — `schools.news_feed`에서 새 소식을 `source_items`에 저장. RSS/Atom이면 피드로, 아니면 뉴스 목록 HTML로 읽고 같은 사이트·같은 경로 아래의 `/news/YYYY/M/D/` 링크만 받음
 2. **사실 추출** — 새 소식 페이지를 읽고 Claude가 사실과 고유명사를 뽑음. **원문에 인용문이 그대로 있고 그 인용문에 값이 들어 있을 때만** `facts` / `entities`에 저장
 3. **글 생성** `src/generate.ts` — 팩트 DB와 새 소식만 재료로 영어 글 작성. 재료가 부족하면 모델이 `skip`으로 거절할 수 있음. 새 소식이 없으면 쓰지 않음. 월 최대 편수는 `MAX_POSTS_PER_SCHOOL_PER_MONTH`
@@ -63,11 +64,7 @@ npm test
 
 ## 배포 (사용자 승인 후)
 
-```bash
-npx wrangler d1 create ischoolwiki
-```
-
-출력된 `database_id`를 `wrangler.toml`에 넣고:
+D1은 이미 만들어져 있고 `database_id`가 `wrangler.toml`에 들어 있습니다. 새 마이그레이션이 생기면:
 
 ```bash
 npm run db:migrate:remote
@@ -87,8 +84,10 @@ npx wrangler secret put ADMIN_TOKEN
 
 - [x] 라우팅, 템플릿, Schema.org, sitemap/RSS/llms.txt/robots.txt
 - [x] D1 스키마, Cron 파이프라인, 자동 검증, 버전·일괄 내리기
-- [x] 테스트 16개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
-- [ ] `ispp-school-api` Worker를 읽고 학교 기본 팩트를 `facts`(`source_kind = 'ispp_api'`)로 넣는 어댑터 작성. 아직 그 Worker의 응답 구조를 모름
+- [x] 테스트 25개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
+- [x] myispp 기본 팩트 어댑터 (`src/ispp.ts`). 조사 결과 `ispp-school-api` Worker는 게시글·회원 API라 학교 데이터가 없고, 학교 데이터는 myispp.com의 정적 `/data/master.json`에 있음. `tuition-collector` Worker(KV)는 제3자 사이트에서 긁은 값이고 출처 URL이 없어 쓰지 않음
+- [ ] BSB Shunyi는 myispp의 학비 출처가 URL이 아니라 문구여서 팩트 0건. myispp 쪽에 실제 PDF URL이 들어가면 자동으로 들어옴
+- [x] 원격 D1 `ischoolwiki` 생성(APAC), 마이그레이션 0001~0003 적용 (`d1_migrations`에 기록되어 있어 `npm run db:migrate:remote`가 다시 실행하지 않음). 원격에 시드는 아직 넣지 않음
 - [x] 파일럿 두 학교 주소 (`seeds/pilot.sql`). 둘 다 RSS가 없어 뉴스 목록 페이지를 읽음. 로컬 실행에서 BSB Shunyi 20건, DAIS 11건 수집 확인
 - [x] 운영자 정보 `/about`, `/ko/about`, 하단 표기. 상호·대표자·사업자등록번호·브랜드만 공개하고 주소는 뺌 (`src/operator.ts`)
 - [x] 고객 학교 표시: `schools.is_client = 1`이면 그 학교의 개요·글 페이지에 유료 서비스 관계를 밝히는 문구가 나옴
