@@ -24,10 +24,15 @@ npx wrangler d1 migrations apply ischoolwiki --local > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/pilot.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/bsb-shunyi-fees.sql > /dev/null
 
+if curl -s -o /dev/null "http://127.0.0.1:$PORT/robots.txt"; then
+  echo "Port $PORT is already serving something (a leftover wrangler dev?). Stop it or set PORT." >&2
+  exit 1
+fi
 LOG=$(mktemp)
 npx wrangler dev --port "$PORT" > "$LOG" 2>&1 &
 DEV=$!
-trap 'kill $DEV 2>/dev/null; rm -f .dev.vars' EXIT
+# kill $DEV alone stops npx but leaves wrangler and workerd running on the port.
+trap 'pkill -f "wrangler dev --port $PORT" 2>/dev/null; kill $DEV 2>/dev/null; rm -f .dev.vars' EXIT
 for _ in $(seq 1 60); do curl -s -o /dev/null "http://127.0.0.1:$PORT/robots.txt" && break; sleep 1; done
 
 echo "== pipeline run"
