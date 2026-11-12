@@ -88,7 +88,7 @@ npx wrangler secret put ADMIN_TOKEN
 
 - [x] 라우팅, 템플릿, Schema.org, sitemap/RSS/llms.txt/robots.txt
 - [x] D1 스키마, Cron 파이프라인, 자동 검증, 버전·일괄 내리기
-- [x] 테스트 25개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
+- [x] 테스트 33개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
 - [x] myispp 기본 팩트 어댑터 (`src/ispp.ts`). 조사 결과 `ispp-school-api` Worker는 게시글·회원 API라 학교 데이터가 없고, 학교 데이터는 myispp.com의 정적 `/data/master.json`에 있음. `tuition-collector` Worker(KV)는 제3자 사이트에서 긁은 값이고 출처 URL이 없어 쓰지 않음
 - [x] BSB Shunyi 학비: myispp의 출처가 URL이 아니어서 어댑터로는 0건. 대신 학교가 공개한 2026-2027 학비 PDF 두 개(학비표·학비 정책)에서 40건을 `seeds/bsb-shunyi-fees.sql`로 넣음(`source_kind = 'manual'`, 은행 계좌·연락처는 제외). myispp 가져오기는 `ispp_api`만 지우므로 이 팩트는 유지됨. 다음 학년도 학비표가 나오면 이 시드를 새로 만들어야 함
 - [x] 원격 D1 `ischoolwiki` 생성(APAC), 마이그레이션 0001~0003 적용 (`d1_migrations`에 기록되어 있어 `npm run db:migrate:remote`가 다시 실행하지 않음). 원격에 `seeds/pilot.sql`, `seeds/bsb-shunyi-fees.sql` 적용. DAIS의 `ispp_api` 팩트는 배포 후 첫 실행 때 들어옴
@@ -96,5 +96,8 @@ npx wrangler secret put ADMIN_TOKEN
 - [x] 파일럿 두 학교 주소 (`seeds/pilot.sql`). 둘 다 RSS가 없어 뉴스 목록 페이지를 읽음. 로컬 실행에서 BSB Shunyi 20건, DAIS 11건 수집 확인
 - [x] 운영자 정보 `/about`, `/ko/about`, 하단 표기. 상호·대표자·사업자등록번호·브랜드만 공개하고 주소는 뺌 (`src/operator.ts`)
 - [x] 고객 학교 표시: `schools.is_client = 1`이면 그 학교의 개요·글 페이지에 유료 서비스 관계를 밝히는 문구가 나옴
+- [x] 2차 검증(근거 검사, `src/grounding.ts`): 규칙 검증 뒤 모델이 영어 글의 문장마다 팩트·뉴스에 근거가 있는지 읽고, 근거 없는 추론·일반화·평가 문장을 `unsupported_claim`으로 보류함. 검사가 실패하면 보류(fail closed). 한국어 번역은 통과한 영어 글을 옮긴 것이라 숫자 검사만 함
+- [x] 팩트 인용문 저장: 마이그레이션 0004로 `facts.quote` 추가. 학교 사이트에서 추출한 팩트는 원문 문장을 함께 저장해 나중에 값을 감사할 수 있음(myispp·수동 팩트는 NULL). **원격 D1에는 아직 0004를 적용하지 않았음** — 배포 전에 `npm run db:migrate:remote` 필요
+- [x] 작성 어조(`src/generate.ts`): 학교가 공개한 내용을 담담하게 전달. 칭찬·비판 같은 평가 없음, 다른 학교와 비교 없음, 자료에 없는 내용은 부모에게 꼭 필요한 것만 끝부분에 한두 문장으로 중립적으로 언급. 예시로도 팩트에 없는 숫자·학년을 쓰지 않음
 - [ ] 파일럿으로 실제 Claude API 호출을 끝까지 돌려 보고 보류율 확인 → 그 뒤 `AUTO_PUBLISH = "true"`
   - `./scripts/pilot.sh`: 로컬 D1을 새로 만들고 시드를 넣은 뒤 파이프라인을 한 번 돌려 글·보류 사유를 보여 줌. `ANTHROPIC_API_KEY`가 환경에 있어야 함. 클라우드 세션은 이 이름을 환경 변수에서 걸러내므로 클라우드 환경 변수에는 `ISCHOOLWIKI_ANTHROPIC_KEY=키`로 넣음(스크립트가 둘 다 읽음). 키 없이 돌린 2026-11-11 시험에서 myispp 가져오기(DAIS 10건)와 뉴스 수집(BSB 20건, DAIS 11건)까지 확인

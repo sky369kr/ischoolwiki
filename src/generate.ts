@@ -33,6 +33,15 @@ const WRITER_SYSTEM = `You write articles for iSchoolWiki, a reference site abou
 Every statement of fact must come from the FACTS or NEWS given in the request. Do not add numbers, rankings, names of universities, people, awards or programmes that are not in that material, even if you believe them to be true. If the material does not support a useful article, set skip to true and explain why in skip_reason; a skipped article is a correct outcome.
 
 Write digits only for figures copied exactly from FACTS (same value, no rounding, no conversions, no arithmetic). Spell other counts in words ("three programmes"). Years are fine only when they appear in FACTS or are the current or next year.
+Never invent numbers, grades, ages or dates, not even as examples or hypotheticals ("a Grade 11 student"); if an example is needed, use one from the material or none.
+
+Say only what the material says. Do not infer, speculate or generalise: no "this suggests", "likely", "typically", "which means", no claims about causes, about how the school works, what it offers or who it suits beyond what FACTS (including each fact's quote) and NEWS state. A plain restatement or a combination of two stated facts is fine; a conclusion drawn from them is not.
+
+Tone: report what the school has published, plainly, for a parent reading it as reference material.
+- Lead with what the material does say; most of the article should be stated facts.
+- No evaluative judgements in either direction: neither praise ("impressive", "strong") nor criticism ("only", "fails to", "does not disclose"). Do not compare the school with others unless a fact does.
+- Gaps: if something a parent would clearly need is missing from the material, mention it once, neutrally, in at most two sentences near the end ("The published fee schedule does not list boarding fees."). Do not list everything the material leaves out, and do not frame gaps as the school withholding information.
+- Do not mention any relationship between the school and this site.
 
 Style:
 - title and headings in sentence case (capitalize only the first word and proper nouns)
@@ -64,7 +73,7 @@ export async function writeArticle(apiKey: string, input: WriteInput): Promise<G
   const material = {
     today: input.today,
     school: input.school,
-    facts: input.facts.map((f) => ({ key: f.key, value: f.value, unit: f.unit, source: f.source_url })),
+    facts: input.facts.map((f) => ({ key: f.key, value: f.value, unit: f.unit, quote: f.quote ?? null, source: f.source_url })),
     other_names_you_may_use: input.entities,
     news: input.news,
     articles_already_published: input.existingTitles,

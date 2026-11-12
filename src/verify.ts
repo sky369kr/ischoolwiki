@@ -4,6 +4,7 @@ export interface FactRow {
   value: string;
   unit: string | null;
   source_url: string;
+  quote?: string | null;
 }
 
 export interface ArticleDraft {
@@ -26,7 +27,8 @@ export type Problem =
   | { kind: "empty"; detail: string }
   | { kind: "unsupported_number"; detail: string }
   | { kind: "unknown_entity"; detail: string }
-  | { kind: "duplicate"; detail: string };
+  | { kind: "duplicate"; detail: string }
+  | { kind: "unsupported_claim"; detail: string };
 
 export interface VerifyResult {
   passed: boolean;

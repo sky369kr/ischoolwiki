@@ -1,5 +1,6 @@
 import { extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, translateArticle, writeArticle } from "./generate";
+import { checkGrounding } from "./grounding";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
 import { verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
@@ -97,8 +98,8 @@ async function extractNewFacts(env: Env, school: School): Promise<string> {
       const stmts = [
         ...facts.map((f) =>
           env.DB.prepare(
-            "INSERT OR IGNORE INTO facts (school_slug, key, value, unit, as_of, source_url, source_kind) VALUES (?, ?, ?, ?, ?, ?, 'school_site')",
-          ).bind(school.slug, f.key, f.value, f.unit, item.published_at, item.url),
+            "INSERT OR IGNORE INTO facts (school_slug, key, value, unit, as_of, source_url, source_kind, quote) VALUES (?, ?, ?, ?, ?, ?, 'school_site', ?)",
+          ).bind(school.slug, f.key, f.value, f.unit, item.published_at, item.url, f.quote),
         ),
         ...names.map((n) =>
           env.DB.prepare("INSERT OR IGNORE INTO entities (school_slug, name, source_url) VALUES (?, ?, ?)").bind(school.slug, n, item.url),
@@ -120,7 +121,7 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   ).bind(school.slug, monthStart.replace("T", " ").slice(0, 19)).first<{ n: number }>();
   if ((thisMonth?.n ?? 0) >= Number(env.MAX_POSTS_PER_SCHOOL_PER_MONTH)) return "monthly limit reached";
 
-  const facts = (await env.DB.prepare("SELECT id, key, value, unit, source_url FROM facts WHERE school_slug = ?").bind(school.slug).all<FactRow>()).results;
+  const facts = (await env.DB.prepare("SELECT id, key, value, unit, source_url, quote FROM facts WHERE school_slug = ?").bind(school.slug).all<FactRow>()).results;
   if (!facts.length) return "no facts yet";
 
   const { results: news } = await env.DB.prepare(
@@ -144,7 +145,12 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
 
   const draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
   const ctx = { school, facts, entities, now };
-  const result = verifyArticle(draft, { ...ctx, lang: "en", priorArticles: prior });
+  const ruleResult = verifyArticle(draft, { ...ctx, lang: "en", priorArticles: prior });
+  // Rules catch numbers and names; the grounding check reads each sentence against the material.
+  const newsForCheck = news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));
+  const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, draft, { school: { name: school.name, city: school.city, country: school.country }, facts, entities, news: newsForCheck });
+  const problems = [...ruleResult.problems, ...grounding];
+  const result = { ...ruleResult, problems, passed: problems.length === 0 };
   const slug = await uniqueSlug(env, "en", `${school.slug}-${sanitizeSlug(generated.slug)}`);
   const sources = sourcesFor(facts, result.usedFactIds, news.map((n) => n.url));
   const articleId = await saveArticle(env, {
