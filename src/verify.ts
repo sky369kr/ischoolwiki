@@ -49,7 +49,7 @@ const GENERIC_PROPER = new Set(
   [
     "IB", "IBDP", "DP", "MYP", "PYP", "CP", "IGCSE", "GCSE", "A-Level", "A-Levels", "AP", "SAT", "ACT", "EAL",
     "STEAM", "STEM", "CIS", "WASC", "COBIS", "BSO", "CAS", "TOK", "EE", "FAQ", "UK", "US", "USA",
-    "International", "Baccalaureate", "Diploma", "Programme", "Program", "Primary", "Middle", "Years",
+    "A", "Level", "Levels", "International", "Baccalaureate", "Diploma", "Programme", "Program", "Primary", "Middle", "Years",
     "Year", "Grade", "Key", "Stage", "Early", "Secondary", "Sixth", "Form", "British", "American",
     "English", "Mandarin", "Chinese", "Korean", "Vietnamese", "Japanese", "Spanish", "French", "German",
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",

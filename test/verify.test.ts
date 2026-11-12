@@ -146,6 +146,11 @@ describe("verifyArticle", () => {
     expect(bad.problems.map((p) => p.detail).join(" ")).toContain('"13"');
   });
 
+  it("allows A Level written with a space", () => {
+    const r = verifyArticle(draft("Students can take A Levels or the IB Diploma.", { faq: [{ question: "Does the school offer AP or A Levels?", answer: "It offers A Levels." }] }), ctx);
+    expect(r.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+  });
+
   it("still holds invented names after an opener, in a table cell or inside a hyphenated word", () => {
     const r = verifyArticle(
       draft("A Monster Mash took place.\n\n| Event | Notes |\n|---|---|\n| Spring Gala | Held at Westfield Hall |\n\nIt is a Harvard-style programme.", {

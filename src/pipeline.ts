@@ -1,5 +1,5 @@
 import { extractFacts, htmlToText, parseNewsSource } from "./collect";
-import { MODEL, translateArticle, writeArticle } from "./generate";
+import { MODEL, reviseArticle, translateArticle, writeArticle } from "./generate";
 import { checkGrounding } from "./grounding";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
 import { dateNumbers, publishedDateNumbers, verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
@@ -133,25 +133,43 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   if (!news.length && prior.length) return "no new material; nothing written";
 
   const entities = (await env.DB.prepare("SELECT name FROM entities WHERE school_slug = ?").bind(school.slug).all<{ name: string }>()).results.map((e) => e.name);
-  const generated = await writeArticle(env.ANTHROPIC_API_KEY, {
-    school: { name: school.name, city: school.city, country: school.country },
+  const schoolInfo = { name: school.name, city: school.city, country: school.country };
+  const newsForModel = news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));
+  const writeInput = {
+    school: schoolInfo,
     facts,
     entities,
-    news: news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at })),
+    news: newsForModel,
     existingTitles: prior.map((p) => p.title),
     today: now.toISOString().slice(0, 10),
-  });
+  };
+  const generated = await writeArticle(env.ANTHROPIC_API_KEY, writeInput);
   if (generated.skip) return `model skipped: ${generated.skip_reason}`;
 
-  const draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
   const newsDates = publishedDateNumbers(news.map((n) => n.published_at));
   const ctx = { school, facts, entities, newsTitles: news.map((n) => n.title), allowedNumbers: newsDates, now };
-  const ruleResult = verifyArticle(draft, { ...ctx, lang: "en", priorArticles: prior });
   // Rules catch numbers and names; the grounding check reads each sentence against the material.
-  const newsForCheck = news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));
-  const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, draft, { school: { name: school.name, city: school.city, country: school.country }, facts, entities, news: newsForCheck });
-  const problems = [...ruleResult.problems, ...grounding];
-  const result = { ...ruleResult, problems, passed: problems.length === 0 };
+  const evaluate = async (d: ArticleDraft) => {
+    const rules = verifyArticle(d, { ...ctx, lang: "en", priorArticles: prior });
+    const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, d, { school: schoolInfo, facts, entities, news: newsForModel });
+    const problems = [...rules.problems, ...grounding];
+    return { ...rules, problems, passed: problems.length === 0 };
+  };
+
+  let draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
+  let result = await evaluate(draft);
+  let revised = false;
+  if (canRevise(result.problems)) {
+    // One repair pass on the flagged sentences, then the same checks again; whatever is left holds the article.
+    const r = await reviseArticle(env.ANTHROPIC_API_KEY, {
+      ...writeInput,
+      draft: { title: draft.title, tldr: draft.tldr, body_markdown: draft.body_md, faq: draft.faq },
+      problems: result.problems,
+    });
+    draft = { title: r.title, tldr: r.tldr, body_md: r.body_markdown, faq: r.faq };
+    result = await evaluate(draft);
+    revised = true;
+  }
   const slug = await uniqueSlug(env, "en", `${school.slug}-${sanitizeSlug(generated.slug)}`);
   const sources = sourcesFor(facts, result.usedFactIds, news.map((n) => n.url));
   const articleId = await saveArticle(env, {
@@ -163,10 +181,10 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   }
   if (!result.passed) {
     await alert(env, { article_id: articleId, school: school.slug, problems: result.problems });
-    return `article ${articleId} held: ${result.problems.length} problems`;
+    return `article ${articleId} held${revised ? " after one revision" : ""}: ${result.problems.length} problems`;
   }
 
-  const out = [`article ${articleId} ${env.AUTO_PUBLISH === "true" ? "published" : "verified"}`];
+  const out = [`article ${articleId} ${env.AUTO_PUBLISH === "true" ? "published" : "verified"}${revised ? " after one revision" : ""}`];
   for (const [lang, language] of Object.entries(TRANSLATE_TO)) {
     const t = await translateArticle(env.ANTHROPIC_API_KEY, { title: draft.title, tldr: draft.tldr, body_markdown: draft.body_md, faq: draft.faq }, language);
     const tDraft: ArticleDraft = { title: t.title, tldr: t.tldr, body_md: t.body_markdown, faq: t.faq };
@@ -183,6 +201,17 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
     out.push(`${lang} ${tId} ${tResult.passed ? "ok" : "held"}`);
   }
   return out.join(", ");
+}
+
+// Sentence-level problems can be repaired; a duplicate, a too-short body or a grounding check that
+// could not run cannot, so those articles are held as they are.
+export function canRevise(problems: Problem[]): boolean {
+  if (!problems.length) return false;
+  return problems.every(
+    (p) =>
+      (p.kind === "unknown_entity" || p.kind === "unsupported_number" || p.kind === "unsupported_claim") &&
+      !p.detail.startsWith("grounding check could not run"),
+  );
 }
 
 interface SaveInput {

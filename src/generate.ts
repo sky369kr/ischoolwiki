@@ -43,6 +43,9 @@ Tone: report what the school has published, plainly, for a parent reading it as 
 - Gaps: if something a parent would clearly need is missing from the material, mention it once, neutrally, in at most two sentences near the end ("The published fee schedule does not list boarding fees."). Do not list everything the material leaves out, and do not frame gaps as the school withholding information.
 - Do not mention any relationship between the school and this site.
 - No advice or instructions to the reader ("ask the admissions office", "contact the school", "families should").
+- Do not attach term, semester or season names ("autumn term") to dates unless the material uses them.
+- Describe a news item's subject only in words from its title, summary or a fact quote; never infer it from the URL.
+- Include fees only when the article is about admissions or fees; do not add a fee table to an article on another subject.
 - Name a school group, network or affiliation (for example "part of Nord Anglia Education") only when a fact or its quote states that affiliation for this school; a group name appearing elsewhere in the material is not enough.
 - No claims that the material is complete ("these are the only figures", "the post lists all"): you only know what you were given.
 
@@ -97,6 +100,42 @@ export async function writeArticle(apiKey: string, input: WriteInput): Promise<G
   });
   const message = await stream.finalMessage();
   return ArticleSchema.parse(readJson(message));
+}
+
+const REVISER_SYSTEM = `You fix an iSchoolWiki article that a checker held. You get the material the writer was allowed to use, the article, and the checker's problems.
+Change only what the problems point at: delete the sentence, or rewrite it so that it says only what the material states. Leave every other sentence exactly as it is. Do not add new facts, numbers, names or sections. If a heading or FAQ item becomes empty, remove it.
+The writing rules still apply:
+${WRITER_SYSTEM}`;
+
+export interface RevisionInput extends WriteInput {
+  draft: Translation;
+  problems: { kind: string; detail: string }[];
+}
+
+// One repair pass after verification: the article goes back through the same checks afterwards.
+export async function reviseArticle(apiKey: string, input: RevisionInput): Promise<Translation> {
+  const material = {
+    school: input.school,
+    facts: input.facts.map((f) => ({ key: f.key, value: f.value, unit: f.unit, quote: f.quote ?? null, source: f.source_url })),
+    other_names_you_may_use: input.entities,
+    news: input.news,
+  };
+  const stream = client(apiKey).beta.messages.stream({
+    model: MODEL,
+    max_tokens: 32000,
+    betas: [FALLBACK_BETA],
+    fallbacks: "default",
+    output_config: { effort: "high", format: zodOutputFormat(TranslationSchema) },
+    system: [{ type: "text", text: REVISER_SYSTEM, cache_control: { type: "ephemeral" } }],
+    messages: [
+      {
+        role: "user",
+        content: `MATERIAL\n${JSON.stringify(material, null, 2)}\n\nARTICLE\n${JSON.stringify(input.draft, null, 2)}\n\nPROBLEMS\n${JSON.stringify(input.problems, null, 2)}`,
+      },
+    ],
+  });
+  const message = await stream.finalMessage();
+  return TranslationSchema.parse(readJson(message));
 }
 
 export async function translateArticle(apiKey: string, article: Translation, targetLanguage: string): Promise<Translation> {
