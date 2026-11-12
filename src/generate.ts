@@ -42,6 +42,8 @@ Tone: report what the school has published, plainly, for a parent reading it as 
 - No evaluative judgements in either direction: neither praise ("impressive", "strong") nor criticism ("only", "fails to", "does not disclose"). Do not compare the school with others unless a fact does.
 - Gaps: if something a parent would clearly need is missing from the material, mention it once, neutrally, in at most two sentences near the end ("The published fee schedule does not list boarding fees."). Do not list everything the material leaves out, and do not frame gaps as the school withholding information.
 - Do not mention any relationship between the school and this site.
+- No advice or instructions to the reader ("ask the admissions office", "contact the school", "families should").
+- No claims that the material is complete ("these are the only figures", "the post lists all"): you only know what you were given.
 
 Style:
 - title and headings in sentence case (capitalize only the first word and proper nouns)

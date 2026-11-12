@@ -144,7 +144,7 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   if (generated.skip) return `model skipped: ${generated.skip_reason}`;
 
   const draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
-  const ctx = { school, facts, entities, now };
+  const ctx = { school, facts, entities, newsTitles: news.map((n) => n.title), now };
   const ruleResult = verifyArticle(draft, { ...ctx, lang: "en", priorArticles: prior });
   // Rules catch numbers and names; the grounding check reads each sentence against the material.
   const newsForCheck = news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));

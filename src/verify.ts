@@ -19,6 +19,8 @@ export interface VerifyContext {
   school: { name: string; city: string; country: string };
   facts: FactRow[];
   entities: string[];
+  // Titles of the school's news items the writer was given; words in them are the school's own.
+  newsTitles?: string[];
   priorArticles: { id: number; title: string; body_md: string }[];
   now: Date;
 }
@@ -50,7 +52,7 @@ const GENERIC_PROPER = new Set(
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
     "November", "December", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
     "Asia", "Europe", "Nord", "Anglia", "Education", "Oxbridge", "Ivy", "League", "Russell", "Group",
-    "City",
+    "City", "I",
     // ISO currency codes and common aliases; the amounts next to them are still checked as numbers.
     "RMB", "CNY", "USD", "EUR", "GBP", "HKD", "SGD", "KRW", "JPY", "VND", "THB", "MYR", "IDR", "PHP", "TWD",
   ].map((w) => w.toLowerCase()),
@@ -100,6 +102,8 @@ function stripMarkdownStructure(text: string): string {
     .split("\n")
     .flatMap((line) => (/^\s*\|/.test(line) ? line.split("|").filter((c) => !/^\s*:?-*:?\s*$/.test(c)) : [line]))
     .map((line) => line.replace(/^\s*(#{1,6}\s+|\d+[.)]\s+|[-*+]\s+)/, ""))
+    // Bold and italic markers go, so "**Address:** South Side" splits at the colon like plain text.
+    .map((line) => line.replace(/\*\*|__/g, ""))
     .join("\n")
     .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1");
 }
@@ -148,7 +152,9 @@ function allowedWords(ctx: VerifyContext): Set<string> {
   add(ctx.school.city);
   add(ctx.school.country);
   ctx.entities.forEach(add);
-  ctx.facts.forEach((f) => add(`${f.value} ${f.unit ?? ""}`));
+  // Value, unit and the verbatim source quote are all the school's own words.
+  ctx.facts.forEach((f) => add(`${f.value} ${f.unit ?? ""} ${f.quote ?? ""}`));
+  (ctx.newsTitles ?? []).forEach(add);
   return words;
 }
 

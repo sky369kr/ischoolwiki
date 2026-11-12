@@ -115,6 +115,24 @@ describe("verifyArticle", () => {
     expect(names).toContain("Westfield Gala");
   });
 
+  it("allows words from the school's own fact quotes and news titles, not from elsewhere", () => {
+    const quoted = {
+      ...ctx,
+      facts: [...ctx.facts, { id: 5, key: "ib_gap", value: "5.39", unit: "points", source_url: "https://example.org/n", quote: "Academic Excellence: students scored 5.39 points above the average" }],
+      newsTitles: ["Watch our academic video"],
+    };
+    const ok = verifyArticle(draft('The post, titled "Academic Excellence", invites readers to "Watch" a video.'), quoted);
+    expect(ok.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+    const bad = verifyArticle(draft("The post mentions Westfield Academy as a partner."), quoted);
+    expect(bad.problems.map((p) => p.detail).join(" ")).toContain("Westfield Academy");
+  });
+
+  it("does not glue a bold label to the text after it", () => {
+    const withAddress = { ...ctx, facts: [...ctx.facts, { id: 6, key: "address", value: "South Side, Shunyi", unit: null, source_url: "https://example.org/c" }] };
+    const r = verifyArticle(draft("**Address:** South Side, Shunyi."), withAddress);
+    expect(r.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+  });
+
   it("still holds invented names after an opener, in a table cell or inside a hyphenated word", () => {
     const r = verifyArticle(
       draft("A Monster Mash took place.\n\n| Event | Notes |\n|---|---|\n| Spring Gala | Held at Westfield Hall |\n\nIt is a Harvard-style programme.", {
