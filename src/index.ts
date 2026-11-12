@@ -246,7 +246,7 @@ async function wikiPage(env: Env, s: Site, slug: string): Promise<string> {
     ["Location", `${esc(school.city)}, ${esc(school.country)}`],
     ...summaryRows(sum),
     ...(school.website ? [["Official website", `<a href="${esc(school.website)}" rel="noopener">${esc(new URL(school.website).hostname.replace(/^www\./, ""))}</a>`] as [string, string]] : []),
-    ["Facts recorded", `${facts.length}, each with its source below`],
+    ["Facts recorded", facts.length ? `${facts.length}, each with its source below` : "None yet; added as the school publishes"],
   ];
   const body = `<nav class="crumbs"><a href="/">Home</a> › <a href="/compare/${school.city_slug}-international-schools">${esc(school.city)}</a></nav>
 <h1>${esc(school.name)}</h1>
