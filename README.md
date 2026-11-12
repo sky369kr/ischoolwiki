@@ -88,7 +88,7 @@ npx wrangler secret put ADMIN_TOKEN
 
 - [x] 라우팅, 템플릿, Schema.org, sitemap/RSS/llms.txt/robots.txt
 - [x] D1 스키마, Cron 파이프라인, 자동 검증, 버전·일괄 내리기
-- [x] 테스트 35개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
+- [x] 테스트 37개 (검증기가 틀린 수치·지어낸 이름·중복 글을 실제로 거르는지 포함)
 - [x] myispp 기본 팩트 어댑터 (`src/ispp.ts`). 조사 결과 `ispp-school-api` Worker는 게시글·회원 API라 학교 데이터가 없고, 학교 데이터는 myispp.com의 정적 `/data/master.json`에 있음. `tuition-collector` Worker(KV)는 제3자 사이트에서 긁은 값이고 출처 URL이 없어 쓰지 않음
 - [x] BSB Shunyi 학비: myispp의 출처가 URL이 아니어서 어댑터로는 0건. 대신 학교가 공개한 2026-2027 학비 PDF 두 개(학비표·학비 정책)에서 40건을 `seeds/bsb-shunyi-fees.sql`로 넣음(`source_kind = 'manual'`, 은행 계좌·연락처는 제외). myispp 가져오기는 `ispp_api`만 지우므로 이 팩트는 유지됨. 다음 학년도 학비표가 나오면 이 시드를 새로 만들어야 함
 - [x] 원격 D1 `ischoolwiki` 생성(APAC), 마이그레이션 0001~0003 적용 (`d1_migrations`에 기록되어 있어 `npm run db:migrate:remote`가 다시 실행하지 않음). 원격에 `seeds/pilot.sql`, `seeds/bsb-shunyi-fees.sql` 적용. DAIS의 `ispp_api` 팩트는 배포 후 첫 실행 때 들어옴

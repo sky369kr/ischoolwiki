@@ -21,6 +21,9 @@ export interface VerifyContext {
   entities: string[];
   // Titles of the school's news items the writer was given; words in them are the school's own.
   newsTitles?: string[];
+  // Numbers that need no fact row: day and month of the news dates the writer was given and, for a
+  // translation, of the dates written in the already verified English article.
+  allowedNumbers?: string[];
   priorArticles: { id: number; title: string; body_md: string }[];
   now: Date;
 }
@@ -124,7 +127,7 @@ function checkNumbers(text: string, ctx: VerifyContext) {
     }
   }
   const year = ctx.now.getUTCFullYear();
-  const allowedYears = new Set([String(year), String(year + 1)]);
+  const allowedYears = new Set([String(year), String(year + 1), ...(ctx.allowedNumbers ?? [])]);
 
   const unsupported: { raw: string; context: string }[] = [];
   const used = new Set<number>();
@@ -141,6 +144,36 @@ function checkNumbers(text: string, ctx: VerifyContext) {
     unsupported.push({ raw: m[0], context: clean.slice(Math.max(0, at - 30), at + m[0].length + 30).replace(/\s+/g, " ").trim() });
   }
   return { unsupported, usedFactIds: [...used] };
+}
+
+const MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+const MONTH_RE = MONTHS.join("|");
+
+// Day and month numbers of dates written out in English ("12 November 2026", "November 12"), so a
+// translation that writes the same date in digits ("11월 12일") is not held for it.
+export function dateNumbers(text: string): string[] {
+  const out = new Set<string>();
+  const re = new RegExp(`\\b(\\d{1,2})(?:st|nd|rd|th)?\\s+(${MONTH_RE})\\b|\\b(${MONTH_RE})\\s+(\\d{1,2})(?:st|nd|rd|th)?\\b`, "gi");
+  for (const m of text.matchAll(re)) {
+    const day = m[1] ?? m[4];
+    const month = (m[2] ?? m[3])!.toLowerCase();
+    if (day && Number(day) >= 1 && Number(day) <= 31) out.add(String(Number(day)));
+    out.add(String(MONTHS.indexOf(month) + 1));
+  }
+  return [...out];
+}
+
+// Day and month of each news item's publication date.
+export function publishedDateNumbers(dates: (string | null)[]): string[] {
+  const out = new Set<string>();
+  for (const d of dates) {
+    if (!d) continue;
+    const t = new Date(d);
+    if (Number.isNaN(t.getTime())) continue;
+    out.add(String(t.getUTCDate()));
+    out.add(String(t.getUTCMonth() + 1));
+  }
+  return [...out];
 }
 
 function allowedWords(ctx: VerifyContext): Set<string> {

@@ -43,6 +43,7 @@ Tone: report what the school has published, plainly, for a parent reading it as 
 - Gaps: if something a parent would clearly need is missing from the material, mention it once, neutrally, in at most two sentences near the end ("The published fee schedule does not list boarding fees."). Do not list everything the material leaves out, and do not frame gaps as the school withholding information.
 - Do not mention any relationship between the school and this site.
 - No advice or instructions to the reader ("ask the admissions office", "contact the school", "families should").
+- Name a school group, network or affiliation (for example "part of Nord Anglia Education") only when a fact or its quote states that affiliation for this school; a group name appearing elsewhere in the material is not enough.
 - No claims that the material is complete ("these are the only figures", "the post lists all"): you only know what you were given.
 
 Style:
@@ -54,7 +55,7 @@ Style:
 - Do not mention iSchoolWiki, myispp.com, 36.9° or any marketing service.`;
 
 const TRANSLATOR_SYSTEM = `You translate iSchoolWiki articles from English for parents reading in the target language.
-Keep every number exactly as written, in digits, with the same value. Keep school, university and programme names as in the source (add a common local rendering in parentheses only when one is standard). Do not add or drop any statement. Use natural, plain prose; headings stay as ## headings.`;
+Keep every number exactly as written, in digits, with the same value. Quantities the source writes in words stay in words: "a year" or "one semester" become "한 해", "한 학기", never "1년" or "1학기". Dates may be written in the target language's usual form. Keep school, university and programme names as in the source (add a common local rendering in parentheses only when one is standard). Do not add or drop any statement. Use natural, plain prose; headings stay as ## headings.`;
 
 export interface WriteInput {
   school: { name: string; city: string; country: string };

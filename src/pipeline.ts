@@ -2,7 +2,7 @@ import { extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, translateArticle, writeArticle } from "./generate";
 import { checkGrounding } from "./grounding";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
-import { verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
+import { dateNumbers, publishedDateNumbers, verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
 export interface Env {
   DB: D1Database;
@@ -144,7 +144,8 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   if (generated.skip) return `model skipped: ${generated.skip_reason}`;
 
   const draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
-  const ctx = { school, facts, entities, newsTitles: news.map((n) => n.title), now };
+  const newsDates = publishedDateNumbers(news.map((n) => n.published_at));
+  const ctx = { school, facts, entities, newsTitles: news.map((n) => n.title), allowedNumbers: newsDates, now };
   const ruleResult = verifyArticle(draft, { ...ctx, lang: "en", priorArticles: prior });
   // Rules catch numbers and names; the grounding check reads each sentence against the material.
   const newsForCheck = news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));
@@ -172,7 +173,8 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
     const priorT = (await env.DB.prepare(
       "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = ? AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
     ).bind(school.slug, lang).all<{ id: number; title: string; body_md: string }>()).results;
-    const tResult = verifyArticle(tDraft, { ...ctx, lang, priorArticles: priorT });
+    const englishDates = dateNumbers([draft.title, draft.tldr, draft.body_md, ...draft.faq.flatMap((f) => [f.question, f.answer])].join("\n"));
+    const tResult = verifyArticle(tDraft, { ...ctx, lang, priorArticles: priorT, allowedNumbers: [...newsDates, ...englishDates] });
     const tId = await saveArticle(env, {
       school_slug: school.slug, lang, translation_of: articleId, slug, kind: generated.kind, draft: tDraft, sources, runId,
       passed: tResult.passed, problems: tResult.problems, autoPublish: env.AUTO_PUBLISH === "true",

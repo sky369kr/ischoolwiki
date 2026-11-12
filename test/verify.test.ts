@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { verifyArticle, type ArticleDraft, type VerifyContext } from "../src/verify";
+import { dateNumbers, publishedDateNumbers, verifyArticle, type ArticleDraft, type VerifyContext } from "../src/verify";
 
 const ctx: VerifyContext = {
   lang: "en",
@@ -131,6 +131,19 @@ describe("verifyArticle", () => {
     const withAddress = { ...ctx, facts: [...ctx.facts, { id: 6, key: "address", value: "South Side, Shunyi", unit: null, source_url: "https://example.org/c" }] };
     const r = verifyArticle(draft("**Address:** South Side, Shunyi."), withAddress);
     expect(r.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+  });
+
+  it("reads day and month numbers from English dates and news publication dates", () => {
+    expect(dateNumbers("On 12 November 2026 and on March 3rd, students met.").sort()).toEqual(["11", "12", "3"]);
+    expect(publishedDateNumbers(["2026-10-29T08:00:00Z", null, "not a date"]).sort()).toEqual(["10", "29"]);
+  });
+
+  it("lets a translation write a verified English date in digits, but no other number", () => {
+    const ko = { ...ctx, lang: "ko", allowedNumbers: dateNumbers("On 12 November 2026, the school announced it.") };
+    const ok = verifyArticle(draft("2026년 11월 12일 학교가 발표했습니다."), ko);
+    expect(ok.problems).toEqual([]);
+    const bad = verifyArticle(draft("2026년 11월 13일 학교가 발표했습니다."), ko);
+    expect(bad.problems.map((p) => p.detail).join(" ")).toContain('"13"');
   });
 
   it("still holds invented names after an opener, in a table cell or inside a hyphenated word", () => {
