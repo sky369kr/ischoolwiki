@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "openai",
   "model": "gpt-6-astra",
   "question": {
@@ -7,7 +7,553 @@
     "type": "branded",
     "text": "Compare BIS Hanoi vs UNIS Hanoi"
   },
-  "started": "2026-11-12T14:01:32.518Z",
-  "finished": "2026-11-12T14:01:33.202Z",
-  "error": "Error: no response.completed event: [{\"type\":\"error\",\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"sequence_number\":2},{\"type\":\"response.failed\",\"response\":{\"id\":\"resp_09627b1f9f990003006af5c6bca39c87d297a696dcaa4570e3\",\"object\":\"response\",\"created_at\":1794492092,\"status\":\"failed\",\"access_programs\":{\"cyber\":\"standard\"},\"background\":false,\"completed_at\":null,\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"frequency_penalty\":0,\"image\":{\"context_compression\":\"disabled\""
+  "started": "2026-11-12T14:25:02.500Z",
+  "finished": "2026-11-12T14:25:44.064Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Compare BIS Hanoi vs UNIS Hanoi"
+  },
+  "response": {
+    "id": "resp_05729e077c027203006af5cc3ea6ec87d284acfa089b27f2e5",
+    "object": "response",
+    "created_at": 1794493502,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794493543,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_05729e077c027203006af5cc406de487d29236fb64dca79282",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "BIS Hanoi curriculum fees 2026 2027",
+            "UNIS Hanoi admissions tuition curriculum 2026 2027"
+          ],
+          "query": "BIS Hanoi curriculum fees 2026 2027",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/comparing-international-school-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://feerank.com/vietnam/hanoi/513"
+            },
+            {
+              "type": "url",
+              "url": "https://dailyschools.com/blog/international-schools-in-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/frequently-asked-questions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://newschoolrun.com/british-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/apply-now"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027.docx.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027..pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/parent-essentials/early-explorers/early-explorers-fees-25-26.pdf?hash=BFCE7A3E05B5A99889D955EFAB684B78&rev=3e7abde376224449ba6ff60ae48627af"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1q77k5t/regents_bk_bis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/16c6omr"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtz5oo"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1greh3w"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/International_School%2C_Vietnam_National_University%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/17l490u/hanoi_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1g49mpl/british_international_school_vietnam/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_05729e077c027203006af5cc438f2087d2884f27f5e15e720d",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cxnWStca0vRJBvgO0ib_lZtklqMvisiAZl74HzDnG_qRtWSbbsLsCyBqJd-EADlnFApsISsqz9CZkCkVt17odlyuvaL5Vsijlr1BkRx-0roHnAohs4nJojqS3_lxT86SkM_ZztO0Nh9HHb01mF3Vl8O-AQM-xeq_HHgyp1Wt-rY9bxL-3R0DT3GD9D2N9ZR0ZbD4AGmwXP3bGBN2VYZL6JKrCitrEfOF5wkD8V3mYAo-SseYHSDiGuXEC-A_yaG9R7XeWO56A7ubYJNBhD0m4RzSaVHCQVx9kQ7c070JHH3B3WcynVTain4dVJVTZmsONjIaYtGTSJI-JAECtSCuWq99j55KQQ6YTrr-JYPNcbNbEyqdYJ8VJjk3LaQGYHepvX4Qep2r0rHQF0VfSRivZ6fzs7SLWgbNxhuMJwuT3o2zKo5_FYseGWL-Dae0dy1-FFa2rdkFFNl1U67sa6eEVBMaLaDuF9PKuZexq5eO63Uni5WFdfdip0g8a9xCTXg8ed2I99q4zD0hhdzFwlA_cgnQbb-5MYKMwFJ1_EH4gDQQC9QW4h5hlP1dbTAzth4aIKc8ijBbvOMEmqzcb_QKL0jDR5b-mKcaIfhKrPBEluvM0V07HWOKDsLDJL7BnRFyST8bkxgyaFzoskOWaNbC2ix4Wq7Ohr-IeLeRdzhub7QGHpr1pwPm67J_qd6c6gJl0MI4SphLAkqlqQk8yECHOOvND9yhkoQMEgyZmTR13wZ5AnbOfqstFB4_wfKKf8lyo2chxzXMFO2HXHcBhXCZLEY6aU9Kj3qPuCOyJdqzXr5MK4o4u-wtysRlz43KRDfhiZxmc-3JFijVQh0ilBAFWUbSU_V1hcmIhCDETDMY1W-SyyLbaA9oPjFqOjNws2xtiiOOx57HL_3SkecVv_g-zPD3mSEZZ3kGHxEMjf8UKh0p8X9G5AR7VpzbpWJl7ZXgSQFn_LaI2Ckewnb1s0vNwck-P-EazK0ENEUz26Of6p1EcFvaAtoz5VXDASXJtATbu2csN8wOf2uFdKqpbDpBUhMXG8wyU3tRJfaExVWkGy-8sP1LlXHxwLqk8P2ikoFjHL1lb78M-yi8Q2xptCBsIOcHhgv8PzEYQQw1fNEbsH52I-4VZlHEN3fQ1mahfjO9vlMk34IJKsiTLS73OuSKQ2CMUvOnIbmS_42wJyUSkpSGb0zuYbXBA-_1O3QEEy8KvPYWPQR12Ot_FsWUHHAYgqjH2ColZRfJbgqZJtmtWaKGv89qSmmIaZYFCA6U0KhOJ9j8mpfihGhoBycr6FzPPkgLb2eo6YbP99EMU3sK4wkH_14x-jq7rbHv4V_TPChIvyHOH7tcHv57zj836jaHRHpUhv1NbD7roPQMt0-gcHuRxGEnXVY7_fSzuNKbwdM_TKPgMZnHX6fV9RDCoaXqOfzm91cQjeFF0qYgHd5KEvhS-9WSxNwWkbXPu25ZGKbh7P9LXJMZKapxwfLOCNkOZwqqihrQz_1hlLa2Nd1zImooJ91tRIN5L7i1v6TIoFvNkjt0xiozlSFi6zbb0KpqbMYUkNty_n4jr_e1meXmkQGCr7PdkmIbLS_a8kQoPJvnAOLOw7Z0M8zHk6jCBqjrk-eQb7c3Yw6h6EoYQvrC0ANCXTg749EQvJvbs3bms6mGs2Jb9PW7X-ghZcDxfh_Z6l7Qko37RNvOTyOfknus2rb_iAgefi1TAbf9zsiuUThGOMWEx3SIJsqYdvhabO8v0rrWuLSZ8qzW6HAfdhulgaucok=",
+        "summary": []
+      },
+      {
+        "id": "ws_05729e077c027203006af5cc44581c87d28fec651fad7e462c",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.unishanoi.org 2026 IB results 2025 36",
+            "site.nordangliaeducation.com/bis-hanoi 2026 IB results",
+            "site.unishanoi.org about 60 nationalities non profit campus"
+          ],
+          "query": "site.unishanoi.org 2026 IB results 2025 36",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/about/calendar-news-and-publications/annual-report"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/ib-diploma"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/apply-now"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/about"
+            },
+            {
+              "type": "url",
+              "url": "https://2021-2025.state.gov/united-nations-international-school-of-hanoi-fact-sheet/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/biss-puxi/news/2026/8/1/one-in-seven-nord-anglia-students-achieve-elite-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2023-24-sy/curriculum-booklet/ib-curriculum-handbook-class-of-2026.pdf?hash=AA6B3A767EB125838879FAA338441194&rev=1a61245e003e459d97daba2a684a93ee"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/About_Us/Annual_Reports/UNIS_Hanoi_-_Annual_Report_2008-2009.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/resources/asia/_filecache/fe2/643/273258-parent-handbook--secondary-2022--2023_web.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/-/media/bis-hcmc/parent-essentials/senior-school-profile/2025-26/bis-hcmc-secondary-school-profile-2025-2026.pdf?hash=8BC9232B5097A28738A545B2A0AE4B9C&rev=d764265f3fa7468d94e6d16d96edeeb4"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/About_Us/Annual_Reports/3._1819_IB_Diploma.pdf?1579258405649="
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1q77k5t/regents_bk_bis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/qtmmqw"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/10pqort"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/IBO/comments/1wy8z9k/ib_results/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/13ujt2p"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/17l490u/hanoi_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/frequently-asked-questions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_05729e077c027203006af5cc493f6887d2805aa5918384560f",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cxnmG5fK3ttEqa1oWdAiU8FwuC_ajk0LiFefw_lB7DFv9g7VT7un6nUG86Ab840VKWqBE1WcZmbEtrq2oNuqclvCC26NxcLCUsfd2gnb0Qp7-Cyfj42HIhvarssgv4YkdDX6lM7PAyF98ls4wM1czo239otKJRuv-fS5U19PxHn5564jG-84pBGqdbf52tHKwCMRAlHWLKT1INPlrnZc-QAyzYvIeP0hPOyuxOD-MLKRjWHZd3ZRXaRMFAEyuvRWStlSq7eqlqE65cTjaGLdyuShjjDFHIjF48CYZGBeEVL55mKxu0P17tBoPJuvEG8J4bXChYkjyFBwgAoJ6sAqHoCpqx4S9Lh0gCOsjPOPZYaZ5TQpWKwfp_rfbYJMMfuHE2yq_kWrwC2wZ4UNP-3V3h7Z1Y4vNBUNxHSNq81un991C7VzjyfNctVeuCmR2z6KdYW7toB4wcthIpYSnyvJlvSf35FijbY6_Ps5OrAGpjWFIQL7olH-fcNqxKBsNKZspaRdW5ks6E85wQ3T7pD1Ggc5oIWlhAtrC35yPfvtorLzU3z2q1lxW8LrGUXDDMmej1f5rxCxBTLQyIRJsdOUmgEqjHGdaontUI6hzQG_DJVPgk9r_Es-ifu4PIxstOjbuxTW_0_P2NBm8IeN54ilu5oJrqB4ERBF70pnPpGEp3h06I2wQqCtcbtdkBmhry-o8uRFS7A5V4PkKQUXCseNRonIcDzxSRZYehTqftNIuBvRxI20bNh4pkEG17I34c2MXOHDn5D66gXs_iogeFaMTC3kKLPf_rPqpAxCFCHR8J9Ugh329FSo3HN3XkzBlfqc7ULoqims0oFZisjJScxIt6MUKNXzvH-FgWTCR3Te0oS3wQN0SbO6P4Q6D4lwUIylrRtlrOmrDCBNW6h8atcnYHkE4IZ7VizF5ccmLOfbBdFPjfCxCiVptfAOAmkak6zJzTBblAraSra-2IwPTtWOSjAEa01vm4GZZyuiwyFD0Idzp4vRf16Xw5LzubWne3kdNQcztwA6--yjL_JQ1qZ4_KGG-GNmfMqdcfNWsvGDzbew8EDV_8jjFNHeNylZbBNkA5fElzl4LuW7vC4N1xqYjegTL2uoOGNX-rP62AZPpWCbYFeF1z3CY5p8zMNsGb1Eum_CVieGoKxL2n7QatsO3wL1cHixaxkrKRkmn6eB2oxPIPO4jTOX2m3laggAcCkSAVqNuxp8ohOkc4p1Fwnh4gb9kcggVqN5oK2ARxzRuEx2J9fN_toORpxN4pYFCsuMNks3Jl9pPI7cIJMkuDcttoMu8OWsVA2k1NbUcGlR0dpdkbCPX3ZcLEWsOv94BhM2dTDoqHNLvF54l9N-voK46T9Fyig4yN6JLb9YTtrUahzUpkrPXvSW2arC5YiQa7DBe5u0b0EpBvA_oAUGQqSxfYu6O-dZl-TwvVKfRZeeIW1sFQINo2LmXtIpoJ50fJBxQE3EV6ZI-KgwlX-SmCllf4pSajZuauAUIM1543FGK1DFLqO2sBc2QiRMMKf0-ww3RfDJ0DygH1dxr-aDzsvvoN_L_PkQV0bf3w0L-saEYgKIbYjr1WJsksBBSeRtp8PUA38B-lPqEbzG3gTQAFF2EYnkCEGth84zESd950B1Y6pKu1pMHHWO7B_xzFXCTqXtBPyzsRKBI9QHVThrttzH2nmaV8ld3xI0ZRAaKtH6W9u7N4K6UrfEf6hNw52L2dSlB8agpeAT_ZjcS4O4eCgarvdcB15Rm-XP8t8h0F9sqUj6jaysKCWpWwLLTYA5aMDoNr46XnmYQQoOFoCb47ABU4ZJMyL6kIUhmOeMInuGhOShTUju7F2MkeYK-hL-hXs_2ExIrmgk5evM4ki9B9DTeAJkw==",
+        "summary": []
+      },
+      {
+        "id": "ws_05729e077c027203006af5cc49795c87d2baab593775fdb925",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.unishanoi.org/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "rs_05729e077c027203006af5cc4ca34087d2996e581a2b3c0139",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cxnFI-aJVlST7ZcnDUUI9ASBEpjRYL7N9osyrjNC0fCUIotp5qaD0pux2Gq87nhbavsiMGAsSqLik6SlOSCHb_DzOJpwgkkFXYcJ5vIyO-41wixk2O0iHQN7cpvPBhKGiSTkCAr7JxINj8JsERHA2jkzjPZMko8y6-bvmJs9wxOK0n954fJd0EWO663SdJQiAwLxuM8slr3F6GMOMkXxxUBsP4gagZ1J5g08spxsHJ5ms9Q6-N1eILce-OxxPJW-Oftovj3IyT7w8ufEpleNA58-nkqFp3QiPFG9RRJDd9aI_x6XkSxeiU7cdN5kY5RfkpZdJTRc0fCD6gfZsymi0RA01dQDMGZEq2G3inNGJ27PAtPf6PGcPqq1TcOgvm8_2aRmZwsT8HVVMTZ7p9P4mUaADPvBMikjgMaWiTuTKMuM7pbO_1faXSW-YdtRewrT_M9l41qErqgyXTZNqHB-t6ir15VCkrLYUtNgxCqWymPw-4PRzNbZI8cg-FdXTMK3DvSNNX_TgkJZ5efKjOTK4EYdbtBJKbgd600IwTcmdIIi8hMoOSKq6yoefKGP8XymaXfjTtgkaQHo3azg5vIYIVgRfk8LLmen_9UjowYI9hsPhAXh1sgYCv9ZPYjL6fP8X7IF0s89zoUlXnEVgsgaWfMj6euWjtzQFL1WaJDKpUCkMnWfOOaMAXfQExbKeInbnbesJ85X9X1xH-DokDwXWCtnI4f7_cGIrraSsAnnXMH0BpGQW7LKWXSeh7ABzWmr2TmISxR--AwpI1o8bgs7_A8TbaI58NCNVdfHmUqVpTvIhZLpvoMbKr958FMNZd34UfdhD71AnsgXCOI0XKR6lN7DaBy-C3vcBDTuqgfsj3xbvo1dBYY2iBZfSWiNABu9O6S_jLZDBqNwPmuiPFbIhWhOHV05PLJc0wN8bBxmbzRtVN-KdPyUXJYYYAUw147bUqor47KOU_ZxtXPCOQw8qytcqXyuMIN2TOxIu_nhwvG8QD67I0ztem5WtswlCIRydkCbIksTHd9ZtS6kNYSAqlstqUuVQqNtEq1hiPKbWJfpRt91e-2lHytwLmxPNIl79uGfit7hsmIRARmJL3UGChfyEbJYHoTow2DK_PEAYYSGViF5MgTC2MAfyzoSJl9WpK0WDuX_0ZpNSgfjPZg5P5i0QfUuP3E8QnwSvizR3AE5OyJ74jEGKKMGredmC1vIWXKbtQCecnpuVzG58aauw3iudI-ni1R0L6-PlcQwiQGCZBNywWPjMUTQYXpekPlBAtsafJDVsgTMpgzCI9dlhGZM2Psyteef-IJ1zeUDboOb1c1pXbvQXl-Q60ExeloRIIY7hPyKFwsviGvFaZmT2RC2Qc8RQYdJEB4ovLJWnKUzu7GHYFZKq2kRPMHZAbxdY6Rah6SF37jL_5x9GTLaUha9w4orrfWKH4POeA9pWk94c-mgh6z6AYaiHZ9F_6qJZk0UCl5LgQSJKKJT-Tub1O3fJy7Ltm-zXpCugzY7rbICJomyNl9XUhktIYD-pv9RmbNYizJ8VV25YT24CtYyTjeaK7J0uVAbskNQsRTs0UCmBbn0JrZzPkkIzIi92XIibHU0Cu9IW6OufmZCb3HHRcAMsdY3sjSoIg2mWqA2pEY6TDTam8IIcuknQWW6mwwGb_cQ4TacEA7hy7DKfmDpaXd8DKhKYcIvYdG35DnwIFKDjm5hC5QK8_PN_Y8INhZjQyliBwfAN69ABTdIWitSP02XrOf3brgWHDpHW3Kku5b_UuqVUloWtrjNhvV0mGtryH7gJEMTfAjXpAFS90MIZd4sndJI-LN4vPxrbzX5KEhjbvw63gZC24gAyBp6Rj7iKE9fqRw2Uh3CIJgERxIKwZTQdOH_b3l_nNvTuKHBNfPnqfnOOE1T4hHuE7BJx5uufod0eoBupivyykCDma2FCWmK8sF2rkwIDS-rWHNl2eK0sAZnYyoIHtykD8_BIwPlG270ZB6JA-0WQBbyg60Dqc5ilf3Eu1J7DkqLhZioiZOzrefs3oNIThSMB2NLmfEIgCuw2ValW8prpoG-EoRHeTwGFhSYVdBlQ-NuV0OAJCwtrDr-rlnRLqEv8vVIe-GtEcc",
+        "summary": []
+      },
+      {
+        "id": "ws_05729e077c027203006af5cc4e319887d2b4c1e2741b3c5add",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "msg_05729e077c027203006af5cc50757887d29c754e2f0480f457",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 406,
+                "start_index": 334,
+                "title": "IB Programmes at UNIS Hanoi | International Baccalaureate",
+                "url": "https://www.unishanoi.org/academics/the-ib-programmes"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1543,
+                "start_index": 1451,
+                "title": "British International School Hanoi | BIS Hanoi | Nord Anglia",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2106,
+                "start_index": 1977,
+                "title": "Academic Results | British International School (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2710,
+                "start_index": 2582,
+                "title": "Upper Secondary School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3395,
+                "start_index": 3297,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3770,
+                "start_index": 3672,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3985,
+                "start_index": 3917,
+                "title": "UNIS Hanoi Tuition & Fees [Special Discounts included]",
+                "url": "https://www.unishanoi.org/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4337,
+                "start_index": 4265,
+                "title": "IB Programmes at UNIS Hanoi | International Baccalaureate",
+                "url": "https://www.unishanoi.org/academics/the-ib-programmes"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4709,
+                "start_index": 4581,
+                "title": "Upper Secondary School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 5095,
+                "start_index": 5013,
+                "title": "FAQs About Admissions to United Nations International School of Hanoi",
+                "url": "https://www.unishanoi.org/admissions/frequently-asked-questions"
+              }
+            ],
+            "logprobs": [],
+            "text": "**Assuming you’re comparing them for your child:** I’d lean toward **UNIS Hanoi for an all-through IB education and a more internationally diverse community**, and **BIS Hanoi for a British curriculum leading through IGCSEs to the IB Diploma**. Neither is an automatic academic winner—their published 2026 IB averages are very close. ([unishanoi.org](https://www.unishanoi.org/academics/the-ib-programmes))\n\n## Main differences\n\n| Factor | BIS Hanoi | UNIS Hanoi |\n|---|---|---|\n| **Curriculum** | British-based education, followed by **IGCSEs**, then the **IB Diploma**. | **IB throughout:** Primary Years Programme, Middle Years Programme and Diploma Programme. |\n| **Practical implication** | My preference for a child already following the British system or a family wanting IGCSE qualifications before age 18. | My preference for continuity from another IB school or a family specifically seeking the full IB pathway. |\n| **Organisation** | Part of the **Nord Anglia Education** school group. | **Not-for-profit**, guided by UN principles; not a UN agency. |\n| **Student community** | Its **2025–26 profile** reports 47% Vietnamese, 38% Korean and 15% other nationalities. | Reports **60+ nationalities** and approximately 35 home languages. |\n| **Location** | **Long Bien**, in the Vinhomes Riverside area. | **Ciputra / Phu Thuong**, on the Tây Hồ side of Hanoi. |\n\nSources: curriculum and organisation; student demographics; campus locations. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi?utm_source=openai))\n\n**The community difference is worth taking seriously:** BIS’s British curriculum does not mean its student body is predominantly British. Ask both schools about the mix in your child’s actual year group, rather than relying only on school-wide numbers.\n\n## Academics: closer than the reputations might suggest\n\nThe schools report these **2026 IB Diploma average scores**, out of 45:\n\n- **BIS Hanoi: 35.11**\n- **UNIS Hanoi: 35.42**. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai))\n\nI would **not choose based on that small difference**. Ask for three years of results, diploma participation and pass rates, and outcomes in your child’s intended subjects. For a teenager, the actual Higher Level subject combinations and teachers would matter more to my decision than the headline average.\n\nAlso, don’t reduce the choice to “BIS is rigorous; UNIS is creative.” The clearer, verifiable distinction is **IGCSE versus MYP before the shared IB Diploma stage**. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary?utm_source=openai))\n\n## Fees: 2026–27\n\nBelow are annual-payment tuition rates, keeping each school’s published currency. The rows align broadly by age; final placement needs confirmation.\n\n| Broadly equivalent stage | BIS Hanoi | UNIS Hanoi |\n|---|---:|---:|\n| BIS Years 2–6 / UNIS Grades 1–5 | **VND 715.5–734.6 million** | **US$33,330** |\n| BIS Years 7–9 / UNIS Grades 6–8 | **VND 846.8 million** | **US$35,210** |\n| BIS Years 10–11 / UNIS Grades 9–10 | **VND 893.2 million** | **US$37,530** |\n| BIS Years 12–13 / UNIS Grades 11–12 | **VND 970.2 million** | **US$39,870** |\n\nPublished tuition schedules: ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n\n**Compare total invoices, not tuition alone:**\n- **BIS** includes lunches, uniforms, learning materials, day trips, mandatory secondary external examinations and staff-run extracurricular activities. Application, registration and applicable security deposits are additional. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n- **UNIS** charges a **US$600 application fee** and **US$1,750 enrolment fee**; buses, lunches and some optional activities/trips can cost extra. ([unishanoi.org](https://www.unishanoi.org/admissions/tuition-fees))\n\n## My recommendation\n\n**I would prioritise UNIS if:**\n- You want the full IB pathway.\n- A broadly multinational peer group is a major priority.\n- Its Ciputra location works better for your family.  \nThese preferences align with its published curriculum, community and location. ([unishanoi.org](https://www.unishanoi.org/academics/the-ib-programmes))\n\n**I would prioritise BIS if:**\n- Your child is already settled in a British curriculum.\n- You specifically value the IGCSE stage.\n- You will live around Long Bien/Vinhomes Riverside.  \nThese preferences align with BIS’s pathway and location. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary?utm_source=openai))\n\nBefore committing, I’d test the school-day commute, observe a class, and ask about **teacher turnover, English-language support, learning support and actual class size**. Check availability early: UNIS explicitly uses a wait pool, with placement affected by admissions priorities and support capacity. ([unishanoi.org](https://www.unishanoi.org/admissions/frequently-asked-questions))\n\n**What age/grade is your child, what curriculum are they in now, and where would you live in Hanoi?** Those details would let me make a much firmer recommendation."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 2
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 38120,
+      "input_tokens_details": {
+        "cache_write_tokens": 11,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1790,
+      "output_tokens_details": {
+        "reasoning_tokens": 498
+      },
+      "total_tokens": 39910
+    },
+    "user": null,
+    "metadata": {}
+  }
 }

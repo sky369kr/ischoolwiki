@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "openai",
   "model": "gpt-6-astra",
   "question": {
@@ -7,7 +7,392 @@
     "type": "branded",
     "text": "What is the admission process and tuition fees at BIS Hanoi?"
   },
-  "started": "2026-11-12T14:01:33.971Z",
-  "finished": "2026-11-12T14:01:34.687Z",
-  "error": "Error: no response.completed event: [{\"type\":\"error\",\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"sequence_number\":2},{\"type\":\"response.failed\",\"response\":{\"id\":\"resp_0d7ea02254d47d5c006af5c6be2ab087d29d0dec6338708e4a\",\"object\":\"response\",\"created_at\":1794492094,\"status\":\"failed\",\"access_programs\":{\"cyber\":\"standard\"},\"background\":false,\"completed_at\":null,\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"frequency_penalty\":0,\"image\":{\"context_compression\":\"disabled\""
+  "started": "2026-11-12T14:25:59.011Z",
+  "finished": "2026-11-12T14:26:22.436Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What is the admission process and tuition fees at BIS Hanoi?"
+  },
+  "response": {
+    "id": "resp_09894958c77c7b3f006af5cc7729e887d2a848ba33969bbe50",
+    "object": "response",
+    "created_at": 1794493559,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794493582,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_09894958c77c7b3f006af5cc78ae5887d2a47d3f2ccc9187c4",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "BIS Hanoi admissions tuition fees 2026 2027 British International School Hanoi"
+          ],
+          "query": "BIS Hanoi admissions tuition fees 2026 2027 British International School Hanoi",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+            },
+            {
+              "type": "url",
+              "url": "https://boshops.shop/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://truenorth.edu.vn/en/school-life/news-and-events/hanoi-international-school-mid-year-transfer-checklist"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi---admissions-policy-2024-25.pdf?hash=744CA09481505EB6CFCAF0216A5127CE&rev=588f86605fb84a269e437d52f4f6ea99"
+            },
+            {
+              "type": "url",
+              "url": "https://feerank.com/vietnam/hanoi/513"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/parent-essentials/documents/bis-hanoi_referral-programme-2025-26_en.pdf?hash=54A7B83C3AD31AB86957E9E54DA0EE98&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://newschoolrun.com/british-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/comparing-international-school-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/british-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/referral-programme"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/bis-hn-term-dates-2026-2027.pdf?hash=5D6AF8ED8AD9A06FF3A32D2E4D104A44&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/16c6omr"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtz5oo"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_University_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Vietnam-Australia_School%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1greh3w"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1q77k5t/regents_bk_bis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/e75hzo"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_09894958c77c7b3f006af5cc7b989087d2914f4977f6f8749d",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "ws_09894958c77c7b3f006af5cc7de9e887d293a2aba3f8b09387",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "rs_09894958c77c7b3f006af5cc7fe43c87d2a623c86a83bfa325",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cyOsqr8uVDjuiIoqoAw-3C81-tys5MDPq0tlaVAwvLEGjtW8Kj9oT6ToVpPC4S43IOX5NwUXBeXj2J-5AfvVxmRti21UWYUXOxDw50lxwi1Qn5EZgDMMcdPqSCpMjJUcCYE4d3vjwm3BuEP0QX2RYuqammMaTCdJiSIoZ6RKNMsCwkRJBITZHQpQkoTLQ3orzRaHHiH_qFBDdys5gVErF4XQmd0ualGMNrEa9xDZHfceJ1bR5QJRJv44KvtJY20XII3LbOE8cOE3EEWc7eFxyHdIHsShZ87kmY6sWFtHdlvaInT66ezZ007W42fI0lQ3oSdqg-KB1zdxwX_DjIbiAKZsdtwa5z9EVUuezXmtC7VbSBUdEDYjf4-4DRYB-hEcPMKqrijQA9hQwbpW_YFPKNw_X5nEb6tylBUG0xdNvnycOzvWwDT6xyUbBBB5FJ_R-psjMlSk3V6prHKierWnX-CONyipwuOqwbuUNLjnjJbP6099QDte_r6Lzj1qflfBu9kWaAiu7rVPFqRo4guJPs-XgvNxksyZTGhWzLY9uDzWi8IfoDTJzcUFr8S7lZ8FXQkB770xviI5uuI1ym0rWFZdehmX0R0MCtWjoFAgnOC4EXw7b70pOVaJLybWcdQM4h6cCB72fkvfAhwFQRkma_OQcaVzpKgcX09CG_hF0H7RBon6mGM-ckqulEFt2vYZ1SfVJGEEfOgSUx8vcrMhxp9wqDcy45eR3coEGQvVuLRiUftoeekg4a3-3DXlbm_T7goBZFzS0bHB4s6FstBtaDOKI9vZ3OAEh4kiiq1la-uLvT5UXAVG9wxhXg90qdscrFajM22qGfyry65KwSo_yu1PSxX7NLqoz8ugY2ulyhJCxBop41BDNOJY3KZVb9X4OC2affnt6VDofAsNFPYzUc-42YuD92ouk15cgmAjrkvWetbPp51NO1avb58RnFYcs1ywABsqEdI-jyihMxJalCiEYc542mVq1MbpwKxEZS97FzjBMMCZjHt9qvR8GcTD-I3B5QacONdnECsqWux_R2ueJVLxr_B5-FNfpNKn8xP5sfCPNEU67VUcd-gfP23PXPplyJ_0j4kRt5F90KG2JlHLDnv9Qd7quvIkzL2_Vt8TtoNYx3LPV3rgvOrRp99Q57zYcwHsE4gWLvv10cM6VFIMiAt_qmdSxgriihvC6JNQJe6GSqmZRi33Jh5aRA9-CGckCmhwTVO3PYf7FjCcAqBSA-wX-RH4vCQzWzAELFyYfrJqwxnqKuMe-w2vDvHXGDP2wjfI79nenBiERpUdsly0YIeqePq1a3sSgNyFV6YDoHLf6_sAzQyqaDvYs9da_fpASK66MVEa9UWa91HbpC6NjDt6bd-82P2Aypvv-DNX1ulJOgKGp6RERPJ-xJD448CMJ44fTmxL90CAAa8UqabCByHgEd6A2-IX-yVZFkvtLE1pSVU9Xd-T9kSHg9fjcZeIHY70C4458uLT5H_pER5QSUZsffntU0g-_JOBO0-eTpicyS2otnDANAd46OFxXucweo6pBiAfuGQJzgGSncfxe2KGvSCYiOn4G7-kUjX8FknWdIkeKionx2tX7SR5SgLz7GY2cr945aMkmD0vdqBvwhqbUuwS_6eRz4TayLYUZ20BdnSlPNkewi1cp1cdv32j88-1wtxkhRUvoRFa0G8rnUrtxspPiOfjU5q6OKN1mK818PAmjOfJ9pScglcnFknjpL2x-KgXx8E-8wkRicqRkJEr0vImrOX4bFnPMxdCvUb9Q52lhMRp4CJfJ_tIsV2OgZDmy-vC9CowXsR32FDfg3OMfCWQ0OKHfTx5bIrC9OBWYACLLZOOKizl7y93tzz_HLNeQuFz5IGO6dxaU6QZ9O4W9N1vHJj3OBleVkGdgn4Y9L5NoZVFun8rSkAtfEgOcHqJ3RvmLC8IbHNRFoBhoxaTm-GI2J77X4jmQ5q28quLmGyjbMscENvFrkk4maYHtJrWjwvvkRxa7SLl1We3JdI35tjUraxt26cgXLaWeku0BXiRb0Ddm94mNR8gk9t6TAp9dISKIivds1o5HEAeMT5T2-ICqpQInkcvn_3TyChxdKRsyvZF8fFwRxdcWnJNIl4aLYnnPInRbN_qc369A==",
+        "summary": []
+      },
+      {
+        "id": "msg_09894958c77c7b3f006af5cc8111dc87d292016dbd425816c0",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 318,
+                "start_index": 233,
+                "title": "Admissions at BIS Hanoi | International School Admissions in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 567,
+                "start_index": 482,
+                "title": "Admissions at BIS Hanoi | International School Admissions in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1056,
+                "start_index": 952,
+                "title": "Entry Requirements | British International School BIS Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/entry-requirements"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1227,
+                "start_index": 1129,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1597,
+                "start_index": 1493,
+                "title": "Entry Requirements | British International School BIS Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/entry-requirements"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1850,
+                "start_index": 1746,
+                "title": "Entry Requirements | British International School BIS Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/entry-requirements"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2237,
+                "start_index": 2032,
+                "title": "Schedule of Fees 26-27",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2868,
+                "start_index": 2663,
+                "title": "Schedule of Fees 26-27",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3385,
+                "start_index": 3287,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3709,
+                "start_index": 3611,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4058,
+                "start_index": 3853,
+                "title": "Schedule of Fees 26-27",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4515,
+                "start_index": 4310,
+                "title": "Schedule of Fees 26-27",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+              }
+            ],
+            "logprobs": [],
+            "text": "**British International School (BIS) Hanoi** accepts applications throughout the year for children aged **2–18**. Admission depends on assessment results and available places. Here’s the process and the published **2026–2027 fees**. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions))\n\n## Admission process\n\n1. **Enquire and arrange a visit.** Contact admissions through the school’s online enquiry form. In-person and virtual tours are available. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions))\n2. **Submit the online application and documents**, including:\n   - Recent school reports in English, with translations where necessary.\n   - Child’s passport or birth certificate and a passport-style photo.\n   - Medical and immunisation records, plus a doctor-signed physical evaluation.\n   - Learning-support assessments, if applicable.\n   - Signed admissions terms and conditions. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/entry-requirements))\n3. **Pay the non-refundable application fee: VND 4,500,000 per child.** ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n4. **Complete an assessment and interview.** Requirements vary by age: early-years applicants are observed in class; older children take English, writing and/or cognitive assessments and meet a school leader. Online assessments are available for overseas families. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/entry-requirements))\n5. **Accept the offer within two weeks** and pay the registration fee to secure the place. If classes are full, a waiting-list option is available. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/entry-requirements))\n\n## Annual tuition fees: 2026–2027\n\nAll amounts below are **Vietnamese dong (VND), per child**. These are the published annual-payment rates—not the total of three termly payments. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac))\n\n| Year group | Annual tuition |\n|---|---:|\n| Foundation 1 — half day | 253,600,000 |\n| Foundation 1 — full day | 343,100,000 |\n| Foundation 2 — full day | 360,900,000 |\n| Foundation 3 — full day | 510,800,000 |\n| Year 1 | 657,600,000 |\n| Years 2–4 | 715,500,000 |\n| Years 5–6 | 734,600,000 |\n| Years 7–9 | 846,800,000 |\n| Years 10–11 | 893,200,000 |\n| Years 12–13 | 970,200,000 |\n\nSource: BIS Hanoi’s official fee schedule. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac))\n\n### Additional joining fees\n\n| Fee | Foundation | Primary and Secondary |\n|---|---:|---:|\n| Application — non-refundable | 4,500,000 | 4,500,000 |\n| One-time registration — non-refundable | 23,600,000 | 70,800,000 |\n| Refundable security deposit | Not applicable initially | 23,600,000 |\n\nThe deposit becomes payable when a Foundation child enters Primary. Its refund requires **90 days’ written withdrawal notice**. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n\n### What’s included—and what costs extra?\n\n- **Included:** uniforms, lunches, early-years/primary snacks, learning materials, day trips, mandatory secondary international examinations and staff-led co-curricular activities. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n- **Extra charges may apply:** school buses, residential trips, some extracurricular activities and English as an Additional Language support. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac))\n\n**Payment note:** Termly payments cost more overall than the annual-payment option. The published annual discount deadline was **July 31, 2026**; mid-year entrants have a separate fee calculation, so request a quotation for your intended start date. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac))\n\nIf you share your child’s **date of birth and intended starting month**, I can help identify the relevant year group and estimate the joining costs."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 1
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 27349,
+      "input_tokens_details": {
+        "cache_write_tokens": 16,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1136,
+      "output_tokens_details": {
+        "reasoning_tokens": 209
+      },
+      "total_tokens": 28485
+    },
+    "user": null,
+    "metadata": {}
+  }
 }

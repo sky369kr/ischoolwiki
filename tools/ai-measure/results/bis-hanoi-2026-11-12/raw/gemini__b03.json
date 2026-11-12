@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "question": {
@@ -7,7 +7,2540 @@
     "type": "branded",
     "text": "Compare BIS Hanoi vs UNIS Hanoi"
   },
-  "started": "2026-11-12T13:55:33.868Z",
-  "finished": "2026-11-12T13:55:34.032Z",
-  "error": "Error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+  "started": "2026-11-12T14:31:59.175Z",
+  "finished": "2026-11-12T14:32:26.887Z",
+  "request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Compare BIS Hanoi vs UNIS Hanoi"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "response": {
+    "chunks": [
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "**UNIS Hanoi** (United Nations International School of Hanoi) and"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 14,
+          "totalTokenCount": 673,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **BIS Hanoi** (British International School Hanoi) are two of the most prestigious, top-tier international schools in Hanoi"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 42,
+          "totalTokenCount": 701,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". However, they differ significantly in governance, curriculum pathways, student body demographics, and campus locations"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 42,
+          "totalTokenCount": 701,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### Comparison"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 42,
+          "totalTokenCount": 701,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Breakdown\n\n| Feature | UNIS Hanoi | BIS Hanoi |\n| :--- | :--- | :--- |\n| **Found"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 69,
+          "totalTokenCount": 728,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "ing & Governance** | Founded in 1988; **Non-profit**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 95,
+          "totalTokenCount": 754,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". Established via an agreement between the UN and the Vietnamese government (one of only two UN schools"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 95,
+          "totalTokenCount": 754,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " in the world). | Founded in 20"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 95,
+          "totalTokenCount": 754,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "12; **For-profit**. Operated by **Nord Anglia"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 95,
+          "totalTokenCount": 754,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Education**, a global network of over 80 premium schools. |\n|"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 95,
+          "totalTokenCount": 754,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **Location** | Ciputra International City, **Tây Hồ / Bắc Từ Liêm** (Northwest Hanoi)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 123,
+          "totalTokenCount": 782,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". | Vinhomes Riverside, **Long Biên** (East Hanoi, across the Red River)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 123,
+          "totalTokenCount": 782,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". |\n| **Curriculum Framework** | **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 123,
+          "totalTokenCount": 782,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Full IB Continuum:**<br>• IB PYP (Primary)<br>• IB MYP (Middle School)<br>• IB DP"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 152,
+          "totalTokenCount": 811,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (Grades 11–12) | **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 152,
+          "totalTokenCount": 811,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Hybrid British + IB:**<br>• English National Curriculum (Primary & KS3)<br>• Cambridge IGCSE (Years"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 179,
+          "totalTokenCount": 838,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " 10–11)<br>• IB DP / BIS Diploma (Years 12–13)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 203,
+          "totalTokenCount": 862,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " |\n| **Student Body & Diversity** | Highly"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 203,
+          "totalTokenCount": 862,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " diverse (60+ nationalities). Strict **nationality cap** ensures no single nationality exceeds"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 203,
+          "totalTokenCount": 862,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " ~20% of the total student body. | 30+ nationalities."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 203,
+          "totalTokenCount": 862,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " While diverse, it typically has a higher concentration of host-country (Vietnamese) and East Asian expatriate families compared to UNIS"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 230,
+          "totalTokenCount": 889,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". |\n| **Admission Priorities** | **Tiered priority lane system:** UN agency families, diplomatic corps, faculty"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 254,
+          "totalTokenCount": 913,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ", and returning alumni have first priority. High waitlists for non"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 254,
+          "totalTokenCount": 913,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "-priority seats. | Rolling admissions based on assessment and language proficiency; generally more accessible for corporate"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 254,
+          "totalTokenCount": 913,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " expats and local families. |\n| **Global Collaborations** | Heavy integration of **UN Sustainable Development Goals (SDGs)** and"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 281,
+          "totalTokenCount": 940,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " service learning. | Nord Anglia signature partnerships: **Juilliard** (performing arts), **MIT** ("
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 281,
+          "totalTokenCount": 940,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "STEAM), and **UNICEF**. |\n| **Tu"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 281,
+          "totalTokenCount": 940,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "ition & Fees** | Top-tier; typically ranges from ~VND 450M (Early Years) to ~VND"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 309,
+          "totalTokenCount": 968,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " 1.03B (Grades 11–12). |"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 309,
+          "totalTokenCount": 968,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Top-tier; typically ranges from ~VND 340M (Early Years) to ~VND "
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 333,
+          "totalTokenCount": 992,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "970M (Year 12–13). |\n\n---\n\n"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 333,
+          "totalTokenCount": 992,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "### Detailed Comparisons\n\n#### 1. Educational Philosophy and Curriculum\n* **UNIS Hanoi (Pure IB):** UNIS uses"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 359,
+          "totalTokenCount": 1018,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " an inquiry-led, student-centered approach across all grade levels"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 383,
+          "totalTokenCount": 1042,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". If your child thrives in holistic, project-based environments or is already familiar with the IB Primary (PYP) and Middle Years"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 383,
+          "totalTokenCount": 1042,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (MYP) programmes, UNIS provides continuity.\n"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 383,
+          "totalTokenCount": 1042,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "* **BIS Hanoi (British + IGCSE + IB):** BIS blends a structured, subject-specialist British foundation"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 408,
+          "totalTokenCount": 1067,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " with external, rigorous benchmarking. Students sit formal Cambridge IGCSE examinations at"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 408,
+          "totalTokenCount": 1067,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " age 16 before entering the IB Diploma Programme (IBDP) in their final two years"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 436,
+          "totalTokenCount": 1095,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". Many families appreciate IGCSEs as concrete qualification milestones that prepare students specifically for the demands of the IB"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 436,
+          "totalTokenCount": 1095,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "DP.\n\n#### 2. School Culture and Dem"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 436,
+          "totalTokenCount": 1095,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "ographics\n* **UNIS Hanoi:** The school is defined by its multilateral, diplomatic ethos"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 463,
+          "totalTokenCount": 1122,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". Its strict nationality quota creates one of the most culturally balanced environments in Southeast Asia"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 463,
+          "totalTokenCount": 1122,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". Because many parents work in development, embassies, or NGOs, there is a natural turnover"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 463,
+          "totalTokenCount": 1122,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " of students every 2–4 years.\n* **BIS Hanoi:** As part of Nord"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 463,
+          "totalTokenCount": 1122,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Anglia, BIS benefits from massive corporate scale, structured professional development for teachers, and strong STEAM/performing arts curriculums"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 487,
+          "totalTokenCount": 1146,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". The student body has a larger core of settled, long-term Hanoi"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 487,
+          "totalTokenCount": 1146,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " residents, which can offer more social stability over multi-year periods.\n\n#### 3. Location and Daily Commute\nBecause"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 513,
+          "totalTokenCount": 1172,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Hanoi traffic can significantly impact quality of life, location is often the deciding factor:\n* **UNIS Hanoi** is"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 537,
+          "totalTokenCount": 1196,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " ideal if you live in **Tây Hồ (West Lake)**, Ciputra, Starlake, or Ba Đình"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 561,
+          "totalTokenCount": 1220,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". It is the historical center of Hanoi’s international expat community"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 561,
+          "totalTokenCount": 1220,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **BIS Hanoi** is ideal if you live in **Vinhomes Riverside**,"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 561,
+          "totalTokenCount": 1220,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Long Biên, or Ocean Park. Families living in Tay Ho who"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 561,
+          "totalTokenCount": 1220,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " attend BIS must cross the Red River daily, which can mean a 35–50 minute bus ride during peak rush"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 586,
+          "totalTokenCount": 1245,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " hours.\n\n---\n\n### Which School Should You Choose?\n\n* **Choose UNIS Hanoi if"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 586,
+          "totalTokenCount": 1245,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ":**\n  * You prioritize an explicitly international, multilateral school environment with strict diversity caps"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n  * You prefer a pure, continuous **IB education (PYP to DP)** without standard British testing"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n  * You work for an embassy, NGO, or UN agency (benefiting from admissions priority)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n  * You plan to reside in Tây Hồ, Ciputra, or"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " the northern/western corridors of Hanoi.\n\n* **Choose BIS Hanoi"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " if:**\n  * You prefer the structure of the **English National Curriculum and IGCSEs** leading into the IB Diploma"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 641,
+          "totalTokenCount": 1300,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n  * You place high value on global STEAM and arts partnerships (such as MIT"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 641,
+          "totalTokenCount": 1300,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " and Juilliard).\n  * You plan to live in Long Biên / Vinhomes Riverside or work on"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 641,
+          "totalTokenCount": 1300,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " the eastern side of the city.\n  * You are"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 641,
+          "totalTokenCount": 1300,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " unable to secure a place off the UNIS waitlist due to nationality quotas"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 669,
+          "totalTokenCount": 1328,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 8,
+          "candidatesTokenCount": 669,
+          "totalTokenCount": 1328,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 8
+            }
+          ],
+          "thoughtsTokenCount": 651,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "",
+                  "thoughtSignature": "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"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0,
+            "groundingMetadata": {
+              "searchEntryPoint": {
+                "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=UNIS+Hanoi+curriculum+tuition+nationality+quota&client=app-vertex-grounding&safesearch=active\">UNIS Hanoi curriculum tuition nationality quota</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=BIS+Hanoi+vs+UNIS+Hanoi&client=app-vertex-grounding&safesearch=active\">BIS Hanoi vs UNIS Hanoi</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=BIS+Hanoi+curriculum+IGCSE+IBDP&client=app-vertex-grounding&safesearch=active\">BIS Hanoi curriculum IGCSE IBDP</a>\n  </div>\n</div>"
+              },
+              "groundingChunks": [
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3ZJi15eV2qE8o0Oq97E_dEG6ugAY53iITv_2Shl12uUbrY_trg_5zA-QLz6x_9y5LTwSyaZZLvuJbU9wDSu6iJxYo-iKg_JEdUNNtj6aK7jhFeqHEwdAcc5lQ7pesFDNARpRh4EII_-BczCHT_vTPQAkISfdZGzSTkNW1LchPNOssNFtAUA==",
+                    "title": "internationalschoolsreview.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN026U6eeDQXUkasz_e12eZ6oOosd2vUbqVNbSiwD061E33s6bOsQPq_LRqCZ9DjGLjWVGrRfkNkxTsFvCsA_dBRm42nWmtuCeegubz_KP5nTR8KmR3eDqImuXpudOtyIjUJjBPo8=",
+                    "title": "internationalschoolsdb.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfyNr3xvGB6qTMv4LBmGn0_VbjUuTrwMyxCtQQ9emHAkoFkatoPvsAaI63crXvTXqTWmTqgu-gu6rC82jp-RSuj4Lp9F4SSSCm3AZEA1ZSEeIj8F7EBbdeBoP95c1DbBmhtHol5x6ArmcyXqpVzhyfzLfmN42G_ILWTp2HXtkQ4s0ygkM4fUd85sQlePUvyI0iewi6tR726UZihvmJtLM1yQCmoP8HH0xNPC3WmQwJj-XzAhv-pAkeCai_lGEJ_WL0dfz72Y69JAVwgdpH4VTYqqqZyKQN0XLasRT_bWPl2Gg=",
+                    "title": "ischooladvisor.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhEhd3QO-zvo4OcPd9edEDIx7CRS7XhaEDO2INpOtkA8lAdEca5Ud5vtxIaNU2qEOcnrSu85Sw4WooBGuLZiux2Xge4w8XrfS_rSniwm-AwnwmAUot_-36-Ft7OHJJNUMoX8mRImNB3_UyIuhVk5G-jd4IhI9wsKj_e1PItg7Lx7xX0_f6_T2bR7dqBTCKUJxeXPwCIUV0",
+                    "title": "international-schools-database.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG83yFhLPNWelmRoc6b6D3AQL54rLJjO5CQmxuN6AznUp1lWmM9Q_qiFI2JVroYR8Gvfrv-VJvJoPwlQBdRFIFL0k08sn8xuepf9R-_iXqmDp-PykloFpGCJoYtv_7X3ou2Vld-YWoMKI_8JVa3dZ9wqReo0qTUHqagVBthZCCV4lc=",
+                    "title": "doris.school"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjB4wWKEmkH3NlaPE03RgHA_nDNJiRqLpOFHB2ZehtgylHoaEE3iJZPiBv_pXfly_2UFGkzki63UZ20iYqtgZSc9QA-_xhhCyu9UiwyELunBl0DuS_kfMmGtDjE8H_Sfq9UrZAYW8-pVca06YZW0H6c-zzZQ==",
+                    "title": "goodschoolsguide.co.uk"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTM1l0Kcm5I6CfummBhIjfJoY7BbZ212xFoIAG3VYzE7Tmba4eyMBSw9iriBqMa-MB8qwsatKuseLRyq-jXwi9M-xY7K8h7e3VuZLWZ_RDumzYOPbMrqpT_sIIR-EU2RWJliPzzMl2wo3-lizE_RHKpy3DqPXeJ77eGPmgypR3FZywlEHd_O3nyYc=",
+                    "title": "state.gov"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbWS9FxPA43_9GyImVR8H5uqH_khBZbZGPFmCCHBu1l2Gu8g-D9LabHj7-F6LyQrLmBE5NzKFlErksJ_aY3ZtOWLRoAmtEvljC-SzW_eU4dGsBPFmhTtQ4DpWgBBBV27S9WCXeREa-FIRb9-LYxGPXxyW-OVMZnwtfeW1JVUgJGiMr7aUE9BzTNtg=",
+                    "title": "reddit.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdLqBNvBlOs_Ygr_fMDSdhffSScmPFSBHFI8wQxoZBVaZeVKDPhA2m6rd5xPGu_lVlmNEw-PoZQ27C6xfiasKr0nWgHs2RWqcPYinrORMWyFnOjsBPgxUkjydDNkQJd6GgC8RieljP0k3H652cFpC6FDMRq8c76RZSqq-N-by_-TUfXFM1B5KtwnsLB0ZHH0BSzkRhkSqe3R6mN6VIkpmoQbV1GSNNwjGKdh4J4gE9FqvVMi5Ywmq91dD-6VHRAAITzxxpi_NfVCay-OnZpKId6YrsK7w=",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOJ56B5PpvVmJjUSlcdSSFuyR1bnXMVno8Awb2lZ2niP7yrZZhk8GSaPr3U7UbNOSJdIsd3oHpxqgQLcvH1HLkoyRUjS6sPBUYIxC62K-HS2DPkhIV0uka7uuL9T2tr_VoNdChMekyNKe0BdCj_k1b4bmZQLtVYCv1MPyDk78ry_WbKeFBQF65qXkPwgtSRJdQq77ACI_nGg0DDrynA0q5iKrPu2pO5HACAbEmRlagk_naZdFIFm3JfJslwS_s_0oNa0a0_XWY",
+                    "title": "vnexpress.net"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhktiWrlwiORxUgHzC8KygnO5tWNJUmqWfSOnp7vKwfSGVNcY4MVC7stiQ5hQL3BWkQRAH-WD9FCtrvBz5dRdIX1CYBFohcTd5kbpExZaYJGSd2U2QeJFMSUvqXLHZ0NBKkWXPr2BmRR_epEcoU7tVoBn_7SBbswqRZEeD7rgR",
+                    "title": "world-schools.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8d6pXn-B3TOd3qOYriVlSy_x58VOw64wyR5FRc3briC217W1Y82Gi2KU_msn1fyqzuM0-q31ZYRNG8UCcgGvkl62vg17ad6J7sqY-pW5BFATJopBUT3OuCkzxwxvPUI44_xjSul4vCmwzPmoozXbX9QeEUKNux1o4wSX1348=",
+                    "title": "unishanoi.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6WF-7sgdYUb9v3NOdONZktasAWhMlzMsGD_ZcQ_A6JaDumpmjzoH10fA3qAXEsON7FP1BOZCWyyPZLO4AtzG39Qsd_TW_s2umjC80Zxw-ts-WFr6QYRBprZzCtEndaCjkXAZGjmy6ma-zZB1F7OdUIvGNc6v3Y1ZBavlS2FJw149yeC-AQt36hMBvwPi6x0YL3p3seuHD4Sy2",
+                    "title": "goodschoolsguide.co.uk"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIUYXHbXTl-Eh1uXk0-XTbMVKbClAUsb8KS-V5gQXVq9v_X2SnS_r5gG4_idFWbJL-9ZKP72DiIQzYr3ELcDh8XAtgKnxhgHCXR5rzsqi4Wk502HM5D231C3G_1Ir8oW19kcaDdqh13nXlxOiUrATdauIDDiVZ4DNgfSY-mk4UHQ-J",
+                    "title": "international-schools-database.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2YdXa9dB5ZOtyVtter68NYhO2gpBe2OaP6294v9VJqNbAq_kpr22IMZJEoD7a6EAZZ51vdd27BJN0nKOQaxcbGIgfL0X3HP0VwwsceiIIf1_rxlqNee-uhICBT-nIa3wou48ETfeKA6gh4q-rAleNoQWdkSPXBvXhW15n_0n2JS8=",
+                    "title": "nordangliaeducation.com"
+                  }
+                }
+              ],
+              "groundingSupports": [
+                {
+                  "segment": {
+                    "endIndex": 189,
+                    "text": "**UNIS Hanoi** (United Nations International School of Hanoi) and **BIS Hanoi** (British International School Hanoi) are two of the most prestigious, top-tier international schools in Hanoi"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 191,
+                    "endIndex": 309,
+                    "text": "However, they differ significantly in governance, curriculum pathways, student body demographics, and campus locations"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 403,
+                    "endIndex": 464,
+                    "text": "| **Founding & Governance** | Founded in 1988; **Non-profit**"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    6
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 466,
+                    "endIndex": 581,
+                    "text": "Established via an agreement between the UN and the Vietnamese government (one of only two UN schools in the world)"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 583,
+                    "endIndex": 616,
+                    "text": "| Founded in 2012; **For-profit**"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 618,
+                    "endIndex": 700,
+                    "text": "Operated by **Nord Anglia Education**, a global network of over 80 premium schools"
+                  },
+                  "groundingChunkIndices": [
+                    7,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 704,
+                    "endIndex": 799,
+                    "text": "| **Location** | Ciputra International City, **Tây Hồ / Bắc Từ Liêm** (Northwest Hanoi)"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 801,
+                    "endIndex": 872,
+                    "text": "| Vinhomes Riverside, **Long Biên** (East Hanoi, across the Red River)"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 876,
+                    "endIndex": 1011,
+                    "text": "| **Curriculum Framework** | **Full IB Continuum:**<br>• IB PYP (Primary)<br>• IB MYP (Middle School)<br>• IB DP (Grades 11–12)"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 876,
+                    "endIndex": 1171,
+                    "text": "| **Curriculum Framework** | **Full IB Continuum:**<br>• IB PYP (Primary)<br>• IB MYP (Middle School)<br>• IB DP (Grades 11–12) | **Hybrid British + IB:**<br>• English National Curriculum (Primary & KS3)<br>• Cambridge IGCSE (Years 10–11)<br>• IB DP / BIS Diploma (Years 12–13)"
+                  },
+                  "groundingChunkIndices": [
+                    4,
+                    8
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1174,
+                    "endIndex": 1241,
+                    "text": "| **Student Body & Diversity** | Highly diverse (60+ nationalities)"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1243,
+                    "endIndex": 1338,
+                    "text": "Strict **nationality cap** ensures no single nationality exceeds ~20% of the total student body"
+                  },
+                  "groundingChunkIndices": [
+                    9
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1243,
+                    "endIndex": 1359,
+                    "text": "Strict **nationality cap** ensures no single nationality exceeds ~20% of the total student body. | 30+ nationalities"
+                  },
+                  "groundingChunkIndices": [
+                    10
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1500,
+                    "endIndex": 1649,
+                    "text": "| **Admission Priorities** | **Tiered priority lane system:** UN agency families, diplomatic corps, faculty, and returning alumni have first priority"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1690,
+                    "endIndex": 1755,
+                    "text": "| Rolling admissions based on assessment and language proficiency"
+                  },
+                  "groundingChunkIndices": [
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1826,
+                    "endIndex": 1941,
+                    "text": "| **Global Collaborations** | Heavy integration of **UN Sustainable Development Goals (SDGs)** and service learning"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1943,
+                    "endIndex": 2045,
+                    "text": "| Nord Anglia signature partnerships: **Juilliard** (performing arts), **MIT** (STEAM), and **UNICEF**"
+                  },
+                  "groundingChunkIndices": [
+                    4,
+                    8
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2049,
+                    "endIndex": 2158,
+                    "text": "| **Tuition & Fees** | Top-tier; typically ranges from ~VND 450M (Early Years) to ~VND 1.03B (Grades 11–12)"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2160,
+                    "endIndex": 2245,
+                    "text": "| Top-tier; typically ranges from ~VND 340M (Early Years) to ~VND 970M (Year 12–13)"
+                  },
+                  "groundingChunkIndices": [
+                    13
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2329,
+                    "endIndex": 2430,
+                    "text": "**UNIS Hanoi (Pure IB):** UNIS uses an inquiry-led, student-centered approach across all grade levels"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2432,
+                    "endIndex": 2602,
+                    "text": "If your child thrives in holistic, project-based environments or is already familiar with the IB Primary (PYP) and Middle Years (MYP) programmes, UNIS provides continuity"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2606,
+                    "endIndex": 2743,
+                    "text": "**BIS Hanoi (British + IGCSE + IB):** BIS blends a structured, subject-specialist British foundation with external, rigorous benchmarking"
+                  },
+                  "groundingChunkIndices": [
+                    14,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2745,
+                    "endIndex": 2876,
+                    "text": "Students sit formal Cambridge IGCSE examinations at age 16 before entering the IB Diploma Programme (IBDP) in their final two years"
+                  },
+                  "groundingChunkIndices": [
+                    14,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2878,
+                    "endIndex": 3009,
+                    "text": "Many families appreciate IGCSEs as concrete qualification milestones that prepare students specifically for the demands of the IBDP"
+                  },
+                  "groundingChunkIndices": [
+                    14,
+                    8
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3054,
+                    "endIndex": 3129,
+                    "text": "**UNIS Hanoi:** The school is defined by its multilateral, diplomatic ethos"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3131,
+                    "endIndex": 3234,
+                    "text": "Its strict nationality quota creates one of the most culturally balanced environments in Southeast Asia"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    9
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3236,
+                    "endIndex": 3355,
+                    "text": "Because many parents work in development, embassies, or NGOs, there is a natural turnover of students every 2–4 years"
+                  },
+                  "groundingChunkIndices": [
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3359,
+                    "endIndex": 3535,
+                    "text": "**BIS Hanoi:** As part of Nord Anglia, BIS benefits from massive corporate scale, structured professional development for teachers, and strong STEAM/performing arts curriculums"
+                  },
+                  "groundingChunkIndices": [
+                    7,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3815,
+                    "endIndex": 3912,
+                    "text": "**UNIS Hanoi** is ideal if you live in **Tây Hồ (West Lake)**, Ciputra, Starlake, or Ba Đình"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3914,
+                    "endIndex": 3984,
+                    "text": "It is the historical center of Hanoi’s international expat community"
+                  },
+                  "groundingChunkIndices": [
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3988,
+                    "endIndex": 4075,
+                    "text": "**BIS Hanoi** is ideal if you live in **Vinhomes Riverside**, Long Biên, or Ocean Park"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4077,
+                    "endIndex": 4213,
+                    "text": "Families living in Tay Ho who attend BIS must cross the Red River daily, which can mean a 35–50 minute bus ride during peak rush hours"
+                  },
+                  "groundingChunkIndices": [
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4290,
+                    "endIndex": 4392,
+                    "text": "You prioritize an explicitly international, multilateral school environment with strict diversity caps"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    9
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4398,
+                    "endIndex": 4489,
+                    "text": "You prefer a pure, continuous **IB education (PYP to DP)** without standard British testing"
+                  },
+                  "groundingChunkIndices": [
+                    6
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4495,
+                    "endIndex": 4575,
+                    "text": "You work for an embassy, NGO, or UN agency (benefiting from admissions priority)"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4581,
+                    "endIndex": 4665,
+                    "text": "You plan to reside in Tây Hồ, Ciputra, or the northern/western corridors of Hanoi"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4699,
+                    "endIndex": 4801,
+                    "text": "You prefer the structure of the **English National Curriculum and IGCSEs** leading into the IB Diploma"
+                  },
+                  "groundingChunkIndices": [
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4807,
+                    "endIndex": 4893,
+                    "text": "You place high value on global STEAM and arts partnerships (such as MIT and Juilliard)"
+                  },
+                  "groundingChunkIndices": [
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4899,
+                    "endIndex": 4990,
+                    "text": "You plan to live in Long Biên / Vinhomes Riverside or work on the eastern side of the city"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4996,
+                    "endIndex": 5076,
+                    "text": "You are unable to secure a place off the UNIS waitlist due to nationality quotas"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    9
+                  ]
+                }
+              ],
+              "webSearchQueries": [
+                "UNIS Hanoi curriculum tuition nationality quota",
+                "BIS Hanoi vs UNIS Hanoi",
+                "BIS Hanoi curriculum IGCSE IBDP"
+              ]
+            }
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 580,
+          "candidatesTokenCount": 1661,
+          "totalTokenCount": 3464,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 580
+            }
+          ],
+          "thoughtsTokenCount": 1223,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "3831apezKa_hytMPtev3iAo"
+      }
+    ]
+  }
 }

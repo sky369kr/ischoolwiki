@@ -31,7 +31,7 @@ function arg(name: string): string | undefined {
 // Two-level public suffixes seen for schools and media in the region; extend as needed.
 const TWO_LEVEL = new Set([
   "com.vn", "edu.vn", "org.vn", "net.vn", "gov.vn", "co.uk", "org.uk", "ac.uk", "com.au", "edu.au",
-  "co.in", "co.kr", "or.kr", "ac.kr", "com.sg", "edu.sg", "co.jp", "com.hk", "edu.hk", "co.th", "com.my", "co.nz",
+  "co.in", "co.kr", "or.kr", "ac.kr", "com.sg", "edu.sg", "co.jp", "com.hk", "edu.hk", "co.th", "ac.th", "com.my", "co.nz",
 ]);
 export function domainOf(url: string): string | null {
   let host: string;

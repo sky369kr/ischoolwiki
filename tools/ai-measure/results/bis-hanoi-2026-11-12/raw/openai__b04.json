@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "openai",
   "model": "gpt-6-astra",
   "question": {
@@ -7,7 +7,351 @@
     "type": "branded",
     "text": "What universities do BIS Hanoi graduates go to?"
   },
-  "started": "2026-11-12T14:01:33.202Z",
-  "finished": "2026-11-12T14:01:33.970Z",
-  "error": "Error: no response.completed event: [{\"type\":\"error\",\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"sequence_number\":2},{\"type\":\"response.failed\",\"response\":{\"id\":\"resp_067d58e4cb545182006af5c6bd573887d29b2154b9365ee738\",\"object\":\"response\",\"created_at\":1794492093,\"status\":\"failed\",\"access_programs\":{\"cyber\":\"standard\"},\"background\":false,\"completed_at\":null,\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"frequency_penalty\":0,\"image\":{\"context_compression\":\"disabled\""
+  "started": "2026-11-12T14:25:44.065Z",
+  "finished": "2026-11-12T14:25:59.006Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What universities do BIS Hanoi graduates go to?"
+  },
+  "response": {
+    "id": "resp_031b1e8f95a6c7a7006af5cc68526087d2951ba6d08c5266a9",
+    "object": "response",
+    "created_at": 1794493544,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794493557,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_031b1e8f95a6c7a7006af5cc69df9c87d28ffa9d7e8adfb3d8",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "BIS Hanoi university destinations graduates British International School Hanoi"
+          ],
+          "query": "BIS Hanoi university destinations graduates British International School Hanoi",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://boshops.shop/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://isons.top/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi?trk=article-ssr-frontend-pulse_little-text-block"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/5/29/how-bis-hanoi-prepares-students-beyond-academics"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/prospectus-2025.pdf?hash=5D1FD65472BEBC673EB9BDD46092E1F3&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/3/27/bis-hanoi-recognised-as-one-of-the-most-popular-international-schools-of-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?hash=940377A549F02FF591758FE9027B1F09&rev=6a61ea3f9bd04b4aa70a9f9e1121686a"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2023-24-sy/university-results/bis-hanoi-uni-destinations-all.pdf?hash=DA4198316F67300C2D4D3ADE0130AE95&rev=0b42ee9787ba473097f2b8dc50fee08d"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2023-24-sy/university-results/bis-hanoi-uni-destinations-all.pdf?hash=80F3D266326B2FB22474F26DD8EBBB5D&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/High_School_for_Gifted_Students%2C_Hanoi_National_University_of_Education"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/International_School%2C_Vietnam_National_University%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_University_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/e75hzo"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1greh3w"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/17l490u/hanoi_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1euc1vn/reputable_schools_in_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/14868il"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1q77k5t/regents_bk_bis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1ai3qfk"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_031b1e8f95a6c7a7006af5cc6d368887d28cc04cf468468bcc",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cx11qXBsT8oa3t6dj21PbV4486q2MJsl6WzQDbi2TfAiVhtTdsLSoHncU5ulGN0CA1_jDXev8tMaFkiIwt48F96DJWyQXN8vHacqCSF5YI43Tce1-eCVFXmzGdr2kTzCqBv1npBeddxXpwHHFpQcLtIJJxW7eZD9N-YYvHk05sz4iD21D8u_D1Rxtx1Jn0aQ0OaEuTUfg630VdUGdNOBZymZWpp7ytzXjmbY9y6Kcc7YY3tqH7wpoXpesOzMmfE-l8gWcVXxjv1QNIOTYMimFeoghTUd9F8b9c0DzMZsVc1g4nS83TCFt6Ml8xUAgxlbpPmxHM0T_XmU1IS7FKfmHDTuFJB8vgwhnoFKc-XFoRMCgiq4etXbTEXTswC7kk1djksUoFbKxvlVMPfaBA8BWZAK7cN1Nwr1dqWICbdl6LLRDJ_qmZkLy9c-o0RCQjmw9iBIJprIRZS7ftFdNRmtrV82qIKIvuZ0gStoO0cox5c4aYurU1vKym6nkC6O-b26k_1ejJM9UH6d3ZbGqjVbKHfPiN6mWlAO9LuHtONCnxma4Q8-Bo6b26KjlNmptzdhfKUCdRz5ReMt0nvng92bwLb7yBbJYY_GHhGHXo8zPEwGSJdE3PG4MXbhastyYYqJt4jNdjZaVZdJV26TatQf9yz6jSkC3z4q1ynj5BZVCdNb93L12pt2b--gwW4pogeIZ6f4x6_TJpLt8syyj5WAI50HnUfS95RPILbbRKQH41PVTzFpqGF4O0gSOipNTOMRmWMddpu1XGEwG1AFo1luIIr9hR7Mi-THOgScOOh71RXQBURkL_esjGLgzeaJfcUzwzeilJJM9YFqWqfCP5_OZNQ5EH3ORxofsGJY-QeTonnd0aQ6p0VB9K6ENEzS_s9nI61r1-LJJRmDjh4QjihINWDEZ42V3vtNQN3d0o9f0KJfIIlujUVlYTy_2XBVUaRFrDbb2RvGkfffKH4Y1EwsPg5CNbPyFgx691xdcUasNiJagn5fEDuZOr3I80TwmqJd6Yeycx9xekylGedY1iSI4fSDsi8L7XAk0mpPi3pZc9G8qI1xGPilGYwtkU9uj64UbyNUWC3SqS_3EpCJlVLrzt6y9XjURXMhTq-ursiOwTJhGVXAeP0Ljbm753KKxnn6VOnL2hH_27PRyoSuYNxOMZKZ0iRybvsZShmOD1-LFpbMtj-N30TWKkw-KRgxiEdxVKk6esySupXmND3dn_4tNZMHDzlt1bpF4pkZOKKA12miZ4JCjnmDmMdowYpKAkep4e7Fs09x1lTyqXEkdo-PxAQNv8duye0jTdklMLzE_0bg7N5Q0yhZKHqaALhg2ZDBe8bv2NklqEAzXv6EpJPmqhL7QxjrEeCufMZTmUa-CdQ9Hfz8NrcVAIqQ8fvHS8ZOvsmt-_PbUv2G1VKgQBPrwOkQq_mFoik0_H9ldFi3BIJ2AHnEJkZExaSvhY9WDsZftaK2ElknIYALZVPZrvlPqCH3-G9jFLPvoTywR594iMvlKSnv0rEP-UdRWuleEYeCbH5nf9v2l4WY9fRJWWOzYjSO1Wuhbofz1zoOsWlYo3ZMYHEywDk5J2sItMcehPHDl0enCgG3nP-M84OOpyp_Rh3Nh-ERBMlKURJVMbe2bzxOoOsc0wt8Ief2t1DSpaD-ZWZVaipQpBpQd7mgGMR5qJWK4hyboy-b85ZHq1szCY5nHxEznPt_gkUm22F0ZrMNugk9j4mSCkv5LJSb-LkRP8ljt2Sz0x1VMBMyBF3Ja7dN8bLhgTjuUiiUF5yQZ_Iokh50VX16_Ic6_6dS3wbPJhW_QUew2KAIX6md7rc-47XNuoVDEsUPjos8sFXEfWdPTIBPSH6MVw1mI7ie0gegEZGulf2uX6SsWesWl8vVUsCsjFf7fIMdesd7iTLSwYotWaJU2XzaGu2ubuflB8-qQybkafWUK8DCsHG8hIWFgI4MrDU4df4MV1f0D7iih61IbOnHjm_er0-1mNSnWdrSke4_u4tBm_bQ8RauWdkoiPxmpNCN16_CXokAVVp2G21EITGsyORpbQr8m6CrNuEJ0NdDojBkwBov4tqU90EhTw5tOkMKUBBfj87bx4ZlIM-2r2cfqhSOv487B4dyBTJ7nbXnE8oL7Fmo0OH1AoMGmttoLtFtPAqhqWYCTMHC68YToHOG9pKZ3kZlNNmGK0b7EJOfIVVoVT7GIFwXt48TaX8ble2zn6uj5AlhJvgOzMTeJrazdkLATmYS9fB0hdUanQvWtBYrvt8AxOHCKxC2MmvGltBkq22msdtCTivw8ZWH3jcbAXnRQaK95Jz7O9hHYY3K4gb-rd9pAZjUEc8lPADC8bTTrLDXvBtO-udz1yVhc-pIA_YK9FvKE9B-NQVGBLW1w==",
+        "summary": []
+      },
+      {
+        "id": "msg_031b1e8f95a6c7a7006af5cc6ee3d087d2b0a9edc67a0c0210",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 496,
+                "start_index": 360,
+                "title": "University Destinations | British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 853,
+                "start_index": 717,
+                "title": "University Destinations | British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1163,
+                "start_index": 1027,
+                "title": "University Destinations | British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1404,
+                "start_index": 1268,
+                "title": "University Destinations | British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1719,
+                "start_index": 1583,
+                "title": "University Destinations | British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1925,
+                "start_index": 1789,
+                "title": "University Destinations | British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2428,
+                "start_index": 2267,
+                "title": "BIS Hanoi students achieve exceptional IB results",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "**British International School (BIS) Hanoi graduates go on to universities in the US, UK, Australia, Canada and across Asia.** The school identifies the US as its most popular destination, followed by the UK. One important distinction: much of its published “university destinations” information lists **acceptances/offers**, rather than confirmed enrolments. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai))\n\n### Examples from its published university acceptance record\n\n| Destination | Universities include |\n|---|---|\n| **United States** | Stanford, Yale, Princeton, Columbia, UC Berkeley, UCLA and New York University (NYU). ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai)) |\n| **United Kingdom** | Imperial College London, University College London (UCL), King’s College London, London School of Economics (LSE), Manchester, Bristol and Warwick. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai)) |\n| **Australia and Canada** | University of Melbourne, University of Sydney and University of Toronto. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai)) |\n| **Hong Kong and Singapore** | University of Hong Kong, Hong Kong University of Science and Technology, National University of Singapore and Nanyang Technological University. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai)) |\n| **South Korea** | KAIST, Yonsei University and Korea University. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations?utm_source=openai)) |\n\n### A specific graduating class\n\nFor the **Class of 2025**, the school reported that students would be joining **UCL, Edinburgh, King’s College London, Boston University, the University of Sydney, the University of Hong Kong and Waseda University**. This is a more concrete cohort-level account than the cumulative acceptance list above. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025?utm_source=openai))\n\nIf you’re evaluating the school, ask for **actual enrolments by university and student counts for the last three graduating classes**—that will show typical outcomes more clearly than a list of prestigious offers."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 1
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 12776,
+      "input_tokens_details": {
+        "cache_write_tokens": 13,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 545,
+      "output_tokens_details": {
+        "reasoning_tokens": 98
+      },
+      "total_tokens": 13321
+    },
+    "user": null,
+    "metadata": {}
+  }
 }

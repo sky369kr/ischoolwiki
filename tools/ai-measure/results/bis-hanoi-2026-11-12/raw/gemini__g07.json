@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "question": {
@@ -7,7 +7,2926 @@
     "type": "generic",
     "text": "Compare international school fees in Hanoi"
   },
-  "started": "2026-11-12T13:55:32.861Z",
-  "finished": "2026-11-12T13:55:33.024Z",
-  "error": "Error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+  "started": "2026-11-12T14:29:25.066Z",
+  "finished": "2026-11-12T14:29:55.167Z",
+  "request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Compare international school fees in Hanoi"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "response": {
+    "chunks": [
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "International school fees in Hanoi span a broad range, generally reflecting differences in"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 14,
+          "totalTokenCount": 1097,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " curriculum, campus facilities, teacher accreditation, and school ownership."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 14,
+          "totalTokenCount": 1097,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Annual tuition can start as low as **$5,000–$8,000 (~13"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 38,
+          "totalTokenCount": 1121,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0M–200M VND)** for subsidized national/bilingual institutions and reach up to **$35"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 62,
+          "totalTokenCount": 1145,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ",000–$40,000+ (~850M–1+ billion VND)** at"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 87,
+          "totalTokenCount": 1170,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " top-tier international schools for senior secondary grades"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 114,
+          "totalTokenCount": 1197,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### 1. Breakdown by School Tier\n\n#### Tier 1: Premium Full-International Schools\n* **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 114,
+          "totalTokenCount": 1197,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Annual Tuition:** **~$18,000 – $40,000+ (approx. "
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 138,
+          "totalTokenCount": 1221,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "450M – 1,000M+ VND)**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 166,
+          "totalTokenCount": 1249,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Target:** Expatriates, diplomatic families, and affluent local families looking for a 100"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 166,
+          "totalTokenCount": 1249,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "% English-medium international environment, high faculty retention, and native English-speaking, fully-certified teachers"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 191,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n| School | Primary Curriculum |"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 191,
+          "totalTokenCount": 1274,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Typical Yearly Tuition (Kindergarten – Grade 12) |\n| :--- | :--- | :--- |\n| **UN"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 219,
+          "totalTokenCount": 1302,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "IS Hanoi** (United Nations Int'l School) | Full IB Continuum (PYP, MYP, DP) | ~"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 245,
+          "totalTokenCount": 1328,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "400M – 950M+ VND ($16,000 – $38,00"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 271,
+          "totalTokenCount": 1354,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0+) |"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 271,
+          "totalTokenCount": 1354,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n| **BIS Hanoi** (British International School) | British Curriculum / IGCSE / IB DP | ~30"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 296,
+          "totalTokenCount": 1379,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0M – 900M+ VND ($12,000 – $36,000+)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 325,
+          "totalTokenCount": 1408,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " |\n| **Concordia International School** | American / Advanced Placement (AP) | ~"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 325,
+          "totalTokenCount": 1408,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "400M – 800M+ VND ($16,000 – $32,000"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 352,
+          "totalTokenCount": 1435,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "+) |\n| **Hanoi International School (HIS)** | Full IB Continuum | ~"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 352,
+          "totalTokenCount": 1435,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "350M – 700M VND ($14,000 – $28,000)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 381,
+          "totalTokenCount": 1464,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " |\n\n---\n\n#### Tier 2: Mid-Range International & Premium"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 381,
+          "totalTokenCount": 1464,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Bilingual Schools\n* **Annual Tuition:** **~$10,000 – $22,000"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 405,
+          "totalTokenCount": 1488,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (approx. 250M – 550M VND)**\n* **Target"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 405,
+          "totalTokenCount": 1488,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ":** Families who want international accreditations (Cambridge, British, or US-based) or dual-language tracks at lower tuition"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 431,
+          "totalTokenCount": 1514,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " rates than the premium tier.\n\n| School | Curriculum"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 431,
+          "totalTokenCount": 1514,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " | Typical Yearly Tuition |\n| :--- | :--- | :--- |\n| **BVIS Hanoi** (British Vietnamese Int"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 458,
+          "totalTokenCount": 1541,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "'l School) | British / Dual-language / IGCSE & A-Levels | ~250M – 55"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 486,
+          "totalTokenCount": 1569,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0M VND ($10,000 – $22,000)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 514,
+          "totalTokenCount": 1597,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " |\n| **ISPH** (Int'l School ParkCity Hanoi) | British Curriculum"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 514,
+          "totalTokenCount": 1597,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " / Cambridge | ~350M – 600M VND ($14,000 – $24"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 540,
+          "totalTokenCount": 1623,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ",000) |\n| **Reigate Grammar School Vietnam (RGSV)** | Cambridge"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 540,
+          "totalTokenCount": 1623,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " / IB DP | ~350M – 650M VND ($14,000 –"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 564,
+          "totalTokenCount": 1647,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " $26,000) |\n| **St. Paul American School Hanoi** | American / AP | ~30"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 591,
+          "totalTokenCount": 1674,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0M – 550M VND ($12,000 – $22,000"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1698,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ") |\n| **Hanoi Academy** | Bilingual"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 615,
+          "totalTokenCount": 1698,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " / British (Edexcel) | ~200M – 450M VND ($8,000"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 640,
+          "totalTokenCount": 1723,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " – $18,000) |\n\n---\n\n#### Tier 3"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 640,
+          "totalTokenCount": 1723,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ": Subsidized Community & Affordable Bilingual Schools\n* **Annual Tuition:** **~$4,500 – $12"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 666,
+          "totalTokenCount": 1749,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ",000 (approx. 120M – 300M VND)**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 690,
+          "totalTokenCount": 1773,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Target:** Families with national affinities (French, Korean, Japanese"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 690,
+          "totalTokenCount": 1773,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ") or self-funded families wanting international exposure without corporate expat budgets.\n\n| School | Curriculum"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 690,
+          "totalTokenCount": 1773,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " | Typical Yearly Tuition | Notes |\n| :--- | :--- | :--- | :--- |\n| **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 714,
+          "totalTokenCount": 1797,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Lycée Français Alexandre Yersin (LFAY)** | French National (AEFE) / Baccalauréat |"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 741,
+          "totalTokenCount": 1824,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " ~150M – 250M VND ($6,000 – $10,0"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 765,
+          "totalTokenCount": 1848,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "00) | Subsidized by the French government"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 765,
+          "totalTokenCount": 1848,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "; fees vary for French, Vietnamese, and third-party nationals. |\n| **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 765,
+          "totalTokenCount": 1848,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Singapore International School (SIS)** | Singaporean & Cambridge | ~150M – 350M VND ($6,"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 792,
+          "totalTokenCount": 1875,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "000 – $14,000)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 816,
+          "totalTokenCount": 1899,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " | Offers both integrated bilingual and full-international tracks. |\n| **Korean International School Hanoi (KISH)** | Korean"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 816,
+          "totalTokenCount": 1899,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Curriculum | ~80M – 130M VND ($3,200 – $5,200)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 844,
+          "totalTokenCount": 1927,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " | Heavily subsidized for the Korean community. |\n| **Vinschool / Well"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 844,
+          "totalTokenCount": 1927,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "spring / VAS Hanoi** | Cambridge Bilingual tracks | ~100M – 250M VND ($4"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 868,
+          "totalTokenCount": 1951,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ",000 – $10,000) | High proportion of local students, blend of"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 868,
+          "totalTokenCount": 1951,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Vietnamese MOET + international certifications. |\n\n---\n\n### 2. Crucial \""
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 868,
+          "totalTokenCount": 1951,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Hidden\" and Additional Fees\nTuition published on school websites rarely covers the full cost of attendance"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 893,
+          "totalTokenCount": 1976,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". The first year often carries a heavy upfront surcharge:\n\n1. **Application & Assessment"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 893,
+          "totalTokenCount": 1976,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Fee:** ~VND 3,500,000 – 10,000,000 ("
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 921,
+          "totalTokenCount": 2004,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "one-time, non-refundable).\n2"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 921,
+          "totalTokenCount": 2004,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". **Registration / Matriculation Fee:** ~VND 20,000,000 – 70,00"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 950,
+          "totalTokenCount": 2033,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0,000+ (one-time upon acceptance)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 976,
+          "totalTokenCount": 2059,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n3. **Capital Development / Building Levy:** ~VND 20,000,00"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 976,
+          "totalTokenCount": 2059,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "0 – 70,000,000 annually (or mandatory refundable debentures, notably at UNIS)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1004,
+          "totalTokenCount": 2087,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n4. **Mandatory Recurring Costs:**\n   * **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1004,
+          "totalTokenCount": 2087,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "School Bus:** ~VND 25,000,000 – 45,000"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1029,
+          "totalTokenCount": 2112,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ",000 per year (depending on zone/distance).\n   * **School Lunch:** ~VND "
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1053,
+          "totalTokenCount": 2136,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "15,000,000 – 30,000,000 per year.\n   * **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1082,
+          "totalTokenCount": 2165,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Uniforms, Exam Fees (IGCSE/IB/AP), Technology & English Support (EAL):** Usually charged separately"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1108,
+          "totalTokenCount": 2191,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### 3. Key Decision Factors\n* **Location &"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1108,
+          "totalTokenCount": 2191,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Commute:** Hanoi traffic during peak hours is heavy. **UNIS** and **HIS"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1108,
+          "totalTokenCount": 2191,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "** are closer to the West Lake (Tay Ho) expat enclave. **BIS Hanoi** is"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1108,
+          "totalTokenCount": 2191,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " east in Long Bien (Vinhomes Riverside). **ISPH** is southwest in Ha Dong, and **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1108,
+          "totalTokenCount": 2191,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Concordia** is further north near Van Tri. Commutes should weigh heavily alongside fee"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1108,
+          "totalTokenCount": 2191,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " comparisons.\n* **Curriculum Match:** Families planning relocation to the UK/Europe typically favor **BIS, ISPH, or BVIS**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1137,
+          "totalTokenCount": 2220,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (British/IGCSE/A-Level); families targeting US universities often consider **Concordia or St. Paul** ("
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1163,
+          "totalTokenCount": 2246,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "AP); while globally mobile diplomatic families lean toward **UNIS** or **HIS** (Full IB)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1190,
+          "totalTokenCount": 2273,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Payment Terms:** Nearly all schools"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1190,
+          "totalTokenCount": 2273,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " offer a **5%–10% discount** if tuition is paid annually upfront rather than term-by-term,"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1215,
+          "totalTokenCount": 2298,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " along with sibling discounts (typically 5%–15% for the 2nd and 3rd child)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1240,
+          "totalTokenCount": 2323,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 7,
+          "candidatesTokenCount": 1240,
+          "totalTokenCount": 2323,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 7
+            }
+          ],
+          "thoughtsTokenCount": 1076,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "",
+                  "thoughtSignature": "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"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0,
+            "groundingMetadata": {
+              "searchEntryPoint": {
+                "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=tuition+fee+UNIS+Hanoi+BIS+Hanoi+Concordia+ISPH&client=app-vertex-grounding&safesearch=active\">tuition fee UNIS Hanoi BIS Hanoi Concordia ISPH</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=international+school+fees+Hanoi+comparison+2023+2024+2025&client=app-vertex-grounding&safesearch=active\">international school fees Hanoi comparison 2023 2024 2025</a>\n  </div>\n</div>"
+              },
+              "groundingChunks": [
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI0l4cqfqXKgN6HPFM7MaZRskwG_4mBBtb2izxJRzEi5UUuPf5dD1OlMvJRD8nvSEmJifpxOuRoa2AMXV1_AgXGZBuhzjUIHo5X3cCTLJ-2VycfevJH83Bc35NDVeKMgh6GZfUzzKvkNG7Au8=",
+                    "title": "expatschoolguide.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGANQlXh3UDB0yw_mVJmmxhNneDfKkAkTchXis0KvHvB2NpCJ9ZeoO1WvcNWsUJjao6PchdAtuGSizRFKrlC9xt0ByWwm3MFv-8uRPjjUtti5ZssD6VZXrD3cTA1B5XHBLRLvFGgWM8JSWJY_Nbs-Spz4NdYmwU-JpVwkjpOzF9WXBcMD84JuVI6DZOYsO7J5Tn2kx6-3wz4V8=",
+                    "title": "tutopiya.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfghvQGYYI-zFU0W3ByUsvmBsexXZ8KGdLys01iQJACtQ_Fx5kfzOE5XXDxDlxClSesEnw5WVSawo5bA8Gax8wVIu9SXEfzouF-_4I62W7RNmrbocR2_hDE4gnHghdwrMOij11KwwH-FcG-6ew1W5t5Fo-CGwTRcpJjT8c",
+                    "title": "msischool.edu.vn"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCq4uvtmssH5WVsgUOb33sdYaJe4A74eSproNC860b5k8mQQj-TF_7He8WrqTAcdRhjWIMR9lOPUWak26xHSBm4dCI1wtjhDhuHD090suYdQqDI-PIPl3FVip0Ybi3pT8AIVmftj_iUTfsI325b8_UG6O8zh4OPcDthhwgzyNvH5QmtzGoWzJE5F5jzVOk679deLGZsb_NneS08tDkQ-e9IlGQdsj77PiODjTheYlmGyNsDKpSH3I5GcBg4iMS3zDKORun8rkh",
+                    "title": "ischooladvisor.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuoip2ZxbyjjmEBVrh8XUFhkZIfa9NzG1C75dDYcgu81al6s49YEmzwJ7hPBV20z60Jt2BKQJxl4KDH3-T1CvJaMiIN0PkJnE2B90S0jruQfUuJulhWrL3oetzzax3Z9SO4jzWv0f7o8Dd1VncKnQnwnlbKDAlZcSKl2-UmDEjg7MRTzVMu3NScRC8yRWgE_IV6W_HIDOb",
+                    "title": "international-schools-database.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5-9jdLuifixptIN_jZtKWQIMzzAALhgkSAbOz1TBRKFXUA31FSmpAlY2ha_NqYlADcqjEoHTwXaY36PnAnLoU1CH0O9uPV6KpOUhgy6wUa3cCYAzr7zXbVscxUl9Sw9WkjyBopolGWXqd3Rra0UiqEw09fYnHlW4y",
+                    "title": "vietnamteachingjobs.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcb3arHhPn4QbtsrqiLTZj1ekGBmoiDe4BSw6yVIp-xXD3S4iwcckgxEuJ9jGAtXMbEIWcupiOdckejWiG_wFKc2pylF8NUTFscQdZ7qa5lLXW9x90khI6WcQ5PF-jkMh3K5DDC4dVPkRmjZwQXa9CkjnjPNFVtiUPdpDxNY3yMudERulqfMfuBU9DqdRpf_bJTY-ZNkt8c1S3bbJR",
+                    "title": "vnexpress.net"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOfMaj93AMqkMnu3PnrRpBEyt5J-4yVdk7iWxPRWew3eMvIdvU8FedEW_ffp_KVAIROUPWdjrGPQTD9S9S4dBmcgpvjwGp192FMAAO7e1HPVAR0gtc9HhxOLorOo84OeXTI4fmZZ2D2uZ_UsSG_5TtdemS",
+                    "title": "expatschoolguide.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6wKF8S9Kld3Scr5X7nduvWSvn4K9WQXNKElur9IuTHfF4jNVrg-hir6KAjLTAeM4b5enGKXBSx_Vp9q4owlTxen9yhlUmaC4hrYdadAfdXtNAVyqkH8HOMTOjqrMyqHCI3KFf--UCmXDPSieOvWTxNKeoLUXrIsSrJwrhE5pmGCqx7Wwk5yngoPzAoE0=",
+                    "title": "doris.school"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHowjzye8mUnMy4lKrtlNQ0DwOvS_thEOU50g72N2d2MrhFKL-YsFzTdqZRXpqyHEX7m9WJZVxt5FF3mRTmAoKZHtaibZ0B8xZWK6UbYMKGXWcXL63HQOh2EfcuqkHbeUbbemnSD4mIDKnY8jSRvi-pCoXaeA==",
+                    "title": "alphahousing.vn"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4fNevQViXRtY-Md_V6iWBPbbj34dJN-BUUohnBwFCEMCBhPqSg_XXhbkYEw1KkPKMAHkt0Ao8GV4AG58eJHB27hoy0ZRAokF5yHt2-8Coy-KU-N85Rt3Sg0CZy3VU0v-xvNQZvxKYsoZhbhSqs53n0mZn4ja4Vcbz8QM=",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWI5zYgTtyuJ-kf5kAqPxTngvQ_eVYQA2z165QSLUNbYF0iLlODNgqyNoHynzpWtoZpPUZobr3lVlPKn3IPtOtm0EJhrfYfwOi6WfIjPOGPs40Jn7_ZhXm9gZVOEjnArF0kBBZOmybZLP8KyUAlKiR260=",
+                    "title": "vietnamspot.ru"
+                  }
+                }
+              ],
+              "groundingSupports": [
+                {
+                  "segment": {
+                    "endIndex": 165,
+                    "text": "International school fees in Hanoi span a broad range, generally reflecting differences in curriculum, campus facilities, teacher accreditation, and school ownership"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 167,
+                    "endIndex": 413,
+                    "text": "Annual tuition can start as low as **$5,000–$8,000 (~130M–200M VND)** for subsidized national/bilingual institutions and reach up to **$35,000–$40,000+ (~850M–1+ billion VND)** at top-tier international schools for senior secondary grades"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 504,
+                    "endIndex": 580,
+                    "text": "**Annual Tuition:** **~$18,000 – $40,000+ (approx. 450M – 1,000M+ VND)**"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 583,
+                    "endIndex": 795,
+                    "text": "**Target:** Expatriates, diplomatic families, and affluent local families looking for a 100% English-medium international environment, high faculty retention, and native English-speaking, fully-certified teachers"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    3,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 906,
+                    "endIndex": 1032,
+                    "text": "| **UNIS Hanoi** (United Nations Int'l School) | Full IB Continuum (PYP, MYP, DP) | ~400M – 950M+ VND ($16,000 – $38,000+)"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    6,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1035,
+                    "endIndex": 1163,
+                    "text": "| **BIS Hanoi** (British International School) | British Curriculum / IGCSE / IB DP | ~300M – 900M+ VND ($12,000 – $36,000+)"
+                  },
+                  "groundingChunkIndices": [
+                    6
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1166,
+                    "endIndex": 1284,
+                    "text": "| **Concordia International School** | American / Advanced Placement (AP) | ~400M – 800M+ VND ($16,000 – $32,000+)"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1287,
+                    "endIndex": 1388,
+                    "text": "| **Hanoi International School (HIS)** | Full IB Continuum | ~350M – 700M VND ($14,000 – $28,000)"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    7
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1464,
+                    "endIndex": 1536,
+                    "text": "**Annual Tuition:** **~$10,000 – $22,000 (approx. 250M – 550M VND)**"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1539,
+                    "endIndex": 1700,
+                    "text": "**Target:** Families who want international accreditations (Cambridge, British, or US-based) or dual-language tracks at lower tuition rates than the premium tier"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    8
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1775,
+                    "endIndex": 1913,
+                    "text": "| **BVIS Hanoi** (British Vietnamese Int'l School) | British / Dual-language / IGCSE & A-Levels | ~250M – 550M VND ($10,000 – $22,000)"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    9
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1916,
+                    "endIndex": 2032,
+                    "text": "| **ISPH** (Int'l School ParkCity Hanoi) | British Curriculum / Cambridge | ~350M – 600M VND ($14,000 – $24,000)"
+                  },
+                  "groundingChunkIndices": [
+                    6
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2144,
+                    "endIndex": 2239,
+                    "text": "| **St. Paul American School Hanoi** | American / AP | ~300M – 550M VND ($12,000 – $22,000)"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    7
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2242,
+                    "endIndex": 2335,
+                    "text": "| **Hanoi Academy** | Bilingual / British (Edexcel) | ~200M – 450M VND ($8,000 – $18,000)"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2411,
+                    "endIndex": 2482,
+                    "text": "**Annual Tuition:** **~$4,500 – $12,000 (approx. 120M – 300M VND)**"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2485,
+                    "endIndex": 2644,
+                    "text": "**Target:** Families with national affinities (French, Korean, Japanese) or self-funded families wanting international exposure without corporate expat budgets"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2734,
+                    "endIndex": 2863,
+                    "text": "| **Lycée Français Alexandre Yersin (LFAY)** | French National (AEFE) / Baccalauréat | ~150M – 250M VND ($6,000 – $10,000)"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2734,
+                    "endIndex": 2962,
+                    "text": "| **Lycée Français Alexandre Yersin (LFAY)** | French National (AEFE) / Baccalauréat | ~150M – 250M VND ($6,000 – $10,000) | Subsidized by the French government; fees vary for French, Vietnamese, and third-party nationals"
+                  },
+                  "groundingChunkIndices": [
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2966,
+                    "endIndex": 3076,
+                    "text": "| **Singapore International School (SIS)** | Singaporean & Cambridge | ~150M – 350M VND ($6,000 – $14,000)"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3145,
+                    "endIndex": 3251,
+                    "text": "| **Korean International School Hanoi (KISH)** | Korean Curriculum | ~80M – 130M VND ($3,200 – $5,200)"
+                  },
+                  "groundingChunkIndices": [
+                    7
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3301,
+                    "endIndex": 3412,
+                    "text": "| **Vinschool / Wellspring / VAS Hanoi** | Cambridge Bilingual tracks | ~100M – 250M VND ($4,000 – $10,000)"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3301,
+                    "endIndex": 3505,
+                    "text": "| **Vinschool / Wellspring / VAS Hanoi** | Cambridge Bilingual tracks | ~100M – 250M VND ($4,000 – $10,000) | High proportion of local students, blend of Vietnamese MOET + international certifications"
+                  },
+                  "groundingChunkIndices": [
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3559,
+                    "endIndex": 3637,
+                    "text": "Tuition published on school websites rarely covers the full cost of attendance"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3699,
+                    "endIndex": 3789,
+                    "text": "**Application & Assessment Fee:** ~VND 3,500,000 – 10,000,000 (one-time, non-refundable)"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    10
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3794,
+                    "endIndex": 3890,
+                    "text": "**Registration / Matriculation Fee:** ~VND 20,000,000 – 70,000,000+ (one-time upon acceptance)"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    10
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 3895,
+                    "endIndex": 4029,
+                    "text": "**Capital Development / Building Levy:** ~VND 20,000,000 – 70,000,000 annually (or mandatory refundable debentures, notably at UNIS)"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4225,
+                    "endIndex": 4326,
+                    "text": "**Uniforms, Exam Fees (IGCSE/IB/AP), Technology & English Support (EAL):** Usually charged separately"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4364,
+                    "endIndex": 4428,
+                    "text": "**Location & Commute:** Hanoi traffic during peak hours is heavy"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4430,
+                    "endIndex": 4501,
+                    "text": "**UNIS** and **HIS** are closer to the West Lake (Tay Ho) expat enclave"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4503,
+                    "endIndex": 4558,
+                    "text": "**BIS Hanoi** is east in Long Bien (Vinhomes Riverside)"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4560,
+                    "endIndex": 4641,
+                    "text": "**ISPH** is southwest in Ha Dong, and **Concordia** is further north near Van Tri"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 4702,
+                    "endIndex": 4999,
+                    "text": "**Curriculum Match:** Families planning relocation to the UK/Europe typically favor **BIS, ISPH, or BVIS** (British/IGCSE/A-Level); families targeting US universities often consider **Concordia or St. Paul** (AP); while globally mobile diplomatic families lean toward **UNIS** or **HIS** (Full IB)"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    3,
+                    11
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 5003,
+                    "endIndex": 5208,
+                    "text": "**Payment Terms:** Nearly all schools offer a **5%–10% discount** if tuition is paid annually upfront rather than term-by-term, along with sibling discounts (typically 5%–15% for the 2nd and 3rd child)"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    2
+                  ]
+                }
+              ],
+              "webSearchQueries": [
+                "tuition fee UNIS Hanoi BIS Hanoi Concordia ISPH",
+                "international school fees Hanoi comparison 2023 2024 2025"
+              ]
+            }
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 335,
+          "candidatesTokenCount": 2063,
+          "totalTokenCount": 3802,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 335
+            }
+          ],
+          "thoughtsTokenCount": 1404,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "Rc31atf7JJzk5NoPhc2AqAc"
+      }
+    ]
+  }
 }

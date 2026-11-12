@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "openai",
   "model": "gpt-6-astra",
   "question": {
@@ -7,7 +7,310 @@
     "type": "branded",
     "text": "What are the IB and IGCSE results at BIS Hanoi?"
   },
-  "started": "2026-11-12T14:01:31.675Z",
-  "finished": "2026-11-12T14:01:32.517Z",
-  "error": "Error: no response.completed event: [{\"type\":\"error\",\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"sequence_number\":2},{\"type\":\"response.failed\",\"response\":{\"id\":\"resp_0512ad320c5103fd006af5c6bbccf487d29649211c1a61dfe2\",\"object\":\"response\",\"created_at\":1794492091,\"status\":\"failed\",\"access_programs\":{\"cyber\":\"standard\"},\"background\":false,\"completed_at\":null,\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"frequency_penalty\":0,\"image\":{\"context_compression\":\"disabled\""
+  "started": "2026-11-12T14:24:49.769Z",
+  "finished": "2026-11-12T14:25:02.499Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What are the IB and IGCSE results at BIS Hanoi?"
+  },
+  "response": {
+    "id": "resp_0d9f6f70585378fc006af5cc32082087d28f61a962298159c9",
+    "object": "response",
+    "created_at": 1794493490,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794493501,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0d9f6f70585378fc006af5cc339d6c87d2836be9fe28d62414",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.nordangliaeducation.com bis hanoi 2026 IB IGCSE results",
+            "site.nordangliaeducation.com bis hanoi 2025 IB IGCSE results"
+          ],
+          "query": "site.nordangliaeducation.com bis hanoi 2026 IB IGCSE results",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/8/21/bis-hanoi-students-achieve-exceptional-results-in-igcse-examinations-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/8/22/bis-hanoi-celebrates-outstanding-igcse-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/3/27/bis-hanoi-recognised-as-one-of-the-most-popular-international-schools-of-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/9/6/bis-hanoi-celebrates-exceptional-igcse-results"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-candidate-brief---teaching-post---august-2025.pdf?hash=DBF85D8663232AA653B0A879A0E44F81&rev=7f67e3a605204addbbaa6ea8195f1422"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/277491-secondary-school-profile-for-colleges-and-universities-sy2022-23.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/prospectus-2025.pdf?hash=5D1FD65472BEBC673EB9BDD46092E1F3&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/-/media/bis-hcmc/parent-essentials/senior-school-profile/2025-26/bis-hcmc-secondary-school-profile-25-26.pdf?hash=2B290862EC5ED43FBD9520F0B8A4D66E&rev=c1dada8e69c44eecba34f08387d9d307"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/-/media/bis-hcmc/parent-essentials/senior-school-profile/2025-26/bis-hcmc-secondary-school-profile-2025-2026.pdf?hash=8BC9232B5097A28738A545B2A0AE4B9C&rev=d764265f3fa7468d94e6d16d96edeeb4"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/resources/asia/_filecache/2b3/bcf/255683-secondary-school-profile-_print.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/igcse/comments/1wldbue/results_mj_2026/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtz5oo"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/igcse/comments/1vrk6iv/mayjune_2026_result/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1vvy5h7/june_2026_business_studies_results/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/igcse/comments/1qeac7j/my_results/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/igcse/comments/1vrijaa/my_results_yippeeeeee/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/IBO/comments/1v2a2do/has_your_us_university_received_your_ib_scores_yet/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/8/21/bis-hanoi-students-achieve-exceptional-results-in-igcse-examinations-2026?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0d9f6f70585378fc006af5cc3694dc87d2a8422e2beb52deb8",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cw9thJsDv6VKSaaz8XZ0x5xkEEBdgXwf6ngFYMiocoooINxtV6jD1RlMVNKDAiZwYTiWNLoNPZ6XqlqFGs9F_FtMaCSKhdJTOZNUF-yhd3w6a0IcxVLlnoKlyMQ6NAhNtr4hJE-StTZDDjQiU0jHqKdL2YRXxl-xay32pLsNNHR44CCiBplTQHkfPQVU5R19OcXVDvb48iQMC-cv2ns-sH-Sdng3TaAwTiZtOLo9rXdIW2e9Yf06vFCPmvlBKDBIeqKgM0B8l_yjAfILtOAQAXKqV40nXjlcBOMGUY5-kC4bsF8QGKOSHwH61RvdzoQR45dDrdu50aceWBXMDY2Uofn5-rwNU8NjrmRbkXyffOUTWBGnI12uQ5BGTALTmJKDzijo3aSg2GPgJiLkspBGK-3fF8b2Ogy6fXRvKJ2dl6KLURKgPjVzAHdmzE_XQxLCV4KMyI6_fXp9UZR94OSnRBnQdrHhOOODQHekZFgO1zu3KytsMwF4B22OFUgLl3w5MgxFDN5FuWe6lPpZL4Y7ASJjPzdEnKsEcWw4gfU4touCjETcXf5vBoYDDSuJUrOG8qI9xb8BUGcVhw28gyLMU1dlRihb2N67MkOdHZZ_sxKMSugNV6ckoyX7_Gdy7lqkO0Zymk2zBaORJnsd8VxKQBaULfraSnk9ujJBrCrNBWdTLARaMkeOSwysClUVhQicVZgTkHlSS7CRuE7QDQESj0FOFED-8WJTDBnA5kf8jbU8Krp9lKeH6GY4oljfrjRSxbXT7_R2ABcLIt-SXX25m5KN119PMooN_uLPJVFrLj2aSkGA1XslnmlkPauFwx-H1zWl7PJzVgN5Nn6KtJXUDpAEfCDgqM0cdPuD6PU0_DMAOdif1zWclsT6fJwaPkFwk9OCubeepCcFP5ItMDwKwPzbIDtowfWzWCz2Ke-V5rsuMkI-wKWMKMPNgWKsrsHcI6IBoC_VynY60yXKeeuibuhB6G4awA0rmwhGiiGGB-Ya1lCoY_Na9aaIks3nZ8BQvuGifVHSK1jNHoE7CVSKN5hjjj--gBwR7Tg4fqauLADDnz8ccr3i5WApaoT3DKkyBeYt1drfoj3wkSWWsuG4cB-bq5Vpiumbif35XpqmIPzOkaLXlKXkpntInmCscoL8wEZZHcgy1zwAo7zOD7EchoEVcm0mIWIc-KIbP6eklJj7ilEch2_gjvdNwzRmXY6cA4c4Nq2Clp3H4-r4-K4Vk6RGmy_dyPlb9xYCtGwlZ60IX_TGi2Qwal5W-I86vUZLYrEo3U3ovCeyuWIO6FqLHZnk_Rn2M3NaANC4dmdyGbi3_h01-ZDB3Jok4zvGZFitlalc_FWM4IqvHLD3LjdkL7G5Dt68vXOndtjhyh0EJSEMpmI2T5orjgcZfv2EY7XMqxOP5R2zSxz-dQBYlvay0o3p97jekjWS33NkzJa_uXmX9WQZzGtPiIg6aotysoWr_B5k0JF_CQDz0absjWTyLJhFij_ZKqF97-faiI4WpsiL7NoHXgXNDF7NwB62nhj6q1b3YhUSNorq-VgrMw99u8pzEqYa1sCGYlxp8w_oE2xcCnP0WW89jz5NiAd3hE3mEkZiPOuv59cSwsk_G6uyVhXcq5BXuI1Hm50ryxfPBO2y2z8MQ6i72tNKaBps4Vos3eN4IKAldtI8ILYxSaGWSHxv7AytKijw5WhV9ofnfrCDa5xZr-Q2L4bXiJLawU3U5s6auFSEre8t-T-vVVkDzQ9ADFaJZbNFdeBHPZHDzTuHDA_mUmXWisutRuGtbUmrIm3uIKS_KNr44o7PgeXEudx2YrYAd-oSzM_tCmsUkhyPSnrGDhidPxgKpKj9dymSPy8e8hhUgz3P87dtcFyKYZHlLblSlIhDs3PaNdK9pqOT9xpJOuIb2QT07DpkxX-VicSwXg47hIGnIceEm0VhcqhmG8TF85aeVaUr_ivd4gDAGqUP_j-17K_Ohc2ejKxUaECs8gJduDm2x0UQlq1i5sWN_6x-n_NQspuVj86AnvxF024CDwjVQyRznEs7ArKqTWTzZ70qmJNWM0QDyM0KdHSvutAJmyv8mbcmQ-TMST5PahQOZNJapclrA6vZXpxhEzKFL-h52I8GbVaLBHTA-0Ar-7M9SPN4SsDJAeIl5oUF38M8l9xukt3r7-AQNlL0vVu1QjlGL1lm_0YqgtWPvONyX67yB8UnnjVIJd4fm44pwhycW9TFqyPTJt9wYUcGy6CZ7fOfUj6JgRZUOl7apwEDQ==",
+        "summary": []
+      },
+      {
+        "id": "msg_0d9f6f70585378fc006af5cc38a6d487d2b9f7d7633d84a676",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 644,
+                "start_index": 471,
+                "title": "BIS Hanoi Class of 2026 celebrates outstanding IB Diploma results | British International School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 911,
+                "start_index": 782,
+                "title": "Academic Results | British International School (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1150,
+                "start_index": 977,
+                "title": "BIS Hanoi Class of 2026 celebrates outstanding IB Diploma results | British International School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1439,
+                "start_index": 1258,
+                "title": "BIS Hanoi students achieve exceptional results in IGCSE examinations 2026 | British International School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/8/21/bis-hanoi-students-achieve-exceptional-results-in-igcse-examinations-2026?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1887,
+                "start_index": 1714,
+                "title": "BIS Hanoi Class of 2026 celebrates outstanding IB Diploma results | British International School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "At **British International School (BIS) Hanoi**, the latest published results are for **2026**. Here’s how they compare with 2025:\n\n| Measure | 2026 | 2025 |\n|---|---:|---:|\n| **IB Diploma average score** | **35.11 points** | 33.24 points |\n| Global IB average reported by the school | 30.88 points | 30.58 points |\n| **IGCSE grades at A*–A** | **43%** | 46% |\n| **IGCSE grades at A*–C** | **89%** | 85% |\n\nSources: BIS Hanoi’s annual IB and IGCSE results announcements. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai))\n\n### Additional 2026 highlights\n- **IB:** Two students achieved the maximum **45/45**, and more than one in seven scored **40+ points**. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai))\n- **IB bilingual diplomas:** Awarded to **62.9%** of the cohort. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai))\n- **IGCSE:** **80.4% of students** earned at least one A* or A; **six students** achieved all A*/A grades. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/news/2026/8/21/bis-hanoi-students-achieve-exceptional-results-in-igcse-examinations-2026?utm_source=openai))\n\n**Bottom line:** The IB average increased in 2026 and remained above the reported global average. IGCSE results were mixed year-on-year: the A*–A share fell slightly, while the A*–C share rose. These percentages refer to **grades awarded**, not overall student pass rates. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results?utm_source=openai))"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 1
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 12651,
+      "input_tokens_details": {
+        "cache_write_tokens": 17,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 556,
+      "output_tokens_details": {
+        "reasoning_tokens": 121
+      },
+      "total_tokens": 13207
+    },
+    "user": null,
+    "metadata": {}
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "question": {
@@ -7,7 +7,1237 @@
     "type": "branded",
     "text": "What universities do BIS Hanoi graduates go to?"
   },
-  "started": "2026-11-12T13:55:34.033Z",
-  "finished": "2026-11-12T13:55:34.202Z",
-  "error": "Error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+  "started": "2026-11-12T14:32:26.888Z",
+  "finished": "2026-11-12T14:32:38.386Z",
+  "request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What universities do BIS Hanoi graduates go to?"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "response": {
+    "chunks": [
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Graduates from the"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 4,
+          "totalTokenCount": 345,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **British International School Hanoi (BIS Hanoi)** consistently matriculate to world-ranked universities across North America, the United Kingdom"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 28,
+          "totalTokenCount": 369,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ", Europe, Asia, and Australasia. Supported by their International Baccalaureate (IB) Diploma results"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 28,
+          "totalTokenCount": 369,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ", alumni regularly receive offers from top-tier institutions:\n\n---"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 28,
+          "totalTokenCount": 369,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n\n### **United States & Canada**\nThe United States is traditionally the most popular destination for BIS Hanoi graduates, followed closely"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 53,
+          "totalTokenCount": 394,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " by Canada:\n* **Ivy League & Top Private Universities:** Stanford University, Yale University"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 53,
+          "totalTokenCount": 394,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ", Columbia University, Brown University, Duke University, Johns Hopkins University, and New York University (NYU)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 77,
+          "totalTokenCount": 418,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Public Flagships & Major Colleges:** University of California, Berkeley (UC Berkeley);"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 77,
+          "totalTokenCount": 418,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " University of California, Los Angeles (UCLA); University of Texas at Austin; Georgia Institute of Technology; Boston University; Boston College"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 106,
+          "totalTokenCount": 447,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Canada:** University of Toronto, McGill University, and"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 106,
+          "totalTokenCount": 447,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " University of British Columbia (UBC).\n\n---\n\n### **United Kingdom**\nAs a British"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 106,
+          "totalTokenCount": 447,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " international school, a significant proportion of graduates attend prestigious Russell Group and leading UK institutions:\n* **Ox"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 106,
+          "totalTokenCount": 447,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "bridge & London Institutions:** University of Cambridge, Imperial College London, University College London (UCL), London School of Economics and Political Science"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 133,
+          "totalTokenCount": 474,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (LSE), and King’s College London (KCL)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 157,
+          "totalTokenCount": 498,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Other Leading UK Universities:** University of Edinburgh, University of Manchester, University of"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 157,
+          "totalTokenCount": 498,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Warwick, University of Bristol, Durham University, and University of the Arts London (UAL)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 186,
+          "totalTokenCount": 527,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### **Continental Europe**\nBIS Hanoi students frequently choose specialized European universities, particularly for business, hospitality,"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 186,
+          "totalTokenCount": 527,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " and design:\n* **Business & Social Sciences:** Bocconi University (Italy), Erasmus University Rotterdam ("
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 186,
+          "totalTokenCount": 527,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Netherlands), University of Amsterdam (Netherlands).\n*"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 186,
+          "totalTokenCount": 527,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **Hospitality:** EHL Hospitality Business School (Switzerland), Glion Institute of Higher Education (Switzerland)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 212,
+          "totalTokenCount": 553,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Other Notable Institutions:** KU Leuven (Belgium), Aalto University (Finland)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 212,
+          "totalTokenCount": 553,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### **Asia**\nStudents seeking top Asian universities often matriculate into world-ranked research hubs"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 212,
+          "totalTokenCount": 553,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ":\n* **Hong Kong:** The University of Hong Kong (HKU), Hong Kong University of Science and Technology"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 212,
+          "totalTokenCount": 553,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (HKUST), and The Chinese University of Hong Kong (CUHK)."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 212,
+          "totalTokenCount": 553,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Singapore:** National University of Singapore (NUS) and Nanyang Technological University (NTU)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 239,
+          "totalTokenCount": 580,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **South Korea:** KAIST, Seoul National University, and Yonsei University"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 239,
+          "totalTokenCount": 580,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Japan:** Waseda University, Sophia University, and International Christian University (ICU)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 239,
+          "totalTokenCount": 580,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### **Australia**\nGraduates heading to Australia"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 239,
+          "totalTokenCount": 580,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " regularly enter the \"Group of Eight\" research universities:\n* The University of Melbourne, The University of Sydney, The"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 263,
+          "totalTokenCount": 604,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " University of New South Wales (UNSW Sydney), Monash University, and The University of Queensland"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 287,
+          "totalTokenCount": 628,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 287,
+          "totalTokenCount": 628,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 10
+            }
+          ],
+          "thoughtsTokenCount": 331,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "",
+                  "thoughtSignature": "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"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0,
+            "groundingMetadata": {
+              "searchEntryPoint": {
+                "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=BIS+Hanoi+graduates+university+offers&client=app-vertex-grounding&safesearch=active\">BIS Hanoi graduates university offers</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=British+International+School+Hanoi+university+destinations&client=app-vertex-grounding&safesearch=active\">British International School Hanoi university destinations</a>\n  </div>\n</div>"
+              },
+              "groundingChunks": [
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZArHFN0Uq_SaUFncCJTd0yoK-xa9TLF1EazTFQmeFPBPfhfJBfetSEaL4lg0fFUspssIDMwFl2Tt7aIAsrOW0cmn9LCUAFD2502MiuT8oCltC6nw5V46Y6-GP3pv3KQ86ZdlhsOMdvDY4DhGi-kbpmVZ5iZ-h2tmL0UyLZAtwKwVJLQMTBv4fvQ3Du6s7Bkkw-DpHE96Ey8Aph5VdgcjHrHrU1e3vbbJ4lzWvxSTm-OXa5Hq9N99oUilYHjUF6Y8exRARv1SZGwlpOx1VpKRkYSAPjhYhUrrtxabpLskeWPydtOTWG9BvNl30cm8yGg==",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDVxqNFUHbN1g8gG1T2JWKUVqqDVRFztD-fCSS0VaZVIFdrSRBRGllTcA_f5J3iDVkeczMahIArQj9JVEJLlwl8De0DxcUGY9Nr6GlSqQuKJCsQM8Xsc1hpMKbULzSaHA1fese4pGybC_Lidz8JmZFytF_CnDwb1yO_RpL0zHSNja_fcZ6fxYjzXVKOqCLfA==",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyKEq2_gI_jpejI5A2c5U6kP-5K1b1ozJehtmndc0mofITXBbTx_0mP1pqt6x6doRNm77r9wgAdy2iwtnlphnhEGWWm4ochocl6xwVA2u6YtVmdk1Yox1KQB_IOW-YBcyjGoEBUGbERdH-cE5S2NLqDCKC1ce40yjH-RXA3SsoQVV5JrbizY0VbBmfa0rHxcvS-C6fgtd3pa_ZI0xB_vs=",
+                    "title": "vnexpress.net"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwBYjF4TuBA9qQvvI0qtIW22saghy0VJKSP5u743pqf8E94X4IncgdBFYerYJV8XXlPW3wbBHNPNC2buhlHOsypTViIyAZ6-Qsqy7RUNNLYIl_B8Ws5E4MHysJZktiMxt35ZNn5fXNw-YL17-vgBQXKT82To2QASsMTM9al2jUCIgceDnh2_1EEIR3oDEjm7nyY93V1nMffxtLPIonkcX5CGbNzN-yJbnkD1UPqRE12TmA4wtK4EDZ6PpUI3UENcn93qP5qBF49dZSrjdXyFZivfggQ9L0n3ZWcqRlRFDSsT_LZDbqiPRWcNLXe_W3OPqpwLf9KXykVj1FmpVEeD6EWe8=",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEsp8uHw6Th_kg0jfktpeldthJyUDL7GqBxCN50xblKdYtt_kFP3gTm1FAf8MX21EkYdGXHvW2xrQdLndEiwnYg0btpOVKU2WmcK0qAim3kjCn4sh8Blio6CffEOZ0LG0i6Ew=",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrj1gppW0F3HfQdhyKW0nSK5vKttCMV1WeUNkIY-y7IZdJComYxaL5lMB-IbgWBBa09eMgwOjO1cYUFtvgw5TVw66kR5UfXR77AOR64oIrtyLMqtwASDylFythfjEN2qDftSX3Oiu9J6gHNAaPzFkHbDzmvbYqpYdb0LmiWezSfTzlUnmxwZ4EMHNopouFFjtupvySXZP6TRcREoJWqTBsrJsY88eDijS40WbIw0RM",
+                    "title": "vietnamnews.vn"
+                  }
+                }
+              ],
+              "groundingSupports": [
+                {
+                  "segment": {
+                    "endIndex": 195,
+                    "text": "Graduates from the **British International School Hanoi (BIS Hanoi)** consistently matriculate to world-ranked universities across North America, the United Kingdom, Europe, Asia, and Australasia"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 197,
+                    "endIndex": 324,
+                    "text": "Supported by their International Baccalaureate (IB) Diploma results, alumni regularly receive offers from top-tier institutions"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 363,
+                    "endIndex": 478,
+                    "text": "The United States is traditionally the most popular destination for BIS Hanoi graduates, followed closely by Canada"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 482,
+                    "endIndex": 674,
+                    "text": "**Ivy League & Top Private Universities:** Stanford University, Yale University, Columbia University, Brown University, Duke University, Johns Hopkins University, and New York University (NYU)"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 678,
+                    "endIndex": 910,
+                    "text": "**Public Flagships & Major Colleges:** University of California, Berkeley (UC Berkeley); University of California, Los Angeles (UCLA); University of Texas at Austin; Georgia Institute of Technology; Boston University; Boston College"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 914,
+                    "endIndex": 1008,
+                    "text": "**Canada:** University of Toronto, McGill University, and University of British Columbia (UBC)"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1039,
+                    "endIndex": 1172,
+                    "text": "As a British international school, a significant proportion of graduates attend prestigious Russell Group and leading UK institutions"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1176,
+                    "endIndex": 1384,
+                    "text": "**Oxbridge & London Institutions:** University of Cambridge, Imperial College London, University College London (UCL), London School of Economics and Political Science (LSE), and King’s College London (KCL)"
+                  },
+                  "groundingChunkIndices": [
+                    4,
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1388,
+                    "endIndex": 1578,
+                    "text": "**Other Leading UK Universities:** University of Edinburgh, University of Manchester, University of Warwick, University of Bristol, Durham University, and University of the Arts London (UAL)"
+                  },
+                  "groundingChunkIndices": [
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1613,
+                    "endIndex": 1735,
+                    "text": "BIS Hanoi students frequently choose specialized European universities, particularly for business, hospitality, and design"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1739,
+                    "endIndex": 1880,
+                    "text": "**Business & Social Sciences:** Bocconi University (Italy), Erasmus University Rotterdam (Netherlands), University of Amsterdam (Netherlands)"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1884,
+                    "endIndex": 1997,
+                    "text": "**Hospitality:** EHL Hospitality Business School (Switzerland), Glion Institute of Higher Education (Switzerland)"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2001,
+                    "endIndex": 2080,
+                    "text": "**Other Notable Institutions:** KU Leuven (Belgium), Aalto University (Finland)"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2101,
+                    "endIndex": 2190,
+                    "text": "Students seeking top Asian universities often matriculate into world-ranked research hubs"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2194,
+                    "endIndex": 2346,
+                    "text": "**Hong Kong:** The University of Hong Kong (HKU), Hong Kong University of Science and Technology (HKUST), and The Chinese University of Hong Kong (CUHK)"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2350,
+                    "endIndex": 2446,
+                    "text": "**Singapore:** National University of Singapore (NUS) and Nanyang Technological University (NTU)"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2450,
+                    "endIndex": 2522,
+                    "text": "**South Korea:** KAIST, Seoul National University, and Yonsei University"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2526,
+                    "endIndex": 2619,
+                    "text": "**Japan:** Waseda University, Sophia University, and International Christian University (ICU)"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2738,
+                    "endIndex": 2893,
+                    "text": "The University of Melbourne, The University of Sydney, The University of New South Wales (UNSW Sydney), Monash University, and The University of Queensland"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    4,
+                    0
+                  ]
+                }
+              ],
+              "webSearchQueries": [
+                "BIS Hanoi graduates university offers",
+                "British International School Hanoi university destinations"
+              ]
+            }
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 129,
+          "candidatesTokenCount": 768,
+          "totalTokenCount": 1347,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 129
+            }
+          ],
+          "thoughtsTokenCount": 450,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "-831avTLF964xdIP6ouj6Qs"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "question": {
@@ -7,7 +7,1085 @@
     "type": "branded",
     "text": "What are the IB and IGCSE results at BIS Hanoi?"
   },
-  "started": "2026-11-12T13:55:33.700Z",
-  "finished": "2026-11-12T13:55:33.868Z",
-  "error": "Error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+  "started": "2026-11-12T14:31:44.540Z",
+  "finished": "2026-11-12T14:31:59.171Z",
+  "request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What are the IB and IGCSE results at BIS Hanoi?"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "response": {
+    "chunks": [
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "The British International School Hanoi (BIS Hanoi) consistently outperforms both global and UK averages in"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 17,
+          "totalTokenCount": 715,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " both the **International Baccalaureate Diploma Programme (IBDP)** and the **Cambridge IGCSE** examinations"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 42,
+          "totalTokenCount": 740,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ". \n\n---\n\n### **1. International Baccalaureate Diploma Programme (IBDP) Results**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 42,
+          "totalTokenCount": 740,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\nBIS Hanoi has surpassed the global average point score for consecutive years since its first graduating cohort."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 42,
+          "totalTokenCount": 740,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n\n* **Average Scores:**\n  * **2026:** **35.11 – 35.15"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 70,
+          "totalTokenCount": 768,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " points** (significantly higher than the global average of ~30.88)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 94,
+          "totalTokenCount": 792,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n  * **2025:** **33.24 points"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 94,
+          "totalTokenCount": 792,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "** (global average: 30.58).\n  * **2024:** **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 94,
+          "totalTokenCount": 792,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "34.7 points** (global average: 30.3).\n"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 94,
+          "totalTokenCount": 792,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "* **High Achievers (40+ & Perfect Scores):**\n  * More than **1 in 7 students"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 119,
+          "totalTokenCount": 817,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "** typically achieve **40+ points** (placing them in the top echelon globally)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 148,
+          "totalTokenCount": 846,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n  * In recent cohorts, students have achieved the maximum possible score of **45/45 points"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 148,
+          "totalTokenCount": 846,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "**.\n* **Pass Rate:** Consistently near"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 148,
+          "totalTokenCount": 846,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **98%–100%**, compared to the global average of around 80%"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 175,
+          "totalTokenCount": 873,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **IB Bilingual Diploma:** Approximately **63% – 65%** of graduating cohorts achieve the IB"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 175,
+          "totalTokenCount": 873,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Bilingual Diploma, demonstrating academic fluency in two languages.\n\n"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 175,
+          "totalTokenCount": 873,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "---\n\n### **2. Cambridge IGCSE Results (Key Stage 4 / Years 10–11)**\nBIS"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 202,
+          "totalTokenCount": 900,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Hanoi students regularly achieve results far exceeding typical UK and international benchmarks"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 226,
+          "totalTokenCount": 924,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ":\n\n* **A\\* – A Grades (Grades 9–7):** \n  * Around **4"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 226,
+          "totalTokenCount": 924,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "3% to 46%** of all grades awarded are A\\* or A (compared to the UK average of ~"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 251,
+          "totalTokenCount": 949,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "23%).\n  * Over 80% of students"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 251,
+          "totalTokenCount": 949,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " earn at least one A\\* or A grade.\n* **A\\* – C Grades"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 251,
+          "totalTokenCount": 949,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " (Grades 9–4):** \n  * Between **85% and 89%** of all grades awarded"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 279,
+          "totalTokenCount": 977,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " are A\\* to C (compared to the UK benchmark of ~55%)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 308,
+          "totalTokenCount": 1006,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Special Recognition:** \n  * Multiple BIS Hanoi students have earned Cambridge Assessment International Education’s **“Top in"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 308,
+          "totalTokenCount": 1006,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " the World”** awards for achieving the highest worldwide marks (100%) in subjects like IGCSE Mathematics"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 336,
+          "totalTokenCount": 1034,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 14,
+          "candidatesTokenCount": 336,
+          "totalTokenCount": 1034,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 14
+            }
+          ],
+          "thoughtsTokenCount": 684,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "",
+                  "thoughtSignature": "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"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0,
+            "groundingMetadata": {
+              "searchEntryPoint": {
+                "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=BIS+Hanoi+IGCSE+results&client=app-vertex-grounding&safesearch=active\">BIS Hanoi IGCSE results</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=BIS+Hanoi+IB+results&client=app-vertex-grounding&safesearch=active\">BIS Hanoi IB results</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=British+International+School+Hanoi+academic+results+IB+IGCSE+2023+2024&client=app-vertex-grounding&safesearch=active\">British International School Hanoi academic results IB IGCSE 2023 2024</a>\n  </div>\n</div>"
+              },
+              "groundingChunks": [
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMt0dcczdKpcb1NqieVOy7dIZFM1OdqIV_YL7lELbnDciWY_u9sEMP2oDt0Unm6Cvos9Y4cffH8-kAdF4oa57zYm9NrZtXcWufvXiViN4OQc5zYcGfo27SUMLwTZhRP3vmT7bM7ZgJ8UBrlahro7Ca-qNlFTZ0IBnJZ-q78uQb4-jEf4Ufu1JX7PrUcMVgTn7M6tdwdD29xsGxWgsMGuT0K0mpSUe9yFZPIiQpJ8o=",
+                    "title": "vietnamnews.vn"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEaD_Y7JaXS3VD1dVUfu5oFpe36XpvirrJFnUyJnSrf9Dl2GrveMHLVEkTg8KRG_3I82G2_7yM-W2uU-mCS5CaIxBNyzLWcRwOqh2OYLhbC_8mghNXHlbEqaqjuPVERU2wB--L76YXEwC9rQBZ-tJps0ZIuSLwAf0GNgqXHHuFpJonunOLz1SUuz1x1t4xvdFePqI7shECFNZwmM3YbT9qtjg6WF8PpHO31Ky1HhQIvBELi49dzI3NbJVS8g==",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjQiV7DwRemYU2aHd7-fvva06ZyMILKxXzKQEaqoMCYQAEu9jpjTIujp7n2AA8nl1xjM2Wod1UoW_YBGHoCPz7UaOnrXLnorvOvKnlhrqBnZAGiVXUsIDcGc3hNQxsUQuwKnN2YdoHrIPAOyFnjvbMpRpnzFh5p-LvZKa-sAESTRBmY0Iucbs=",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFlR5BNgx0c3D_NDHoEjDXGX8wULDXzrPiHvjmlJvLxvmD9nE3IoMm9WhjjzDbjj3kjaF-w-O6sh0IPz1kx_BjYrB8cHHNJtrV5_dUPN9jv3pEbiORt7RqSBjNuf7jLFhlyQ6QXWzTHm77Sl-oJ5zpo7nGEjEHHGcg4oLCgdXbm_im6x8UZqezL5FyDXnRwqdpL3var0jyHOe9Dcld4gXLVeJnnw==",
+                    "title": "vnexpress.net"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWQS314Pqzgq8Xk3g4o7-HU9WHKT1Poe5cXl-OVnvw7ZkAFzS-Ng50AGaNPyferrh5R0weyFUHet6RPTNOpEtwUEYzov4TXWAoN_9mzlXxs8aHAY8aYnjc4x761p3VnQhlmTusSn4MXkgRoa1nVcHyT33ashVQ8sg-ZPoHSW21eSXe2zUMNcax8TnMo1SFKrXHp_SIuGnym-7PUHYY9g==",
+                    "title": "vnexpress.net"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE16YIOxDRDfZv-VxAaCpa0KIGDytbGxlePSRYMsyk5DilWVVHINYexsgkYNCBaPmdtIvHvnB0oDx-vsewj6inOuGjSjhkhO58UpqGL-lBHOg9jHjhj3T245snginAvGcXMb4Nu4-9tosFbZwMX5IDc7n1UGNFR2YVXjfxhGB-KEWCxCkgjjF2lEdz_fBSGY02BeGDujaA5rFxha5u9kzah-mAlFLf4TrxaDfjQTEFUEk_ERg==",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjQiV7DwRemYU2aHd7-fvva06ZyMILKxXzKQEaqoMCYQAEu9jpjTIujp7n2AA8nl1xjM2Wod1UoW_YBGHoCPz7UaOnrXLnorvOvKnlhrqBnZAGiVXUsIDcGc3hNQxsUQuwKnN2YdoHrIPAOyFnjvbMpRpnzFh5p-LvZKa-sAESTRBmY0Iucbs=",
+                    "title": "nordangliaeducation.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg3F4enZZNNyVX7TtjKcD9f-yfU6vzuZN0D5AieK1Eu5sxuNrEypX8pYN4VGFxmp5HitK84Y6VgZ6M-6Yp76cF-lBvYJAdAJv37fv_dd9B9bUmV4sPNp7xU3owoh6k7H1BjTVmQ1cB2GxaPxnthPoq-vkBc357ST7YxRiHLJVnxt2UmhG9BmLFzONmtdRYDh1oXgNisuoNgzH9YwhvkSQVME4n8mmQdRtxxpnlU557sCptcidzQts0VbxgJ5CL",
+                    "title": "vietnamnews.vn"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF-IN8xAQMhSb6sdXDjkdWssnz_dXX-UdXZuL1kxxDou_yc98_HXHxjdzhUlpr7as65Db463hJ6cbMxTEa9qb1PsCpAJ9mHVJzOR5KDA-F6Lt1sGAyAmAgB2BQ9WznsXeHR2gH7EFaKQ_eQ-P-qQGwGhrPArCPWy63eUB0RBSTRpuHkvSimt1W5-0NF6EhmizLf6W4575tPXt_P99YlQ-rEbXpACFEcCu8Tzy9hBry",
+                    "title": "tuoitre.vn"
+                  }
+                }
+              ],
+              "groundingSupports": [
+                {
+                  "segment": {
+                    "endIndex": 213,
+                    "text": "The British International School Hanoi (BIS Hanoi) consistently outperforms both global and UK averages in both the **International Baccalaureate Diploma Programme (IBDP)** and the **Cambridge IGCSE** examinations"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 294,
+                    "endIndex": 404,
+                    "text": "BIS Hanoi has surpassed the global average point score for consecutive years since its first graduating cohort"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 433,
+                    "endIndex": 526,
+                    "text": "**2026:** **35.11 – 35.15 points** (significantly higher than the global average of ~30.88)"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 532,
+                    "endIndex": 582,
+                    "text": "**2025:** **33.24 points** (global average: 30.58)"
+                  },
+                  "groundingChunkIndices": [
+                    0
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 588,
+                    "endIndex": 636,
+                    "text": "**2024:** **34.7 points** (global average: 30.3)"
+                  },
+                  "groundingChunkIndices": [
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 687,
+                    "endIndex": 792,
+                    "text": "More than **1 in 7 students** typically achieve **40+ points** (placing them in the top echelon globally)"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 798,
+                    "endIndex": 886,
+                    "text": "In recent cohorts, students have achieved the maximum possible score of **45/45 points**"
+                  },
+                  "groundingChunkIndices": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 890,
+                    "endIndex": 983,
+                    "text": "**Pass Rate:** Consistently near **98%–100%**, compared to the global average of around 80%"
+                  },
+                  "groundingChunkIndices": [
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 987,
+                    "endIndex": 1146,
+                    "text": "**IB Bilingual Diploma:** Approximately **63% – 65%** of graduating cohorts achieve the IB Bilingual Diploma, demonstrating academic fluency in two languages"
+                  },
+                  "groundingChunkIndices": [
+                    5,
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1219,
+                    "endIndex": 1317,
+                    "text": "BIS Hanoi students regularly achieve results far exceeding typical UK and international benchmarks"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1364,
+                    "endIndex": 1457,
+                    "text": "Around **43% to 46%** of all grades awarded are A\\* or A (compared to the UK average of ~23%)"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1463,
+                    "endIndex": 1516,
+                    "text": "Over 80% of students earn at least one A\\* or A grade"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1562,
+                    "endIndex": 1659,
+                    "text": "Between **85% and 89%** of all grades awarded are A\\* to C (compared to the UK benchmark of ~55%)"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1693,
+                    "endIndex": 1899,
+                    "text": "Multiple BIS Hanoi students have earned Cambridge Assessment International Education’s **“Top in the World”** awards for achieving the highest worldwide marks (100%) in subjects like IGCSE Mathematics"
+                  },
+                  "groundingChunkIndices": [
+                    7,
+                    8
+                  ]
+                }
+              ],
+              "webSearchQueries": [
+                "BIS Hanoi IGCSE results",
+                "BIS Hanoi IB results",
+                "British International School Hanoi academic results IB IGCSE 2023 2024"
+              ]
+            }
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 196,
+          "candidatesTokenCount": 679,
+          "totalTokenCount": 1741,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 196
+            }
+          ],
+          "thoughtsTokenCount": 866,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "0M31asvhOpGD1sgP8oGa6Ak"
+      }
+    ]
+  }
 }

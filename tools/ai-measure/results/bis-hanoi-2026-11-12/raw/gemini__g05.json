@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "question": {
@@ -7,7 +7,1361 @@
     "type": "generic",
     "text": "Which schools in Hanoi offer the IB Diploma Programme?"
   },
-  "started": "2026-11-12T13:55:32.542Z",
-  "finished": "2026-11-12T13:55:32.704Z",
-  "error": "Error: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://aistudio.google.com/docs/rate-limits\"\n          }\n        ]\n      }\n    ]\n  }\n}\n"
+  "started": "2026-11-12T14:28:13.917Z",
+  "finished": "2026-11-12T14:28:54.636Z",
+  "request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Which schools in Hanoi offer the IB Diploma Programme?"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  },
+  "response": {
+    "chunks": [
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "The primary schools in Hanoi"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " authorized to offer the **International Baccalaureate Diploma Programme (IB DP)** for students aged 16–19 (Gr"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "ades 11–12 / Years 12–13) include:\n\n---\n\n### 1. **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "United Nations International School of Hanoi (UNIS Hanoi)**\n* **Location:** Tay Ho District (Ciputra)\n* **"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Programmes:** Full IB Continuum (PYP, MYP, DP)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Overview:** One of only two UN schools in the world, UNIS Hanoi is a non"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "-profit school and has been authorized to offer the IB Diploma Programme since 1997"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n### 2. **Hanoi International School (HIS)**\n* **Location:** Ba"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " Dinh District\n* **Programmes:** Full IB Continuum (PYP, MYP, DP)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Overview:** Established in 1996, HIS is one of the oldest"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " international schools in Vietnam and was among the first in Hanoi authorized for the IB Diploma Programme (authorized in 199"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "6).\n\n### 3. **British International"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " School Hanoi (BIS Hanoi)**\n* **Location:** Long Bien District (Vinhomes Riverside)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Programmes:** British National Curriculum & Cambridge IGCSE (Early Years–Year 11), followed"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " by the **IB Diploma Programme** in Years 12 & 13"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n* **Overview:** Part of the Nord Anglia Education network, BIS Hanoi has been authorized for the IB DP since "
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "2016.\n\n### 4. **Reigate Grammar School Vietnam (RGSV)** *("
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "formerly International School of Vietnam - ISV)*\n* **Location:** Hoang Mai District"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Programmes:** IB PYP, Cambridge IGCSE, and the **IB Diploma Programme**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Overview:** RGSV delivers a hybrid"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " British-international pathway leading to the IB DP in the final two years (authorized for the DP since 2018)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n### 5. **Dwight School Hanoi**\n*"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **Location:** Hoang Mai / Thanh Xuan (The Manor Central Park)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Programmes:** Full IB Continuum (PYP, MYP, DP)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Overview:** Opened as part of the global Dwight Schools network, it was established to offer the full IB continuum"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ", including the IB Diploma Programme.\n\n### 6."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " **The Olympia Schools**\n* **Location:** Nam Tu Liem District (Trung Van)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Programmes:** Bilingual / International Curriculum, **IB Diploma Programme**"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "\n* **Overview:** A private Vietnamese bilingual school that became an authorized"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " IB World School for the Diploma Programme in 2022, offering students a dual-track or IB DP pathway"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": ".\n\n---\n\n### Candidate / Developing Programmes to Note:\n* **Westlink"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": " International School (Tay Ho Tay / Bac Tu Liem):** An authorized IB World School for the Primary Years Programme ("
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "PYP) and a candidate school for upper-secondary IB programmes (DP / CP)"
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "."
+                }
+              ],
+              "role": "model"
+            },
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 11,
+          "totalTokenCount": 1104,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 11
+            }
+          ],
+          "thoughtsTokenCount": 1093,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      },
+      {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "",
+                  "thoughtSignature": "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"
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0,
+            "groundingMetadata": {
+              "searchEntryPoint": {
+                "renderedContent": "<style>\n.container {\n  align-items: center;\n  border-radius: 8px;\n  display: flex;\n  font-family: Google Sans, Roboto, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  padding: 8px 12px;\n}\n.chip {\n  display: inline-block;\n  border: solid 1px;\n  border-radius: 16px;\n  min-width: 14px;\n  padding: 5px 16px;\n  text-align: center;\n  user-select: none;\n  margin: 0 8px;\n  -webkit-tap-highlight-color: transparent;\n}\n.carousel {\n  overflow: auto;\n  scrollbar-width: none;\n  white-space: nowrap;\n  margin-right: -12px;\n}\n.headline {\n  display: flex;\n  margin-right: 4px;\n}\n.gradient-container {\n  position: relative;\n}\n.gradient {\n  position: absolute;\n  transform: translate(3px, -9px);\n  height: 36px;\n  width: 9px;\n}\n@media (prefers-color-scheme: light) {\n  .container {\n    background-color: #fafafa;\n    box-shadow: 0 0 0 1px #0000000f;\n  }\n  .headline-label {\n    color: #1f1f1f;\n  }\n  .chip {\n    background-color: #ffffff;\n    border-color: #d2d2d2;\n    color: #5e5e5e;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #f2f2f2;\n  }\n  .chip:focus {\n    background-color: #f2f2f2;\n  }\n  .chip:active {\n    background-color: #d8d8d8;\n    border-color: #b6b6b6;\n  }\n  .logo-dark {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #fafafa 15%, #fafafa00 100%);\n  }\n}\n@media (prefers-color-scheme: dark) {\n  .container {\n    background-color: #1f1f1f;\n    box-shadow: 0 0 0 1px #ffffff26;\n  }\n  .headline-label {\n    color: #fff;\n  }\n  .chip {\n    background-color: #2c2c2c;\n    border-color: #3c4043;\n    color: #fff;\n    text-decoration: none;\n  }\n  .chip:hover {\n    background-color: #353536;\n  }\n  .chip:focus {\n    background-color: #353536;\n  }\n  .chip:active {\n    background-color: #464849;\n    border-color: #53575b;\n  }\n  .logo-light {\n    display: none;\n  }\n  .gradient {\n    background: linear-gradient(90deg, #1f1f1f 15%, #1f1f1f00 100%);\n  }\n}\n</style>\n<div class=\"container\">\n  <div class=\"headline\">\n    <svg class=\"logo-light\" width=\"18\" height=\"18\" viewBox=\"9 9 35 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.8622 27.0064C42.8622 25.7839 42.7525 24.6084 42.5487 23.4799H26.3109V30.1568H35.5897C35.1821 32.3041 33.9596 34.1222 32.1258 35.3448V39.6864H37.7213C40.9814 36.677 42.8622 32.2571 42.8622 27.0064V27.0064Z\" fill=\"#4285F4\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 43.8555C30.9659 43.8555 34.8687 42.3195 37.7213 39.6863L32.1258 35.3447C30.5898 36.3792 28.6306 37.0061 26.3109 37.0061C21.8282 37.0061 18.0195 33.9811 16.6559 29.906H10.9194V34.3573C13.7563 39.9841 19.5712 43.8555 26.3109 43.8555V43.8555Z\" fill=\"#34A853\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.6559 29.8904C16.3111 28.8559 16.1074 27.7588 16.1074 26.6146C16.1074 25.4704 16.3111 24.3733 16.6559 23.3388V18.8875H10.9194C9.74388 21.2072 9.06992 23.8247 9.06992 26.6146C9.06992 29.4045 9.74388 32.022 10.9194 34.3417L15.3864 30.8621L16.6559 29.8904V29.8904Z\" fill=\"#FBBC05\"/>\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.3109 16.2386C28.85 16.2386 31.107 17.1164 32.9095 18.8091L37.8466 13.8719C34.853 11.082 30.9659 9.3736 26.3109 9.3736C19.5712 9.3736 13.7563 13.245 10.9194 18.8875L16.6559 23.3388C18.0195 19.2636 21.8282 16.2386 26.3109 16.2386V16.2386Z\" fill=\"#EA4335\"/>\n    </svg>\n    <svg class=\"logo-dark\" width=\"18\" height=\"18\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"24\" cy=\"23\" fill=\"#FFF\" r=\"22\"/>\n      <path d=\"M33.76 34.26c2.75-2.56 4.49-6.37 4.49-11.26 0-.89-.08-1.84-.29-3H24.01v5.99h8.03c-.4 2.02-1.5 3.56-3.07 4.56v.75l3.91 2.97h.88z\" fill=\"#4285F4\"/>\n      <path d=\"M15.58 25.77A8.845 8.845 0 0 0 24 31.86c1.92 0 3.62-.46 4.97-1.31l4.79 3.71C31.14 36.7 27.65 38 24 38c-5.93 0-11.01-3.4-13.45-8.36l.17-1.01 4.06-2.85h.8z\" fill=\"#34A853\"/>\n      <path d=\"M15.59 20.21a8.864 8.864 0 0 0 0 5.58l-5.03 3.86c-.98-2-1.53-4.25-1.53-6.64 0-2.39.55-4.64 1.53-6.64l1-.22 3.81 2.98.22 1.08z\" fill=\"#FBBC05\"/>\n      <path d=\"M24 14.14c2.11 0 4.02.75 5.52 1.98l4.36-4.36C31.22 9.43 27.81 8 24 8c-5.93 0-11.01 3.4-13.45 8.36l5.03 3.85A8.86 8.86 0 0 1 24 14.14z\" fill=\"#EA4335\"/>\n    </svg>\n    <div class=\"gradient-container\"><div class=\"gradient\"></div></div>\n  </div>\n  <div class=\"carousel\">\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Dwight+School+Hanoi%22+site:ibo.org&client=app-vertex-grounding&safesearch=active\">&quot;Dwight School Hanoi&quot; site:ibo.org</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=site:ibo.org/en/school/+%22Hanoi%22+%22Diploma+Programme%22&client=app-vertex-grounding&safesearch=active\">site:ibo.org/en/school/ &quot;Hanoi&quot; &quot;Diploma Programme&quot;</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=IB+World+Schools+Hanoi+site+ibo+org&client=app-vertex-grounding&safesearch=active\">IB World Schools Hanoi site ibo org</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=schools+offering+IB+diploma+Hanoi&client=app-vertex-grounding&safesearch=active\">schools offering IB diploma Hanoi</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22The+Olympia+Schools%22+site:ibo.org&client=app-vertex-grounding&safesearch=active\">&quot;The Olympia Schools&quot; site:ibo.org</a>\n<a class=\"chip\" href=\"https://www.google.com/search?q=%22Viet+Nam+Tinh+Hoa%22+site:ibo.org&client=app-vertex-grounding&safesearch=active\">&quot;Viet Nam Tinh Hoa&quot; site:ibo.org</a>\n  </div>\n</div>"
+              },
+              "groundingChunks": [
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAnmmIvu275L2pISYA5hmyYm8pJfTIB7i0HU9EVutI_TShMFxalLvzPrh0T6894x9I5BpoIwflKg72xj-fpbqqpROZsw8Ppw0nh_ZUfcDUQKXlnyXsdJPA40ZOdURYHWwentJnKN7XTdx5dA==",
+                    "title": "unishanoi.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3bA7IkS7d4zoa8OlF6eKgPB3fLK05PtGRpZvLeCg0L8LetXElvfDRGLbLFySb5tUJnmQPfbm1jHFcAwnep6p9II2Q8V2y2lP9N1HFR0jxK3TTBSoOnOzYHt8MjgohPJ7CVW2FP2LH83bD5qKpRHGA95JroP1FidUvLLPW5k7SFCA=",
+                    "title": "theinternationalschools.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqrf_sbhwbUHNYviGmMr3_jalbivo6tMv-pZitlIzdP6yjrxrifwpSM_36ZlI5txeJBQdDJKy24rVxG0Kp9quv3qkYDhnuOD48BzXCIN8ecB_hqwo3TnQkPAY=",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFL0hY4sgMt-2jNoxw02NV-wb21ZaE7u_AUnhchKjq5hZ3w752IKTBK-6kpPvmCk_YSSlKVRUXpOBN_FVkpWZnmQuu4BXaY-81Vo1wNOI9vKFpUAcgIEeuSGjzMPiy8pGddAPibxoKMFJ8tK7Qrx9eDoTl52dyW",
+                    "title": "educationdestinationasia.com"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHg-cIIT3lbbjm4r5QFuFGHmt8SkWCPfA3-ersAQewTF2InXbuYSn1OKyKwr3NuW1sRlfjCZs2w-Mjc9djJGSQTZ_W97ik1oND9PHggkdAriF4SXVhI4f9twO8=",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHg-cIIT3lbbjm4r5QFuFGHmt8SkWCPfA3-ersAQewTF2InXbuYSn1OKyKwr3NuW1sRlfjCZs2w-Mjc9djJGSQTZ_W97ik1oND9PHggkdAriF4SXVhI4f9twO8=",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9Ks43QGqWIcun7ttRySNTuBP29GSDjh0Wo-0bAUhXasG7BODaLgE9vuV0KoRlgE5cfyIF8kYr2R391kOEOnWZn2dDj154jHdmQITfAkxScQzAn5eQkRiFL58=",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9Ks43QGqWIcun7ttRySNTuBP29GSDjh0Wo-0bAUhXasG7BODaLgE9vuV0KoRlgE5cfyIF8kYr2R391kOEOnWZn2dDj154jHdmQITfAkxScQzAn5eQkRiFL58=",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVYy5sdwp1jVqbPPcOOsWlbtEmkJVq7srWgJZxwcRGDppdFlO6iO22O7WqGzHY9VCWOjYMCk0V9HTrieA1IfD-C5-MlKg6083R4CwhmiOhhst8aOz6r5JzJfnzZWiGKAoS97LU3MY=",
+                    "title": "ibyb.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgwxvJOJ4q21VK1pFYD9lcXAO0lBtussaFZQOuNLHo3ibBuagVIju2usxUy2LdCk0E-nS260uDjQ7a404K96UpEVlAovrXEHPa4ItjrrUCjukbGW7DAsr9WA==",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg7jZ-igwk63WuAeBlmMTMZ1NOI2qyLczfl32m_iJX9gRxgn-BTV_rTQA1swX8FlSHU4ZdwTPT8DqKEiNaPwqqLcMtzztGK-xakZRZHP3Laj7csR5-VQDmsNaKz-zB73XUi0QS_d55ZsxvgQuqjEcMcZQk8t130ElCO2NgGlweoqwiRDYXuRt19vBaJy87pqrdu-kZApbcMVRcurLnB9gCy5WjxZDTIjM4a0XempNPLwsUE3nERgveP0uzkQj_RB2DWHDDacs4j8sqQHbXiB3zVHYz7m9YG_cdwT_an5U2x33uyAgDZZh26YBPEP0I1GuBfwvR8d_ud0B_z5s7Mno_00LQ-Ki4bgaAb386HbFA8RqyDGPQoYArOqD4wCXZslQaSveTCWQCAg3ghYBkozNj-yrmxEh-8YgQi_z2rw9olwtmIafBZQ8t_aBgtUKh2F9vLoi1X0C0Xg5TCyg=",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUT2UbqTrauF3f9ufHyVwM9qHKzGE00f_v4XBC7WP1NnxAdu6FLz7r4z9AH2VXbosLiVlVhhsiPhPHrlr8sNDn0JByigIRQEC5uhSAdpWkpRiQwIHiShsD6kk-aMLmwCperbDLXL07w5PB6zm7Gd1PyOoEDiWXyg==",
+                    "title": "theolympiaschools.edu.vn"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpUy-GHW2LtPpE6Ts38NejawLNHrWw9ot-mC0yTu7Ry-LEA_RvvS6rNbpjRIoMXQcT1MwH2BXRfs_iAG949WORL2cERcHI4ByT4EpFbrve3cUBT-MAyV7dDg==",
+                    "title": "ibo.org"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0tSLs2ke7fPaZJyrv0WUcWlNt9IFde8VxeOZErouoeg7iEFMfQWhOQBl8MfhdBHdOdmCxG4oHdqbEtCfAlmRlOPeFwr7yuDnC_UqbtwOAVuqId9xSFHyeDyEE6GM4tJHl",
+                    "title": "westlink.edu.vn"
+                  }
+                },
+                {
+                  "web": {
+                    "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3KyLhMyPmhj9oBXoe2ebg_xg3aU0Y4cUWecVglOkQ9_cvpsuRwqUS9tQZZhmRmNKPCY466REOrpZuGYW0XcFt3LckNdNlmlVgMX3BBINr00qoTv6Dx_Z46GLMUcctJD4PR6Mhp3IihQgEYGNN1-w156XXkbIfaeOAZ6_l17Easv7WfGkD0Kkpl-pksouZdcINlA8khqaomhjxtBumxV-nd4B5GucG0RDg5tP_z8kBK6FsuquHZ9lrEedh7ZVZP_ufGPmRQzeqxWv3OJtbzMFLQbOC7ScufdF0gSQilkgWXS5tMDhoi0_mKW-S5bMWQmKjfaKwHlzFr4O0yHO4PKaA_iASTGe6C0b6IyYMjPeaBsdZfnUncTVf9q1Wi7GORQnr1NLpdRv8zNDSGRwLDNLNH0apSlp_p5VZ8DhUqBUVEtNMYw==",
+                    "title": "ibo.org"
+                  }
+                }
+              ],
+              "groundingSupports": [
+                {
+                  "segment": {
+                    "startIndex": 298,
+                    "endIndex": 346,
+                    "text": "**Programmes:** Full IB Continuum (PYP, MYP, DP)"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 349,
+                    "endIndex": 402,
+                    "text": "**Overview:** One of only two UN schools in the world"
+                  },
+                  "groundingChunkIndices": [
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 349,
+                    "endIndex": 506,
+                    "text": "**Overview:** One of only two UN schools in the world, UNIS Hanoi is a non-profit school and has been authorized to offer the IB Diploma Programme since 1997"
+                  },
+                  "groundingChunkIndices": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 555,
+                    "endIndex": 585,
+                    "text": "**Location:** Ba Dinh District"
+                  },
+                  "groundingChunkIndices": [
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 588,
+                    "endIndex": 636,
+                    "text": "**Programmes:** Full IB Continuum (PYP, MYP, DP)"
+                  },
+                  "groundingChunkIndices": [
+                    3
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 639,
+                    "endIndex": 825,
+                    "text": "**Overview:** Established in 1996, HIS is one of the oldest international schools in Vietnam and was among the first in Hanoi authorized for the IB Diploma Programme (authorized in 1996)"
+                  },
+                  "groundingChunkIndices": [
+                    3,
+                    2
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 888,
+                    "endIndex": 941,
+                    "text": "**Location:** Long Bien District (Vinhomes Riverside)"
+                  },
+                  "groundingChunkIndices": [
+                    4
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 944,
+                    "endIndex": 1088,
+                    "text": "**Programmes:** British National Curriculum & Cambridge IGCSE (Early Years–Year 11), followed by the **IB Diploma Programme** in Years 12 & 13"
+                  },
+                  "groundingChunkIndices": [
+                    4,
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1092,
+                    "endIndex": 1203,
+                    "text": "**Overview:** Part of the Nord Anglia Education network, BIS Hanoi has been authorized for the IB DP since 2016"
+                  },
+                  "groundingChunkIndices": [
+                    5
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1308,
+                    "endIndex": 1340,
+                    "text": "**Location:** Hoang Mai District"
+                  },
+                  "groundingChunkIndices": [
+                    6
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1343,
+                    "endIndex": 1416,
+                    "text": "**Programmes:** IB PYP, Cambridge IGCSE, and the **IB Diploma Programme**"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    7
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1419,
+                    "endIndex": 1564,
+                    "text": "**Overview:** RGSV delivers a hybrid British-international pathway leading to the IB DP in the final two years (authorized for the DP since 2018)"
+                  },
+                  "groundingChunkIndices": [
+                    6,
+                    7
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1600,
+                    "endIndex": 1661,
+                    "text": "**Location:** Hoang Mai / Thanh Xuan (The Manor Central Park)"
+                  },
+                  "groundingChunkIndices": [
+                    8,
+                    9
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1664,
+                    "endIndex": 1712,
+                    "text": "**Programmes:** Full IB Continuum (PYP, MYP, DP)"
+                  },
+                  "groundingChunkIndices": [
+                    10
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1715,
+                    "endIndex": 1867,
+                    "text": "**Overview:** Opened as part of the global Dwight Schools network, it was established to offer the full IB continuum, including the IB Diploma Programme"
+                  },
+                  "groundingChunkIndices": [
+                    10,
+                    9
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1903,
+                    "endIndex": 1949,
+                    "text": "**Location:** Nam Tu Liem District (Trung Van)"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 1952,
+                    "endIndex": 2030,
+                    "text": "**Programmes:** Bilingual / International Curriculum, **IB Diploma Programme**"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2033,
+                    "endIndex": 2209,
+                    "text": "**Overview:** A private Vietnamese bilingual school that became an authorized IB World School for the Diploma Programme in 2022, offering students a dual-track or IB DP pathway"
+                  },
+                  "groundingChunkIndices": [
+                    11,
+                    12
+                  ]
+                },
+                {
+                  "segment": {
+                    "startIndex": 2266,
+                    "endIndex": 2462,
+                    "text": "**Westlink International School (Tay Ho Tay / Bac Tu Liem):** An authorized IB World School for the Primary Years Programme (PYP) and a candidate school for upper-secondary IB programmes (DP / CP)"
+                  },
+                  "groundingChunkIndices": [
+                    13,
+                    14
+                  ]
+                }
+              ],
+              "webSearchQueries": [
+                "\"Dwight School Hanoi\" site:ibo.org",
+                "site:ibo.org/en/school/ \"Hanoi\" \"Diploma Programme\"",
+                "IB World Schools Hanoi site ibo org",
+                "schools offering IB diploma Hanoi",
+                "\"The Olympia Schools\" site:ibo.org",
+                "\"Viet Nam Tinh Hoa\" site:ibo.org"
+              ]
+            }
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 1104,
+          "candidatesTokenCount": 841,
+          "totalTokenCount": 3654,
+          "cachedContentTokenCount": 894,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 1104
+            }
+          ],
+          "cacheTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 894
+            }
+          ],
+          "thoughtsTokenCount": 1709,
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.8-flash",
+        "responseId": "_sz1aq7EG-GxytMP3u6isQc"
+      }
+    ]
+  }
 }

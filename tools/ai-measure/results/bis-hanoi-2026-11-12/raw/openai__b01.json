@@ -1,5 +1,5 @@
 {
-  "ok": false,
+  "ok": true,
   "provider": "openai",
   "model": "gpt-6-astra",
   "question": {
@@ -7,7 +7,557 @@
     "type": "branded",
     "text": "What is the reputation of BIS Hanoi? Is it worth sending my child there?"
   },
-  "started": "2026-11-12T14:01:30.562Z",
-  "finished": "2026-11-12T14:01:31.674Z",
-  "error": "Error: no response.completed event: [{\"type\":\"error\",\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"sequence_number\":2},{\"type\":\"response.failed\",\"response\":{\"id\":\"resp_0ce4aba48455748e006af5c6bae2f887d28fd026e597465099\",\"object\":\"response\",\"created_at\":1794492090,\"status\":\"failed\",\"access_programs\":{\"cyber\":\"standard\"},\"background\":false,\"completed_at\":null,\"error\":{\"type\":\"insufficient_quota\",\"code\":\"credit_balance_exhausted\",\"message\":\"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\"param\":null},\"frequency_penalty\":0,\"image\":{\"context_compression\":\"disabled\""
+  "started": "2026-11-12T14:24:09.016Z",
+  "finished": "2026-11-12T14:24:49.768Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What is the reputation of BIS Hanoi? Is it worth sending my child there?"
+  },
+  "response": {
+    "id": "resp_0ef1cfcef0c23af2006af5cc09923487d29e2a5e63c4e3650b",
+    "object": "response",
+    "created_at": 1794493449,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794493489,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0ef1cfcef0c23af2006af5cc0b61a087d29d6737cfc26a72a4",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "BIS Hanoi British International School accreditation IB results 2025 fees 2026 reviews",
+            "British International School Hanoi inspection report ISI 2025"
+          ],
+          "query": "BIS Hanoi British International School accreditation IB results 2025 fees 2026 reviews",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://isons.top/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/parent-essentials/accreditations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/3/27/bis-hanoi-recognised-as-one-of-the-most-popular-international-schools-of-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.britishschoolsasia.com/journal/2026-07-12-british-international-school-hanoi-history/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/parent-essentials/documents/bis-hanoi_referral-programme-2025-26_en.pdf?hash=54A7B83C3AD31AB86957E9E54DA0EE98&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.fobisia.org/our-members/member-school/bishn"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/british-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/parent-essentials/2025-26/school-profiles/school-profile-2025-eng%282%29.pdf?hash=3999C78456EAA6E68A3A382143FC538D&rev=2a050e5df90943809963133d42c81d15"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/parent-handbooks/18-secondary-parent-handbook-202526en-version.pdf?hash=55A17813DD5AF78B3B7B84B02C3CB8B5&rev=13db0a6ef9a64eb8a4e78f67efeec287"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1722249050/bonnisde/bugir7qtzwh2tiplcwbt/School_Profile_2023-2024.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1q77k5t/regents_bk_bis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtz5oo"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1i3bgea/boston_international_school_wuxi_china/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1sgg001/vietnam_job_offers/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1euc1vn/reputable_schools_in_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalschools/comments/1tg0fon/bratislava_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Bishkek_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Bonn_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Bangalore_International_School"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0ef1cfcef0c23af2006af5cc0fa8dc87d2ba61147061103cfe",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.ibo.org British International School Hanoi",
+            "site.acswasc.org \"British International School Hanoi\""
+          ],
+          "query": "site.ibo.org British International School Hanoi",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://britishschoolsasia.com/journal/2026-08-16-british-international-school-hanoi-history/"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/parent-essentials/accreditations"
+            },
+            {
+              "type": "url",
+              "url": "https://www-prod.ibo.org/school/051151/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.fobisia.org/our-members/member-school/bishn"
+            },
+            {
+              "type": "url",
+              "url": "https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.cois.org/about-cis/news/post/~board/reaccredited/post/re-accredited-british-international-school-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://isons.top/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/277491-secondary-school-profile-for-colleges-and-universities-sy2022-23.pdf?hash=4105892286FDD15B31DCDE6CA281D82E&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.acswasc.org/wp-content/themes/acswasc/pdf/ACS-WASC_Directory.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/resources/asia/_filecache/2b3/bcf/255683-secondary-school-profile-_print.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://d1lge852tjjqow.cloudfront.net/CIK-0001492966/724a3f2a-3745-4410-a9a4-953f7bcb49df.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/parent-handbooks/18-secondary-parent-handbook-202526en-version.pdf?hash=55A17813DD5AF78B3B7B84B02C3CB8B5&rev=13db0a6ef9a64eb8a4e78f67efeec287"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/resources/asia/_filecache/ded/719/231691-booklet--ks5-ib-booklet.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1greh3w"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1q77k5t/regents_bk_bis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/16c6omr"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1euc1vn/reputable_schools_in_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1ai3qfk"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1c51y6q"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Schools_offering_International_Baccalaureate"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/british-international-school-hanoi"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0ef1cfcef0c23af2006af5cc14c5e887d28b8baaba1b8ec590",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cwxftnfbVVjxE3s87T5-umaG0qEo0oExaXiGL3XwuwxULZzCKHC2N1W2fwvU5tQgQThQpZR0Q2jxPH5YgX-3FtWyFBfiHZiWtBFb4qqSUeBAzatT_FpOinbJ9HyFIm-S6ZgW4vEeunEVdMxraA61VyTPbHWfMhzxZw6qB-nH7ZYOeWJHROwjQ1ezqTTpxLmca11WLUobi7faOsu1o2IWmDwaFoDVvCX4RNTt23XHnNgaIJn1TpBVYcR-SXQomJio6Ttcf2lKZVqCsyIz0R8fIyMV_Ns54eT1udlvV3oRHUMhBox6-9j-WH_RzxsAl3UvcsAn7jdf8gdQPiDlioyB1hNWD48dDn0dXlDTqXE3bMunksC-L5opIBYqkIEPyZeW1mBosmTzzY11yy4D03sETIue7xq1EwUN9vSugYFJbC7JQXA-4MEss8RjVyUk8qBjWLEQXLjB8fhn0HiiTiHh970bHV8PrdNs2-WRK-1ALVkosNb7m-rcq1mu163Vb1DuEESIU3HUw67b5HuQ9S-CLmM7dWYLdR9-HBmytMzfIYenJTqqqkmh_X2GsONzmlryTIxcYvnrqMjamuBkgKMRVEIEysua8Wdbkd9vilj4MNwecu4YrIV_dCQHEaqscWIp9UIJXEBt8kFLEVlAiJ9L0jEcUvOxgjPBw6hOQF79Lzr8CTuvIw946FalU0RlQrkrfhvtlAS3nm6J1WGeBpyWL8aJ5dFSTA4_taFHL-yiiq3YQciH-Il_v_w6IsPV-8nk1XNIAtcQE_v_N4x-E-J_5ex-yAhi2MjxLN5l2KvGViO735ltcN2k16VjLUZZZ89jlvqWFi5i0FYdDiTZQ4XeGRXTig1YPALpGMYpLzRtF0GS9ZCITofXClGB3YE2UTDVKTgtLaxUMjjLIOe71BLLXV_4IwgagxgQv7ahPrqKWS94gtX7CzkKnWshQ9m242WuTXK7Rqw5HC5R2MjZZncyploJbqmaHJum7OJ6OBFwYqx1PPLrfN-NPQA8y81WRFDCi3MTKJnmUAubBNatbsb3-zBvG4IyA9-o8G74rrX7gU7JBVuZdZv1YVNHd9_anFRuj847u7Vcfufa8ofQvKX7Ppihfg-hK4UitL1bbzn89u1Guvrv8YkdDbyrEkXFWTKDJ-8TmAaVNXB0GcrlSEtOFXddkuegYhdT1aQF28vqkuGkd1Scmj-Gf5rke0MkOR132HEJDUrTIoKrC79QxK5m4dnC-PY146xHkT3WtIpboq0EcxuOVPsPFoqObvR2jhzPeDGG9Xh19IPEIUKAPSNmm2T6ssuWpikGyvdAhxOt7bVpmAl1u4omurH28IvFos_xpulWH0CFH0gpgWAEAe8ZWNxFsP2vRNqDNOusaZ_Fwa38cQ02kD21pHm5cOXq6QKoIIwmtuVxzaTryOwoav4pwzedNWrrXkUfGQ8WXnAUAssh2VLKn1nkU7FfB4dPb8LzHwdek_ISeQ9CrEG0fjKrC7RH_xik_uz1Z4YeX477dF1JaYiJ1aTveXAHlidNmjbCm7EnJbUpkNwSJyEmGnjlRYVw0g09_4pDxwlwRV170iP4RXaoGlARPXFhWaJrQ4joPtiIe7hCC2hos0AXf49MmHMoEmZghBmctQ03TZaZgIdSXJpXIUrpK1S-ppYkRjhKK5kgq04_mQ9pwGYqRm2s-ErF0rNIccJbIJILzBTprREpuUCCZuq-nyAnl3qoaxgbq8N",
+        "summary": []
+      },
+      {
+        "id": "ws_0ef1cfcef0c23af2006af5cc14ffb887d2ba70647bdbc969d9",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi"
+        }
+      },
+      {
+        "id": "rs_0ef1cfcef0c23af2006af5cc184e0087d2b119b118d9b72f0e",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cwxi1LT3H-YfWnODF1rUVuAd2yaNVBdjHGsGnmw7zqfmd1bEwx02jeC45YJbVQu0DlpLHKJKCQ_yOFG4h8khF7pycmOscuMNqzDwBEUiwMKOk_AGdYpw1j8sQixHBWGISTyOCgs1bzRWjEv6Mr-hdI7sNZp_I4XdYSTQTgJoP_ppfKOWqPmEiIzjo3-1WwhSDjzqZzw6k_DkRTkmhqorFKfPwv5Jksili7QM8DUL3lAL4b0ycURUpRivCxMproHZiz0PD44LbxlVVlJM-BjO2Peu9W2tF9-eGBruM27PoFxh9zsmq83phjmR4e90rAmJtA0TmDSuXaLfYDcew6Ul6mby_NoId8jU7UMaBOWhB5dgZFOcpNLqQNNlBFjehH7Vk_IUzl9OUqqQhRXzvO3EPSa49J-9T95i8C-AvJBwu1lXPKL75Ouu6KlbHGmI3XYe-PheUObz3C0k48vrF4FtAL-KVfFaXuOpJ-9b_ELN_Acco5X6dh3LUSL7af8VQxyG7ZOWlGJo8-K7Qn-mbEqWYG3NfKPZ1GHE1H1fn-hi06FOIh369j4EkVBb1H66hMR9axdBfvQWXKxo8gTw-XKEXm3sCDI8T591RHaZJ1ZjcdOI-gwJYKTtukOG6q1qKiDLKWe9K-Ysg-Ys5XtqHwzrRtOlaikoVAkk7ayf_IBGamGi-NWLgnuJVdoSUVYr92TQSecgXs9U8HmyZxEYJqKdn2GRFqmK4_1zEOmokTJWQxPEdtxMOGX8ZgIYfBCDq1z8JGrbPQmJWSrN96FlraqPmP7k7LAE4NEzcCO2IxFyhzpwoJ1hZ424EOqS-OmejKSv-7J4KQjrW2_wH87h2hKgGp8x4r3HnLseWRG5D5WEHqZBVK1wx90usEGhZ4OSxmR5Ofe3PUrKWqYxQV3YjBJZGbP_ORIbQ9iQHg-jEhlRY-aj7qvHAxKdy4K65HJDI11JOPulutEPqFwfVlLxW5oGAf9yQHeA-lyogOulRJbUZne5reweUuYWAyR9ek9Zur4Vrtck_BUO8XYkvkrR_l753ioArqunLjFV10EExCAS4a703_Ctmept-KoDA1ISq9ZziRtcnYIetYW5u3NUKutb8ePiUIy9vsCWbKAc2_eoqZ8jr2lgVrg6eW9E7b7tDJbyXaeJCD1mrPETcvZBBEdClHoG-z9pV-e31kQSybPbgjlTWfEhjQbwAZHx9xSvQmSBXzYQibjlllVNCV9bcsRP0kqstEU9A7s5f0U6mH_1wzQT30dJElykJyYb17Rj1YyCbPVz_rFX4p82g6xIPatBwji43EzDfUnhMyuEjbmib4YkI9zG_3RyJA70UF_kRDLzk3WTercO7b9Mg-SziZMI_B40NlWq22iGHPVeWLqPG68h2p9nTcpb0KxL2wRWCVMVb2GeOjmdU-SmXfY9pCxQnkw4mwqVw5tKeah2Bh8UliK6Ni9PTjb0X4xUnjRRCh6S4LpOoT30dsMi3OohIJhPCAWUqtjRiQlTBfFNct5-2NcDx5wUP9z93EftPkXPkqL1dIlxFfbMSrXl5RkIqaHa4-xcfvoY8siBzq9km2VqpJjawul1bCBAEcj932OXIi2pRniGuQ19kh-xgdFkh4bP3pkSEhwrmOGHq-wRR83J2L12ZDpCbVOwfF5MSov67zXDS8gZ92R2fqAm0oQttgJNflgfRy2qj4CPmf9PaRP-NOK8UxgTyI-Hz6ESVL5sUY0oVVZxajpI916YUiSKWeYI7TRy6GktnUO4t0WdcIRv3q39bBjinykoH3pySREPpISzHD2UyP5tZfEbGsy4ETXn4bAdTqg3D_mVvL4w9c27Or1fOynNmCordv57Mt6RCj7xzWHStjyrOBLztklfS7MtDBmmpCVk5g7wd-EqN0ZADuEEMnjI89Fo05SrsT9u3qZxBq46qisDQpFA_X2aE_YQDYSDVhRhkBB0Rtbr0paakXEQmApetQDDdw8eVBlzTgKAwyzR4ok4SgB5BGl6yqmLesrQcq2DWWUoKOpNsOdIaU4hpup-ehzwW1wOZq3WbmAmusD626I5F2kJvelysOxVXdbezpjTcSFyFA33-Ejo23ZHQNeo9g_n5AitZ_uPePuwlDpZBp7GS29iwRLW0JQXd4pRwJO_cggdttSXm7vWoVErSy3a6zjcpVyRHi3GrgVETkfaTudY3vw_-yMEHBMyDEw_sZNk9na-fovtyFU5SV8o0ey-5vJzHx_ZEy3byrnnH7VLa4q8SNOggsRwktPFBPMTVto1IpLx8vgz-MSu2yrpIrWvp2CfSqQxI_x966MEbmpoLv-_4M3Vb2F9YTFLS6VL5wo4lVGO6dAvJQi9dCB-1MT5AAOCZCvxBcanv2CZw-lffDm-CYDRRRRDYZj7QcOc40R7QuYURz123Nq5rvVOMDbxw4bXSRIBesH7TfFBhJLaqVijf8PrF94MQrdDnQnPieIQBWgX3yMuEr1ix4n8kc06KzlkF5W8CFKzLfbr5DZ",
+        "summary": []
+      },
+      {
+        "id": "ws_0ef1cfcef0c23af2006af5cc1a49c087d2bb078f744a3b123d",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "msg_0ef1cfcef0c23af2006af5cc1c47b487d2bbbb3a70969dac2f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 560,
+                "start_index": 406,
+                "title": "Re-accredited | British International School Hanoi, Vietnam | News from the Council of International Schools",
+                "url": "https://www.cois.org/about-cis/news/post/~board/reaccredited/post/re-accredited-british-international-school-hanoi-vietnam?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1100,
+                "start_index": 946,
+                "title": "Re-accredited | British International School Hanoi, Vietnam | News from the Council of International Schools",
+                "url": "https://www.cois.org/about-cis/news/post/~board/reaccredited/post/re-accredited-british-international-school-hanoi-vietnam?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1584,
+                "start_index": 1434,
+                "title": "BIS Hanoi students score above global average in 2026 IB Diploma - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2152,
+                "start_index": 1891,
+                "title": "STUDENT BODY",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b&utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2672,
+                "start_index": 2554,
+                "title": "British International School Hanoi Vietnam | School Review",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3152,
+                "start_index": 3054,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3721,
+                "start_index": 3460,
+                "title": "STUDENT BODY",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b&utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4133,
+                "start_index": 4015,
+                "title": "British International School Hanoi Vietnam | School Review",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4450,
+                "start_index": 4320,
+                "title": "British International School Hanoi: Details, Fees and Reviews",
+                "url": "https://www.international-schools-database.com/in/hanoi/british-international-school-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4799,
+                "start_index": 4709,
+                "title": "British International School Hanoi - FOBISIA",
+                "url": "https://www.fobisia.org/our-members/member-school/bishn?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "Assuming you mean **British International School Hanoi (BIS), rather than BVIS**, my assessment is: **it is a credible, well-regarded school worth shortlisting—but not an automatic “yes” at its fees.** Its accreditation, academic results and independent review provide genuine reasons for confidence. Whether it is worth it for your child depends on their age, learning needs, your budget and the commute. ([cois.org](https://www.cois.org/about-cis/news/post/~board/reaccredited/post/re-accredited-british-international-school-hanoi-vietnam?utm_source=openai))\n\n## What supports its reputation?\n\n**1. Recognised credentials—not just branding.**  \nThe Council of International Schools confirmed BIS Hanoi’s re-accreditation on **January 25, 2024**. The IB’s own directory confirms that it has been authorised to offer the Diploma Programme since 2016. These are meaningful checks, although neither guarantees a good experience in every classroom. ([cois.org](https://www.cois.org/about-cis/news/post/~board/reaccredited/post/re-accredited-british-international-school-hanoi-vietnam?utm_source=openai))\n\n**2. Good academic outcomes.**  \nIts 2026 IB cohort averaged approximately **35 points out of 45**, versus a global average of approximately **31**, with two students achieving 45. That is encouraging, but I would not interpret it as proof that BIS is Hanoi’s “best” school or that it will produce the same outcome for every child. ([e.vnexpress.net](https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html?utm_source=openai))\n\nThere is also year-to-year variation: the school’s 2025–26 university profile reports a **2025 average of 33.2 and an 87% full-diploma pass rate**. For an older child, I would ask for three years of results, pass rates and outcomes for students with a similar starting point—not just the highest scorers. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b&utm_source=openai))\n\n**3. Positive independent commentary.**  \nThe *Good Schools Guide*, updated in October 2026, describes a lively school with strong facilities, a welcoming local community and positive attention to wellbeing. Its publicly accessible review excerpts are favourable overall. That is more useful evidence than school advertising, though it is still one review rather than a representative parent survey. ([goodschoolsguide.co.uk](https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi))\n\n## What would make me cautious?\n\n- **The price.** Published **2026–27 annual tuition** is approximately **VND 658–735 million for primary** and **VND 847–970 million for secondary**. Primary and secondary entrants also face a **VND 70.8 million registration fee**, plus application fee and deposit. Get a written, all-in quotation, including transport and any additional support. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n- **The peer-group fit.** The school’s 2025–26 profile lists **47% Vietnamese, 38% Korean and 15% other nationalities**. That is neither inherently good nor bad, but “international” should not be taken to mean an evenly mixed expatriate population. I would ask about the actual class your child would join. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b&utm_source=openai))\n- **Specialist learning support needs careful checking.** The *Good Schools Guide* says provision accommodates minor-to-mild special educational needs, but not significant learning difficulties. If relevant, meet the learning-support team before committing and obtain a specific support plan. ([goodschoolsguide.co.uk](https://www.goodschoolsguide.co.uk/international/review/british-international-school-hanoi))\n- **Online parent ratings are thin evidence.** One prominent school directory’s five-star rating rests on just **one unverified review**. I would not treat that as a reliable consensus. ([international-schools-database.com](https://www.international-schools-database.com/in/hanoi/british-international-school-hanoi))\n\n## Would I send my child there?\n\n**I would seriously consider it if** I wanted its British/IGCSE-to-IB pathway, could comfortably sustain the fees, and my child felt comfortable during a visit. That curriculum pathway is independently confirmed by FOBISIA. ([fobisia.org](https://www.fobisia.org/our-members/member-school/bishn?utm_source=openai))\n\n**I would hesitate if** paying required substantial financial strain, the commute was exhausting, or my child needed specialist support the school could not clearly demonstrate.\n\nBefore paying a deposit, I would:\n1. Visit during ordinary lessons and request a trial day.\n2. Speak privately with two or three parents in the relevant year group.\n3. Ask about teacher turnover, bullying responses, class size and support for struggling students.\n4. Test the actual morning and afternoon commute.\n\n**Bottom line: a defensible shortlist choice, not a school I would choose on reputation alone.**\n\n**How old is your child, where would you live in Hanoi, and which other schools are you considering?**"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 2
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 33382,
+      "input_tokens_details": {
+        "cache_write_tokens": 20,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1409,
+      "output_tokens_details": {
+        "reasoning_tokens": 408
+      },
+      "total_tokens": 34791
+    },
+    "user": null,
+    "metadata": {}
+  }
 }
