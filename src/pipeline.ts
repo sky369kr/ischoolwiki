@@ -1,4 +1,4 @@
-import { extractFacts, htmlToText, parseNewsSource } from "./collect";
+import { articleHtml, extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, reviseArticle, translateArticle, writeArticle } from "./generate";
 import { checkGrounding } from "./grounding";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
@@ -93,7 +93,7 @@ async function extractNewFacts(env: Env, school: School): Promise<string> {
     const res = await fetch(item.url, { headers: { "user-agent": USER_AGENT } });
     let found = 0;
     if (res.ok) {
-      const text = htmlToText(await res.text()).slice(0, PAGE_CHAR_LIMIT);
+      const text = htmlToText(articleHtml(await res.text())).slice(0, PAGE_CHAR_LIMIT);
       const { facts, names } = await extractFacts(env.ANTHROPIC_API_KEY, school.name, text);
       const stmts = [
         ...facts.map((f) =>
@@ -158,8 +158,9 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
 
   let draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
   let result = await evaluate(draft);
-  let revised = false;
+  let firstAttempt: { draft: ArticleDraft; problems: unknown[] } | null = null;
   if (canRevise(result.problems)) {
+    firstAttempt = { draft, problems: result.problems };
     // One repair pass on the flagged sentences, then the same checks again; whatever is left holds the article.
     const r = await reviseArticle(env.ANTHROPIC_API_KEY, {
       ...writeInput,
@@ -168,14 +169,19 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
     });
     draft = { title: r.title, tldr: r.tldr, body_md: r.body_markdown, faq: r.faq };
     result = await evaluate(draft);
-    revised = true;
   }
+  const revised = firstAttempt !== null;
   const slug = await uniqueSlug(env, "en", `${school.slug}-${sanitizeSlug(generated.slug)}`);
   const sources = sourcesFor(facts, result.usedFactIds, news.map((n) => n.url));
   const articleId = await saveArticle(env, {
     school_slug: school.slug, lang: "en", translation_of: null, slug, kind: generated.kind, draft, sources, runId,
     passed: result.passed, problems: result.problems, autoPublish: env.AUTO_PUBLISH === "true",
   });
+  if (firstAttempt) {
+    // Keep what the checker first objected to and the draft it read, so the repair can be audited.
+    await env.DB.prepare("INSERT INTO article_revisions (article_id, draft_json, problems_json) VALUES (?, ?, ?)")
+      .bind(articleId, JSON.stringify(firstAttempt.draft), JSON.stringify(firstAttempt.problems)).run();
+  }
   if (news.length) {
     await env.DB.batch(news.map((n) => env.DB.prepare("UPDATE source_items SET used_by = ? WHERE id = ?").bind(articleId, n.id)));
   }

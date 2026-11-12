@@ -47,6 +47,7 @@ Tone: report what the school has published, plainly, for a parent reading it as 
 - Describe a news item's subject only in words from its title, summary or a fact quote; never infer it from the URL.
 - Include fees only when the article is about admissions or fees; do not add a fee table to an article on another subject.
 - Name a school group, network or affiliation (for example "part of Nord Anglia Education") only when a fact or its quote states that affiliation for this school; a group name appearing elsewhere in the material is not enough.
+- Do not count, order or rank the news items you were given ("the newest of three posts this month"): you see only a selection of the school's posts.
 - No claims that the material is complete ("these are the only figures", "the post lists all"): you only know what you were given.
 
 Style:

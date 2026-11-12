@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { filterGrounded, parseFeed, parseNewsSource } from "../src/collect";
+import { articleHtml, filterGrounded, htmlToText, parseFeed, parseNewsSource } from "../src/collect";
 
 describe("parseNewsSource with an HTML news index", () => {
   const html = `
@@ -76,5 +76,27 @@ describe("filterGrounded", () => {
     );
     expect(r.facts).toEqual([]);
     expect(r.names).toEqual([]);
+  });
+});
+
+describe("articleHtml", () => {
+  it("drops related-post teasers and everything after them", () => {
+    const html = `<main><h1>Why BSB Shunyi delivers academic excellence</h1><p>Applying to Oxbridge takes real dedication.</p>
+      <h2 class="news-events__text-title">Related news</h2><p>TWO of our outstanding students have received offers from the University of Cambridge!</p>
+      <p>Admissions: +8610 8047 3558</p><p class="calloutBanner-title">Scores 5.39 Points Above the Global IBDP Average!</p></main>`;
+    const text = htmlToText(articleHtml(html));
+    expect(text).toContain("Applying to Oxbridge");
+    expect(text).not.toContain("Cambridge");
+    expect(text).not.toContain("5.39");
+  });
+
+  it("matches other wordings and nested tags in the heading", () => {
+    expect(articleHtml("<p>a</p><h3><span>More stories</span></h3><p>b</p>")).toBe("<p>a</p>");
+    expect(articleHtml("<p>a</p><h2>You might also like</h2><p>b</p>")).toBe("<p>a</p>");
+  });
+
+  it("keeps the page when there is no such heading, or the words are body text", () => {
+    const html = "<h1>Related news from the board</h1><p>Our latest news: a new library.</p>";
+    expect(articleHtml(html)).toBe(html);
   });
 });

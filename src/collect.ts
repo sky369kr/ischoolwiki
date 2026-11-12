@@ -77,6 +77,16 @@ function decodeEntities(s: string): string {
     .replace(/&quot;/g, '"').replace(/&apos;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&");
 }
 
+// News pages end with teasers of other posts ("Related news") followed by the site footer and banners.
+// None of that is the page's own article: a fact taken from it gets attributed to the wrong post and
+// date (a February offer announcement read as part of a November post). Cut at the first such heading.
+const OTHER_POSTS_HEADING = /<h[2-4]\b[^>]*>\s*(?:<[^>]+>\s*)*(?:related|more|latest|recent|other)\s+(?:news|articles|posts|stories|blogs?)\b|<h[2-4]\b[^>]*>\s*(?:<[^>]+>\s*)*you (?:may|might) also like/i;
+
+export function articleHtml(html: string): string {
+  const m = OTHER_POSTS_HEADING.exec(html);
+  return m ? html.slice(0, m.index) : html;
+}
+
 export function htmlToText(html: string): string {
   return decodeEntities(
     html
