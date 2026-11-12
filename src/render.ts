@@ -60,22 +60,40 @@ export interface PageMeta {
   description: string;
   alternates?: { lang: string; path: string }[];
   schema?: unknown[];
+  wide?: boolean;
 }
 
 const STYLE = `
-:root{--bg:#fbfaf7;--fg:#1d2321;--muted:#5d6763;--line:#e2e0d8;--accent:#1f6f5c;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#141816;--fg:#e8ebe8;--muted:#9aa5a0;--line:#2b322f;--accent:#6fcfb4;color-scheme:dark}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Noto Serif KR",serif}
-header,main,footer{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
-header{padding-block:1.25rem;border-bottom:1px solid var(--line);display:flex;gap:1rem;flex-wrap:wrap;align-items:baseline;font-family:system-ui,sans-serif}
-header a.home{font-weight:700;color:var(--fg);text-decoration:none;font-size:1.1rem}header nav{display:flex;gap:1rem;font-size:.95rem}
-main{padding-block:2rem}a{color:var(--accent)}h1{font-size:2rem;line-height:1.2;text-wrap:balance;margin:0 0 .75rem}h2{font-size:1.35rem;margin-top:2rem}
-.notice{border:1px solid var(--line);border-radius:6px;padding:.6rem .8rem;color:var(--muted);font:14px/1.5 system-ui,sans-serif}
-.tldr{border-left:3px solid var(--accent);padding:.25rem 0 .25rem 1rem;color:var(--fg);font-size:1.05rem}
-.meta,.sources{color:var(--muted);font:14px/1.5 system-ui,sans-serif}table{border-collapse:collapse;width:100%;font:15px/1.45 system-ui,sans-serif}
-.scroll{overflow-x:auto}th,td{border-bottom:1px solid var(--line);padding:.5rem;text-align:left;vertical-align:top}
-ul.plain{list-style:none;padding:0}ul.plain li{padding:.5rem 0;border-bottom:1px solid var(--line)}
-footer{padding-block:2rem;border-top:1px solid var(--line);color:var(--muted);font:14px/1.5 system-ui,sans-serif}`;
+:root{--bg:#fbfaf7;--card:#ffffff;--fg:#1d2321;--muted:#5d6763;--line:#e2e0d8;--accent:#1f6f5c;--accent-soft:#e7f1ed;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#141816;--card:#1b201e;--fg:#e8ebe8;--muted:#9aa5a0;--line:#2b322f;--accent:#6fcfb4;--accent-soft:#1f2d28;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+body.wide .wrap{max-width:68rem}
+header{border-bottom:1px solid var(--line);background:var(--card)}header .wrap{padding-block:.9rem;display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
+header a.home{font-weight:750;color:var(--fg);text-decoration:none;font-size:1.15rem;letter-spacing:-.01em}header a.home span{color:var(--accent)}
+header nav{display:flex;gap:1rem;flex-wrap:wrap;font-size:.95rem}header nav a{color:var(--muted);text-decoration:none}header nav a:hover{color:var(--accent)}
+main{padding-block:2rem 3rem}a{color:var(--accent)}
+h1{font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.15;letter-spacing:-.02em;text-wrap:balance;margin:0 0 .75rem}h2{font-size:1.3rem;margin:2.25rem 0 .75rem}h3{font-size:1.05rem;margin:1.5rem 0 .4rem}
+article p,article li{font-family:Georgia,"Noto Serif KR",serif;font-size:1.06rem}
+article .meta,article .notice,article .sources li{font-family:inherit}
+.lead{font-size:1.1rem;color:var(--muted);max-width:40rem}
+.notice{border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem;color:var(--muted);font-size:14px;line-height:1.5}
+.tldr{background:var(--accent-soft);border-radius:10px;padding:1rem 1.15rem;margin:1.25rem 0}.tldr b{display:block;font:600 12px/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+.tldr p{margin:0;font-size:1.08rem}
+.meta,.sources{color:var(--muted);font-size:14px;line-height:1.5}.sources a{overflow-wrap:anywhere}article{overflow-wrap:break-word}.crumbs{font-size:14px;color:var(--muted);margin-bottom:.75rem}.crumbs a{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.45}.scroll{overflow-x:auto}th,td{border-bottom:1px solid var(--line);padding:.5rem;text-align:left;vertical-align:top}
+ul.plain{list-style:none;padding:0;margin:0}ul.plain li{padding:.75rem 0;border-bottom:1px solid var(--line)}ul.plain li>a{font-weight:600}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem}
+.card h3{margin:0;font-size:1.12rem;line-height:1.3}.card h3 a{color:var(--fg);text-decoration:none}.card h3 a:hover{color:var(--accent)}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.2rem .8rem;font-size:14px;line-height:1.45}.card dt{color:var(--muted)}.card dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem}.chip{font-size:12.5px;line-height:1;padding:.35rem .55rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.15rem .5rem;align-self:flex-start}
+.card .more{margin-top:auto;font-size:14px}
+.trust{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin:2rem 0 0;padding:0;list-style:none}.trust li{border-top:2px solid var(--accent);padding-top:.6rem;font-size:15px;line-height:1.5}.trust b{display:block;margin-bottom:.15rem}
+.infobox{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.4rem 1rem;margin:1.25rem 0}.infobox table{font-size:15px}.infobox th{color:var(--muted);font-weight:500;width:9.5rem}.infobox tr:last-child th,.infobox tr:last-child td{border-bottom:0}
+details{margin-top:1rem}summary{cursor:pointer;color:var(--accent);font-weight:600}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:1.5}footer .wrap{padding-block:2rem}`;
 
 export function page(meta: PageMeta, body: string): string {
   const canonical = meta.site.url + meta.path;
@@ -98,12 +116,20 @@ export function page(meta: PageMeta, body: string): string {
 <style>${STYLE}</style>
 ${(meta.schema ?? []).map(jsonLd).join("\n")}
 </head>
-<body>
-<header><a class="home" href="/">${esc(meta.site.name)}</a><nav><a href="/blog/">Articles</a><a href="/ko/blog/">한국어</a></nav></header>
-<main>${body}</main>
-<footer>${meta.lang === "ko"
+<body${meta.wide ? ' class="wide"' : ""}>
+<header><div class="wrap"><a class="home" href="${meta.lang === "ko" ? "/ko/blog/" : "/"}">${brand(meta.site.name)}</a><nav>${meta.lang === "ko"
+    ? `<a href="/ko/blog/">글 모음</a><a href="/">English</a><a href="/ko/about">운영자 정보</a>`
+    : `<a href="/#schools">Schools</a><a href="/blog/">Articles</a><a href="/about">About</a><a href="/ko/blog/">한국어</a>`}</nav></div></header>
+<main class="wrap">${body}</main>
+<footer><div class="wrap">${meta.lang === "ko"
     ? `${esc(meta.site.name)}는 학교가 공개한 자료로 작성한 아시아 국제학교 참고 사이트이며, 글마다 출처를 밝힙니다. 운영: ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/ko/about">운영자 정보</a>`
-    : `${esc(meta.site.name)} publishes reference pages about international schools in Asia, written from schools' published information; each page lists its sources. Operated by ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/about">About</a>`}</footer>
+    : `${esc(meta.site.name)} publishes reference pages about international schools in Asia, written from schools' published information; each page lists its sources. Operated by ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/about">About</a>`}</div></footer>
 </body>
 </html>`;
+}
+
+// "iSchoolWiki" with "Wiki" in the accent colour; any other name is shown as is.
+function brand(name: string): string {
+  const m = name.match(/^(.*)(Wiki)$/);
+  return m ? `${esc(m[1]!)}<span>${m[2]}</span>` : esc(name);
 }

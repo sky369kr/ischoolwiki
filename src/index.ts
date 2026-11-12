@@ -1,6 +1,7 @@
 import { runPipeline, syncIspp, unpublish, type Env, type School } from "./pipeline";
 import { CLIENT_NOTICE, OPERATOR } from "./operator";
 import { esc, markdownToHtml, page } from "./render";
+import { summarize, tuitionText, type SchoolSummary, type SummaryFact } from "./summary";
 
 interface ArticleRow {
   id: number;
@@ -64,15 +65,74 @@ async function published(env: Env, sql: string, ...params: unknown[]): Promise<A
 }
 
 async function home(env: Env, s: Site): Promise<string> {
-  const { results: cities } = await env.DB.prepare(
-    "SELECT city, city_slug, country, COUNT(*) AS n FROM schools WHERE active = 1 GROUP BY city_slug ORDER BY country, city",
-  ).all<{ city: string; city_slug: string; country: string; n: number }>();
-  const latest = await published(env, "AND lang = 'en' ORDER BY published_at DESC LIMIT 10");
-  const body = `<h1>International schools in Asia, school by school</h1>
-<p>Profiles, city comparisons and articles drawn from what each school publishes, with sources listed on every page.</p>
-<h2>Compare by city</h2><ul class="plain">${cities.map((c) => `<li><a href="/compare/${c.city_slug}-international-schools">International schools in ${esc(c.city)}, ${esc(c.country)}</a> <span class="meta">${c.n} schools</span></li>`).join("")}</ul>
-<h2>Latest articles</h2>${articleList(latest, "en")}`;
-  return page({ site: s, lang: "en", path: "/", title: "International schools in Asia", description: "Profiles, city comparisons and articles about international schools in Asia, with sources." }, body);
+  const { results: schools } = await env.DB.prepare("SELECT * FROM schools WHERE active = 1 ORDER BY country, city, name").all<School>();
+  const summaries = await summariesFor(env, schools.map((x) => x.slug));
+  const counts = await articleCounts(env);
+  const latest = await published(env, "AND lang = 'en' ORDER BY published_at DESC LIMIT 6");
+  const names = new Map(schools.map((x) => [x.slug, x.name]));
+  const cities = [...new Map(schools.map((x) => [x.city_slug, x])).values()].map((x) => ({ ...x, n: schools.filter((y) => y.city_slug === x.city_slug).length }));
+  const body = `<h1>International schools in Asia, from their own published sources</h1>
+<p class="lead">Profiles, city comparisons and articles about international schools, written only from what each school publishes, with the source of every figure listed.</p>
+<ul class="trust">
+<li><b>Sourced</b>Every figure links to the school's own page or document.</li>
+<li><b>Checked before publishing</b>Figures and names are checked against those sources; an article that fails is not published.</li>
+<li><b>Read daily</b>School news is read every day and new articles follow what schools publish.</li>
+</ul>
+<h2 id="schools">Schools</h2>
+<div class="grid">${schools.map((x) => schoolCard(x, summaries.get(x.slug)!, counts.get(x.slug) ?? 0)).join("")}</div>
+<h2>Browse by city</h2>
+<div class="chips">${cities.map((c) => `<a class="chip" href="/compare/${c.city_slug}-international-schools">${esc(c.city)}, ${esc(c.country)} · ${plural(c.n, "school")}</a>`).join("")}</div>
+<h2>Latest articles</h2>${articleCards(latest, "en", names)}`;
+  const schema = [
+    { "@context": "https://schema.org", "@type": "WebSite", name: s.name, url: s.url + "/" },
+    { "@context": "https://schema.org", "@type": "ItemList", name: "International schools", itemListElement: schools.map((x, i) => ({ "@type": "ListItem", position: i + 1, url: `${s.url}/wiki/${x.slug}`, name: x.name })) },
+  ];
+  return page({ site: s, lang: "en", path: "/", title: "International schools in Asia", description: "Profiles, city comparisons and articles about international schools in Asia, written from each school's published sources.", schema, wide: true }, body);
+}
+
+function plural(n: number, word: string): string {
+  return `${n} ${word}${n === 1 ? "" : "s"}`;
+}
+
+async function summariesFor(env: Env, slugs: string[]): Promise<Map<string, SchoolSummary>> {
+  const out = new Map<string, SchoolSummary>(slugs.map((x) => [x, summarize([])]));
+  if (!slugs.length) return out;
+  const { results } = await env.DB.prepare(
+    `SELECT id, school_slug, key, value, unit, as_of, source_url FROM facts WHERE school_slug IN (${slugs.map(() => "?").join(",")}) ORDER BY id`,
+  ).bind(...slugs).all<SummaryFact & { school_slug: string }>();
+  for (const slug of slugs) out.set(slug, summarize(results.filter((f) => f.school_slug === slug)));
+  return out;
+}
+
+async function articleCounts(env: Env): Promise<Map<string, number>> {
+  const { results } = await env.DB.prepare("SELECT school_slug, COUNT(*) AS n FROM articles WHERE status = 'published' AND lang = 'en' GROUP BY school_slug").all<{ school_slug: string; n: number }>();
+  return new Map(results.map((r) => [r.school_slug, r.n]));
+}
+
+function summaryRows(sum: SchoolSummary, ko = false): [string, string][] {
+  const rows: [string, string][] = [];
+  if (sum.programmes.length) rows.push([ko ? "교육과정" : "Programmes", sum.programmes.map(esc).join(", ")]);
+  if (sum.grades) rows.push([ko ? "학년" : "Year groups", esc(sum.grades)]);
+  if (sum.tuition) rows.push([ko ? "연간 학비" : "Annual tuition", `${esc(tuitionText(sum.tuition))} <a href="${esc(sum.tuition.source_url)}" rel="nofollow noopener">${ko ? "출처" : "source"}</a>`]);
+  return rows;
+}
+
+function schoolCard(x: School, sum: SchoolSummary, articles: number): string {
+  const rows = summaryRows(sum).filter(([k]) => k !== "Programmes");
+  return `<div class="card">
+<span class="meta">${esc(x.city)}, ${esc(x.country)}</span>
+<h3><a href="/wiki/${x.slug}">${esc(x.name)}</a></h3>
+${sum.programmes.length ? `<div class="chips">${sum.programmes.map((p) => `<span class="chip">${esc(p)}</span>`).join("")}</div>` : ""}
+${rows.length ? `<dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>` : ""}
+${x.is_client ? `<a class="tag" href="/about">Client of the site's operator</a>` : ""}
+<span class="more"><a href="/wiki/${x.slug}">School profile</a>${articles ? ` · ${plural(articles, "article")}` : ""}</span>
+</div>`;
+}
+
+function articleCards(rows: ArticleRow[], lang: string, names: Map<string, string>): string {
+  if (!rows.length) return `<p class="meta">${lang === "ko" ? "아직 게시된 글이 없습니다." : "No articles yet."}</p>`;
+  const prefix = lang === "en" ? "" : `/${lang}`;
+  return `<div class="grid">${rows.map((a) => `<div class="card"><span class="meta">${esc(names.get(a.school_slug) ?? "")} · ${esc(a.published_at.slice(0, 10))}</span><h3><a href="${prefix}/blog/${a.slug}">${esc(a.title)}</a></h3><p class="meta">${esc(a.tldr)}</p></div>`).join("")}</div>`;
 }
 
 function about(s: Site, lang: string): string {
@@ -101,18 +161,24 @@ function clientNotice(school: School | null, lang: string): string {
   return `<p class="notice">${esc(lang === "ko" ? CLIENT_NOTICE.ko : CLIENT_NOTICE.en)}</p>`;
 }
 
-function articleList(rows: ArticleRow[], lang: string): string {
+function articleList(rows: ArticleRow[], lang: string, names?: Map<string, string>): string {
   if (!rows.length) return `<p class="meta">${lang === "ko" ? "아직 게시된 글이 없습니다." : "No articles yet."}</p>`;
   const prefix = lang === "en" ? "" : `/${lang}`;
-  return `<ul class="plain">${rows.map((a) => `<li><a href="${prefix}/blog/${a.slug}">${esc(a.title)}</a><div class="meta">${esc(a.tldr)}</div></li>`).join("")}</ul>`;
+  return `<ul class="plain">${rows.map((a) => `<li><a href="${prefix}/blog/${a.slug}">${esc(a.title)}</a><div class="meta">${esc(a.published_at.slice(0, 10))}${names?.get(a.school_slug) ? ` · ${esc(names.get(a.school_slug)!)}` : ""}</div><div class="meta">${esc(a.tldr)}</div></li>`).join("")}</ul>`;
+}
+
+async function schoolNames(env: Env): Promise<Map<string, string>> {
+  const { results } = await env.DB.prepare("SELECT slug, name FROM schools").all<{ slug: string; name: string }>();
+  return new Map(results.map((r) => [r.slug, r.name]));
 }
 
 async function blogIndex(env: Env, s: Site, lang: string): Promise<string> {
   const rows = await published(env, "AND lang = ? ORDER BY published_at DESC LIMIT 100", lang);
   const title = lang === "ko" ? "국제학교 글 모음" : "Articles";
+  const names = await schoolNames(env);
   return page(
     { site: s, lang, path: lang === "en" ? "/blog/" : `/${lang}/blog/`, title, description: title, alternates: LANGS.map((l) => ({ lang: l, path: l === "en" ? "/blog/" : `/${l}/blog/` })) },
-    `<h1>${esc(title)}</h1>${articleList(rows, lang)}`,
+    `<h1>${esc(title)}</h1>${articleList(rows, lang, names)}`,
   );
 }
 
@@ -143,16 +209,23 @@ async function articlePage(env: Env, s: Site, lang: string, slug: string): Promi
       ],
     } : null,
   ].filter(Boolean);
-  const labels = lang === "ko" ? { faq: "자주 묻는 질문", sources: "출처", about: "학교 개요" } : { faq: "Questions parents ask", sources: "Sources", about: "School profile" };
+  const ko = lang === "ko";
+  const labels = ko
+    ? { faq: "자주 묻는 질문", sources: "출처", about: "학교 개요", tldr: "요약", home: "홈", articles: "글 모음", nSources: `출처 ${sources.length}개`, profile: "학교 프로필 보기" }
+    : { faq: "Questions parents ask", sources: "Sources", about: "About the school", tldr: "In short", home: "Home", articles: "Articles", nSources: plural(sources.length, "source"), profile: "Full school profile" };
+  const sum = school ? (await summariesFor(env, [school.slug])).get(school.slug)! : null;
+  const aboutRows = sum ? summaryRows(sum, ko) : [];
   const body = `<article>
+<nav class="crumbs"><a href="${ko ? "/ko/blog/" : "/"}">${labels.home}</a> › <a href="${ko ? "/ko/blog/" : "/blog/"}">${labels.articles}</a>${school ? ` › <a href="/wiki/${school.slug}">${esc(school.name)}</a>` : ""}</nav>
 <h1>${esc(a.title)}</h1>
-<p class="meta">${esc(a.published_at.slice(0, 10))}${school ? ` · <a href="/wiki/${school.slug}">${esc(school.name)}</a>` : ""}</p>
+<p class="meta">${esc(a.published_at.slice(0, 10))}${school ? ` · <a href="/wiki/${school.slug}">${esc(school.name)}</a>` : ""} · <a href="#sources">${labels.nSources}</a></p>
 ${clientNotice(school, lang)}
-<p class="tldr">${esc(a.tldr)}</p>
+<div class="tldr"><b>${labels.tldr}</b><p>${esc(a.tldr)}</p></div>
 ${markdownToHtml(a.body_md)}
 ${faq.length ? `<h2>${labels.faq}</h2>${faq.map((f) => `<h3>${esc(f.question)}</h3><p>${esc(f.answer)}</p>`).join("")}` : ""}
-<h2>${labels.sources}</h2><ul class="sources">${sources.map((u) => `<li><a href="${esc(u)}" rel="nofollow noopener">${esc(u)}</a></li>`).join("")}</ul>
-</article>`;
+<h2 id="sources">${labels.sources}</h2><ul class="sources">${sources.map((u) => `<li><a href="${esc(u)}" rel="nofollow noopener">${esc(u)}</a></li>`).join("")}</ul>
+</article>
+${school ? `<div class="infobox"><h3>${labels.about}: ${esc(school.name)}</h3><table><tbody><tr><th>${ko ? "위치" : "Location"}</th><td>${esc(school.city)}, ${esc(school.country)}</td></tr>${aboutRows.map(([k, v]) => `<tr><th>${k}</th><td>${v}</td></tr>`).join("")}</tbody></table><p><a href="/wiki/${school.slug}">${labels.profile}</a></p></div>` : ""}`;
   return page({ site: s, lang, path: path(lang), title: a.title, description: a.tldr, schema, alternates: siblings.map((x) => ({ lang: x.lang, path: path(x.lang) })) }, body);
 }
 
@@ -168,12 +241,21 @@ async function wikiPage(env: Env, s: Site, slug: string): Promise<string> {
     sameAs: school.website ? [school.website] : undefined,
     address: { "@type": "PostalAddress", addressLocality: school.city, addressCountry: school.country },
   }];
-  const body = `<h1>${esc(school.name)}</h1>
-<p class="meta">${esc(school.city)}, ${esc(school.country)}${school.website ? ` · <a href="${esc(school.website)}" rel="noopener">Official website</a>` : ""} · <a href="/compare/${school.city_slug}-international-schools">Compare schools in ${esc(school.city)}</a></p>
+  const sum = (await summariesFor(env, [slug])).get(slug)!;
+  const info: [string, string][] = [
+    ["Location", `${esc(school.city)}, ${esc(school.country)}`],
+    ...summaryRows(sum),
+    ...(school.website ? [["Official website", `<a href="${esc(school.website)}" rel="noopener">${esc(new URL(school.website).hostname.replace(/^www\./, ""))}</a>`] as [string, string]] : []),
+    ["Facts recorded", `${facts.length}, each with its source below`],
+  ];
+  const body = `<nav class="crumbs"><a href="/">Home</a> › <a href="/compare/${school.city_slug}-international-schools">${esc(school.city)}</a></nav>
+<h1>${esc(school.name)}</h1>
+<p class="meta">International school in ${esc(school.city)}, ${esc(school.country)} · <a href="/compare/${school.city_slug}-international-schools">Compare schools in ${esc(school.city)}</a></p>
 ${clientNotice(school, "en")}
-<h2>Key facts</h2>
-${facts.length ? `<div class="scroll"><table><thead><tr><th>Item</th><th>Value</th><th>As of</th><th>Source</th></tr></thead><tbody>${facts.map((f) => `<tr><td>${esc(humanKey(f.key))}</td><td>${esc(f.value)}${f.unit ? ` ${esc(f.unit)}` : ""}</td><td>${esc(f.as_of?.slice(0, 10) ?? "")}</td><td><a href="${esc(f.source_url)}" rel="nofollow noopener">link</a></td></tr>`).join("")}</tbody></table></div>` : `<p class="meta">No verified facts recorded yet.</p>`}
-<h2>Articles</h2>${articleList(articles, "en")}`;
+<div class="infobox"><table><tbody>${info.map(([k, v]) => `<tr><th>${k}</th><td>${v}</td></tr>`).join("")}</tbody></table></div>
+<h2>Articles</h2>${articleList(articles, "en")}
+<h2>All recorded facts</h2>
+${facts.length ? `<details><summary>Show all ${facts.length} facts with sources</summary><div class="scroll"><table><thead><tr><th>Item</th><th>Value</th><th>As of</th><th>Source</th></tr></thead><tbody>${facts.map((f) => `<tr><td>${esc(humanKey(f.key))}</td><td>${esc(f.value)}${f.unit ? ` ${esc(f.unit)}` : ""}</td><td>${esc(f.as_of?.slice(0, 10) ?? "")}</td><td><a href="${esc(f.source_url)}" rel="nofollow noopener">link</a></td></tr>`).join("")}</tbody></table></div></details>` : `<p class="meta">No verified facts recorded yet.</p>`}`;
   return page({ site: s, lang: "en", path: `/wiki/${slug}`, title: school.name, description: `${school.name}, ${school.city}: key facts with sources and articles.`, schema }, body);
 }
 
@@ -194,16 +276,19 @@ async function comparePage(env: Env, s: Site, citySlug: string): Promise<string>
   for (const m of bySchool.values()) for (const k of m.keys()) keyCounts.set(k, (keyCounts.get(k) ?? 0) + 1);
   const keys = [...keyCounts].filter(([, n]) => n >= Math.min(2, schools.length)).map(([k]) => k).sort();
   const title = `International schools in ${city}`;
+  const summaries = await summariesFor(env, schools.map((x) => x.slug));
   const schema = [{
     "@context": "https://schema.org", "@type": "ItemList", name: title,
     itemListElement: schools.map((x, i) => ({ "@type": "ListItem", position: i + 1, url: `${s.url}/wiki/${x.slug}`, name: x.name })),
   }];
   const body = `<h1>${esc(title)}</h1>
-<p>${schools.length} schools, listed alphabetically. Figures come from each school's published information; follow a school's profile for sources.</p>
+<p>${plural(schools.length, "school")}, listed alphabetically. Figures come from each school's published information; follow a school's profile for sources.</p>
+<div class="grid">${schools.map((x) => schoolCard(x, summaries.get(x.slug)!, 0)).join("")}</div>
+${schools.length > 1 ? `<h2>Side by side</h2>
 <div class="scroll"><table><thead><tr><th>School</th>${keys.map((k) => `<th>${esc(humanKey(k))}</th>`).join("")}</tr></thead><tbody>
 ${schools.map((x) => `<tr><td><a href="/wiki/${x.slug}">${esc(x.name)}</a></td>${keys.map((k) => `<td>${esc(bySchool.get(x.slug)?.get(k) ?? "—")}</td>`).join("")}</tr>`).join("")}
-</tbody></table></div>`;
-  return page({ site: s, lang: "en", path: `/compare/${citySlug}-international-schools`, title, description: `${title}: a side-by-side comparison with sources.`, schema }, body);
+</tbody></table></div>` : ""}`;
+  return page({ site: s, lang: "en", path: `/compare/${citySlug}-international-schools`, title, description: `${title}: a side-by-side comparison with sources.`, schema, wide: true }, body);
 }
 
 function humanKey(k: string): string {
