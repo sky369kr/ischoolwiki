@@ -1,0 +1,505 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "g02",
+    "type": "generic",
+    "text": "Which international schools in Hanoi would you recommend for expat families?"
+  },
+  "started": "2026-11-12T13:55:31.203Z",
+  "finished": "2026-11-12T13:56:12.616Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Which international schools in Hanoi would you recommend for expat families?"
+  },
+  "response": {
+    "id": "resp_0138e089064167b7006af5c553cb1087d2bb71b567e08a17d4",
+    "object": "response",
+    "created_at": 1794491731,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794491772,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0138e089064167b7006af5c5555d5c87d291ac951f999c40b1",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "Hanoi international schools UNIS Concordia BIS HIS St Paul international school official admissions",
+            "UNIS Hanoi official curriculum IB ages campus Ciputra",
+            "Concordia Hanoi official curriculum AP campus admissions"
+          ],
+          "query": "Hanoi international schools UNIS Concordia BIS HIS St Paul international school official admissions",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/the-ib-programmes"
+            },
+            {
+              "type": "url",
+              "url": "https://2021-2025.state.gov/schools-worldwide/schools-worldwide-schools-at-post/east-asia-and-pacific-schools-at-posts/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/frequently-asked-questions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/how-to-apply/policies-and-placement"
+            },
+            {
+              "type": "url",
+              "url": "https://truenorth.edu.vn/en/school-life/news-and-events/parents-guide-advanced-placement-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://globalschoolguide.com/cities/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://cdn-6.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://goteachinternational.com/schools/vietnam/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/apply-now"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Co-Curricular/1819_Co-Curricular_Handbook_VN.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.cihs.edu.hk/wp-content/uploads/2025/08/Student-and-Parent-Handbook-post-WASC-2025-26_Finalized.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/parent-essentials/2025-26/school-profiles/school-profile-2025-eng%282%29.pdf?hash=3999C78456EAA6E68A3A382143FC538D&rev=2a050e5df90943809963133d42c81d15"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.info/uploaded/Teaching_and_Learning/High_School/2019-20_High_School_Handbook_EN.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/High_School/UNIS_Hanoi_High_School_Profile_2019-2020.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://eurochamvn.org/wp-content/uploads/2022/12/Greenbook-English.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Foreign_Language_Specialized_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/17l490u/hanoi_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Vietnam-Australia_School%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ab6s2m"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1ai3qfk"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1jzmyo6"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1jpq4ou"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1k0db99/are_international_schools_in_vietnam_really/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0138e089064167b7006af5c55a93d087d29f76a7734573256a",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.concordiahanoi.org American curriculum AP Van Tri preschool grade 12",
+            "site.nordangliaeducation.com/bis-hanoi curriculum IGCSE IB Vinhomes Riverside ages",
+            "site.hisvietnam.com curriculum IB PYP MYP diploma Hanoi",
+            "site.stpaulhanoi.com curriculum AP address"
+          ],
+          "query": "site.concordiahanoi.org American curriculum AP Van Tri preschool grade 12",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.Country=VN&SearchFields.ProgrammeMYP=true&SearchFields.Sort=pyp&SearchFields.SortDirection=Asc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/admissions/admisions-faq"
+            },
+            {
+              "type": "url",
+              "url": "https://truenorth.edu.vn/en/school-life/news-and-events/parents-guide-advanced-placement-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://goteachinternational.com/schools/vietnam/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/secondary"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/academics/diploma-programme-dp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.earcos.org/member_schools_2425.php"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://eurochamvn.org/wp-content/uploads/2022/12/Greenbook-English.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/uploaded/Policies_Handbook_Information/Secondary_Parent_Handbook.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/prospectus-2025.pdf?hash=5D1FD65472BEBC673EB9BDD46092E1F3&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/High_School/2021_SS_Handbooks/2020-21_Secondary_School_Handbook_EN.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/uploaded/For_Admissions/%28Eng%29_Admissions_Handbook_21-22_V2005.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/European_International_School_Ho_Chi_Minh_City"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Renaissance_International_School_Saigon"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Le_Jardin_Academy"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0138e089064167b7006af5c55e396887d2891c54f01953fa20",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cV8Fer8mDTFRz4kPt-JpOkgjnyue8jD4XtxT6_0iM7EJt80WsIy19UQVvpWLAUNaEBnma45RIUN3Ow0WjBVJpey2mXWpuUkPSJqKgqf3P7rPYQCm67-WIWOGbKPD_acmBGyyaZkZDD7cza8dJdWMcS-8esH4gS5RLA7IuZRSHMkIb0ksksCkG6DN1LgPf4bvsdq7lPK-5eVgJKvDdma2Tf5-HCwWwZC5aRPNogBZddhkQH8O1suvDCIQsN3b44WupclAvM_yetfGtQD6LtIDBnZePIpKk3mK4hlfHXQ8mEo8j_qGememSfsXCF-vxlvC2TZ6O3Zlwmn2StuJObyh_VJ1QH_3wuZ_JXrtGYbZk0fqxUE-HB0gzBGHdSQhfTua3vze8P9OGbucLsLQUiMMj-BcAAUCwoU3T-LwEl_wCzhcrmk4PBI203YhJ3aeD2gaINGwATEIx_kZG0ez8-DkLkeHq1EFgdGkNL-EbVmQMDfvgAjCko846xDzLdMd2aeiZ2tdWLLM-YiPyXEHw4djYtH5XdWXdoJs1M49wV1zPNjZV3Fi3SxrdqhcaWalBU0GhBZKyBQNfwIPUe6CkWBjoXkGmZa4QvG4uxF-OK4-r4q3m1ATwlgZ586bF45xi745GFFi3wK_JXkVwj5hGO5FDJ6HeZ3u_4jPuYIy2cb7Guyhs4lU6a_v3gODpU6jEZhQ5KYhS0x4_DpDPRmbty4APaFG13CKUmLeAGakeE8dw4O86NfLTH390wyv_XE8w1LQICu5XUmlkOtxqWOqZNq8ere2coSC2385_PTA4U67W6ManF8fBDRkP4M3kS4HoTerPeDPcleZtCQEIoelCgIUoJRVkQwuoJARelSs8VXb49s0ZRwvKQavhsfmswAd5Lt12sJQfMNSPsE5l78ZjvAArUtJXR6iuWHCSvKNL7cuhhoZuiw5YiDk-mt1OMVtVQ8kiTMXIxjpAWRi5EuGNx4PFQ3zNU9aQuVOon3tG73nuXMZpSlGy6d7CShG2rkxq3uG-sBPta2OaA-puRNYefeQp-gakQRH7O-uybPlyUehpU9i0ZrW5SIhySK7Ezu_Epl3DMJqaNREnd4FD4yKaTrSNrPp8zuR3QW6rEF-C2bnJv0r8WVe-3i8cHhmaNNhQLDbqpl0SFGkTHe0lxG-4fBi4UzciehhthnBg7Tk_vmf8m6SO2wer9AylovgviJpwyCGWsUwOLxVgoilIKHI9mp6dksjoBqCrX2OR1atayj88_hE3G3hx5jHk00y5qIZQ5mzLaqg4JtY5wqQjTBuRkjxNxCPWUxryLKnMDaRHbNOWKjNnkXanKjcX2zPfJ-cBmAxvvpKBpcE6g_7t023vB2Mso39fojJRMjxeXvOKSwcGRFhAP05-n_fsbqFBlwbaEdtmhs_JHfi5wZLzp8KLBMFI4hD8yJqJ9w2PeYUIvPKDaqRx1IuiclIyEnIURhjtr4oiN6kmcv6JXkLiCZncjU2eQe3tnZWtRhaJi4CuTQnhuhplV_Oxw8XeNeKG41HHtA_65hAaTwpA_4JTwHXKZrgxCnSgicWGLotSrgwm7fttQtBXsTgX0RJ0VnjnwfhxSkLXkg6bC5xtSt7l5UPeTdlDAJKkjFPkj0sg-zqDll6j2dLV45cwZpWFa3lwX4U1NMEL1ZwNEAd12VJyBstK7WMgIiauH9YH5TqNEHZigHFY3XE1sSoaVPXvE7I7xidbtHbC1OYMiF2-vtwl82SzcfTeH-Hs2N_k20HtVwW5S_FqkqxAhnUXiVH1lFn-NI3Wq3l0tj",
+        "summary": []
+      },
+      {
+        "id": "ws_0138e089064167b7006af5c55ebe8887d2ba8c984cea256386",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.concordiahanoi.org/"
+        }
+      },
+      {
+        "id": "rs_0138e089064167b7006af5c562d7e087d2828e260b44e692eb",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cV88lVEWV2fOnBl6ukopdVJrM76O-m7RX0AJVFpxCooJ79aWXWGRrdmheHFC9w-0hoi42tp_QpFgtT8MxEQX912s_mEhP1NJtT7UEwbnxnlbIBStzeJKsCAOchUiGqnesGT0Ll4vRciUCPsHQVqMyqK3XHAw_2egBchcoVWIhEgu7elw3O8ia_4GsKebk9IuAaYiRTDeFRmK29lnVNQnkKSh-vCovGJHi4EIV8tEC1AgWucOPEbx38tBMolgYNUzWn29PGWuP-mLUL6W2wHZshhOo_AG_E1w0V7XFIDiak99-SRQb6u3lvFdZb9ZhuFnU4hy-h5BhEvDQ0pqv-xJuXZfS_WF1BhA04TZV1f_BOhXtXfvUYlIwFOlDYRVnkg_SHbDf8h1_Ac7uVOmvd4CLzb-LW5uzy3Gt57ACNaUb_BW3oB1PGYjQKFRPhlw7gtdQbxJeIjFtLwqN66Jc9cue_SOJdanAjkIDwJOnPXsFEx-EdfzvqYV4ImKdc_9ecOoMQXo-uxIXceyTgE8czaNgFOqi3A71LjCbf1yBrP7whzO-NhNj0XHUdd_l0rg28zneK5I9VU9YIOgSEDDFV16thIdVD1zdsY6y-PKhIgmUz5YcDk0qwPBMb_72hEoPu27j93qQXRojoY5iutjGq8zIJEsHvlEsSOm-i99lkJ6Z8WbjJeQ1u74UToTkR9RpxX7FO_PePSrA22vW2RFb8xXKXUPO4O_J2_EQAZF_XfLo5Dqzz40hbNvQJvlioNfr44nBvg1PUFgA11wuxOecPomRyjA4Uv_aRCbZUrQcvb_8LmRAEhbmFf25BZL9mgXqAXMnxbR1nx5lGbARn8cTY67mxi0C2pBxV6nwQ6z_-yzShgJt3QD-SNZWfof-G-P4WSDEpYjR7OQ8knw9qyErKmTDKLUewF8V_ep72dJXXpPQjCveJ9Pqmd8fNMWv9oF4q69vJxb0DuM8j60j7_EnDiKq5_0-fl1KDxv1QLXxfFLiEdJkCZiBZuislYEdjvqtlJwNOPSQw6QgCGSaKGrRKJgrNocxmLQBpobsbRAw0_aG2Zy4a5WAedCfIp5mIvi2OcCcACCO5pBDI8tT9pbT74GH2ZsvtETfRcjZthBa6xgbg9c5H92B8H8uvkf5wfmo3NNReNTWzHcD-2xbES-J8ynzdc_AwJ1GuEuncETJFwxTNxCgqIWgLu8_7ePjOdCYSd0EYlQGewgiirJvWTWng49d0srSZZ5uj_uDOyYtHUAZ4xRuXpUjvD9LjDAO60TkLqtiLa68oEn-y91ktqhq0lUmc0cBbLWXc2XEV2n1_XHadrq56KE1-b2KnEYvI-XczJeywnWLrhLjsV8aeS1ChU-6qN2KqFGHL8edQBjVjm4E6OEdG-Hb06i0UYU6NZajnZmjlUNDbZm51D5wrfyaWZ5XoFqbfHa66Sk7DcluQ6PdODA-MBGDt69kg2slKiXNtyRQzQK-8YTjuvtYmTZGxgQkR2ggtOr7OXvJbb5JZRuY--h9X2nCyXRD13BrXq7KTH6XhGCRR7hAMYFLz2YxNCcEBh9gid-20q_scZ5piO2mMyT3WBBjsCJEIvBjBUXaMp_ICt3iKP76q2wrQEC5swFmjU8US1W9qI3NXPmeaLC1l2GTjeCDThvR7aWgWAbJcIs9UkS2DJacftWBiT-kS06H5q9z_nqAyex-JQZpfWgJcpio20Jpiu121QtA4Eg6Z2eHYIuVIZArz2Ea6pMjHRU2XXOlZeFIXfQAX_Fpy26suK5Q9s83AqX_9FMrpXYO1atCGHpC3AS76BoFM3xD4tEoWA2fiCRTcWouAQfIDF1GxZMNvVeBK6alYLgEUW3-Mk7f31_Ys3sDYwzpi8ym8ADzBnx-VukMOLOZqSG1XFazWFQMFwlZVl3Wn2HTMpteNYbS8UUmcFqej1nyWi-d6MSfrSQw==",
+        "summary": []
+      },
+      {
+        "id": "ws_0138e089064167b7006af5c563b88c87d2883cdd6dbc88010e",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.concordiahanoi.org/"
+        }
+      },
+      {
+        "id": "rs_0138e089064167b7006af5c5675ac087d2acf1abd5d966b1db",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cV8_LnuZt0qFFKds45wu9XCzfIk6dUcwnAShOv6UFt6J5cjYILShztJcFi6H9jFEIqj-0xIybkioYmlFM2wS3L51mk12cVvww-7TifYac3N9du8ishSxUlPp2FOi-lsnVghXV77ppqueT51J2vYoq5rru-arrL_nZGKx1A3QJ_isLDVIhq22pG49VN_KOcvfsfwVIFUXfYUJCrVr8ZHgtfVqWNUT-biESWYGtzzJbb_OGNWlEywxMI_cP6TvzuSEFoOikPox9MFo6RMAtJj0rSiIs8Kfh1h-lXA9NOwSCsEPt4V4qAR-_fxZpavfUVQ6WREuAQT64OA8ZgofTUhYlLMMWiNIUr4csZan-2L4JX5tzKylHAQlXC7DyEsLXc1dKeE1s02OQbPFOJo0VVYL4VYW53n3yzpT9RL1V14r89Jvw-_9UJAOY50DfmnEqa3TVbV36-CYAiM1C8PBvcDcNzsMsyX2tZo6o6jrffA7c88qobbCWd7PJdi0nmzGmgZSvYqJFpi-g9WTT5-mbzpMzFzWbYjWc48wJfYBhscGtHptj_9xYzTONTsQklRdDlWX73_sdZL8Zal_RGcHptRJZhH4nuunxLD-WZNC1XzEULbCbokaClmpUsIqDMLdorIQdSuI8EUu6Vv_4yf0Y8HEHXQtzU35aB7VEhAFRsfoKTjVjd1DKjR5-b6Lr7iVeVxGGHgOSNxwkvHgkIJTQhWGxDdH9rxcSbqXCtPPOz_m9c0GOPozkDnBrtmanBBQDoqx6DrBlrppoYoSRqgIOryD3bkbBqbQd-gfAvyR0MoWXY-7WQOO8kc82PHm_Np4F2pqiMJOfpXLeJGu1ZjiiEez7w7TreWHJywPOVZTPr5xuyQmyc2R8TSMMCqDt4l7q7oY2HQo5jnrYYYq-6-nQJjNWA3VMu9i0KdpjO7bTz-P-Ra-RgivmEiBaB5t6ffnBJU-amtIfdARK4SP2v_MqZXlwZg_b9FvtBniPPIe-XgJh5QRy6NgaKR4e3u3pym3ux81UE1uYM8H4glaBjx_KnDLOqYyXyI_T2etiXG6sUC9bvHQS7YyPw2EwTcao4dDvEeizOJEstLSbNFhEpjwjY_0KkWH_gSCIHkVT_ggFA8H7Qne4Sp3fx61XY3sGDjRuO3HPZBzCKPAgmDPQTrHsyKSRu1JtjVqCbGJSlpuHRrfm9MQzH3fHCV0wujWbDIuDMUYzjBGQX3f7WDXTBPF--Fd7bHfXSinq_agOiu_Nv16V2XtwYIPfQERzo-j-TMu3vxeX89M5_rcN63iXxAC_7FTMcVamLXf83hRN18NuyCCghvEEUSjUD51yOPXpDyYnJ5pXYm63eln_1UIQ4KosSix1996V-6PVBdcve-CzYSBzB4gbkODke2qlTLOrKUvjpetfYBcWhO2_VSVIYriZWLVxeD3RwbRQTkNe0Gf09DB6mAdnDjdjTC6CBrf89xzIrUW171CeqX47cBsHgHRwMGD-WzuJTYIOAP6z229IhMo1BdTbUgBkyYkMHAzjdNWmlNQczeOgdhDYmrh6hm9gFCF9YLlntOvqGcJnmfYsAIYUYUg2clTBuYuavIfV-ku-4Y9OGdt-p_OeMtY-XSmcUbSJwyCtCXSo93oXnxwywVJq5sH1J415wd36EfQngb57hUWXitprTLSOY_b17J2sb0zvcS39c7utRUgiCXs8azgrDsHfD0oG3ti5YSiu9BQUHXBOC8-x4lxLtnsFf-a-UnjITT3I3LbNCj-afbQ2YqEXGmBel3dLCpe0lm_cFuGuu8PXaZVJeDyjTZM7JlGlVIZnbDU2LpFMio1dLFgJ5694mzIycbRfqJYYn-nskADz0O-T2alYflK2_iSKTzN4DOPnvym3qRaEjDxI0755965tvCFQg=",
+        "summary": []
+      },
+      {
+        "id": "ws_0138e089064167b7006af5c567dfac87d2b01d4b7bca3ec43f",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.concordiahanoi.org/"
+        }
+      },
+      {
+        "id": "msg_0138e089064167b7006af5c569f63887d2a8498988fc936750",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 955,
+                "start_index": 892,
+                "title": "International School In Hanoi Vietnam | UNIS Hanoi",
+                "url": "https://www.unishanoi.org/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1413,
+                "start_index": 1353,
+                "title": "American Curriculum & Premier Academics | Concordia Hanoi",
+                "url": "https://www.concordiahanoi.org/learn"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1928,
+                "start_index": 1816,
+                "title": "Academic Excellence at BIS Hanoi | Leading British & IB International School in Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2363,
+                "start_index": 2274,
+                "title": "Admissions FAQ - Hanoi International School",
+                "url": "https://www.hisvietnam.com/admissions/admisions-faq?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2770,
+                "start_index": 2725,
+                "title": "St. Paul American School Hanoi - International G1-12",
+                "url": "https://stpaulhanoi.com/"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3202,
+                "start_index": 3089,
+                "title": "International Schools in Hanoi, Vietnam",
+                "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3894,
+                "start_index": 3785,
+                "title": "Application Policies and Grade Placement | UNIS of Hanoi",
+                "url": "https://www.unishanoi.org/admissions/how-to-apply/policies-and-placement?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "I’d start with **UNIS Hanoi, Concordia, and British International School Hanoi**, then add **Hanoi International School** and **St. Paul American School** depending on your preferred curriculum and location. I’d treat this as a shortlist to visit—not a universal ranking.\n\n### My recommended shortlist\n\n| School | Who I’d recommend it for | Key details and considerations |\n|---|---|---|\n| **United Nations International School of Hanoi (UNIS)** | Families seeking an international education rather than a particular national curriculum | Offers the full **International Baccalaureate (IB) pathway**, from early years through Grade 12, at its **Ciputra** campus. It is nonprofit and reports more than 65 nationalities. This would be my first visit for a family expecting further international moves. Admission depends on space and policies including nationality balance and support capacity. ([unishanoi.org](https://www.unishanoi.org/?utm_source=openai)) |\n| **Concordia International School Hanoi** | Families wanting an **American curriculum**, particularly those anticipating a return to the US | Offers an American academic pathway with **Advanced Placement (AP)** courses, from preschool through Grade 12. Its campus is at **Van Tri**. I’d put it high on a US-curriculum shortlist, but check the actual school-bus journey from your intended home. ([concordiahanoi.org](https://www.concordiahanoi.org/learn)) |\n| **British International School Hanoi (BIS)** | Families wanting a **British-style education**, especially those considering Vinhomes Riverside | Offers education for ages **2–18**, progressing through the English curriculum and **IGCSEs**, then the **IB Diploma**—not A levels. The campus is in **Vinhomes Riverside, Long Bien**. I’d prioritise it if that curriculum and location suit your family. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence?utm_source=openai)) |\n| **Hanoi International School (HIS)** | Families wanting the full **IB pathway** with a campus in the Ba Dinh area | Serves ages **4–18**, with IB Primary Years, Middle Years and Diploma programmes. Its address is **48 Lieu Giai Street**. I’d compare it directly with UNIS, particularly if this location works better for your home or office. ([hisvietnam.com](https://www.hisvietnam.com/admissions/admisions-faq?utm_source=openai)) |\n| **St. Paul American School Hanoi** | Families seeking another **American-curriculum** option alongside Concordia | Currently advertises **Grades 1–12**, with AP courses, university counselling and English-language support. I’d include it in an American-curriculum comparison and ask to see the specific courses and support available for your child’s grade. ([stpaulhanoi.com](https://stpaulhanoi.com/)) |\n\n**If Vietnamese–English bilingual education is a priority**, also consider **British Vietnamese International School Hanoi (BVIS)**. It offers bilingual early-years and primary education, followed by English-taught IGCSEs and International A levels. It is a different proposition from BIS despite the similar name. ([nordangliaeducation.com](https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi?utm_source=openai))\n\n### What I’d check before choosing\n\n- **The real commute:** Test the journey at school-run time and request the actual bus pickup and return times, including after-school activities.\n- **The complete cost:** Ask for an itemised first-year quote covering tuition, application/enrolment charges, transport, meals, trips and any additional support.\n- **Support for your child:** Discuss English-language learning, learning differences and counselling before paying application fees. UNIS and Concordia explicitly describe limits on support capacity and individual admissions reviews. ([unishanoi.org](https://www.unishanoi.org/admissions/how-to-apply/policies-and-placement?utm_source=openai))\n- **Fit within the year group:** Meet the relevant teachers, ask about current class sizes, and request a conversation with a parent whose child recently joined.\n- **For teenagers:** Have the school map existing credits and subjects against graduation requirements before committing.\n\n**What ages are your children, what annual budget do you have per child, and which part of Hanoi are you considering?** With those details, I can narrow this to two or three schools."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 2
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 42212,
+      "input_tokens_details": {
+        "cache_write_tokens": 17,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1347,
+      "output_tokens_details": {
+        "reasoning_tokens": 428
+      },
+      "total_tokens": 43559
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

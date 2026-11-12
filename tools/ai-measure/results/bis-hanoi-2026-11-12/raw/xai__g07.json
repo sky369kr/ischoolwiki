@@ -1,0 +1,1871 @@
+{
+  "ok": true,
+  "provider": "xai",
+  "model": "grok-4.7",
+  "question": {
+    "id": "g07",
+    "type": "generic",
+    "text": "Compare international school fees in Hanoi"
+  },
+  "started": "2026-11-12T14:00:08.724Z",
+  "finished": "2026-11-12T14:01:07.303Z",
+  "request": {
+    "model": "grok-4.7",
+    "input": [
+      {
+        "role": "user",
+        "content": "Compare international school fees in Hanoi"
+      }
+    ],
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "response": {
+    "created_at": 1794492008,
+    "completed_at": 1794492067,
+    "id": "b858b343-784a-9651-b36e-f3b6fd5e4cb2",
+    "max_output_tokens": null,
+    "model": "grok-4.7",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_b858b343-784a-9651-b36e-f3b6fd5e4cb2",
+        "summary": [
+          {
+            "text": "I will compare international school fees in Hanoi.",
+            "type": "summary_text"
+          }
+        ],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "I8MJueMZ7PR20Ohig1GypiVCfmHgSB5gOS9SosQNan0FqwNKLKqC1iLVOT/31iTNAseMD2cdic7YQIGstksImyd41usk/Q8HVGLMvVji7eavtCLbe1/ZDpTvUnvlO7puqPCh+/swErVQgmMYgZL99IRDq95haD3p+9Kn8NRg6oOmr4NiBLaCQ7Yl6Bo8Dn9lKOVvD7DHcRocc24scJjPYW4rYiG+C/QKfLIi/NVjb8dYOnWpfs0ljjF7IvFBzHqpT69CaKMVxSkD9TKaWogZb6oRjkNYkcaYlNnci3uZhTuJ"
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-0",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "international school fees Hanoi 2024 2025 comparison",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+            },
+            {
+              "type": "url",
+              "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+            },
+            {
+              "type": "url",
+              "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+            },
+            {
+              "type": "url",
+              "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+            },
+            {
+              "type": "url",
+              "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://lfay.com.vn/tarifs-scolaires/"
+            },
+            {
+              "type": "url",
+              "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://nijin.jp/hanoi-international-school-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/who-we-are"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+            },
+            {
+              "type": "url",
+              "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+            },
+            {
+              "type": "url",
+              "url": "https://daibieunhandan.vn/print/10334155.html"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-1",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "best international schools Hanoi tuition fees comparison",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+            },
+            {
+              "type": "url",
+              "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+            },
+            {
+              "type": "url",
+              "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+            },
+            {
+              "type": "url",
+              "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+            },
+            {
+              "type": "url",
+              "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://lfay.com.vn/tarifs-scolaires/"
+            },
+            {
+              "type": "url",
+              "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://nijin.jp/hanoi-international-school-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/who-we-are"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+            },
+            {
+              "type": "url",
+              "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+            },
+            {
+              "type": "url",
+              "url": "https://daibieunhandan.vn/print/10334155.html"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-0",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-0_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"
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-1",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-1_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"
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-2",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "Hanoi international schools fee schedule UNIS BIS Concordia",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+            },
+            {
+              "type": "url",
+              "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+            },
+            {
+              "type": "url",
+              "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+            },
+            {
+              "type": "url",
+              "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+            },
+            {
+              "type": "url",
+              "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://lfay.com.vn/tarifs-scolaires/"
+            },
+            {
+              "type": "url",
+              "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://nijin.jp/hanoi-international-school-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/who-we-are"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+            },
+            {
+              "type": "url",
+              "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+            },
+            {
+              "type": "url",
+              "url": "https://daibieunhandan.vn/print/10334155.html"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-2",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-2_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"
+      },
+      {
+        "id": "rs_b858b343-784a-9651-b36e-f3b6fd5e4cb2",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "A2Fj7WbRSkFY2Df+203g/MBijs8WYLG1Id+f0UMoxTc4TVN4NMzb2ONqKkH6i0GaH5orWCA+Gj4uZnxwJmnK7rreqC3xjMEoeaX9n2QK7C1O2YsdiIi3fE3EZfgMZRPPi2Z3puKDKwJPl4Dx84PGv1rD15bTmDyyx3cu7SbkOKsT7Po7oLNe4uXUb6b23SyZI/L2ljewnH5fSLHaBqrjK+IRNZJCny0QgUMgeiO9MiS66JksXQhYFsFO4ughTYyMd+SG8H+sH8Eg43wIAyTo6teXFfzq9fr4Db03K0WPSZEkvLj2e2WmRHrzkUe44bSxYB2ZeyAOSlA/LCyYxg"
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-3",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+        }
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-3",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-3_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"
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-4",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "UNIS Hanoi tuition fees 2026-2027",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+            },
+            {
+              "type": "url",
+              "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+            },
+            {
+              "type": "url",
+              "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+            },
+            {
+              "type": "url",
+              "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+            },
+            {
+              "type": "url",
+              "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://lfay.com.vn/tarifs-scolaires/"
+            },
+            {
+              "type": "url",
+              "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://nijin.jp/hanoi-international-school-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/who-we-are"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+            },
+            {
+              "type": "url",
+              "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+            },
+            {
+              "type": "url",
+              "url": "https://daibieunhandan.vn/print/10334155.html"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-5",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-4",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-4_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"
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-5",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-5_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"
+      },
+      {
+        "id": "rs_b858b343-784a-9651-b36e-f3b6fd5e4cb2",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "D5LgOl+O6hn2e6pm/Ktgs0bl7vS/N6zbWaUlbXicF3Rcb+sTeEfGPlka2Kq00V1QP8Sp6h4Zt2NDRWD4Vx6qvohtgdzXq3kQdsSNyZraPX/dxhGp3ANu9pFVvA1VJucyOx1F9xirwLwoA8HoDy5103DjZ6gydwNZ9b51zcM1GbbIndIz+rIV+bmzvb/mSeN9Q5V2Iy7XthTibOdJO9jt++dhn/gjBFvIQP0Y7jxpxGigQp+kwMND1LGn9QLgzJfzPsdFP++q6ZyhNdUohTaJyI+MjQSoUXjdtSJjBo0/UPoWZ00ebdjCOpm5fpamnysT4kBnSL9ZwGcpUtLAscaBx/PJ0p+RuHLDuTgQRlpm2uP8BFYXgUnSwGthakcgskstx8Ft1/Pxfls0Yj9lPbcOLaQ1pTOPouh3HhbPbHwaES1t+9fNzNEX+phOescy+Vw/p24qW2SXWnVPJTBMz6Zivo+hXkrQpcH35+ehtNEMyrdDgoMwlhjsO8HuzwzsF0qlWbxGUDAosFfjGp0aDyozLZrL0LyEt3Ryv646QsAb0YzdFGcpGjhGGerk5NQOTRVRmN7zo7cBH0dEGuMEtFKXy8nEOzd3HxoeuMKx84jBKUxGqFSdMB8pfpDk0qZy3fs9uhb0X171rGg3+gQFu10O4AbDS9Abk1mGaoXFRpJp5PJe+zXLnWRQw+DDAw/0Hbw1FZiUXZj25GLe76ujK7ufneZLsa9iHF0LB/S+zNj3B+UowDlBrjC7QLR9ABTKz5k9iHQ4DS15Dk2MXj9EDFX+mQ93VBXjen2loRt8NFV2zs9/dF2gmh740jcvOwBCe+R6ex3FUaVOZ88UvqBDRE4qBYkvuQKIyE8M+NGSgSF7ckeFRdsfxr/7d6IKLYkOdyRNszFB+bpog7B49odMKLqXAja/trzdJukfCxtCpwOm7hHEbLP585H1BTqn8wTZlMNFZVqJR0nhJo86K5TsDal5RjXEGQmofKdBFXYuciLQzYi8gmyNOkmYaqtt5oTuo2xCH9mCPhorFVVrZ1HfewhZUBJBoC2l7AuM2dOXlqRkbd2r8NO/9SNt9/oDRq/M520u0Nqwxwo8usa6hOM17z85xvm+xLhPQBBVpj3w8AYrE38TfAdmfW683hdFYyGVypUcUL+kpzrpVAV8dPeANDEZqE198hmMZVGMk2p0xEn6qdQsIQ1IDyOWjtXYjra5ns37ZaYNStJ1css3b3mONgJEGEq+/sAtkzAeKQVf5Zd76Jf+XVDj3DQ5K7LKlRe46y9fx7Hb9npNG8o4C6vXdmKvdqo5ph2EQzBMBCwRs6GH+pM565ioa/V3FDJsQNfdEmzp516dFlySVelPkqiqsg9EAt2IgGJQXitt0n8XkjPmFikPjSakIPJyXN/0W1y90Aw29gGwihhJQZPCUj3p0HpWbqtYZM1I4WORClV5e1lEvXeP75/gvLrOnY2Y24Jwc48Bt0oLx4ynSt2x/QU9KA3KEQwWwEKo6uCLgdAsNc8nb3mUjDdevw3Miy02lBGWl86t"
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-6",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "Lycée français Alexandre Yersin Hanoi fees 2025 2026",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+            },
+            {
+              "type": "url",
+              "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+            },
+            {
+              "type": "url",
+              "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+            },
+            {
+              "type": "url",
+              "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+            },
+            {
+              "type": "url",
+              "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://lfay.com.vn/tarifs-scolaires/"
+            },
+            {
+              "type": "url",
+              "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://nijin.jp/hanoi-international-school-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/who-we-are"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+            },
+            {
+              "type": "url",
+              "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+            },
+            {
+              "type": "url",
+              "url": "https://daibieunhandan.vn/print/10334155.html"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-6",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-6_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"
+      },
+      {
+        "id": "ws_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-7",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "Concordia Hanoi curriculum location vs UNIS BIS",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+            },
+            {
+              "type": "url",
+              "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+            },
+            {
+              "type": "url",
+              "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+            },
+            {
+              "type": "url",
+              "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+            },
+            {
+              "type": "url",
+              "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://lfay.com.vn/tarifs-scolaires/"
+            },
+            {
+              "type": "url",
+              "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://nijin.jp/hanoi-international-school-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/who-we-are"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+            },
+            {
+              "type": "url",
+              "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+            },
+            {
+              "type": "url",
+              "url": "https://daibieunhandan.vn/print/10334155.html"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-7",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_b858b343-784a-9651-b36e-f3b6fd5e4cb2_call-92f88916-6f87-4c44-8eaa-b09f81e6bf7c-7_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"
+      },
+      {
+        "id": "rs_b858b343-784a-9651-b36e-f3b6fd5e4cb2",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "TjQ04tHGnPz3prrgTUWmOvMOsEAS1jZj/5b6MIM8eSVQwtCmR3mTDHOUoA8QgDlu645XGRmUJG/g0UEIR825xOnYi4bMpoQl4ZbO2+eCHvw3b50Uu88DUvL1FPLJ2V+z9K92FYt/jzVnCpcjlc2TO7ueo2T35piwjFUC4Q/Tpf7iMA90WUe4t3qA1vwpw+VcBxwfy9VAaGs0ao1vmO2DJsvUb/vKF/5c3UEsq44zmiiCqaSF0o+FRSuWrhUcjv9Qm1rGs2uiAtP2yJG8Dz00QJkjKMF8i6+eVw+cK6bdCnKT/KPEyBO7+0pVfQ5mjXbQRv+yfnRaqSUEg3JVEl721BQ/6U7LFaxHzAJQXmv+JJgzYe/gC1aUcQPKqdlMl8UuhuN0a8qG197/YzrqTtb3OJh5/LaLlYR7anso0gDS2lRoaA41DCSbrV6sOUqpZYOHknmfmRPWqH6jsrJYvM4s6ssIYZ6MGsdTzhBxOd69OEZBgUVG69Zfgw+dJtemJMksS6NCYS/ie3S9N+miCdU7TwP5rEjN99M9GtBU+4T8/mkBzLbXDLhjcsk2YWko9jnvCnr6GmAWsh2Vd+NNCpds/meSIXDPUjAy1xlwXRKToz+/ppHf31RmJPkbWXrZMTOHfNdhSvZLwwGxcx4kYA+KZfjMIjCh1IvT2XhHGFweaUeT0EHqHO0400HatpVgMcLJ9HGMS2c4L0jMEzuhQ4voCzRD58yBHGwHzteS5jhCFt7zTJcZmKMqGWM6yab2rup3s+F4U5hAj7kIG1fDzM+Ey1oRVU2OQjAzD1Vsr9po8M6Qqpzmai+a1GRrCufBTxdqy/MAYCNGsXNlt37X18bX3LSgT6qGzBWLML0z9RdqPkjWspPcnDMYFkKSZOjeu27ahUW3WR58/HWMFCAH5yC7W+6/AwtpaA3SSygXuMl88YTFS2Zx4VQBAqiqFdE832qlOxB8SJHj/S3i6E4Ly5kjSh5OXwQjPv57yCAp2rCrEaw1d00VVFhxdQfgRLVmjEt3dXwIZmmam+xzXk388kzL953dG6RWfVJIEQ/gLZ1yRKecrMG0yvC/YfMD2D9hBkQ0JDlBepvN+21aQtbxU/npB0DtOVGbOko65WzZjm1a4IxHyfrxsDl0xvYjunC1z9CE6ld4OhbWlQFcH/8lGH8eVunbUJM0XwVp8DyTsaQsSTiNtR6EiK1T8Dy8oaFy/Tb6IX4Dpv22bIbb5A3kOQD6ffYtRMhLnyN7o9lmxqL6ABHXlUXF9+QcpEIKFEnnKcDJQamCyN5M53sYXsZ47b0OYz4E7k2ySOgo1PBWXztNNP60eYJJl4ynnCZIjOMACbATVNywoO4HkvPVew90nZbkRNem3lTZq1mv6SghtdN7Et4dDr3mF6WQw+H9i7PxuUWCVCsNwXPGGKAM0bJun3hvY47eq35dtzgLm+EiihYBphDM+2sujr/SBWqOxeQonRReQlxQy1GAc/TxP7CwWRTtHCx/L5EASZDfipQE1W5Qva3CSLh9kmztI5AtQaijO3AsuWTPczpWHgT1EL1p4fCEgrcpEfNbEG9AU4qQVAa3nrURy/Le8Ig+0+E1vUuo/CCIuGVA9YMEmj5Z"
+      },
+      {
+        "content": [
+          {
+            "type": "output_text",
+            "text": "International school fees in Hanoi for **2026–2027** run from roughly **VND 100–350 million** a year at bilingual and specialist schools to **over VND 1 billion** (about **USD 38,000–40,000**) at the top English-medium campuses for upper secondary. Fees usually rise with grade level and have been increasing about **4–8% a year**.\n\nFigures below are annual tuition in **million VND**, rounded. USD-denominated fees were converted by local media around mid-May 2026. Always confirm the latest schedule on the school’s site—payment plans, what is included, and exchange rates change the real cost.\n\n### Premium English-medium schools (2026–2027)\n\n| School | Curriculum | Early years / KG | Primary | Secondary (upper end) | Location |\n|---|---|---:|---:|---:|---|\n| **UNIS Hanoi** | Full IB (PYP, MYP, DP) | 460–708 | ~878 | **927–1,050** | Ciputra, Tây Hồ |\n| **Concordia** | American + AP | 558–678 | ~862 | **912–1,039** | Văn Trì, Đông Anh |\n| **Dwight School Hanoi** | IB | 360–676 | ~825 | **881–1,002** | Hoàng Mai area |\n| **Brighton College Vietnam** | British + IB Diploma | 676–736 | 736–756 | **871–998** | — |\n| **BIS Hanoi** (Nord Anglia) | English National Curriculum, IGCSE, IB Diploma | ~254–511* | 658–735 | **847–970** | Vinhomes Riverside, Long Biên |\n| **St. Paul American School** | American + AP | — | ~666 | **778–855** | Hoài Đức |\n| **HIS** (Hanoi International School) | Full IB | ~440 | 613–624 | **675–797** | Ba Đình |\n\n\\*BIS Foundation (ages ~3–5) on the school’s own 2026–27 schedule: half-day F1 about **VND 254 million**, full-day F1 **VND 343 million**, F3 **VND 511 million**. Primary Year 1 is **VND 658 million**; Years 12–13 are **VND 970 million**.\n\n**Official USD tuition at UNIS (2026–27), annual payment:** Early Years 3–4 **USD 17,460**; Kindergarten **USD 26,900**; Grades 1–5 **USD 33,330**; Grades 6–8 **USD 35,210**; Grades 9–10 **USD 37,530**; Grades 11–12 **USD 39,870**. Paying by semester costs about **4% more** than the annual rate.\n\nConcordia’s published 2026–27 VND fees: Preschool **558 million**, Reception **678 million**, Grades 1–5 **862 million**, Grades 6–8 **912 million**, Grades 9–10 **1,002 million**, Grades 11–12 **1,039 million**.\n\n### Mid-range and bilingual options (2026–2027)\n\n| School | Notes | Rough annual range (million VND) |\n|---|---|---|\n| **BVIS Hanoi** | British bilingual (IGCSE / A-Level path) | KG ~259–351; primary ~489–514; secondary ~615–709 |\n| **ISPH** (ParkCity) | British framework | KG ~211; primary ~328–590; secondary ~590–692 |\n| **Singapore International School (SIS)** | Bilingual track cheaper; international track higher | Bilingual from ~150; international secondary up to ~626 |\n| **Horizon** | Bilingual and international tracks | Bilingual lower; international secondary ~562–656 |\n| **True North** | Vietnamese-curriculum track vs international track | Vietnamese track ~200–290; international ~500–650 |\n| **Lycée Français Alexandre Yersin (LFAY)** | French national curriculum (AEFE); fees differ by nationality | Roughly **140–260** depending on grade and nationality (French nationals lowest) |\n| **Japanese International School (JIS)** | Japanese / Cambridge options | Reported among the lowest in some published tables (primary around **100** on one track) |\n\nBilingual schools (BVIS, Horizon, SIS bilingual, Dewey and similar) are typically **30–50% below** full international fees at the same age, but the student body is mostly Vietnamese and part of the day may follow the national programme.\n\n### What the headline fee does not include\n\n- **One-off fees:** application/registration often **VND 4–16 million**; enrolment or capital fees commonly **VND 20–75 million**, and higher at some schools (BVIS admissions fees have been reported above **VND 70 million**). Refundable tuition deposits are often **VND 20–50 million**.\n- **Ongoing extras:** bus often **VND 25–40 million**/year; meals, uniforms, technology, trips, and exam fees are extra at most schools.\n- **Important exception:** **BIS states that tuition includes uniforms, daily lunches, learning materials, day trips, mandatory secondary exams, and teacher-run after-school activities.** Comparing BIS’s headline fee with UNIS or Concordia without adjusting for those inclusions understates BIS’s all-in value.\n- **Discounts:** sibling discounts (often 10% from the third child), early-payment discounts (UNIS has offered an extra 1% for full payment by early March), and company billing are common. Termly or semester plans usually cost more.\n\n### How to read the comparison\n\n- **Highest cost, most international mix:** UNIS (one of only two UN-affiliated schools worldwide; full IB; large, diverse campus in Ciputra). Concordia, Dwight, and Brighton sit in the same price band for older students.\n- **British pathway at a similar premium:** BIS, with Nord Anglia partnerships (Juilliard, MIT) and more items bundled into tuition. Campus is inside Vinhomes Riverside (Long Biên).\n- **Strong IB or American options a step below the very top:** HIS (central Ba Đình, IB) and St. Paul (American/AP) are still expensive but below UNIS/Concordia/BIS at the top grades.\n- **Best value if bilingual is acceptable:** BVIS, SIS, Horizon, ISPH, and French LFAY. LFAY is notably cheaper than English-medium peers if a French baccalauréat route fits the family.\n- **First-year cash outlay** at a top school for a new secondary student can exceed tuition by **VND 50–150+ million** once enrolment, deposit, bus, and kit are added.\n\nFees and inclusions change every year. Treat the table as a planning range and check each school’s current fee PDF before applying—places at UNIS, BIS, and Concordia are often competitive.",
+            "logprobs": [],
+            "annotations": [
+              {
+                "type": "url_citation",
+                "url": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vnexpress.net/hoc-phi-tieu-hoc-o-truong-quoc-te-cao-nhat-760-trieu-dong-4721904.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://suckhoe24h.suckhoecongdongonline.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.isbi.com/school/3876/lycee-francais-alexandre-yersin-de-hanoi.php"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://znews.vn/10-truong-o-ha-noi-co-hoc-phi-mam-non-hang-tram-trieu-dong-post1491247.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.international-schools-database.com/in/hanoi/united-nations-international-school-hanoi/fees"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://thedeweyschools.edu.vn/hoc-phi-truong-quoc-te-va-chi-phi-cho-con-hoc-truong-quoc-te/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://times.edu.vn/truong-quoc-te/hoc-phi-his-hanoi-international-school/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://telegra.ph/Hanoi-international-school-tuition-reaches-US38000-a-year-05-17"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/schools/vietnam/concordia-international-school-hanoi/fees"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vietnamspot.ru/en/blog/vietnam-international-schools",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vietnamspot.ru/en/blog/vietnam-international-schools"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi/academics"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://1900.com.vn/review-truong-lycee-francais-alexandre-yersin-nen-giao-duc-phap-kien-truc-dep-nhat-ha-noi-2025-4353"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/international-schools/vietnam/hanoi/american-curriculum"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://resources.finalsite.net/images/v1770255763/hanoi/n5kg1l9n3iwyum3jwsx8/1TuitionandFees2026-2027.pdf"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/international-schools/vietnam/hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vietgiaitri.com/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-20261008i7788280/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/schools/vietnam/lycee-francais-alexandre-yersin-de-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/costs-and-fees-understanding-funding/hanoi-international-school-fees-2026-guide"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://znews.vn/hoc-phi-truong-quoc-te-o-ha-noi-vuot-900-trieu-dongnam-post1464636.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://kienthuc.net.vn/to-mo-hoc-phi-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-post977123.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://giaoduc.net.vn/hoc-phi-truong-co-yeu-to-quoc-te-o-ha-noi-400-900-trieunam-khong-hiem-post249348.gd"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.international-schools-database.com/in/hanoi/lyc-e-francais-alexandre-yersin-de-hanoi/fees"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.international-schools-database.com/in/hanoi?filter=on&curriculum%5B%5D=French"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://e.vnexpress.net/photo/education/inside-1-of-worlds-only-2-un-international-schools-in-hanoi-where-tuition-costs-up-to-38000-5071119.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://cafef.vn/sau-lum-xum-aisvn-tam-cho-1400-hoc-sinh-nghi-hoc-dong-loat-cac-truong-quoc-te-o-hn-va-tphcm-cong-bo-hoc-phi-moi-muc-tang-bat-ngo-1-nam-bang-4-nam-di-hoc-rmit-188240403110913634.chn"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://lfay.com.vn/tarifs-scolaires/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://lfay.com.vn/tarifs-scolaires/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://poste-vn.com/lifetips/international-school-summary-of-hanoi-201"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://educationdestinationasia.com/school/lycee-francais-alexandre-yersin"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://resources.finalsite.net/images/v1775694264/concordiahanoiorg/wmhm9tip0krsqujrowsv/2025-2026TuitionandFees.pdf"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://nijin.jp/hanoi-international-school-guide/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://nijin.jp/hanoi-international-school-guide/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.concordiahanoi.org/explore/who-we-are",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.concordiahanoi.org/explore/who-we-are"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.concordiahanoi.org/admissions/admissions-faqs",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://cafef.vn/hoc-phi-cua-truong-quoc-te-duy-nhat-tai-viet-nam-lien-ket-voi-lien-hop-quoc-188261007210735747.chn"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vietnamnet.vn/hoc-phi-cac-truong-quoc-te-tai-ha-noi-cao-nhat-hon-900-trieu-dong-2258322.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://edu2review.com/reviews/unis-hanoi-mot-trong-nhung-truong-quoc-te-co-hoc-phi-cao-nhat-ca-nuoc-13253.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://blog.vietnamteachingjobs.com/vietnam-school-fees-breakdown/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://daibieunhandan.vn/print/10334155.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://daibieunhandan.vn/print/10334155.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vnexpress.net/10-truong-co-hoc-phi-mau-giao-tren-100-trieu-dong-4732650.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.hfh.com.vn/en/press-media/signing-ceremony-of-the-strategic-partnership-between-hanoi-french-hospital-and-the-lycee-francais-alexandre-yersin-of-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+              }
+            ]
+          }
+        ],
+        "id": "msg_b858b343-784a-9651-b36e-f3b6fd5e4cb2",
+        "role": "assistant",
+        "type": "message",
+        "status": "completed"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "previous_response_id": null,
+    "reasoning": {
+      "effort": null,
+      "summary": null
+    },
+    "temperature": 0.7,
+    "text": {
+      "format": {
+        "type": "text"
+      }
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "top_p": 0.95,
+    "usage": {
+      "input_tokens": 116499,
+      "input_tokens_details": {
+        "cached_tokens": 68864
+      },
+      "output_tokens": 3074,
+      "output_tokens_details": {
+        "reasoning_tokens": 1348
+      },
+      "total_tokens": 119573,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 8,
+      "cost_in_usd_ticks": 1881460000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 8,
+        "x_search_calls": 0,
+        "x_posts_fetched": 0,
+        "x_users_fetched": 0,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 49634,
+        "output_tokens": 2084
+      }
+    },
+    "user": null,
+    "incomplete_details": null,
+    "status": "completed",
+    "store": true,
+    "metadata": {
+      "system_fingerprint": "fp_67527dda33"
+    },
+    "background": false,
+    "service_tier": "default",
+    "truncation": "disabled",
+    "top_logprobs": 0,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "prompt_cache_key": null,
+    "max_tool_calls": null,
+    "safety_identifier": null,
+    "error": null,
+    "instructions": null
+  }
+}

@@ -1,0 +1,2626 @@
+{
+  "run": "bis-hanoi-2026-11-12",
+  "generated": "2026-11-12T14:10:20.402Z",
+  "answers_ok": 55,
+  "answers_total": 75,
+  "coverage": {
+    "anthropic": {
+      "model": "claude-opus-5-5",
+      "answered": 15,
+      "failed": [],
+      "basis": {
+        "cited": 0,
+        "retrieved": 15,
+        "none": 0
+      },
+      "mean_sources_per_answer": 43.5
+    },
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "answered": 0,
+      "failed": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05",
+        "g01",
+        "g02",
+        "g03",
+        "g04",
+        "g05",
+        "g06",
+        "g07",
+        "g08",
+        "g09",
+        "g10"
+      ],
+      "basis": {
+        "cited": 0,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 0
+    },
+    "openai": {
+      "model": "gpt-6-astra",
+      "answered": 10,
+      "failed": [
+        "b01",
+        "b02",
+        "b03",
+        "b04",
+        "b05"
+      ],
+      "basis": {
+        "cited": 10,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 7
+    },
+    "perplexity": {
+      "model": "perplexity/sonar",
+      "answered": 15,
+      "failed": [],
+      "basis": {
+        "cited": 0,
+        "retrieved": 15,
+        "none": 0
+      },
+      "mean_sources_per_answer": 15
+    },
+    "xai": {
+      "model": "grok-4.7",
+      "answered": 15,
+      "failed": [],
+      "basis": {
+        "cited": 15,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 64.5
+    }
+  },
+  "ranking": [
+    {
+      "domain": "nordangliaeducation.com",
+      "type": "학교 공식(BIS·운영사)",
+      "answers_citing": 44,
+      "total_citations": 360,
+      "generic_answers": 29,
+      "branded_answers": 15,
+      "by_provider": {
+        "anthropic": 11,
+        "openai": 9,
+        "perplexity": 12,
+        "xai": 12
+      },
+      "answers_retrieving": 45
+    },
+    {
+      "domain": "doris.school",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 29,
+      "total_citations": 105,
+      "generic_answers": 24,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 13,
+        "perplexity": 4,
+        "xai": 12
+      },
+      "answers_retrieving": 33
+    },
+    {
+      "domain": "international-schools-database.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 29,
+      "total_citations": 95,
+      "generic_answers": 21,
+      "branded_answers": 8,
+      "by_provider": {
+        "anthropic": 9,
+        "perplexity": 8,
+        "xai": 12
+      },
+      "answers_retrieving": 32
+    },
+    {
+      "domain": "unishanoi.org",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 27,
+      "total_citations": 80,
+      "generic_answers": 22,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 7,
+        "openai": 7,
+        "perplexity": 8,
+        "xai": 5
+      },
+      "answers_retrieving": 29
+    },
+    {
+      "domain": "vnexpress.net",
+      "type": "언론",
+      "answers_citing": 27,
+      "total_citations": 75,
+      "generic_answers": 17,
+      "branded_answers": 10,
+      "by_provider": {
+        "anthropic": 9,
+        "perplexity": 3,
+        "xai": 15
+      },
+      "answers_retrieving": 28
+    },
+    {
+      "domain": "ischooladvisor.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 24,
+      "total_citations": 69,
+      "generic_answers": 17,
+      "branded_answers": 7,
+      "by_provider": {
+        "anthropic": 4,
+        "perplexity": 6,
+        "xai": 14
+      },
+      "answers_retrieving": 29
+    },
+    {
+      "domain": "tutopiya.com",
+      "type": "블로그·포럼",
+      "answers_citing": 23,
+      "total_citations": 55,
+      "generic_answers": 17,
+      "branded_answers": 6,
+      "by_provider": {
+        "anthropic": 11,
+        "xai": 12
+      },
+      "answers_retrieving": 25
+    },
+    {
+      "domain": "whichschooladvisor.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 22,
+      "total_citations": 42,
+      "generic_answers": 14,
+      "branded_answers": 8,
+      "by_provider": {
+        "anthropic": 10,
+        "perplexity": 3,
+        "xai": 9
+      },
+      "answers_retrieving": 22
+    },
+    {
+      "domain": "wikipedia.org",
+      "type": "백과사전(위키)",
+      "answers_citing": 20,
+      "total_citations": 96,
+      "generic_answers": 15,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 14,
+        "perplexity": 1,
+        "xai": 5
+      },
+      "answers_retrieving": 30
+    },
+    {
+      "domain": "westlink.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 18,
+      "total_citations": 36,
+      "generic_answers": 17,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 6,
+        "openai": 1,
+        "xai": 11
+      },
+      "answers_retrieving": 24
+    },
+    {
+      "domain": "world-schools.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 17,
+      "total_citations": 28,
+      "generic_answers": 9,
+      "branded_answers": 8,
+      "by_provider": {
+        "anthropic": 8,
+        "perplexity": 2,
+        "xai": 7
+      },
+      "answers_retrieving": 17
+    },
+    {
+      "domain": "edarabia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 15,
+      "total_citations": 26,
+      "generic_answers": 9,
+      "branded_answers": 6,
+      "by_provider": {
+        "anthropic": 6,
+        "perplexity": 1,
+        "xai": 8
+      },
+      "answers_retrieving": 15
+    },
+    {
+      "domain": "vietnam.vn",
+      "type": "언론",
+      "answers_citing": 15,
+      "total_citations": 24,
+      "generic_answers": 8,
+      "branded_answers": 7,
+      "by_provider": {
+        "anthropic": 5,
+        "perplexity": 1,
+        "xai": 9
+      },
+      "answers_retrieving": 15
+    },
+    {
+      "domain": "finalsite.net",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 13,
+      "total_citations": 25,
+      "generic_answers": 11,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 3,
+        "openai": 1,
+        "perplexity": 1,
+        "xai": 8
+      },
+      "answers_retrieving": 19
+    },
+    {
+      "domain": "educationdestinationasia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 13,
+      "total_citations": 17,
+      "generic_answers": 12,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 7,
+        "xai": 6
+      },
+      "answers_retrieving": 13
+    },
+    {
+      "domain": "goodschoolsguide.co.uk",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 13,
+      "total_citations": 17,
+      "generic_answers": 9,
+      "branded_answers": 4,
+      "by_provider": {
+        "anthropic": 6,
+        "xai": 7
+      },
+      "answers_retrieving": 15
+    },
+    {
+      "domain": "isph.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 11,
+      "total_citations": 33,
+      "generic_answers": 11,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "openai": 5,
+        "perplexity": 1,
+        "xai": 3
+      },
+      "answers_retrieving": 11
+    },
+    {
+      "domain": "hisvietnam.com",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 11,
+      "total_citations": 14,
+      "generic_answers": 11,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "openai": 4,
+        "perplexity": 1,
+        "xai": 4
+      },
+      "answers_retrieving": 13
+    },
+    {
+      "domain": "concordiahanoi.org",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 10,
+      "total_citations": 30,
+      "generic_answers": 10,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "openai": 3,
+        "xai": 5
+      },
+      "answers_retrieving": 12
+    },
+    {
+      "domain": "internationalschools.net",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 10,
+      "total_citations": 14,
+      "generic_answers": 8,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 3,
+        "perplexity": 7
+      },
+      "answers_retrieving": 12
+    },
+    {
+      "domain": "expatarrivals.com",
+      "type": "블로그·포럼",
+      "answers_citing": 10,
+      "total_citations": 10,
+      "generic_answers": 7,
+      "branded_answers": 3,
+      "by_provider": {
+        "anthropic": 8,
+        "xai": 2
+      },
+      "answers_retrieving": 10
+    },
+    {
+      "domain": "international-schools-guide.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 8,
+      "total_citations": 12,
+      "generic_answers": 6,
+      "branded_answers": 2,
+      "by_provider": {
+        "perplexity": 8
+      },
+      "answers_retrieving": 12
+    },
+    {
+      "domain": "theinternationalschools.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 8,
+      "total_citations": 11,
+      "generic_answers": 5,
+      "branded_answers": 3,
+      "by_provider": {
+        "anthropic": 3,
+        "perplexity": 1,
+        "xai": 4
+      },
+      "answers_retrieving": 9
+    },
+    {
+      "domain": "thongtindiadiem.com",
+      "type": "블로그·포럼",
+      "answers_citing": 8,
+      "total_citations": 8,
+      "generic_answers": 7,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 8
+      },
+      "answers_retrieving": 8
+    },
+    {
+      "domain": "ibo.org",
+      "type": "교육·인증 기관",
+      "answers_citing": 7,
+      "total_citations": 71,
+      "generic_answers": 7,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "openai": 2,
+        "perplexity": 1,
+        "xai": 3
+      },
+      "answers_retrieving": 11
+    },
+    {
+      "domain": "thedeweyschools.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 7,
+      "total_citations": 17,
+      "generic_answers": 6,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 7
+      },
+      "answers_retrieving": 9
+    },
+    {
+      "domain": "dwighthanoi.org",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 7,
+      "total_citations": 16,
+      "generic_answers": 7,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "openai": 1,
+        "xai": 4
+      },
+      "answers_retrieving": 9
+    },
+    {
+      "domain": "brightoncollege.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 7,
+      "total_citations": 15,
+      "generic_answers": 7,
+      "branded_answers": 0,
+      "by_provider": {
+        "openai": 2,
+        "xai": 5
+      },
+      "answers_retrieving": 8
+    },
+    {
+      "domain": "times.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 7,
+      "total_citations": 10,
+      "generic_answers": 5,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 7
+      },
+      "answers_retrieving": 7
+    },
+    {
+      "domain": "vietnamnews.vn",
+      "type": "언론",
+      "answers_citing": 7,
+      "total_citations": 9,
+      "generic_answers": 3,
+      "branded_answers": 4,
+      "by_provider": {
+        "anthropic": 2,
+        "perplexity": 1,
+        "xai": 4
+      },
+      "answers_retrieving": 8
+    },
+    {
+      "domain": "expatexchange.com",
+      "type": "블로그·포럼",
+      "answers_citing": 7,
+      "total_citations": 8,
+      "generic_answers": 6,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 5,
+        "xai": 2
+      },
+      "answers_retrieving": 7
+    },
+    {
+      "domain": "theuhak.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 7,
+      "total_citations": 8,
+      "generic_answers": 4,
+      "branded_answers": 3,
+      "by_provider": {
+        "xai": 7
+      },
+      "answers_retrieving": 7
+    },
+    {
+      "domain": "schoolmanagementplus.com",
+      "type": "블로그·포럼",
+      "answers_citing": 7,
+      "total_citations": 7,
+      "generic_answers": 7,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 6
+      },
+      "answers_retrieving": 7
+    },
+    {
+      "domain": "facebook.com",
+      "type": "블로그·포럼",
+      "answers_citing": 6,
+      "total_citations": 12,
+      "generic_answers": 2,
+      "branded_answers": 4,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 5
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "teacherhorizons.com",
+      "type": "기관·기타",
+      "answers_citing": 6,
+      "total_citations": 12,
+      "generic_answers": 4,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 4,
+        "xai": 2
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "vietnamteachingjobs.com",
+      "type": "기관·기타",
+      "answers_citing": 6,
+      "total_citations": 12,
+      "generic_answers": 5,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 4,
+        "xai": 2
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "globalschoolguide.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 6,
+      "total_citations": 11,
+      "generic_answers": 6,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 4,
+        "xai": 2
+      },
+      "answers_retrieving": 13
+    },
+    {
+      "domain": "stpaulhanoi.com",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 6,
+      "total_citations": 10,
+      "generic_answers": 6,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "openai": 3,
+        "xai": 1
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "instagram.com",
+      "type": "블로그·포럼",
+      "answers_citing": 6,
+      "total_citations": 9,
+      "generic_answers": 2,
+      "branded_answers": 4,
+      "by_provider": {
+        "xai": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "ipgce.com",
+      "type": "블로그·포럼",
+      "answers_citing": 6,
+      "total_citations": 6,
+      "generic_answers": 6,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3,
+        "xai": 3
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "namu.wiki",
+      "type": "백과사전(위키)",
+      "answers_citing": 6,
+      "total_citations": 6,
+      "generic_answers": 3,
+      "branded_answers": 3,
+      "by_provider": {
+        "anthropic": 4,
+        "xai": 2
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "vietnamdoneright.com",
+      "type": "블로그·포럼",
+      "answers_citing": 6,
+      "total_citations": 6,
+      "generic_answers": 6,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "youtube.com",
+      "type": "블로그·포럼",
+      "answers_citing": 5,
+      "total_citations": 8,
+      "generic_answers": 4,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 4
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "linkedin.com",
+      "type": "블로그·포럼",
+      "answers_citing": 5,
+      "total_citations": 7,
+      "generic_answers": 5,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3,
+        "xai": 2
+      },
+      "answers_retrieving": 7
+    },
+    {
+      "domain": "expatschoolguide.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 5,
+      "total_citations": 6,
+      "generic_answers": 5,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "xai": 3
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "amorislab.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 5,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 5
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "nguoiquansat.vn",
+      "type": "언론",
+      "answers_citing": 5,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 5
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "schoozy.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 5,
+      "total_citations": 5,
+      "generic_answers": 2,
+      "branded_answers": 3,
+      "by_provider": {
+        "perplexity": 5
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "tienphong.vn",
+      "type": "언론",
+      "answers_citing": 5,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 5
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "reigategrammar.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 4,
+      "total_citations": 12,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "openai": 2,
+        "xai": 2
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "benjaminsharvell.com",
+      "type": "블로그·포럼",
+      "answers_citing": 4,
+      "total_citations": 8,
+      "generic_answers": 2,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "cafef.vn",
+      "type": "언론",
+      "answers_citing": 4,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "google.com",
+      "type": "기관·기타",
+      "answers_citing": 4,
+      "total_citations": 5,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2,
+        "xai": 2
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "schoolisting.vn",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 4,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 3,
+        "xai": 1
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "unis.org",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 4,
+      "total_citations": 5,
+      "generic_answers": 2,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 3,
+        "xai": 1
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "vietnamnet.vn",
+      "type": "언론",
+      "answers_citing": 4,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "auschamvn.org",
+      "type": "기관·기타",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "perplexity": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "britishschoolsasia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 1,
+      "branded_answers": 3,
+      "by_provider": {
+        "perplexity": 2,
+        "xai": 2
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "cafebiz.vn",
+      "type": "언론",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "columbus.gov",
+      "type": "블로그·포럼",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "dantri.com.vn",
+      "type": "언론",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 3,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "dwight.edu",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "openai": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "houseinhanoi.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 3
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "merryland.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "nhatoreview.com",
+      "type": "블로그·포럼",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "soha.vn",
+      "type": "언론",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 3,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "vir.com.vn",
+      "type": "언론",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 3,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 3
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "hanoiacademy.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 3,
+      "total_citations": 17,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 7
+    },
+    {
+      "domain": "glassdoor.com",
+      "type": "블로그·포럼",
+      "answers_citing": 3,
+      "total_citations": 6,
+      "generic_answers": 1,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "1900.com.vn",
+      "type": "기관·기타",
+      "answers_citing": 3,
+      "total_citations": 5,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "vietnamplus.vn",
+      "type": "언론",
+      "answers_citing": 3,
+      "total_citations": 5,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "fobisia.org",
+      "type": "교육·인증 기관",
+      "answers_citing": 3,
+      "total_citations": 4,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "giaoduc.net.vn",
+      "type": "언론",
+      "answers_citing": 3,
+      "total_citations": 4,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "newschoolrun.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 3,
+      "total_citations": 4,
+      "generic_answers": 0,
+      "branded_answers": 3,
+      "by_provider": {
+        "perplexity": 3
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "afamily.vn",
+      "type": "언론",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "aralia.com",
+      "type": "부동산·이주 정보",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "dailyschools.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "edu2review.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "leaseinvietnam.com",
+      "type": "부동산·이주 정보",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "nijin.jp",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "smapse.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 1,
+        "perplexity": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "spears500.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "suckhoecongdongonline.vn",
+      "type": "언론",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "tcbm.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 2
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "telegra.ph",
+      "type": "블로그·포럼",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "vietnamlaunchpad.com",
+      "type": "블로그·포럼",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2,
+        "xai": 1
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "vietnamrelocate.com",
+      "type": "블로그·포럼",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "vinschool.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 2,
+      "total_citations": 5,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "openai": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "lfay.com.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 2,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "sis.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 2,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "openai": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "internationalschoolsreview.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "jackierealtor.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "poste-vn.com",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "schoolmykids.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "chuyennhahoangminh.com",
+      "type": "부동산·이주 정보",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "cois.org",
+      "type": "교육·인증 기관",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "daibieunhandan.vn",
+      "type": "언론",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "expatpropertyguide.com",
+      "type": "부동산·이주 정보",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "finalsite.com",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "hanoimoi.vn",
+      "type": "언론",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "isbi.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "kiettacnghethuat.com",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "littlestepsasia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "maison-hanoi.com",
+      "type": "부동산·이주 정보",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "nccedu.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "openapply.com",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "schrole.com",
+      "type": "기관·기타",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "settlehappyabroad.com",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "talesmag.com",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "thanhnienviet.vn",
+      "type": "언론",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 0,
+      "branded_answers": 2,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "tuoitre.vn",
+      "type": "언론",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "vietgiaitri.com",
+      "type": "언론",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "vietnamspot.ru",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 1,
+        "xai": 1
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "worldarchitecture.org",
+      "type": "기관·기타",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "theolympiaschools.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 6,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "aqi.in",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 4,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "careers360.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "cambridgeinternational.org",
+      "type": "교육·인증 기관",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "gulfnews.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalschoolsdb.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "saigoneer.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "smartinasia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "tes.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "vashanoi.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "wellspring.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "znews.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "adb.org",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "alphahousing.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "aqicn.org",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "archive.org",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "batdongsan.com.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "bds68.com.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "bondcompanies.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "cafeland.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "careerlink.asia",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "chatluongvacuocsong.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "choinon.net",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "cloudfront.net",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "cmu.edu",
+      "type": "교육·인증 기관",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "dialog.cm",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "e-a-a.com",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "earcos.org",
+      "type": "교육·인증 기관",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "openai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "educationexcellencemagazine.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "esf.edu.hk",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "eshikshya.org",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "ever.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "expat.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "fairmontschools.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "giasutienganhhanoi.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "glassdoor.co.in",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "gouv.fr",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "gsis.edu.hk",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "hais.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "hanoi.edu.vn",
+      "type": "교육·인증 기관",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "hfh.com.vn",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "hmico.vn",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "hoclagioi.vn",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "ibyb.org",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "ie.edu.vn",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalednews.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalschoolguide.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalschoolsearch.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalschoolspartnership.com",
+      "type": "교육·인증 기관",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "ipfs.io",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "k12digest.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "kenh14.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "kienthuc.net.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "kientrucvietnam.org.vn",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "lepetitjournal.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "mdpi.com",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "msischool.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "mytour.vn",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "naver.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "nestliving.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "ney.partners",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "nhadat24h.net",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "oakedu.sg",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "parkcityhanoi.com.vn",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "phuhuynh.edu.vn",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "phunumoi.net.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "proavl-asia.com",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "ptehelper.com.au",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "quangthangland.com",
+      "type": "부동산·이주 정보",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "renaissance.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "rgsinternational.org",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "scholae.cc",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "schoolbell.net",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "sish.edu.sg",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "state.gov",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 1
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "teky.edu.vn",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "thanhnien.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "tiktok.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "truongnguyensieu.edu.vn",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "openai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "utraconvietnam.com",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "vcci.com.vn",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "vietnam-sketch.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "vietnamkb.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "perplexity": 1
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "vietnamschool.kr",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "vneconomy.vn",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "voyage-vietnam.fr",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "xai": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "website-files.com",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "whereinvietnam.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "x.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "zoominfo.com",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g05",
+    "type": "generic",
+    "text": "Which schools in Hanoi offer the IB Diploma Programme?"
+  },
+  "started": "2026-11-12T13:56:54.610Z",
+  "finished": "2026-11-12T13:57:17.065Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Which schools in Hanoi offer the IB Diploma Programme?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011Cgy9g8dTfZo9ZVdBCJxXd",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSmQUKEAgTGAI4AUIIdGhpbmtpbmcSDJriqTOBL09ygz/gfhoMF7f4cZy30nh2euDzIjCjaPqQp1FSgM/QR0k7A6R3hvVSyx3y8/JS1SE1iSgcclQ0uxgeBCMkNlBCDZQUglgqtgR05DYTmn0pyYPPjye9v7c6OeJLntNBE/wQtVDwZMHBX/Kd4xISmGd7dByifwzeYrPli5TSZ4YbnkPC6WnBRL7WEBNIMp1TJgRdzol3xFlT/TmeGVtW23JDh+OJNb8WIr6bXrWmvQZcpjA/b3iEvuLILfm40OtfOJe+F+llQNfO8qe8yDt4rb/tbhTfItBRXCaZ6ELUerlY5R6rnsevDsX9voZFpcu9E5qCy9ExlSFzdiCweYlY32A9Z0C5+U1EomNytvLl3sn7uK1xKc6hjOxdRPaq1phrf0gYeSXVOKEq6uKQtIqy8fMqlVIzxT4adKaAYLBgvTU+M9AxQNRojD8QyE/2lhkEqPrWqBZQRsOi22f7OPWfN6FDdgIkMJtgK2PrHtlddaEfHlUmcJonuIVr5hR3G52E7fKP9s0+4pgpWP+hsACwe2wfUa+Hl46cG52cJ2p8Qxbc5sYHwXb5+m2LQPcvTswQJTvflsj9uRI+VWe42d9V6/cWUFH/xRuyUvPcbg5rNFL0CFsUYZUEv9n0ItELcXpuK6fz0lC47xsAvBHi/HqXPz9IwoTLnUDIGa1Aoma2QZ28Sn9EXxLLifwt7iCjWo6CF7i+wki34InAGWhbxiY2aNPlB+NXsRJHYDUQZ1KCCFoCy5LZ323fE323ec5ij2bwcR74f1zUybwuFZrQcbJaGuoAW4gpjmZsm/w6G7sxOdJ2A2Gjd9p7FMnn01T+GZOqkQVFC1/FvXuTSqZ2FLSAcBgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01YZM7p6qGZVcUiBdNSAdsXD",
+            "name": "code_execution",
+            "input": {
+              "code": "r = await web_search({\"query\": \"IB Diploma Programme schools Hanoi list\"})\nfor x in r[:6]:\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015Qifmn7KE1yYAsQ6jy4wF7",
+            "name": "web_search",
+            "input": {
+              "query": "IB Diploma Programme schools Hanoi list"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01YZM7p6qGZVcUiBdNSAdsXD"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_015Qifmn7KE1yYAsQ6jy4wF7",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "IB Curriculum Schools in Hanoi",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi/ib-curriculum",
+                "encrypted_content": "EuoNCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBoA85+nPIsWiJsxlBoMdCyHWAr0EUIuOiBBIjBfL6mUMKJmlU34dQkIgswPfANm1n62unNPYq5vepopWA4NCw+q393aqoEXIuhjcwAq7Qzecm97DXumbo8rW9qY5BnmXOjf3ro8T8mCNsYCy/3cKbemX5XgCx9wHflKRy0aoIuD0oDcfV31v+NyVO8Wf7bHYC3kdXfMTSiTxrtiCO2fqpgmiUeFhh4ypdGyuNIWnS14vSpe5f8LI7TFArONVxe4mp1BWKRUDeA2d/GKv3a1k8amMwf+wQxh+JRjpGHo50RB/rjmnJhceG+nO74AGSBHmVoupkq+/pm/APEKHhVdlVn0u6AIeV1iKMEgmjZe7TrpQSt7M2prrLxCEzRUhe/LTTAJBEJbYu1zwr4wCFbmw+9wei1BJuWUQbJzupLQjJuE1aBNNAwCfNCy59BZny515NhZTN6f2yrLkKHhPfs79sze9dTUUsrMpGg9o1MyCqWTmob43mnrg1E13havYS0MghDuxRrmgEeG3oBVqOdOCPl0XOgfhrGd7pE6TZvfjG7jYJHwzpYcahKb83eKM3cktoM5/bICCsB7uVHQwgGu+LLsbU+VAO9hN4RXEP2yx5+0YnQ4navgk25SPEXUNsn1Su8peIMG6jBehgvWw4w8wsqc/JiW1OIetpMxPj2UUduzbm9PPGsYhUiPZX7L1A1mGYWwVNN8zbN/6N75X+c55YAboPL7O8qgN8WEZqp/WTm5aYZTjsZCMaucX3QvLWMvRYoFJtgmeKPxx9W0dvSGYB+4v4KcyH+I0CGqTEXBrdhqOUqynpwUHwCoHUnYM6rZIwslM+I9ySTpNaLNJode3SFKYI2uZ6IShXaHSXYss2XoO9tH0RS0AzpLx30J6MALCgXvoyLRad/KtvWlhSvzsRJST11ttmoS83z837UGJ8Vt3WwBNlRphKVkcADnNMp2RJZZUei14M+qPSNOHpl82fHpYxRmJ/Ri4HTrqcltKvYzKn70OJuHxK/wvsref6mlvUSpxubJNkRfgC2kNxf1sO2Q9gZ7wZCFZlsELPA9qS/iyAqgdo1Pkr+SS2tvvlYso/a+Vdyi/CBr0quSSzT9wseTfVVXJqYwGq8aknsaIiTE3rnGlLnJ21i2qaHIhwYJ/F6yfuFYhRQFxwLcOz0aOgpZWs9lljDToyIDDgHkKBXsN+DRoOXEBu2amNJspOkKHEOzvzOS28hgLC9ngJgl769UDLLfmY7n0kbtzbTYB7wpWIs0i+NG3sBhzspzEQSxutL6C892Mw3tPHdv7TidDcgeaM35waGbMgV9Fw83CbXxqtpmwII9SkJD3QlogEdeTMLDQnJkpZPR60+WE5aREX8UeAwglyxL0Od9PmG3Sl+3coNvQkmDvO9Hkvw2Yg3L3+wovo9c9GMyToFicl8HcSZxkjKfxY5xTytP3os8mjPl37Pb4nVsncFjeflBYyAOkrs5eNmpLDKo+Livb3IVVDSRr1Q48JPpxonI77D+hSJG0rM70Kgs6DlIYTt4XGEoZjR6DxpgvH8REF6Dt26k4nC3eyK9fSUgpjWT7NTqCHrYYJ47+ohjKOJ1hhhn+U/JSO76BmiCO5vecHPbD8Qgz5V/H4boCXx64GRxdwlUJI66EntZNzoMSrPKXm+MCPRrezI7FSSeCoy0O2HKU2Dhq8IXTjcoOV1zT1xbYaF0PCd9tbpSz6tv3cmDXnmwmySWM/k2bg4NnqR0tajWxMZxjSQDbCynVy2iKoy9oGrE3epn9tErjx2FT0QzQaTZq9PXWEaN67IDeS5FOZOYulbKSfZXV+FGfmjhadlifxCUoVL9kWBAGuS90Pm91FXDfuozrt/GX8aoHn33FqPSXWreZ4YCzMM4Qz/kQMkrFfGYUAYpfN4JNMg/o7ISgkBcD7rkzMUNFvHP8kuMVUDYi43baznqIkP/u4XohCqtfpevKX49UqWAMASGc0rsIQPwAfw6mgGP+VzXBWKCB4KR00xm/2q6wOu/WCe22D8iHXbpf/gF7Ku4QN/Mbd6wxknxR24Z1Kh7oyJgdPHCHxP7uXd9U2XzpknlRSOoLIeV7LyLuW25R7AxzKRW4zcHgpR7uVxp1DxNCPVOqAV1ww7CraK0xAsd0aF1niwaxhESgVLRzJwTKcZPtHNK2/vWSvEAYudaKGGnuMavPHShWJtRWBj+aC+U/rLcYCQVuh+CUX+XVEJmfqXPiFEATN4bhgu+/M0wvRPVdy4jSbr5Gr1/pMpYOpPs+9v2tW65mtCdViExCYnQZJUnuE0n3iiLf8MVGAM=",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British International School Hanoi",
+                "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Renaissance International School Saigon",
+                "url": "https://en.wikipedia.org/wiki/Renaissance_International_School_Saigon",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "United Nations International School of Hanoi",
+                "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Vietnam (2025 Edition)",
+                "url": "https://blog.doris.school/best-international-schools-vietnam",
+                "encrypted_content": "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",
+                "page_age": "174 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Hanoi",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi",
+                "encrypted_content": "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",
+                "page_age": "137 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Saigon South International School",
+                "url": "https://en.wikipedia.org/wiki/Saigon_South_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Comparing Top IB Schools in Hanoi: Essential Guide to ...",
+                "url": "https://www.westlink.edu.vn/news-events/news/compare-ib-schools-hanoi",
+                "encrypted_content": "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",
+                "page_age": "45 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Ho Chi Minh City",
+                "url": "https://en.wikipedia.org/wiki/International_School_Ho_Chi_Minh_City",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01YZM7p6qGZVcUiBdNSAdsXD"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01YZM7p6qGZVcUiBdNSAdsXD",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBrDI69d2TML4CxEoxoMpdaLGBj+gI0dLsc7IjAbepxkryblzg8MSjk/lgw2tjU3eJTH4Yy3eq0dOvL9HH14XY84W+U7UTO/COiC3C0qEslK9buKd8fQzArfszx2TlOL7RgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01YZM7p6qGZVcUiBdNSAdsXD/cell.py\", line 10, in <module>\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DH4EhVPkonUUoqdJbbvRMr",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nprint(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01DH4EhVPkonUUoqdJbbvRMr",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"IB Curriculum Schools in Hanoi\", \"url\": \"https://www.doris.school/international-schools/vietnam/hanoi/ib-curriculum\", \"content\": \"Since 2022, The Olympia Schools has been **authorised to deliver the IB Diploma Programme** for its upper-secondary students.\\n\\n# Top IB Curriculum International Schools in Hanoi\\nHanoi has 11 schools in the ib curriculum category, providing families with focused options.\\n\\nCompare 10 IB Curriculum international schools in Hanoi, Vietnam.\\n\\nIB (MYP), IB (DP), American Curriculum\\n\\n### Westlink International School Hanoi\\nWestlink International School Hanoi is an IB World School for the Primary Years Programme and a Candidate School for the Middle Years and Diploma Programmes, serving students aged 4\\u201317.\\n\\nIB (PYP), IB (MYP), IB (DP)\\n\\nChildren follow the English Early Years Foundation Stage and the National Curriculum for England, progressing to Cambridge IGCSEs in Years 10\\u201311 and the IB Diploma Programme in Years 12\\u201313.\\n\\nThe Dewey Schools Tay Ho Tay is a member of the Council of International Schools (CIS) and an authorized IB World School offering both the MYP and DP programmes.\\n\\nThe curriculum follows the English National Curriculum, leads to IGCSE at Key Stage 4, and from 2025 onwards offers the IB Diploma at Sixth Form.\\n\\n### Hanoi International School\\n\\nIB (PYP), IB (MYP), IB (DP)\\n\\nThe Olympia Schools logo\\n\\n### The Olympia Schools\\n\\nSince 2022, The Olympia Schools has been authorised to deliver the IB Diploma Programme for its upper-secondary students.\\n\\n### Dwight School Hanoi\\n\\nIB (PYP), IB (MYP), IB (DP)\\n\\nThe school delivers the full International Baccalaureate continuum\\u2014PYP, MYP, and Diploma Programme\\u2014across one campus, with English as the language of instruction.\\n\\nIB (PYP), IB (MYP), IB (DP)\"}, {\"type\": \"web_search_result\", \"title\": \"British International School Hanoi\", \"url\": \"https://en.wikipedia.org/wiki/British_International_School_Hanoi\", \"content\": \"- Hanoi Vietnam\\n\\n- Website: www.nordangliaeducation.com/our-schools/vietnam/hanoi/bis\\n\\nThe British International School Hanoi, commonly referred to as BIS Hanoi,\\n[[1]](./British_International_School_Hanoi#cite_note-1) is an international school in the Vinhomes Riverside neighbourhood of [Hanoi](https://en.wikipedia.org/wiki/Hanoi), Vietnam.\\n\\nDespite this, years 12 and 13, curriculum switch to the [IB Diploma Programme](https://en.wikipedia.org/wiki/International_Baccalaureate_Diploma_Programme).\\n\\n[IB](https://en.wikipedia.org/wiki/International_Baccalaureate) world school, authorised to deliver the [IB Diploma Programme](https://en.wikipedia.org/wiki/IB_Diploma_Programme).\\n\\n[\\u2191](https://en.wikipedia.org/wiki/British_International_School_Hanoi#cite_ref-3) [\\\"School List M \\u2013 Z\\\"](https://www.internationalschoolsreview.com/nonmembers/copyofschoolreviews_pan_z.htm). International Schools Review.\\n\\n[\\\"Our Schools | Fieldwork\\\"](https://web.archive.org/we\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_017rEyjtGxN69dwitkaknY8k",
+            "name": "code_execution",
+            "input": {
+              "code": "r=json.loads(r)\nfor x in r[1:]:\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')\nr2=json.loads(await web_search({\"query\": \"UNIS Hanoi IB Diploma Concordia Hanoi IB schools\"}))\nfor x in r2[:5]:\n    print(x['title'], x['url']); print(x['content'][:1000]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01TQm9kjfenpmfn3z5tqk5mW",
+            "name": "web_search",
+            "input": {
+              "query": "UNIS Hanoi IB Diploma Concordia Hanoi IB schools"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_017rEyjtGxN69dwitkaknY8k"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01TQm9kjfenpmfn3z5tqk5mW",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Hanoi",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi",
+                "encrypted_content": "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",
+                "page_age": "137 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Concordia International School Hanoi Review - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/vietnam/school-review/concordia-international-school-hanoi",
+                "encrypted_content": "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",
+                "page_age": "412 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "High School Profile - United Nations International School of Hanoi",
+                "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Hanoi 2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/",
+                "encrypted_content": "EtENCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDGVTcTFuq0xOt+uftBoMqOAx67zauUtusNeLIjCcJW73s42aEax+3yryW6ylgRJPSLgCYrL2huKIL4X01DQhm40Ns25QJyBJcLWRJNkq1AzJmdiERaVxEcPeG9C9coKvsCUyXg0Q3LnhAFIRVqp/8G1IljbeuqOf6VJzUDN970IMMHgOlQAoWlCioXcbaMi+EAPOYypauPoSfIc0RJnOyBt/geWtrS3r9RRJIoph2tL5jbzgB/wYhhuHq9qPiq5mTI5zBp/5cvKBZHKJWc2fq3WY9pspVMBU/reNlxxOuBcASkag8thf0Q38WINYwXuxPaQkW287K4W1d6i9AmI7A5b0Eb3/a/wQT76zvZn62d+FzzPFCpWBVn4mj2di7yX9drIDSqceKxR7gGLAoS48X9Qs3mvDi8zHdfsj4pRIX3ZG0lFgh4bhfUr0tJ9bfu1+0bf92yz/MDUmN5HiH/cKwOxl+zVoLWAv9jgdMYznz5+zfFZQxS/420CwkTcieP8VLrRM8dw/hGGRTUoLIodsD0sCeVR4C9aVVfKrqW1oh5HlR7ZmF5eOYjSUvCmnHNZ6hKqbz0Mn4vMKa2yQFHYT6DJn+NJ00acl12HYAWfWduF68m6SMmhcJ5YVzT/ELkcVPoD6ofAl1j1kDM3234Vq3k4xWsEeMvAJpVuchut/vg1BaWmuTaV0mujNJUPVOaZBewm1Z0fBB6qrvFAhi2PuCk39RxrGtIWJQywyur/NeW9S9XWh0WdCDdEH5HbVpKvtZAyS+YTLEzcFMNCSpWHh04Xp+5lyym5NmCB1EUsdHfQMZOXsQC5wJCpmI21x+0Xg760Gd3+C4JbRaqI7v21zFU7N0AP6lijqHGi2vpR9ccYr+HgAMRzogqibuwFe+f+gr1ICj9nXzB5eTK5yA+lyc9MNoFOFv0Zww4bBuPvMTW5gU/Fb680WFCcRGtMeV7Gx2YreENdVr5EaS1LzcVKtzxMMr/KHAYNe7TKrY0uuQJbspmBZE3q/BXjINYoJUIenpUiov2QIrRtgka8XcvGE2slR7zQXFHyx/XKKzAGwNyR1n+lQLs46EepyI0dlRBYhFncDaJhNmc+DRgekEleXLBZOkn6bKnukNRrgi6GGA++q5zVwGqytGdmPAOputDeUnvD4NpWJway0uP5JoiYDpULIFdgNQdBUFpDHzbbVlH47o/skYn71nBRh8OrqkiAKAF5mp0Sv3FVNOws139G2t+PcP6fKQSoC/sw0rcEa9PYk+wgOKjLfFhAHgf9GA9zUNhMv4/Z0FEMpBnbQAlB8cipmiOE2jp++mpAaJEpl4q5VuGKaSfYl4YuQ5V4Xu4DhxsLAYwrAHI3riY7jDq/PYy78fMQyDZQiS2SBrj+Cl6v1iu6OZrKgmmciKQhNRWMkvZhTHY2j6BTIYDLlZa15dND5eg+sgPUcha6B5p/1h0p7cJEPd0fDR4aG/HCZIqgZO5tPjpSGVVlRJ8+qqQqNJPvc+cY4FIAI9TgxQ7n55Ul6+jcOzfIXyH9TYs5qQd25nxXSKxVhGjc2LZCnmfqbIiNPVeie06rlX/zIf+RAErZqhTIP+sJ5slqZzFyuoQDIgEl+iX0gXR8Inqm4OrE5g3VZEuK9tsjeEyRdm8287VZPXsz1u9FKQYlIYU7NKtklOtQdNgLSTWZh5t6rUQTz4BjHkXxSutUI+G7KOg4Z7KtU3ZuMyuOvm0+6YahTcOVnlrvN4EIxSF5yBheqbhOJRwPBUwYL4TrM862/lUMmvEPEMqX2lJ+lfLsMPQd7IHhxgSxe8vgt+Kj6ZMGALns8PHpwMT1yt/WzkGwwL2oAXqOuYzBeaEPjnLu3zfoZU5n6S3mhmZiA8OOmOZ59O70xUhtn3Ts0sgXXeZzhmGaG7NeULMjXk7VHhu8ulZYfWu+JUSudqoPDXOjOdBKLYH5fvvJ8ClmmtWd+x5aPtcKqRkgTb0bwFjhec5P7PCTgu2LaIBCGE8r6Rezw7qXJ6377/zZiufFMNTSUEMMEVRCCtbc4tGGPk2gONlEoj9u+q+3da6IHBzI5gXwZuc8Oe8DtUXyNgXJx51/Glg7TJx+lX7mTH0b/1qfqt3QUEmf0d5CE5+tflsiwLWJ54GV8Ux+ZIMD7K0+YvyBFvIg6PBpGLBVbwlK5fUP1qG2RNXmNR1RsQcKu8SQ1ZUSevU3TGSacd20trypeDV3CFnNHhIGdE8HNoTa1fk6DbSoHOP7Z0LvygKHnaEP8wtRrfSo80CrcfloBpqoYAw==",
+                "page_age": "205 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "United Nations International School of Hanoi",
+                "url": "https://translate.google.com/translate?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FUnited_Nations_International_School_of_Hanoi&hl=vi&sl=en&tl=vi&client=srp",
+                "encrypted_content": "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",
+                "page_age": "267 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "United Nations International School of Hanoi",
+                "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "IB Schools Hanoi Fees 2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/ib-schools-hanoi-fees/",
+                "encrypted_content": "EsENCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDPH0niNsNP5iH3XeOxoMimFBfjZG/Vr2f5SHIjB6EJ7nAHHhV+T26LyAGpNISGUhcCUEuE7tla5Xiv0R2YevZMtGcDv90JM7sht4aWkqxAxrNRO2X4gmdDQ1bC5cTiykQOHYf0a2W1MUnMaE+T11QEumwVh0nzdu4HMquJmCpgY5uje0amfwukfRRuUjIRNSB2hkVgO/iJEzN3ta20Mv5ODSHTxlgVlGpwsmFoSoWvBQ8QgonIwKqU9cy+L5Ul5CdKhG87wX/xRWwvWn3JNn7BXkQLoSKmXsGBFhkxGNaYCp4TX5LtgFz2hrdC05dcz9PUvIv/fK+Vl0+wBVUCJfNt1PRBfhipawy7EJKIj0qeKEfVIi2a1VyM6S/2qDXQd8aPkXUeHacS8apk38Lq6lbuDqIiVFkDf7I5Pwjh3PmAwqN5A87HXvM8hM4LxGVhTprlLjce1hztvW5AgudZe3qhza4uoNBu1qVUYkkzyof2KIo8cEbuvkNI+yvECYfTIvuKxGXteEVshqu+Nfi04VQWuuhsj8A66MgsY3vLxaWQGn6aDRl323kWtjuO1lOQff5leAyf9f+Esuoo/dM2BciCLK5e8el6Yn0zZMchcRXmSgz0/Pv/dUN0eDvlK2THksgq1gxehz5MOXj3vCSkd4zgJVDiA5RIf6hDi+4JiGbCllc4rGRrQdkAFTnFQz176sK2RysvICoiuzQISdfNf3EPXYcMvkreIlXfpY5llfJZKqCEUROiJBYLUT2p5+dQ+R2C+sGElqw+bnKnOQNLqxSq8DWA49LRTKyluNaJ+xea0VDEO+HVkmfQ+VlqsCQtDzhiuuttbBHrFf9wS0l60Tb4KYR7rhuPSgHLvTeQli6wtZFTDJzNtf+Ke9typ8wMW+DVdk4g1kC9uGj1CJ4h23xp1ee7+au9LMsEvOumSB3mf7xr3fIenUqju7oq7U0j5IHGgrKuKxnVJJGwkmVbzJsAju2JxCHFu3zH6xdGU2f6dIxCefJY76WbkORNkKrbrk26tOPvb+BGc7DuhnnYthv2QN/sEPWMAE/UlUZwGD2ocTZJ5Cgl+64UJNKs156WK7TUjxCF8P9OFUgCTask2nWZz0gNMyKF9iPOcpOozUm9R9sLGw5DQDBIBeWvMBn7/sQNzirwhfI8YbxJIEDWFnJvrlGilCM4MpBB6HsKMZF6z60yQMNH9UouBz8WvuU97xLLidoN7plaFDvSRdaqheJ9nbH8DWgWWtDF63tRPCSImF2VOdjhHchjxszgTOaMcPW3DffJ8SkJeLEWZgDNi9lxhf9EGYAO7BFIsjmIBSJeHvelpj5QPn6RBrh9RjEZhyKrJUWHqiop2s003dY767u70LqxtDLsk//0tt4vL8q691E5JMalCWJ68dD7pfBK1c/rvAYAf+ePQjKd6HblzRynAqLwzRisQCtx9IcQl4wVerW0DYXfghhq54lhn/7sdsuVEc27sxgRCk8QCwQDxmYwiIQKUZKsPiY95/A5cfnMJdZQl+PU5dRblvbg/UCq6wOZgmOMzTjDWNcrCI4NdsXdD3WjHBCSuy9eKzaTOK7w+zb3zTu2Jwdo8vAca+IAW8snhluZALsFaGRjGTT9g1RAOgTYXOmjDrLQ7DPASUQy0CZF22B2EvYFFEMaTFYbibnmNSmOCagHs147SL7Fr2l654LwinvM3TcvHNE2YTcuPWD+ppgHzYNT4JUdMDTzxsxALvQmEd8isaxsTDRUoVeAPWdYhwQPpjy2utBTGwitIXEKBB0L2GuaihAvClUj2e73PsgVJdN4yUAbvWF0F+HOs+S72Y8sGqx3wUjHl47dzUXm3U8YoyW9ZUKjn1oy4RjJCljqMv4SqVAlPOgZNVtcddpbY0BGVvXxeZx84LZoB2R88rArlg7nZxg9gecJ91xI7lNhKZVbV780vm5ichE0xN+i695FtTfFOGixw/UyjWKdFdIIF6PXNLCbBYqOzlqWLT8ergPZy8GS4q3tMFzbM9YeIFhe0l1a0EjTvKYHbK5oQwS0YF6MqOWr0suqJGphrYfNIyObqqmAy+uMIN6i/+qpXugQnMLTL7F95YOiTtBppYV+OF+3vzR66PEVzYGCRQpAwYxo+n4nvm3dAT4DVOD+6JrAxq5QXPit4x0v9w5fo4qwFLgQc2kqA7okaTPD/c7ax1yywPvmzKJwXuqa2PU0g5sdlkasxMdT1PqKpngxjqihWbX9NSliHHvy09fVkuTxgD",
+                "page_age": "205 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British International School Hanoi",
+                "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Renaissance International School Saigon",
+                "url": "https://en.wikipedia.org/wiki/Renaissance_International_School_Saigon",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_017rEyjtGxN69dwitkaknY8k"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_017rEyjtGxN69dwitkaknY8k",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS1QcKEAgTGAI4AUIIdGhpbmtpbmcSDAxcHo6PCrI/HnRp/xoMSkXsGlJjn9a9l7CUIjCrNMgTBu3llmHWGbZZM5S9zpqfE+2u/36an+CZrjfS9UfN7hY0KgamFm0liVNkyF4q8gaD0cv9Eh1Asq/zDz1/3l3913al+YwGQQMcvetLgJqNvzbhLL+ZUzWj9+U9gsYbei6X3L0W467AiNJZ9KTmzCUqpHLzaXwKp9/aT6KkxiTo08LINLJrb6kYiU07JlRbVV/j7h69+VRyxexYVqhISet7i0qkjE/XC2F/hZ/B5sGDmQR7zl8ajMS6oRG2yt+zXVSoBBaKc9CO7GcNRUisinO0PJ23YhMtAnInuDligZhMv/MCVyzA7Yjlc6oERl4T6AtmAwFUqKoLIKDtOkgdMq5b8m1P9BNaRYplNZ80i8r1ARzeOJBDD/YffenwoUB+zE5rX65SDjoMtPnz5I8ahAmgG9005yjQ9mXOFUikVTzAUWxgIHPVbR0afCZ+in2mdghPClUTgAluTCqwzjF1n9bt/Vsr2imdRqlhQ8IkeJr+lcIGWnSx69+XDebCmCaaq6xMCiQdNvvFGPqBqy8UnpIcgam0POmdUfMrX0v2KBWQA4/go4UiZ3BPcUHlHqG0F9MWOPj65kipcVDgNqBHKto1sIuxBCB2rEHdXhQUr77+VXYWXmlSWQm4J7SkGs3FYCN+j8jdGAo0WFDFjwzgUb+BOHrWbkzF/BbCzQQwrN4x5lZBwgzbh9E71qtLW0OuLzc8bWZAs2jeTcsX0tnuH189ew1gM0PRe8WeXf6np65NjWIYLSjKNgBWKn7g2ZX89Tc+/OEN17dRAsQpnt2XweCkdvgYZCmILnVyasZcN7vS3EOllpeFbZgZ9OFzCtr/lQrtqO5kbv+hB3rUCXOixxZuf9MnlAOeLULDtmaKynPqwICMR2sktgKjvfNAcIWjaX1FgA/Hy9/3PbBU2XlJ66lpIk7wUpHImCVO2fHSJPGrNzLSjksCKXNBK44Q9aVUzVpRHOehDfTP3gN0jM6KrXTTqWyQds3/uYfR3bNe+N5uY/FGKLe6bbrP/01uh1eEklv7AQgJzNKbgR4vFu022rT73p3kEo5oC2Rfb1+WDBpKFjQC3s1fKHDycjKhUZp3jPBu5mshQyFDfb+RnO1XG6LOIicqz59bb1E5nOQo9cB8cb7kpGQ5a02n6l5C9kE4BFJ3h/wcuvpOXxewJtT20Zyk9TlZ83w7x2HB4AZk/OBKhPu8YLMzQt0D2a2sRvwZITsvyyhA/rLC+NDBnmuj2goi+PwYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "Here are the Hanoi schools that offer, or are preparing to offer, the IB Diploma Programme (DP), based on what I found:\n\n**Schools that offer the full IB sequence (primary, middle years and Diploma)**\n- **United Nations International School of Hanoi (UNIS)**, Tay Ho: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "UNIS Hanoi is an IB World School and the first in Asia authorised to offer all three IB Programmes."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "It doesn't select students for the IB Diploma Programme, and over 89% of its students choose to pursue the full IB Diploma."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Hanoi International School (HIS)**, Ba Dinh: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "This is an English-language, mixed-gender IB World School for students aged 4–18 in Ba Đình District."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Dwight School Hanoi**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "The school teaches the full IB sequence (PYP, MYP and the Diploma Programme) on one campus, in English."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Hanoi Academy**, Cau Giay: one guide lists its "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "curriculum as IB (PYP → MYP → DP) | Location: Cau Giay distri"
+          },
+          {
+            "type": "text",
+            "text": "ct.\n\n**British-curriculum schools that switch to the IB Diploma for the last two years**\n- **British International School Hanoi (BIS)**, Vinhomes Riverside: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "it's an IB world school, authorised to deliver the IB Diploma Programme."
+          },
+          {
+            "type": "text",
+            "text": " Students take IGCSEs and then the Diploma in Years 12–13.\n- **Reigate Grammar School Vietnam**: it's listed with "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "IB (PYP), IB (DP), Cambridge IGCSE, Cambridge International AS Levels, Cambridge A Levels"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**Other options**\n- **The Olympia Schools**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Since 2022, it has been authorised to deliver the IB Diploma Programme for its upper-secondary students."
+          },
+          {
+            "type": "text",
+            "text": "\n- **The Dewey Schools** (Tay Ho Tay and Ocean Park campuses): "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "The Tay Ho Tay campus is a member of the Council of International Schools (CIS) and an authorized IB World School offering both the MYP and DP programmes."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Westlink International School**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "It's an IB World School for the Primary Years Programme and a Candidate School for the Middle Years and Diploma Programmes."
+          },
+          {
+            "type": "text",
+            "text": " That means it isn't authorised to award the Diploma yet.\n\n**Need checking**\n- **Concordia International School Hanoi**: one review site lists "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "IB DP, US HS Diploma, AP, SAT"
+          },
+          {
+            "type": "text",
+            "text": ". However, it's mainly known as an American-curriculum school with AP courses, so ask the school whether it really offers the Diploma.\n- **Vietnam International School (VIS)**: a parent guide mentions it as a Hanoi option for IB, but I couldn't confirm that it specifically offers the Diploma.\n\nSchools' authorisations change, and some of these sources are directories or school marketing pages. Before deciding, check each school on the official IB \"Find an IB World School\" search at ibo.org."
+          }
+        ],
+        "container": {
+          "id": "container_013usrXKGshMhTJ5xLboxK8z",
+          "expires_at": "2026-11-12T14:57:06.281906Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 35849,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1718,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 2,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5905,
+              "output_tokens": 149,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6423,
+              "output_tokens": 68,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7812,
+              "output_tokens": 186,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 15709,
+              "output_tokens": 1315,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 186
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

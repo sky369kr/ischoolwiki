@@ -1,0 +1,244 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b04",
+    "type": "branded",
+    "text": "What universities do BIS Hanoi graduates go to?"
+  },
+  "started": "2026-11-12T14:05:11.927Z",
+  "finished": "2026-11-12T14:05:27.094Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "What universities do BIS Hanoi graduates go to?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011CgyAJoAxZ4xzejjP4GaE2",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011E3kUW4qUPcMcHPXCzq1Th",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"BIS Hanoi graduates university destinations\"})\nfor x in r[:5]:\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01U4t4ookHpEATYhkwy4n2fL",
+            "name": "web_search",
+            "input": {
+              "query": "BIS Hanoi graduates university destinations"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_011E3kUW4qUPcMcHPXCzq1Th"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01U4t4ookHpEATYhkwy4n2fL",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "University Destinations",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi",
+                "encrypted_content": "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",
+                "page_age": "1373 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "A day to remember: Celebrating BIS Hanoi Class of 2025",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/5/29/celebrating-the-bis-hanoi-class-of-2025",
+                "encrypted_content": "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",
+                "page_age": "528 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BIS Hanoi hosts over 150 universities at the Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/9/13/bis-hanoi-hosts-over-150-universities-at-the-hanoi-university-fair-2024",
+                "encrypted_content": "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",
+                "page_age": "135 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BIS HANOI UNIVERSITY OFFERS",
+                "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?rev=fadefbc1ec904f60853cb822be343aea&hash=13D8B1234AD013163E952210AF1FCB2E",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "University Destinations 2017",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2017/06/29/university-destinations-2017",
+                "encrypted_content": "EtANCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDJDySpC1k/oDnTXfDRoM155vXJL2haErkIDfIjA2QrjviZ3aWI/5WifpYnRQPLfdTPcBl0Ph4gNG+HjnqSgfamU3iehaX65XPB3HQ/sq0wydQ7eHFGC23WVwqnUqK3uo3A9pxbDNWyJtgUFoYx88JzoJNID2RHVpJUI0Ja0pMvWGmAdxm6cEhwcIHJWZc3rh1P5QB+F+4RJWUCFZ0m44Ce+9lVteBoRqkHXKYtvlz4WVyCCN68cYNJXIVmEwlvg9DjWTiZNacrgzW2+pRMhw6+jgiDmY1pnowaOPzUDhl98N/H/Ul9Oo2tXopF3zsv2ycFMFRN4iRCAyl2E10Imuy9ZhqK02xroYIFk1Anf13kccVZxj68lUEIrzTLLaw8+EaGxZ8XVAfIHry1m/VWzFJaF6qiH+qmuJLeaKJa6ibhwkRmP2ittcBWXTeQ+C54WupxyCNnp5c0eGgT1Za82U3a2AoDxMrWLQ+8EXuJ7uwb+/G7XZ7/6qb6lYH/ZoOS7KNnMXw9I9X0f5uCDkhN4VaLW5jc31TIJxGkR9Clt9Gf99+zhUgLrp8IGYLd/aZ9igm3uYABj1GRh391jA/RyUU/Lvu8A2XZCqDmExhJu5qoGuX2GM/XrVgDmZGsaHy+VHqo3OyfT5ZzaaLjAtAEHgY/BK2+BtzR8Q2DFoBDx6Jtcu2jtXOE4/ADa4ccUID/t4klh4T8sUU+Gn/rAI0FIWFKaNiMH6v4FdutE6EdGy/wxYc715iTHmDkRVr9UIaRKroFSk/c0/kGzlPOw42xfzpRDF7+w3TrFD5Lzez8RGckFjAdUWrqhARmuah1Q8RC9LefYqkfvl+NKPZgw0nNUzhg2N1Tcf4DxrIHk1buD63mZvVUhEKaDsAriUH3qYGOstYIrSa6bXP1UmYk9ODieUyoS4l8C7oQpP1I4/k8TJLSBCznmh6esSHQU/64VN6kUYMwverbLybQFjSDn37jigRGwhCWwqVxyxT0JUjolXQv/kNyUYgeSM1xyuQGvvRlV4GRY3eV/qNlPBEAkMiP375iWtkxcw1GLnPhygAKZTko/oF6ydzQvQdhgb7JEg9nCCJGQ7bWJgMwG71xvxtU2EeubUjIUBkepOOGgsYQDxofIBEwTRUhLEIhurSI6Dg0PZIaZEGvFe77quyxS8w8ZZQt0klerpOcFmEeRzV739T+qQVQ+kK/6uU2xPa4yjsnoTvGv5RVWFmdgd/5MyV8omj52bxoNyokOisUrgLK96R9L+bssIEWF/Y6hI7k/3okfUTXlaEJqu2WmhVve7SGlov26aR7Quxs0X9iYmDPjLY1PhUQ9LPBJw0giBydl6wCElV4QjeCgJG7cnUCXTmkW/79NT2GNCbYPPlpXO+amtWPHsMBrRa+7d8ihgqKT/aXM3s4ANWPeY4+diobD8NzIe+sVR1IJ8mc1um4DGagxvA0ItIBkSulUyJizGnSOfCObBLLY0SO24RHx2SFZu15FXtN1zbo7UKyf0wf27XEnDDmUqobsCeWsO5kRY7wH1iPVFkky4ZCRMnDKWosAVF30LdCwpBlSsb0/zAPeWQi+nmQfkvQF1D1h2OfY6bLEeuYHURcjL6KMXWK9gCbEK4EW9LCscyZMhCuqKdtOlcXL4qfuflz3+hXijRO2T/NnSZenc7+LkYv2lyWBWzDLjOWs9dsAw+tbbl+LpO3EN75TuyE4g7ZlYBPIMge3lOx9J3bJk2ARsdEkfl8B564l2q2jsCCASPtiwe9hgy82LZYvSBjE387REtlYah26Oi6uTqHv71Kq/f4F5xijavnrSuxMI75GCYYzoB8iekOG98O+Rb1SrOFlgYtvXdXsALipNHYyLx5sXY3sR3VnOi1PjkDnxMSHUKAbnDMhaokQKFbW+rc/6wArh/ZzzHmNnPQXE7uTR5Rfr6KAQDKQjyUYbrBfIZ5TQcG8PblGI7NP/1gPSnNM1cg3TToDCoUaZ+j90wWjbGzEyGxuW4YKN7+VdBSyu3iEbeWdoXXVt5ahl/KffZZzh+GSRpbyBhJ4U/AV3wH+FEYI2tt5bgfl04tEu3NTbRuCIqvDFMZKrxTL94TTrDML5heG/5F/NPv7HOxi+7rOVSCNEp0KH4VB+lSBCnrNlyfquzjGmdJWaUEtxhbFwEEiXwMQceeAuZQP9qceDniiX3lKOyk+pDrmJYzjMgADTP3BkvuVpMjJxPpB18yMsH4wdbPWjjbibJs6wCRZNaBdolYJjQr2Zg31qv+3ZCJzNai263hgD",
+                "page_age": "596 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "How BIS Hanoi prepares students beyond academics",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/5/29/how-bis-hanoi-prepares-students-beyond-academics",
+                "encrypted_content": "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",
+                "page_age": "135 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BIS Hanoi launches scholarship program for 2026-2027 academic year - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/education/bis-hanoi-launches-scholarship-program-for-2026-2027-academic-year-5003191.html",
+                "encrypted_content": "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",
+                "page_age": "307 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BIS Hanoi Class of 2026 celebrates outstanding IB Diploma results",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results",
+                "encrypted_content": "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",
+                "page_age": "106 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_011E3kUW4qUPcMcHPXCzq1Th"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_011E3kUW4qUPcMcHPXCzq1Th",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDOgVxo3Iv4UgY9yzSBoMV+2FnTv5Xal53Er/IjBNfBpxE0SHSWvSeHmUmdmcWdzZKi+IbNQXP6Tewwt0ZONmW2de2g7Rlqih7ndoV/4qEuwmweLXkW+urRZnqUcnQDI4IRgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_011E3kUW4qUPcMcHPXCzq1Th/cell.py\", line 11, in <module>\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016EW77sxPKfEf8jCTgF76Ah",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_016EW77sxPKfEf8jCTgF76Ah",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"University Destinations\", \"url\": \"https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations\", \"content\": \"BIS Hanoi graduates secure places at some of the world's most prestigious universities.\\n\\nDiscover how our graduates at British International School Hanoi successfully secure places at prestigious universities around the world.\\n\\n# UNIVERSITY DESTINATIONS\\nBIS Hanoi graduates secure places at some of the world's most prestigious universities.\\n\\nBetween 2016 and 2024, our graduates have been accepted by more than 300 prestigious universities around the world.\\n\\nOur graduates were accepted by prestigious Russell Group institutions including Imperial College London, UCL (University College London), the University of Manchester, King\\u2019s College London (KCL), London School of Economics and Political Science (LSE), University of Bristol and the University of Warwick, which were all ranked in the QS Top 10 Universities in the UK 2024.\\n\\nAustralia and Canada are also popular destinations, with students accepted by leading universities like the University of Sydney, the University of Melbourne, and the University of Toronto.\\n\\nIn Asia, Hong Kong, South Korea, and Singapore remained popular destinations. Our graduates were accepted by elite institutions like University of Hong Kong (HKU),\\u00a0Hong Kong University of Science and Technology (HKUST), Korea University, Yonsei University, Nanyang Technological University (NTU), and National University of Singapore (NUS).\\n\\n- BIS Hanoi Profile for Colleges and Universities\\n- BIS Hanoi UNI Destinations Class of 2024\\n- BIS Hanoi UNI Destinations All\\n- BIS Hanoi UNI Destinations Top Global 200 - QS\\n- BIS Hanoi UNI Destinations Top US 100\"}, {\"type\": \"web_search_result\", \"title\": \"British International School Hanoi\", \"url\": \"https://www.nordangliaeducation.com/bis-hanoi\", \"content\": \"Our graduates go on to study at prestigious top 100 universities around the world, including Yale University, Stanford University, University of Cambridge, University College London (UCL), King's College London, The London School of Economics and\\u2026\\n\\n# BRITISH INTERNATIONAL SCHOOL (BIS) HANOI\\n## EXPERIENCE INTERNATIONAL SCHOOL EXCELLENCE\\nFor the last four years at our pioneering international school in Hanoi, our IGCSE\\u00a0and IBDP\\u00a0students have scored higher than the global average. This takes them to the world\\u2019s best universities, including Cambridge, UCL, Stanford, Yale, UCB,\\u00a0the University of Melbourne, the University of Toronto, NUS, KAIST and Yonsei.\\n\\n## University Destinations\\nEquipped with outstanding IGCSE and A-level results, English fluency, and meaningful life skills, BIS Hanoi graduates go on to thrive at prestigious institutions including Yale, Stanford, and the University of Melbourne.\\n\\nStanford University\\n\\nYale University\\n\\nUniversity of Cambridge\\n\\nImperial College London\\n\\nUniversity College Lon\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSvQYKEAgTGAI4AUIIdGhpbmtpbmcSDDI0Vu6ZcUhWR3OSLhoMJNFc250dANjKtCRhIjBd8gY7SD09xJLDw4E4fJFOlCPDgFz6AWxl5p5WX6AjtR04+ouKF6DCEj8s10h1+mUq2gUZ6nLHG7IJzS5/zGGF42QBGlDpWrX1XecrN7zRSR2tZWnTZ3HxbeuOuVEYqxBOKqIqV5GKUteDdoGSyv7ejN8BxdotJq4vdQpErCgY3+pmovmLdR5+DdBYCR1z/0udCrCWUYDDkdnBAPAOOEWNHBy2gAfC95T34iZtlbVgDhxG0xjEujhgGvGLSAdWBpcOo6QByv2EKWLKN+MDV/XbWjQklwEVqNW4dclRpE+u5NvXZ26fv5tBxd/iRdVCrlv6xuhlpt+V+Qk9C2YtR+8ukmTQ44PZi8Ge/ixZrAGNHiUgM4Yon37hEMRUd3E5pY3PwkhL2Wv0CmDARWObaaK+X50B2NzXY6XFmEB82mZRENcX4w+I6jBWXMV9oY39hg7JyumgnytWwGB7uVXnt3fDmP3QVeuV0bAgOpStO5/N5gJAXUvBzQt3nlkuOmYh+p+scoaHqG+y0JJfA6YTEgeUCMtmUJy/DAWdFBjgGKq8Z5yI4UW5BvxRvVSsvVhpn1w4LSFQtWeokzYHbVZFiRHfKxyAOyM/YYc+KiYydsJ1RfM7/XMDJQCRx9+WbrmdWVtxO1lKjPB2jFIUhMugzdV1tCyOIr8BdvvrgqBC4pbDZ/1W7Y2CrZ97Spl5NOl9eIWjKuTiuC+L8zfNMgsmJvMywcdj/q3gbio9x+gWN1gGvTZDqkAZe7ZURzFrDHcO/KLFIcdFZ2wD3e5oa+dMPf/qSAa1bI04/t/kyQu/o/9LeIe0KjPYJwCfUOoaNeBcY/6vCYBV2ZnVEHu8JjpcqvAiptbWNMP8CcipwuT1i2sV/6FTKjQHQ8zNiySgJ7bdTPJCT9IkO6f5/HuMLu3oYzumFxONsnwiWxYCCSo7MCFud9uTu3eJ0ZNKizh+0ZppkRkHANVCF/ASEt8ne5PjIY3lX6nB+xZvHLdQVKW4DRbR7djAMRs0aqq5Lzg7bfQsDaCzjHFr2WUSvGwo15UuGAE="
+          },
+          {
+            "type": "text",
+            "text": "According to the school's own figures, BIS Hanoi (British International School Hanoi) graduates were accepted by more than 300 universities around the world between 2016 and 2024.\n\n**UK (the most common destination)**\n- University of Cambridge\n- Imperial College London\n- UCL (University College London)\n- King's College London\n- London School of Economics (LSE)\n- University of Manchester, University of Bristol and University of Warwick\n\nThe school notes that most of these are Russell Group universities ranked in the QS UK Top 10 for 2024.\n\n**USA**\n- Stanford University\n- Yale University\n- UC Berkeley\n\n**Australia and Canada**\n- University of Sydney\n- University of Melbourne\n- University of Toronto\n\n**Asia**\n- Hong Kong: University of Hong Kong (HKU) and Hong Kong University of Science and Technology (HKUST)\n- Singapore: National University of Singapore (NUS) and Nanyang Technological University (NTU)\n- South Korea: Korea University, Yonsei University and KAIST\n\nAll of this comes from the school's website, so it shows its best results. It lists where students were accepted, which isn't necessarily where they enrolled, and it doesn't say how many students got into each university. The school's University Destinations page has more detailed lists you can download, including the Class of 2024 results, QS Top 200 global universities and US Top 100 schools: https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations\n\nIf you want to know how typical students do, rather than the top results, you could ask the admissions office for a full list of where the last few graduating classes enrolled."
+          }
+        ],
+        "container": {
+          "id": "container_01NYFMWR7DWfdpMJMvbjo9VJ",
+          "expires_at": "2026-11-12T15:05:20.143692Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19877,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 781,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5900,
+              "output_tokens": 118,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6386,
+              "output_tokens": 65,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7591,
+              "output_tokens": 598,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 64
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

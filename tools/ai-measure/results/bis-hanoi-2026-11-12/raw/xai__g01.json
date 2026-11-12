@@ -1,0 +1,1287 @@
+{
+  "ok": true,
+  "provider": "xai",
+  "model": "grok-4.7",
+  "question": {
+    "id": "g01",
+    "type": "generic",
+    "text": "What are the best international schools in Hanoi, Vietnam?"
+  },
+  "started": "2026-11-12T13:52:15.533Z",
+  "finished": "2026-11-12T13:53:04.965Z",
+  "request": {
+    "model": "grok-4.7",
+    "input": [
+      {
+        "role": "user",
+        "content": "What are the best international schools in Hanoi, Vietnam?"
+      }
+    ],
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "response": {
+    "created_at": 1794491535,
+    "completed_at": 1794491584,
+    "id": "6a3e85d7-5a83-9826-8082-7a9aed0cc9c1",
+    "max_output_tokens": null,
+    "model": "grok-4.7",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1",
+        "summary": [
+          {
+            "text": "I am gathering current information on the top international schools in Hanoi.",
+            "type": "summary_text"
+          }
+        ],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "pkIXEqXV+197/eZf26kT94ISq3BuAig5l1/+yf2Du7mY4zRIRjpctmjcO6wHAKOrNQW2pI5q8ocSv6DntSV1IOpq5ZBLMR/h4yO+pqzjnANQArtrVRAs9YiCRKbErdj6KVrqJgH0RbcL95QRZkmEYeTaQKodMLPjk4qYI0rfA8YwV4MLPS84/eUMt2iDsQQRsYmFBqz/eoqSdfnXIMBkL6jlZuBRa0iVeUOxp6xHfj8WxnO70Pn4U7pnMIyZxTqoo+8RTyPwPyK9Tmudx9oV0Akcsg"
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-0",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "best international schools in Hanoi Vietnam 2024",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnamdoneright.com/best-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://vn.linkedin.com/company/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo"
+            },
+            {
+              "type": "url",
+              "url": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school"
+            },
+            {
+              "type": "url",
+              "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://schoolbell.net/vn/international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ipgce.com/top-10-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://spears500.com/school/25926/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html"
+            },
+            {
+              "type": "url",
+              "url": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-1",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "top international schools Hanoi ranking",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnamdoneright.com/best-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://vn.linkedin.com/company/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo"
+            },
+            {
+              "type": "url",
+              "url": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school"
+            },
+            {
+              "type": "url",
+              "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://schoolbell.net/vn/international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ipgce.com/top-10-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://spears500.com/school/25926/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html"
+            },
+            {
+              "type": "url",
+              "url": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-0",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-0_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"
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-1",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-1_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"
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-2",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "best international schools Hanoi UNIS BIS Hanoi Academy",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnamdoneright.com/best-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://vn.linkedin.com/company/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo"
+            },
+            {
+              "type": "url",
+              "url": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school"
+            },
+            {
+              "type": "url",
+              "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://schoolbell.net/vn/international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ipgce.com/top-10-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://spears500.com/school/25926/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html"
+            },
+            {
+              "type": "url",
+              "url": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-2",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-2_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"
+      },
+      {
+        "id": "rs_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "6m77gagRhROWDO0YO/1ArIoZ3sbPKP4vDFEWCPh0O+FD/z6Tw5934WkmWwsGnHjx7si6i0CNjwPJ2Cxg6d5504mDuzEkyL18nTqeheLWXn0BjYQsubHDBWsaj+/rxxJeufx3w3zZQYJ0EC5wkw8ibYDw55Fvl1Nb9zNgIT2A9ySP4Kfurv7GGIgpJgix60oAgFg13mFmKDBzt9PPULBZc4dbWHu/QDzYrzXbS4M2l+2zTIsgO47Pn6DfauY0eD9tsxPX0mon3632jksePfo+JRYeFDOR8K+D1Kxl7LGvMNWbrsB/HpmIZlKJMiGCTJdKos9Bk0nV4EyLYUsOwGivrbSBdi6kbEIpJ2BkMWMAImP5d/zPh/dxQxJvOTKs0vJI8TxsYhqF3jtgFZEJX06ayR7qL79uQSWl5rRPq62YFW5Dp7TzCP+pOj8RoMU1DuYmQZslJtRm7TzOVDyiq5xGSMp/3XgHWSyEccT9SBBGLKP+/2ZJutGcUnrhTwiq3RcV5ivtkakL0Z1u5M0QXj6MzBn/oVi7qewaF5uOyQ00PO9u9jcsgNB2eq2TEEYVfn4pgPAk1D3jsfgqoQGD6MAxJirCZGqLGJh5A1o8iXEzEAlncy6bif7jDXDNHMGPANmbpWVF6ySckYzbrJb9ztP/u37HsDESvucNv0fy9bAFx/hdpADYL2GdDmqgoGxdeD1LeeubimcoKpafKOiKZkhx+ASmwk0Oqs37H5Ya+PsVDi/30TkQiosJYAwin4DqeGXQRwBCCoND5tQqWEQRMSmI4Vq6BUF00zBSj5D2V/IF/PLIR9bSPtB3Bvrfi2m4vUSjmFbEuhVZOImV2P890AP0ZeO5DpT7gA3CDEYZxsPdmobL9zS2XinfXLzt9jslf5T2ZCYKeY6T9S2yZcKYhgYGVsz60ndjeaMCHpp5H7Rm6ig6KsVNzDsL/OQ4/7ukfAfI68pj6SZl+hL+yDEZI8fBE6oJaiKJkK4P/TeE+7dHIM8Q/iccLlsDVkedPgZP0/vp6gFh5ktIOHe3LRF442T9W70RdfMGiAdBtZzUS7nsYZXHfHQvk8/CaJIxBjEluCsdY41HlAGZf4Vs3UE5kqr1Yvvb1rHRTxciGPBnBoo4G2bqLgY9BDVp3lT4"
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-3",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+        }
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-4",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+        }
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-4",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-4_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"
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-5",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "UNIS Hanoi vs BIS Hanoi vs HIS Hanoi reputation",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnamdoneright.com/best-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://vn.linkedin.com/company/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo"
+            },
+            {
+              "type": "url",
+              "url": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school"
+            },
+            {
+              "type": "url",
+              "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://schoolbell.net/vn/international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ipgce.com/top-10-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://spears500.com/school/25926/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html"
+            },
+            {
+              "type": "url",
+              "url": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-5",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-5_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"
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-3",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-3_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"
+      },
+      {
+        "id": "rs_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "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"
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-6",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "Brighton College Vietnam Hanoi international school",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnamdoneright.com/best-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+            },
+            {
+              "type": "url",
+              "url": "https://vn.linkedin.com/company/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo"
+            },
+            {
+              "type": "url",
+              "url": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+            },
+            {
+              "type": "url",
+              "url": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school"
+            },
+            {
+              "type": "url",
+              "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://schoolbell.net/vn/international-schools-in-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ipgce.com/top-10-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://spears500.com/school/25926/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html"
+            },
+            {
+              "type": "url",
+              "url": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-6",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-6_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"
+      },
+      {
+        "id": "ws_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-7",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+        }
+      },
+      {
+        "id": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-7",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1_call-a9de45e0-cccc-4e4f-9a58-2014cb279f68-7_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"
+      },
+      {
+        "id": "rs_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "Pnr36x281r2Ya69P9ZAo8S7eV57DaMeeib+g1JyRn+m6OY6m5YvZ1XsLZINA5WNnsK+S0HxtMtOadNcQb+fXnABsao6Ok6GZ2Z7HqmCi5n8fzLxtvtalH+sMQ7++uRDiJRbIME7WUb57JZmTCzs+5ODvFb81Zs0nL9fSVISxoAgLTiB513Oqg19nuOE7sqS+z2Aft2N90lDBCUvlHP1cUrUsW/NSxw/qoAts/B9cZVYIbH2EeX1tt/YwypcooygImIK95e9dkyfR51qekIqv+qOw9jy7apVcp1uQlvKdVlCpxnAPa9zwKIDDetKEbij3GkTYJbAYSyYcy7fIewDUOj7YRW1jt6dk8T8j0cNH6pS9Ev6dEpUGzn43ApMaGk6z+D9wLB+uHEZMxYyZu+y7otqx+BcprmZWhMNZv7/MmkLF8iiMFCeMxgonCVOnM/ByWWf4q7SHZbo5kigCOV2d199rlIEd8+V0L77gIUqxHono/kyB47AfZzFnPKf1VuRuCK4vpPM7FLBtIa2B7rofB3haXyhWYxFLUsMhW0kcs9h4d6tO/+MYV4tbJFnjYZcnNlQzSfX2c3zijMjEd/eIGIizmpg+t6tPsjNqcaE7q1cSbT05LyVsfTTD9TGBLrcpYML4Bx/mdBxQKRoSHnF/VbkD3i5dcNMBjbnMEA6PJKJVvtrK//eIMzHMf8Uta+srm9UrGpuk24K6EBkPlM37bMGOYm/1yLmdY4CIdWxNUNY63pMM8SySQfebyWtJyn3va8kBpvAKrcTIn+kS54cyoAwEHgqYL7VXcAtLEX/tdjneoXPGWGc1KgKbQn0axLU6ohRbREMtNUYkHL2+QVACDc+jm9nshc3i8kEfwBT1yICt2/2XWkJgTxs9BtJvh4IXqzYn0pSCOYEcdwPpbOtk2Vz4WxVQlTCUCyMouwYA0mAyy+iVufpQr8YVDCcpZQd/jafWQdRELc/C0QWzWdwmd+IgjKfpxVQIpXCcIfL03ZDrRsDuA91lK3K7cWnFS+fn6LWWoJmvLsOarjgVwZotvV8Yb9z15GdsYkf6631TwIt88akHBforhJpGoQnDYEiTwnft/7B7EPyZKh+l1c9HoYiKrtSZtsbAUtwA2Bb5HVN2wer5YMJJ5IQ03i3r0xdgkEBYh7NTPaabrSBJgJU937JXvJszmKlviz5PoFcFMd7it6JMPU0J8WzJJgR3MsYBFO/udTCMK2eHFtHBsNEF9+bUhX8GK9x54SjZ4ugR58bbeBczTiAiWrhWBBJowuwssw"
+      },
+      {
+        "content": [
+          {
+            "type": "output_text",
+            "text": "There is no single “best” international school in Hanoi—the right choice depends on curriculum preference (IB, British, or American), location and commute, budget, class size, and university goals. That said, a few schools consistently rank at the top of parent guides, education sites, and local reputation for academic strength, facilities, diversity, and university outcomes.\n\n### Leading options\n\n**United Nations International School of Hanoi (UNIS Hanoi)**  \nOften regarded as the city’s flagship international school. Founded in 1988 as a non-profit partnership linked to the United Nations, it was the first school in Asia to offer the full IB continuum (PYP, MYP, and Diploma). It has a large campus in Ciputra (Tay Ho area), more than 1,100 students from roughly 60–70 nationalities, and strong IB Diploma results (recent averages around the mid-30s with high pass rates well above the world average). It is especially popular with diplomatic and highly mobile expat families. Tuition is among the highest in the city—for the 2026–27 year it reaches about VND 1.05 billion (roughly USD 38,000+) for Grades 11–12.  \n\n**British International School Hanoi (BIS Hanoi)**  \nPart of the Nord Anglia Education group, located in Vinhomes Riverside (Long Bien). It follows the English National Curriculum through IGCSE, then offers the IB Diploma. It is known for enrichment partnerships (including Juilliard for performing arts and MIT for STEM) and relatively controlled class sizes. Fees for 2026–27 run up to roughly VND 970 million in the upper years and often include more extras (meals, uniforms, exams) than some competitors. A strong fit for families preferring a British pathway or targeting UK universities.  \n\n**Hanoi International School (HIS)**  \nA longer-established IB school (opened in the mid-1990s) with a smaller, more intimate community (around 300 students) in a central Ba Dinh location. It offers the full IB continuum and is frequently listed alongside UNIS and BIS as one of the city’s top pure international options, often at a somewhat lower price point (roughly VND 418–797 million depending on grade in recent schedules).  \n\n**Concordia International School Hanoi**  \nThe leading American-curriculum option, offering a standards-based program with Advanced Placement (AP) courses. It is a non-profit school on a campus in the Van Tri area (Đông Anh, further north). It appeals to families heading toward North American universities and is frequently among the most-researched schools by parents. Fees are high, reaching over VND 1 billion in the senior years in some published ranges.  \n\n**Dwight School Hanoi**  \nAn IB World School linked to the global Dwight network (with schools in New York and elsewhere). Located in the south of the city (Hoang Mai / Manor Central Park area). It carries premium fees (over VND 1 billion for some secondary grades in 2026–27 data) and suits families already living in southern developments.  \n\n**Brighton College Vietnam**  \nA newer entrant (opened 2023) in Vinhomes Ocean Park (Gia Lam), affiliated with the well-known UK independent school. It follows the English National Curriculum to IGCSE and then the IB Diploma, on a modern lakeside campus. Early results have been strong, and it has already gained international recognition (including inclusion in a global private-school recommendation index). Fees are premium, approaching VND 1 billion for the IB years.  \n\n### Other notable schools\n- **BVIS Hanoi** (British Vietnamese International School, also Nord Anglia) — British curriculum with a bilingual element; more accessible pricing than pure international peers.  \n- **Singapore International School (SIS)** campuses — Singapore/Cambridge pathways, often stronger value.  \n- **Westlink International School**, **The International School @ ParkCity**, **St. Paul American School**, and bilingual/integrated options such as **Hanoi Academy** or **The Dewey Schools** — useful alternatives depending on budget and language goals.  \n- **Lycée Français Alexandre Yersin** — the main choice for French-curriculum families.\n\n### Practical notes\nAnnual tuition at the top English-medium schools for 2026–27 generally ranges from several hundred million VND in early years to VND 850 million–1.05 billion (roughly USD 30,000–39,000) in the upper secondary years, plus application, enrolment, deposits, bus, and sometimes meals or activities. Confirm the latest figures directly with each school, as they change and exchange rates affect USD equivalents.  \n\nHanoi traffic makes location critical—many families choose housing near the school (Tay Ho/Ciputra for UNIS, Vinhomes Riverside for BIS, etc.). Popular schools often have waitlists, so apply early. Also check current IB or curriculum authorisation status, recent exam results, and how Vietnamese language/history requirements are handled for local students.\n\nThe “best” school is the one that matches your child’s learning style, your family’s mobility plans, and practical constraints. Visiting campuses and speaking with current parents remains the most reliable way to decide.",
+            "logprobs": [],
+            "annotations": [
+              {
+                "type": "url_citation",
+                "url": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.international-schools-database.com/in/hanoi/top-schools-in-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/international-schools/vietnam/hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.vietnamdoneright.com/best-international-school-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.vietnamdoneright.com/best-international-school-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.aralia.com/helpful-information/top-6-international-schools-in-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.merryland.vn/truong-quoc-te-tai-ha-noi-duoc-danh-gia-cao-ve-chat-luong-dao-tao/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/blog/view/top-10-best-international-schools-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/truong-quoc-te-o-ha-noi-tot-nhat"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vn.linkedin.com/company/brighton-college-vietnam",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vn.linkedin.com/company/brighton-college-vietnam"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://hoahoctro.tienphong.vn/3-truong-quoc-te-sang-xin-tai-ha-noi-hoc-phi-tien-ty-mang-den-khac-biet-gi-post1667061.tpo"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://theuhak.com/vietnam/hanoi/brighton-college-vietnam/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://brightoncollege.edu.vn/enrol-now-ib-diploma-programme-ibdp-at-brighton-college-vietnam/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/international-schools/vietnam/hanoi/most-popular"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/bilingual-schools-and-multilingual-projects/bilingual-schools-in-hanoi-a-2026-guide-for-expat-families"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://houseinhanoi.vn/top-rated-international-schools-in-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://whichschooladvisor.com/vietnam/school-review/brighton-college-vietnam"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://educationdestinationasia.com/essential-guide/international-schools-in-hanoi-vietnam"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/international-schools/compare/brighton-college-vietnam-vs-hanoi-international-school"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://chuyennhahoangminh.com/best-international-schools-in-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.schoolmanagementplus.com/spotlight-on-a-school/spotlight-on-a-school-brighton-college-vietnam-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://resources.finalsite.net/images/v1790041080/hanoi/pvtxql5sy3du0z2s4eux/UNISHighSchoolProfile2026-2027.pdf"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://schoolbell.net/vn/international-schools-in-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://schoolbell.net/vn/international-schools-in-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://brightoncollege.edu.vn/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://brightoncollege.edu.vn/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ipgce.com/top-10-international-schools-hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ipgce.com/top-10-international-schools-hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://spears500.com/school/25926/brighton-college-vietnam",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://spears500.com/school/25926/brighton-college-vietnam"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://thongtindiadiem.com/truong-quoc-te-tai-ha-noi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-hanoi-2026-expat-family-guide"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://e.vnexpress.net/news/news/education/vietnam-has-record-33-universities-in-2027-qs-asian-rankings-despite-widespread-declines-5140426.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://phunumoi.net.vn/brighton-college-vietnam-vao-top-truong-tu-thuc-duoc-khuyen-nghi-toan-cau-2026-d350325.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.doris.school/international-schools/compare/hanoi-international-school-vs-united-nations-international-school-of-hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.kiettacnghethuat.com/top-10-truong-quoc-te-ha-noi-2025/"
+              }
+            ]
+          }
+        ],
+        "id": "msg_6a3e85d7-5a83-9826-8082-7a9aed0cc9c1",
+        "role": "assistant",
+        "type": "message",
+        "status": "completed"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "previous_response_id": null,
+    "reasoning": {
+      "effort": null,
+      "summary": null
+    },
+    "temperature": 0.7,
+    "text": {
+      "format": {
+        "type": "text"
+      }
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "top_p": 0.95,
+    "usage": {
+      "input_tokens": 106453,
+      "input_tokens_details": {
+        "cached_tokens": 62592
+      },
+      "output_tokens": 2873,
+      "output_tokens_details": {
+        "reasoning_tokens": 1534
+      },
+      "total_tokens": 109326,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 8,
+      "cost_in_usd_ticks": 1762560000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 8,
+        "x_search_calls": 0,
+        "x_posts_fetched": 0,
+        "x_users_fetched": 0,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 45266,
+        "output_tokens": 1478
+      }
+    },
+    "user": null,
+    "incomplete_details": null,
+    "status": "completed",
+    "store": true,
+    "metadata": {
+      "system_fingerprint": "fp_c60958d81f66f847"
+    },
+    "background": false,
+    "service_tier": "default",
+    "truncation": "disabled",
+    "top_logprobs": 0,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "prompt_cache_key": null,
+    "max_tool_calls": null,
+    "safety_identifier": null,
+    "error": null,
+    "instructions": null
+  }
+}

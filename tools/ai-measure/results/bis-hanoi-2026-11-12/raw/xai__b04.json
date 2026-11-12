@@ -1,0 +1,1152 @@
+{
+  "ok": true,
+  "provider": "xai",
+  "model": "grok-4.7",
+  "question": {
+    "id": "b04",
+    "type": "branded",
+    "text": "What universities do BIS Hanoi graduates go to?"
+  },
+  "started": "2026-11-12T14:08:14.112Z",
+  "finished": "2026-11-12T14:08:46.620Z",
+  "request": {
+    "model": "grok-4.7",
+    "input": [
+      {
+        "role": "user",
+        "content": "What universities do BIS Hanoi graduates go to?"
+      }
+    ],
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "response": {
+    "created_at": 1794492494,
+    "completed_at": 1794492526,
+    "id": "33be8c35-42f9-9992-9ab5-952d2962f1f3",
+    "max_output_tokens": null,
+    "model": "grok-4.7",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_33be8c35-42f9-9992-9ab5-952d2962f1f3",
+        "summary": [
+          {
+            "text": "BIS Hanoi likely refers to the British International School Hanoi.",
+            "type": "summary_text"
+          }
+        ],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "DEj1rVLUg6RqmCFF7AgKBna0QRRpXYRIR9BmfnY1Mlqcrdi3qeoFKcbUZgWnx0FQAeUZMVrVLrzJ9WOlS2bBNmh4j0DD6Mi0XtXtV1ggQ8kKaNTc4bzc5hWU3zCvodfqZU0yH6zNhiZKnoMR2fnmuSQf+H+HaManwcbdIPBTnHzRVGs3TUVVrmgrInolQefi0CVoO3LefmATKYf+7MRuIgL/8ktxCPEA25+GyoFlB2wYEeIxqMfZynUqsiAHkLtozNM9/EAHTRliUYwCUonOet9uf5UQKmA"
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-0",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "BIS Hanoi graduates universities destinations",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.instagram.com/bis.hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-1",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "British International School Hanoi university placements alumni",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.instagram.com/bis.hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-0",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-0_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"
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-1",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-1_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"
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-2",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "\"BIS Hanoi\" \"university\" OR \"destinations\" OR \"graduates\" OR \"alumni\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.instagram.com/bis.hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-2",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-2_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"
+      },
+      {
+        "id": "rs_33be8c35-42f9-9992-9ab5-952d2962f1f3",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tauyloVy7H44G/KNPo0NkDMdFjgJww7WkyZicPwtgZjnKgvrnQ+E3hFxi/+XHNBx7LC62Ia1Qn11NozZewRcY43e1tpUzepcErf9iUIzrNR5EhtEhN0KETaLvRGb0dffwE+qVveIn8OL6RciUM4ft8IZRvFvX9nlmX3aYX5ZHOHK+gHsqCOOFItgLEPalXMB896NU5zOuPM+KWA37SMkr87I609JOPEMeJBAQaPb52pVr6+dH6qxNWcR2el1"
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-3",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+        }
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-4",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "BIS Hanoi university offers list PDF destinations",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.instagram.com/bis.hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-4",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-4_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"
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-5",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+        }
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-5",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-5_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"
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-3",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-3_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"
+      },
+      {
+        "id": "rs_33be8c35-42f9-9992-9ab5-952d2962f1f3",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "NKSJwDiQvCgpuI1faMi9fzJLseToW3EDm+miJ9+wDuzJBWu2iuFFYh/7Y3ZkP8+cwe1bQjaU35sqt63fYHNUYHcS0t25ccliLRuR1qLVdgqzPeMZV4wzxjXazAY85D7sJCoBNIGhiCGGk1q71SLCTXt6Qc+KcTTNB9DPFn/5oRCD3xadSCBhZcwgj442b/v2QTZ3XrGUlL3D4AlfURzUk6fiWwrI33q7JbIZPOSOzSLuR5+l7dokkQPhDaVls7tuOw/hweJQvrXAyOWAxMMeIw0N2yuk2+cz4VyAO0hEtWauuIdVC5ey0EkgseVgQuKCR9M04qOAreGiZE20tLEK1BtCwt3/MXnF5EIaXBv4J6tU4c0dGNJc4VK/O8OY+oun8SJVC/m6TNGZpFtJqduXFLKlGI3ptALNXqvJXINmtN+jTAu36QKJKUnLnVKnICAKqshgSAkUBiPzpDfReT1L+siT+G2QNnTk2vxUlhoRXyAuqn0fBGYlzc2rzh7YOI00gp6plfwPyN+zn4oF58iOnXbo1zXjuk/dN7K5JB+X1OfmhlDfXKfm3JF+pjgd+doTtF4ySgg5uPhVT0d8bYNu7L+qfOINa7z0gmJgLuV3ifNxyCfxhSOpjlfZxB/7mUP63s0i1OuHGAfe61/v3Jrh+HmwWubId45T61uUqwzNsvl7gDSawRMy802O1evunJzzYBt1623MB3AT1sfkfFctZPEkv3jTaMEnV2VOvxjyHtCL1zNiqfH0sSzvHN43WwSv27PO2PxtLmNK/SgL8S1Z/m7AhKDf/ddjqZMhXjUwAmqYA5amz6GqTTjCj7mPXcbO2SymzrykP1wWUp/ulGsKGb6nMO+lmZ+Ik6koZGTwWuyI/HmJ59fF0sfZ1P/J/uRtk+ZXSX10JhJirJbtVGWZMP5Hk6fHmc4LysSk4QAA3pLvxdphfUDRgeHZ+8/niQ6jzwo5vea51z6MWXFifFs6mlT60o43adUwkTOOCH+LIbS/Jd8thPADYtiN/vXE83oJ/kzhMhuNenFPH19B9Or9RzCB5YlBXm0xA60ftG4T3pTTWuGI2/G0CzLHpO+fIWE4lD/eT2NsiNdOCkTFyn6AOrp8YlYIMIVcuTBB43zCZTVcGpIY5jC3i1+ySQLs0ESNpNC7bDWVqAHHbsQQzWjZap4cgwHiLBmVJ+nBLJBxUsCbVeqAJBxbi/hgEzPhaL0zQwC2qN7goQ0Zl9WIa75hCnOVEhx6Tc4OmUaw1N5UIOMXJG38Yl++lHv/Cx706DnvSadMmYvRsn8cxIpsD3QnqnibgtkNuR/ROCA6B/V+mnYNJoJlHZpbA94B/a6KkxDm9WWzDiSaDlMIvbUDXV+lFx3Bfq8izdWOEPptI8dr0qpmYCxs4iv1vMWGA+GaQ18FBzJgekkyjup0CxoOK3IbJr7FEGZTepwd5kNt9Mm/E+Y7mReJmEFV8ka7NYHDbXsCXZoTcDBgGSQ6/NgLa5m18nfCHSM2+M7yjcJugFnGuhy0xL0pL0PMzA5gfEgMmQG8XIMqemIxHt1R5g2I50tlOmrsx3r+yDy/A+95rVGzIIxH7irk9F7QoY2h+xxcNKReB+WxaUk8zEZEPNFJSgy6+WSwOXLKBJRNax1iKA/p229RaN8FeDs7Jj/kJhdG+PCHCIdBpE+dD2Yv7St8b6L7SA2PQVSP//45NVUZ35LUYj4CjKm1XzxpypHEK0XkzW3PTsDum9eD"
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-6",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+        }
+      },
+      {
+        "id": "ws_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-7",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "query": "BIS Hanoi university destinations percentage UK USA Asia",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.instagram.com/bis.hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa"
+            },
+            {
+              "type": "url",
+              "url": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day"
+            }
+          ]
+        }
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-7",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-7_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"
+      },
+      {
+        "id": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-6",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "tco_33be8c35-42f9-9992-9ab5-952d2962f1f3_call-9b1436dc-748d-46f1-a1a4-bf3f40b2086a-6_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"
+      },
+      {
+        "id": "rs_33be8c35-42f9-9992-9ab5-952d2962f1f3",
+        "summary": [],
+        "type": "reasoning",
+        "status": "completed",
+        "encrypted_content": "//OsiQBtitM6DN8XOACiw8/OnCKBuj9Mz9uERUZ8vpCH82uF1HCFub/3KMzPY54xFUjaov6CRExYl6kgJ8aCKKx6RRUcM1Z5QVKfUtPbnhssRONfeaDRVvFJSit8s9sZTHagTIYelhNoH0vp1zGCyUd/Lsbtp2j/GmvWoHY3kCzy6ieUlzCwbSqm1Leq4OWR9sl6SUu5G226O+zoj2TPRrhCGujlsshZy1FBDE2X+jviN37VFo6aPZBYYEhZq563NNmeG1lHScB3t6MtJTk6IAuOkfd995xwRkMGsOXkTbYhdhdfV1vtNqZZrscVlc4mdmzx+c59dJM8BjBjFfFso0mVcmqmRAZc/aNIeL8nd4Y7QHEEPFt9KNA4wnM1t9aubTSiCVOiCNMDEDdet3sCG+gwZYiOEiFWdWzDFuBYVshbbgWwzSUm9ZzzmxWKpL3cxk147xLI5MPF8As5ht8kuZY72GEuzSfSQydQD07EbOzkfuQtJ35CuL7+pH6X8sWHNc81X52CsMDPv/Kh3jzLmjC27oNFfxkgzJnBhak/ASqvTkt8CyOKVxtRSkeGobBBQLJzBbSnlBa2mQX5av8Sr4crTAIsusgJ4vPgUMQFJ5sJQZanyTVUR3OopT1AXR3Kk7k9JNbq8xf0HMbf9xztKgxAw4z/hlIWCZp93ft1KRuG+Q+XFz0if54V4254X7/MCAO3Ya0aZPFygsLIDVyfxYKphdRjy7MzF5VLejt6OR5MOwEhb9aBMhKHYCHJwN2t5QPafsEPw4HRiOVk2N/vLoHe/jLfZs1pxORdHfoy6mhcevIjjvhfJ/QjrGzFMikvoxW2YdRrYSBgo+VPhc/nRFyLsLXWGCJLRvWgGOjRH2KNG85vAeobR6plX9I6OPoc/GdN87GtFApZng37QJPr9IRPri5CXbHjvhhZn2rUZGRocH83BZ8uV1InJq4mF0imGzea7Foxqb0lml79Bv4ezD5v20c0fXisH+pM9mGrM7SslRCLSAwrSIoc5ufEH7qGnotiQKO7uAqzMdSG0zkZ7bR3GtUqcvIaZ5cIKkpXC/qAstT9ZEIVMDfxfbsB4KwLFE/LTixtkVxPV/YBUq3xGSHvPnsGs1kmH2SMdnzwtuknU5eMVcNurlpHzUhoQL3Gc9qcJZ0j6u1rpLJ37HjFIrcdtNlH+0phKv9gTpAh8n2nL6cxbd0fG8SVC7RhW6fckm3FV7d4XczGmyTfwHGBieFu+5WiufN/V6TV/Et3QN4bUX0hpyf7JphPBH+lcxqusUGe+MHqHeOSQKPrh0sCiWTaMQ9f8DV50qJD1fUmkeYJcpRgkioMgu5orX9kKZ/taSeW+9WzQe6wjPYz/gzDdtzfnMyMyl0vXY74e3pk4yKkfF31PQPdR+tEaOkK0EPnHciwTNLSTLflrGaZtz0vxINziTQ"
+      },
+      {
+        "content": [
+          {
+            "type": "output_text",
+            "text": "**BIS Hanoi (British International School Hanoi) graduates go to universities worldwide, with the United States as the most popular destination and the UK second.** Between 2016 and 2026, graduates were accepted by more than 400 universities. Australia, Canada, and parts of Asia (especially Hong Kong, South Korea, and Singapore) are also common; some students go to continental Europe or stay in Vietnam.\n\n### Notable destinations by region\nThe school highlights places at top institutions such as:\n\n- **United States**: Stanford, Yale, Columbia, Princeton, NYU, UCLA, UC Berkeley, Brown, Duke, Johns Hopkins, Boston University, and USC, among others. Arts pathways include Berklee College of Music, Parsons (The New School), Savannah College of Art and Design, and Rhode Island School of Design.\n- **United Kingdom**: Cambridge, Imperial College London, UCL, LSE, King’s College London, Manchester, Edinburgh, Warwick, Bristol, and Durham, plus creative options such as the University of the Arts London.\n- **Canada**: University of Toronto, University of British Columbia, and McGill.\n- **Australia**: University of Melbourne, University of Sydney, UNSW, and Monash.\n- **Asia**: University of Hong Kong, HKUST, Chinese University of Hong Kong, National University of Singapore, Nanyang Technological University, KAIST, Seoul National University, Yonsei, and Korea University; also Waseda in Japan.\n- **Europe**: Examples include Bocconi (Italy) and the University of Amsterdam, with places also reported in France, Switzerland, and the Netherlands.\n\n### Recent cohorts\nThe Class of 2026 received offers including Yale, Cambridge, UCL, UC Berkeley, LSE, King’s College London, Toronto, Melbourne, KAIST, and the University of Hong Kong, plus arts schools such as Berklee and the University of the Arts London. The school has also reported that 35% of one recent Year 13 cohort received offers from QS Top 50 universities (examples cited include Yale, Cambridge, Stanford, Yonsei, and NUS). The Class of 2025 received more than 150 offers, including UCL, Edinburgh, King’s, Boston University, Sydney, Hong Kong, and Waseda.\n\nThese figures come mainly from the school’s own reporting of offers and acceptances (students typically hold multiple offers). For the fullest lists, see the school’s [university destinations page](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations) and its college profile documents.",
+            "logprobs": [],
+            "annotations": [
+              {
+                "type": "url_citation",
+                "url": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.facebook.com/BISHCMC/posts/-a-world-class-future-awaits-our-class-of-2025-wishing-our-class-of-2025-every-s/1143328721318055/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.vietnam.vn/en/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/career-and-university-guidance"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-all.pdf?hash=13D8B1234AD013163E952210AF1FCB2E&rev=fadefbc1ec904f60853cb822be343aea"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.tiktok.com/@bis.hanoi/video/7564305824236047633"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/06/03/from-the-british-international-school-ho-chi-minh-city-to-the-top-british-universities-and-beyond"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/vi/bis-hanoi/academic-excellence/university-destinations"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.instagram.com/bis.hanoi/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.instagram.com/bis.hanoi/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.facebook.com/BIS.Hanoi/posts/over-the-past-10-years-our-graduates-from-bis-hanoi-have-been-accepted-to-over-3/1911350069737979/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/7/8/bis-hanoi-students-achieve-exceptional-ib-results-2025"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://e.vnexpress.net/news/news/education/british-international-school-hanoi-celebrates-10th-graduating-cohort-4903821.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/academic-excellence/university-destinations"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/02/14/oxbridge-offers"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.facebook.com/BIS.Hanoi/posts/-were-incredibly-proud-to-highlight-some-of-the-outstanding-early-university-off/2047441966128788/"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-uni-destinations-top-global-200---qs.pdf?rev=6a61ea3f9bd04b4aa70a9f9e1121686a&hash=940377A549F02FF591758FE9027B1F09"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/5/29/bis-hanoi-celebrates-the-graduation-of-the-class-of-2026"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/07/04/university-offers"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/university-destinations"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/secondary_school_university_profile_2026-web.pdf?rev=6d2afee78af643c9bc5ebb8c14677da7&hash=A79D5B767BF6975935A39992DF6CA0B1"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/living-in-hanoi-with-kids-schools-areas-and-costs"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/21/record-offers-at-top-universities-across-asia-and-australia-for-bis-hcmc-students"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/news/2025/10/16/university-destinations"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hcmc/news/2026/04/09/from-bis-hcmc-to-top-50-and-ivy-league-universities---a-global-pathway-to-the-usa"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vnexpress.net/hoc-sinh-bis-ha-noi-vuot-diem-thi-ib-trung-binh-the-gioi-5121889.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.vietnam.vn/hoc-sinh-bis-ha-noi-dat-ket-qua-an-tuong-trong-ky-thi-tu-tai-quoc-te-ib-2026"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/alumni"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/1/26/bis-hanoi-class-of-2023-achieves-over-180-offers-from-top-universities-worldwide"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://vietnamnews.vn/advertisement/1721406/bis-hanoi-outperforms-ibdp-world-average-score-for-8th-consecutive-year.html"
+              },
+              {
+                "type": "url_citation",
+                "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day",
+                "start_index": 0,
+                "end_index": 0,
+                "title": "https://www.nordangliaeducation.com/vi/bis-hanoi/open-day"
+              }
+            ]
+          }
+        ],
+        "id": "msg_33be8c35-42f9-9992-9ab5-952d2962f1f3",
+        "role": "assistant",
+        "type": "message",
+        "status": "completed"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "previous_response_id": null,
+    "reasoning": {
+      "effort": null,
+      "summary": null
+    },
+    "temperature": 0.7,
+    "text": {
+      "format": {
+        "type": "text"
+      }
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "top_p": 0.95,
+    "usage": {
+      "input_tokens": 91529,
+      "input_tokens_details": {
+        "cached_tokens": 24960
+      },
+      "output_tokens": 2071,
+      "output_tokens_details": {
+        "reasoning_tokens": 1203
+      },
+      "total_tokens": 93600,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 8,
+      "cost_in_usd_ticks": 1980440000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 8,
+        "x_search_calls": 0,
+        "x_posts_fetched": 0,
+        "x_users_fetched": 0,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 39502,
+        "output_tokens": 982
+      }
+    },
+    "user": null,
+    "incomplete_details": null,
+    "status": "completed",
+    "store": true,
+    "metadata": {
+      "system_fingerprint": "fp_c60958d81f66f847"
+    },
+    "background": false,
+    "service_tier": "default",
+    "truncation": "disabled",
+    "top_logprobs": 0,
+    "presence_penalty": 0,
+    "frequency_penalty": 0,
+    "prompt_cache_key": null,
+    "max_tool_calls": null,
+    "safety_identifier": null,
+    "error": null,
+    "instructions": null
+  }
+}

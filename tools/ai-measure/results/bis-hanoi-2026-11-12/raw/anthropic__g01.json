@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g01",
+    "type": "generic",
+    "text": "What are the best international schools in Hanoi, Vietnam?"
+  },
+  "started": "2026-11-12T13:48:53.733Z",
+  "finished": "2026-11-12T13:49:13.399Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "What are the best international schools in Hanoi, Vietnam?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011Cgy94h9YoH2F2iWLwMYmm",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSxAUKEAgTGAI4AUIIdGhpbmtpbmcSDDWH0/CL6kyeKumc0BoMRJU4f/JEzKg3LjslIjANx7OskrzAv3bub1g9qwD86VGMZ/OyS61UDj57xfiDBMw8iet/Kq24LtTB3aARQQAq4QSjGujoewuthK8SdLasNEwhUgFrHi9DoFJ5J0dj6NYlaW2ZCWmSgRJYkXA3iHma9s1MJqCYPJ4sEac7IQahe1+KdcphpGq/9OOv18TkIJ43scH3T6tml2v3v5t6k3gXgXHmPA/SZ6a+T+DQPJOdNLi7cTGqMoh75d75lZYDly/KPQ4IPuoGpxBCKMdvVJ5jAdUspZ2vD/qC08KX9X+Gp3sltTxiOtOZyfpTKlj1SLTo1cM9I9GKqABuuqwwUzAz/B8dpfc4qFnxWN44JOegIA0A0yHHwt3ptD1qF4mg/5M01ylilpgT/saWA6CUGx7LPI0trlOTvS7l6wHN9YdpjXMmpANAA57RqBatq2PLWsnT0kNrotijWM5/a1XDOXXH15eTDSkmd4ioCPXNiqG/I4vu6e4uB2AVh/y/pOjwJp7LSWFWHwnI7rjyYbglx/8mWmBHLdQE7QbZVTA7zAuiC22gyJLggRTXTDDMYYtUUOnkjZQwKtjvAd4TaL62FrpKPpiQcl/NiWlcJ/1Pd0+PX8oIGBinSJk0PHL2mzJgzfOWWEfkBbFWQviBCPn5w5wTXXGYOdreeC0SYQt/8HEiwrLa7xO+rQ5G7ciXNrPXoGX850SHwsGCSpsLvnYMenkggnLmi7m3ex+LB6ZNqYY+ZYYnWLzn/hgwgubt0+B+0MVxsobrcXJ5xFL3gwVzP3Ig/kDWRU4do7S2wOi8NMCCnKAk2EmWh1vqD6opLiCUAXdYscB3oSnOqiB7Hs8Q8G0sBxWcBEN1H6jvkiBKbipF24KKB6kSOCugwxDkutSVYFqt/FYYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016ULTtqAyZeLnWGoif5Ndqq",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"best international schools in Hanoi\"})\nfor x in r[:6]:\n    print(x['title'], x['url'])\n    print(x['content'][:1500])\n    print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016jfrqLrYtShThY5ib1wArQ",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools in Hanoi"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016ULTtqAyZeLnWGoif5Ndqq"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_016jfrqLrYtShThY5ib1wArQ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Vietnam (2025 Edition)",
+                "url": "https://blog.doris.school/best-international-schools-vietnam",
+                "encrypted_content": "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",
+                "page_age": "174 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Expat Exchange - Best International Schools and Bilingual Schools in Hanoi",
+                "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi",
+                "encrypted_content": "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",
+                "page_age": "545 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Hanoi 2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/",
+                "encrypted_content": "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",
+                "page_age": "205 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British International School Hanoi",
+                "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "United Nations International School of Hanoi",
+                "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Hanoi",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Vietnam-Australia School, Hanoi",
+                "url": "https://en.wikipedia.org/wiki/Vietnam-Australia_School,_Hanoi",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Renaissance International School Saigon",
+                "url": "https://en.wikipedia.org/wiki/Renaissance_International_School_Saigon",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 13 Best International Schools in Hanoi 2026",
+                "url": "https://www.westlink.edu.vn/news-events/news/best-international-schools-in-hanoi",
+                "encrypted_content": "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",
+                "page_age": "32 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016ULTtqAyZeLnWGoif5Ndqq"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_016ULTtqAyZeLnWGoif5Ndqq",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDK9D1W1mlZE2FH/pxRoMu3Dgwcsrq4aAh/HfIjCLYflftBlym+wuZKGERn5lOjoMfmZIAjOmcu5rEGj6/Slo7ej8hwaX9pRUKeMq5XAqEn0rbg95UaRnBqCIczdqOsmIuhgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_016ULTtqAyZeLnWGoif5Ndqq/cell.py\", line 11, in <module>\n    print(x['title'], x['url'])\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01R2jbzZVGeRFNvYbyxEDnBL",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01R2jbzZVGeRFNvYbyxEDnBL",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"Best International Schools in Vietnam (2025 Edition)\", \"url\": \"https://blog.doris.school/best-international-schools-vietnam\", \"content\": \"UNIS offers PYP, MYP, and DP as part of the IB continuum. The school serves a large international community and follows an inquiry-led curriculum across all levels. It is one of Hanoi\\u2019s longest-established IB schools.\\n\\n# Best International Schools in Vietnam (2025 Edition)\\n## Overview Table: International Schools in Vietnam\\n\\n| BIS Hanoi | Hanoi | British (IGCSE, A Levels) | Early Years\\u2013Secondary | Premium |\\n| UNIS Hanoi | Hanoi | IB (PYP\\u2013DP) | Early Years\\u2013Secondary | Premium |\\n| HIS | Hanoi | International + IB DP | Early Years\\u2013Secondary | Mid\\u2013Upper |\\n\\nPaul Hanoi | Hanoi | American (AP) | K\\u201312 | Mid\\u2013Upper |\\n| SIS @ Ciputra | Hanoi | Singapore\\u2013Cambridge | Early Years\\u2013Secondary | Mid |\\n\\n## United Nations International School Hanoi (UNIS Hanoi)\\n## International Schools Hanoi\\n\\nIt is one of Hanoi\\u2019s longest-established IB schools.\\n\\n## British International School Hanoi (BIS Hanoi)\\nBIS Hanoi delivers the British curriculum from Early Years to A Levels, with IGCSEs taken in secondary.\\n\\n## Hanoi International School (HIS)\\nHIS offers international programmes in primary and the IB Diploma Programme in the senior years. The school has a long history in Hanoi and a smaller campus environment.\\n\\nPaul American School Hanoi\\n\\n## Singapore International School (SIS @ Ciputra)\\n\\nView Singapore International School Hanoi\\n\\n| Curriculum Type | Schools Offering It | Notes |\\n\\n| IB (PYP\\u2013DP) | ISHCMC, EIS, UNIS Hanoi | Full continuum available |\\n| British (IGCSE + A Levels) | BIS HCMC, BIS Hanoi, Renaissance Saigon | Structured assessment model |\\n\\nPaul Hanoi | AP subjects vary by school |\", \"page_age\": \"174 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"Expat Exchange - Best International Schools and Bilingual Schools in Hanoi\", \"url\": \"https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi\", \"content\": \"Among the most popular are the United Nations International School (UNIS) and the British International School (BIS), which are known for their diverse student bodies and robust curriculums.\\n\\n# Best International Schools and Bilingual Schools in Hanoi\\n\\n## United Nations International School (UNIS)\\nUNIS Hanoi is one of the leading **international schools** in the city, offering the International Baccalaureate (IB) program from the Early Years up to the Diploma level.\\n\\n## British International School (BIS)\\nThe British International School in Hanoi is part of the Nord Anglia Education family of schools.\\n\\n## Hanoi International School (HIS)\\nHanoi International School offers a multicultural environment with students from over 30 nationalities.\\n\\n## Concordia International School Hanoi\\n**Grades:** Pre-K through Grade \n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS0AcKEAgTGAI4AUIIdGhpbmtpbmcSDHwbOOIVEG0xTmzKMhoMO3Dp1hjVmXCWQHFHIjBdEfOMXFFxu9OFLTkCT/9a1bxePTCsjagIV+ZylxqKeNg8NcJpIYFTonld5A5Fom4q7QbkZYCzTCsLzVgutqCzhQu/MG1Plm6BCMeTs9Prd2qubFpLYz8DOwjZhkkadMzBV19SyscY0SLXW4exgHq9MD8/asdlcAMfGY8N449Rn1LYSmQBG07s1mFIGn5LQEWBSx7QHfcpHSS3FWmgDUqfeMkNg9OEOW3iFYrAKv6xerllCvUa4aPwKO4gdNlqrWIHF/FR0jzUzHHqOP0gopTqo+sIotWTaZEzhLHVOOqKv1xIPNcSg9s2ZgVor2uM1G018IrdkcQkVt9sLYZchhf8qppr/U3HYBKdgNARkxuBeN1I2K4kn0Lx5qqTdYwamOxMC1jI6coJtSBUSq18ten3WrQvN2WcI7Krt9TeXherPNUlmrdPkv5kh1yaN/Dgqy3T6Lw3aM00kvA8gdN8E0rM80Fnp3FKN9XRdrsOZPeyXtGKqKoCDbeMPyqZh9ZM3zWYDWxAASlQQPb5QjGHhyO8MqlQqYmMTHC2m9VigCIsMcn53BCiHHVjGN8w+KwwOYiYFsXll48haYK3A3xMlI2Kh4wQr/8zc2xkUPGsRTsRzVXKR/18ykdUULPzTH4Ot57JGiZsKnRpWA/GkuXuEYiYCqgLVDqNhx++smPyi3VFj+S4TgxpyFuMG1dS6qo8VsrBl8YzVocWamlgl0KDtXqrZQKIigkMcq9ybML68PFD+qAWAxkP+fn0cWelr+BWtDggYy3BGArzCqn9yb8AyP4Gl7QNTPga+q00uBxSO/O3gQi/f/n3aRd7f2w+Kl+DZBzCsGPf/e9Oh/CSs87UUPCad7BrglFoq2+SUE847lHxowPNaz/t3aqoulLydKnz4qK/Vy4E+QNp2bU/Jo+32CluUdev1EskFxFVHB0nA3+r2F4pTEy6/c+Kl/uBvAAFH7IOg9HOR+4tWURw4HsdJnVGFmZfWik5nW7aBqOkLgJ336HfgU+dacWF/263hn6gCIMkcxE77q6B4wbp8futVWzYvwDqoBQG0Yas25kFgIGneaz8MdUtXa86RlakGbCBkjD/XSHgI30MS9pAtCCuUTjZX6SZ6YeiAfzVElWww0PYlMhq20JJLkDW5boheN0HtauVQaZXygBmjo7WwGFQltN1JVmbuUahoasBvwCcKisZ1EcAYJIG9y2VEVxWyoOXcyh5z9/6tCs+BT+SB+u8T0BoGAE="
+          },
+          {
+            "type": "text",
+            "text": "Hanoi has several well-regarded international schools. Which one is \"best\" depends on the curriculum you want, your budget and where you plan to live. These are the ones most often recommended:\n\n## Top tier (premium fees)\n\n**1. United Nations International School of Hanoi (UNIS Hanoi)**\n- **Curriculum:** The full International Baccalaureate (IB) sequence, from primary years through the IB Diploma.\n- **Location:** Ciputra, Tay Ho area.\n- **Why it stands out:** It's one of the oldest and best-known international schools in Hanoi, and many consider it the city's top school. It has a very international student body, a large campus and strong university placements.\n\n**2. British International School Hanoi (BIS Hanoi)**\n- **Curriculum:** English National Curriculum, with IGCSE exams and then A Levels.\n- **Ownership:** Part of the Nord Anglia Education group.\n- **Why it stands out:** Strong exam results, good facilities and links to the Nord Anglia global network, including programmes with MIT and Juilliard.\n\n**3. Concordia International School Hanoi**\n- **Curriculum:** American, with Advanced Placement (AP) courses, from Pre-K through Grade 12.\n- **Why it stands out:** Modern campus, small classes and a good fit for families heading toward US universities.\n\n## Other strong options\n\n**4. Hanoi International School (HIS)**\n- **Curriculum:** IB programmes, including the Diploma.\n- **Why it stands out:** A smaller, close-knit school with a long history in Hanoi, students from 30+ nationalities and somewhat lower fees than UNIS or BIS.\n\n**5. St. Paul American School Hanoi**\n- **Curriculum:** American, with AP courses, K–12.\n- **Why it stands out:** A mid-to-upper price option for families who want an American-style education.\n\n**6. Singapore International School (SIS @ Ciputra)**\n- **Curriculum:** Singapore and Cambridge.\n- **Why it stands out:** Strong in maths and science, at moderate fees.\n\n**7. Other schools worth considering:** the British Vietnamese International School (BVIS, a bilingual Nord Anglia school), the Hanoi campus of Brighton College Vietnam, and the Hanoi campus of the Australian International School.\n\n## Tips for choosing\n\n- **Curriculum:** Pick the one that matches where your child will likely go to university. IB is recognised worldwide, A Levels suit the UK, and AP suits the US.\n- **Location:** Hanoi traffic is heavy. Many expat families live in Tay Ho or Ciputra so they're close to UNIS, Concordia or SIS.\n- **Fees:** Top schools often charge about US$20,000–35,000+ a year. Ask each school about extra costs such as application fees, building levies and buses.\n- **Waitlists:** UNIS and BIS can have waitlists, especially for some grades, so apply early.\n- **Visits:** Tour the schools and ask current parents. Expat Facebook groups like \"Hanoi Massive\" are good places to get candid feedback.\n\nRankings and fees change from year to year, so check details directly with each school. I can compare a few of them more closely or focus on one curriculum if that would help."
+          }
+        ],
+        "container": {
+          "id": "container_013ebLsEu1C2roujseC7WGpP",
+          "expires_at": "2026-11-12T14:49:00.986950Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 20041,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1401,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5902,
+              "output_tokens": 150,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6404,
+              "output_tokens": 65,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7735,
+              "output_tokens": 1186,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 130
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
