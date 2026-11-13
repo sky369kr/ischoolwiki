@@ -1,0 +1,360 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "b05",
+    "type": "branded",
+    "text": "What is the admission process and tuition fees at ISPH Hanoi?"
+  },
+  "started": "2026-11-13T07:08:44.613Z",
+  "finished": "2026-11-13T07:09:11.293Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What is the admission process and tuition fees at ISPH Hanoi?"
+  },
+  "response": {
+    "id": "resp_0817a33e96a6cff7006af6b77ccd9487d1b0e13f15517aee1f",
+    "object": "response",
+    "created_at": 1794553724,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794553750,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "input_transformations": [],
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0817a33e96a6cff7006af6b77e52e887d186f759d7c8f5a0b7",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "ISPH Hanoi admissions tuition fees International School ParkCity Hanoi 2026 2027"
+          ],
+          "query": "ISPH Hanoi admissions tuition fees International School ParkCity Hanoi 2026 2027",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/admissions-guide/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/faqs/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/01/School-fee-2025-final.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://myispp.com/en/school/ext-vietna-hanoi-the-international-school-parkcity-h"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-E.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-Vn.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://feerank.com/vietnam/hanoi/517"
+            },
+            {
+              "type": "url",
+              "url": "https://index.novana.io/s/hanoi-the-international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-Vietnamese.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-Korean.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://nanasays.school/schools/international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph?via=visit"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-Kr.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://search.search.openapply.com/schools/the-international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph/fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph?via=facebook"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/The_International_School_at_ParkCity"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1cd8u7s"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0817a33e96a6cff7006af6b7811bf487d1990556c48fd05526",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+        }
+      },
+      {
+        "id": "ws_0817a33e96a6cff7006af6b784688c87d18ff91a5121594cc0",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+        }
+      },
+      {
+        "id": "ws_0817a33e96a6cff7006af6b7860c6887d1b85b8ee768a6109c",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site:isph.edu.vn/wp-content/uploads/2026 \"580\"",
+            "site:isph.edu.vn \"2026-2027\" \"Tuition\" \"211\""
+          ],
+          "query": "site:isph.edu.vn/wp-content/uploads/2026 \"580\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0817a33e96a6cff7006af6b788781c87d1b1d86f9c57de2d32",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9reWsBg9yoksRCwUI17EZ7ah1xb73MngJ4nN5aNC5vqF2AXwpewOLhp_ky7nxH-oNHEs4zUv17rPxMWJdGBHrEvSRwGsyK8kK8rkGWDJw-CRd8eMw_h-FMXWehjOSsRn7kShkEhkGfAuuZ-twmEMZzqLDUq0nxz11dbvHg-H8m3VVKi3rqjlZQWHCaQ9om3ucvM-BYHyCJ6w1IF7yihbQxp7BDIB00W1-Hn7mFmkrgemht_R-FjTJMsubqJ2aMmf9dasEc1AdL-EALgA19JyPZrjdYOKNKZ64iuN1_gOoar3IcXB6S_WuRFRoYrYCU-NaD1ROSEa7wYy66RRmKSyUwBU8Sx9IMdMBVBHYrE4xSZh1JC6v9QxG7QVQhbtW5OxkdGV2mmjkzHVIGJAtuYFO0uYMIxWyFE7pJLZTfgkIpmHbkWjz0-P3f56l-ntvOVrjV8VzK4O0uQdtdPkdQTCLTZlxA7EiEjmSeYXEEpGpnMLNLXxNOUh3idN7l2ODBSykypEuaaIjJnTc_YaWOS2xH73BPiCf7NexaJuAfGH85f5EjSP5oQekNlDrGrRxnBRNQ51kR6OvxdD5AyL5WAuHPZDMRvkY0VE7wGjSP6egIn6lBato451ffyI4jWqjgbJYy7oWxndQvobHXzWiiZkYsT4IgSlTgliUjXN9Iicq8Hn7-hiJik0zby_o-ozPTscXbGmOz0EpOwVx_I0XZKISrHAu9BNtJkvHsAftl8cl6fD3cTTC9RiMBOBXigVXlQYfUO6ZmcVtuoLRKy8mfYlvhgb9y8NGX2jnWNjv_E_IcgE-Rd89klI7mfCWh7EL6LRtoyaYBeShR8rcH4MLAU8CvXINaFg3QemPFQ3LXFZtq1IPYe59LLqogFXt-lEJv6r4YXpVBbX4fBUb6u4diEcCVXqbi4mk7aq7mdEjSN29eAHKCkx26ZpUMaUiq1PkwmrDQY576t0_d3QX0orY4Zz6fnotkFy1dfd3sYaE_aAquVOaExh-ZNpKnBau38xs892fNqQZw8f34FVDkjbaDJm8oBtpU_kBQMhXsqAwJmCuCYCxpSKYdGx8yEtUrxPreX7vA3xAV74JV5Fbh62BNGIMM5kXbMagDcC1vJFt1OdY9PPJcuyegGzVvi5e8RXVoFdIhSv5FsGSjGwmW-TTTwqbsspWiDqf3z5YxqV7VMe26K00B7osRWRc3RwmAQd_sLjfAked5R7YFDjcH8UxZ1a5bwYemUCW0LBxY5YTzeoNrfINic-ysj-h--iz9XzRRPyBPSk5X0dFXG2PwCVz0juHREw_-gI_u_4bnarQ11wFOnDx0CxcfGrWD8oUY9xUw0hi_EE1bemz-kBLQKgltK1dY1gEu1Z7_O4QKdMHPHOZUkdLowHKZO5MP_ZLo7ZosD75VKThXZXLitm0mAqtJ-L25gVlJ7_o0xH5ONocaMpzTd76dx7PW9h8eRITsmIJv959-h8hlY75zRUYMjzZaXDKpS7YvOjRw_jIcYfbZlR8pci5fsRbbhNwDclwQmAOcbvCUpneH7mmF0He7ksxQ7IrmYhfZ7gQgeOGXsZncsKYjpML8sRqjTmkVSwwfHa0fLDoStroay51tzzqkA9H72Icc2mUgCcprFx1b7K-nzxa5Moxvw-4UaoK0x7huezJLJW7oSTTApNNzVU6zmaq432sTLqqC9L9dFKdlzR2UtPdY7z-8DZG40rgLvgOPRA7E7YjEHlXnrFyE3e1W_bu49fCyR3sItYljkFOWTg3uhDglKQTfb4A5LiWrsTY9fRg3E0I5IakXZFlwjY6gt_majjBgZwvWt1rKc9ENQ99b7E01Dcy4NqnyG-VEu31sBuRo7t7Jr2bpolt9GcAUggbmhEuRBULg==",
+        "summary": []
+      },
+      {
+        "id": "ws_0817a33e96a6cff7006af6b789592087d1a0e59f97cbfae434",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/admissions/admissions-guide/?utm_source=openai"
+        }
+      },
+      {
+        "id": "msg_0817a33e96a6cff7006af6b78b6e3c87d1bba32e2d99cc18c9",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 267,
+                "start_index": 184,
+                "title": "Admissions Guide - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/admissions-guide/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1065,
+                "start_index": 982,
+                "title": "Admissions Guide - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/admissions-guide/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1316,
+                "start_index": 1226,
+                "title": "School Fee 2026-2027",
+                "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1882,
+                "start_index": 1792,
+                "title": "School Fee 2026-2027",
+                "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2379,
+                "start_index": 2289,
+                "title": "School Fee 2026-2027",
+                "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2622,
+                "start_index": 2551,
+                "title": "Admissions FAQs - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/faqs/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2896,
+                "start_index": 2830,
+                "title": "Fees and Incentives - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+              }
+            ],
+            "logprobs": [],
+            "text": "**ISPH is The International School @ ParkCity Hanoi.** It accepts applications throughout the year, subject to places being available. Its published fee schedule is for **2026–2027**. ([isph.edu.vn](https://isph.edu.vn/admissions/admissions-guide/?utm_source=openai))\n\n## Admission process\n\n1. **Apply online:** Complete the school’s OpenApply application, upload the required supporting documents, and accept the enrolment terms.\n2. **Attend an assessment:** You and your child meet the Principal, Head of Primary, or Head of Secondary; your child completes assessment tasks.\n3. **Receive a decision:** Successful applicants normally receive an offer letter within two days, subject to availability.\n4. **Accept the place:** Sign and return the offer letter and pay the registration fee.\n5. **Complete enrolment:** Pay the applicable tuition, deposit, and any other required fees before your child starts. Contact admissions first to check availability in the relevant year group. ([isph.edu.vn](https://isph.edu.vn/admissions/admissions-guide/?utm_source=openai))\n\n## Tuition fees: 2026–2027\n\nAll figures below are in **Vietnamese dong (VND)**. The termly column is the **total for the whole year**, not the price per term. ([isph.edu.vn](https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf))\n\n| Year group | Annual-payment option | Total if paid termly |\n|---|---:|---:|\n| Nursery and Reception | 211,565,750 | 232,714,000 |\n| Year 1 | 327,987,000 | 360,815,000 |\n| Years 2–4 | 580,582,000 | 638,790,000 |\n| Years 5–6 | 589,570,000 | 648,740,000 |\n| Years 7–9 | 652,379,000 | 717,650,000 |\n| Years 10–13 | 691,541,000 | 760,770,000 |\n\nThe termly plan splits payments **40% / 30% / 30%**. Nursery, Reception, and Year 1 figures already include promotional reductions. ([isph.edu.vn](https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf))\n\n### Additional fees and discounts\n\n- **Application:** VND 3,700,000 listed.\n- **Registration:** VND 18,650,000 for Nursery/Reception; VND 37,300,000 for Years 1–13, non-refundable.\n- **Security deposit:** VND 35,000,000, refundable subject to at least one full academic term’s written withdrawal notice.\n- **Sibling tuition discounts:** 5% for the second child; 10% for the third and subsequent children. ([isph.edu.vn](https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-V.pdf))\n\n**Check the application charge before paying:** the admissions FAQ currently says it is waived for new applicants, despite the standard fee being listed in the schedule. ([isph.edu.vn](https://isph.edu.vn/admissions/faqs/?utm_source=openai))\n\nFor a midyear start, request a personalised quotation and confirmation of annual-payment eligibility, other charges, and available incentives.\n\n**School contact:** info@isph.edu.vn · **+84 2 456 789 000**. ([isph.edu.vn](https://isph.edu.vn/admissions/fee-and-incentive/))\n\nIf you share your child’s age and intended start date, I can help identify the relevant fee band."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 2
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 21150,
+      "input_tokens_details": {
+        "cache_write_tokens": 17,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1039,
+      "output_tokens_details": {
+        "reasoning_tokens": 309
+      },
+      "total_tokens": 22189
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

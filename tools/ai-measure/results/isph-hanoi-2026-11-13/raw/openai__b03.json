@@ -1,0 +1,696 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "b03",
+    "type": "branded",
+    "text": "Compare ISPH Hanoi vs BIS Hanoi"
+  },
+  "started": "2026-11-13T07:07:17.705Z",
+  "finished": "2026-11-13T07:08:29.151Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Compare ISPH Hanoi vs BIS Hanoi"
+  },
+  "response": {
+    "id": "resp_0a3dd77893bdc3b7006af6b725e6d487d191bd801693d554cc",
+    "object": "response",
+    "created_at": 1794553637,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794553708,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "input_transformations": [],
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0a3dd77893bdc3b7006af6b7281a6887d19c2225bbafdb5025",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "ISPH Hanoi International School ParkCity Hanoi curriculum fees 2026",
+            "BIS Hanoi British International School curriculum fees 2026 results"
+          ],
+          "query": "ISPH Hanoi International School ParkCity Hanoi curriculum fees 2026",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+            },
+            {
+              "type": "url",
+              "url": "https://isons.top/bis-hanoi/news/2026/7/29/bis-hanoi-class-of-2026-celebrates-outstanding-ib-diploma-results"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-E.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/comparing-international-school-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://international-schools-guide.com/insights/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://myispp.com/en/school/ext-vietna-hanoi-the-international-school-parkcity-h"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/learning/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/faqs/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/ks4-curriculum-booklet-2026-2027.pdf?hash=AB55175F0DD93485ACDEDBBE0FDC60DA&rev=2d3c1d5c13564e7f8aeac9a8228c26ef"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-candidate-brief---teaching-post---august-2025.pdf?hash=DBF85D8663232AA653B0A879A0E44F81&rev=7f67e3a605204addbbaa6ea8195f1422"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/bis-hanoi-school-prospectus.pdf?hash=583B5FE9E3F62CFD96204BC4E396453B&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1cd8u7s"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/uu5uyy"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Schools_offering_International_Baccalaureate"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1ai3qfk"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/16c6omr"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/17l490u/hanoi_schools/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0a3dd77893bdc3b7006af6b72c9e2887d1a9ae84a194834987",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site:isph.edu.vn 2026 results A level IGCSE",
+            "site:isph.edu.vn class size students 2026 school 500"
+          ],
+          "query": "site:isph.edu.vn 2026 results A level IGCSE",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-igcse-achievement-2025/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-students-receive-outstanding-results/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/2025-igcse-as-and-a-level-certificate-presentation-a-journey-of-effort-and-shared-pride-within-the-isph-community/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/faqs/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/official-isph-receives-the-formal-isqm-gold-accreditation-report-from-edt/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2023/10/KS4-new-update-23.3.23.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/online-discoveryday/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2023/03/KS4-Curriculum.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8F%F0%9D%90%87-%F0%9D%90%80-%F0%9D%90%8B%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%80%F0%9D%90%AC-%F0%9D%90%8B%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/category/news/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2024/01/JD-Marketing-Admissions-Officer.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-Kr.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-Vn.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2023/09/A-Level-programme-leaflet.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/learning/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0a3dd77893bdc3b7006af6b7326c3887d191ecafd93643f1c0",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9rds9S84ZEL0aEL5bftiYuPNg7WktLU3wMo2KlURKuSb6ssVqD67YKzW9cmutOPDYlJ4LksPrk9LG6xu_TGLtJKRqGH6s22JZHtUqtx7odI0GhtaD6fNJ6Z12HbA8zUP2k5_4HgfP51M45si2GKFodXKFkW5KcIfx2gwl9PYpZzA3rVopouQjwqTKjoJjI5OhjmieubtU7LQqwt4BR5ty9rK3yVdQ3MkLrm81i4rcIGVs8LZ0z2ESvNrKtc3PDkoAzR-2Mks1Cd0p_LLRcmRUG9ncVEkhNzRyqMXj0OhY589ypa8gD7basZj3sHcymEBk5RC5l0UDlEssaoutO3czTp-g4mlkfeeMquLEt0KKggUsftmpZrfgjoViM9-z-svyfvOIfOVX2JvrrrQZE_fB1H1Ind_t4_Kezb4Z2IYbj3QMMbW2nKXzbtHX2KknTgD75A7TsaReIbb6TEycOnJPxC8Iq8KmTetDEKiRsR9qmr-YQJgrP_kkvTVCB1ugdBi5_xnjPAM574CG8-3yGkh7NwXgE0RSt5risTRN4PJncEC4zGppDwl77WoXZtcllWSf8pkspJId_TSX213VcrJrsxBgPEsek-Pa_TmLvm51R4bAN60LBDyHXwXvSvLJskRhj927ZxjPnOz7_4nFGYM6hQAt64DhQ6yElJKcGG1P9hj_gllWl1EnIzpAqNQNZ61bdiadS6t3jIgbcSu86xdJC1iLAvZ3F2wwk-IOMo4HYOfkWKf0XHr8wNmaahkbGL4rZvodbRhLqb8tScQMpWc-t0vj1wOLB8cWZ-N5oBlyNgJwG4Shud1hAfxhXySiLyFJtiSpSpxEz_y2z3gW8g8Bcv1nMEfsNc4lFK1OvAmb6Hs_5uwdKYTDM6Df_N9vCXjQAMM8cw1Vi4dZv7ooA-35IQqfNGYuY4BCFwt-AGR1r275P8St2dSt54uLbR2N13Nnki0pek_1dPjJWZ50fyyDC4OSRT_DMJ8zBEKi8cY2HnnOG7rY5jDr13jn_dXjrhqvFsDYdnsfi2Bthe9fls91gZwAPaC4mDIOE_bOLxFkUlgua7tRQItNesr-QTi2kXqsEAEYIEOLexSqdSIG7PGgZB4Me8Al5aF3mFQQ2Q9NGgOSaZTx9gHTE0WBoUFOanSN42dlaeRsradl0c7bs4kwp7VDyF0g81Py2jI7P0Y8l4-MONxAy_erCOcIVwHKfFUsQL6HbcuFKHIllMmf9f1QmU2Fcr4MR0c9xIhLTrMl_fHz4CIK8Pt5mlqcjs66AQDdAod9EDtsPB5Adg7apur-HCozd0Rr01yWoHmgpI2zAiMEEEp-jXFakR4J9v1CxqjVEVGpEV-bUGR90JgrKnKwY7k7I99sP3IeQIhemguQp6kf0s6TtxZ0o3CWvdbOQGTUhSyPQNldJ-HlteQbJImWuAgXf3L2ZQs_YMMk2VKVS3Pm6KNpzZEQP4LhyRLCGDUNYJms9r7QZH9PL-Zk2nATDIhBvsbwjpoIbvKmXT2Yrw1xbY8k3ZT_t-xLPN3m6104mBURVYVV2M7rt3nbbZcC9QephFGoBOSMTD-TomCCatValBQ0PgKlUzJdtdpSRMlqdjiVPOd1iR3p7amLjKAdJCK3SX1g4KkfdJpaulnkruztrfIKy6FXhbikSvYL1pKuQavlHSAXIu8tUVr_crt21E7BRC0eFZXxwmijE88HIr4TFwXiuudQuSGFw9Q4ZeAwjxwubgtjdQnOT0U2rMtRJwXug==",
+        "summary": []
+      },
+      {
+        "id": "ws_0a3dd77893bdc3b7006af6b732c79c87d1a6f4dfb8c2d46a24",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.nordangliaeducation.com/bis-hanoi 2026 IGCSE results",
+            "site:nordangliaeducation.com/bis-hanoi \"800\" \"2012\"",
+            "site:isph.edu.vn \"2026\" \"A Level\" \"results\""
+          ],
+          "query": "site.nordangliaeducation.com/bis-hanoi 2026 IGCSE results",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2026/8/21/bis-hanoi-students-achieve-exceptional-results-in-igcse-examinations-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/upper-secondary"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/news/2026/08/blogs-and-news/bvis-hanoi-igcse-results-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2024/9/6/bis-hanoi-celebrates-exceptional-igcse-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence/academic-results"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2025/8/22/bis-hanoi-celebrates-outstanding-igcse-results-2025"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/news/2026/8/21/bis-hanoi-students-achieve-exceptional-results-in-igcse-examinations-2026"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/parent-essentials/2025-26/school-profiles/school-profile-2025-eng%282%29.pdf?hash=3999C78456EAA6E68A3A382143FC538D&rev=2a050e5df90943809963133d42c81d15"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-candidate-brief---teaching-post---august-2025.pdf?hash=DBF85D8663232AA653B0A879A0E44F81&rev=7f67e3a605204addbbaa6ea8195f1422"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/job-description/bis-hanoi-candidate-brief---teaching-post---august-2025.pdf?rev=179cad5a543b4bf4bc3894510f25892c"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/277491-secondary-school-profile-for-colleges-and-universities-sy2022-23.pdf?hash=4105892286FDD15B31DCDE6CA281D82E&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/secondary_school_university_profile-2024-25.pdf?hash=444A61C30C0D7E70C67940AED2A5F007&rev=5ee145923d2a499a9d29c07a44df8254"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Nord_Anglia_Education"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Vietnam-Australia_School%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/faqs/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0a3dd77893bdc3b7006af6b73b66ec87d1835f2f6e1a08d31e",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9rdsNMgk8cIw4ykstafbaaFUCsvCUFSxkyIsq5q7IdZnXIv_ERYhxCF6hU0UeLETQ4d9oSpAK7vI4q_HhwXXCpcEqFUHbSCoYfX11Bvv4zCg3lRaL1dfvuZxZmATDb4Gc5HPg3-eKOWU4GyQekBsL3CV4OLqQZUHS3OnlE7kzwkQFgOQmftMVEGCxkoEiQY3hzTRTBEas1sNWqoM1tO9mMzsEM-ecYcjv_-3jT8bkATzKsghdoip0FwPE8wiI0nFkNHaIl_tuGuLpx8Ao7bzxVcRtH3zrzpEoWis7SaQ1678q8TdtaiwTLT-cjBq7Q0fWIhRQxcvhOK_J6G-tBwbZD7q-1-Z6HmPi2SbFiNSAjnpwYxbKSRhlNPhSMdRUwjTV6tRq1Eh3k3ar-U8xC-o83HDCudmM5Rl7mg16yyL5QojJl6NK79qlcBUASe_y_6MLKN38LsctvJ1M4INVll5tLX0oU_PpnFI2k3CdPxjI7uKOVx6IKxx6CIvbrNyd60WflRds3ly5YGbesmPMhpkJrmm-G5MlopcBs-ICa5iDnDsFoAkR6hjsOiF88epQX5kO06ovWqqHzT27Ym-EqJ6qKQ-Pl5L7YfDjb3HCSkBOp8lH8OaOGWwbWRJREWRtbr0kVM_mcUKxen84gESfOzTS2SiLiwsESX9QNHd5eSEDojZH_6zPpiMBzmjI5Z19YLxyUJSOtcKClkdyf7ROalG7WHIFf5Q0Tmm5b8wKdNzMaoogN1AERSC8k6AQW-pQnzAXF8Ww2TXeM7e5zjxX3XtH8B35ojEknCEtr2zNyJPnd0JqRQjyPtMawdkE-X2_nfov3wjJvXRw4t7KWt7lX7CVjqiF2SV6u8qiCQsGjo0I_kKeV6OJKhTI3NLhxPQKjH490AiiHK2z_-xh3hGFwrsHcOBUT6ExN6YN7klxyTn07aTU0_dZQKYqAP84G6Heu0jAr_vcp6J4t5Q_dJc2b_W9DD5hA8iVGki2aZwiTw8rsqNpTOHos92fskrH9fe67rZZ8Syj2mIeAHkjr86rJUVONNFBgQHrQnNqgMHKonQZ9-_aACXzG9kxJa1TSnvSF6jHihteX8gQ32l-w1bYV5Z7N2cpMG1DHqjNPGt2K5k55qJYopUoedEstjwj6VnjmAxjSEAoK9JD02DrsMknQfxqoFg7kid-RGGd3ql4145i3TNM6SSugswxgUbnBOErozdvc2Ph8KBlnaBZjiUiZf9G53XGN8h6tna3CNbi2zRzTziseDCnLyn8msxkNVMXs37uh4OK5EU42zeCaetLRXiGAp3pBH3FXk7Qm5I52kGalHHlFUyqmnP4UMyyOwuEpo03_cchdzLF7AskDN09VNjCE_FdPEXXzD4b8oAPE8dzeUK70ncOObH39ndJCjA5x9E4ulzVhP67TmnF89L6u7SDQKPXwHDjaa0icNHh40_sioLka39mnLvQT_oxxEAaHGDm3ln-x9LMwzSYLwrEdQUE221Pc-zzGIgHMFxw0wVcDYMmMbkmrsxJlURMMKCJjDe4fJflYWcf0-EKprOHGdC86L5ja2lZyXJ-I-hpuHpnGDcEED1FHuTVkDCmiUHHjztwRokVgqG9D8YIAe-heWNjfDs8xC4bg9Lr5fus8qStGJ7EMlXX2aXFbiG2ZQE3bwnGchMvjPAOMJ1XW94kR8oym5shsHMTbFT-cCmkzSUqwVbyLw6bL2pOxKSymKuPGBKEofy",
+        "summary": []
+      },
+      {
+        "id": "ws_0a3dd77893bdc3b7006af6b73b81d887d1882f231c8120255e",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site:isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf \"Year 7\"",
+            "site:nordangliaeducation.com/bis-hanoi \"Vinhomes Riverside\""
+          ],
+          "query": "site:isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf \"Year 7\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/prospectus-2025.pdf?hash=5D1FD65472BEBC673EB9BDD46092E1F3&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/campus/facilities"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/about-us"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2023-24-sy/admission-documents/bis-hanoi-prospectus-2023-24.pdf?hash=12C6F5815B038310CB6CC110F6679C77&rev=3e4e7bc0f8434949be08a10318808ca5"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/bis-hanoi-school-prospectus.pdf?hash=583B5FE9E3F62CFD96204BC4E396453B&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/contact-us"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2026-27/ks4-curriculum-booklet-2026-2027.pdf?hash=AB55175F0DD93485ACDEDBBE0FDC60DA&rev=2d3c1d5c13564e7f8aeac9a8228c26ef"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/01/School-fee-2025-final.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/secondary_school_university_profile_25-26.pdf?hash=E2E119601191518BF98FBD9BA3A31DD7&rev=859832ba61ed4067b8d3be94e83dec2b"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/contact-us"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/about-us"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/campus"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/eyc-taster-morning"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/parent-essentials/early-explorers"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/our-curriculum/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bis-hanoi/campus/facilities"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2019/08/16/moving-to-hanoi-knowledge-from-our-current-parents-to-new-families"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0a3dd77893bdc3b7006af6b740c2ac87d192919d0a3ec0d344",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9rdsnjr1JrUe5kke3OaT34avLVXU4i86tM_nx2gczMNEYSxBWbltRF7ehcA0IuNlsxc3Fq5ZvHDraStxFcvaPpc6zyb6bMDyWJ_t2axnaEtY0Q_5olue3A_6weyMxFi2shvewGj4EiFH-x8Hodcnu1erZAyFQMFwfUf6bTStZAt4hPKT14GIiN-Ej2KjdMh538QklA2kXIupzY9gS2lcfUA_SJhrsASawqXPwIXFXx9qxZlE6ZMm08jXfaIE7OvluuOJANdWzvexP7aBuRuXxel0tv3LAsvAmWw0WYNjmBwlD1GIES6fqge6eoobvkeTmUvkNHI3fZz4CX0EaQRNL9SBPflqBVFa4TJQIgd9MWB9MvBPrgneTzwzlnNd4I0zF_AvkmeC_vlNoJ7E8fj_uecEdLt_TlJgnLoxiqtnf3BXdjF9dyIfKnRa4gYR1-FkkqYXDzFtpe6gJ0U2Gv9oyrJCsA3Ku5fVPR5NV7BrernT8qf1r3pqDChE9a6NIWCLGBaHntCMjpCXssluNBWO22jWC7oUEy82-kLzSR1zecHnODLOSVKkuodZOsfkfD7x3GrgecoHfFVCM0v8hWdZBW5R_udkq1oGm4Ecbbw_NCJqYNn2WPuEcP8qC6Gh1ogA1PKSQbVheltp2aaYBGKxw4lYc_5eiBNvmdxaCc4q5JbZSXIASIGqeCPssEWtDkH1XiZX3VVdpy2yfD_BSDCp641iuf0n8oD-09EIFgMJYGKe1Gv4nheKgkBPZi13vrmYSFKbtMW0JPfv-adA94_sjwDIKVk9md6NZTtgXOJN6ApNdmC47iT5WwJLZdZPyExVUi74K-R5ioblcnjGtFoqwLSUL9QORFm9Epl6Q6gNLyMdiwO6fw2oxvnQmjcyMOPOlgoYGXl6gYkaYqJaOJ3uHoRWVBf8hB-iZZ0AgzSHGxEDquxNK1a8vTQSx1kfeACm_qMiYjcZRSIQnyFsXdt5LlXseMVg6IP_6fXwaEVzR9dr2QbOx92iHLkuHMfjOxG_7ndjsWs2LwSeadf-xRaN0PvZAJ5t4kQr0bylI78WYw1pq2J7v4wWfieECBVQQMzeY95uliXNg5A-yApYSdimnywsTVboA23uMMct1gr6EPxl2hFuGdEi9--DqL5xY4fkdQkwTuCV36SJWAZsC2xpYMERtCWAdcDMzSfa0SAccakNL98Jj56QX2MrEOV0f7qJy4HQ7iLl7wkBXzn1O5NywmFlN39w0xxZ1G4nvbNrTV8kYyz5Jhldm2Fb82OwlL6s38ZyXbuG2NTNKQBGC0bzXqdNKLD01e6L0K9QqM3dTVMBc6VHmI69D0KClnamslKl4eQrLEOAAo8G92Hgkxrobp79EZ7rpsTKLPW8IKT-0inSre2x3YlcM-Q8PW95636RJqa5bJYdYDTon00ZPIfpcsEqi0Gc03qXxvwnbwki6NSd6nYdy20n6O96a2uoGtNO8UHu29EeobALZUNIGxdkiGhETp54azkC2Bb-6hxa1vD1okTbcGnr0LEpndX8jDulNOME2aPvdrl-DLJjUbHo5tEwjzaDK7GLMlXuIJiPjjhPgOKoSLHF4RvnRtf_QnMIwnsB8dbNJFRA5_GgLvhiWvJRc8OgY4cpqxwdBJ-im0XNf9hAlhlAFI2094iiYiyVzhApj5u5C2v4J4u1Bow69sMjRcMjUIeTm12wfUlJUSG0DVWDBFPamtGtejlY3elRbkgZvJAhMrJ1972XSqRYutISEuah7f6W_IAgsAH8awlJP2A7DrNSIMDgS_abLrtzbTYzyRqMA4x2loNAyE0cbOQMxwesbM7QzCD2wXqbWJM3UKjtG5C-Zx7w3O5GYAEFDtlBWrUSKp4MjHGCL08lz2us0g==",
+        "summary": []
+      },
+      {
+        "id": "ws_0a3dd77893bdc3b7006af6b7414f2087d18de9ae8ae82bc1c5",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+        }
+      },
+      {
+        "id": "ws_0a3dd77893bdc3b7006af6b74ba6bc87d1b3d7847e528910e6",
+        "type": "web_search_call",
+        "status": "completed"
+      },
+      {
+        "id": "msg_0a3dd77893bdc3b7006af6b74dea6887d194b32a4970be8180",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 466,
+                "start_index": 391,
+                "title": "Our School - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-school/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2317,
+                "start_index": 2251,
+                "title": "Fees and Incentives - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3036,
+                "start_index": 2786,
+                "title": "𝗜𝗚𝗖𝗦𝗘 𝟮𝟬𝟮𝟲: 𝗔𝗡𝗢𝗧𝗛𝗘𝗥 𝗢𝗨𝗧𝗦𝗧𝗔𝗡𝗗𝗜𝗡𝗚 𝗥𝗘𝗦𝗨𝗟𝗧 𝗙𝗢𝗥 𝗜𝗦𝗣𝗛 - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3452,
+                "start_index": 3323,
+                "title": "Academic Results | British International School (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4192,
+                "start_index": 4102,
+                "title": "School Fee 2026-2027-K",
+                "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-K.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4469,
+                "start_index": 4390,
+                "title": "FAQs | British International School (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4953,
+                "start_index": 4887,
+                "title": "Fees and Incentives - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 5329,
+                "start_index": 5226,
+                "title": "Contact Us | British International School (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/contact-us?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "Assuming you mean **The International School @ ParkCity Hanoi (ISPH)** versus **British International School Hanoi (BIS)**, and you’re comparing them as a parent:\n\n**The main trade-off is a smaller, lower-cost school with A Levels at ISPH versus a larger, more established school with the IB Diploma and Nord Anglia network at BIS.** Neither is automatically the better fit for every child. ([isph.edu.vn](https://isph.edu.vn/about-us/our-school/?utm_source=openai))\n\n## Side-by-side\n\n| Factor | ISPH Hanoi | BIS Hanoi |\n|---|---|---|\n| **Location** | ParkCity Hanoi, Le Trong Tan Road, Duong Noi/Ha Dong area. | Vinhomes Riverside, Long Bien area. **Test the actual school-run journey before choosing.** |\n| **Curriculum** | British-based education → IGCSE → **A Levels**. | British-based education, including IPC in primary → IGCSE → **IB Diploma**; also offers a BIS Hanoi Diploma pathway. |\n| **Size and maturity** | Opened in 2019. Its school overview reports approximately **300 students**, although that figure references expansion from 2025–26 and should be reconfirmed. | Established in 2012. Its **2025–26 profile lists 903 students** across early years, primary and secondary. |\n| **Post-16 fit** | Worth prioritising for a student who wants to concentrate on a few subjects. | Worth prioritising for a student who wants to retain breadth across languages, maths, sciences and humanities. |\n| **Class sizes** | Describes small teaching groups, but I did not find a clear current numerical cap in its admissions FAQ. | Published caps: 20 in Foundation 1, 22 in Foundation 2, and 24 from Foundation 3 through secondary; IB groups approximately 11. |\n| **Wider opportunities** | Sports and specialist arts/science facilities, plus its relationship with sister school ParkCity Kuala Lumpur. | Nord Anglia opportunities and collaborations with organisations including MIT, Juilliard and UNICEF. |\n| **Main consideration** | Newer sixth form: 2026 was its **second graduating A-Level cohort**. Confirm which subjects will actually run. | Substantially higher fees; assess whether the particular opportunities and support your child will use justify the premium. |\n\nSources: school locations, curriculum, profiles, FAQs and programme information. ([isph.edu.vn](https://isph.edu.vn/admissions/fee-and-incentive/))\n\n## Academic results: no obvious IGCSE winner\n\nThe schools’ published **2026 IGCSE results** are quite close:\n\n| 2026 results | ISPH | BIS |\n|---|---:|---:|\n| Grades at **A*–A** | 45% | 43% |\n| Grades at **A*–C** | 89% | 89% |\n\nThese are school-reported figures. **I would not interpret the two-percentage-point difference as proof that ISPH teaches better**: the figures alone do not account for cohort size, admissions, subject choices or students’ starting points. ([isph.edu.vn](https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/?utm_source=openai))\n\nAt sixth form, BIS reports a **2026 IB average of 35.11 points**, while ISPH reports a **100% A-Level pass rate**. These are different qualifications and measures—not a meaningful head-to-head ranking. BIS has the longer published examination track record; ISPH’s sixth form is newer. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/academic-excellence/academic-results?utm_source=openai))\n\n## Fees: ISPH is materially cheaper\n\n**Published 2026–27 annual-payment tuition, rounded to millions of VND:**\n\n| Year group | ISPH | BIS | BIS costs approximately |\n|---|---:|---:|---:|\n| Year 1 | 328m | 658m | 330m more |\n| Year 3 | 581m | 716m | 135m more |\n| Year 6 | 590m | 735m | 145m more |\n| Year 7 | 652m | 847m | 194m more |\n| Year 10 | 692m | 893m | 202m more |\n| Year 12 | 692m | 970m | 279m more |\n\nThese are the published discounted annual-payment rates, **not total attendance costs or necessarily the quote for a mid-year entrant**. ISPH’s Year 1 figure includes a promotional discount. Both schools charge more when paying termly. ([isph.edu.vn](https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027-K.pdf))\n\nBIS says lunches and uniforms are included; buses, some activities/trips and additional English-language support can cost extra. Ask both schools for an itemised quote covering the same services. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/faqs))\n\n## Which would I choose?\n\n**I would lean toward ISPH if:**\n- You live near ParkCity.\n- You prefer a smaller school community.\n- You are paying fees yourself and value the substantial saving.\n- Your older child specifically wants **A Levels**.\n\nThat recommendation follows from its location, reported size, fees and qualification pathway—not an assumption that smaller classes or better pastoral care are guaranteed. ([isph.edu.vn](https://isph.edu.vn/admissions/fee-and-incentive/))\n\n**I would lean toward BIS if:**\n- You live near Vinhomes Riverside.\n- Your child wants the **IB Diploma**.\n- You value a larger peer group and the Nord Anglia network.\n- You prefer a school with a longer sixth-form results history and can comfortably afford the premium. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/contact-us?utm_source=openai))\n\n**My bottom line:** For a younger child, I would prioritise the actual class teacher, classroom atmosphere and commute over brand. For a teenager, I would start with **A Levels versus IB**, then confirm subject availability and support. I would not pay BIS’s premium solely on the assumption that its academic results must be better.\n\nOn visits, ask both schools for the **actual class size, teacher turnover, English-learning support, learning-support capacity and parent references for your child’s year group**.\n\n**What age/year is your child, where would you live in Hanoi, and are you comparing as a parent or as a prospective teacher?**"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 4
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 51400,
+      "input_tokens_details": {
+        "cache_write_tokens": 11,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 2139,
+      "output_tokens_details": {
+        "reasoning_tokens": 596
+      },
+      "total_tokens": 53539
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "b04",
+    "type": "branded",
+    "text": "What universities do ISPH Hanoi graduates go to?"
+  },
+  "started": "2026-11-13T07:08:29.152Z",
+  "finished": "2026-11-13T07:08:44.612Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What universities do ISPH Hanoi graduates go to?"
+  },
+  "response": {
+    "id": "resp_03947d7860ef992e006af6b76d92bc87d19fb862c83ae50467",
+    "object": "response",
+    "created_at": 1794553709,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794553724,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "input_transformations": [],
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_03947d7860ef992e006af6b76f4d8c87d18d2e567315436c8b",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "ISPH Hanoi university destinations graduates International School ParkCity Hanoi"
+          ],
+          "query": "ISPH Hanoi university destinations graduates International School ParkCity Hanoi",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-alumni/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/stay-tuned-more-offers-rolling-in-for-the-class-of-2026/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/university-offers-keep-rolling-in-for-our-class-of-2026/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/a-level-at-isph-gateway-to-global-scholarships/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-student-secures-an-offer-from-the-worlds-2-university/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/category/academic-excellence/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/good-new-from-year-13-class-of-2025/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/our-staff/alumni/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/year-13-graduation-ceremony/"
+            },
+            {
+              "type": "url",
+              "url": "https://parkcityhanoi.com.vn/assets/pdf/parkwindows_issue_vol6.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8F%F0%9D%90%87-%F0%9D%90%80-%F0%9D%90%8B%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%80%F0%9D%90%AC-%F0%9D%90%8B%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.desaparkcity.com/assets/pdf/parklife_oct20192.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://parkcityhanoi.com.vn/assets/pdf/parkwindows_issue_vol5.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.britishcouncil.vn/sites/default/files/handbook-easy-step-guide-on-edu-cooperation-and-investment_in_vn_final.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/The_International_School_at_ParkCity"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/International_School%2C_Vietnam_National_University%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1d6ud0g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Hanoi_National_University_of_Education"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1cd8u7s"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/C%E1%BA%A7u_Gi%E1%BA%A5y_district"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-student-secures-an-offer-from-the-worlds-2-university/?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_03947d7860ef992e006af6b77219ec87d18aa4d2ea25081925",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9rd8kcsV5mHe-QgyALWRR_IVOXw3lmLE0hfXUs05s-VR-sXngM5ZkxbQMDXXU9H6zUQSFbXJa1vIJFBB1pmNbhP1MciEBG950pVOLd1tzB_TNDUqKK6WyVMKxIFhCjm0xdF7DR5XmtB25kFK0sxMLV6SRVGJNvyD7hhLYGZUrlx_teSgMPwsR0_OGRJ6JzylHXuZ-bGuODcThMYQheaDIZ3HSWeDPHNRmssZV6frD-yuaODrJhXZPicQvSodusz0kfs3IsoDDPpgutUIdHHEXSHU5-w4fwiBbz95g7x8n4PtloYAc9gkdlsxCFFb_ZQ5ZglVmvahG3MAptz8eTSQXdHsPfx2Ly5ZeSffp6pmw5ThoSsxLLcH3DMA4x4BBvA2KekU9XA9iR-PftFZuv92OlbGbCph7hXT9onaw0NvnKrg0BGlNWm0DLcLoV4cOjiTpxQkdBytoZyKsSrfQLt3AiKhS8yGYxFo3LoHEcRBOfv3qtULZTUCdNEFOSovEfhWCGF3-hBtQwM-zsMFB2oEEBAIdnLi_WzONujz1uFEKy5oJKR_QM4i_psn6Y7rAMUT692kHqDGDojkQXMDlYgNRbZzJHGYuihzhhl_z4TCVJzIukgr0j26MgFXPOU1YwQq_NsvqEIluAfGy3ieFF7D8-cmSVSGts9GGgRn5bxDNibqWVlLD6WKqzczMQchV-4YzglYnzSwdKqc2KVZSTDNdrCSSVfu942VYckNKi2kvJP6vSsoNqj-bG_hzt1dnJ8DLPuv1Gs7Sv7FSMsxNxqGSRCrG3G9Ol1iWIqcJ1qJWnBZWraOhqxglkoyEyzM5ebgZfJAaGBXjq1g2684MPm-y-h5Ut0NeODXjqbL8P6zMUW94FSKRUeNV15Fl0b9-6pRbQM4S4boZoW15xJArwY48dNhUPbsh095C4n6R31EaG4e5mBINu51HeY1j20v8M-EEmhuSEuyT49RDpG1aFLv3jIT5JRNNiBynDHYx1q8H-zExEmx75UjaUCLX5mFF1EeIXisgEB4Y6DHESqs2m3CeFpqXK8aEHKrgnbWo1FkVYBw59gAbuaqjM1OCfx5QgnKXxoHdu2H9FghaembDmxy__EKjIFtxRiXnZ9CMlJUiBio48_s8wo6iWK2T6p_jgkE-jfMKbqBGihsTWxaP36L_dhzZTrR-BTT2BoMoC83_6nSTdJU8_xrLBUqMfJUdyTWHZMLnWUBPn48HAgxVewozsqlFReN99lZeYpilMr1uJFNiy4Jn8h4Bz_klZ_msTpVn7Kl1iDCUlouiCVs4BBjeDi4lQB33CPEeVPFjHI-oNAaa62Oif10MvjGbi_HBpVbojyzwARf-0hxrAw8dvgLg-D580mWwo56N-rPvPNTMozdb0pvnImnbtzUgDChPunf6cMKOh0CngsO11kfkegKWI3NaEUFc8DlK6hawfFCVEcBgNW-fo1fxxe214ypb6BSk8SycAMQVvdUjohkIAPs5vT-QdmkMsLKlcUUJvEfrfLVKOnxONk6rpAomkHJlRQiH9rqYJkhdvuYSFaDcGWbHMF_pz3FCfuvBRO0qM3u2k-1eZ9wHGzOv6yzf4XLtH5WwGM9D9e7kGBOfHLzfOKqYUiKiYAp9-s9hVsbwVtz199pbAsIurjZ-3n3MYePMByl-7xhgSor47g9zHSkj-HbvEdAdhjaq3QyGwf7SbQauU6MM5Yx0_XznKmV_s8Ip4m7rXy4wgrcZpB11C4jdZOu84cWjDuMVNK3Jfain4udlg-oQ1nrkUtzNnJ2QZ4gx7_GdKDTBvJyxKnPCAzCF24NbUH1iQEFcyfOw9hnmAFFSJnhb4f-HhVXk54NQp7PlMjP56Yx8kfbzdj3oJXKqrx2HYYuYSuObuJLq8m-NDSw1UuPddP-Ulgos_0CSe5zuAly8isRr9oJmjsb4vYNosBWAd5Ze1cxNTps0d6tlOftS7olqkUdVfrYqeNKBXtsuL8vjY6nhgYQoX0XRUeDrVUHieAHhcMq4KE1MQR5oGZYZo3M2DEP_jfgLoeDGrYCvphWuwFLJhMxy_kTU8DjEmiIMBX8q4-8j_SRbnufQsAms8u48agW2uvquKtWsDSN81K37w3-bNjOJdU6nrH8J_XJ5-E8KZw46LUTTKQyGRvlQCrmmEtTE6-_toj9WVfYHfO1cZrkUoOb1uJARQ8s-uokZCIM9ptcTweVlSiWjKt7pp1MsMJ5nWPk7YlMV_RIywGet84-iziOkcvPsx4_58aoph24uV5YWklo9MDv6NUm_rPGJtKLREmZlvO50yhlCPJaPOT14zSQzHYFsHvHD_593mtC5VAhVXmFGPQsHT73DoEF0IG3X0yVmpJYsMYkRW2u2XqPdDu6NnzMcEI8BiVigSjTg4ypOmPKBJZM9FVYlilOKXN-quAudB0oxe6TL9lbMeWjjbApqZriRQG5uXBMavSjQUSDnUKWq1BeQCSDXbnjJiMNHM6k9ANBcZ7nGriMRd7M6Upepep423vs1Lvb41TyLA==",
+        "summary": []
+      },
+      {
+        "id": "msg_03947d7860ef992e006af6b774bf3c87d1a5318ebc98127c9a",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 224,
+                "start_index": 149,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 486,
+                "start_index": 411,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 645,
+                "start_index": 570,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 759,
+                "start_index": 684,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 911,
+                "start_index": 836,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1086,
+                "start_index": 1011,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1256,
+                "start_index": 1181,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1393,
+                "start_index": 1318,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1553,
+                "start_index": 1478,
+                "title": "Our Alumni - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/our-alumni/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1910,
+                "start_index": 1846,
+                "title": "About Us - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/about-us/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2227,
+                "start_index": 2113,
+                "title": "ISPH STUDENT SECURES AN OFFER FROM THE WORLD’S #2 UNIVERSITY - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/isph-student-secures-an-offer-from-the-worlds-2-university/?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "If you mean **The International School @ ParkCity Hanoi (ISPH)**, its published alumni destinations include the following universities and colleges. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai))\n\n| Country/region | Destinations listed by ISPH |\n|---|---|\n| **United States** | New York University (NYU), Drew University, University of Massachusetts’ Isenberg School of Management. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n| **Australia** | University of Melbourne, University of New South Wales (UNSW). ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n| **Canada** | McMaster University. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n| **Hong Kong** | Hong Kong University of Science and Technology (HKUST). ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n| **Ireland** | University College Dublin, University College Cork, National College of Ireland. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n| **South Korea** | Kyung Hee University, Sookmyung Women’s University, Dankook University. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n| **Vietnam** | VinUniversity, British University Vietnam. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai)) |\n\nThe school also lists **UKSA (UK Sailing Academy)** as a non-university pathway. ([isph.edu.vn](https://isph.edu.vn/about-us/our-alumni/?utm_source=openai))\n\n**Two important qualifications:**\n- **ISPH’s first A-level cohort graduated in 2025**, so its graduate-destination track record is still relatively short. Its alumni network also includes former students who attended for only part of their schooling, rather than exclusively ISPH graduates. ([isph.edu.vn](https://isph.edu.vn/about-us/?utm_source=openai))\n- **Offers are not the same as attendance.** For example, ISPH announced an **Imperial College London offer in May 2026**, but that announcement does not confirm that the student subsequently enrolled. ([isph.edu.vn](https://isph.edu.vn/isph-student-secures-an-offer-from-the-worlds-2-university/?utm_source=openai))\n\nIf you’re assessing the school, ask admissions for a **year-by-year list of final university enrolments and graduating-class sizes**, rather than just its university-offer list."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 1
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 12503,
+      "input_tokens_details": {
+        "cache_write_tokens": 14,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 616,
+      "output_tokens_details": {
+        "reasoning_tokens": 106
+      },
+      "total_tokens": 13119
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

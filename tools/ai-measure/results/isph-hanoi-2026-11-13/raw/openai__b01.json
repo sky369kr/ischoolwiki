@@ -1,0 +1,591 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "b01",
+    "type": "branded",
+    "text": "What is the reputation of ISPH (International School ParkCity Hanoi)? Is it worth sending my child there?"
+  },
+  "started": "2026-11-13T07:05:50.075Z",
+  "finished": "2026-11-13T07:07:02.840Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What is the reputation of ISPH (International School ParkCity Hanoi)? Is it worth sending my child there?"
+  },
+  "response": {
+    "id": "resp_037a3afe031baffe006af6b6cf398c87d19e22ca6a0c17edc6",
+    "object": "response",
+    "created_at": 1794553551,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794553622,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "input_transformations": [],
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_037a3afe031baffe006af6b6d1ade087d1aea98eb7194f8bd7",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "International School ParkCity Hanoi accreditation inspection reviews fees 2026",
+            "International School ParkCity Hanoi parent reviews reputation"
+          ],
+          "query": "International School ParkCity Hanoi accreditation inspection reviews fees 2026",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+            },
+            {
+              "type": "url",
+              "url": "https://isp.edu.my/news-and-updates/isph-awarded-isqm-gold-accreditation/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/official-isph-receives-the-formal-isqm-gold-accreditation-report-from-edt/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schrole.com/schools/the-international-school-parkcity-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.parkcityhanoi.com.vn/en/isph.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi/reviews"
+            },
+            {
+              "type": "url",
+              "url": "https://trustburn.com/reviews/the-international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/employers/1060202/attachments/ISQM-Report-ISP-2023.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.teacherhorizons.com/schools/asia-vietnam-hanoi-the-international-school-parkcity-hanoi/campus-and-location"
+            },
+            {
+              "type": "url",
+              "url": "https://find.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-final-Vn.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.britishcouncil.vn/sites/default/files/handbook-easy-step-guide-on-edu-cooperation-and-investment_in_vn_final.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1cd8u7s"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2024/01/JD-Marketing-Admissions-Officer.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/02/School-fee-2025-Vietnamese.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/189hgg1"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/The_International_School_at_ParkCity"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1d7wau1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/x7jbzc/international_school_vs_vietnamese_school/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ad1nkh/considering_teaching_in_hanoi_as_a_couple/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/hanoi/comments/1jamawq"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1ai3qfk"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalschools/comments/1nslacm"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/16c6omr"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Independent_Schools_Inspectorate"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_037a3afe031baffe006af6b6d6b8c887d1a9c0e1c674f31083",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.isph.edu.vn \"2026\" \"results\"",
+            "site.isph.edu.vn \"2025\" \"A Level\" results",
+            "site.edt.org \"Hanoi\""
+          ],
+          "query": "site.isph.edu.vn \"2026\" \"results\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/2025-igcse-as-and-a-level-certificate-presentation-a-journey-of-effort-and-shared-pride-within-the-isph-community/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-igcse-achievement-2025/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-students-continue-to-be-recognised-with-cambridge-awards/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/international-schools/vietnam/hanoi/international-curriculum/compare"
+            },
+            {
+              "type": "url",
+              "url": "https://www.tes.com/en-au/jobs/vacancy/science-teacher-chemistry-specialist-viet-nam-2125542"
+            },
+            {
+              "type": "url",
+              "url": "https://nachimbanedu.com/ISPH"
+            },
+            {
+              "type": "url",
+              "url": "https://skoolby.com/rankings/a-level/all"
+            },
+            {
+              "type": "url",
+              "url": "https://facebook.doris.school/international-schools/vietnam/hanoi/international-curriculum/compare"
+            },
+            {
+              "type": "url",
+              "url": "https://giaoduc.net.vn/tuyen-sinh-truong-quoc-te-dong-hoc-phi-1-lan-cho-5-nam-uu-dai-gioi-thieu-hs-post249329.gd"
+            },
+            {
+              "type": "url",
+              "url": "https://vn.joboko.com/viec-lam-marketing-admissions-manager-xvi6702485?amp=1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.theabcis.com/Documents/SchoolProfile.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://nguyensieu.edu.vn/FilesUpload/files/th%C3%B4ng%20tin%20tuy%E1%BB%83n%20sinh%20Alevel.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://images.tuyensinh247.com/picture/2025/0703/thong-tin-tuyen-sinh-truong-dai-hoc-quoc-te-dhqg-tphcm-nam-2025.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.highperformancelearning.co.uk/wp-content/uploads/2025/12/Vietnams-Education-Revolution-Print-Version-3.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://thongtintuyensinh.vn/upload/chi-tieu-tuyen-sinh-lop-10-cong-lap-2025-ha-noi.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://images2.thanhnien.vn/528068263637045248/2025/5/26/hqt-thong-tin-tuyen-sinh-2025-1748255843536903454816.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/admissions/fee-and-incentive/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_037a3afe031baffe006af6b6dac0c087d19d4fabd9d777e177",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+        }
+      },
+      {
+        "id": "rs_037a3afe031baffe006af6b6e0562087d1a9903c379b903442",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9rcWgKOiKVy6dkjsm4oMGGwHnXGl6yKYk4oJ_Xsm2SocLm8a0JH6kqCD7hvxIAHQ_rwMjh1NE97ApI6xnv_D35wjeQ5utetx_0dSjS8XHwA6Jt4ZKx8BREcMj4xlhvZE_xbisP9zGCJVar76o8Fh_isTcHVDaTbJjOP8jqS0IfQejq4MbncrFpSAk1dvlEDyaG75L-kkC_7mRi6zVyW1-dwVxRgBVAtA_fqlhqAi1qTIytW2Wr4NcbicXswAs1IVx9sxMCw80cu92iPKPOBFhgB09YlY2DA_rruyRJqD3mu1pW8rfKmhmJKxixhdw3Ozybb_SJdhR40FT1e2mhOQYzSBZs5AimyYSw6jVNQtLPb-zM4sVIDy-VDO4mUh5QHBGeBvzV2dAYMiJlqV6NBckPHvsi0eFLItBeS42ntM7azeN6K566pCjWVkxtzvxU9ANnbZUHH8DL_SsAsa7sPNU2DEeeXvGMzYV3U-bxGHRGLnbXS9jRaO-zqMYlrIFOihK8KO1IfVIiNO15vvGiUVq8oCcG1oo-zK1jrc18f3eMM-HvVdwUyL1wjeHsK0rRUtw8vHBON0gPI2aG0aiIJmgZVD18k95GGOH6IHGV5MUnhJKpdUKRYhQOIBd4uhSGAI9tReG4LGNS3N8N5Z-uQZJFnkHQY5wMc_Palgu05XjE9-Cyg9mjKTj0QTu2Bonfj0dDO2PWWle44yZZtoS7O-Dzd2aufc_4UnY1Mtl-cGfzrPbZnYagpAbo944emEokG7eZtkGbFP3uOVlU6zh592yOuznMtB7dhtDvV4NLusjE713h0SJv-xkrRdLSHtbZ8lJjYJIY60qOaBlu99A25EUgNpfi-0Nwz8AfPLUmM-9Pl4gyQW08c5X6QO8uE2Zquif_Ij4x7e6GN5S8EddZMyQOyer4HHrcFE7p-wZHHnhEuVy5pGvaGWHC6KYbYtFb-lU9OxP5DyFNs824ax3VruGCGwBl4qu1ldCUcJ6fdlPniStmVNB1VBCtqWeBwKL74m8btMfrzxofkb5Z_zxqCLBPI7Sp10kb1i4d9NuQUvkBuNFVxiqFXKpM9OWnBPrOsNvzBfIzAMoJD1jYJewNW4-7XcD9AA5SQjfS3lRJa834iJ7uaoMVNBBXtMb1-ONuuoj_tVPlFX8i_fosHNM6xCfir6-loY15J-MFqq_Li4NucXr0ACaGMBcrdvptj-WgnyV7PDvAbHyG6PyPA5JXHyqWATPJhH6lmt9JUdOTYzfKZ7qyOwc1RNtJF50nZJm0SEuiZPBq4brFQJok0R_k1yCLNQmCoWJ4oY2d3YBCZB52gnVY1wa_Xy_vVHDM-bGIemrWaRYbvQiVrLG48jIH-sWpGC_hIw0KRLXEH9Ez4lid4srOOh-lVL04niFHxYSZ6uRo6euu37sKV3OXBWXFncCj9AAzU6uvsXCIm7HUwBIEcMw2aNM4sDzxHgCzKApIl3wO4POHjPF8NKSVKsyqJT9yePqbzIqUrml6n70Pv-1XRXlEOBaeqORFPD_cuWOQF1-FubGWGFL9H1CLM1bLkmU3S5p8MJlIpFWj1hmz62DxTsQf0DJ2UJl5iwiEsstGGZ0ZBRfHQyazQAbuarX1Vx2ZxxiFXvMS7jI936oey8IsJPnCKlRtHP57LZ9NhqRaNPKEjHnaGG00be29XFRalSpADYm9TtRL3ASBrS-nKkWbfcWxEcc0YDMHOvhGpVKTyNxRKJ",
+        "summary": []
+      },
+      {
+        "id": "ws_037a3afe031baffe006af6b6e09ab487d1bf1c35aa834f9330",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+        }
+      },
+      {
+        "id": "ws_037a3afe031baffe006af6b6e67cb487d1b2cba3a0b7aa7390",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+        }
+      },
+      {
+        "id": "rs_037a3afe031baffe006af6b6ee03b087d1aa84ef9ef2b1dfbe",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9rcWC7XNILwc5cSJ58Y6ipHvtg8MPtrVkfIqbdj9Mo5SBW-fGop6iNTEpTR6o_f41hWXLkGsdAE1n_XYtXzXLc0aGmvt4txtBsbSf6fYmrcKUavXRS4oZ53hO6tR6Yj5ctBz67Aksx4ViUZiWjabxKtiDb39ORo45RTIJRWjWRHL_yzAURqlq3-ISiZwZWaMrxqMbzvBy9kJyGGVommC_OHYK5zUlxswjpQF2zMPlfQCBmmY4GSZ7Y8vMiI9ygU6mYZPdDdGQYrClnOGz8C4xs2U903TJbLNnIgd9RVrmsfbHatG7pOu-FsAza0bbpi2MLEkNEHjMAm2mXnug4VrGZm31bWJktlxGTi-cuMiz8E4uZ72qtksCHKEnzicRxBfZs0bLkE63P8crB92mJlcfDhU2eMme9d-kuUcU406A5mhhxDVI52LqRpy0Q-d89UoDItWimcYkug2LCG0gsjgvk4_KNEZVCU6RCmzt0sF_dylOtQ9mNkRVzFXmmx5mnUvHL0FSdJUq9uLFlI2KB2N-w13JeJ_dxofzrOQLdHau7D63yGFW305u4yx02QwadivbugMiFUM55yTb2RnsmHYLri62p2BI0kfevXmT3MugK8eVK6_1fHGSvDXgnI6GYLVwQw9YlZbreJTc3wnqljCTXBqG8U55yXAS1QekVDtkZ0frtkNrJJEIg5y_o2jSYKRa1zEsxPdwEcIt64mqYOIOc9BUmYydKOwzlrzAPYsezZQ4_2RQN4_i_85dG69e_00tdxkYngIAiSpMb4YERkTD_qNLf_y1L-4Yj500FF48SKt_3xFXmq7eMLGlp89uu0UmCr27xJKW23SMMPMqhcSk3Lc20im4vWu89eiZoVBowqnGdRz6DJIjQEmC6R36cE6J-u4xclM_SKyNhN85Oebg0O45CmYnEBTtsl-VQPaR-3Q4q0m4l4MVia5bhGwdnq-YNRZVJi_t6M1YOGLOrj34ANpxYQaf0Er5xKWS_aFNi1vslSbJGfIWtLhAFZcSQmfzxA1RdGoFY3EReQdBA0HFFeOk1tjjyDPdxZFvWx5cMVvTAJ2J6QKvWMS1qhoXG5SFuH0oBzIkCnVGN8twTTSwaPIR_eY4zvfiXW-N5hZQLOe5s-uR5j7sCGr1_EPF4F1Ii-sWKYZrk1ov3B_vnrOBAEjCBNLzlsd3u3UEFp0LeiG15U0zgPRKQEXP_ycmDnRrkVoAcnqSOE5DZks1IQHsonmqtDgIPiI-jcStZPrw6uUENmbXVnn3Sig8XwBK0lXTJZ3SSvrAQ2lggqY-CiaW5xAq9fuIm0PAq4qIHOiWHPqS-yO3aqCrGVVXXNVOvPuYoqLqaNgZPojs0Weqy8kmvH5f9bowu06K_UOXsB_f49qWV4CUkmKSQxywxQwy9_IYcZU_6LWV69H4MrLL_zGIKMY70xC4eBcePpo8RkOOorLkHKt4QswckXlg_7xoEP4SG5VmXSdeNvkMdRYTuJtwBXvUEi5FpQBbHaacjrZkcHvKYQtjWnoPVUMCjtPduLdjDZm2qlLzid9tNk73Rg0_-IrvHMS4_ZIZZF6yP66lgswya6H-g9FGNWzM2bb5sWjGLd3ZrgQ828d1NXAkn9XhTPXv72zKwcFJbtgwXG8Li_xucYmeYa9YetTVs_XyKzrQJrmMND5_VwUS-43s0vI2mpHhO33QP16Eg60Z4FKn1RNpbohd99T4apXva_Ll_KtWkXkcnBAYSnZ1WRagWmKFey1LbkrMTnzoipp2cU2m6hOLjbJTs2nH2LwcGMSKLocsE3Za9nUjBPhJGMMHYff3Ob_m0GbGnb-7BvnBmwxzcZd_Q6aTwHaDU4-UBsgdIsMiQr9FRLTxyTon2uLEOpoMYFxmt8hq0fkqDocMVkIkUSl7WrrpUdq9Pac-aPHllQCDeTH",
+        "summary": []
+      },
+      {
+        "id": "ws_037a3afe031baffe006af6b6ee7b4087d1bb726a7cb1fc913f",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "\"ParkCity Hanoi\" \"Education Development Trust\"",
+            "\"ISPH\" \"IGCSE\" \"2026\" results"
+          ],
+          "query": "\"ParkCity Hanoi\" \"Education Development Trust\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/about-us/our-school/accreditation/"
+            },
+            {
+              "type": "url",
+              "url": "https://isp.edu.my/news-and-updates/isph-awarded-isqm-gold-accreditation/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/official-isph-receives-the-formal-isqm-gold-accreditation-report-from-edt/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.parkcityhanoi.com.vn/en/isph.html"
+            },
+            {
+              "type": "url",
+              "url": "https://isp.edu.my/wp-content/uploads/2023/03/ISQM-Report-ISP-2023.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.linkedin.com/posts/the-international-school-parkcity_we-are-delighted-to-celebrate-a-significant-activity-7452244362937229312-FrnL"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/category/news/"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/2376f209-6ed6-4253-a725-eb9a3696d9ae/af60c149-611d-42f7-aed7-bbd953d181c2"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/"
+            },
+            {
+              "type": "url",
+              "url": "https://isp.edu.my/wp-content/uploads/2022/01/International-School-at-ParkCity-Virtual-ISQM-Report-Nov-2021.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.gosam.io/en/schools/international-school-parkcity-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/igcse-scholarship-timeline-2026-2027/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/11/Age-division-AY-26-27.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi/reviews?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schrole.com/schools/the-international-school-parkcity-hanoi/?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "msg_037a3afe031baffe006af6b6f6bafc87d1994ff08bf0e37ac7",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 530,
+                "start_index": 431,
+                "title": "ISPH Awarded ISQM Gold – Excellence. Validated. - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1259,
+                "start_index": 1160,
+                "title": "ISPH Awarded ISQM Gold – Excellence. Validated. - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1912,
+                "start_index": 1662,
+                "title": "𝗜𝗚𝗖𝗦𝗘 𝟮𝟬𝟮𝟲: 𝗔𝗡𝗢𝗧𝗛𝗘𝗥 𝗢𝗨𝗧𝗦𝗧𝗔𝗡𝗗𝗜𝗡𝗚 𝗥𝗘𝗦𝗨𝗟𝗧 𝗙𝗢𝗥 𝗜𝗦𝗣𝗛 - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2260,
+                "start_index": 2145,
+                "title": "Congratulation Class of 2025 on World-Class A Level Success - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2827,
+                "start_index": 2666,
+                "title": "Reviews and Ratings of The International School @ ParkCity Hanoi",
+                "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi/reviews?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3756,
+                "start_index": 3668,
+                "title": "School Fee 2026-2027",
+                "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4282,
+                "start_index": 4175,
+                "title": "The International School @ Parkcity Hanoi - Schrole",
+                "url": "https://www.schrole.com/schools/the-international-school-parkcity-hanoi/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 5335,
+                "start_index": 5247,
+                "title": "School Fee 2026-2027",
+                "url": "https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf"
+              }
+            ],
+            "logprobs": [],
+            "text": "**ISPH looks worth shortlisting, but I would give it a conditional “yes,” not an unconditional endorsement.** The public evidence points to a credible school with encouraging academic results. The main reservation is that its independent parent-review base and graduating-class track record are still limited. I would decide on the strength of your child’s actual teachers, classmates and support—not the school’s marketing alone. ([isph.edu.vn](https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/?utm_source=openai))\n\nI checked information available as of **November 2026**. Here is how I would weigh it.\n\n## What supports its reputation?\n\n**1. A significant recent accreditation milestone.**  \nISPH announced **ISQM Gold accreditation from Education Development Trust in April 2026**, reporting “Outstanding” judgments across all eight standards, including teaching, student achievement, care and leadership. This is an important positive signal. However, I could access the school’s announcement but not read the full inspection report hosted on Google Drive, so I cannot independently assess the report’s detailed findings or recommendations. ([isph.edu.vn](https://isph.edu.vn/isph-awarded-isqm-gold-excellence-validated/?utm_source=openai))\n\n**2. Encouraging examination results.**  \nThe school reports:\n\n- **2026 IGCSE:** 45% of grades at A*–A and 89% at A*–C.\n- **2025 A-level:** 68% of grades at A*–A and 100% at A*–C.\n- **2026 A-level:** a 100% pass rate, with its announcement describing 69% of students as receiving A*–A grades. That wording differs from “69% of exam entries,” so I would ask for clarification before comparing schools. ([isph.edu.vn](https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/?utm_source=openai))\n\nThese are promising outcomes, but I would ask for **cohort sizes, results by subject and actual university destinations**. ISPH’s first A-level cohort graduated in 2025, so it does not yet have a long record of graduating classes. ([isph.edu.vn](https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/?utm_source=openai))\n\n**3. Positive—but thin—parent feedback.**  \nInternational Schools Database displays a **4.9/5 rating from only four unverified reviews**. Reviews praise caring teachers and a happy environment, but the visible comments date from 2022, and one reviewer explicitly identifies as both a parent and a founding teacher. That is encouraging feedback, not enough evidence to establish a broad parent consensus. ([international-schools-database.com](https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi/reviews?utm_source=openai))\n\n## Is it worth the fees?\n\nThe published **2026–27 tuition**, rounded below, is substantial:\n\n| Year group | Discounted annual payment | Total if paid termly |\n|---|---:|---:|\n| Nursery / Reception | VND 212 million | VND 233 million |\n| Year 1 | VND 328 million | VND 361 million |\n| Years 2–4 | VND 581 million | VND 639 million |\n| Years 5–6 | VND 590 million | VND 649 million |\n| Years 7–9 | VND 652 million | VND 718 million |\n| Years 10–13 | VND 692 million | VND 761 million |\n\nThe early-years and Year 1 rates include special discounts. **Notice the large increase from Year 1 to Year 2** when assessing long-term affordability. Application/registration fees and a security deposit are additional, subject to applicable incentives. Ask for an itemised quote covering transport, meals, trips, examinations and any learning support. ([isph.edu.vn](https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf))\n\n**My judgment:** I would be more inclined to choose ISPH if you want its British/IGCSE/A-level pathway, the commute works, and your child feels comfortable in the actual class. I would be more cautious for a student entering examination years until subject availability and university guidance are demonstrated. Its published curriculum follows that British pathway, but its A-level graduating history remains short. ([schrole.com](https://www.schrole.com/schools/the-international-school-parkcity-hanoi/?utm_source=openai))\n\n## What I would check before enrolling\n\nRather than another polished campus tour, I would request:\n\n1. **A normal school-day visit or trial day.** Meet the intended class teacher and observe a lesson, if permitted.\n2. **Details of your child’s actual cohort.** Class size, language mix, friendship opportunities and how newcomers are integrated.\n3. **Teacher stability.** How many teachers left in each of the past two years? Who will teach your child’s core subjects?\n4. **Concrete support arrangements.** For English-language needs, learning differences or advanced ability: who provides support, how often, at what cost, and how is progress measured?\n5. **Parent conversations outside admissions.** Speak with several families in the relevant year group, ideally including one that recently left. Ask whether any referral incentive applies: the published fee schedule includes referral credits, which does not invalidate recommendations but is useful context. ([isph.edu.vn](https://isph.edu.vn/wp-content/uploads/2026/03/School-Fee-2026-2027.pdf))\n6. **The full inspection report and its improvement recommendations.** Ask what the school is changing as a result—not just what it was praised for.\n\n## Bottom line\n\n**I would seriously consider ISPH, but I would not pay a premium simply for its name or headline results.** My deciding factors would be the quality of the assigned teachers, your child’s experience during a visit, the daily journey and the sustainable total cost.\n\n**How old is your child, what is their current curriculum and English level, and where in Hanoi would you be commuting from?** Those details would make a “worth it” judgment much more useful."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 3
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 45489,
+      "input_tokens_details": {
+        "cache_write_tokens": 4461,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1696,
+      "output_tokens_details": {
+        "reasoning_tokens": 439
+      },
+      "total_tokens": 47185
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

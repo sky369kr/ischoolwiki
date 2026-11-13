@@ -1,0 +1,556 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "g09",
+    "type": "generic",
+    "text": "Which international schools in Hanoi have the safest and most modern campus?"
+  },
+  "started": "2026-11-12T14:00:14.961Z",
+  "finished": "2026-11-12T14:00:55.960Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Which international schools in Hanoi have the safest and most modern campus?"
+  },
+  "response": {
+    "id": "resp_0917b638559140e8006af5c66f575087d29a2394318f5b6596",
+    "object": "response",
+    "created_at": 1794492015,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794492055,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0917b638559140e8006af5c6717bd087d2a887a3d04f03e134",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "Hanoi international school campus facilities safeguarding UNIS Concordia BIS St Paul",
+            "Hanoi international school new campus Dwight safety facilities"
+          ],
+          "query": "Hanoi international school campus facilities safeguarding UNIS Concordia BIS St Paul",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/our-campus"
+            },
+            {
+              "type": "url",
+              "url": "https://www.dwight.edu/schools/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/student-life/campus/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/"
+            },
+            {
+              "type": "url",
+              "url": "https://joinus.unishanoi.org/unishanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/visit-our-campus"
+            },
+            {
+              "type": "url",
+              "url": "https://2021-2025.state.gov/schools-worldwide/schools-worldwide-schools-at-post/east-asia-and-pacific-schools-at-posts/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2025-26-sy/prospectus-2025.pdf?hash=5D1FD65472BEBC673EB9BDD46092E1F3&rev=-1"
+            },
+            {
+              "type": "url",
+              "url": "https://globalschoolguide.com/cities/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://goteachinternational.com/schools/vietnam/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://international-schools-guide.com/insights/best-international-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/"
+            },
+            {
+              "type": "url",
+              "url": "https://nestliving.vn/hanoi/schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/safeguarding-policy/bis-hanoi-safeguarding-and-child-protection---quick-guide---eng-vie---jan-2025.pdf?hash=23A91E9CB41FE460BA004DE9EF766E7F&rev=ba601dc8f0cd48cca16f32159c95fbb3"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/wp-content/uploads/2024/01/HANOI-Faculty_Recruitment_2024-v1.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1682966938/dwightnewyork/da1zdw88xmozermcddcl/FINALDSHPressReleasewithphoto8_11_22.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://hanoiacademy.edu.vn/wp-content/uploads/2018/04/Brochure.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1762220290/hanoi/kte0fri4bhiydnikoedm/UNISHanoiAnnualReport2024-2025.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_fran%C3%A7ais_Alexandre_Yersin"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Hanoi%E2%80%93Amsterdam_High_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Norwood_International_High_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1hav2sr/dwight_school_hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1j4kly7"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1c51y6q"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1i468nn/delta_global_school_hanoi_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1bygt8s"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1w7t0g2/which_international_school_has_the_best_campus/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1clbc2v"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1gtji3g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/17l490u/hanoi_schools/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0917b638559140e8006af5c675871487d29f735d4e81da2f3b",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9caXXo91Mzp4sRRgTlWM-Q516qrf6MJ8szEjbtIOkFKF8TepbN2wT5wPFXFI6hDMkAntLVcqseYRtpUJTQWwVmv5MpPI-zvtjk_SoC1zVKIvkix14OyvP8lShNWuUm6QMw8ATR7wfw5tJYYuVRkdcvNz4c4YjsvMDl9of2DuP-SXAmR-mknygC0yuxvj55K6sujrAQQ4FSLgVl_40JDdzlOdW1PA_vhIt2GgIL9VCTIRzxZx8-Zx7awsUWsRgrIqItbNBImVhIliNoWNjOr8Cb_rrxck1rHAWyLziMM1bivXODIE_yvEMTjh6AExmQSmwPKCCNn_2dSwVj2CnDm53MCV73HYtGSk5whgpTABJkS0uVfQOvJyKXEBNKJCFQyo3n6gaGrSLaUxrHl2t8rxvZ-BvcXpfXU3GagN48UE_WqHqimZ_mJJYlFzpO2EXz8Q4eRqABN7MDxrIO8R0xdg8r3W1W9VcNS9JhT7SVGLMIgn1DW5uVR6mvHH9db7cZ5rrKJQElEmN9bNVozkKp1lWg_D2gRCnqhTqhOv_i8UB9nlKQPWvTalNVCoEe_AZRBDvwvd73csVw5t-0AHTmgshybvTVcZpjLDF6TpwBJXsC7lsQfJh_3O-P91bJQgVJdm1bRy8YsU6yLIPTJPvBw5Li3AkYFm8jhUmOdmk8NkqbGTN_35EJwA8SBo8M8tz_V0dph9JIX8L02wpgG2pXfbGrTvXPQt7NmwJmfuT82VET_jnZ1BGrCcGH4BTrqnRRswFExZXTUB_DPISsC2dwaOQ6juYpsyWPs19jt8UmmA0YSdFqAi9OX6ORPBytcmjCQkDy2OkXFcEmwVboThVsyorOZW0QYpRkJzbwL4kUYx2fQDZUNVMWV7pQtIyVqa_YvzkXV9leRsIgTMWO3jBkDv4OWbTC-oBWeAPIPVmTJZJvxrwRb7Q4Acn12SthJu602SuPXjVMeIHdgbVwCXuINLiHIwX7sPobiU2_XKzjqvwcxt4DpyHKKPd4rDWCEmL8PaCGnq2vt6iX3FFLWicW37zc0O-dzLL922dNA-BOxAmP891ci__0vD-1ET2qEIxq4AbcYVMkXGVpS-SqnXhy2Id8FJBSxDNo3eA4lYI-GYdfa8X8K2Egnlzvf1_JmzOP6ML5lU0gL9Y1O_8ZGsN9No--B3f4aXrScZf7DTpLXFGFqNS4Lqvsjd7BB0_jHNkSzf5uhUZYHn1-BEAivmGU8irasw7Ir7voZv28ja_kPH98FwBAO2pZfNH7wNPcXOC_tl66cNm1OI2deyh5azrQgboixt5BqQGm4mD1DG2L1ac1InnPJqRHBP95azOdgOz3tXaDu1tzc6A4Vn7jUQmfGNQIieOo3WpJt0rlexUH7eMORlJWUrdyn-pxeweqhh3PvHETyHYSYJfIzUgCu8ug5Jv-cn3k9w7mNauLSTPhxIpBiMnDsXzoQ8AE51fEmbaQiUm9ko38CzQpJC1gA2pvN-0IwjHa6ghVlc6NzIdw9B3wgncCCZB6V4CXloWBjikNk0zQiKPu9SForE_EtUabifysXjPmxxewK_RPZfIaRXb2EcRJodY0e8tZUThSyg7IXqf3sgaxVJwGzNuVF0jCeKiqHk5AEGgQmPEckacPBaqMr9xcHtC2171fw2nEPdXOe41ELdHkC3-wCBTGnHWiGKOFQ83KhF7gPzl0bf2MhMu8zKTAp6FAdvuzkgW8riABLnknEjVC1KeUXjCkmqOFtmVY7thow7JeM59Qo2wWwavzIdfVJIaCw9rTQe4jTtyj7blRrC6o1wPHvKFFmjORUEHQBrvGK-SvZGBf4lEkQ8aiD_8VZd7O3auWn9xsjkafFatL1q",
+        "summary": []
+      },
+      {
+        "id": "ws_0917b638559140e8006af5c6762f4887d2a8365621558f129d",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.unishanoi.org safety security air filtration safeguarding campus",
+            "site.concordiahanoi.org air quality security child protection",
+            "site.nordangliaeducation.com/bis-hanoi campus air quality safety inspection",
+            "site.dwighthanoi.org safeguarding security air filtration"
+          ],
+          "query": "site.unishanoi.org safety security air filtration safeguarding campus",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/parent-essentials/accreditations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/community/community-programmes/safety-and-security-protocols"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/parent-essentials/parent-handbooks/secondary-parent-handbook2202425eng-05th-mar-updated.pdf?hash=8F54DB0C12A3BAF643B790E1D3678D86&rev=057cca6c4580401cb6d1abd83e2e9e33"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/connect/thunderbolt/post/~board/thunder-bolt/post/concordias-campus-keeps-kids-safe-when-outside-air-is-dangerous"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/outstanding-experiences/health-and-wellbeing"
+            },
+            {
+              "type": "url",
+              "url": "https://stpaulhanoi.com/school-safety/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/parent-essentials/policies"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/connect/work-with-us"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/wp-content/uploads/2024/03/Child-Protection-and-Safeguarding-Policy_EN.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/safeguarding-and-child-protection"
+            },
+            {
+              "type": "url",
+              "url": "https://www.gosam.io/en/schools/british-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi?trk=article-ssr-frontend-pulse_little-text-block"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/resources/asia/_filecache/15e/c25/260400-together-again-bis-hn_y13_2021-12-07.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.cpoms.co.uk/wp-content/uploads/How-BIS-Hanoi-Transformed-Student-Wellbeing-with-CPOMS.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://cdnc.heyzine.com/files/uploaded/v3/023b2a10297c5721a1e25ae5ac1951f4e9324811.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://d10-school58.inspirededu.com/sites/school58/files/2024-08/1._kindergarten_and_primary_parent_handbook_2024-2025_preview.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0917b638559140e8006af5c67a9ea487d2806459811300fb2b",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9caXcBg0J5uRvgA5ulvoDt-e8lR9zw8DGhfH4R0buSlO4_LdnqfnL7T0BHOXG9C3rbYcjxRZq6Cwm0gCQIjm89XqNQWs8cW08E7GHZZ0icTA9AoXEDpGIMdiRTd63hHWlnMUjgLg4vDfL4ZWzzyE7-QbM4R4Eqdbx1G452hmJ2oCQu3qAH1zJDHJzmA9Zk-ksOzQA4XL3CGpRYV8Bp2g5q-kwkWF8tz3cJ8tBd5fD78tYmv8HzgTM8fD8Iajv9BbsXz2U7Onkk4CzQIGEdgesTeqbiSAHKcHNh1Yi72cuEayucjb3c9TgEYGWr6lcQ6Hl2DauqME0NM9f28sVWq0whxzEOhL0UXZKoXjoRWK0OVEP5gc7gMsFdzBfykqCzIeD3NkN3mwwIPg70W3exiPpiVR67drwFJ90eqwO5lyHS2WsOADQJujZ4zuTXYDVVbwwzz4UJ4HPn0Eb0M1uGy0xlaRFn1D5VVvjVPV0qSciDFufYLx1LkRf7BUVAAn_Q1Ajb7NDa14L0hjNqM-AaI5sbtaZ16ODAJIPwwSw2IjhIiwRSzPPLdDr8UIZhiy0rI4FQ1dNgvAoDCsw2EMzS0KownJhJ2B2xk--VnH28VK1iwrEwZZnqIAMZpaZXBpV4xcz2MronxmM48nKjYmmzGMtyoDPeTcj-qEw9rBt83UWixRpg-uchzJDmte4qQ7z2HWkduDkA5j-ovpe6ys_tRYLJlorXYzXXIohPTifEhTAIXW56DBbn-4AQzD-OHLxWOG-GGZuAtLoVfV5ZvRgRvELmVmu8sBDyg4fDMZ5q-xaNq-uTEPaTxLvoyA6K1SFkI39DScH41tothYwbnPMLugVcItqFIFzzueg0CM3SbySRvwFakIvNl5zbAc9R55x4VK_K3l-Y9HTyXultENaW6idQCfSXdaufn1aqcQSjd0JRaoIeuYE8m6_Klg84t9l5JgdAMsV3WRsaPXqurSHYlCbk7gaKHSQjhyZmDo3uoEWfZOCUcFX6m_np2uaehH3JkClMNixSiOFLt9anuN7m8U03RT31eORSvlCnj-6hNYeKbJN2caMF-3YW04mNaGZBWs77-Z36xDx82lc3Rp8ChQlUb6XlhTrxfJlV08gF_sIPJ4sipNInj3AAjODY3UaByyiM_UnS7eXhHCso1NvsqheDDmoZvA75Rl8JK8ZUXVf_AThgnaWbAfJve3ze2XxvannPYWZwARBLZs2JiTSLPttnqNcgwPpI2KHyZsRBkoTyUOCurURQuf5optoiOtlejNh35e_lOX6jBQUbm8xaIz9iWEDdUpyaF4C4_o2zU4UWm0pZC835cVfbrTml1VzIrG23C_G7pkLVyQfY1yEt-3uAzOTPi-qXLJS1C7YpjCBgbS3pcJ1qMe1lufKBQpk6IuOks4oTcQ43NURuWluVkRYV9VoL_LyAg4KZBhoNoQwRiwqDsxIkgiiMTNopvqYCCXciwipp5dNvaf259byxLktr9KEwsWxrEBRbHzXl_-7A-WotBbhuFeXULvzt07CzBDbtpzQkrwHwDC9clwbbdnQ9B6yzJWHlZAwpIBax3gW66720OsMBUqR73Y3l-8Ozbi-IUTXNshhCI1Vcrd1oAPugT7UKirJmr-aAoE7xzw4UbMSSyu31v8gaPe97IJ-O2L7JaLhZALCkrBnygMOWbCy5EGYG7IfrT3FTCciTZ_1wxKfrrmSBKs-DsQsSKMrOsLrTd-TzhPxmyZaJqE9f01THS7W1p83funLCH-X0eSumhLkLAPjrKR-wOUV-zwVitOXj7LX0nWwv3EtYisXbWl6y5pV9p9jxOBVR6lH-UoDC_Qx2u33TfF9a-Yst6V6wEruIbGHdVOm6Wh_v0eKnBaHA8bFNQrSoKFb3kMCIFGUl8Rsa2kqZOyWRfgsqm6OUQrp600I40jNFwFQlS6wjEGNhqjxumoggPyC8Y7CGouNm0feEXPQVj2fnfsDVkxp6CeMBr7mpdwm1TisRBWrmgF3HikKYg68fBjFI5j2GAQQ7ONqnSGCendBEnCTwVD3KGb2zzfhFNniwkkFs_c0aLbwv5zg8tLoaQGVp4YSSS_b67yMoP896kvwrHg8EOqZj1zJNrvQQmpx5XB2PK6Y8qfStMnlUF_fXfj9ZgUwm4Of4qqWDlc-mTOCeb_Cr2RziVpQM1emnaDOe09Yd5KwumNxH-NaVVykLuTzgXBKGGRRnA-TM8=",
+        "summary": []
+      },
+      {
+        "id": "ws_0917b638559140e8006af5c67bea9887d28c6a6c8fbbe806f3",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.unishanoi.org \"air\" \"filtration\"",
+            "site.unishanoi.org \"child protection\" \"checks\"",
+            "site.concordiahanoi.org \"campus\" \"Van Tri\""
+          ],
+          "query": "site.unishanoi.org \"air\" \"filtration\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://eurochamvn.org/wp-content/uploads/2022/12/Greenbook-English.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://international-schools-guide.com/cities/hanoi/concordia-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/wp-content/uploads/2024/03/Child-Protection-and-Safeguarding-Policy_EN.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ctcvnbn.org/wp-content/uploads/2025/06/%E8%B6%8A%E5%8D%97%E8%87%BA%E5%95%86%E6%9C%8D%E5%8B%99%E6%89%8B%E5%86%8A_202502.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://business.amchamvietnam.com/list/member/concordia-international-school-5346.htm"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/employers/1176311/attachments/Child-Protection---Safeguarding-Policy---Review-August-2025.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/connect/thunderbolt/post/~board/thunder-bolt/post/where-do-concordia-students-live"
+            },
+            {
+              "type": "url",
+              "url": "https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/about/administration/offices/registrar/resources/College-Board-High-School-2019-20.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/connect/contact-us"
+            },
+            {
+              "type": "url",
+              "url": "https://www.sais.edu.sg/wp-content/uploads/sites/14/2022/08/ACS-WASC.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/connect/thunderbolt/post/~board/thunder-bolt/post/growing-together-through-endings-and-beginnings"
+            },
+            {
+              "type": "url",
+              "url": "https://nanohub.it/en/testing-air-quality-at-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://articles.unishanoi.org/category/calendar-news-and-publications/page/8/"
+            },
+            {
+              "type": "url",
+              "url": "https://globalschoolguide.com/schools/concordia-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.cois.org/about-cis/child-protection/resources"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi/concordia-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://deohs.washington.edu/healthy-air-healthy-schools-technical-information"
+            },
+            {
+              "type": "url",
+              "url": "https://www.scribd.com/document/782348253/ConcordiaHanoiHighSchoolProfile23-24"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/visit-our-campus"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/student-life/campus/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/community/community-programmes/safety-and-security-protocols?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/visit-our-campus?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/explore/our-campus?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.dwight.edu/schools/hanoi?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "msg_0917b638559140e8006af5c6814c6c87d2b1c31eb2409bb0be",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 602,
+                "start_index": 479,
+                "title": "Safety and Security Protocols - UNIS Hanoi",
+                "url": "https://www.unishanoi.org/community/community-programmes/safety-and-security-protocols?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1612,
+                "start_index": 1522,
+                "title": "Tour Our International School Campus in Hanoi",
+                "url": "https://www.unishanoi.org/admissions/visit-our-campus?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2202,
+                "start_index": 2111,
+                "title": "Our Campus & Facilities | Concordia International School Hanoi",
+                "url": "https://www.concordiahanoi.org/explore/our-campus?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2917,
+                "start_index": 2847,
+                "title": "Hanoi - Dwight Schools",
+                "url": "https://www.dwight.edu/schools/hanoi?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3566,
+                "start_index": 3474,
+                "title": "British International School Hanoi | BIS Hanoi | Nord Anglia",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "**I’d shortlist UNIS Hanoi, Concordia, Dwight School Hanoi, and British International School Hanoi (BIS).** They stand out for different reasons: UNIS for its combination of facilities and published safety procedures, Concordia for indoor-air protection, Dwight for contemporary campus design, and BIS for facilities backed by documented health and safeguarding arrangements. These are recommendations based on published information—not an independently verified safety ranking. ([unishanoi.org](https://www.unishanoi.org/community/community-programmes/safety-and-security-protocols?utm_source=openai))\n\n**I wouldn’t label any school “the safest” without comparable inspection reports and incident data.** Most available evidence is supplied by the schools themselves.\n\n### How the strongest candidates compare\n\n| School | Modern-campus strengths | Published safety measures | My assessment |\n|---|---|---|---|\n| **UNIS Hanoi — Ciputra** | Extensive sports and arts facilities, a 400-seat theatre, covered heated swimming pools, dedicated early-childhood spaces, and a modern learning centre/canteen. | Published community-programme rules require visitor identification and passes, adult ID badges, and supervision of younger children. The school also publishes procedures for air quality, heat, and lightning. | **A strong first visit for the balance of facilities and explicit safety procedures.** Note that the cited access rules are specifically for community programmes; ask about normal school-day arrangements too. ([unishanoi.org](https://www.unishanoi.org/admissions/visit-our-campus?utm_source=openai)) |\n| **Concordia International School Hanoi — Van Tri** | Purpose-built campus of over 17,000 m² with specialist learning facilities. | Reports filtered, enclosed classrooms, corridors, and common areas; additional air purifiers; continuous AQI monitoring; and two gyms for indoor activities when outdoor air is poor. | **Particularly compelling if indoor air quality is your priority.** Ask to see actual indoor readings and maintenance records rather than relying on the design description alone. ([concordiahanoi.org](https://www.concordiahanoi.org/explore/our-campus?utm_source=openai)) |\n| **Dwight School Hanoi — The Manor Central Park** | Opened in 2024. Its approximately 40,000 m² main campus includes advanced learning studios, design/engineering spaces, three libraries, and extensive arts and athletics facilities. | Advertises air-filtration technology. Its published safeguarding policy specifies employee background checks, contractor screening, and annual staff safeguarding training. | **My first visit for a contemporary, newly built campus.** Its shorter operating history means I’d look especially closely at how procedures work in practice. Preschool/kindergarten has a separate campus, so tour the relevant site. ([dwight.edu](https://www.dwight.edu/schools/hanoi?utm_source=openai)) |\n| **British International School Hanoi — Vinhomes Riverside** | STEAM Maker Space with robotics, 3D printers and laser cutters; specialist science/ICT rooms; theatre; indoor pool; sports hall and grass fields. | Reports air purifiers in classrooms and large common spaces, on-site AQI monitoring, school nurses, medical-transfer arrangements, and police/reference checks in recruitment. | **A strong all-round alternative**, particularly if its location suits your family. Its published health arrangements offer concrete points to verify during a tour. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi?utm_source=openai)) |\n\n### What I would check before choosing\n\nFor each school, ask to see—not simply hear assurances about:\n\n- **Building and fire safety:** latest inspection documentation, evacuation-drill records, unobstructed exits, and emergency access.\n- **Air quality:** recent indoor PM2.5 readings, filtration coverage in corridors and gyms, filter-maintenance records, and outdoor-activity thresholds.\n- **Access and safeguarding:** visitor screening, authorized-pickup procedures, staff vetting, and how children report concerns.\n- **Medical and pool arrangements:** nurse coverage, emergency response procedures, and qualified swimming supervision.\n- **Transport:** seat belts, bus attendants, student headcounts, end-of-route checks, and actual journey time during school traffic.\n\n**My practical approach:** visit UNIS and Concordia first if safety systems and the daily environment are your main concerns; include Dwight if modern architecture and specialist facilities carry the most weight. Keep BIS firmly on the shortlist rather than treating a newer building as automatically safer.\n\n**What age is your child, and which part of Hanoi will you live in?** Those two details would help narrow this to the best two or three campuses to tour."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 3
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 28829,
+      "input_tokens_details": {
+        "cache_write_tokens": 17,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1298,
+      "output_tokens_details": {
+        "reasoning_tokens": 300
+      },
+      "total_tokens": 30127
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

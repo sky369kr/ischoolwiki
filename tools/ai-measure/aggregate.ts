@@ -31,7 +31,7 @@ function arg(name: string): string | undefined {
 // Two-level public suffixes seen for schools and media in the region; extend as needed.
 const TWO_LEVEL = new Set([
   "com.vn", "edu.vn", "org.vn", "net.vn", "gov.vn", "co.uk", "org.uk", "ac.uk", "com.au", "edu.au",
-  "co.in", "co.kr", "or.kr", "ac.kr", "com.sg", "edu.sg", "co.jp", "com.hk", "edu.hk", "co.th", "ac.th", "com.my", "co.nz",
+  "co.in", "co.kr", "or.kr", "ac.kr", "com.sg", "edu.sg", "co.jp", "com.hk", "edu.hk", "co.th", "ac.th", "com.my", "edu.my", "ac.in", "co.nz",
 ]);
 export function domainOf(url: string): string | null {
   let host: string;
@@ -222,6 +222,45 @@ async function main() {
         return rs.length ? `${hit.length}/${rs.length}` : "-";
       };
       lines.push(`| ${p} | ${cell("generic")} | ${cell("branded")} |`);
+    }
+  }
+  // Which schools each answer names (config mention_schools: name -> regex list), and where the
+  // first mention sits in the answer (1 = named before any other listed school).
+  const cfg = existsSync(cfgPath) ? JSON.parse(readFileSync(cfgPath, "utf8")) : {};
+  const mentionSchools: Record<string, string[]> = cfg.mention_schools ?? {};
+  if (Object.keys(mentionSchools).length) {
+    const res = Object.entries(mentionSchools).map(([name, pats]) => [name, pats.map((p) => new RegExp(p, "i"))] as const);
+    const mentions = ok.map((r) => {
+      const text = r.text ?? "";
+      const firstPos: Record<string, number> = {};
+      for (const [name, regs] of res) {
+        const pos = Math.min(...regs.map((re) => { const m = re.exec(text); return m ? m.index : Infinity; }));
+        if (pos !== Infinity) firstPos[name] = pos;
+      }
+      const order = Object.entries(firstPos).sort((a, b) => a[1] - b[1]).map(([n]) => n);
+      return { provider: r.provider, question_id: r.question_id, question_type: r.question_type, order };
+    });
+    const generic = mentions.filter((m) => m.question_type === "generic");
+    const table = res.map(([name]) => {
+      const hit = generic.filter((m) => m.order.includes(name));
+      const ranks = hit.map((m) => m.order.indexOf(name) + 1);
+      return {
+        school: name,
+        generic_answers_mentioning: hit.length,
+        generic_answers_total: generic.length,
+        mention_rate: +(hit.length / Math.max(1, generic.length)).toFixed(3),
+        mean_order_when_mentioned: ranks.length ? +(ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1) : null,
+        named_first: hit.filter((m) => m.order[0] === name).length,
+        by_provider: Object.fromEntries(provs.map((p) => [p, hit.filter((m) => m.provider === p).length])),
+        by_question: Object.fromEntries([...new Set(generic.map((m) => m.question_id))].sort().map((q) => [q, hit.filter((m) => m.question_id === q).length])),
+      };
+    }).sort((a, b) => b.generic_answers_mentioning - a.generic_answers_mentioning);
+    writeFileSync(path.join(runDir, "mentions.json"), JSON.stringify({ per_answer: mentions, generic_share: table }, null, 2));
+    lines.push("", `## 일반 질문 답변에서 학교 언급 (${generic.length}개 답변)`, "");
+    lines.push(`| 학교 | 언급 답변 | 언급률 | 평균 언급 순서 | 가장 먼저 언급 | ${provs.join(" | ")} |`);
+    lines.push(`|---|---|---|---|---|${provs.map(() => "---").join("|")}|`);
+    for (const t of table) {
+      lines.push(`| ${t.school} | ${t.generic_answers_mentioning} | ${(t.mention_rate * 100).toFixed(0)}% | ${t.mean_order_when_mentioned ?? "-"} | ${t.named_first} | ${provs.map((p) => t.by_provider[p]).join(" | ")} |`);
     }
   }
   const failed = rows.filter((r) => !r.ok);

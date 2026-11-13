@@ -1,0 +1,686 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b05",
+    "type": "branded",
+    "text": "What is the admission process and tuition fees at ISPH Hanoi?"
+  },
+  "started": "2026-11-13T07:08:52.807Z",
+  "finished": "2026-11-13T07:09:21.678Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the admission process and tuition fees at ISPH Hanoi?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011CgzWNPGy7gGDQ5UjtJ2u2",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS1wUKEAgTGAI4AUIIdGhpbmtpbmcSDIq2HB/oktzDu1mpHhoM/obfvn/BNA02DhAvIjAPKHsCEmdZEhj1cbs7OYXPGNtCPeIWG88I61EaJ1O4QfXrvkyHfdAQ/vWxIST9+zUq9AQ1dQ/jFd9U20k97KmMDLhdMRQgwJNcFaAqtsvj1mZClXEYy5jY8XF//x/fWYfKlSfYexBLJXHbutuGaFFXnwCWqXZ46OubqpA+HDLGAJAoJR6eNddXks1tq1tCwNKM5LRws3isITcGO/MEX8jX3rc+MBWMDFeBYIr9Pn9XA44RtNHXrOfBJAGJcLJ3k6/HFtHPNlB4hbbBzcXFUgKtbNRh8UNXXtlrni5HFW+bpz6l19yyZXgEYtoruB4IwaBEuz8Jr7u8I89Sk/FN88kR9OHzUbRr80pv2fEVkGWitwAa96qPLNUaObXQVlliTGhDXmbZCvflNkp4IMPM9+5c7mB34HNQh8pJDJX0PYObnC3YuPCbyikuy7gjY9351+WKmWZYtsby6+lC1V9+zIJT00Xr9/Jt0kI69ATqpLw3/2jWgeNWVHxZNnKlvtqtkvCkqzEU0GKqmP8MgNHjFwBlwskjLy19JWwv2MyByE7vurdvxMFcGhyyk/EnJOnzJon2OMz3j8JnTKGZ86Ho+qPcadBo/f7TG4VtNTLM0DcYQF67PaQrCWmeYbZ+wON2xWm7vqkhFvoggoX+rBbjdY3fjejNgkjI9asJIoTtPNFDFBAQyMekO1Syufhfk0tndcDfWcLnMvS65m9SdXLytQOoTePUju7NItwHL5kBjK/I4UfM33XdbFc0LLtB5WVic4MXFvY9kGOvbTe6D9nauUh4b/g+7cMaXyMTQalfuLH8mTdYoGvlzuoEIi8t5huIpB9045aIoAzXfbNVy5jhAklS+rryMDMw/hs4RLMJ+72BwsGXGpEbUw9QSKwKfgZM1I5/K78xydY6GAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_014QB5S1DQQZdquRFs6YL2mo",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nfor q in [\"ISPH Hanoi tuition fees\",\"International School of Parkcity Hanoi admissions process\"]:\n    r = await web_search({\"query\": q})\n    for x in r[:5]:\n        print(x.get('title'), x.get('url'))\n        print(x.get('content','')[:1500].replace('\\n',' '))\n        print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_0134Yv1sUQaFZWPJfpmwn6b5",
+            "name": "web_search",
+            "input": {
+              "query": "ISPH Hanoi tuition fees"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_014QB5S1DQQZdquRFs6YL2mo"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_0134Yv1sUQaFZWPJfpmwn6b5",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "International School @ ParkCity Hanoi (ISPH) in Hanoi",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph/wellbeing-and-support",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fees for International School @ ParkCity Hanoi (ISPH), Vietnam",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-(isph)/fees",
+                "encrypted_content": "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",
+                "page_age": "229 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi (ISPH) (Fees)",
+                "url": "https://www.edarabia.com/lf/?id=316467&ins=the-international-school-parkcity-hanoi-isph",
+                "encrypted_content": "EuMKCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDKahB1Hv4ndjaSSHGRoMG0c/lx1C3CMHZH03IjCzlgUFTmjikv47XtAK/AelKleyiWsIWcIedfwAPg9cGe9I5f+3zc7PszMbEIfJAV8q5gmh7LYC71SbRzgwTxAb2bDLtcmSblVErO1lcpsxqucSU0Km41UJsanJlgT0unNQ+zplcxqMQJw0JPBFU0vCdcWicIMt3zrHfCPsh+zqMkvyNtz35SUa8fjcGtT+zmLVlC8ZcQyu3n9gS6RW//u3Ern5k91uyPbePH1+iaupGG1aC99XMMUfMDxP64pfDuXqTmz2/od2vFJcrSBCc6veZX7gwD0P6DlLZ5kieL2hCtknG7STdtO5kyJtvIMDo6JrE7f6UIBwp8ycr1CQEI3ZsFju2vsbWN8ou3ggFjA125UFcjb0HaH25ovI1aC6GL+hYWdQ2+MQAJce5sRZP9i7nKUlsoxJpemI9vqlifabNiXbNWDsu+WglC1ihnPD5/qhTHCE2QWTHzmO7ydF7W+xYVwayegZVIsRGnQ5la9x92r2fNDSN/QwKNbrrKxWFa5qb+ZkWriBZSMTfYPSkDT5QAYZRRid7udabN+z6HyDonm6dSoKWZzTXFrRLmDSXu6+PlOSU2mS78WKOMLNe0dCeNJ1HJCNpXFSyzxsVJzW/7FwQrTjbUjvzFgMGFkA0BzKDbRvkHZqcCrsJhiY5h6peNAcBSqyK7agO8ey255kkTpkTRwk8k+r6b8qTsyLE11l+Q6wyy0Uky+fpbacedvBR2ZXoNbELSRW5IZ03M5/opik6O835s22GGYu4TVqvOGyIqv39L8v4SnIarH1Be2juTG5aQPBooUJLe/Vbcas5S/vmh4XYS4QkXmm9EQM89jVxcjd6i92blrGfQS3Cd7XllCKMJ41cX8wyy9dAwaD0HuR4kdf/VmtNuFXLJmDk0M5hJYZQn9zDEr5fFDqJWI6aEiZnHUmn6Sa5SUYx8ZGJo0AsWpOE8DDUtfdQieqBNpT85o5WuR69ssRvkP7gU7MkE4ipxPe/XaV1ttS3bwcZfvP6ajOm1h7KDIjUSTBW6r04sNVNa3GrObUijlfP1nehamwJd8oWd6l65bo8P4Xh7CZbCMDppBt2wB4RMMw8J+mprzlkzvL6gKTYP5FCQq03IopNbqa+AGLaZI57qowe4YFOV2GoYYNvGYB6r5PCSD69a8BYUcabu0k6mQD8MgcDWmWztDdWFGuEtuPG2VdmcOZz4N+0p8ij1yCkZ0ULAAX3j12nK0TGCEekimakPYYAz5y7XlA+jEkQG42ce+CYtyi/I+hQB7IWjykKX3Pfzth4PyrwHui1dzWwnHoG5bTk0UZ6uWr5Zt3+ilxlyxJpwz2JlGaWOfrv5vCwVhjdisF5USRtmGC4RRJKSNNuo5n2jAMYvPiTjtMZMvRDxlfBAiRzpaRosQJ2MKn712Q7BCqgujpJ1AvaDbFPAguP/IFsUdo9qLMam3IZ9XsQACeMTRF1mWRT4xEsHQJOnayGlpI0oM6ivKnpgPvhdT/e6mdT7zgCEk6B4STq4+yIZ5xNfcn8nQ2CyGjZuVwWdF21+uz5LYaVMj43XzsmjOtE6eIUK5mFcCf5zaltKdxJn2XxFIRys/RvYUT0Q+ZQXyFYyoAkoVFHp4TrmN83Oo1ZrCUR+e3CvXFG7wlipFqeFFLFs6GdfOWmfUhKBcgorRH8/8PTwntKZTrYp9VubwU+ez8auZvVTduknSNql4abinm8B7m+kvTkytITaStS7f504LuZN9jzFCNa/oYAw==",
+                "page_age": "135 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi international school tuition tops $36,000 - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-tops-36-000-4730371.html",
+                "encrypted_content": "EtIICioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHpCn48G9KSCkX0AqBoMM4AALl24TL+qIjBiIjDeYCigQKBp0W70GMpomyNl0GNDku301WME03QT+oXQoW2mjol7RQWiH2YyFNdhGTYq1QdPF8xdliMDG470B0aTKlwk57DlslsXDIpM9N9DbrsR1A9Rrb9qgEEKYGN+ceXEhW51Q/iL+ynHw1XdoX7ECs8r1xSeH0XbAxBBFNd3D0E9Hq5C+mwEpu2Ih09gsj8JKC2oJ9etkVZpi826hECKa+b1abisxMn16OKZ98WESb/qOlJ/QMijfrz+lbYVIRuE5bP0GQnb1tEfR0AUxUXnz6izMa+/OoNoY4YNEABU6mMtq4trrlCQJUad+2sVaiV42+HnrsAcLFvmexosdxA8u7jIGTQX6vkt4vgurCaoS1WN0+gX99BqbnmOwfkRsULVXey+mApWjC+zpka7bQ5JLvs9n1D6RgOLi+hek2rMgJXBGUTi/392Lzwpv6CQQcGpQjiUNN79sqxMwBGA7ZlEWPBeVB71PYrvx2nnGYpNRaucVp91G88Q+O6XwTLudC7RBUNCZyY4oJGYSrW37AH+BHRA4Pb0wXbAvyXYKEgN/40geJiAm6ONUkJ5TjPMuuHBGkJjlHdiGFtxQKbJjbIIPWyOGaJfNYWrhkGxdqnSRkc8KLLM19TS+kmVySjahCFPMAs7Bp+p9s8qEZXLiuX3zdFxrxlZXO2eRLvgTnbOFUOcg0a/APsO281XlvEpDM9cwrtCFmCwTua+gHjPHqVRPoWBgRictsCMMOUxmfP/FzDKG456k3zxp0Jfr2Ym13vLLwNNi4K73a8LWI493CuGrLdfirs6/m5MkQb4bVVtE4UGkmfox5mkK0OdBJyiRe+Gs/8lc3Afifb9Zy8n5kBcHlX/opRd7f3d32BsLuxrZdIT51oqp2t8zp9qbKR9N0ZBLffvPgm+6flw7jL7aoZqbVUKihIDcsmoiDydCJfWc3vfNhJX9/5PinFkB87ee/EYIJ67u+qxLHlNKxIzXCNwr2q1cmd//9xVCB6Tlpn2XE7aVIWPnI5WfO8vidHXhUh3AfDRpVNBC19JiZtpFcftk+4WKUT322PhklC0zj4Wi8QMyNGlvXGqi7ciI2VXzaRf3cO+ynPr1jx3jljupYK7udGDrWRR8jcbpLyVdHJCv4jubGiiO2443Beyzwp4ns6vVaCzQqpDkoJHpo0bzfoD2/hkeuw26oZHrkhQxb0JyUByXcReIM2yg47tUaFr+ktU0NHVrwzOZEoryfnjlLJPAr+SrAkrWPzB7mTladfPsi/P8+kRlXzLHCH/oDBlFoRXph5VrtBZCr5ate1b+JddroEscwoUWx5UzWuyMhmZ8VtHrMF+IxRVcMrwMX2C+epSjJ4HG4Sit1EWRKWRZpMxyejoV6LWZpYYAw==",
+                "page_age": "946 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi (ISPH) (Fees & Reviews) Hanoi, Vietnam, ParkCity Hanoi, Le Trong Tan Road, Ha Dong District",
+                "url": "https://www.edarabia.com/international-school-parkcity-hanoi-vietnam/",
+                "encrypted_content": "EqcGCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDJQCjVggEf8rx/OdNRoMp1oYQ2chM/gG85NJIjDPe/Ory/LG2Gc3Vw9WDyGbYW26UnRkaA1zT5FeEcTvjHBdsyexClx0kxRJTUEEME4qqgWWl2yYo6AZLJBLItcFI4Lq0uINA7qb48LyZUTOt5xPqLHI7euK7AYqMDVELVJfAy+F1Nx1qxOVh6sq16XWDEvGrBiAgLw1u790LvMCAJ//5VQj+tfG75q51hjjOBFcQg6FjudqdF9wkaEtO1HXVekMtdjl20gJNeBPKMzbvr5fvklU31iR1JjYZY9eoil06G9swrvtL5ynDE+Ak1sRxbQ3TuzVXZ6VfMss3AdmS0SXRzNMhOaCt+Hi7osP1vv5+hXpqYCXcpqEbok4UdmLjEH/BAj2ETiSeBMlo2n6SaYRxgU9OgCwbz5m/m26CX8AFZ9A4Q/0wltgL6BFhK6BA6eToNJsIIzg6TuOx15hKLFXhWUYzhn/DSaznFYtSn2cwyPW9dEBXWLYYqbVkxSwpMt/OWgwATuicT4eMISAkKlUtMaflO4LY8mJbX3gBJqreBeOL4/wk+ynxGmX/L99xGFqXr7fKaVMDvCStGuEzlp42nyiVE3T6F6mCUC8mGKD5N/XqGrrV/tkMeabhi6+GLQWvzw4xcclXXrZqNyMSfCt981obbWAeVQsuWOvvqGYt4U8M/BpjkgmBaFLM/ThHm9DcEJPIfEeQArhZLfXyor9X1IUk94XBiBIvXvYOdEUmrKYmceQKpgLdXqN8Xk/7IkglfIC2Wto4kE9LI3h2eQXyLZ+ZTT4Pa91ROsnOl3Zut5133iWfU+cAGD81aBbEvXjyRMQlGbo1JF4VTaNu4rODKM6sW4jiXzeDImd5rKHRELHwbKr89Y8gvwB47wfr4C4Krz5psin9W1RzwNKVGTtSAtSy23MPIZbLcNaMA0BdVnYdzskDWzIx4arJYXUqp0Kn5BWwQsepYrQbwNRrUnUu/88KRVZxCuJK6or1/SYTX772xv+SSnjCr2gGAM=",
+                "page_age": "408 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi international school tuition reaches $38,000 a year - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html",
+                "encrypted_content": "EqEGCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDF61eNNpYTWa8CI7ChoM8EFwnrr62mwi4nVfIjAhCFvD0L5foaFkd6X3QQemlmko5+oyfz4P5lIVGn4WvfwHYdNlIv/6OaTWZ4TGb20qpAXpADj01kpWW6Fr1t9NgqIpa8mgWCDtFpjh89ImwDDMIMSrG8c8tnUqS+ZdFZ9m2vuav9YUqjHKqJTe3a180XEoSglSamFXEzcMqoUmyuN9qlU/Qlgj9HRGmxB9o2aPgScylOXtt1YItEp00knc/bj2j9kRgURvpKFWwipoVVyqeThhSiTOg6OvQT1DDaqkamHNYK+giRC8dpdnLgUm8KbCHxl//J4KdB5sZyDjN4bh/IyUMz/ZStbqaOd2FzFTczFJDVqiLbI+cjHlp/WoD1t+NYGAkIFVOCCnEeWEeTzVg3w6Jh8Bz9+nO12+6H1cA/yaVE9fcoX1VaG7Ho3Te9oW31QN1dG16StkcvZ/fr+5lrkVmMyb4/gE6krLbcINHR/dW/3DZ1OWplYkku1UHIHxtWtrY8i/j9QSBbKiWEW5/wErL5RT4Ya7EiV33SL/FazdbuAZ/R87dbnOWaPMRxIOF1VafSfpN4U0FRhIpQyWIH3Nx09sSfLXN5tAfnl/4RzyPQAPAIUi70JSLVQxxRYwJkCicB5N4W97mcjt8GmewEDaEpB+HD9DRtRG161UtGif54YnUE5fW7MuA1w2WdFZcfyo2B0qlDx4MUZLFyIy330yHALtVwE2i6K9dyPh984L8WI5x5vKEPZGonuwb99xIkjKcNn8v2B4tPb14K2QFXGgSzdWPONBIQxJI1abmSOWEbHLX1ftNCE+qYRLcadWx61NharaDTqk/WbOFzB2+AKvPT/TRAyg4M0x4wIEYAp0/OXwvQrfkKepgRFTLPvXQg8pjV2D5onpeQ+YHTVx0ERV70Apo6Pp1OuUlBG6ElYSi/7txNpTSVgc0U5nO94yTVnwe7Ye3dWCxWMG63cXQWLupaHvwsnc3M1TvP3n+cwwYMaMGAM=",
+                "page_age": "179 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Tuition fees at international schools in Hanoi can reach up to 916 million VND.",
+                "url": "https://www.vietnam.vn/en/hoc-phi-truong-quoc-te-o-ha-noi-len-toi-916-trieu-dong",
+                "encrypted_content": "EpIFCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDARmlAmhzEqdwnxJKRoMHMouDOj8L9sp0EsfIjAdf0Dy4JkIMVEiOl7QXhkgwovr0JlcoIDnY8BSiN2sXOux0IJBFhNXIpz2wGkQMu8qlQQHMi2O1gG2y/HKYVEkjTM0OcKx7OXuTsEIgiwVxn2H6caHsrvhdIbcDz1zpUYz8Xv9hB6sZnyFGVQzuF/GxcYznsOF7oqGG99MiFD7Y3+0yzV8FgDG82g7LJO96sliF3jwXbO9dO9K39D8M8TOPwGwInECRoEV4Pt3uvl9uVcwoenXDLXNkeFSbHsTewraD43SmRBObyR43OalARpJRYUnFStlFgOB+JLdsccDHZkN9fheNkZQsEzqKY8bCT97NhPyxQhRSxGPZZdQSby/pAqL5jXmiV0KPsoZv+i1ZqtCOFIsWh2JTt3zVaSdcNPTFf1t+QissLJF91ZuBkFx2RGE/sGLitor85e+a2Z3cFXjUfSn7gP05IeKytm2Yt9/ZKpGW5pXn6abG7AfYuatO0unkjz/OlwlSOp6/SR5cHPPOjN7QSUOgKFPpGStigHF1GQB8kbP2u06HpxSxHPbBuPXU8QL585LflzmAMeyoQqfT6Ws16AU9mpzy4C2k8jMps5ialSBtyao6hJoqCrqR+Kk1zReRBEQUQ2uMkVGIKFsVMu8V7GuN+S02FjwWFa7N9otPS7iBztOnX4WVUjtYrWJ5QDOEsBpVTWwZbh/0P2oAaVUv+4Km5a1qg8Gp22NtluBkLPUEQvXs35gByXfyytXgMOdLkWelMOwTDpjf6lpywayGdCrY448iXxKU+3MqO+zWKXG1xgD",
+                "page_age": "955 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi",
+                "url": "https://educationdestinationasia.com/school/the-international-school-at-parkcity-isp-hanoi",
+                "encrypted_content": "EqkHCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMaYcEG2xvtyHKvN2hoMz23bcUrgcHczeprRIjCwa8QFP/EmXOeGMrIZXck//POq5TDsVF3SE3g3zWbviLtvhx4h3Rf6VjcLGRhPFvAqrAaBhm3OAPJKrEtdfKQQFyQUvQsQfn/tCr5ycC+SSzhxbavdbYaaizGS3CRwz5/ZPbEx48FDughJWajyzWcdu+KoTtAWpZN5wcaxA3Y0ChMg3CSlqSzps3T5fkUAmX1zew/GgZDaVh1otS0NVD+/A1V+44jzb1Nb7oo4tWXh8WeMfCHCvqTakueBS1qITliFl+7uvLuAgyMNtehc7JkMbPTkoiUrKSZyOyK/xIGQM6F4BHq/cDUIkSYuGj1IlnTUanvHPqnrx9jq8I6+LqOGQRt8vFjCgZNDxVF53DFC8HNqscD3UDqMEpq8hv2FvubNPXsxhb2mc9fB0QhggiriZRADCzac2r6R2ho68bwYvZedriQF4BEJfa+p+G9YNLXQWqh+aA1JkhjErrm/MtQIzkkDYCYSbnfaIgWsrO+4UsGI3TQt+6eIb1L8n/a+H2coGUSgHGNlH2o4Im87/z1KxdnQrVeMX94yoyOkSNR2bySOyb4aZ5Ka4zqIjDUlKqZyz/bOHe7M9dFDl81onf8pFNclMiXTWCPGsnnpMB+7LhMgks6GvbRHn3/5dL7YqntvUT/X3yhMGBEiX7VPgtHAD8BWzk3uSDxcmrSPkN01E9oQLPKYJlXWPaMpl2lcyGsjGGP7Rpt1r4z/HElhtqDt3YIyNVT0mi2fI3OMUtpB8oSH7kSOPaCf8ytqdET/VPVPaoMQZ0fZ3iWYOzVrBGl14W8dMmYVRxdvfIx906VybvAyCG6G1Rw2QCWYdoXGgzlk6YSukWmJF8SlbNL0+8LW9P/MlkZsy/6OQNN3s7ask8KXBzZ3SQWrjItrYLO1a5y3uIEWXEN2FpKcTZeRvsmMpqVJa0W/mMENFWOKYGtUbgO2Qtn/p/ZqnRVgp5wyb5DkeiB+dfW1Qj9DW9dylPXkEHOopd+VtLJGFuw7pbArBbh07QtQkA32RjgyJ8Xinn/aDF/hXpcGnA2aXQXOVSp5h7E7qvBVs42QGmWS/PjAq0Jbwjw/li6tdrQF2U99egaYekCeB+UE2HqwqLplSfec6KTiqpx2R8TNlo5jGgY2RrpDkCR5gAo84HZnAc6eZxgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Hanoi",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi",
+                "encrypted_content": "Er4ECioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDLz0liWUb8UqIZc/6hoM0WFgZGa3V9N016ZpIjBnCt+a8Y3OSmRoPKkETt9v1GPtiVdej+vvVKOmv8NCuT0rStm7ZwUtQhLezpaeQ8QqwQM8a3WrTZyZ+wiTqHwcul32OtA8GfVWTOZmXF9bSgVlheotz6Kg5jvV9zfn0BpJ1rY2Z6ELw/o+fhQ4fG5ScoVRJbRCK1aUd3b+qBJyED9M1xODq1YpWHULd8U5qkU9t21dGNacEBGVBNe2oJj116Ik1OKg9PwThKiLneH0ODnHvu6cbGJzozZdN6amjREh8acLU+acOP7HyH6oSUbjveiSe3Nner5d4sUOU2PQGDEDj0YBxQHxPCQyuyE7LcfGNYNHT+gmuZNqj7aK5WlI/fKA65UCmtT2Z6dRgEu+PKJWK7Y452J7zePtEApBh2bgjLDsn+hXqCMNxzFq5zfYerlSOcyVSWLWiIhe5+MZDCjm8QCalCMBrTDByBZDu5DahYBDFTMlAwCw4WBh7Ov+4xl+EKlUFfY8N5+HZSOKTLoF8QqZwYhkGh0D6keVu5p1todUqy7A3snddUUynxu+jetANi49kxPA0lg4R7PP/gBPztB7cGvo6FLfHHjJqE8eaNfaLVYhi0qG5ZbSPubbo/1O6Yncs3nsjJZMXwVoW7lrD7SYp4AEzyBMGhxmeeK+GHYJDWau+JQ1TRGpq5EMiBoEGRgD",
+                "page_age": "137 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_014QB5S1DQQZdquRFs6YL2mo"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_014QB5S1DQQZdquRFs6YL2mo",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHwBMsGcTd+7VpcdzhoMCcBeSzo5x7tgVdKgIjB4/cnPvVVARwxZf0LcXih/+FMaSnn2k0QKDdP0QocEPxsnWkCiy5ayouN/9Qfgd3QqEgfrpDSPHSqHVvp5MYn2mtACoRgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_014QB5S1DQQZdquRFs6YL2mo/cell.py\", line 12, in <module>\n    print(x.get('title'), x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01U17VvFRx646ux5G3Xm63Mj",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in [\"ISPH Hanoi tuition fees\",\"International School of Parkcity Hanoi admissions process\"]:\n    r = await web_search({\"query\": q})\n    if isinstance(r,str): r=json.loads(r)\n    print(type(r), str(r)[:3000])\n    print(\"=====\")"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01QPCGx7NN6FSpU8dREX1BVE",
+            "name": "web_search",
+            "input": {
+              "query": "ISPH Hanoi tuition fees"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01U17VvFRx646ux5G3Xm63Mj"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01QPCGx7NN6FSpU8dREX1BVE",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "International School @ ParkCity Hanoi (ISPH) in Hanoi",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph/wellbeing-and-support",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fees for International School @ ParkCity Hanoi (ISPH), Vietnam",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-(isph)/fees",
+                "encrypted_content": "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",
+                "page_age": "229 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi (ISPH) (Fees)",
+                "url": "https://www.edarabia.com/lf/?id=316467&ins=the-international-school-parkcity-hanoi-isph",
+                "encrypted_content": "EuMKCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFBDNM53xLhm3MSOqBoM7QZOQCAPf1DfpUe+IjBSbJHGP9h8+l2H8u7B2uZCbhcH+ZQ5/ZmF/n72B/pNaBPnW/M+cwg2MHDcJx8HDQYq5gmEwuduh6yPywTyArFaoxcRSuog1zdY1oGPX4KUsI+esiZjxGWlOBrFDg3YJZ6sQduVdV80CtyYPG05CMEgTcjoY6Xthvm0nqQYSZR1tpOux8+ozwEoxLmjlMlCb6k38oX72u7rbbuXorJXEsQGVxIq1Bm1MXWMKXqZargrfX6C1rKuoMqqBhUoKtkDpVuHcBhyvjLzPOhX51ZcUpe+ezkCH2Lr6KFUCnfQXGAKemkyYhnoRJdFSmMESSr8q/RmuvFxdQQfmRouV7SvgOk4DxWduDsXSRQuA2fqCs+oz54nkJ6c700/UTK7a9jhwFeXVEpWefz+OzwkgYIW8kfMPnIFsL324dbtINrc/QyW6LMGPYeyGqLXi0c/4O2ozlqEfAvOTxauKqsXp48m3fI/UKKYOSdRepBQ74rmovtomEjEAU1i+Q+VfS/YCf/V2oQVFuq7ZsK5m64LobMcqRBmQmIUJqphMAxpLlyP/19q2g76goB7BJ1VkwdPWv9oQIB29VCxQSDKw2x4szCDVpwkNWDaQgEZr69jU+5fWhK5OxCup1SkSg52uXE0ZYp1X4dF1Fp5A5onspPhbApRzvOZVvaLUX1cu1u3KhCsjJj3j92MTKxbJLjf0d7mHH+d7Jatwtd5DHKosIwGooSZp0NTcSwMqt1a9qoInQDRaLmvin3TwFzh8tNL8KOJrP6Af8cGmJWgvldGGpoXGZ8y0zbHwB7/QqqoaOqMqp0x3/+fmiwIf5Ou/2lTyC6FbxeC7zxYnG4fVUvjafQkz8Ra/CBOjBWblqw5Pl0Hsc9dYowS73LdleZ1CvCSyqlV0CsijijlsMi4DY4cgHIJkffL0uxGMRW1Iouf9zduL0hYjssGUb62blN6enhZVD+yi2l0Asz1ZydWm5R1S6SISokledbcs4SL0c08hma0FreWH/hMmXzyjAQ2WkgBZGy75EkSm/lkVQQVxs47EwN9DOh8qLWK1C1gheMcrYhvjX0aPZwOdsUT7bELBYXsKZMGD7mrrF+cE3rWpaiXc833bO72+nY3XvMRb/Sh7M+g0gSKwtBV+HkQXdbZDcuD77vVFDu2LvkqKsn44s4OUwtBtcaaTjRfdahtaEjBE1cC1LeaSb4NX6g1E6Z4kRpFlm1wGH9kxboshR5qr+G+AKPw+IBv0oT8ZGpRDVFwJYtIZZ8/F+AE5iPrf3+HFrpdJJ6/CCYFIgSQaY1xKN/7xR1JroOu8td6lXXJTskXjqIXa6vm13IScFlFGixu+Loip294eUoMFL5ScfklwVSa2Fes7JXckrwbkoNBaTxEFyES5Xrudc2mnFPUwNpub5GFJLDoF+8MSf9NXKZPh99F9bDwGRGO+Ux8UsbWCq2bHqJ4neYimf5kU4o1V3/cEOlBnaGRIbJPvoihoQ68vPZSXTGZilB32Lc9SdfRiYZOHSzymrfzghfu1dcYW73YmBx/RP6Yx2vr6ZJV+lflpt652uDyDwwJ6mgUJWcYswrT2kk78fuBOWG1qSWhwjc6hloN0JCsff4hBK3KyuF0QsNnR9opdvy2s0mG1QNqnZAtVe49cfTTVsIbtdvHuSvByBnTgq68GzGw6ZKUzfgh0GXfwGr0qN4n6LoGMy5schUZ3bfMrXdxHdYINnHjubmvP6yp05mnjlx4oVk7qbJvaarWfe4YAw==",
+                "page_age": "135 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi international school tuition tops $36,000 - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-tops-36-000-4730371.html",
+                "encrypted_content": "EtIICioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMOeQ7+qdTTMwjyLSRoMAMloFIt5tZS7Bl+WIjBVBafugNkvj3OoN5WWILMFVcF2M/mKJJhR2vGbgbj+vLAqDCisuiUn76l3a3jb3csq1Qey5PSlCSH/fVKYPH3DIBTa8cNBmkppb+GWKQpWKcQ6gJ/lOKLfFFJNWqjjkJm2FgNBDGUi3+GTAR0YWmwyoHpcITTorEY1pikIECIrWlF05ZkazI/xIQyt77GaaM50RwgEm1hmyAVeRXGr/dwm65y/tPC4LpgD9lUSJjt0ZbrbXYaSIUOWdDeMV7/wZ0fm+RRHST807O/2YCxF/hICCfhUB4SsnakAmMkt/SMrK4yyP+BsnmIA7Q9grxYZ2AVucS9vGw73G0PuLYNfP30hq0X/gZiJQxNCBhtK7RgKRXfSVZN1uc8FPlWtyX/LA+znbWJK6BObupfe3gVsU6Y5WbibiyIYSsynN5+xGWirLt/kYF8XsaGJ1uLywdqtxfDP0cxWVm1snA7Fx3S5QoQ5DQn/CO73vaBOM5603SszGIguR3cyEaOQQ0EtCQ/7Ypxr7vVnl+1lVv2Lc1QwYtG2qsB+QJuJytlsorHVTcwwp1xQPJ91Z0v6GPQoJTlu5rfD4+10JkR5KsKAZabKWkRmIljc0tBAaAsYpCGENhygxCckbOatjiwsdqA8HdSa7BNEVypf7UVVza6z5QvfOgt8Y3LodknN2Yh3bMjO9slypuuXrwzW9eGpvAgdoP0QibQC8YQ0COl9yNLVn6//3jd73Veq/a7z/vytAAvdeBvzTyZwsE2PNDhyfiR3HGPdCY+hDQC1ciAkz2ubetirt38HNs6XTF2LDst2+KVadeC0UZBg8c7LZn+Pe9RV1urlcrCg7hoXhhqKUxPu/ogzh2jIeyBcZ51wwRtWaKJ+eUJjHp2T2OB3toaUZXLg/OuiTzpcRTKwzGSUhCR+tzLl6yjh9lmPeeD9J96h9Kpy/ziZt6CYie5mLH/A7rFKaXvqLDaNMGQjxQWJZr89RXeoLH5bzIaAjopB20d34k9g2NiPcor8sLzMUnfrGKBG56lwyFeOEgWi8MiYClU0vsiCW6605d0iyR0DyLfpm0tSknbsqpM9atnhZbt2x+JXoBMsmh3wgutqkwSwldNFfsXSIx/3aB3E2q70kN1aFRv+8gHTQoDy43a5XVCEMpvyhppUhRpN8jGa5V7mDx8Ja6NdptCWCZU1aZGsxnpIQf91Cq7FcDjX2rh0cXI7d4m/38c7KjWgF4I5ZkIBV5u/SF9ZSoS7K6/4YXb1mlN65+9NxzPs6eC0E0yuac8V9PGLxAqPDL57syJPJSZnEYsqxxTXkHoGPIaUVuIRZe2I7d939i5oZcFQ3TYWjEu78xEEvZ58KJjwo2su68fnJtAYps0jVEsBmBrbTeabx6oYAw==",
+                "page_age": "946 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi (ISPH) (Fees & Reviews) Hanoi, Vietnam, ParkCity Hanoi, Le Trong Tan Road, Ha Dong District",
+                "url": "https://www.edarabia.com/international-school-parkcity-hanoi-vietnam/",
+                "encrypted_content": "EqcGCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDB2wU44bHXt+Z883XhoMbdjR/3NL/9TCAAEvIjAUo8xAyVUmy6Zpqn5wynyOJfYusOOndA6ubSoUwLeroYjW45gJm7Sx4YQ6ywP7cqgqqgVrNtzgwNaelJsNT64fLJkWxsR1yiUAhmlGdnMT+qiIlZQCkVnl4X5Y1uLD/Ym8nCNqlKdStZoFcLzu7pf8FPtXjHpaaBRs0etpXIcx+UZKYzC2J7IhMBBmT+wkOEzQmoX5tNb201ZiWtlG3WAbBPHOm4JD2nfLNP/u1xF4T3EEQndRcE2AaHMYMeYw/WZLKeRKqWiGBJdOh1yRgJCvsF2euECjCeivXPmeAnGrL93MZkCZZKcVbPNhdcnzR17SkgniaGzHAwLoDaUHZzU8XmsHB2rakIsc6171RQc21lOZt83W3C6Fc/civ6gf+m+CXU2mZVhPIelpqMB/CkRC0kSPxLUXl2upvOlqm/3fN6XxSaBhhPv08aipCbLBVv6wPYJpzxor3/j7fI/DXxitAdM7xXM0gCxeHHcDCZNbJmC6OwW5vDpoA1H9stQy62ejbYDgOCnjFeH5jznEOJGY+OTCqn3L5T35ZuNj/RVya7q1DwdzKJ4oy5jDUD0HI69+fq2YZKCgq51yPQW03SBXSlLJcLuPVatatLOCvicgmTUg77QCkk9KffhWUAPLB0mbfQ3FkSaKyPtfg0VlZM4iCqTUCyireidrMpr8DKKx15VeiroF7Mdf1jEPZwWRpPtqee4kZQT4etcy5v1oZpWDHLSr2ecqYidIz8wibJg1nbS+auZGcKr/CMXm4NdXpmQqF4+oMI+/X8jc/hUIFefwVT3Xt/SyRqDUOEmAknAhwMplyTjq8qKn18dQXt4zJs61niAkXZvZZJDqyHqSsFzrupulE/OrT7Go0DG5ExjCE3mUphFgGX2OXhpzBph2iBIV43C3WaMrA2x1W6o70AOmJqxOMFNd4MB+LVg1uQj4XHKWXLzzoXjKki2ID/1QJ1nTxg1tuB9QpBS5zZVkGAM=",
+                "page_age": "408 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi international school tuition reaches $38,000 a year - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-reaches-38-000-a-year-5074942.html",
+                "encrypted_content": "EqEGCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDOg9SXI9zLsVNjbeNxoMhdYLEpVP5R8trSV5IjCKcCOAN/zdvkIvg8DQ96M5etpWuWB55KAJVuyTuAZppZOzOV/2cQboheVPmE1rgzoqpAVIiOqqKTJB+Uta8SCl3ZbFHRlWK8/Npbay4aNRX/GDKwMD4Ff7NVHzsPWt7pNr5kd4BONEpGfoTddRMQjR5Sg4OpywYWdPTrUFmQuJfZl6Y2AlIShb+4p2QJXiw4XeM3zIW1TtdKx6IbHO+eKakc4Z6uaDLHw2RG4/NFFrxIMlKnUR1wx6Iw9n4egNI5kVK4AtQlVExLSlijSUd2Q/2X/+UUTvGdIStUtRdgheF8KmSL2r1F1qnzOVFVf3BjFkNVNuLLToR7HpQ6wW+mwScTwiI6E6SL+jLcfNEwbFd0A2mhKh8OVsbGX6x55pKCtJGdRVKcfV985U3ZoMLNezZ9/aJXkAU3Frp/b+gwtfnOHFZY1B6YaA+1s0OLZ7lxB2deumf0p1o+i9ZTD2DRc45WZCfMTMlwVgWd3fb7y921lmEvrEDlpHaeVtyqsitfOFXOZ0nd+nsRtm2qkx6nKlyrGV7+wvDVRdlLQ7mUkQgrqAUqnJDYQ1YsM+FCaMx/M42veAFjWoyzTJtAHBmNlMFHYwzNE3251axiNv3CVqiU3L0A3yX5NAa20oT7WfepVWcV2QJUoAMZa9i6i8OsZESpa4fLMjsWRbidmb/JdaTA27x6n4gUH+7jC22g9rT9W5kCJIrBCRZQ/sSC6e4JOYrKsZMpqEDB/FXXoLrWY5d8OIt58XN3CQvuQT2uks8BS91vDBI0QEe9qRv0Dblv5jku7iVCRWD9KbQzyuNaQGd1pf7Qrvcu86b7H6gTz3YOTTWSUKn7llxQ9LtqJ/I+QzTtFXKeXdB/Y6H4g/+CxF+58y81xe/uT53ygH5/Mgns4l68fBLvhxKZy0lzNLdXpEtJSVHCugH9SOhHOSXuOath5+Nw1QFxBWd1ShGnJh6OEQMibUFU7sGAM=",
+                "page_age": "179 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Tuition fees at international schools in Hanoi can reach up to 916 million VND.",
+                "url": "https://www.vietnam.vn/en/hoc-phi-truong-quoc-te-o-ha-noi-len-toi-916-trieu-dong",
+                "encrypted_content": "EpIFCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFvr0p53IOno8/zulBoMukKBpaAJ3ukyoIBnIjBIV60J4tGaWRVmWY177hGygnTlTd5X32qHDpX/UfImJlctXWsRLQ1QaJ64rUCoXlgqlQQGmbl7MOuZJJS7iPVjFPATj9BgLu8mE05Q8dT1+xTqvI81okPJVyhH2ETgDVJeLsC0zYp9lmiDsIDGvxVFGqfotrYtQ1vEHVRgcMwel1+WBUVdQoESm60NlyBnIJpr0P8g06b73mX9U5LdHZa1/q33iP5wVZJnhpZv7LZ1PQO8MuROlla0ParghaqgqEDEvEZvMFByFvVCz4Xi30fgANGD6FaDZyPz12pj6FrpcYUZYB+syaIG0s2yoiI1wJC6CufJ6LXYhE1icnv3LFP0ll3nH4iZwBaSZTYue54HR0K2axMgS4bY/C4yll0oxgDr3PaDZQ3Z59znb0I2PAidmCsVJ8lnWNKPY+oWEKF9Y8B56xdCgHAJj2UzY8jraZIX535f+eumqTxd9ulUqhzDEc17DtyXOauB2hhDjH0scDdc6KiXj/pkbZbKM7lacfsv1bs+WaKc4gCE4Ce0QjW27ztnF+aWeW34Jgraf4qhklIVhqD0GimSKxPoBybm8w/b0pYdYMqxdRRLHuKQAFlBKiN9L8KF7dt6e6pU9gVOPCGtxrwt1cRIHAa1s4TYmOYlfSIbn285wkdBqMpr9I4aSS1RtDmGKVAPrzKzCe3zVELeAG8/4sF/O6xAoKnwBSnBJhzlPY8MrYjqe7I212lVe3zAcEs5L3wplnvg3Tw8mZZ6w1fYnmhMJn6e+NMsBjz9h6NA2ByD0RgD",
+                "page_age": "955 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi",
+                "url": "https://educationdestinationasia.com/school/the-international-school-at-parkcity-isp-hanoi",
+                "encrypted_content": "EqkHCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMGg4j+EFaZVJHRZJRoMOzPEFtsvU5EZmKmfIjA1rIPfwiA7PGaZApzJg0iblPEBaYZOASrX7uK+lEemoWNzscUZnxwmZshlJ0/IcdgqrAbKAbtnNqhjXBsOsuAOpVaZceRj0oHRHjO5+YGbT50cHmA88Tp7Ybk7hFtSbAUvlnk4lXt0ycmX8TLRh55EMUEt8dYEwz9wFq+Cy3vyJ8gkN/5u7d7a7c4B+xnoM4Smspeitsh6Z9xqv27UJK6/dOfQ7kSMn1KU2BWURiwYRf0VYC3EamYQH6wfxun8EPs7rRCDCUE75axbRpe5+uRY3+qcAl4Nb/rTpSHouJ/Wx9FGpwSLQIjPH0jU5WNFOyA2+R9CGKLeBFhcZZny8ma9jncRcwhstleAi1xpxbYkW4jAhLA/xVO3sRQEdhpweyqKMSinCbbrDuqqHRRUIuPkbF1HUsC0hvAR3XWf+uZbq7AMkh25mQHxlgRFZXi1QNFFIH1Skq11oUb9vq3LUdOfNlOkZFwi8k1znZAkgZhhzs5V3z/p7U4zyTTg3M9QrtIvp47ip+ccbjb94kXWk8IW6t/OvugBcjfmmMtYuLZlaB8GbmcPBSeaX0UqrHD/Tz9tbIwBD+rgS6Qo4bojQkpeJM5/+la4T+Uel9cqCHtqz0LPlBcBb7J9LZu82ufEMzlZ2ZLnfOGgt4G2Vt4/Ex8xONXJzSdFl4gt8PclFwVxu1U1Im4Y0VSPAL+j9njA50DChfnXybSmQOIi4hKdoPCwS0QPVaVWYu8oP4ROlxNxjS1GFkFxFhgIIk2WVrC8WAZMD4pGndejA7USGCQEaBhymqc2BjzQTes2HTiztqTNaXdyRqMwYgd0po3hfOllvmlP/CXD8Tj27wWVEi4mK8E1kunAthLo+j6YVtY6qOS81hwrc17HpGu7vDpqofbVVZ77Fb+JCz4VWVs7VBBCh+VUQRhvgZJTGoADWfZZ+AoJN+qMy8uv++5r5hcRhH/Ovvy6YMak7+93sRW4uC8/dDvZZdKOCeV55RToQ2BLILACAsVfxHLWaH9IaO7JSX6IthBgH1cBiKGTIBTHSlQ89miFmZV1uycGnY4o/5Cbb8s31WTGdX1Xea0w6g3I9VUEYJOW0YUhYho7GnzKqYKQhYPZRdMecynM6LMPEA/AaDDn78blnVN+L6Sqw6eQajQH+RgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Hanoi",
+                "url": "https://www.doris.school/international-schools/vietnam/hanoi",
+                "encrypted_content": "Er4ECioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIw707AXCtSCOLrp2hoMJg9B5Veyvn7/8q1sIjAmSo6egNj8uFpPWh2yxN+gsSZX8dYau5qWylmnRYOISc62kNJ6e2NK++O5hqYyPSYqwQMi7p++MJD8XXXzpEfUbrDcIu9XIE/hy26us9aUgUplxGfKf2gkL7/b05WfjWJviRwvQv8tn83Owz3B8J4zF17K/gMhWhGjgBq61CbioVU6c+25l1e0Wxhx7gc0OV3GOwNiCkgt1OGp7JExCO8yfmojorQKS3X885OTH8RWaXN2GO5qrXEXkZl5DNU0xEauAgVo3Iu9kn4BLk1RhtOgz5Me8CB5keBvfqwaOFZeQ8ypc0XFsmAQXJXa0sAJgdQWSSnem+Sig7LkCNOFAJDRks0dHLK6cEPIYTeYBsqceH0ePq5XVQDf6ZkOVnR7x4/sJ0TA4pFCP1MG6Qe1w8u/07bhOQNfWoQOXHsOhWTRtwXtwudDRtP+2IDRFAkfF9b2+sObQS79pITB9Boaw2du/Z5Iu3mHIJJbIrDYm7Ric049wT7+v6GuKDXDlT3xPJIiK3hFnZyWAAtTM6BGYXDV51DrEryDHQ1/gFi/UgBi0TA9fR22O+Geu5qX0xTTi0GsMtj3Yq4+BEHuOj8mInag4rDqp4Vo8k8R0jBd8DSxzuD1c/+Cr0g+81/WsQRCeTP6dYo/SExkA0v+SVeBE38dnSlLlhgD",
+                "page_age": "137 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01U17VvFRx646ux5G3Xm63Mj"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01YbhjJVcX47EmryDmRm6xXW",
+            "name": "web_search",
+            "input": {
+              "query": "International School of Parkcity Hanoi admissions process"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01U17VvFRx646ux5G3Xm63Mj"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01YbhjJVcX47EmryDmRm6xXW",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "International School @ ParkCity Hanoi (ISPH) in Hanoi",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph#wellbeing",
+                "encrypted_content": "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",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ Parkcity Hanoi",
+                "url": "https://search.openapply.com/schools/the-international-school-parkcity-hanoi-isph",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fees for International School @ ParkCity Hanoi (ISPH), Vietnam",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-(isph)/fees",
+                "encrypted_content": "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",
+                "page_age": "229 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School at ParkCity",
+                "url": "https://en.wikipedia.org/wiki/The_International_School_at_ParkCity",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi International School",
+                "url": "https://hisvietnam.openapply.com/",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Admissions Guide - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/admissions/admissions-guide/",
+                "encrypted_content": "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",
+                "page_age": "890 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Admissions Guidelines",
+                "url": "https://isp.edu.my/admissions/admissions-guidelines/",
+                "encrypted_content": "Eo4ICioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDDu+R2nfbFvIsmCM7BoMDdIgn+L7HLiJyWN8IjC+3NueYrRYi/hTMJIVPcLqWz1TQ0LEDklNbujLSC6YLZBtHh37mlcgVVIfNhAfR/UqkQclL4aB7SYYGKKFpyo1/q9oIWXquDBaxYR5hjCrVWlraFLr83sS4dd8uwC0c4hSnDPylm6NnZopARvQwo8ZIVtlMI9+/lo+65T/RGoDTTh7fHr1htPAJnuc85R/2r5/kp9xzCTUW4cBBy7480f8jk5vmGjfhtRRWCte6FeLa1XwTnQcMa2h8TfmQR9uecfcDl4/9x7VoWz6HGUTjurtBjDJxXv5Nm+mUo6jTvTc6t3ZTE0aplSKVtxtw+oLawN2Yb4gwzjwDlZTj1oVHOLgFH+4+uU7WoBShrRZW7AiWumwhdTrhYvdfqA2AOCxRckelVYOWtXtpFB4Jdx3+HWdm7AqecR2atAA7jlPGRFrrZecSJoRnmwB6QXR7nuPQmzAI4/7uTusmhOHsUmSPS6+oGJkxRj3ujPaQ8EvpP4n9EBnguB7rrLPts39B+ksR/EsdojJm6toD/f9pBX3BKdtl9euqPYYjbbo+yI2rvt9hAS0DweNzgXN5RmUlDjW/N92DN9Jwvrc5GYXGAFlMyj7qtWVcdyx1g5J8bhdQztXpP9Etdp+ap4MJT6LSCbirfpB/QLpCDBJRv3eBS9JmFzMi0gcfyp/QajxQYCj3FR/FOKk1DY0YOaBTHT7eHDTqCZIpz2XauNr6EmKkH9zbwEsa637yGUzqjrFIvYJQKRP63rSjJB5b6+lUKV38Zcix+wSxdIOqQI4mmB7JNUjYH9Ny1voKToRCYgdYEFqIRdBu9INrlSQJ77tqN5feX5xSSTRp4m2VmBNJrQdV5+NjLaMFi7V9PkmW88u9xNxFWLhFTCvPEyn91l/i8APGyw3nKrFr93NCcI3ceJsfGRjuAt8JAWVYklN65uaIe6hhs6/gZYfJeJuGSbJc47hT5DVHVnp9egkiZiXP0Ml20t6EfpwmfCEOHWL1zPAb8yM9RuHYVzu6Kkm25ADps2CexjbXVAodZpUSMBlPoBVlghXRW9l6GX2Sa5Ws45VRUxqLDZPl0rzCEPI4UVlBgfi82b2MZfnzoW0Uhr+po0jyaYVyqwtWNDhEiyrJ8oARmjmLmwaBvQ1KrqyzD8iFAGf2tvc+hw8yGS2E7kQZ2JdpCumZhJ8flZtp9f3+HsEPkSqp6gk+6mR6qbhyHmsFauZeFkm3vxAGbcN4EeawPANnl1DRF+OHPY8SyqRrdFN3f+n4zRh6C93DszX24XtzlXM7MIdmPkF7jTqGAM=",
+                "page_age": "198 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School @ ParkCity Hanoi",
+                "url": "https://parentsguide.asia/international-schools/international-school-parkcity-hanoi",
+                "encrypted_content": "EroNCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDAlSKvzrHPgwOZ8lNBoMoSAFW/DgikAuUWHGIjDNhNlyXWQbIvzW+tcCPhkH73sQ/eU3pXqB4dqe9aQMxuyvOZHsTZjB5wBhUJQhOCMqvQz/o8eoS99c+EkqCAluLuhE7IduVFE2NnS3BcuMzpH0VrivdeLov0ixSd8Uc9YuJur1km/im3R1TBegM5iroZid/qKoewueG51Afq35B5Csrb9Tyi17lOITuEC6pV1UOlPKeNu0qN5FWLgbvLm1I7ISy+8APvp+RY+iXQDXfloW7poC+/0LOKz+OrOU7WFYyoM/qVfKcLUzDenYwXorJM0PooT7CsPw43KnhUubAOinr/4hnsPGnaTyJb/7+1BbUlkv1nlSR/zoBvHqHNe9y6SvuDuBWgJ7MF3B6z4J5M4roQFMJyBNCksa5jOKgBs4mR/01RnmqrjXlJbXgVx17dm4RYcyYGM2xRkAhEspGyoqc3k54uQs57Jl0Sx9as2+kIs1Q/I0YJl03eemQ6PtIuNpLMdcVUWOqxI9ICGgKoVhLNak63OF7zOr1qXDrqFGmwibJwpzeYZbW65YGcREIu5aa3TUGAHfdJ4lzQIOjBz/uL+vYlUDdcVsEyKrQ3IMaPrPihrL6VcSJ6BpyKAM3zNDuQw5SpFzFR4RV7ft93rlX60bYV3o3pHF13GzOP+q3K9HVjeAAIvC87ojS6Et5ZHZvA+2M6eGBoRaOy5VSKqy6gGqHdjGgrI0htvFFbkIkbkvGQFV1XyTwWa1FFFHG0VgBT6wSFL5Kp54VGKhaI7v7OZcsOrGYYtpcCHpwVEhCfV0OPzyHom6yFcEAczBtTmu+1cUbjtRlZupr9t2yYLVOSc3WIF1jbqJQh/grB3v5wP1L7OwAhVONRq26gJDsh3H0DrTcInK7xmpaGyj1Bz1gSM7e79myWWBHQ8ynv5acEAxJrrqpcebr8HW/y9LjmsQ7M2AlCLKXpbz1bjcb1feFg5U70ISNwS0/wx9BxdZ6T4QZfkxv1FNg3ZwV1u/l0i9LQawiN/tNkN4fmkq7VItFF9hny6ZMKck/dKvYFpgT1ZJflfjGEGlQ5QL+RJORa7GaxeuzHkezvXEl32QrjjyXt2qdXugGwmRCNDwvPwcRkCcpjSAN4SxieBDHrFVQCSFLa26UBZRzxfz4pnGYhJTlGrI0/QMcZ/HTbfvWwh+tWIsq7+tX1YewusXcHEq2LFX7UrduJI3TCPLLJ2ya+Srm27T6r0j7udlTyYsxR+8+3Hdgpf0OUYETjjOz34og3c4sxoFcaqafcIo9ccizX1OT9gVw857t5jH0GPa7bvBLZsvdf3U/UWt7jffTVs6FkRdokl8WPt1m4PAAWq04mggrk7+3BXDDVU+yfO+TvZKt3gWY9khJ6DS4uKilLCRprNpebETHrJjpMTIKTglHRtQU7ovX2Pb43q8sq4wlWuhFS+9owUfyYHaORedhMPm5G2ZfNhiia32ERoX19j5pR07f/S5s9pr9GTt2AmwPUEaZ76ohdEpveNvZSOBaxQyEcVUxkU5DYf/bBRKUGz8dMOFPdThe7YeYObT9b67mFxkmuBoXLMADCHIW1gfkiJZ8Xxu8TFlvL4mOBiF98REq36AQXUdh/mLpjn/69E/T3kDlxC98QLdb9pY3Q4ziAM6YM6AUK7D4DKGK2ehFYOkv4vuND5N9t5BVvqRiJDVyUt/XehttZkYekPTwWdGlnD0Swo+n4ZXyK7fZlgPVT55lt56Wd0L74g88OItzRY0CnFlnABTPOU+biymAGamC3BrgpJq2+E38jtUSJxoKvqTOHHFNvC7gP9is08r8t4vr+cCKe7cqnf55VIj80u//MzPlrGHgKnrEiHdCPnL/44aVlpRFeySDYUONsHkaHNsE9+A0c8guk5ZFYOg+svzY7HCcpiCkUhtTGMguJHxaoGFbHs+7cu5pg+4Q3gbFAxu5ESJmshMvYyAAfrFjDTFiJG2K9RwbgbshF2SStTZu351TjF6AfRCG7w5b1BPsz63dgKYA+pTRalRwf6n3L6xaCzzgX8Bvsk8u56eoWlNYClHms+0oQ71P/vYDe2GUKh2AphmikB3jSyFcPo0RXLXi6T1MK+Qu5JkluUIclEz6OuSRX+e/Op9xRirn1Ci0zPfdxg0NkAhn0mvUyxpejZWkvwG8VAG2ub3IMMQaXDyq9MZSFZaqDGYdyHZniwdKqiXRg4ZnJ5HU/7chuzig9S3v3/KGAM=",
+                "page_age": "728 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "the international school @ parkcity hanoi (isph)",
+                "url": "https://www.parkcityhanoi.com.vn/en/isph.html",
+                "encrypted_content": "EtkHCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDDj8a0pMN/dnFp9TvhoMK+COU4NNh6rMcfSpIjBEKra4j0eH7m+vGM2nGPE7Web5mIr2ozdhPFpHTNJEj68EAWJ+tsWYknQb3fw1vrgq3AYV91afNBjp7jWgLjHRvHkUmsMdCORglsunrBlxDJSfkAstse3+1mu9SXsJzwSXN9GC7rv8e3kBnaZJwFgF2da4Q1TBij/NEZP99qH41H685vkx8p4zKYxGA4DBxjAirkmh56/DfcW1NTSAWZI8x1kPc43f0FiHdx38ZlQkw5MfqHUOR5BA0YxkSVEL6WBZRZErTh8Z679vkC8kcQevx28fiYtxPx0RixBP84viv35KgEpXwIAeP4O8JaLqry8g85hy7QnohmqOCFUfoYZIi0GY58x/5TficNmi4vKgFBC/rBSPclnLUIEQn4k0wXGPjlDO1AEY1aLXAs1NOCUt25Rf9XGimPqyRdVs9n4gdkHjJJFb8Bh5zIMsLwa7y+sLlRRAEhZEi7MRzi1vd7SWo7bpfZithbrNGaKyyUL1FI/G2EcuCLuVsqcyqmIkQgN9FBb41d2yxDCS/fCqp7jTaiYXtLQe1rrOZzWIE7pUa4SBu0K1h0+ci4TX/m+PG98EGnqaK7eBGqPGTVoq83fzTzkw/A8y1eSzVGUVRuc5/ScnKD2vjFuRR6Mj/gmA2mnoCAlYvN61kO1gVQ0xvCmOERWZlfjsivXZWiBujAo0hYk4iU6ntNwfKxF3HHYPt8LCN7U5SLRy/GECPqG/qTlB5uP4BeeTBkkCKeTrJHW1pLbaseg0K8e6X/I9/LDmIQPe3KyRDvrjwan3G01V5op00TkwDUBQUzvniX4ZHh0B7Oa6ouK319Jk0iYnDw1qYcYGZpf3Ay3hGQ1k9DLOYCjn71Qff7AiKhUdE0Wxj9a7WvG8rXIxZuM6OdPf8Bz7SzQybdY6+2yIBKA9PJWReTreKO6KUfKmIofRA68phi9VrWk60epHldSmqRg2dLjhGWiEuNP2TcO2Z0VOql6WnTnn7QIou10mhYNqxs6Nc0PluGSNdfjw3CHCTvXYGtMPtS44VHAS2cZ3pBV1cR5FAf73u4YADm+b3GeHErxwXF69vXy8s2DBHcMcCcXIroBShgMGopL2xaxTMzmnBXFGS0BJvFOJFML6wVeoO4lI0Wo5lL59IqY7EteTfbB7/YFS0wXmSWUBB5PGTEjamT/j+n8ILGsCsGGZlL2yoGM1Xla//rZ3LaqfDQFEv6Hk4URD0RgD",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01U17VvFRx646ux5G3Xm63Mj"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01U17VvFRx646ux5G3Xm63Mj",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSggYKEAgTGAI4AUIIdGhpbmtpbmcSDE6sZVLPRPN5DHiDpRoMGtUSvzRmnoixF26JIjD18xKlc1030xln1qX4t4VfgJeenHSVjhldOflSi6ilvkoMfGN18WJM+obCC2OL4jEqnwU3/jyhA+pDVneYzYq2pNBLt6pIuBJJ8ymcHffrN1qgH7zAFSlOMbY1kDk/Wum8VafNTuy4p5yXP6ZRlh15AIqST2Ca4N/U14rTTrhXsvX9lrntT8QEZ2tDRIPzZmEzssYFWgTu7px0B6dXvZAIar7wTJHL6WXDMr66l0meeNsKrPv/6JkgNy/JNR+dht7BGuA/XcDER9C0OfEyJAFvjVv+be1LlC5t9y/WNS2tWoANJVOpK6RvELPCZHSWpx/UKaPLokAutQ0bOpsaL/fDc4TRupMrCDWv9DrjkzWnjMPtIunEWFNOeO+m8MprFMC9j0V3D5Kwu5EV2ekq9GPe5DRJsCBwVF1E2gpIwlTpD9Wsi2gLfrFzdvXdXA0a0p2Dp5hkIInXf7UdBUt625t2fqZjvUDywCG8g/AcoWKp2FbObCsz25zUgkGuL/uUwelPLO0hQQ9oWYUAKyAYDlll9VU3UpdNnZKhWQIubYgXbbdJOi8W0Fb7DTUMJRLWo0m0WVsd+lmNTD+HkIpKXNnlj+O1pLYwR99R0YT9uojdgxDyYtS1C8V628tTK43wAXMYi3ExHQai9/ClyLpf8uIlj2vzqLJH+vzMkfizhJhncTMQi+bWoy6xg/XhrxMNro2uFIMbp/A9E1IhZIAi5kUXfd/sJ/ujEKSlbI9utM6kos/MOF2Yu+3IXi1Fc1w9QKDgZ4L+7lJjrts/PK+eNbQ2a95MivPCZknxAwI85xXy3RBRG8Z9IuCU7AEjopa1czkVRi0RGKs2/JvQ+WjPve9JwIi0MQC59ANo/YIcz2OvLgIM5W78MH1YhHZAsnKeigrHFnUqH02E+bJUcPXOj/V42wDAfUKPMdS6/BwRSpk6Xfknw8vizxJ3C83oopjCyqCWuBgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01P6jQBX6tTjuFSxjUTpNH1W",
+            "name": "code_execution",
+            "input": {
+              "code": "r = await web_search({\"query\": \"ISPH ParkCity Hanoi fees Year 10 Year 12 registration fee capital fee\"})\nfor x in r[:5]:\n    print(x['title'],x['url']); print(x['content'][:2500]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WvmKAcVhZYc5XKL47HHSn2",
+            "name": "web_search",
+            "input": {
+              "query": "ISPH ParkCity Hanoi fees Year 10 Year 12 registration fee capital fee"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01P6jQBX6tTjuFSxjUTpNH1W"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01WvmKAcVhZYc5XKL47HHSn2",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Fees for International School @ ParkCity Hanoi (ISPH), Vietnam",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-(isph)/fees",
+                "encrypted_content": "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",
+                "page_age": "229 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School @ ParkCity Hanoi (ISPH) in Hanoi",
+                "url": "https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph#wellbeing",
+                "encrypted_content": "Es0KCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHC4dsvI8eRQ7ZPuKBoMMlwwSfhpVAJL4foXIjD5GkhH+quXWd38QJepiQeiMKUzpBr7byJOBdxw4PRahYu9IeUK1N6xCns9BYltvXoq0Al9FaeYUE2du4/UuE9CFVAxiyFo0aDR2hkHU6O3/zG6CJelZDXD8Q/dLVYAVh4SMD3sufw2dmQRFAf8DR3Casfg54rxnxchl5ze33VCouqIJa3jg79I9oJ6DQxWakjxkmDdTGSLcgkp5VNVHZjSUWa1mxW3H1drUN8WlQdpx49sbW48XaYea+chHjsd35+0TRDLQ0KNhR61A/eAJIiUicuYGUfvW8ll/yObdKsUGkIb9k3yUbRxKzjt//r2HPxgTm6RGY/hLlTMiNENASKSrDpk564tH7Q908YPnuQbsWjP6Zv9G29F5QbdwU4DIy8RGi0W4PzYwa3rKHZwVDBNDS4w7MyZomFP/rfkfRJeNu3oXtchCKok2QKv0IVyPGJha0yaFnyb5kpy4+ll3SO2+labKFd0XGd/tz1oUnvzlWkWnzW/EvmjLwigP+0qCNUqrcBpuCPjjq7RCkDJRKgTZSQL3GbIbX3EprncIXlOQK+XcSKwNinbE6U1QxvOMuzIDZ1MmhuAwhA98K/8x1ayk5Za0ZdqOl3X0dy29fKHl4nQ50Ai2yqUnOsKwYWHSfgxwuuznRoYmH7g+rN0OxyMUnxkv9jgaTBEu5Izv7Ig/66fSTF4f56GMHtq1vpNhvsbMKn+BlXZX5bOINzxMSQWcri46wNU3n95xszHoewM0cM4t9vhxtqIRTQKYvcXhuJ+yBsY52xIy+GF8JG+KjMBeNFOxp1r/srjmwd63hbbUUzTsKoyiQ7XYaTiLlYQbIOKuWCsJjrkfkrh5qcpeFNJnX9lEDzs4volx0L0nbysHD//lAMbMdcRNpYB7B0+lVmfbc6LmSPMSU4s4IexId9TszxYCs7nbLFHemBJjYtFnimLjkYhHmd4TEZY39WJ/Bi+3OLNYz9pcDT9n5knX4OZxmwoZ+SWd31gTsbeFM2MB9AfsWF7/9OEgJ1BJwoHPDamDjiEJhJcK3s2vj1bXG3YIJwoziehEgsiGeYinr63t7x5ZzyR9SkRy5GX+U6R8bcigJXtMP1gHblmoto7QVqMohqP2On7Xsxuqo3RxpDwGeCGZXJUU/HkXPvs3h8quOTAvjFdL5233NJn0GLu3YA92R3WM54xZT5L+o8Dm7IRdeUHO+CVrVbI2u5CZ4fQzNPlxY4S0UEHL1CcW2Ab++n53dFt20c0XCqIv/YJfCUII1MHZ9JOt5/VSmT3IZHGGsPlWQaAhYf7t+ckK6EidtIeTpSPvxd6OHUxddggjoA1aYY0ZKa94RPakUO7y9fVP4w3/2oyAAvFuPk9IMagjyRcX3wX5uLwJNOusVYUqCKOXCL/TnzWv1l9akdOvGOzKzdbs7bMvCA+wLGfvsIlxAAvcYkt2BJ+ZhiBglGv21+7EtXO2o90Pub5M3KkOpgeEArl02R/BTi6DhNsGYsYWdXcN9MCiKOdRObHz1GWMea1079g6FpxnuzBHYQ/X6vqct0J+p5VoR1uCjSO9RnBbwyIWBXA3ZQ2H7bU7A5EOXkZlSHD+U5FYo9k/HP/EdV8ZAeAN5OBKstmyy031xCQDxw/rBJumvywjkeEciEifIqzqCe21UClbiPS5HljdhtBi2ktysTEll0G06suJPV45lPz/CgWZexW+u6FUiZkJdO+92zbnxgD",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School@ParkCity Hanoi: Review",
+                "url": "https://whichschooladvisor.com/vietnam/school-review/the-international-school-at-parkcity-hanoi",
+                "encrypted_content": "EskHCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDOiLxLlZJ9kNYMZbexoMHKaLHSUd//KOBW9QIjDJK6ZdIsuW4u8rw9i0tHd1oVSvAaYbZZWqlClWt15xNnVUXHiaTcdx4doxSHxWuZEqzAYfv4oZxZCi/ATgRfpMH2cSV41nEb0SyEGJBBtWrQ3DxrmpLPWIrQ14Cn/PwPp7H/oSJBMSdtrCcsxnPopKbnyM7ymhaKvExZhV3Jw/f/Il4mRsDppIwwDrrlnudHWCsP3FWDN4N1FqEvvZMVbe/xuxjJ25GwcqX60KnacLdBel4R5WVpCDgvTlnuxwhovvR7MW0y2ty54XOe8/xQ7+Th5GC3kGpV2uUtL/eFhO/0Hdi44AGR5SCRuBGyMIFT6eR7ToWWebwgT4WnQlMx+HuaM42TUoDCFgHPZdxOSVzix37oXztVUEE45kZX1fTNO9ANZ07X5tqZ6qLejCFc6OVuNxwjkwL8dVZcmqqEe8oRFWott+HYzLV62fvkHToPQhG5i0ZvlcuXGSHIvCL0vmPnUU4aa40BGzRqdCRFc+cLV7oEu1ga9rYhXcMsS6+FmedJekkDvjdf6ufcrzNE1HO2VLM3sm1DhNMnm48/0ddKUUYhhibVu71qVhNgKnh+xTHYNNrYaBHUgZC1QsgkEsfLFF2SUfj64bWrzjPLdtyMQ3nR9GTaJYun5TE4RdAATzeTrjfufZYJoZ6gHEHu83rKqSa+TQK13khgctarTrtNDHfW51xAEITshacRv6Ca7onImXLhg4H/tWDUfuck2aZlFxKtRmn469KwJRmYlURO5PMUz/qYmK1SGZ5JZm356g9dzTLNMp/tH5gqGnFsi9wSpxUq4Lah5wwZNJr0MPy7L4c0zQRVbGnp4u6kez44svEQETDZcL81XlDd1BDExAmcrEr6gqUIzNXZ2ZjKurg0r6UpLuTgHN70F65WhYKOKcdjOSJ+RWRR1u9ryliAdnoOfLmCkIYYD1WRSk4yX/4zNIoarrSSM1f/Eus9MjE/DgHdfRnSK6GdTWYN/E/gQYtjj4U7ZXEwZnZfjOPfJ79DcmdxOk2A1OB1SNRAfCKMLEh5GEiHwrW0jZi22e8LuM+Q5MhD9Ymxgu+hUn0ex4SWmHfbmlObNy08Z3srfWyabyNLAQwWZQGBUYHapqOFzOzRkIBwNW2kNjBVJw22aBENBu8+KCgZ2XkfQH79WaQCLFFyUk1DhQZdqRBUfuJiL/Iiv8KSUklabySdFcc3w/GAM=",
+                "page_age": "399 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi (ISPH) (Fees)",
+                "url": "https://www.edarabia.com/lf/?id=316467&ins=the-international-school-parkcity-hanoi-isph",
+                "encrypted_content": "EoEHCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDLubh5prbPuKiPdb8xoM7tUH5JlVgw7xDWqOIjCpalyJc66WsavQjavdRVSA6F7MPo0ctfsFsUURkdYsC22EMvTTT5nmOF0QwLUB+fIqhAYXwu07GTjUL3qMyLofGAPnWKwtZqrm42YimxFqOf/Gzc98h4Bx7gUZ/4R8lxic4ezOSeJvVhzzAmOiUo5DcAXT0TdyPFQq6kLxQq8pi653DxnZ//2ytKBicBl9+oKjzkcq4uR59SsseiNzMTwdR19D14cHyLzusPF08YJ1Hpm+gD/tbCasgtHYKhBXN8JVIcl8tWrBHtL/SSImeRPNi2F3ztd9K/RDbRi9a92U6LA3AEKfGXFCrN9jFJojfjRUTwq0wquKUcaBA+pwEFAV2eYJpzbLKm5p/ZMKlqriA9bj/ea0Hn08fCKb5V+OHsbg6rbI9DISWsoX6ThxOTS74Yi07LJfMOWRFclMemdGE21SwvK3wCis/03o13BZE2nIlnRTQ3JfvrEdp5jIjmVf8nLzthNZBCKjr9U53Lj3aFGr1VyFj+K/kgJ3+pq4JQpyyFnAkPIrjjashozkdlZp5raIZAlFyQVKo2crTePqVxTNH/Ds3Ynzzv+iZ/DZgilwOibEs+xusZmwyYPwt4G9de7GxfuSLq4CRgX0hTBqchCPRJTKfzdC7CH9/KmskJRyYK6+ljOJBsrfGrEtbs+ogKK7BC6eTGGB4oLvpYG3R1P159zW7uVViDrX/cTTRhC36hfeeQkpZITM0f7Ee1xSCfgjhB0lYezMPokKP+SfIOOIW4T+HAaNZ2pzeb+xPEW8GY9+aNJu3nT2/kO5B2dntELkZ1PK+IX4sRNQhiRLsZyL82p3c6GLrhoWx+XUoX5HGnjx9lPsCw+D/2UW8yLbZOyC1YJziPuwm8ARjzUw9pPqHjQIrnZ5BD2lnMmDhrMoAJ/a+6KiwTcODbQPqQgeeLCOxBSRcCq+Gr+5LmLcz3gAWHVm6eeXLQwIFQZo/fqeNr/Xvb0nDc8s6agRShgeqeuzDebdIw5EVYCXeFK5s337+C+ET6fi2vGaurtAeRT/G34/3mGc+8FNzdRSZsvgycoKNI2W5mPBKJENlDYqtqdqSvtm/2Bpf1P5VKZlmd15M+1wHqsGGAM=",
+                "page_age": "135 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi",
+                "url": "https://educationdestinationasia.com/school/the-international-school-at-parkcity-isp-hanoi",
+                "encrypted_content": "Ev0GCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDKH8gxEKeoVwdf038BoMa72z/6CuubTzKoELIjCFfW3jgOrTms6EF1ofmPL3xemYuv9esnS6T4PJhRsTJ1Y+ciuwFFLDHSBzJHTvxQcqgAYVb0KXpLRWpBzhALQIL3IQTxGwQo5SufaGzj40RAaLumn8O1D/8kfj3vCFSuvwMMYWsZ7Kk9JL1/5nMppdR86uD2kRP/v5IsXI5blpOqqrCpYMEi/dN6kQ/H6uSXtgfJFsEKK4fGO1x/+BOMlrYYz2IH3kbC12d56GtYF6IXmtveTa+K45XR9yDUxNuCX68/BZ6AuTJezRKI826kLXVKCppeUX4DWs4tEvA0pzhZh2vgNFRSb0wUZMR8Pic4pxBN5/z/nKQKs3TWxB5lsiGMVZfdBX/dS+2/y484+/SfBBiY6/5UbJt91sToodCVnPIRqFJDswoZvCpFDDqLLPnDXS87rzC+E+2slwqN+xhvCLzsKWt5dOCyDZlYc1IPipHjD+hSkIANfihrVGJM/gMbmcGBwWoX0HYbd/+hJx6mYYBEFX8S3aYBFArSwpT/qb87B+XXw5hVd6WARE4Q2WebAu1K7kc/ygEr4iu3dIHrXqU7Ej78eIyIUmOg/4Bd1F4GJjZGWfRpx4Lj9F1KlIrMB6jrm5Kril950Trj/xTMEx1n7ejVExYlZyNU7iRm+iiVLCOOhYHAFQo1GOiodlwZhtC9vR8aolUuGWU809ve2hJ8fn6rlLRBHR5UqeAkfhOYVNwjDX9h6/S2g4eFNWOjHN4763L8o1nxVgqQcaKfC/NbCWYcGSYRxdTp0GoW8MwzBEkgVwIEIE5EzxUdDlV+Xa1nBHmLglbNVb5v7oQdSyQ8bffCn5ECwayKpditx4zEU1+AgGi4jD4WIXOzYnT/QG3xzRXdRc2tssMsnlu046iDm76zMP0nJbMdxaeOHyUN0NgCvGJz9yU7vkiDMhqEUvVblydF4u12blz92j38RSuD0NBA5rijq+4qkqi3boIdOx2oxnmB3FK92HFyJZMbl5xi7HnBrWLE3GLu3CbZEmOEBKdJsEaoVmqERg0znfu8L/HqLN43IcZEZN5QNtM9aLR8YfZBCVvaeKelyu71GozVULYeWVvN80QG09kn4lTVAYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School@ParkCity Hanoi Fees & Availability - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/vietnam/school-review/the-international-school-at-parkcity-hanoi/fees-and-availability",
+                "encrypted_content": "EvgFCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDNt2oYU9JlmMBA2+rxoMA9I+kgW1Q8BtiKfeIjDVDfBe892wISEZhE5TAJjGFccP6SNKEkQ+ktO90iZvg02eT10R/tMnitp8mwZBRAwq+wTg6VJMvXWJftOuX+AB/m2DcO16WCErbU4gM/+sXXOwHUR0pdoPn5aiWvNlze9+t6vHcLRlkHhXOD45AAdR9lX8L057MhM+utTkJUjcoTa1wjxuHUE5+KCuy+CLgJMbEh3o/BDmHuKu7GeNKG0aaUnD+cJ1CDvIGFehiLJkGQKPgcrQTatwgAp2d93aJgVxnSy1CanuqKUtkc/0uXLLsuKaOpb4f6Y5NWX8aUgLyTEr064c0yU8ANxvtq+yVp8f5MAwTM1zQX7GcLwqgWivAav5WyhGr4bc2O8wPFLHur71M7mwC4PdpQ5WW/cEkOQhBL0kMy+QfzICT7ePTWjluDAPoMYYg66sOjjzVbD2Qhf12MYOjvZ+iC+YgiND9lBqcYJyoJOSKOjPrkf6p61dVikW/QErIlxNchgwsqZyWSahy+BdZ/MZZkm6R90yWh3KJR8c9uMdzfJLp4JZvOKk8xsqFX0771Lzrya7iy51kpF/MdWhJNXM2oenJePSnrv0T6qUW7qzNdIG/sVO4wqXiIkzFzikulULPTV73rLSSF7pCj9BvNPR7NonHtfm0eXdIQW7wP1LTbV4chtCZkoQdoN045P2tZgh9Kz1Bd45bQjp5jWU9pYGCD6PlUPH8BJpDPfuQAxrj/wQSUwZ57wkE80qDZEe1OwdMnvm8NWoJNW7D40R5Ly0ZJZyssTwvmQzdfNzkcOwOEyasc/tgdiIxr3TKJM0D0qJ66jogY+iSm26rGGUdSt7cqD0KWv6sXRtOnqcR08q4k0+Nf5Oe3Tr768uJL5QusqbBXURC2gWbiYlMnH+209ELon1bU6x56tBtRYP4FrWyn70yej+SBgD",
+                "page_age": "60 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi international school tuition tops $36,000 - VnExpress International",
+                "url": "https://e.vnexpress.net/news/news/education/hanoi-international-school-tuition-tops-36-000-4730371.html",
+                "encrypted_content": "EqsFCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFsskTcjz8pyYc7cqBoMUM+uvLBHpPPGjsuZIjBA9IL6Ps5JmSIoeKL3TLIsNfWGN1/ZkWpssLVQfT+eOZDRS6bTuzXdsVarOjpGFbsqrgQx17hpzBzXgJUflvmHzRnvVLsyetpjRBq2tibfRwNX8OpI+FEhocqdGA4YLbVHhbTIccftFKZbJlaXlXTywunjbkRxY/TXchTa+r8SO3NmMszV+M/OViz7FZt78iJJwE/absEqtABPwJZFSOk1h59CUKROfgOQ2ZqJLyDy9c9IdWji4wdvfpgWn6AjkN6XMEZBMM8EhQhHyTq4AAeLez3VRDTbseEK6uiMP7jfKQiRbhs9CTFKSpt7O8Fe92PmjvEU3dXfyq5VkcTv4fFs+vasI3p0oR0AjtBH3HLPnZoVdm7tpqxgMqhwkR+C1M2/dAD27QWMeeNl+UjlVadxhw3uZNDysusWjZzkzLeeSSEHvqeEszN6ty3mXHs0APAxJxCdws8Tu7dsmc82FNGafFELtmEFSSYdOD1uZ3RBSP5pXXNNrdD5yaat9Qj2brlxGe23gh2Ej1dd8Puq+ShSLE5rXwotHDDGkh6xyXb19eCz5mOV2YySqpTL1a9mK6qqjJtgMpGCtI6lkhmNmVI2EvZLTo0YgTsEneseRPXmBziDi0hnOgIiavNvsSYY64l4SxOcvR2BUXdImEgk2gxmWxjAvaAa4gcXjj0RYaHVYDe72CpmoERkvHH9uSQP1UfFCXQvix9fyHrCix1Vs8wc32uypbbga4G/YX5cr01lolTMe5nuuKc4ESc0O6tvbRSgJKJgGZwviRUezfCGT6sGsNX0KxyH8Ss256tdVHQhhWsYAw==",
+                "page_age": "946 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Tuition and Fees for The International School @ ParkCity Hanoi 2026/2027",
+                "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi/fees",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School @ ParkCity Hanoi: Details, Fees and Reviews",
+                "url": "https://www.international-schools-database.com/in/hanoi/the-international-school-parkcity-hanoi",
+                "encrypted_content": "EuoICioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDJoTmVPkRX/kWGSFfRoMBm1O2DfqsYBXyX+qIjBVMD4ItE+DikvX0gHYQHATo7OiyLa3RnDTo7q9tHPQV/HzjUI30nbesRA5UlgGRU8q7QdLwz460oPNjcj942UG+wkSir2rVZADSfhTaS+SPqjHYxMq9oc790lxXYajEgK0UcTAsIIn72lYprWCqdlgJF7Rms90pZatOhr8Or7fvT7QVeAuHbotvIAlWD9+2a2nUSK4uO2MKGINVhU0gV0y8m3YkrqeF1ghJkkbnTWf2Kk4RKWfNR4t/YN5LLgdZosQbOM2LwH7saH57mZhAS9reCASa/F5K+qVyTaH83jftHmPpjFoCSNVaoZdhb1XozDtmyo2NNjwakNj0xEO+/BiRyUOBJrVlvN/cLrdH7w77cP73nVHL/+OyjYVo0fjCrui5e5Iy3Ae0uvuz6pQ5LzwifTRq1gznB+WrWPnRqASrxaZjrEABuip/rVdE8qa+m/i0Ou1v4n5WcZt3e7Yuw9ddUQ7G4mUyDC20erXoQ6Wv0XMGR4RzW5sGeTZ1qhsJc/I+bMSnRxt4ZPu+GzGx5PEIksW9VNo5vFeEj6L735VBRKlQsgFQm5fcwH8vR+VhJT/aUCXCVvE82tIZ0xbHUnWv3cqtEOD3H13b+MSWfHy7iJugsoUBJtrxMgRE4gxVotPm7JwSzHvOpg8LkwV/hsUSkuSanDLXjyTAmr+eH8TWOoZdo6L2RFB2iI0zW5t4tz2VgwByH82V0/tEY2+Y5M1883qPcbqXxIlil9QL9CCZ8uAtTT40HC8vVCc6dhrHrvZwnEdksyBZncbx0kxfy03AFfEL8g4VwbUsdBgWwsRHhXLOGLyAJA04GGDwzhgplqM0Xe3TC53xv9BBaNS1S2NJYj3Mt89LWatlJNPeS9lRZRxb/t8BWHfayMcZ2w0t0TOh40CS/9y8ws/Tr1YOvNhQj3fZI3lCIogGpGDQEcwpYeq2h01XiqIP+DgLg5A/4UFElCXB64LLY9iCdqsRO015A0mAGUQGG7hIpuRL1Vaf2lytLmk9Ml7We5/slvVdXIRLXSpcx3IScfATIB4uHPMmrD71RQOt+JFnh8hH7E3NZYLYyfndCtGMwW38EGbOU2NVc+lUP5NV8DzT2baEgNYVuuHZ4SyNWdzNceQMHMlHkHYJ6qBXItn4/f2T/dECnCPy8iouXqWl6JAQy1CxvIjUZ4P252OzvQTsMpb/8V37NZEuUXfp2bW+rcMOlTz3fwyEAaUA179BKa1Btanc34n/tdyp3lXiW7Oj8mZQf985Qe3CKtmQRz0FV6JDmWxSqGI/b8rsz0FZtFhhD+R97cp0p4COHsj5R4mhn6UvQ//cvAb54EpLEmgszvbId/xDHvbZNmI7W+82Wq0vyyXBcLOp+8aoAmlDNm+GNvfU9ktmv4kjFxeBdT2l4ZfZFMHQuMYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The International School at ParkCity",
+                "url": "https://en.wikipedia.org/wiki/The_International_School_at_ParkCity",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01P6jQBX6tTjuFSxjUTpNH1W"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01P6jQBX6tTjuFSxjUTpNH1W",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDC1v3HupZx4DjbtSmBoMA39pA5puCjYmUzYmIjDIUgGgoviB3lvYbA5k/KlykcbGB6z7xnPwTN70T4xyNAGEf16iRi2yyxYqNkP6470qEgDFRmMx/TeLffqgh59qlgaL0hgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01P6jQBX6tTjuFSxjUTpNH1W/cell.py\", line 10, in <module>\n    print(x['title'],x['url']); print(x['content'][:2500]); print('---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Q6aJSY26kh2btpNkDZ4fKT",
+            "name": "code_execution",
+            "input": {
+              "code": "if isinstance(r,str): r=json.loads(r)\nprint(str(r)[:5000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01Q6aJSY26kh2btpNkDZ4fKT",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "[{'type': 'web_search_result', 'title': 'Fees for International School @ ParkCity Hanoi (ISPH), Vietnam', 'url': 'https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-(isph)/fees', 'content': '- Registration Fee: VND 18,650,000 for Nursery & Reception; VND 37,300,000 for Year 1 to Year 13.\\n\\n# International School @ ParkCity Hanoi (ISPH)\\n\\n| Year 10 (Age 14) | 14 | 646,300,000 VND  | Secondary | Whole annual tuition (tuition only; registration and other charges shown separately).\\n\\n| Year 12 (Age 16) | 16 | 646,300,000 VND  | Secondary | Whole annual tuition (tuition only; registration and other charges shown separately).\\n\\n| Registration Fee (Year 1–13) | 37,300,000 VND  | Payable when an Offer Letter is issued; non-refundable.\\n\\n| Registration Fee Top-up (EYC to Year 1) | 18,650,000 VND  | Progress from the Early Years Centre to Year 1; top-up payable.\\n\\n- Registration Fee: VND 18,650,000 for Nursery & Reception; VND 37,300,000 for Year 1 to Year 13. Registration Fee is payable when an Offer Letter is issued and is non‑refundable.\\n\\nProgress from the Early Years Centre (EYC) to Year 1 requires a Registration Fee top‑up of VND 18,650,000.\\n\\n**Tuition fees (2025–2026 academic year) — by year group** Tuition figures below are shown as: Whole annual\\n\\n- Year 10 (Age 14) - Whole annual tuition: VND\\n\\n- Year 12 (Age 16) - Whole annual tuition: VND\\n\\n{\"name\":\"International School @ ParkCity Hanoi (ISPH)\",\"offers\":[{\"name\":\"Registration Fee (Year 1–13) – additional_fee\",\"price\":\"37300000\",\"priceCurrency\":\"VND\",\"description\":\"Payable when an Offer Letter is issued; non-refundable.\"},{\"name\":\"Registration Fee Top-up (EYC to Year 1) – additional_fee\",\"price\":\"18650000\",\"priceCurrency\":\"VND\"},{\"name\":\"Registration Fee (Nursery & Reception) – additional_fee\",\"price\":\"18650000\",\"priceCurrency\":\"VND\"}]}', 'page_age': '229 days ago'}, {'type': 'web_search_result', 'title': 'International School @ ParkCity Hanoi (ISPH) in Hanoi', 'url': 'https://www.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph#wellbeing', 'content': 'ISPH is the first sister school of ISPKL. … Annual tuition at International School @ ParkCity Hanoi (ISPH) ranges from VND 197,725,000 to VND 711,000,000 for 2026/27.\\n\\n# International School @ ParkCity Hanoi (ISPH)\\n## Sent to the school\\n### About this profile\\nFees ₫197,725,000 - 711,000,000\\n\\nAges 3 - 18 years\\n\\n### Governance and Ownership\\nISPH is the first sister school of ISPKL.\\n\\nFees\\n\\nAnnual tuition at International School @ ParkCity Hanoi (ISPH) ranges from VND 197,725,000 to VND 711,000,000 for 2026/27.\\n\\n{\"name\":\"International School @ ParkCity Hanoi (ISPH)\",\"makesOffer\":[{\"name\":\"Registration Fee (Year 1–13) – additional_fee\",\"price\":37300000,\"priceCurrency\":\"VND\"},{\"name\":\"Registration Fee Top-up (EYC to Year 1) – additional_fee\",\"price\":18650000},{\"name\":\"Registration Fee (Nursery & Reception) – additional_fee\",\"price\":18650000,\"priceCurrency\":\"VND\"},{\"name\":\"Year 12 (Age 16) – yearly_fee\",\"price\":646300000,\"priceCurrency\":\"VND\",\"description\":\"Whole annual tuition (tuition only; registration and other charges shown separately).\"},{\"name\":\"Enrollment Fee – enrollment_fee\",\"price\":37300000},{\"name\":\"Year 10 (Age 14) – yearly_fee\",\"price\":646300000,\"priceCurrency\":\"VND\"}]}', 'page_age': '43 days ago'}, {'type': 'web_search_result', 'title': 'The International School@ParkCity Hanoi: Review', 'url': 'https://whichschooladvisor.com/vietnam/school-review/the-international-school-at-parkcity-hanoi', 'content': 'Average school fees are VND 575.5m per year. Additional charges may include registration, enrolment and transport fees.\\n\\n# The International School@ParkCity Hanoi: Review\\n***Fees for the opening year start at VND 344,800,000 for Year 1 and rise to VND 468,300,000 for Year 8.*** Other fees include an annual capital levy of VND 46,600,000, which is non-refundable.\\n\\nWhat are the fees?\\n\\nAverage school fees are **VND 575.5m** per year. Additional charges may include registration, enrolment and transport fees.\\n\\nAt a glance\\n\\nSchool type\\n\\nInternational\\n\\nSchool phase\\n\\nAll through\\n\\nInspection rating\\n\\nNo rating\\n\\nCurricula taught\\n\\nUK National Curriculum, EYFS, A Level\\n\\nAvailability 2025/26\\n\\nUndisclosed\\n\\nAvailability 2026/27\\n\\nAnnual fee average\\n\\nVND 575.5m\\n\\nAnnual fees\\n\\nVND 217.5m–711m\\n\\nPrice band\\n\\nUltra-premium info_outline', 'page_age': '399 days ago'}, {'type': 'web_search_result', 'title': 'The International School @ ParkCity Hanoi (ISPH) (Fees)', 'url': 'https://www.edarabia.com/lf/?id=316467&ins=the-international-school-parkcity-hanoi-isph', 'content': '**Capital Fee: VND 46,600,000** Annual payment. Non-refundable and non-transferable. Payable before commencement at the school. VND 46,600,000\\n\\nApplication Fee: VND 3,700,000One-time payment. Non-refundable and non-transferable. Payable upon submission of the Application Form.Registration Fee - Fees\\n\\n# The International School @ ParkCity Ha\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS1wYKEAgTGAI4AUIIdGhpbmtpbmcSDPsBwoCe21xS8L6rUBoMQwRZGVhezY2bzFhnIjCEqz9/Wyucre6/XUCBy0IE5BwXPYb4W9JWplKb9ej/VeahqU+rXQwRb23lxn+tZeQq9AWCVkX2i5JM5XE/8s3mpo0bwk1q1MdY1qT34fmoA/ZnXPqjr9HLIRZrmoYQzcbSNJ1gLytowX6uWI9jSNPF2gtrqkztM1C7f72dNDrSR1cjwOuIlznNrQ/7CrqVPR04/4HcKU/laUjzSuM7x1fwRWtekErYFwmnvGRMXmmdhY5WNAep+RqspyzAnIDfMWf7ULA2pjZme53tO1jWKqEFASPbL/2Sa9tZqLLmnFYQkKhYwR4VvwSlVOd2PEWyXLBMgR2xgGMtMHAdzQiIzPRL0YMu2cgq5RAt+0Swd26v33MDcccwil8382sDMM5gKM1WShD0ZkvwX5l2P3vU5rMHtTHM2G79RYHnbm92In2pCeKLy7Tsz2DbLCA+fkZIr+KqyAMQPCSItqUiF0IEXPeQOgjogtqaIzBy4Klaj5r5GuM7+zPZSVlwKzQqva22Kw1siFbxF1QWTW7JL12pVrrafrtu53aSmciH3KuskyzSjQRw/QO7nXW25fd3FIDiC+aB7r2NOiWljIp0jZxCM8nFWKcDX6odjiVxt9VM1qd/ZNE2BLyazAWUkTEK1N+kJRvlI4J47zCkaRMa9sqoMYaWqydbOJ4qRWzy3Q1Hb4dM+Q+1vORk+HilhWQWcjNV/Fhj7ku4p5rbIPQ5zLB+i9dL/YU+JU99WD8ivkdTTA8hq1io3xla7dKElMH44LkT7SaekKpLXG9EtctdMWFsapMfXYmkzT+zEpZncZ9Q24z3g0LG7KQFDl4Li9m6ZZCrjQCnlacaZnA2f1a7p9gfc71Isc0zuiUgpoWNKQIuhVTjH0jHC81FTq7bp/dINLXFgH6mitGa0+eAEALuurOym8Opjqsw7uLpLD1eRrmIGZ77O+LYJuF2miDSqMR4DzzvdnT+z2HJ20HDHkoLe9GwlBqTbpiDJJz/XKaJ/YWeBAQ65h44ilT9dRbRyMgp4g/cK1NatN7XOlU1DsSJeXyMmJbSDbfNe3hNoYiPcLCzeLpaajBUGaOw1r4YAQ=="
+          },
+          {
+            "type": "text",
+            "text": "ISPH (The International School @ ParkCity Hanoi) is a British-curriculum school for ages 3–18. Below is what its admissions process and fees look like according to third-party school directories. Figures change every year, so check them with the school's Admissions Team before you budget.\n\n## Admissions process\n\n**When you can apply:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "ISPH opens admissions throughout the year, and there is no specific fixed intake period, but some year groups may reach full capacity; contact the Admissions Team to check current availability."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**Steps:**\n1. **Application.** You submit an application form. You also "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "read and sign off the terms and conditions governing enrollment and admissions, which are also available in Vietnamese."
+          },
+          {
+            "type": "text",
+            "text": " An application fee is due at this point (see below).\n2. **Admissions assessment.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "The school will contact you to arrange the Admissions Assessment."
+          },
+          {
+            "type": "text",
+            "text": "\n3. **Offer of a place.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "After successful completion of steps 1 and 2, a school place can be offered subject to availability."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Parents receive an Offer Letter, usually within two days; if an offer cannot be made, the school explains the reasons and next steps."
+          },
+          {
+            "type": "text",
+            "text": "\n4. **Registration.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Registration is then completed and the school place is reserved for your child."
+          },
+          {
+            "type": "text",
+            "text": "\n5. **Enrolment.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Before the child commences at the school, parents pay all applicable fees, including the tuition fee, capital fee and security deposit. Admissions are considered complete once these payments are made and the student is enrolled."
+          },
+          {
+            "type": "text",
+            "text": "\n\n## Tuition fees\n\n- **Overall range:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Annual tuition at International School @ ParkCity Hanoi (ISPH) ranges from VND 197,725,000 to VND 711,000,000 for 2026/27."
+          },
+          {
+            "type": "text",
+            "text": "\n- **By year group** (one directory lists these as 2025–26 figures; the other site doesn't give a year):\n  - Nursery and Reception (ages 3–4): about VND 197.7 million a year\n  - Year 1 (age 5): about VND 306.5 million\n  - Years 2–4: about VND 542.6 million\n  - Year 5: about VND 551 million\n  - Years 10 and 12: about VND 646.3 million\n  - The top of the range, Sixth Form, reaches about VND 711 million.\n\n## Other fees\n\n- **Application fee:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "VND 3,700,000, a one-time payment. Non-refundable and non-transferable. Payable upon submission of the Application Form."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Registration fee:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "VND 18,650,000 for Nursery & Reception; VND 37,300,000 for Year 1 to Year 13."
+          },
+          {
+            "type": "text",
+            "text": " It is "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "payable when an Offer Letter is issued and is non‑refundable."
+          },
+          {
+            "type": "text",
+            "text": " Children moving up from the Early Years Centre to Year 1 pay an extra VND 18,650,000 to top this up.\n- **Capital fee:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "VND 46,600,000, an annual payment. Non-refundable and non-transferable. Payable before commencement at the school."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Security deposit,** plus possibly transport and other charges. I couldn't find amounts for these.\n\n## Next steps\n\nThese numbers come from third-party directories (Doris.school, WhichSchoolAdvisor, Edarabia), not from ISPH itself, and the sources don't all cover the same academic year. Ask ISPH's Admissions Team for the official fee schedule for the year you're applying for, and check whether there are sibling discounts or early-payment options."
+          }
+        ],
+        "container": {
+          "id": "container_015kF25DU6jJ3N553rYEVZiC",
+          "expires_at": "2026-11-13T08:09:10.520189Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 42781,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1972,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 4,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5905,
+              "output_tokens": 224,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6481,
+              "output_tokens": 146,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 8993,
+              "output_tokens": 165,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 9527,
+              "output_tokens": 78,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 11875,
+              "output_tokens": 1359,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 152
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

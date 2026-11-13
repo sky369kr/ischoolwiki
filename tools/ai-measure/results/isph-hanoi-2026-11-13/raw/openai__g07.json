@@ -1,0 +1,509 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "g07",
+    "type": "generic",
+    "text": "Compare international school fees in Hanoi"
+  },
+  "started": "2026-11-12T13:58:29.966Z",
+  "finished": "2026-11-12T13:59:12.169Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Compare international school fees in Hanoi"
+  },
+  "response": {
+    "id": "resp_0c63b619badf855b006af5c606298087d29a8ccfe5f411467e",
+    "object": "response",
+    "created_at": 1794491910,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794491951,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0c63b619badf855b006af5c60aa11887d2a678a7a422c5a14d",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "Hanoi international school tuition fees 2026 2027 UNIS BIS Concordia",
+            "Hanoi international school fees 2026 2027 HIS St Paul BVIS"
+          ],
+          "query": "Hanoi international school tuition fees 2026 2027 UNIS BIS Concordia",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.concordiahanoi.org/admissions/admissions-faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027..pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1768529540/u4rnmuqsi1lk7w1paxng/HIS_Tuition_and_Fees_2026-2027docx_1.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/admissions/tuition-and-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamkb.com/living-in-vietnam/international-schools-in-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://stpaulhanoi.com/admissions/tuition/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/trung-hoc-quoc-te"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/comparing-international-school-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.vietnamspot.ru/en/blog/vietnam-international-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://truenorth.edu.vn/en/school-life/news-and-events/hanoi-education-allowance-ap-vs-ib-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775608279/concordiahanoiorg/zh6vk5kx7kkdylgplube/2026-2027TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://cdn-6.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/top-10-best-international-schools-hanoi-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/vi/tin-tuc-su-kien/tin-tuc/danh-sach-truong-cap-2-quoc-te-o-ha-noi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027.docx.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/DaNang/comments/1nxq00i/why_da_nang_private_international_schools_are_so/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Vietnam-Australia_School%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1naw4gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/hochiminhcity/comments/1xaq6m5/parents_in_vietnam_what_do_you_wish_youd_known/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/vozforums/comments/1irehl0"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Hanoi%E2%80%93Amsterdam_High_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/vozforums/comments/1iqxa75"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Concordia/comments/1pl66yn/international_tuition/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/saigon/comments/1x8txb0/parents_in_vietnam_what_do_you_wish_youd_known/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0c63b619badf855b006af5c60f51d087d29731751b628b8720",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.nordangliaeducation.com bis hanoi tuition fees 2026 2027",
+            "site.nordangliaeducation.com bvis hanoi tuition fees 2026 2027"
+          ],
+          "query": "site.nordangliaeducation.com bis hanoi tuition fees 2026 2027",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=19185C677F838E45DCB42B323267C722&rev=5b4a36162ad54bacaa5fdb9b96b8d4e1"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/admissions/2026-27/tuition-fee/bvis-hanoi-schedule-of-fees_2026-2027-%281%29.pdf?hash=A4ED7E33D781CD37540E177D079D008A&rev=6192d72e74134fca9d566ab088db26c2"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/admissions/schedule-of-fees-26-27.pdf?hash=A3E420672F80A41B83E899E5191B12C4&rev=5e19d1cbe3264b709a0b48585642a1ac"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/comparing-international-school-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/admissions"
+            },
+            {
+              "type": "url",
+              "url": "https://www.gosam.io/en/schools/british-vietnamese-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/admissions/fee/schedule-of-fees-2026-2027-d1.pdf?hash=96BA4E55B4D49C7F5DD851FC8D49A563&rev=67e0b014bb314b5aa9677d8e7eab715a"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi/bvis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/vi-vn/bvis-hanoi/admissions/tuition-fees"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1qzvhfv/bvis_hcmc/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/DaNang/comments/1nxq00i/why_da_nang_private_international_schools_are_so/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1naw4gd"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1tepuzl/best_fit_in_vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/16c6omr"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/vozforums/comments/1iqxa75"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1768529540/u4rnmuqsi1lk7w1paxng/HIS_Tuition_and_Fees_2026-2027docx_1.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1775608279/concordiahanoiorg/zh6vk5kx7kkdylgplube/2026-2027TuitionandFees.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://stpaulhanoi.com/admissions/tuition/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027..pdf"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0c63b619badf855b006af5c614a56887d2a462d128ca40cac4",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cYvjMyKv-ZSx99USTh2PB5yI6G4DpEyZQ82lkqnHcEPZuLid7DYFMM_xxYY06BCtZ5zfpEY3a9pm8VPYXc-7xjhoNyliCQBCuAXCSKBHmyvWgFF1V2ZBnHKASJfVqNPAVx7791ciTFsz76ZtHmjXKIWz3TwXwr5LUtphdiYaNKLGlmgtFXrDRuiyutOe6qRAOa3GfDF5-Ced-cJj69RWumMCI1UNsDaH_ndYiyZQ9pj5WPqECG188cH8qGLX9ZGN8_seubBDKlkBZ85cRkdzqU_8Bi0ylv36o25Qd7LWJGSzEntoX94pZss6M4GUsqvZXJ5nz_nC4mwUI2eZ-duChA9K4y-t3YKYxE242Q7MDy9pjM5VOvaXBTYo0r57TWwYefJaPquoRe4pfiU538hByEiyW15qxuSPUshkZUnD8CEQJmj4oUvzuJzMrf9EkwYQYVMExbrUDJH3nRyYYpTUw2BDfbS21yFnecnyvlzuYnUfanNfEXaup3b91FXLdpev78y9NLKSO2F7LPIGibV8-8kfAB-gDiPpkPOaFxNfrqwhCVEBsgzJJfMlQmt-bZdLpSiJ3d5uhmbiq34WOzR_X05TPuA5H-zrMJJ36bIPc3yVznop7I5VGjZsKatZnXCBhMhdJUk4rXT-mf73Ypn1jz4OBLOjqJZDNnEb9SEKLCDzf9LPxf-zhKoln4zzmtgNjYpNHFisvLy6zIMmZxi4MKmRo7jHxljf1GRJF-svPXCzDdejwZgOAy-vnrLu_vck6WFnHbEwuk5F254mTteoKjeObADPDN_RDa5Rp8tmnc0NRJ8fRZgZohYKLCGGmczL2TgJFM-k0cEJgCQ3GMlVSviAk953qKYJOhZZkpkYEWwixriQpjxZxE_98fLG1Zk9nHe4K0eB3fLTFs8MjpuoHywA54qz6kaQXTlZ5HiT9j2heuAf2--6j48ytibNXV6ItEjfxSl1ludyIoMfDef0i4ehFI9lE_rXzJmiQFklHHHYhYGxsrdKn2bSqgiUaJeijN1GcT3q3ZpTr1L_IpCJOWHOKERGYmInp-wK93f1Ajt1BkYsTnkMjJhdjLvdrK2SKMtPy5ycsVd2KFNoNDRmE9Y33Tqj-QHCbBAiQzjOpHMnvxJJA0qcccreqE_Kjr8ECU1qC6inb_uGssUSS8zBA5SCY1pw2xm3MDIvByf8pYXcHuWlP5ar6X1Mo_Q5m7_pdCi2HCYuqC4p8tX_XYwrf0HE1r-_6mNrESpBneL75lJ9F-YS5Ofc_JenNWacKHvZ-OB1peF1tlSIMikUi0kljv1mh1JdsfTDe2i1R589xYIDwMEIwjY5KB1uiOmAq-uMhbNkFZ667-s76kqTpHlcsKlyIx_7wjgDEVhhRncrzyP2K2demwZqgPEUCbfsrMhEDktfzZVYqhtTjWdRvkSGv00Cm3NvE_-r_i5_r2L9hEYdnZ0BgOXvPXV4mm-7CRh-yNT2GI9VW5WeIz3l96XRTEXK8ZJbuXPYYTgCGIN94xqjuDddUtdt8t-Bu5hlarD92dcsCm3BRAvfGmmnA5QTFVj11lb8_0JDJyHnRXGEUm628GY4a-PtX7OpZbbwQs8qiKoyaqEsP7YKqnAIAvoam-uGQwGVk0qBNnEJ6uHO-Kh1GtosdYuVdR-DxvI-et3NQtKm30pM3oW-48N8Bd1ICdJQ7Xk_9nD0u3PxcmvLMezOs8UCjfCMmKthhFUe5SBtY86jDCARxudsX3kM0q13_3Q_C48oY4AqEBuVa8XxPZHsMQ=",
+        "summary": []
+      },
+      {
+        "id": "ws_0c63b619badf855b006af5c614df0487d2ac78f4b4dc72cfdd",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://resources.finalsite.net/images/v1768529540/u4rnmuqsi1lk7w1paxng/HIS_Tuition_and_Fees_2026-2027docx_1.pdf"
+        }
+      },
+      {
+        "id": "rs_0c63b619badf855b006af5c6183e1887d282a612133c838fc4",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cYvePxwF75DHGOqp_GxDhq8N6Ci2RnzeyOHFjo7IFJhvJORXRw6O_TvFUmdxmNFJWWOKzUcgF97kkxnn5T2TIbWr43PfPJbv87gg8AeS7PMloHgbUXYrZPqM61YGZYtbKKFPcwauiU8nQLuDUVdTfSth4P8EAUO0jmxjxvy9kqsXI9ocsNjS7iHZJMEEKwdyYAuBWRBglCM-f-urzeR9-Bl2u0X1Mc1HElFAaKBxmjbB-67pvh3gYWhRlqV5ywuoOYO688WZVn6mw0HkkqmkO2cZEcCzUc0MsRjv_qCK0S-pqTWWAZAbdZ7-ikezBPDN2DtPnhkJrO5aQtWWdqe4IPA-1upFuJpnQTYsjAmbbKUlyH2N3E8PX-GDXEcrMYS92KD_KAgK8XjHSJDVGGHUYbd3zLf2mbHDzvHmQNRqvxid8bve4tcy5mNPGR6SKrWsErRUXx8YqdrZAfeEkILhGeeEXxn_6NgrAVD_AmFpXvCayLpSXTsZBtEqAlNCoH3d88Zl_cTLwlLLFiZ9SKDeNk903xIG7xirQXM_pEeNIeYhGeASvqBWN-5JSnVQQA0-LQta-1Aocs3v9VZuHIP-FpeRV5J5IUSr84to-fpeCORfYVPxu6R7eHDKMZfEL5IoUsXXwuAjiSVQOW4oC4UIQSdszfmazsHIeU9Np7S6_Rb06yFbiVg-J1Ws_DZUevYK310PpWlZL0tUt9PZrGaxKFQD4T7VUJmstT0bsafal_ONWzEzX9w-YteP8Tb22TouSSM7X97TPdgh-sqkOPBetw8Fsxx3xMZdLnKjdGT-7CqqIJM_NZUJm31pJvU_SB8d2fd2OkPM7ZwK7CbC9bL2qoaki_K3IeTLvLb6mqV0669xF7lxbBi5hViwHhJd822ssEdKQFfaO5MdNxBEZLLi4j8i3AqAGBPBsTL5NT-yAwKKGiLM0bHbJlpMT-zVwIASfJ5AFw7E0x6_gN0yl9Rgs3Lywp5cMwO8M9CIWzsYhDFpYhrmkKgjo2uvA18YmLbpY2x2L-dqcpgxBno13tJdDhNO07BkJSDZXT5WyBOQW8VqdlHCiHkbKeazjC-vM3UWIoLdymmJXNZC_Zm6xUWkBIj69Du1NXUNdJyXwTCnkK_BEcbCi7D2T2XbGetAypGq9T3NIOSxXfoK9rg_kU7l_-pXmbnFrnA2sQoVGUV3-wp-LPm5JLSKxWSIpAPAiyVmT_-tvhQ2Aixx6fJ2IMDI_clDRbOSbxPNLd7GL5QBSG7oeY8mtfU2UCtUbNqN7bJQvrF_sAN_SCcCrmyIWtJ_VCSGDZO_o_Kdz4LGemoCDAkY8dIEVnjYDhho2B-GiMfN2MEjL2wXfbTJcWRLYaBB7tpo3SWDEx474VrPs5dfqvaXc9bF92nGT0fSZlrckKV48lQG7i8TqQ2-XFNQGwPKVL0-23BaMMSUH78v2utnbNf67tu-XIZ7FNKVN5YZpNaRGV3NGWNnGoaWeD0SMqTp1mrarNXiyjg2fULotMC2gxfv09PY3kkbVACKOGwuzi3Pk5UqV6_bq5b_SfIK2gSJQWvW8EAiilNNrdJFp5dP-mOf4-jvZZznWaOiB9ZyZl5cEjKCvjk-coS0g-tjj9W80co37Md7C--GTFRbFlOj8eZ3xXd5I2QucVr4-NxzwRPRlkXe_K_3XkP7t9Maaf5PEHd-VS2WcvuDc4M1Hw6-B9hZ6EPfieYLc_Tuoz5SNx16JuIyt6YO9BBwGJoZiX3-jkxW1K5CZmyiGpPfrsar9xgjc8uHa6FqEJnfLJwISLSuenuI7L-xQv9fe2Xw8agVgfHAvKzxZkCS2t9d9ubfoiogBsH8iogw3PCpcQgvKRW93iJMjphRJfb7V0DC1QHnL61LZy5Vj44a0Bm1LTqlK6JQYErF_DiyGtso5jmR9nWcxCHDIiQet1YqoiW08uO_ejk8ihv64sXFkkmf_jwJILS8fwyAvvVlrVCkOLOK77EkrGdurTSPfNIIEz18N2uTDo0xb-ICmUZsKBX_91NG4ok-V3Hpn2__0TVqq_E9f7YGCsKCPSWGGnM74Z36zWCjH8PxPYbredlcfnAdyPcsx9fMx8tOOkqnDVDzY8_2o5kgm1CpF22wtdCQ7GrFL8eleCRhhNbr4XW8zZbSXzLBc8SUJYzEFlluUZMpeB8FP_JIqbog5YfqvMooMdPoz9ETHK31enyyvARRr6MYinWe1TG8bZwC5LUlXfObS1YzU3mqryuxVC_s6xrT2To6fBiyXEpR6VPfhNgQTQGxZqel7w5MQ-0e9vktOltS3Jjr8692qVj044R1hvDiCFMtf2Dh8JTyyguRdBBjyqlGrxlGHnwFa3vxVRg6ZxC5oBDidl5rJVkFcXXWmOyOJLzA4rz3b658xKPGcmYcDgWLQnqWHqwTVEIYLciXIMaoE4Ulib9782KGz9AhhLgdsY0oHQ7SamMXUtEhB2IISBSkF2qqCrA8n0aTdT42X2hc3CEWrQmxA4Sjoo_5UPRsdg_lCDmWEdE7HTq2014dm2boufKoje2V-4=",
+        "summary": []
+      },
+      {
+        "id": "ws_0c63b619badf855b006af5c61b409087d2b6942283e3391076",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees"
+        }
+      },
+      {
+        "id": "msg_0c63b619badf855b006af5c61d707487d2a1e339a39e2c19de",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 1352,
+                "start_index": 1253,
+                "title": "Tuition Fees | BVIS Hanoi | Top Private International School",
+                "url": "https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1783,
+                "start_index": 1685,
+                "title": "FAQs | British Vietnamese International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bvis-hanoi/faqs?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2593,
+                "start_index": 2494,
+                "title": "Tuition Fees | BVIS Hanoi | Top Private International School",
+                "url": "https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2919,
+                "start_index": 2821,
+                "title": "Tuition Fees | BIS (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3178,
+                "start_index": 3032,
+                "title": "Tuition and Fees ",
+                "url": "https://resources.finalsite.net/images/v1775608279/concordiahanoiorg/zh6vk5kx7kkdylgplube/2026-2027TuitionandFees.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3522,
+                "start_index": 3381,
+                "title": "HIS Tuition and Fees 2026-2027.docx",
+                "url": "https://resources.finalsite.net/images/v1768529540/u4rnmuqsi1lk7w1paxng/HIS_Tuition_and_Fees_2026-2027docx_1.pdf"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 3829,
+                "start_index": 3700,
+                "title": "Tuition and Fees 2026-2027.docx",
+                "url": "https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027.docx.pdf#page=1"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 4276,
+                "start_index": 4177,
+                "title": "Tuition Fees | BVIS Hanoi | Top Private International School",
+                "url": "https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees"
+              }
+            ],
+            "logprobs": [],
+            "text": "## Hanoi international school fees: 2026–27 comparison\n\nHere’s a comparison of **six schools using their published 2026–27 fees**. These are annual-payment tuition rates—not total first-year costs.\n\n### Annual tuition\n\n**Amounts are in millions of Vietnamese dong (VND), except UNIS, which publishes in US dollars.** Grade/year labels are shown because placement and age cutoffs differ between schools.\n\n| School | Primary / elementary | Middle school / lower secondary | Final two school years |\n|---|---:|---:|---:|\n| **BVIS Hanoi** | **480.4–496.1m** — Years 1–6 | **582.6–593.3m** — Years 7–9 | **661.5m** — Years 12–13 |\n| **Hanoi International School (HIS)** | **613–624m** — Grades 1–5 | **675m** — Grades 6–8 | **797m** — Grades 11–12 |\n| **St. Paul American School** | **666m** — Grades 1–5 | **778m** — Grades 6–8 | **855m** — Grades 11–12 |\n| **British International School (BIS)** | **657.6–734.6m** — Years 1–6 | **846.8m** — Years 7–9 | **970.2m** — Years 12–13 |\n| **Concordia Hanoi** | **861.8m** — Grades 1–5 | **912.2m** — Grades 6–8 | **1,038.8m** — Grades 11–12 |\n| **UNIS Hanoi** | **US$33,330** — Grades 1–5 | **US$35,210** — Grades 6–8 | **US$39,870** — Grades 11–12 |\n\nSources, by row: BVIS; HIS; St. Paul; BIS; Concordia; UNIS. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees))\n\nFor budgeting only, using an **illustrative—not live—exchange rate of VND27,000/US$**, UNIS’s figures above equal approximately **900m, 951m and 1,076m VND**.\n\n**Important distinction:** BVIS is a British–Vietnamese bilingual option, so its lower price is not a like-for-like substitute for an English-medium international school. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bvis-hanoi/faqs?utm_source=openai))\n\n### Additional first-year charges\n\nThese are **on top of tuition**, before transport and other optional services.\n\n| School | Application + enrolment/registration | Separate refundable security deposit |\n|---|---:|---:|\n| **BVIS** — primary/secondary | **74.3m VND** | **35.4m VND** |\n| **HIS** | **31m VND** | **50m VND** |\n| **St. Paul** | **47.5m VND** | Confirm with school |\n| **BIS** — primary/secondary | **75.3m VND** | **23.6m VND** |\n| **Concordia** | **54m VND** | Confirm with school |\n| **UNIS** | **US$2,350** | Confirm with school |\n\nRefundable deposits are subject to withdrawal conditions. Tuition deposits credited against tuition should **not** be counted again as an extra annual expense. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees))\n\n### What changes the real cost?\n\n- **Meals and uniforms:** BIS includes daily lunches and uniforms. BVIS includes lunches, but uniforms and buses cost extra. UNIS and Concordia list lunches among possible additional expenses. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/admissions/tuition-fees))\n- **Transport:** Concordia lists **35m VND/year**; UNIS lists **US$1,100/year** for its round-trip bus service. ([resources.finalsite.net](https://resources.finalsite.net/images/v1775608279/concordiahanoiorg/zh6vk5kx7kkdylgplube/2026-2027TuitionandFees.pdf))\n- **Instalments:** HIS adds **3% for semester payments or 4% for quarterly payments**; Concordia adds **5% for semester payments**. Compare the full instalment total rather than just the first invoice. ([resources.finalsite.net](https://resources.finalsite.net/images/v1768529540/u4rnmuqsi1lk7w1paxng/HIS_Tuition_and_Fees_2026-2027docx_1.pdf))\n- **Midyear entry:** Don’t assume fees are prorated monthly. UNIS and Concordia publish policies charging the full annual amount for students joining during the first semester. ([unishanoi.org](https://www.unishanoi.org/uploaded/Admissions/Application_Procedure/Tuition_and_Fees_2026-2027.docx.pdf#page=1))\n\n### Bottom line\n\nOn tuition alone, **BVIS is the lowest-priced of these six**, with the bilingual distinction noted above. **HIS and St. Paul sit below BIS and Concordia** across the stages compared. UNIS is in a similar high-cost bracket to Concordia when using the illustrative exchange rate. This is a price comparison, not a quality ranking. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bvis-hanoi/admissions/tuition-fees))\n\n**What age or grade is your child, and are you considering bilingual schools or only English-medium international schools?** That would let me narrow this to a more useful, like-for-like first-year budget."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 2
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 37685,
+      "input_tokens_details": {
+        "cache_write_tokens": 10,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 1849,
+      "output_tokens_details": {
+        "reasoning_tokens": 550
+      },
+      "total_tokens": 39534
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

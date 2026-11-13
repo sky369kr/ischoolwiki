@@ -1,0 +1,303 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g02",
+    "type": "generic",
+    "text": "Which international schools in Hanoi would you recommend for expat families?"
+  },
+  "started": "2026-11-12T13:55:31.216Z",
+  "finished": "2026-11-12T13:55:56.225Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Which international schools in Hanoi would you recommend for expat families?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011Cgy9ZzsyFqqFQGiyMqxhy",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS1wUKEAgTGAI4AUIIdGhpbmtpbmcSDOtVMGTPHhB6UgRc9hoMvXnzRZJ6D1bqzMMFIjAx1CFL2IDR4Kb6cFZBqlKg/9ORmqUtJT2/mTi+qPhzVB2ZK8RhdRC+x6iewBflOnEq9AQ5BmrHasV2qun+DaLfgY9Momptt4nmy3Wfv10eG+Q5Kf1ZtXjeG8dTDHMvxGpF5j3mfF5OmEIANNvGp3lvNlN95cevIOBwDf5v5O87wX+XyaHQ86ka4Pr4O4sVCHhjQW3jahf6ebZPSd1v0+bnsb1JH2aHqHMoIv8HEZC0/ufyWxuQCwzBWspU7MHVFt6C0f1QaAPqssvjG+8SAQsgQ4tRTTRt2Db54IdHrqHEQCSNIjZVEeWuG/fXLKX1abDuQgr8Ol477/SMEXw6u6S2lGJO+Gfg39Pu4XAPGCviV3yCfnxeFzsZkHkncbnd75k0JZwPQ6i0QFk18aiXcKGW4XY/47uE3kxSyYkdwQEqFGAB+PbEdMHYR7WGSXj4+Sl9apbjmcp6HbB0p1BiWlc/pB8+Xf7C0vb0Ulbt69NZkx6CWlhnH3OwmwCySfqMLVCvQBEtxKZAko3cIa3lDnlmcx+I5tICSb731Coppf5Oa7fgxSdOOGQfHmSPWk7LO0P0zqyDRdokrWiJlnYp1ioJgyWPSas8NS0IqqtCBsQ23u5niHaOHYW2npmIPepI1jsh66tiu8JNgs9uwc3pXNnVbZGMS6yjKJrmf/h15Bgng8wf6XvLL1kv8mPM03egbPAK3cJvIDYWRAMiGlEM4tqj4SZ03rmjjus4S8vekZVE+2nv7smJg/6cJbNWuQYCpWZj5pamN1txrfITfG3hmqiIqrUihwrulS2bNi+t07ufkzNjUjAZk5X/S5em+fu5qFTZ6nr3jZR4jVtEpUTOUis/dGyupV75ff+iBo7mJtJbuQvL5kKIZi478nFOUS4vv+adaaQkecljGAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01EQDPH8F8tBYeGhs2RGs17U",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"best international schools Hanoi expat families 2025\"})\nfor x in r[:6]:\n    print(x['title'], x['url'], x['content'][:1500].replace('\\n',' '), '\\n---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_0176i96XxkXLL4QpPXxEtJgz",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Hanoi expat families 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01EQDPH8F8tBYeGhs2RGs17U"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_0176i96XxkXLL4QpPXxEtJgz",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Hanoi 2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/",
+                "encrypted_content": "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",
+                "page_age": "205 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top Affordable International Schools in Vietnam (2025 Guide)",
+                "url": "https://blog.doris.school/affordable-international-schools-vietnam",
+                "encrypted_content": "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",
+                "page_age": "362 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Cheapest International Schools in Hanoi 2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/cheapest-international-school-hanoi/",
+                "encrypted_content": "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",
+                "page_age": "205 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Vietnam (2025 Edition)",
+                "url": "https://blog.doris.school/best-international-schools-vietnam",
+                "encrypted_content": "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",
+                "page_age": "174 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School system and international schools in Vietnam - Vietnam Guide - Expat.com",
+                "url": "https://www.expat.com/en/guide/asia/vietnam/36434-international-schools-in-vietnam.html",
+                "encrypted_content": "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",
+                "page_age": "575 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "10 Best International Schools in Hanoi",
+                "url": "https://translate.google.com/translate?u=https%3A%2F%2Fwww.international-schools-database.com%2Fin%2Fhanoi%2Ftop-schools-in-hanoi&hl=vi&sl=en&tl=vi&client=srp",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Expat Exchange - Best International Schools and Bilingual Schools in Hanoi",
+                "url": "https://www.expatexchange.com/ctryguide/28891/119/Vietnam/Schools-in-Hanoi-Best-International-Schools-and-Bilingual-Schools-in-Hanoi",
+                "encrypted_content": "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",
+                "page_age": "545 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Saigon South International School",
+                "url": "https://en.wikipedia.org/wiki/Saigon_South_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Hanoi International Schools Guide · Maison Hanoi",
+                "url": "https://www.maison-hanoi.com/living-in-hanoi/international-schools-hanoi",
+                "encrypted_content": "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",
+                "page_age": "117 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01EQDPH8F8tBYeGhs2RGs17U"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01EQDPH8F8tBYeGhs2RGs17U",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBJmkxP15AXWEeoKjhoMJgt2vbeDYtrSHfATIjBwqNn87xOkDQ+XX3/6IeK3EoGxjdP0+9f/+ZmHWHYRUuiYPhdDCmSGd8ib6s8/zh0qEi39j3cE7x/B1IvbKnoJCzLhnhgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01EQDPH8F8tBYeGhs2RGs17U/cell.py\", line 11, in <module>\n    print(x['title'], x['url'], x['content'][:1500].replace('\\n',' '), '\\n---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011b9XStqiAJ8qDRYtpNRjga",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_011b9XStqiAJ8qDRYtpNRjga",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"Best International Schools in Hanoi 2026\", \"url\": \"https://www.tutopiya.com/blog/international-school-fees/best-international-schools-hanoi/\", \"content\": \"**A natural fit for British and Commonwealth families**, and for those targeting UK university admissions. Strong pastoral reputation and close-knit community.\\n\\n# Best International Schools in Hanoi 2026\\n## 1. United Nations International School Hanoi (UNIS)\\n\\nUNIS is widely regarded as Hanoi\\u2019s most academically rigorous international school.\\n\\nUNIS is the natural first choice for families whose priority is IB excellence and an internationally diverse peer environment.\\n\\n## 2. British International School Hanoi (BIS)\\n\\nA natural fit for British and Commonwealth families, and for those targeting UK university admissions.\\n\\n## 3. Concordia International School\\n\\nConcordia is Hanoi\\u2019s leading American curriculum school, accredited by WASC and offering AP courses in upper school. Popular with North American families and those targeting US college admissions.\\n\\nBVIS Hanoi\\n\\nBVIS offers British curriculum at a more accessible price point than BIS, with multiple campuses making it convenient for families across Hanoi.\\n\\nHanoi Academy\\n\\nHanoi Academy offers IB at fees below UNIS, making it the most accessible full-IB option in the city. Strong choice for IB-committed families who want the qualification at a lower price than the top tier.\\n\\nThe ideal choice for French-speaking families.\\n\\n**Location.** Hanoi traffic means school location matters. Tay Ho (West Lake) is the main expat enclave \\u2014 families there tend to prefer UNIS or BIS. Families in other areas may find BVIS campuses more convenient.\\n\\nGlobally mobile \\u2192 UNIS or Hanoi Academy (IB).\", \"page_age\": \"205 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"Top Affordable International Schools in Vietnam (2025 Guide)\", \"url\": \"https://blog.doris.school/affordable-international-schools-vietnam\", \"content\": \"The school offers bilingual pathways alongside international programmes, making it a **common choice for families seeking moderate fees**. \\u2026 The smaller campus environment appeals to families seeking a close-knit community.\\n\\n# Top Affordable International Schools in Vietnam (2025 Guide)\\nMany expat families move to Vietnam expecting international school fees to vary by city, curriculum, and campus size. For parents looking for lower annual tuition, there are schools across Ho Chi Minh City, Hanoi, and Da Nang that fall within the affordable range.\\n\\n## Affordable International Schools in Hanoi\\n### St. Paul American School Hanoi\\nSPASH offers an American-style curriculum with English-medium instruction across primary and secondary. The school provides a full K\\u201312 structure with AP options. Fees sit within the mid-range for Hanoi.\\n\\n### Singapore International School (SIS @ Ciputra)\\n\\nThe school offers bilingual pathways alongside international programmes,\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "Here's a shortlist. Which school fits best depends mostly on the curriculum you want, your budget and where you'll live.\n\n**Top-tier options**\n\n- **UNIS Hanoi (United Nations International School):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "It's widely regarded as Hanoi's most academically rigorous international school."
+          },
+          {
+            "type": "text",
+            "text": " It runs the full IB programme from primary through the IB Diploma. Students come from many countries, and the campus is in the Tay Ho/Ciputra area. It's the best fit for globally mobile families who want IB.\n- **British International School Hanoi (BIS, part of Nord Anglia):** It teaches the English National Curriculum, then IGCSE, then the IB Diploma. It's "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "a natural fit for British and Commonwealth families, and for those targeting UK university admissions."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Concordia International School Hanoi:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Concordia is Hanoi's leading American curriculum school, accredited by WASC and offering AP courses in upper school. It's popular with North American families and those targeting US college admissions."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**Strong options at somewhat lower fees**\n\n- **Hanoi Academy:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "It offers IB at fees below UNIS, making it the most accessible full-IB option in the city."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Hanoi International School (HIS):** A long-running, smaller IB school in central Hanoi with a close-knit community.\n- **St. Paul American School Hanoi (SPASH):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "It offers an American-style curriculum taught in English across primary and secondary, with a full K–12 structure and AP options. Fees are mid-range for Hanoi."
+          },
+          {
+            "type": "text",
+            "text": "\n- **The International School @ ParkCity (ISPH):** British curriculum, with a newer campus on the western side of the city.\n\n**Language-specific schools**\n\n- **Lycée Français Alexandre Yersin:** Follows the French national curriculum (AEFE network), so it's the obvious choice for French-speaking families.\n- There are also Japanese and Korean schools for those communities.\n\n**One caution:** BVIS Hanoi, Wellspring and similar schools are excellent, but they're bilingual and mostly Vietnamese. They may suit you if you want deep local integration, but they're a different experience from a mainly expat school.\n\n**How to narrow it down**\n\n1. **Where you'll live:** Hanoi traffic is bad, so a long school run is painful. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Tay Ho (West Lake) is the main expat area, and families there tend to prefer UNIS or BIS."
+          },
+          {
+            "type": "text",
+            "text": " Families in Ciputra are close to UNIS and Hanoi Academy. Those in Long Bien or Vinhomes Riverside are near BIS.\n2. **Where you'll move next:** If you might move again, IB schools like UNIS, HIS or Hanoi Academy make transfers easiest. If you're heading back to the UK, BIS or ISPH fit best. For North America, Concordia or SPASH fit best.\n3. **Budget:** Top-tier fees can be well over US$25,000–35,000 a year for older grades. Check what's included, such as the bus, lunch, enrolment fees and building levies. Also find out whether your employer pays.\n4. **Waitlists:** UNIS and BIS can fill up in some year groups, so apply early, ideally 6–12 months ahead.\n5. **Visit or do a virtual tour:** Ask about class sizes, how much staff turnover there is, how they handle air quality (indoor air filtration and policies for high-pollution days matter in Hanoi), and what support they offer for special learning needs.\n\nIf you tell me your children's ages, your nationality or next likely move, your budget and roughly where you'll live, I can narrow this to two or three schools."
+          }
+        ],
+        "container": {
+          "id": "container_017AMzYh5o5xVbt5mUfmk6FX",
+          "expires_at": "2026-11-12T14:55:38.599172Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19953,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1948,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5903,
+              "output_tokens": 166,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6444,
+              "output_tokens": 65,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7606,
+              "output_tokens": 1717,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 455
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

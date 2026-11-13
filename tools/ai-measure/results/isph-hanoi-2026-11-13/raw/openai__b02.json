@@ -1,0 +1,290 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "b02",
+    "type": "branded",
+    "text": "What are the IGCSE and A Level results at ISPH Hanoi?"
+  },
+  "started": "2026-11-13T07:07:02.841Z",
+  "finished": "2026-11-13T07:07:17.704Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "What are the IGCSE and A Level results at ISPH Hanoi?"
+  },
+  "response": {
+    "id": "resp_0efdf5c5fdaf965d006af6b717494487d1b23cd878e8143442",
+    "object": "response",
+    "created_at": 1794553623,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794553637,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "input_transformations": [],
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0efdf5c5fdaf965d006af6b71979f887d180d26312ea2f5ac2",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "ISPH Hanoi IGCSE A Level results 2025 2026"
+          ],
+          "query": "ISPH Hanoi IGCSE A Level results 2025 2026",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-igcse-achievement-2025/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/2025-igcse-as-and-a-level-certificate-presentation-a-journey-of-effort-and-shared-pride-within-the-isph-community/"
+            },
+            {
+              "type": "url",
+              "url": "https://auschamvn.org/news/2025-igcse-level-certificate-presentation-international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/isph-students-receive-outstanding-results/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/category/news/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/le-trao-bang-igcse-a-level-2025-hanh-trinh-truong-thanh-toan-dien-tai-isph/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8F%F0%9D%90%87-%F0%9D%90%80-%F0%9D%90%8B%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E%F0%9D%90%A5-%F0%9D%90%80%F0%9D%90%AC-%F0%9D%90%8B%F0%9D%90%9E%F0%9D%90%AF%F0%9D%90%9E/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/good-new-from-year-13-class-of-2025/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8F%F0%9D%90%87-%F0%9D%90%92%F0%9D%90%A1%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%AC-%F0%9D%90%B0%F0%9D%90%A2%F0%9D%90%AD%F0%9D%90%A1-%F0%9D%90%84%F0%9D%90%B1/"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/employers/1176311/attachments/School-profile-%28EN%29-final.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamschool.kr/download.cm?tk=YToyOntpOjA7czoxMzoiMTkxMWMyOTU0ZWNlYiI7aToxO3M6MjI6ImYyMDI0MDczMTk5NzEwMWZkYTBiZjAiO30%3D"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2023/10/KS4-new-update-23.3.23.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.britishcouncil.vn/sites/default/files/handbook-easy-step-guide-on-edu-cooperation-and-investment_in_vn_final.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/wp-content/uploads/2025/11/Age-division-AY-26-27.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/High_School_for_Gifted_Students%2C_Hanoi_National_University_of_Education"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/International_General_Certificate_of_Secondary_Education"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Island_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Renaissance_International_School_Saigon"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0efdf5c5fdaf965d006af6b71da4c087d1ba52e90434e8f707",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "open_page",
+          "url": "https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/"
+        }
+      },
+      {
+        "id": "msg_0efdf5c5fdaf965d006af6b71f744487d19bcf302e6117ccc7",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 373,
+                "start_index": 141,
+                "title": "𝗜𝗚𝗖𝗦𝗘 𝟮𝟬𝟮𝟲: 𝗔𝗡𝗢𝗧𝗛𝗘𝗥 𝗢𝗨𝗧𝗦𝗧𝗔𝗡𝗗𝗜𝗡𝗚 𝗥𝗘𝗦𝗨𝗟𝗧 𝗙𝗢𝗥 𝗜𝗦𝗣𝗛 - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 868,
+                "start_index": 636,
+                "title": "𝗜𝗚𝗖𝗦𝗘 𝟮𝟬𝟮𝟲: 𝗔𝗡𝗢𝗧𝗛𝗘𝗥 𝗢𝗨𝗧𝗦𝗧𝗔𝗡𝗗𝗜𝗡𝗚 𝗥𝗘𝗦𝗨𝗟𝗧 𝗙𝗢𝗥 𝗜𝗦𝗣𝗛 - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1365,
+                "start_index": 1131,
+                "title": "???% ? -????? ???? ???? ??? ???? ????? ?? ???? - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1732,
+                "start_index": 1635,
+                "title": "ISPH Students Receive Outstanding Results! - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/isph-students-receive-outstanding-results/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2093,
+                "start_index": 1996,
+                "title": "Congratulation Class of 2025 on World-Class A Level Success - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/"
+              }
+            ],
+            "logprobs": [],
+            "text": "**ISPH—the International School @ ParkCity Hanoi—has published its 2026 results**, reporting a **100% pass rate at both IGCSE and A Level**. ([isph.edu.vn](https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/))\n\n### Latest results: 2026\n\n| Qualification | A*–A | A*–B | A*–C | Reported pass rate |\n|---|---:|---:|---:|---:|\n| **IGCSE** | 45% | 68% | 89% | 100% |\n| **A Level** | 69%* | Not stated | Not stated | 100% |\n\nSources: ISPH’s official 2026 results announcements. ([isph.edu.vn](https://isph.edu.vn/%F0%9D%97%9C%F0%9D%97%9A%F0%9D%97%96%F0%9D%97%A6%F0%9D%97%98-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%A2%F0%9D%97%A7%F0%9D%97%9B%F0%9D%97%98%F0%9D%97%A5/))\n\n*The A Level announcement specifically says “69% of students receiving A*-A grades”; the IGCSE figures describe the proportion of grades. That distinction matters when comparing results. The 2026 A Level announcement does not provide A*–B or A*–C percentages.* ([isph.edu.vn](https://isph.edu.vn/%F0%9D%9F%AD%F0%9D%9F%AC%F0%9D%9F%AC-%F0%9D%97%94-%F0%9D%97%9F%F0%9D%97%98%F0%9D%97%A9%F0%9D%97%98%F0%9D%97%9F-%F0%9D%97%A3%F0%9D%97%94%F0%9D%97%A6%F0%9D%97%A6-%F0%9D%97%A5%F0%9D%97%94%F0%9D%97%A7/))\n\n### Previous year: 2025\n\n| Qualification | A*–A grades | A*–B grades | A*–C grades | Pass rate |\n|---|---:|---:|---:|---:|\n| **IGCSE** | 48% | 70% | 92% | 100% |\n| **A Level** | 68% | 93% | 100% | 100% |\n\nSources: ISPH’s official 2025 IGCSE and A Level announcements. ([isph.edu.vn](https://isph.edu.vn/isph-students-receive-outstanding-results/?utm_source=openai))\n\n**For context:** 2025 was ISPH’s first A Level graduating cohort, and 2026 its second. The announcements do not state cohort sizes, so I would ask the school for student numbers and subject-by-subject results before making direct comparisons with other schools. ([isph.edu.vn](https://isph.edu.vn/congratulation-class-of-2025-on-world-class-a-level-success/))"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 1
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 18660,
+      "input_tokens_details": {
+        "cache_write_tokens": 19,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 566,
+      "output_tokens_details": {
+        "reasoning_tokens": 84
+      },
+      "total_tokens": 19226
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

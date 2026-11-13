@@ -1,0 +1,765 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "g05",
+    "type": "generic",
+    "text": "Which schools in Hanoi offer the IB Diploma Programme?"
+  },
+  "started": "2026-11-12T13:57:15.117Z",
+  "finished": "2026-11-12T13:57:49.535Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Which schools in Hanoi offer the IB Diploma Programme?"
+  },
+  "response": {
+    "id": "resp_0a79051eb16f4309006af5c5bb3eb487d2a4de52893646e4b7",
+    "object": "response",
+    "created_at": 1794491835,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794491868,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0a79051eb16f4309006af5c5bcb6c487d2b19e9709d7e608da",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.ibo.org Hanoi Diploma Programme school"
+          ],
+          "query": "site.ibo.org Hanoi Diploma Programme school",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/learning-journey/ib-diploma-programme"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=ibcc&SearchFields.SortDirection=Asc&page=9"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=pyp&SearchFields.SortDirection=Desc&page=3"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.Country=VN&SearchFields.ProgrammeMYP=true&SearchFields.ProgrammeMYPEAssessment=true&SearchFields.Sort=dp&SearchFields.SortDirection=Asc"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=ibcc&SearchFields.SortDirection=Desc&page=5"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.ProgrammeMYP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=school&SearchFields.SortDirection=Asc&page=6"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Country=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=dp&SearchFields.SortDirection=Asc&page=15"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.ProgrammeMYP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=school&SearchFields.SortDirection=Asc&page=13"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.ProgrammeMYP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=pyp&SearchFields.SortDirection=Desc&page=3"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=ibcc&SearchFields.SortDirection=Asc&page=14"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/en/programmes/find-an-ib-school/?SearchFields.ProgrammeDP=true&SearchFields.Sort=school&SearchFields.SortDirection=Desc&page=13"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/High_School/IB_Diploma_Programme_Curriculum_Handbook_2017-2018.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/Middle_School/20151201_Middle_Years_Programme_2015-2016.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://img.nordangliaeducation.com/resources/asia/_filecache/ded/719/231691-booklet--ks5-ib-booklet.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/uploaded/Policies_Handbook_Information/Secondary_Parent_Handbook.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/IB/IB_Diploma_Programme_Curriculum_Handbook_2016-2017.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Schools_offering_International_Baccalaureate"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Chu_V%C4%83n_An_High_School%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/qtmmqw"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietnamNews/comments/1psy9h2/westlink_international_school_hanoi_officially/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1clcv5a"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/International_Baccalaureate"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1wzcfb4/a_list_of_advanced_placement_ap_only/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0a79051eb16f4309006af5c5c0b64c87d2af775b4a45606da7",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.ibo.org/school/ \"Hanoi\" \"Diploma\"",
+            "site.ibo.org/school/ \"Brighton College Vietnam\"",
+            "site.ibo.org/school/ \"Dewey\""
+          ],
+          "query": "site.ibo.org/school/ \"Hanoi\" \"Diploma\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://ibo.org/programmes/find-an-ib-school/ibap2/b/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/learning-journey/ib-diploma-programme"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/diploma"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap2/d/dwight-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/diploma/discover-dp"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/programmes/find-an-ib-school/?SearchFields.BoardingFacilities=&SearchFields.Country=&SearchFields.Language=&SearchFields.ProgrammeDP=true&SearchFields.Region=ibap&SearchFields.SchoolGender=&SearchFields.Sort=dp&SearchFields.SortDirection=Asc&page=15"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/ib-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/adm/faqs/"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/en/international-baccalaureate-ib-program/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/academics/diploma-programme-dp"
+            },
+            {
+              "type": "url",
+              "url": "https://e.vnexpress.net/news/news/bis-hanoi-students-score-above-global-average-in-2026-ib-diploma-5121843.html"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/en/scholarship/"
+            },
+            {
+              "type": "url",
+              "url": "https://thedeweyschools.edu.vn/wp-content/uploads/2024/03/26.02.24_So-tay-chuong-trinh-IB-DP.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.taicep.org/taiceporgwp/wp-content/uploads/2022/06/TAICEP-Talk-May-2022-2.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://dwighthanoi.org/wp-content/uploads/2024/01/HANOI-Faculty_Recruitment_2024-v1.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Admissions/Scholarship_Programme/UNIS_SCHOL_FY1819_00_Application_package_19-20.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1646816954/hanoi/aa4ndaytek5n7zxxc3uy/UNISHanoiGuidetoLearningSupport.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/Middle_School/20151201_Middle_Years_Programme_2015-2016.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Chu_V%C4%83n_An_High_School%2C_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/qtmmqw"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.Country=VN&SearchFields.ProgrammeDP=true"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0a79051eb16f4309006af5c5c48c3c87d28a660a75e320ddb8",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.ibo.org \"British International School, Hanoi\" \"Authorised\"",
+            "site.ibo.org \"Hanoi International School Co., Ltd\" \"Authorised\"",
+            "site.ibo.org \"United Nations International School of Hanoi\" \"Authorised\"",
+            "site.ibo.org \"The Dewey Schools Tay Ho Tay\" \"Authorised\""
+          ],
+          "query": "site.ibo.org \"British International School, Hanoi\" \"Authorised\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.Country=VN&SearchFields.ProgrammeDP=true"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/school/062822/"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/school/001041/"
+            },
+            {
+              "type": "url",
+              "url": "https://www-prod.ibo.org/programmes/find-an-ib-school/ibap/b/british-international-school-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/parent-essentials/accreditations"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/about/our-history"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/about"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1758006509/hanoi/zmvbjby5yzhlo6xmht9w/UNISHanoiHighSchoolProfile2025-2026.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://resources.finalsite.net/images/v1695348678/hanoi/drg8v4yym7vvbwhwqkzq/UNISHanoiHighSchoolProfile2023-2024.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/academics/secondary/university-destinations-2024/high-school-profile"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/bis-hanoi-candidate-brief---teaching-post---august-2025.pdf?hash=DBF85D8663232AA653B0A879A0E44F81&rev=7f67e3a605204addbbaa6ea8195f1422"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2023-24-sy/bis-hanoi-candidate-brief---teaching-post---august-2024.pdf?hash=23CE9B469D8D6E23A5F0408570A17E10&rev=01c3a12f7ccd46c9a9421a520bd1a02e"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-accreditation"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/news/2020/05/15/why-choose-the-british-international-school-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/High_School/HS_Profile_1718.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.britishschoolsasia.com/journal/2026-07-12-british-international-school-hanoi-history/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/High_School/UNIS_Hanoi_High_School_Profile_2019-2020.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://email.doris.school/schools/vietnam/the-dewey-schools-tay-ho-tay-campus"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0a79051eb16f4309006af5c5c9363887d2945bfe6e35be5dea",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cXceysuSYRcv7i7uhDzsebgiUnBeo0eQcQ5OJOBpNHOwwfLRGXStYxGw7-IBR1KMyXNUSgyXKqj8d0mitZfdNswLB-_NXeRXuk1ee_yjvepS6y6oMcWIwauIFnh5yokaKkHtKzs2wbgZFxhrhIiUSuYOItzeapxIUuXmJzdTE_8JKtsOS5uAiMW_J1zPcV_0Wt5c9RwMq-IMPWFO5_oqX8BI_QeL5XahfFx4wiiwgFlr9JqGF5YjWFmpMNx3Opo9_Rb_O60rgfxyA18X7kiMf4fYeue1jZ_QnMj7qfizafrT3u122wzwJt77h-j4J8g-Fu-V4lU1BYsrO9q7pGINOuKjM74bu9ouo0OM54dQws0Y8laARWfiIUyefbkjT25VcRit6qSOgdsg0IazV1twcM_-4_fj2AUC0fMP3lRzXBMCsltAzjMPez7m2Mn7XGrz-BfwiDMC-u9VkCkXC5JMMw7Nr_8NU-EkkaGKaW73fU3ppSQb-Xr1dNPQxmgDUopy4DR6IrGimiSAcLwzHdEKUJJcxA9qDsdtiJHb8W_00oDY8ioDlR6IG00Un2AQixfViMD3QXjOZYfPkmvgd0_JWfJ70FflhYVLcJscc_TaeTm59cJtiTB_u6nOvnw-sF6t-wqkIeECm-MTL03ylONl0O7Rv2dDC9kkM_HfCxeks_MVnI0PBhC7fd6fJXGcHfyXF_oFAnkEsPegcgexEv3W17kyeUvlexv0FelEOdjIqh45w0VrrfQQD4XXgxnFs_-ivXkBDe1YSNcOMkKLaTj2rxzCM0RwSJxKY5KgN3-cfeMVIl2S664rQvdMC8BKN-NfKbUniCHS4n257UC7Hzbc9-czC70VaHp028sMtfG6BdgfZLyXTfWqK_eh9--g_xyZOMurgKQ2pfJiUyAp7QWNyERoJZURlHK9z9squUC1bJhu-qIF2kGuXeoQBTIOW0S-_3nVqYLuMa1rwt-hHoU4gYdFJKAA0WZIsA1w2NnKRmVOgDZJSW6NL6-kxeKhMcrW8ASJNiVrPKJD9IyCMXRFzTeH6NBYOrYvAIQEqBydohu_u-V-S75Pjkg9evAYwwqtDo9deZKaek_FNK4hHlWDENx_NmLclJ-KUuSSoUXamJ6QcS8gkyR1EglFIYZOLKbSMN93rCWptXaYLZns6brhVnZS5T5GtIO5VWsCelDz7L3iodOKubTdJYAvGMD-NbqVo5pOj76aS_IZAiopv7YSxjVaLOZMEl3HB74zKbkoAwWOevoZBny6IW9i-mhTl6-QBB_fWu3v7nbLMyuEeEMPLjo25ZQAD_7Od8FV77sm1QyNDjJjRkfaIWdyy6ngTBGFVAdrOMnTtX21i-K9Ym1Krux5mLViIANNLo1XdyPxWfNHq8BR8z_7KccAFlY9IttwSD12S2EwbswXoQA2KWne9eAyX0GFGhv84bFjWB9T4lDzqshU0xXKkJiZNZLj-lQ7dat_uh4JaQUEVMoT__9ovgCw33vAhN7ZZ_KEcNkNbmCFFECBvhyhHYm1S2nppZyzv03p_lWbGaABCwn7va8sRI4X1cQ6EwmF4HO3QdruNsC-VSM7Id3d43uoN_0VUR-5zWylideGGfUw3ESzbA_sPlYTs53BsRgSdEZIG9iB4D52uM__ge2xXcNjSxc_u9Gm_OdXBD_y7_VyWKq8s-LDg5YCtOTrlkxomPWUmTgtDkxq1ImrWov1CduLt_uAFgSCERwSVHLliOeD_KhMJfj9z25fwOSSM-ywxlJ2ji7VNSsZoOepiI5y01G2ocOW5b_BrfWhDK4vBnNilX5SrzJZ0Rmc3MZx_B0u1uA0cURPERZyi5oxHYGiXWVfMuKf0XTLwg5JEUCHZ0JSlS1fVAde0t4aYXuc6tWmUlLVvw51dh54xTCW_ZHZUtoqKbZSVLjYwi0Wsn8ET6Z15k1-FsEv34w8xLIblnfnW3J5Zq6yRkrelmeV1_UYIlBmPlBEFFSkWsKDit2X5jXqZU5Yak1CCzmZpQ5YXoPeEXzzd9JOI7rdEIZx_o7CG3_nZ1Ch8rDY_VlHUto7h8U1JU-db164nmpO9K1LAl2Et_JNjqQNK1hJUQYdVYIA8d0siugQGsgh0KcDcHzokBzgd8fot0nXDMRZSAP_TqBAbztTZwVQtfwTUp63G6C0VJ5W2lWefpNqPv7A1LlilyBRZrVoU7fmb7TjmFHOE6hRLw-unweeRc1I_ir-sUeB-TlF-7bfL1r8OGAIbiuckL34rwMS7pQd_p9-NdPrnqf1ogSJL8ZfFaOl7JsFIjY0R_BW0bDSVZc8rcPv9KQn4GGExc4ptt8L9DFh9SPhWJSSmFLqdGLUGfgRSF_nBAmY1XWdWyYHQueZ3KGp-PLxp8m1gLqGGW2VZKQGAVQ02RtCJLVv-RExefDL8FacjYz63rLekUPfEZxrIofmJcwj69045N5f3X5rxV8c8Kkpxd3q1TkGXujHS_HvzvtdO8syDXN_pp7wWQ9fFmpvtdqpNJNB3p5FrJUsPbGhxOxOv9h-emgzou57L3rBPcbID01Wb_HiqSZGsBasoA_FKzmT3mJCS5Us2aq8VcqheU2XGNwu8W7shpJ2-j3uqoVtPuh3lviN_uwVLGJXG212j0MC4AIH8hW_MIot2haRI-JJXGXnFrszgyO7-8Xuwg=",
+        "summary": []
+      },
+      {
+        "id": "ws_0a79051eb16f4309006af5c5cbd30487d2ba68fc4fcffba25d",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.ibo.org \"Hanoi International School\" \"1996\"",
+            "site.thedeweyschools.edu.vn \"Tay Ho Tay\" \"Nguyen Van Huyen\""
+          ],
+          "query": "site.ibo.org \"Hanoi International School\" \"1996\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.Country=VN&SearchFields.ProgrammeDP=true"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/school/000929/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/about-his/welcome-to-his"
+            },
+            {
+              "type": "url",
+              "url": "https://nestliving.vn/hanoi/schools"
+            },
+            {
+              "type": "url",
+              "url": "https://sarah.edu.vn/tin-tuc/cac-truong-quoc-te-ib-7-hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://vccinews.com/news/8201/.html"
+            },
+            {
+              "type": "url",
+              "url": "https://www.seftb.org/dl-1201-312bf22589e9420fa772329d58168144.html"
+            },
+            {
+              "type": "url",
+              "url": "https://globalschoolguide.com/blog/ib-schools-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://allinternationalschools.com/school/hanoi-international-school/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.linkedin.com/posts/daun-yorke-469b9540_congratulations-to-the-hanoi-international-activity-7218868990587064320-xcsf"
+            },
+            {
+              "type": "url",
+              "url": "https://ussh.vnu.edu.vn/uploads/ussh/dao-tao/2025_10/duong-quynh-thu-luan-an-1.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.linkedin.com/posts/lucy-ringrose-a5bb42246_iben-iben-activity-7056809465974587392-wL7A"
+            },
+            {
+              "type": "url",
+              "url": "https://www.linkedin.com/school/hisvietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://giasutienganhhanoi.com/truong-quoc-te-day-chuong-trinh-ib.html"
+            },
+            {
+              "type": "url",
+              "url": "https://internationalschoolsdb.com/vietnam/hanoi/hanoi-international-school-his"
+            },
+            {
+              "type": "url",
+              "url": "https://www.hisvietnam.com/uploaded/Newprincipal2019_1.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://bdsgep.com/wp-content/uploads/2026/05/Minisalekit-toa-S3.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://genesishanoi.edu.vn/wp-content/uploads/2025/06/Thong-tin-bac-Tieu-hoc.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://genesishanoi.edu.vn/wp-content/uploads/2022/02/Brochure-Ti%E1%BB%83u-h%E1%BB%8Dc.pdf"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0a79051eb16f4309006af5c5d1bce487d28c44814a6be9094e",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cXcruOZ983z7v8N-4LUMlbeWa_G4doxxpReEsW1lkN9YFGTCJTxz3UHijRiDK_m_f7z383wvwT_WmyJf5OhP8O8r--w7v42g7Yxs2rOz01ppUXTSF7_s9H5_rVZuqHkkEt7TtYS0ePTdjhfot11Eyzign4llYk8YC4I6CZjWJm1-crkFCNlh5_-wZDwDq1Hb7ed5dOakjTfS6q1u5PXDzF2zfv_azaEQxHfphKlc8-iOYX6-yxUZT2Qed-uuLnQM91fZskMwtIDLzwi3RE0B1f8OatASG0-4roJ0TbsZasxsc_60t62-pisaPsP2b1OJIHAm1Wge2mtQaC6cLdGFr3ff-sQVGK3_oqBKiHSQ4MxMxuIvndlDKGtdZqnbEDBqmvXPntofHATgWsG8ME5DAXLevakL1RaY5po9qiZughdeYruyz2udpv14E9RVE-9LQKdUQGIbeLMAzjERwUaYp4hlwX-yM0ni9SSb39OMLaPgssVvbwc_5HlLH90qTiHl7HSI1Tz_Pjv7m8Bw_YwezdvNolccnRnYXbjhCZJA17ihKj5St4UkhAtcQt3f1Hb97R5URApOqFeBqiEP_Nq3qlw2-VSsjxA2FAkG0lKa3OeefgXPSiRBecy64txKesUfkoRXH7-UDcRemoM0SgTWSmLPCzpThjPZRNHqlndRux174gfWq6KIjbrRKwKYZphWKeutwnwUik_DHfQBA8RgC8qHVGlsbo39lHSwRmivxbBgtzP59YmRdMGbmY0fTfrt7hte6plwSXIYJ2ltwP0kMRg35RNJqXEE_ABLj1wtm7C_CCCyI6BVO9UdomOB1N9tthbrLxuRlf0zKfuaidmuLOVfNWD41Urpdc8MZH3E5v95UtWyvP23dUKviIqGps1wg4sSlFtpWpQJbEfYP02NctrOkDhFrqy5KROjT9jgDo342ZfqwG43PE996hFmWlr5J9pASEuarCoHi5_i7gvuMSNiP50QZ8IQDNXmc4ijfcIbvEnscSmLqO4kG8kgLh09vOaKlsD-tozY5BDolLD19t1EexvSszFEZ_TQc_7g01krxeTWWPIqt6r25GgoihLXE4lVrjX3tE6ZYdgeQqakxJW8RblUpi41RzX87kwhHbyeDmQR4KHzJTclznqsE7lsjW_cSq8-ClzqEID2yfBXlPJ4v2-pD354jVrK3rj6P95kCzLgF4xrnon6wUyJpVnR9An0RyM1vmMrCucjg4nJenwiyE4LQ8cX35mlRExygM35J-FDVXbmE63G-Y8q8iLhjvSZUV6zrtjjlghXqlq7jmvvGZK15j8sU2Kyn_DddrKeYKWVDfoJo74VK1blGazwscYHIxpb9vBEfp_9yrrX86ji6ZIpTZkEJCC5ciMGXcRY2HbFM6UFl4JzWOYDvdmvyFpqDRWjSv_DAO8G577_-BGbteGqf-fBDcQicM6zngXoJ2k0p80RiZ11QbX4dyhYjkWDRC5a4j3YsAGYlRj7sxCSrwnPBcucSTFQMNicL2RKd25wUpoqAlXcj2Lyg58nNkjlRsTrBuEq_tKl0FnpC0pl1ce882xg9btPpmJPVTurJKXzChhHc-m7ZP6Fu9Qecwzh5ksutfPEFopeEz7JDrlz6mQrc9zh9IcVyopnbq2rNyxVhxV4qOLeFJUw2lUbCH7Dl6f43BVJNjuFXB5bw8E-rASnep0Pim4akIUMvmg8WVWGOAMxZVSP3fnPrKqEivbOkj1k76vUpu8F4gThfB9og==",
+        "summary": []
+      },
+      {
+        "id": "ws_0a79051eb16f4309006af5c5d248e087d2ae62639300e06229",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.ibo.org \"Reigate Grammar School Vietnam\"",
+            "site.ibo.org \"Olympia\" \"VIETNAM\""
+          ],
+          "query": "site.ibo.org \"Reigate Grammar School Vietnam\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/?SearchFields.Country=VN&SearchFields.ProgrammeDP=true"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/en/school/062153"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap/i/reigate-grammar-school-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/diploma-programme-dp.htm"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/index.php/en/ib-dp-1"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/index.php/en/olympia-officially-an-ib-world-school"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/index.php/en/international-diploma-program"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/pic/aboutus/files/Administration.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://schooltransparency.com/schools/s/the-olympia-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/index.php/en/the-ib-diploma-program-dp"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/en"
+            },
+            {
+              "type": "url",
+              "url": "https://www.rgsinternational.org/rgs-international-schools/rgs-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://schooltransparency.com/schools/s/reigate-grammar-school-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://vietnamschoolscout.com/"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/pic/aboutus/files/SEC-Information-booklet-for-Students-Parents-24-25.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/3e5b601d-943c-4e91-a968-0e3e46347a45/5053fcd0-9709-4172-bba1-eb3788bbf086"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/storage/the-olympia-schools-brochure-eng.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://theolympiaschools.edu.vn/storage/to-roi-gioi-thieu-olympia-2425.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Reigate_Grammar_School"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/school/000929/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/school/001041/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www-prod.ibo.org/programmes/find-an-ib-school/ibap/b/british-international-school-hanoi/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap/i/reigate-grammar-school-vietnam/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/en/school/062153?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/school/062822/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap2/d/dwight-school-hanoi/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/programmes/find-an-ib-school/ibap2/b/brighton-college-vietnam/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/ib-curriculum?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "msg_0a79051eb16f4309006af5c5d8465487d2a0b8b8ab26f06a7f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 317,
+                "start_index": 252,
+                "title": "Hanoi International School Co., Ltd - International Baccalaureate®",
+                "url": "https://www.ibo.org/school/000929/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 453,
+                "start_index": 392,
+                "title": "United Nations International School of Hanoi - International Baccalaureate®",
+                "url": "https://ibo.org/school/001041/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 653,
+                "start_index": 517,
+                "title": "British International School, Hanoi - International Baccalaureate®",
+                "url": "https://www-prod.ibo.org/programmes/find-an-ib-school/ibap/b/british-international-school-hanoi/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 826,
+                "start_index": 708,
+                "title": "Reigate Grammar School Vietnam - International Baccalaureate®",
+                "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap/i/reigate-grammar-school-vietnam/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 926,
+                "start_index": 863,
+                "title": "The Olympia Schools - International Baccalaureate®",
+                "url": "https://ibo.org/en/school/062153?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1039,
+                "start_index": 974,
+                "title": "The Dewey Schools Tay Ho Tay - International Baccalaureate®",
+                "url": "https://www.ibo.org/school/062822/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1184,
+                "start_index": 1076,
+                "title": "Dwight School Hanoi - International Baccalaureate®",
+                "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap2/d/dwight-school-hanoi/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1335,
+                "start_index": 1226,
+                "title": "Brighton College Vietnam - International Baccalaureate®",
+                "url": "https://ibo.org/programmes/find-an-ib-school/ibap2/b/brighton-college-vietnam/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1685,
+                "start_index": 1588,
+                "title": "The IB Curriculum Explained By Age For Hanoi Families",
+                "url": "https://www.westlink.edu.vn/news-events/news/ib-curriculum?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "I found **eight schools in Hanoi currently authorised to offer the IB Diploma Programme**, based on the International Baccalaureate’s school directory:\n\n| School | IB Diploma authorised since |\n|---|---:|\n| **Hanoi International School (HIS)** | 1996. ([ibo.org](https://www.ibo.org/school/000929/?utm_source=openai)) |\n| **United Nations International School of Hanoi (UNIS Hanoi)** | 1998. ([ibo.org](https://ibo.org/school/001041/?utm_source=openai)) |\n| **British International School Hanoi (BIS Hanoi)** | 2016. ([www-prod.ibo.org](https://www-prod.ibo.org/programmes/find-an-ib-school/ibap/b/british-international-school-hanoi/?utm_source=openai)) |\n| **Reigate Grammar School Vietnam (RGSV)** | 2018. ([ibo.org](https://www.ibo.org/programmes/find-an-ib-school/ibap/i/reigate-grammar-school-vietnam/?utm_source=openai)) |\n| **The Olympia Schools** | 2022. ([ibo.org](https://ibo.org/en/school/062153?utm_source=openai)) |\n| **The Dewey Schools — Tay Ho Tay** | 2024. ([ibo.org](https://www.ibo.org/school/062822/?utm_source=openai)) |\n| **Dwight School Hanoi** | 2024. ([ibo.org](https://www.ibo.org/programmes/find-an-ib-school/ibap2/d/dwight-school-hanoi/?utm_source=openai)) |\n| **Brighton College Vietnam** | 2025. ([ibo.org](https://ibo.org/programmes/find-an-ib-school/ibap2/b/brighton-college-vietnam/?utm_source=openai)) |\n\n**An important distinction:** Westlink International School Hanoi offers other IB programmes, but its **Diploma Programme is still at candidate status**, with a planned August 2027 launch subject to authorisation. It therefore isn’t included above. ([westlink.edu.vn](https://www.westlink.edu.vn/news-events/news/ib-curriculum?utm_source=openai))\n\nWhen shortlisting, ask each school about entry requirements, available Higher Level subjects, total fees, and places for your intended intake."
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 5
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 41664,
+      "input_tokens_details": {
+        "cache_write_tokens": 14,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 865,
+      "output_tokens_details": {
+        "reasoning_tokens": 486
+      },
+      "total_tokens": 42529
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

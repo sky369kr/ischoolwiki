@@ -1,0 +1,586 @@
+{
+  "ok": true,
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "question": {
+    "id": "g04",
+    "type": "generic",
+    "text": "Which international schools in Hanoi offer a British curriculum?"
+  },
+  "started": "2026-11-12T13:56:46.339Z",
+  "finished": "2026-11-12T13:57:15.117Z",
+  "request": {
+    "model": "gpt-6-astra",
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ],
+    "tool_choice": "auto",
+    "include": [
+      "web_search_call.action.sources"
+    ],
+    "input": "Which international schools in Hanoi offer a British curriculum?"
+  },
+  "response": {
+    "id": "resp_0eee7ed3090f8a4e006af5c59eb9d087d2870b65ea684cd688",
+    "object": "response",
+    "created_at": 1794491806,
+    "status": "completed",
+    "access_programs": {
+      "cyber": "standard"
+    },
+    "background": false,
+    "completed_at": 1794491834,
+    "error": null,
+    "frequency_penalty": 0,
+    "image": {
+      "context_compression": "disabled"
+    },
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "model": "gpt-6-astra",
+    "moderation": null,
+    "output": [
+      {
+        "id": "ws_0eee7ed3090f8a4e006af5c5a0ccfc87d2806acdd6b117f4dc",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "Hanoi international school British curriculum BIS BVIS",
+            "Hanoi British curriculum international school Cambridge Brighton Reigate Concordia"
+          ],
+          "query": "Hanoi international school British curriculum BIS BVIS",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/our-schools/asia/vietnam/hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/about-us"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence"
+            },
+            {
+              "type": "url",
+              "url": "https://feerank.com/curriculum/british"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs"
+            },
+            {
+              "type": "url",
+              "url": "https://www.westlink.edu.vn/news-events/news/international-secondary-schools"
+            },
+            {
+              "type": "url",
+              "url": "https://goteachinternational.com/schools/vietnam/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/academic-excellence?tab=3"
+            },
+            {
+              "type": "url",
+              "url": "https://nestliving.vn/hanoi/schools"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/about-us/bvis-hanoi-school-profile_ay-23-24.pdf?hash=D3875745981F1537FFA98DDDD6E597D1&rev=6cfbcf5fcd144be7afc356c0ff603f63"
+            },
+            {
+              "type": "url",
+              "url": "https://www.international-schools-database.com/in/hanoi?curriculum%5B%5D=British&filter=on"
+            },
+            {
+              "type": "url",
+              "url": "https://newschoolrun.com/hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.britishcouncil.vn/sites/default/files/list_of_partner_schools_in_vietnam.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/-/media/bis-hanoi/documents-and-pdfs/2024-25-sy/secondary_school_university_profile-2024-25.pdf?hash=444A61C30C0D7E70C67940AED2A5F007&rev=5ee145923d2a499a9d29c07a44df8254"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Co-Curricular/1819_Co-Curricular_Handbook_VN.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/academic-excellence/2024-25/primary-curriculum-booklet/eng-y2-curriculum-handbook-2025.pdf?hash=6E26D0E256910BB75C2E66EA3F65D58F&rev=5c359ad8ed104c0eadb704ae9cda0b90"
+            },
+            {
+              "type": "url",
+              "url": "https://www.unishanoi.org/uploaded/Teaching_and_Learning/Co-Curricular/2021_Co-Curricular_Handbook_KO.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Reigate_Grammar_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_Vietnamese_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/United_Nations_International_School_of_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1ei8vdr/hanoi_vietnam_recommend_for_any_decent_bilingual/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/intschoolreview/comments/1fp61cp"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1r9n9dd/international_schools/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1d6ud0g"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/15fphzx"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1mhadta"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietnamNews/comments/1psy9h2/westlink_international_school_hanoi_officially/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietNam/comments/1pcfeft/hanoi_international_school_opinions/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1greh3w"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/qtmmqw"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietTalk/comments/1ewtlw9/t%C3%A2m_s%E1%BB%B1_c%E1%BB%A7a_m%E1%BB%99t_th%E1%BA%B1ng_12_n%C4%83m_h%E1%BB%8Dc_tr%C6%B0%E1%BB%9Dng_qu%E1%BB%91c_t%E1%BA%BF/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/sol4qf/anyone_ever_worked_for_vietnamaustralia/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ws_0eee7ed3090f8a4e006af5c5a5b63c87d2b0361580142a2c31",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.isph.edu.vn curriculum A level English National Curriculum",
+            "site.brightoncollege.edu.vn British curriculum Hanoi A level Ocean Park",
+            "site.reigategrammar.edu.vn curriculum A levels IB Hanoi"
+          ],
+          "query": "site.isph.edu.vn curriculum A level English National Curriculum",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/our-curriculum/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/learning/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.ibo.org/programmes/find-an-ib-school/ibap/i/reigate-grammar-school-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/qualifications-at-rgs-vietnam.htm"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/eyc-y1/"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/d536e03a-597b-4812-9dfe-859dc1094192/d875e5d8-8189-4171-a592-7af3dfce91c4"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/adm/faqs/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.gosam.io/en/schools/international-school-parkcity-hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/23eecb1d-367c-4acc-9caf-073347a9f9c0/32a739ca-a67b-4c03-afcb-49fc9cc443df"
+            },
+            {
+              "type": "url",
+              "url": "https://find.doris.school/schools/vietnam/international-school-parkcity-hanoi-isph"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/learning/learning-support-eal/"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/our-curriculum/sixth-form/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.gosam.io/en/schools/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://f1.hcm.edu.vn/data/doc/2025/ttngoaingutinhoc/2025_11/30/danh-sach-cac-to-chuc-cong-nhan-chung-chi-tieng-anh-cambridge_3011202510.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://hanoiacademy.edu.vn/wp-content/uploads/2018/04/Brochure.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/5b267544-434e-46c1-8d4c-4e5620d4fa75/3fa24fe9-3e1f-4e82-923e-724a19c9a841"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/-/media/bvis-hanoi/academic-excellence/2025-26/curriculum-booklets/y11-curriculum-booklet.pdf?hash=596C521EAFB01537B0DFD2E6F8AB605C&rev=c9f5f49db1e442659fd622d93ac30f54"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/ABC_International_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/British_International_School_Hanoi"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Reigate_Grammar_School"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/List_of_high_schools_in_Hanoi%2C_Vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Renaissance_International_School_Saigon"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/International_British_School_of_Bucharest"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1oku3uv/hearing_alarming_things_out_of_reigate_grammer/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/Internationalteachers/comments/1n28mrx/howwhy_did_the_is_of_vietnam_change_to_reigate/"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rs_0eee7ed3090f8a4e006af5c5ab877c87d2a632956a154ad04f",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq9cW6LTjoDZiAQrrv5sRwQKvCryADv0S7gSTg08YwnomYM6SQ4dlAwRimUlFbNN6ovaLestiNssWcN-kV84twSwbWUCB0J3Q-doefFXjA3tMZMjrn_NUWs32kiwAcfsprbFuwGBf029hhmXkMBJDxlcfFWq5icMUZ4-mTNaqPFxLwxNhfC0pdf95G72GSWpoQjBuA-GPjiJ40_RRkdgF7KSxhu5J5MkXxuhrFsx6oQ-TaYRl_sm5wjLfmloTuRdcUMGL1GZCpfUosi-wr2MHN72ngimEsSVhaoM98tiy6vLq72WYes94D9VWRzFvF20D6uuLdLHnV-Xsro4_-d-ib4PvBsue2WX7mZjIX-RGb5uPYAQ8yWd-btei07SSmaub6SLE3QfAW-weWf9uVDZVI728PO2rVeSuSzXWPTUpljajpB1LAqcjWGbdoV-ng1b6CyyHwMt5fy5BteIoHWhRobIQdOwk23M3YK8i9zj2GRcpig61MiIcKQpLU2ZHA4ZrHVrc0K0nTKWmauAdHigDi6qX2lh_lkjhNeyMGssUp4bQB6MBh5Y8aZo2KzMSb2BpxvfyoXyaN1MoLIJX-g-mng5Yw79kPQJ8niYsdcYpSr782EGhZmaF5988DRs4swIT2nuTVcHeIWVpJIcLwWkGu8GtyyH186j97pqYB5uOx_mP8KWorfEy0pfkwhmyoT7vfsZarYxbABACc5I9meozgE7usWx8s-nRublPsIopZ3-i6UttwNnlS24YJ5S4fWsLKcGGLH6b68ZGE4fG33hfsEu-WPMrL9NEK_QWA_rBfKGPR2BV-352iOPmXkpobpCK7jrnQV-7CrFNnWsdzuC02DfyWaiQpWsUULflueGM7-racWSdTo58haRXfmw8nEkj4zQs2tenXAxI9k4tjpfhYYS7IXeGiIxCx15xopenh7rdujBerC67_02h5o51dGFRzYwr4gYY12j81HDY0FNX3SPdIAlGvFz4c79VByo8bLGzImRogBxt2jSLcADf0KWmFdKH8jfBQxOIGMVOcGz3QoCbp4XJJRrT9osDHhqya5dkXzg94gUq0mmIwGXqFQIOULLDKGWg46fiStAcCotJJ53zll7F1GEfGB0Ft-FhKfEyqJ3Fw6lk3_70-rWAuvoZBznIELSpwB8Qz-A7WGDAvh3Ox-8t9MvgzwzbZoZy4og2ypOkPjsU0FGLJhLkyNp6sbBVhHWpFx74KuuX33jsq4Kd5X8ZdEBG9WGcwkLzzOYvGWqSe6dEGosLHDyEFqyDuAQUGsMWSeSJ8e_obxlFyDwI4FS1jE4UWsp4lqBlfLPJemZGUPcgQxJJfFoSXqqZG_FUQ-d3QthtxuXnonax-di7h9FyBPdXY82Kv3721JvZRdwgimgax27dQduFZ-x2z0kQ1YuYPGNnv6PsnCJhfl4izw3zNJ2unpabtPrdYTYNDqM0pDBrRN6pU3T0LHhVf7pRxOfph8HLuiqd6JqH773-4kI3D5v8SWp-tKx-IHFtVV0L2oy-sZAUyj1gAxvDu9d7GbsCp-s4MVnoPzMi8mfvFBAyu-7dsQyVtLWS8tPI0kFC3S2Aa3Ha9C3H8vDP2PR8JLWLYQeUJ2RqbDOn2JBZsDPtlb4QtHmCSYkniDXfmyNrLZuQYkJZJuZEJLvmNwsAgWzkdwGDkn1O4C3bSPSUgq3UDAu20mRskmrKeY0NBW_aMea-lOgUH693MnDlYPKRZ_uE_tWRfXc96NwJ9H_NZPb2j2KOtd5htsiSHLqcxeAEZyzlrSfIART-jEceeut8lOHpZGs9utjaMiQMNc7sORdfJJiLCIjldDHw18C2Y9vh7ZJu7Z35POvHRyCY9OkddS0kwATNbgeXlt0qCJLCGpKW1uunKD27eNN-yxbzk1nzubJgGypMI-NTezkjKs1Ce",
+        "summary": []
+      },
+      {
+        "id": "ws_0eee7ed3090f8a4e006af5c5ac1b2087d299b063af0beb362c",
+        "type": "web_search_call",
+        "status": "completed",
+        "action": {
+          "type": "search",
+          "queries": [
+            "site.reigategrammar.edu.vn \"A Level\" \"curriculum\"",
+            "site.brightoncollege.edu.vn \"Ocean Park\" \"Hanoi\""
+          ],
+          "query": "site.reigategrammar.edu.vn \"A Level\" \"curriculum\"",
+          "sources": [
+            {
+              "type": "url",
+              "url": "https://www.reigategrammar.org/userfiles/reigategrammarschoolmvc/Policies/Policies%20Updated%20October%202025/Curriculum_2025-2027.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/pic/aboutus/files/SEC-Information-booklet-for-Students-Parents-24-25.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://ibo.org/programmes/find-an-ib-school/ibap2/b/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://d3giikteahxfyn.cloudfront.net/9a65929f-e806-46ca-81a3-d116bd82b599/a99c9ef7-96ea-4c19-bcf2-95e1b6e95d47"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.talent.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.goodschoolsguide.co.uk/international/profile/brighton-college-vietnam"
+            },
+            {
+              "type": "url",
+              "url": "https://www.schrole.com/schools/reigate-grammar-school-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/reigate-grammar-school-vietnam?via=visit"
+            },
+            {
+              "type": "url",
+              "url": "https://www.doris.school/schools/vietnam/brighton-college-vietnam?via=join"
+            },
+            {
+              "type": "url",
+              "url": "https://theinternationalschools.com/vn/school/brighton-college-vietnam/"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/rgs-vietnam-hosts-informative-workshop-on-ibdp-an-a-level-pathways-8386.htm"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/open-day-2023-3841.htm"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reigategrammar.org/sixth-form-ages-16-to-18-/academic-curriculum"
+            },
+            {
+              "type": "url",
+              "url": "https://globalschoolguide.com/schools/brighton-college-vietnam-hanoi/"
+            },
+            {
+              "type": "url",
+              "url": "https://facebook.doris.school/international-schools/vietnam/cambridge-as-levels/compare"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/A-level"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Reigate_College"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/A-level_%28United_Kingdom%29"
+            },
+            {
+              "type": "url",
+              "url": "https://www.reddit.com/r/VietTalk/comments/1ewtlw9/t%C3%A2m_s%E1%BB%B1_c%E1%BB%A7a_m%E1%BB%99t_th%E1%BA%B1ng_12_n%C4%83m_h%E1%BB%8Dc_tr%C6%B0%E1%BB%9Dng_qu%E1%BB%91c_t%E1%BA%BF/"
+            },
+            {
+              "type": "url",
+              "url": "https://en.wikipedia.org/wiki/Cambridge_International_General_Certificate_of_Education"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://www.nordangliaeducation.com/bvis-hanoi/about-us?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://isph.edu.vn/our-curriculum/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://brightoncollege.edu.vn/adm/faqs/?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://reigategrammar.edu.vn/qualifications-at-rgs-vietnam.htm?utm_source=openai"
+            }
+          ]
+        }
+      },
+      {
+        "id": "msg_0eee7ed3090f8a4e006af5c5b0af1087d2a21c08a253a4d75b",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [
+              {
+                "type": "url_citation",
+                "end_index": 595,
+                "start_index": 498,
+                "title": "FAQs | British International School (BIS) Hanoi",
+                "url": "https://www.nordangliaeducation.com/bis-hanoi/faqs?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 982,
+                "start_index": 880,
+                "title": "British Vietnamese International School Hanoi",
+                "url": "https://www.nordangliaeducation.com/bvis-hanoi/about-us?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1312,
+                "start_index": 1242,
+                "title": "Our curriculum - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/our-curriculum/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1586,
+                "start_index": 1500,
+                "title": "FAQs | Brighton College Vietnam",
+                "url": "https://brightoncollege.edu.vn/adm/faqs/?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 1971,
+                "start_index": 1863,
+                "title": "Qualifications at RGS Vietnam",
+                "url": "https://reigategrammar.edu.vn/qualifications-at-rgs-vietnam.htm?utm_source=openai"
+              },
+              {
+                "type": "url_citation",
+                "end_index": 2316,
+                "start_index": 2246,
+                "title": "Our curriculum - The International School @ ParkCity Hanoi (ISPH)",
+                "url": "https://isph.edu.vn/our-curriculum/?utm_source=openai"
+              }
+            ],
+            "logprobs": [],
+            "text": "**Hanoi has several international schools offering a British curriculum**, but their pathways differ—particularly after IGCSE. These are five options to consider:\n\n| School | British-curriculum offering | Important distinction |\n|---|---|---|\n| **British International School Hanoi (BIS Hanoi)** | Early Years Foundation Stage, English National Curriculum combined with the International Primary Curriculum, then IGCSEs. | Students move to the **IB Diploma**, rather than A-levels, for ages 16–18. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bis-hanoi/faqs?utm_source=openai)) |\n| **British Vietnamese International School Hanoi (BVIS Hanoi)** | National Curriculum for England, leading to **IGCSEs and International A-levels**. | **Bilingual English–Vietnamese** in early years and primary; secondary teaching is in English. Located in Royal City, Thanh Xuan. ([nordangliaeducation.com](https://www.nordangliaeducation.com/bvis-hanoi/about-us?utm_source=openai)) |\n| **The International School @ ParkCity Hanoi (ISPH)** | UK-based curriculum, with the International Primary Curriculum in primary, followed by **Cambridge IGCSEs and AS/A-levels**. | Offers a British pathway from nursery through sixth form, for ages 3–18. ([isph.edu.vn](https://isph.edu.vn/our-curriculum/?utm_source=openai)) |\n| **Brighton College Vietnam** | English Early Years Foundation Stage and English National Curriculum, followed by **IGCSEs**. | Its sixth form offers the **IB Diploma**, not A-levels. ([brightoncollege.edu.vn](https://brightoncollege.edu.vn/adm/faqs/?utm_source=openai)) |\n| **Reigate Grammar School Vietnam (RGSV)** | Offers **Cambridge IGCSEs**, with **A-level and IB Diploma** pathways afterward. | A mixed Cambridge/IB option rather than an entirely British curriculum throughout: its primary school offers the **IB Primary Years Programme**. ([reigategrammar.edu.vn](https://reigategrammar.edu.vn/qualifications-at-rgs-vietnam.htm?utm_source=openai)) |\n\n**The key choice:** If you want a British pathway continuing through **A-levels**, start by comparing **ISPH and BVIS**, with **Reigate** also worth considering for secondary entry. BIS and Brighton suit families comfortable switching to the **IB Diploma after IGCSEs**. ([isph.edu.vn](https://isph.edu.vn/our-curriculum/?utm_source=openai))\n\nWhat age or year group is your child entering, and do you prefer English-medium or bilingual education?"
+          }
+        ],
+        "phase": "final_answer",
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1,
+    "text": {
+      "format": {
+        "type": "text"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 3
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search",
+        "return_token_budget": "default",
+        "search_content_types": [
+          "text"
+        ],
+        "search_context_size": "medium",
+        "user_location": {
+          "type": "approximate",
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 29250,
+      "input_tokens_details": {
+        "cache_write_tokens": 14,
+        "cached_tokens": 4435
+      },
+      "output_tokens": 755,
+      "output_tokens_details": {
+        "reasoning_tokens": 209
+      },
+      "total_tokens": 30005
+    },
+    "user": null,
+    "metadata": {}
+  }
+}
