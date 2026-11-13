@@ -2,6 +2,7 @@ import { articleHtml, extractFacts, htmlToText, parseNewsSource } from "./collec
 import { MODEL, reviseArticle, translateArticle, writeArticle } from "./generate";
 import { checkGrounding } from "./grounding";
 import { pickGuideTopic, type GuideTopic } from "./guides";
+import { retryOnce } from "./retry";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
 import { dateNumbers, publishedDateNumbers, verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
@@ -39,6 +40,9 @@ const TRANSLATE_TO: Record<string, string> = { ko: "Korean" };
 const EXTRACT_PER_RUN = 3;
 // Runs a news page may fail with a temporary error before it is given up as having no facts.
 const MAX_PAGE_ATTEMPTS = 3;
+// Missing translations filled per school and run (see fillMissingTranslations).
+const TRANSLATIONS_PER_RUN = 2;
+const RETRY_WAIT_MS = 30_000;
 // News items one article may draw on; each is marked used once written about. Fewer per article
 // spreads a school's news over more, shorter articles.
 const NEWS_PER_ARTICLE = 3;
@@ -55,6 +59,7 @@ export async function runPipeline(env: Env, now = new Date()): Promise<RunReport
       ["collect", () => collectNews(env, school)],
       ["extract", () => extractNewFacts(env, school)],
       ["write", () => writeForSchool(env, school, runId, now)],
+      ["translate", () => fillMissingTranslations(env, school, now)],
     ] as const) {
       try {
         steps.push(`${name}: ${await step()}`);
@@ -242,21 +247,74 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
 
   const out = [`${label}article ${articleId} ${env.AUTO_PUBLISH === "true" ? "published" : "verified"}${revised ? " after one revision" : ""}`];
   for (const [lang, language] of Object.entries(TRANSLATE_TO)) {
-    const t = await translateArticle(env.ANTHROPIC_API_KEY, { title: draft.title, tldr: draft.tldr, body_markdown: draft.body_md, faq: draft.faq }, language);
-    const tDraft: ArticleDraft = { title: t.title, tldr: t.tldr, body_md: t.body_markdown, faq: t.faq };
-    const priorT = (await env.DB.prepare(
-      "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = ? AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
-    ).bind(school.slug, lang).all<{ id: number; title: string; body_md: string }>()).results;
-    const englishDates = dateNumbers([draft.title, draft.tldr, draft.body_md, ...draft.faq.flatMap((f) => [f.question, f.answer])].join("\n"));
-    const tResult = verifyArticle(tDraft, { ...ctx, lang, priorArticles: priorT, allowedNumbers: [...newsDates, ...englishDates] });
-    const tId = await saveArticle(env, {
-      school_slug: school.slug, lang, translation_of: articleId, slug, kind: generated.kind, draft: tDraft, sources, runId,
-      passed: tResult.passed, problems: tResult.problems, autoPublish: env.AUTO_PUBLISH === "true",
-    });
-    if (!tResult.passed) await alert(env, { article_id: tId, school: school.slug, problems: tResult.problems });
-    out.push(`${lang} ${tId} ${tResult.passed ? "ok" : "held"}`);
+    try {
+      out.push(await translateInto(env, school, { id: articleId, slug, kind: generated.kind, draft, sources, runId }, lang, language, ctx));
+    } catch (err) {
+      // The English article stays; the "translate" step fills the missing translation on a later run.
+      out.push(`${lang} failed (${err instanceof Error ? err.message : String(err)}), retried later`);
+    }
   }
   return out.join(", ");
+}
+
+interface EnglishArticle {
+  id: number;
+  slug: string;
+  kind: string;
+  draft: ArticleDraft;
+  sources: string[];
+  runId: string;
+}
+
+type TranslateContext = Omit<Parameters<typeof verifyArticle>[1], "lang" | "priorArticles">;
+
+// Translate one verified English article, check the translation's numbers and save it.
+async function translateInto(env: Env, school: School, en: EnglishArticle, lang: string, language: string, ctx: TranslateContext): Promise<string> {
+  const d = en.draft;
+  const t = await retryOnce(() => translateArticle(env.ANTHROPIC_API_KEY, { title: d.title, tldr: d.tldr, body_markdown: d.body_md, faq: d.faq }, language), RETRY_WAIT_MS);
+  const tDraft: ArticleDraft = { title: t.title, tldr: t.tldr, body_md: t.body_markdown, faq: t.faq };
+  const priorT = (await env.DB.prepare(
+    "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = ? AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
+  ).bind(school.slug, lang).all<{ id: number; title: string; body_md: string }>()).results;
+  const englishDates = dateNumbers([d.title, d.tldr, d.body_md, ...d.faq.flatMap((f) => [f.question, f.answer])].join("\n"));
+  const tResult = verifyArticle(tDraft, { ...ctx, lang, priorArticles: priorT, allowedNumbers: [...(ctx.allowedNumbers ?? []), ...englishDates] });
+  const tId = await saveArticle(env, {
+    school_slug: school.slug, lang, translation_of: en.id, slug: en.slug, kind: en.kind, draft: tDraft, sources: en.sources, runId: en.runId,
+    passed: tResult.passed, problems: tResult.problems, autoPublish: env.AUTO_PUBLISH === "true",
+  });
+  if (!tResult.passed) await alert(env, { article_id: tId, school: school.slug, problems: tResult.problems });
+  return `${lang} ${tId} ${tResult.passed ? "ok" : "held"}`;
+}
+
+// English articles (verified or published) that have no translation row at all, because the
+// translation failed when they were written. A held translation counts as existing.
+async function fillMissingTranslations(env: Env, school: School, now: Date): Promise<string> {
+  const out: string[] = [];
+  for (const [lang, language] of Object.entries(TRANSLATE_TO)) {
+    const { results: missing } = await env.DB.prepare(
+      `SELECT a.id, a.slug, a.kind, a.title, a.tldr, a.body_md, a.faq_json, a.sources_json, a.run_id FROM articles a
+       WHERE a.school_slug = ? AND a.lang = 'en' AND a.status IN ('verified', 'published')
+         AND NOT EXISTS (SELECT 1 FROM articles t WHERE t.translation_of = a.id AND t.lang = ?)
+       ORDER BY a.id LIMIT ?`,
+    ).bind(school.slug, lang, TRANSLATIONS_PER_RUN).all<{ id: number; slug: string; kind: string; title: string; tldr: string; body_md: string; faq_json: string; sources_json: string; run_id: string }>();
+    if (!missing.length) continue;
+    const facts = (await env.DB.prepare("SELECT id, key, value, unit, source_url, quote FROM facts WHERE school_slug = ?").bind(school.slug).all<FactRow>()).results;
+    const entities = (await env.DB.prepare("SELECT name FROM entities WHERE school_slug = ?").bind(school.slug).all<{ name: string }>()).results.map((e) => e.name);
+    for (const a of missing) {
+      const { results: news } = await env.DB.prepare("SELECT title, published_at FROM source_items WHERE used_by = ?").bind(a.id).all<{ title: string; published_at: string | null }>();
+      const ctx: TranslateContext = { school, facts, entities, newsTitles: news.map((n) => n.title), allowedNumbers: publishedDateNumbers(news.map((n) => n.published_at)), now };
+      const en: EnglishArticle = {
+        id: a.id, slug: a.slug, kind: a.kind, runId: a.run_id, sources: JSON.parse(a.sources_json) as string[],
+        draft: { title: a.title, tldr: a.tldr, body_md: a.body_md, faq: JSON.parse(a.faq_json) as ArticleDraft["faq"] },
+      };
+      try {
+        out.push(`article ${a.id}: ${await translateInto(env, school, en, lang, language, ctx)}`);
+      } catch (err) {
+        out.push(`article ${a.id}: ${lang} failed (${err instanceof Error ? err.message : String(err)})`);
+      }
+    }
+  }
+  return out.length ? out.join(", ") : "nothing missing";
 }
 
 // Sentence-level problems can be repaired; a duplicate, a too-short body or a grounding check that
