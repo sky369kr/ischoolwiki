@@ -182,7 +182,7 @@ tasks.md 표 형식
 | 데이터 | Cloudflare D1 (바인딩 `DB`) | 스키마 변경은 `migrations/`의 마이그레이션 파일로만 |
 | 비밀 값 | 운영: `wrangler secret` (ANTHROPIC_API_KEY, ADMIN_TOKEN, ALERT_WEBHOOK_URL) / 로컬: `.dev.vars` | 절대 커밋·출력하지 않음. `scripts/pilot.sh`는 .dev.vars를 만들고 끝나면 지운다. 클라우드 세션은 키를 `ISCHOOLWIKI_ANTHROPIC_KEY` 환경 변수로 받는다 |
 | 관리 경로 | `/admin/*` (Bearer ADMIN_TOKEN) | 회원 기능은 없다 |
-| 호스팅 | Cloudflare Workers (`wrangler.toml`), 현재 workers.dev 주소. 도메인(routes)은 사람이 결정 |
+| 호스팅 | Cloudflare Workers (`wrangler.toml`), https://ischoolwiki.com (사용자 지정 도메인, www는 apex로 301). workers.dev 주소는 꺼짐(2026-11-13) — 관리 요청도 ischoolwiki.com으로 |
 
 ### 10-2. 명령
 | 목적 | 명령 | 누가 |
