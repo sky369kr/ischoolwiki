@@ -90,7 +90,7 @@ npx wrangler secret put ADMIN_TOKEN
 
 - 검사: `bash scripts/check.sh` (타입·테스트, 로컬 Worker 페이지 검사, 링크, 관리 경로 보호, 비밀 값)
 - 안전장치 시험: `bash scripts/test-guard.sh`
-- AI는 작업 브랜치에만 커밋·push합니다. main 병합, 운영 배포, 원격 DB 변경, 비밀 값 등록은 사람이 합니다.
+- AI는 작업 브랜치에 커밋·push하고, `bash scripts/check.sh` 전체 PASS일 때 PR을 병합합니다. 운영 배포, 원격 DB 변경, 비밀 값 등록, 자동 게시 설정은 사람이 합니다.
 
 ## 현재 상태와 남은 일
 
