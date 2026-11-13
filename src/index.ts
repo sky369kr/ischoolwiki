@@ -24,6 +24,11 @@ const AI_CRAWLERS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Cl
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
     const url = new URL(req.url);
+    // One address per page: www goes to the apex, path and query kept.
+    if (url.hostname === "www.ischoolwiki.com") {
+      url.hostname = "ischoolwiki.com";
+      return Response.redirect(url.toString(), 301);
+    }
     try {
       if (url.pathname.startsWith("/admin/")) return await admin(req, env, url);
       return await site(env, url);

@@ -2,6 +2,9 @@ import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { MODEL } from "./generate";
+import { retryOnce } from "./retry";
+
+const RETRY_WAIT_MS = 30_000;
 import type { ArticleDraft, FactRow, Problem } from "./verify";
 
 // Second check after the rule-based verifier: a model reads every sentence of the English draft
@@ -34,7 +37,7 @@ export interface GroundingMaterial {
 
 export async function checkGrounding(apiKey: string, draft: ArticleDraft, material: GroundingMaterial): Promise<Problem[]> {
   try {
-    const stream = new Anthropic({ apiKey }).beta.messages.stream({
+    const message = await retryOnce(() => new Anthropic({ apiKey }).beta.messages.stream({
       model: MODEL,
       max_tokens: 16000,
       betas: ["server-side-fallback-2026-07-01"],
@@ -42,8 +45,7 @@ export async function checkGrounding(apiKey: string, draft: ArticleDraft, materi
       output_config: { effort: "high", format: zodOutputFormat(GroundingSchema) },
       system: [{ type: "text", text: CHECKER_SYSTEM, cache_control: { type: "ephemeral" } }],
       messages: [{ role: "user", content: checkerRequest(draft, material) }],
-    });
-    const message = await stream.finalMessage();
+    }).finalMessage(), RETRY_WAIT_MS);
     if (message.stop_reason === "refusal") return [failed("model declined the check")];
     if (message.stop_reason === "max_tokens") return [failed("check hit max_tokens")];
     const text = message.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("");
