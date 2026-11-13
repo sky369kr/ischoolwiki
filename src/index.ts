@@ -138,8 +138,8 @@ function articleCards(rows: ArticleRow[], lang: string, names: Map<string, strin
 function about(s: Site, lang: string): string {
   const ko = lang === "ko";
   const rows: [string, string][] = ko
-    ? [["상호", OPERATOR.name], ["대표자", OPERATOR.representative], ["사업자등록번호", OPERATOR.registrationNumber], ["서비스 브랜드", OPERATOR.brand]]
-    : [["Business name", OPERATOR.name], ["Representative", OPERATOR.representative], ["Korean business registration no.", OPERATOR.registrationNumber], ["Brand", OPERATOR.brand]];
+    ? [["상호", OPERATOR.name], ["대표자", OPERATOR.representative], ["사업자등록번호", OPERATOR.registrationNumber]]
+    : [["Business name", OPERATOR.name], ["Representative", OPERATOR.representative], ["Korean business registration no.", OPERATOR.registrationNumber]];
   const body = ko
     ? `<h1>운영자 정보</h1>
 <p>${esc(s.name)}는 ${esc(OPERATOR.name)}가 운영합니다. 같은 회사가 ${esc(OPERATOR.brand)}라는 이름으로 국제학교에 유료 AI 가시성(AEO/GEO) 서비스를 제공합니다. 이 사이트에 소개된 학교 중 일부는 그 서비스의 고객이며, 고객 학교의 페이지와 글에는 그 사실을 표시합니다.</p>
