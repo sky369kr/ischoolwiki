@@ -84,6 +84,14 @@ npx wrangler secret put ADMIN_TOKEN
 
 그다음 `wrangler.toml`의 `routes` 주석을 풀고 `npm run deploy`. 도메인 연결은 외부에 공개되는 작업이므로 사용자 확인 후에만 합니다.
 
+## 작업 방식 (하네스 v4)
+
+이 저장소는 하네스 v4 규칙으로 작업합니다. 규칙은 `CLAUDE.md`, 진행 상태는 `docs/stage.md`, 결정은 `docs/decisions.md`에 있습니다. 하네스 원본 설명은 `docs/harness/README.md`입니다.
+
+- 검사: `bash scripts/check.sh` (타입·테스트, 로컬 Worker 페이지 검사, 링크, 관리 경로 보호, 비밀 값)
+- 안전장치 시험: `bash scripts/test-guard.sh`
+- AI는 작업 브랜치에 커밋·push하고, `bash scripts/check.sh` 전체 PASS일 때 PR을 병합합니다. 운영 배포, 원격 DB 변경, 비밀 값 등록, 자동 게시 설정은 사람이 합니다.
+
 ## 현재 상태와 남은 일
 
 - [x] 라우팅, 템플릿, Schema.org, sitemap/RSS/llms.txt/robots.txt

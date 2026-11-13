@@ -283,6 +283,7 @@ async function comparePage(env: Env, s: Site, citySlug: string): Promise<string>
   }];
   const body = `<h1>${esc(title)}</h1>
 <p>${plural(schools.length, "school")}, listed alphabetically. Figures come from each school's published information; follow a school's profile for sources.</p>
+<h2>Schools</h2>
 <div class="grid">${schools.map((x) => schoolCard(x, summaries.get(x.slug)!, 0)).join("")}</div>
 ${schools.length > 1 ? `<h2>Side by side</h2>
 <div class="scroll"><table><thead><tr><th>School</th>${keys.map((k) => `<th>${esc(humanKey(k))}</th>`).join("")}</tr></thead><tbody>

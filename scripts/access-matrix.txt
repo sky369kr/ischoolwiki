@@ -1,0 +1,11 @@
+# 접근 검사 (scripts/check.d/40-access.sh). 한 줄에: 방법 경로 기대응답코드
+# 이 사이트는 회원 기능이 없다. 보호 대상은 관리 경로(/admin/*)이며 ADMIN_TOKEN 없이 열리면 안 된다.
+POST /admin/run 401
+POST /admin/import-ispp 401
+POST /admin/unpublish 401
+GET  /admin/held 401
+# 내부 파일은 Worker 라우트가 없으므로 404여야 한다
+GET  /CLAUDE.md 404
+GET  /docs/PRD.md 404
+GET  /wrangler.toml 404
+GET  /package.json 404

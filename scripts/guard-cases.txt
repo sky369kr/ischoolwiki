@@ -1,0 +1,23 @@
+# 안전장치 시험 목록 (scripts/test-guard.sh). 한 줄에: 기대(BLOCK|ALLOW)<탭>명령
+# 명령은 실행하지 않고 .claude/hooks/guard.sh 에 문자열로만 넣는다.
+BLOCK	npx wrangler d1 execute ischoolwiki --remote --command "select 1"
+BLOCK	npx wrangler d1 migrations apply ischoolwiki --remote
+BLOCK	npm run db:migrate:remote
+BLOCK	npm run deploy
+BLOCK	npx wrangler deploy
+BLOCK	wrangler deploy --env production
+BLOCK	npx wrangler versions deploy
+BLOCK	npx wrangler rollback
+BLOCK	npx wrangler delete
+BLOCK	npx wrangler secret put ADMIN_TOKEN
+BLOCK	git push origin main
+BLOCK	git push --force origin work/x
+BLOCK	git push origin work/x --force-with-lease
+BLOCK	cat .dev.vars
+ALLOW	npx wrangler deploy --dry-run --outdir .harness/bundle
+ALLOW	npx wrangler d1 execute ischoolwiki --local --command "select 1"
+ALLOW	npx wrangler d1 migrations apply ischoolwiki --local
+ALLOW	npx wrangler dev --port 8790
+ALLOW	git push -u origin work/harness-v4
+ALLOW	bash scripts/check.sh
+ALLOW	npm test

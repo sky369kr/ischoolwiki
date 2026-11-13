@@ -1,3 +1,14 @@
+# 로컬 실행 산출물
 node_modules/
 .wrangler/
+# 하네스 검사 산출물 (scripts/snapshot.sh)
+.harness/
+# 비밀 값
+.env
+.env.*
+!.env.example
 .dev.vars
+.dev.vars.*
+!.dev.vars.example
+# OS
+.DS_Store

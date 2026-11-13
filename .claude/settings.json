@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./.dev.vars)",
+      "Read(./.dev.vars.*)",
+      "Edit(./.dev.vars)",
+      "Edit(./.env)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --mirror:*)",
+      "Bash(npx wrangler d1 delete:*)",
+      "Bash(wrangler d1 delete:*)",
+      "Bash(npx wrangler pages project delete:*)",
+      "Bash(wrangler pages project delete:*)",
+      "Bash(npx wrangler secret:*)",
+      "Bash(wrangler secret:*)",
+      "Bash(npx wrangler pages secret:*)",
+      "Bash(wrangler pages secret:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(npm run db:migrate:remote:*)",
+      "Bash(npx wrangler deploy:*)",
+      "Bash(wrangler deploy:*)",
+      "Bash(npx wrangler delete:*)",
+      "Bash(wrangler delete:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
