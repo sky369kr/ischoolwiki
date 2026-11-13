@@ -3,8 +3,12 @@ main = "src/index.ts"
 compatibility_date = "2026-10-01"
 compatibility_flags = ["nodejs_compat"]
 
-# Route is attached only at deploy time, after the user approves going public.
-# routes = [{ pattern = "ischoolwiki.com/*", zone_name = "ischoolwiki.com" }]
+# Custom domains (operator approved 2026-11-13). The ischoolwiki.com zone is on Cloudflare; deploying
+# creates the DNS records and certificates. www redirects to the apex in src/index.ts.
+routes = [
+  { pattern = "ischoolwiki.com", custom_domain = true },
+  { pattern = "www.ischoolwiki.com", custom_domain = true },
+]
 
 [[d1_databases]]
 binding = "DB"
