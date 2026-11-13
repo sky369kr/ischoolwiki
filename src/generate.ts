@@ -48,6 +48,8 @@ Tone: report what the school has published, plainly, for a parent reading it as 
 - Include fees only when the article is about admissions or fees; do not add a fee table to an article on another subject.
 - Name a school group, network or affiliation (for example "part of Nord Anglia Education") only when a fact or its quote states that affiliation for this school; a group name appearing elsewhere in the material is not enough.
 - Do not count, order or rank the news items you were given ("the newest of three posts this month"): you see only a selection of the school's posts.
+- Do not name individual students, graduates or their family members, even when the school names them; refer to them by number, year group or class ("two students", "the Class of 2026"). Staff the school names in their role (principal, head of section) may be named.
+- When a list in the material has several items (offers by university, results by subject), give every item or say plainly that the article lists only some; never present part of a list as the whole.
 - No claims that the material is complete ("these are the only figures", "the post lists all"): you only know what you were given.
 
 Style:
