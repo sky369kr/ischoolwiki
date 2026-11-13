@@ -23,7 +23,31 @@ export function markdownToHtml(md: string): string {
     if (list) out.push(`<${list.tag}>${list.items.map((i) => `<li>${inline(i)}</li>`).join("")}</${list.tag}>`);
     list = null;
   };
+  // Pipe tables: a header row, a separator row ("|---|---|"), then body rows. Without the separator
+  // the lines are ordinary text.
+  let table: string[] = [];
+  const cells = (row: string) => row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+  const flushTable = () => {
+    if (!table.length) return;
+    if (table.length >= 2 && /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/.test(table[1]!)) {
+      const head = cells(table[0]!);
+      const body = table.slice(2).map(cells);
+      out.push(`<div class="scroll"><table><thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join("")}</tr></thead><tbody>${body
+        .map((r) => `<tr>${head.map((_, i) => `<td>${inline(r[i] ?? "")}</td>`).join("")}</tr>`)
+        .join("")}</tbody></table></div>`);
+    } else {
+      para.push(...table.map((l) => l.trim()));
+      flushPara();
+    }
+    table = [];
+  };
   for (const line of md.split("\n")) {
+    if (/^\s*\|/.test(line)) {
+      flushPara(); flushList();
+      table.push(line);
+      continue;
+    }
+    flushTable();
     const h = line.match(/^(#{2,4})\s+(.*)$/);
     const ul = line.match(/^\s*[-*+]\s+(.*)$/);
     const ol = line.match(/^\s*\d+[.)]\s+(.*)$/);
@@ -44,7 +68,7 @@ export function markdownToHtml(md: string): string {
       para.push(line.trim());
     }
   }
-  flushPara(); flushList();
+  flushTable(); flushPara(); flushList();
   return out.join("\n");
 }
 

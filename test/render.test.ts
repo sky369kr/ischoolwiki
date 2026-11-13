@@ -27,3 +27,20 @@ describe("jsonLd", () => {
     expect(jsonLd({ headline: "</script><script>alert(1)</script>" })).not.toContain("</script><script>");
   });
 });
+
+describe("markdownToHtml tables", () => {
+  it("renders a pipe table with a header and escapes cell text", () => {
+    const html = markdownToHtml("Intro.\n\n| Item | Detail |\n|---|---|\n| Student | <b>x</b> |\n| Entries | About 8,000 |\n\nAfter.");
+    expect(html).toBe(
+      [
+        "<p>Intro.</p>",
+        '<div class="scroll"><table><thead><tr><th>Item</th><th>Detail</th></tr></thead><tbody><tr><td>Student</td><td>&lt;b&gt;x&lt;/b&gt;</td></tr><tr><td>Entries</td><td>About 8,000</td></tr></tbody></table></div>',
+        "<p>After.</p>",
+      ].join("\n"),
+    );
+  });
+
+  it("leaves pipe lines without a separator row as text", () => {
+    expect(markdownToHtml("| not | a table |")).toBe("<p>| not | a table |</p>");
+  });
+});
