@@ -21,7 +21,7 @@ SITE_URL = "https://ischoolwiki.com"
 SITE_NAME = "iSchoolWiki"
 MAX_POSTS_PER_SCHOOL_PER_MONTH = "5"
 # "false" keeps the pipeline writing held/verified drafts without publishing.
-AUTO_PUBLISH = "false"
+AUTO_PUBLISH = "true"  # 2026-11-13 operator decision after reviewing the first production run
 
 # Secrets (set with `wrangler secret put`, never in this file or in chat):
 #   ANTHROPIC_API_KEY  - article generation
