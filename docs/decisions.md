@@ -42,3 +42,11 @@
 
 ## 2026-11-13 · 도메인 연결 결과
 - 결과: https://ischoolwiki.com 200, www → apex 301, /admin/ 401. `routes`를 넣으면서 wrangler가 workers.dev를 기본으로 꺼 옛 주소는 404. 중복 주소 문제(seo-plan 1순위, tasks S-07)는 이것으로 해결. 관리 요청(/admin/*)은 이제 https://ischoolwiki.com 으로 보낸다. harness.config.sh SITE_URL 변경, verify-live PASS
+
+## 2026-11-13 · /adopt 결정 (운영자 "추천대로")
+- 결정: v1 필수 기능 = PRD 후보 A~E (start.md 4번). F-03·F-06·F-15·F-16·F-17은 있으면 좋음 / 영향: PRD, tasks.md
+- 결정: 사업 목표 숫자는 2026-11-27 안정화 종료 때 실측 기준선을 보고 정한다(Q2). 한국어 학교·비교·첫 화면은 v1 밖(Q3). v1은 파일럿 3개 학교(Q4)
+- 결정: 안정화 중에는 P1 3건만: 소식 일시 오류 시 다시 읽기(S-02), 번역 오류 시 다시 시도(S-03), 글 교체 API와 옛 주소 301(S-06, Q5 일부 승격). 보류 글 화면 등 나머지는 정기 릴리스
+- 결정: 교체된 글의 옛 주소는 새 글로 301 (seo-plan 2순위, architecture 선택지 B)
+- 결정: 교차검토 생략(PRD, architecture) / 이유: 운영 중 사이트의 역기획 문서
+- 게이트 A(PRD)·B(디자인 명세)·C(구조 설계) 승인 2026-11-13
