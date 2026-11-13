@@ -66,6 +66,8 @@ export interface WriteInput {
   facts: FactRow[];
   entities: string[];
   news: { title: string; summary: string | null; url: string; published_at: string | null }[];
+  // Set for a topic guide: the facts given are only this topic's, and there is no news.
+  guide?: { topic: string; brief: string };
   existingTitles: string[];
   today: string;
 }
@@ -95,7 +97,9 @@ export async function writeArticle(apiKey: string, input: WriteInput): Promise<G
     messages: [
       {
         role: "user",
-        content: `Write one new article about this school that does not repeat the articles already published. Prefer the newest news item that has supporting facts.\n\n${JSON.stringify(material, null, 2)}`,
+        content: input.guide
+          ? `Write one reference guide for parents about ${input.guide.brief}, for this school, using only the facts below. Set kind to "parent_guide". If an article already published covers this topic, or the facts are too thin for a useful guide, set skip to true and say why.\n\n${JSON.stringify(material, null, 2)}`
+          : `Write one new article about this school that does not repeat the articles already published. Prefer the newest news item that has supporting facts.\n\n${JSON.stringify(material, null, 2)}`,
       },
     ],
   });

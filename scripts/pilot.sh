@@ -35,8 +35,11 @@ DEV=$!
 trap 'pkill -f "wrangler dev --port $PORT" 2>/dev/null; kill $DEV 2>/dev/null; rm -f .dev.vars' EXIT
 for _ in $(seq 1 60); do curl -s -o /dev/null "http://127.0.0.1:$PORT/robots.txt" && break; sleep 1; done
 
-echo "== pipeline run"
-curl -sS -m 1800 -X POST -H "authorization: Bearer $TOKEN" "http://127.0.0.1:$PORT/admin/run" | python3 -m json.tool
+# RUNS=n runs the pipeline n times in a row (as an operator filling a new site would), default 1.
+for run in $(seq 1 "${RUNS:-1}"); do
+  echo "== pipeline run $run"
+  curl -sS -m 1800 -X POST -H "authorization: Bearer $TOKEN" "http://127.0.0.1:$PORT/admin/run" | python3 -m json.tool
+done
 
 q() { npx wrangler d1 execute ischoolwiki --local --json --command "$1" 2>/dev/null | python3 -c 'import json,sys; [print(r) for r in json.load(sys.stdin)[0]["results"]]'; }
 echo "== facts by school and source"
@@ -47,3 +50,5 @@ echo "== held: problems"
 q "SELECT a.id, a.lang, v.problems_json FROM articles a JOIN verification_results v ON v.article_id = a.id WHERE a.status = 'held'"
 echo "== revised: first problems"
 q "SELECT article_id, problems_json FROM article_revisions ORDER BY id"
+echo "== guide attempts"
+q "SELECT school_slug, topic, article_id, outcome, detail FROM guide_attempts ORDER BY id"
