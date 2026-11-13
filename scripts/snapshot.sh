@@ -12,7 +12,7 @@ if curl -s -o /dev/null --noproxy '*' "http://127.0.0.1:$CHECK_PORT/"; then
   skip "포트 $CHECK_PORT 를 이미 무언가가 쓰고 있음 (harness.config.sh의 CHECK_PORT)"; exit 2
 fi
 npx wrangler d1 migrations apply "$D1_NAME" --local --persist-to "$P" > "$H/setup.log" 2>&1 || { fail "로컬 마이그레이션 실패 ($H/setup.log)"; exit 1; }
-for f in seeds/pilot.sql seeds/bsb-shunyi-fees.sql scripts/fixtures/*.sql; do
+for f in seeds/pilot.sql seeds/bsb-shunyi-fees.sql seeds/bst-tashkent.sql scripts/fixtures/*.sql; do
   npx wrangler d1 execute "$D1_NAME" --local --persist-to "$P" --file "$f" >> "$H/setup.log" 2>&1 || { fail "시드 실패: $f ($H/setup.log)"; exit 1; }
 done
 

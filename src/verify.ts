@@ -59,7 +59,7 @@ const GENERIC_PROPER = new Set(
     "Asia", "Europe", "Nord", "Anglia", "Education", "Oxbridge", "Ivy", "League", "Russell", "Group",
     "City", "I",
     // ISO currency codes and common aliases; the amounts next to them are still checked as numbers.
-    "RMB", "CNY", "USD", "EUR", "GBP", "HKD", "SGD", "KRW", "JPY", "VND", "THB", "MYR", "IDR", "PHP", "TWD",
+    "RMB", "CNY", "USD", "EUR", "GBP", "HKD", "SGD", "KRW", "JPY", "VND", "THB", "MYR", "IDR", "PHP", "TWD", "UZS", "KZT",
   ].map((w) => w.toLowerCase()),
 );
 
