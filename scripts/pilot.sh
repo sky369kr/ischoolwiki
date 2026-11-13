@@ -48,6 +48,19 @@ for run in $(seq 1 "${RUNS:-1}"); do
 done
 
 q() { npx wrangler d1 execute ischoolwiki --local --json --command "$1" 2>/dev/null | python3 -c 'import json,sys; [print(r) for r in json.load(sys.stdin)[0]["results"]]'; }
+
+# REWRITE=<English article id> then replaces that article through POST /admin/rewrite and shows that
+# its old address redirects to the replacement.
+if [ -n "${REWRITE:-}" ]; then
+  OLD_SLUG=$(npx wrangler d1 execute ischoolwiki --local --json --command "SELECT slug FROM articles WHERE id = ${REWRITE}" 2>/dev/null | python3 -c 'import json,sys; r=json.load(sys.stdin)[0]["results"]; print(r[0]["slug"] if r else "")')
+  echo "== rewrite article $REWRITE ($OLD_SLUG)"
+  curl -sS -m 1800 -X POST -H "authorization: Bearer $TOKEN" -H "content-type: application/json" \
+    -d "{\"article_id\":$REWRITE,\"reason\":\"pilot rewrite check\"}" "http://127.0.0.1:$PORT/admin/rewrite" | python3 -m json.tool
+  echo "== old addresses after the rewrite"
+  for path in "/blog/$OLD_SLUG" "/ko/blog/$OLD_SLUG"; do
+    curl -s -o /dev/null -w "%{http_code} %{redirect_url} <- $path\n" "http://127.0.0.1:$PORT$path"
+  done
+fi
 echo "== facts by school and source"
 q "SELECT school_slug, source_kind, COUNT(*) n FROM facts GROUP BY 1, 2"
 echo "== articles"

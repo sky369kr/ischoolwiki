@@ -1,7 +1,8 @@
 import { articleHtml, extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, reviseArticle, translateArticle, writeArticle } from "./generate";
 import { checkGrounding } from "./grounding";
-import { pickGuideTopic, type GuideTopic } from "./guides";
+import { GUIDE_TOPICS, pickGuideTopic, type GuideTopic } from "./guides";
+import { retryOnce } from "./retry";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
 import { dateNumbers, publishedDateNumbers, verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
@@ -37,6 +38,11 @@ export interface RunReport {
 const USER_AGENT = "iSchoolWikiBot/0.1 (+https://ischoolwiki.com)";
 const TRANSLATE_TO: Record<string, string> = { ko: "Korean" };
 const EXTRACT_PER_RUN = 3;
+// Runs a news page may fail with a temporary error before it is given up as having no facts.
+const MAX_PAGE_ATTEMPTS = 3;
+// Missing translations filled per school and run (see fillMissingTranslations).
+const TRANSLATIONS_PER_RUN = 2;
+const RETRY_WAIT_MS = 30_000;
 // News items one article may draw on; each is marked used once written about. Fewer per article
 // spreads a school's news over more, shorter articles.
 const NEWS_PER_ARTICLE = 3;
@@ -53,6 +59,7 @@ export async function runPipeline(env: Env, now = new Date()): Promise<RunReport
       ["collect", () => collectNews(env, school)],
       ["extract", () => extractNewFacts(env, school)],
       ["write", () => writeForSchool(env, school, runId, now)],
+      ["translate", () => fillMissingTranslations(env, school, now)],
     ] as const) {
       try {
         steps.push(`${name}: ${await step()}`);
@@ -93,10 +100,28 @@ async function extractNewFacts(env: Env, school: School): Promise<string> {
     "SELECT id, url, published_at FROM source_items WHERE school_slug = ? AND extracted_at IS NULL ORDER BY published_at DESC LIMIT ?",
   ).bind(school.slug, EXTRACT_PER_RUN).all<{ id: number; url: string; published_at: string | null }>();
   let factCount = 0;
+  let deferred = 0;
   for (const item of items) {
-    const res = await fetch(item.url, { headers: { "user-agent": USER_AGENT } });
+    let res: Response | null = null;
+    try {
+      res = await fetch(item.url, { headers: { "user-agent": USER_AGENT } });
+    } catch {
+      res = null;
+    }
+    const outcome = pageOutcome(res?.status ?? null);
+    if (outcome === "retry") {
+      // The site is busy or down: try this page again on a later run, and stop reading it for now.
+      const r = await env.DB.prepare("UPDATE source_items SET extract_attempts = extract_attempts + 1 WHERE id = ? RETURNING extract_attempts")
+        .bind(item.id).first<{ extract_attempts: number }>();
+      if ((r?.extract_attempts ?? MAX_PAGE_ATTEMPTS) >= MAX_PAGE_ATTEMPTS) {
+        await env.DB.prepare("UPDATE source_items SET extracted_at = datetime('now'), facts_found = 0 WHERE id = ?").bind(item.id).run();
+      } else {
+        deferred++;
+      }
+      break;
+    }
     let found = 0;
-    if (res.ok) {
+    if (res && outcome === "read") {
       const text = htmlToText(articleHtml(await res.text())).slice(0, PAGE_CHAR_LIMIT);
       const { facts, names } = await extractFacts(env.ANTHROPIC_API_KEY, school.name, text);
       const stmts = [
@@ -115,10 +140,20 @@ async function extractNewFacts(env: Env, school: School): Promise<string> {
     await env.DB.prepare("UPDATE source_items SET extracted_at = datetime('now'), facts_found = ? WHERE id = ?").bind(found, item.id).run();
     factCount += found;
   }
-  return `${items.length} pages read, ${factCount} grounded facts`;
+  return `${items.length - deferred} pages read, ${factCount} grounded facts${deferred ? `, ${deferred} deferred (site busy)` : ""}`;
 }
 
-async function writeForSchool(env: Env, school: School, runId: string, now: Date): Promise<string> {
+// What to do with a news page response: read it, try again on a later run (temporary failure:
+// no response, 408, 429, 5xx), or record it as having no facts (any other error, such as 404).
+export function pageOutcome(status: number | null): "read" | "retry" | "skip" {
+  if (status === null || status === 408 || status === 429 || status >= 500) return "retry";
+  return status >= 200 && status < 300 ? "read" : "skip";
+}
+
+// A rewrite writes again from exactly the material the replaced article used: its news items, or its guide topic.
+type WriteFocus = { newsIds: number[] } | { topic: string };
+
+async function writeForSchool(env: Env, school: School, runId: string, now: Date, focus?: WriteFocus): Promise<string> {
   const monthStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)).toISOString();
   const thisMonth = await env.DB.prepare(
     "SELECT COUNT(*) AS n FROM articles WHERE school_slug = ? AND lang = 'en' AND status IN ('verified', 'published') AND created_at >= ?",
@@ -128,9 +163,16 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   const facts = (await env.DB.prepare("SELECT id, key, value, unit, source_url, quote FROM facts WHERE school_slug = ?").bind(school.slug).all<FactRow>()).results;
   if (!facts.length) return "no facts yet";
 
-  const { results: news } = await env.DB.prepare(
-    "SELECT id, title, summary, url, published_at FROM source_items WHERE school_slug = ? AND used_by IS NULL AND facts_found > 0 ORDER BY published_at DESC LIMIT ?",
-  ).bind(school.slug, NEWS_PER_ARTICLE).all<{ id: number; title: string; summary: string | null; url: string; published_at: string | null }>();
+  type NewsRow = { id: number; title: string; summary: string | null; url: string; published_at: string | null };
+  const { results: news } = focus && "newsIds" in focus
+    ? await env.DB.prepare(
+      "SELECT id, title, summary, url, published_at FROM source_items WHERE school_slug = ? AND used_by IS NULL AND id IN (SELECT value FROM json_each(?)) ORDER BY published_at DESC",
+    ).bind(school.slug, JSON.stringify(focus.newsIds)).all<NewsRow>()
+    : focus
+      ? { results: [] as NewsRow[] }
+      : await env.DB.prepare(
+        "SELECT id, title, summary, url, published_at FROM source_items WHERE school_slug = ? AND used_by IS NULL AND facts_found > 0 ORDER BY published_at DESC LIMIT ?",
+      ).bind(school.slug, NEWS_PER_ARTICLE).all<NewsRow>();
   const prior = (await env.DB.prepare(
     "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = 'en' AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
   ).bind(school.slug).all<{ id: number; title: string; body_md: string }>()).results;
@@ -138,7 +180,8 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   let guide: { topic: GuideTopic; facts: FactRow[] } | null = null;
   if (!news.length) {
     const tried = (await env.DB.prepare("SELECT topic FROM guide_attempts WHERE school_slug = ?").bind(school.slug).all<{ topic: string }>()).results;
-    guide = pickGuideTopic(facts, new Set(tried.map((t) => t.topic)));
+    const skip = focus && "topic" in focus ? new Set(GUIDE_TOPICS.map((t) => t.id).filter((id) => id !== focus.topic)) : new Set(tried.map((t) => t.topic));
+    guide = pickGuideTopic(facts, skip);
     if (!guide) return "no new material; nothing written";
   }
   // A guide sees, and is checked against, only its topic's facts.
@@ -215,21 +258,74 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
 
   const out = [`${label}article ${articleId} ${env.AUTO_PUBLISH === "true" ? "published" : "verified"}${revised ? " after one revision" : ""}`];
   for (const [lang, language] of Object.entries(TRANSLATE_TO)) {
-    const t = await translateArticle(env.ANTHROPIC_API_KEY, { title: draft.title, tldr: draft.tldr, body_markdown: draft.body_md, faq: draft.faq }, language);
-    const tDraft: ArticleDraft = { title: t.title, tldr: t.tldr, body_md: t.body_markdown, faq: t.faq };
-    const priorT = (await env.DB.prepare(
-      "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = ? AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
-    ).bind(school.slug, lang).all<{ id: number; title: string; body_md: string }>()).results;
-    const englishDates = dateNumbers([draft.title, draft.tldr, draft.body_md, ...draft.faq.flatMap((f) => [f.question, f.answer])].join("\n"));
-    const tResult = verifyArticle(tDraft, { ...ctx, lang, priorArticles: priorT, allowedNumbers: [...newsDates, ...englishDates] });
-    const tId = await saveArticle(env, {
-      school_slug: school.slug, lang, translation_of: articleId, slug, kind: generated.kind, draft: tDraft, sources, runId,
-      passed: tResult.passed, problems: tResult.problems, autoPublish: env.AUTO_PUBLISH === "true",
-    });
-    if (!tResult.passed) await alert(env, { article_id: tId, school: school.slug, problems: tResult.problems });
-    out.push(`${lang} ${tId} ${tResult.passed ? "ok" : "held"}`);
+    try {
+      out.push(await translateInto(env, school, { id: articleId, slug, kind: generated.kind, draft, sources, runId }, lang, language, ctx));
+    } catch (err) {
+      // The English article stays; the "translate" step fills the missing translation on a later run.
+      out.push(`${lang} failed (${err instanceof Error ? err.message : String(err)}), retried later`);
+    }
   }
   return out.join(", ");
+}
+
+interface EnglishArticle {
+  id: number;
+  slug: string;
+  kind: string;
+  draft: ArticleDraft;
+  sources: string[];
+  runId: string;
+}
+
+type TranslateContext = Omit<Parameters<typeof verifyArticle>[1], "lang" | "priorArticles">;
+
+// Translate one verified English article, check the translation's numbers and save it.
+async function translateInto(env: Env, school: School, en: EnglishArticle, lang: string, language: string, ctx: TranslateContext): Promise<string> {
+  const d = en.draft;
+  const t = await retryOnce(() => translateArticle(env.ANTHROPIC_API_KEY, { title: d.title, tldr: d.tldr, body_markdown: d.body_md, faq: d.faq }, language), RETRY_WAIT_MS);
+  const tDraft: ArticleDraft = { title: t.title, tldr: t.tldr, body_md: t.body_markdown, faq: t.faq };
+  const priorT = (await env.DB.prepare(
+    "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = ? AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
+  ).bind(school.slug, lang).all<{ id: number; title: string; body_md: string }>()).results;
+  const englishDates = dateNumbers([d.title, d.tldr, d.body_md, ...d.faq.flatMap((f) => [f.question, f.answer])].join("\n"));
+  const tResult = verifyArticle(tDraft, { ...ctx, lang, priorArticles: priorT, allowedNumbers: [...(ctx.allowedNumbers ?? []), ...englishDates] });
+  const tId = await saveArticle(env, {
+    school_slug: school.slug, lang, translation_of: en.id, slug: en.slug, kind: en.kind, draft: tDraft, sources: en.sources, runId: en.runId,
+    passed: tResult.passed, problems: tResult.problems, autoPublish: env.AUTO_PUBLISH === "true",
+  });
+  if (!tResult.passed) await alert(env, { article_id: tId, school: school.slug, problems: tResult.problems });
+  return `${lang} ${tId} ${tResult.passed ? "ok" : "held"}`;
+}
+
+// English articles (verified or published) that have no translation row at all, because the
+// translation failed when they were written. A held translation counts as existing.
+async function fillMissingTranslations(env: Env, school: School, now: Date): Promise<string> {
+  const out: string[] = [];
+  for (const [lang, language] of Object.entries(TRANSLATE_TO)) {
+    const { results: missing } = await env.DB.prepare(
+      `SELECT a.id, a.slug, a.kind, a.title, a.tldr, a.body_md, a.faq_json, a.sources_json, a.run_id FROM articles a
+       WHERE a.school_slug = ? AND a.lang = 'en' AND a.status IN ('verified', 'published')
+         AND NOT EXISTS (SELECT 1 FROM articles t WHERE t.translation_of = a.id AND t.lang = ?)
+       ORDER BY a.id LIMIT ?`,
+    ).bind(school.slug, lang, TRANSLATIONS_PER_RUN).all<{ id: number; slug: string; kind: string; title: string; tldr: string; body_md: string; faq_json: string; sources_json: string; run_id: string }>();
+    if (!missing.length) continue;
+    const facts = (await env.DB.prepare("SELECT id, key, value, unit, source_url, quote FROM facts WHERE school_slug = ?").bind(school.slug).all<FactRow>()).results;
+    const entities = (await env.DB.prepare("SELECT name FROM entities WHERE school_slug = ?").bind(school.slug).all<{ name: string }>()).results.map((e) => e.name);
+    for (const a of missing) {
+      const { results: news } = await env.DB.prepare("SELECT title, published_at FROM source_items WHERE used_by = ?").bind(a.id).all<{ title: string; published_at: string | null }>();
+      const ctx: TranslateContext = { school, facts, entities, newsTitles: news.map((n) => n.title), allowedNumbers: publishedDateNumbers(news.map((n) => n.published_at)), now };
+      const en: EnglishArticle = {
+        id: a.id, slug: a.slug, kind: a.kind, runId: a.run_id, sources: JSON.parse(a.sources_json) as string[],
+        draft: { title: a.title, tldr: a.tldr, body_md: a.body_md, faq: JSON.parse(a.faq_json) as ArticleDraft["faq"] },
+      };
+      try {
+        out.push(`article ${a.id}: ${await translateInto(env, school, en, lang, language, ctx)}`);
+      } catch (err) {
+        out.push(`article ${a.id}: ${lang} failed (${err instanceof Error ? err.message : String(err)})`);
+      }
+    }
+  }
+  return out.length ? out.join(", ") : "nothing missing";
 }
 
 // Sentence-level problems can be repaired; a duplicate, a too-short body or a grounding check that
@@ -272,6 +368,64 @@ async function saveArticle(env: Env, a: SaveInput): Promise<number> {
     env.DB.prepare("INSERT INTO article_events (article_id, from_status, to_status, reason) VALUES (?, NULL, ?, ?)").bind(id, status, a.passed ? "verification passed" : "verification failed"),
   ]);
   return id;
+}
+
+export interface RewriteResult {
+  unpublished: number;
+  write: string;
+  replacement: { id: number; slug: string; status: string } | null;
+}
+
+// Take an English article down with its translations and write it again from the same material
+// (its news items, or its guide topic), so a problem article is replaced in one request. When the
+// new article passes, the old ones point at it (replaced_by) and their addresses redirect there.
+export async function rewriteArticle(env: Env, articleId: number, reason: string, now = new Date()): Promise<RewriteResult | { error: string }> {
+  const old = await env.DB.prepare("SELECT id, school_slug, lang, status, replaced_by FROM articles WHERE id = ?")
+    .bind(articleId).first<{ id: number; school_slug: string; lang: string; status: string; replaced_by: number | null }>();
+  if (!old) return { error: `no article ${articleId}` };
+  if (old.lang !== "en") return { error: `article ${articleId} is a translation; rewrite its English article` };
+  if (old.replaced_by) return { error: `article ${articleId} was already replaced by ${old.replaced_by}` };
+  const school = await env.DB.prepare("SELECT * FROM schools WHERE slug = ?").bind(old.school_slug).first<School>();
+  if (!school) return { error: `no school ${old.school_slug}` };
+
+  const newsIds = (await env.DB.prepare("SELECT id FROM source_items WHERE used_by = ?").bind(articleId).all<{ id: number }>()).results.map((r) => r.id);
+  const topic = (await env.DB.prepare("SELECT topic FROM guide_attempts WHERE article_id = ?").bind(articleId).first<{ topic: string }>())?.topic;
+  const unpublished = await unpublish(env, { article_id: articleId }, `rewrite: ${reason}`);
+  await env.DB.batch([
+    env.DB.prepare("UPDATE source_items SET used_by = NULL WHERE used_by = ?").bind(articleId),
+    env.DB.prepare("DELETE FROM guide_attempts WHERE article_id = ?").bind(articleId),
+  ]);
+  const focus: WriteFocus | undefined = newsIds.length ? { newsIds } : topic ? { topic } : undefined;
+  if (!focus) return { unpublished, write: "the article used no news and no guide topic; nothing rewritten", replacement: null };
+
+  const runId = `rewrite_${now.toISOString()}_${articleId}`;
+  const write = await writeForSchool(env, school, runId, now, focus);
+  const fresh = await env.DB.prepare("SELECT id, slug, status FROM articles WHERE run_id = ? AND lang = 'en' ORDER BY id LIMIT 1")
+    .bind(runId).first<{ id: number; slug: string; status: string }>();
+  if (fresh && fresh.status !== "held") {
+    await env.DB.batch([
+      env.DB.prepare("UPDATE articles SET replaced_by = ? WHERE id = ?").bind(fresh.id, articleId),
+      env.DB.prepare(
+        "UPDATE articles SET replaced_by = (SELECT t.id FROM articles t WHERE t.translation_of = ? AND t.lang = articles.lang) WHERE translation_of = ?",
+      ).bind(fresh.id, articleId),
+    ]);
+  }
+  return { unpublished, write, replacement: fresh ?? null };
+}
+
+// Where an unpublished article's address should send readers: the published article that replaced
+// it, following a chain of replacements. Null when the slug is not a replaced article.
+export async function replacementSlug(db: D1Database, lang: string, slug: string): Promise<string | null> {
+  let row = await db.prepare("SELECT replaced_by FROM articles WHERE lang = ? AND slug = ? AND status = 'unpublished' AND replaced_by IS NOT NULL ORDER BY id DESC LIMIT 1")
+    .bind(lang, slug).first<{ replaced_by: number }>();
+  for (let hops = 0; row && hops < 5; hops++) {
+    const next = await db.prepare("SELECT slug, status, replaced_by FROM articles WHERE id = ?").bind(row.replaced_by)
+      .first<{ slug: string; status: string; replaced_by: number | null }>();
+    if (!next) return null;
+    if (next.status === "published") return next.slug;
+    row = next.replaced_by ? { replaced_by: next.replaced_by } : null;
+  }
+  return null;
 }
 
 export async function unpublish(env: Env, by: { run_id?: string; article_id?: number }, reason: string): Promise<number> {

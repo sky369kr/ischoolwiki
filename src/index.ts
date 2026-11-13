@@ -1,4 +1,4 @@
-import { runPipeline, syncIspp, unpublish, type Env, type School } from "./pipeline";
+import { replacementSlug, rewriteArticle, runPipeline, syncIspp, unpublish, type Env, type School } from "./pipeline";
 import { CLIENT_NOTICE, OPERATOR } from "./operator";
 import { esc, markdownToHtml, page } from "./render";
 import { summarize, tuitionText, type SchoolSummary, type SummaryFact } from "./summary";
@@ -57,7 +57,15 @@ async function site(env: Env, url: URL): Promise<Response> {
   if (p === "/") return html(await home(env, s));
   if ((m = p.match(/^\/(?:(ko)\/)?about\/?$/))) return html(about(s, m[1] ?? "en"));
   if ((m = p.match(/^\/(?:(ko)\/)?blog\/?$/))) return html(await blogIndex(env, s, m[1] ?? "en"));
-  if ((m = p.match(/^\/(?:(ko)\/)?blog\/([a-z0-9-]+)\/?$/))) return html(await articlePage(env, s, m[1] ?? "en", m[2]!));
+  if ((m = p.match(/^\/(?:(ko)\/)?blog\/([a-z0-9-]+)\/?$/))) {
+    const lang = m[1] ?? "en";
+    const page = await articlePage(env, s, lang, m[2]!);
+    if (!page.includes("<h1>Page not found</h1>")) return html(page);
+    // A replaced article's old address goes to its replacement.
+    const to = await replacementSlug(env.DB, lang, m[2]!);
+    if (to) return Response.redirect(`${url.origin}${lang === "en" ? "" : `/${lang}`}/blog/${to}`, 301);
+    return html(page);
+  }
   if ((m = p.match(/^\/wiki\/([a-z0-9-]+)\/?$/))) return html(await wikiPage(env, s, m[1]!));
   if ((m = p.match(/^\/compare\/([a-z0-9-]+)-international-schools\/?$/))) return html(await comparePage(env, s, m[1]!));
   return notFound(s);
@@ -348,6 +356,12 @@ async function admin(req: Request, env: Env, url: URL): Promise<Response> {
     const body = (await req.json()) as { run_id?: string; article_id?: number; reason?: string };
     if (!body.run_id && typeof body.article_id !== "number") return new Response("run_id or article_id required", { status: 400 });
     return Response.json({ unpublished: await unpublish(env, body, body.reason ?? "admin request") });
+  }
+  if (req.method === "POST" && url.pathname === "/admin/rewrite") {
+    const body = (await req.json()) as { article_id?: number; reason?: string };
+    if (typeof body.article_id !== "number") return new Response("article_id required", { status: 400 });
+    const r = await rewriteArticle(env, body.article_id, body.reason ?? "admin request");
+    return Response.json(r, { status: "error" in r ? 400 : 200 });
   }
   if (req.method === "GET" && url.pathname === "/admin/held") {
     const { results } = await env.DB.prepare(

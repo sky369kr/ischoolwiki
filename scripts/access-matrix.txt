@@ -3,6 +3,7 @@
 POST /admin/run 401
 POST /admin/import-ispp 401
 POST /admin/unpublish 401
+POST /admin/rewrite 401
 GET  /admin/held 401
 # 내부 파일은 Worker 라우트가 없으므로 404여야 한다
 GET  /CLAUDE.md 404
