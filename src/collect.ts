@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { MODEL, RefusedError } from "./generate";
+import { decodeEntities } from "./text";
 
 export interface FeedItem {
   url: string;
@@ -70,12 +71,6 @@ function tag(block: string, name: string): string {
   return decodeEntities(m[1]!.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
-function decodeEntities(s: string): string {
-  return s
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&quot;/g, '"').replace(/&apos;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&");
-}
 
 // News pages end with teasers of other posts ("Related news") followed by the site footer and banners.
 // None of that is the page's own article: a fact taken from it gets attributed to the wrong post and

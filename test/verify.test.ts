@@ -165,3 +165,48 @@ describe("verifyArticle", () => {
     expect(names).toContain("Stanford");
   });
 });
+
+describe("names and sources from real school pages", () => {
+  const offers = {
+    ...ctx,
+    facts: [
+      ...ctx.facts,
+      { id: 4, key: "offers_kings_college_london", value: "6", unit: null, quote: "6 offers from King&rsquo;s College London (QS #29)", source_url: "https://example.org/offers" },
+      { id: 5, key: "fee_year", value: "2026-2027", unit: "RMB per year, 2026-2027, Year 1", source_url: "https://example.org/fees.pdf" },
+    ],
+  };
+
+  it("accepts a possessive name whose source quote still carries an HTML entity", () => {
+    const r = verifyArticle(draft("## Offers\n\nStudents received six offers from King's College London and others from King’s College London too."), offers);
+    expect(r.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+  });
+
+  it("still holds a name no source gives", () => {
+    const r = verifyArticle(draft("## Offers\n\nStudents received offers from Queen's College Oxford."), offers);
+    expect(r.problems.some((p) => p.kind === "unknown_entity" && p.detail.includes("Queen"))).toBe(true);
+  });
+
+  it("counts a fact as a source only for a distinctive number, not a year or a small count", () => {
+    const r = verifyArticle(draft("## Offers\n\nIn 2026, 6 offers came in, and 1,200 students attend."), offers);
+    expect(r.passed).toBe(true);
+    // 36.5 comes from the tldr (fact 1); 1,200 is fact 2; neither 2026 nor 6 attributes a source.
+    expect(r.usedFactIds.sort()).toEqual([1, 2]);
+  });
+});
+
+describe("sources from quoted wording", () => {
+  it("counts a fact whose quote the article repeats, with no number in common", () => {
+    const quoted = {
+      ...ctx,
+      facts: [
+        ...ctx.facts,
+        { id: 7, key: "world_literacy", value: "World Literacy", unit: null, quote: "World Literacy is a unique DAIS Elementary subject that brings Language Arts and Social Studies together", source_url: "https://example.org/literacy" },
+        { id: 8, key: "maths", value: "Dimensions Math", unit: null, quote: "At DAIS Elementary, we use Dimensions Math, a Singapore mathematics program", source_url: "https://example.org/maths" },
+      ],
+      entities: [...ctx.entities, "DAIS", "World", "Literacy", "Language", "Arts", "Social", "Studies"],
+    };
+    const r = verifyArticle(draft('## Subjects\n\nThe school calls it "a unique DAIS Elementary subject that brings Language Arts and Social Studies together".'), quoted);
+    expect(r.usedFactIds).toContain(7);
+    expect(r.usedFactIds).not.toContain(8);
+  });
+});

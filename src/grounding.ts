@@ -21,6 +21,7 @@ List every sentence that is not supported, including:
 - descriptions of how the school works, what it offers or who it suits beyond what the material says
 - numbers, grades, ages or dates used as examples that are not in FACTS
 - evaluative judgements, positive or negative, that no fact states
+- any sentence that names an individual student, graduate or family member (staff named in their role are fine)
 A sentence saying the published material does not cover a topic is supported only if the material indeed does not cover it.
 Copy each listed sentence exactly as it appears in the article and give a short reason. An empty list is correct when everything is supported.`;
 

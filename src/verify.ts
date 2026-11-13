@@ -1,3 +1,5 @@
+import { decodeEntities } from "./text";
+
 export interface FactRow {
   id: number;
   key: string;
@@ -91,7 +93,22 @@ export function verifyArticle(draft: ArticleDraft, ctx: VerifyContext): VerifyRe
     }
   }
 
-  return { passed: problems.length === 0, problems, usedFactIds };
+  return { passed: problems.length === 0, problems, usedFactIds: [...new Set([...usedFactIds, ...quotedFactIds(text, ctx.facts)])] };
+}
+
+// Facts whose wording the article repeats: five consecutive words of the fact's quote, or a value
+// of three or more words. These are sources the article drew on even when no number links them.
+function quotedFactIds(text: string, facts: FactRow[]): number[] {
+  const article = shingles(text);
+  const article3 = shingles(text, 3);
+  const out: number[] = [];
+  for (const f of facts) {
+    const quote = shingles(decodeEntities(f.quote ?? ""));
+    const value = shingles(decodeEntities(f.value), 3);
+    const hit = [...quote].some((q) => article.has(q)) || (value.size > 0 && [...value].every((v) => article3.has(v)));
+    if (hit) out.push(f.id);
+  }
+  return out;
 }
 
 function articleText(d: ArticleDraft): string {
@@ -136,7 +153,9 @@ function checkNumbers(text: string, ctx: VerifyContext) {
     const token = m[0].replace(/,/g, "").replace(/\.0+$/, "");
     const ids = factNumbers.get(token);
     if (ids) {
-      ids.forEach((id) => used.add(id));
+      // Every match supports the number, but only a distinctive one says which fact the article
+      // drew on: a year or a one- or two-digit count matches facts the article never used.
+      if (token.replace(".", "").length >= 3 && !/^(19|20)\d\d$/.test(token)) ids.forEach((id) => used.add(id));
       continue;
     }
     if (allowedYears.has(token)) continue;
@@ -178,8 +197,14 @@ export function publishedDateNumbers(dates: (string | null)[]): string[] {
 
 function allowedWords(ctx: VerifyContext): Set<string> {
   const words = new Set(GENERIC_PROPER);
+  // Source text may still carry HTML entities ("King&rsquo;s"); names are checked without a
+  // possessive "'s" (see bare), so both "king’s" and "king" are allowed.
   const add = (s: string) => {
-    for (const w of s.split(/[^\p{L}\p{N}'’&-]+/u)) if (w) words.add(w.toLowerCase());
+    for (const w of decodeEntities(s).split(/[^\p{L}\p{N}'’&-]+/u)) {
+      if (!w) continue;
+      words.add(w.toLowerCase());
+      words.add(w.toLowerCase().replace(/['’]s$/, ""));
+    }
   };
   add(ctx.school.name);
   add(ctx.school.city);
