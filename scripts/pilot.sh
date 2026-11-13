@@ -23,6 +23,12 @@ rm -rf .wrangler/state
 npx wrangler d1 migrations apply ischoolwiki --local > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/pilot.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/bsb-shunyi-fees.sql > /dev/null
+npx wrangler d1 execute ischoolwiki --local --file seeds/bst-tashkent.sql > /dev/null
+# ONLY=<school slug> runs the pipeline for that school alone (the others are set inactive in the local DB),
+# so trying a new school does not spend API calls on the rest.
+if [ -n "${ONLY:-}" ]; then
+  npx wrangler d1 execute ischoolwiki --local --command "UPDATE schools SET active = CASE WHEN slug = '$ONLY' THEN 1 ELSE 0 END" > /dev/null
+fi
 
 if curl -s -o /dev/null "http://127.0.0.1:$PORT/robots.txt"; then
   echo "Port $PORT is already serving something (a leftover wrangler dev?). Stop it or set PORT." >&2

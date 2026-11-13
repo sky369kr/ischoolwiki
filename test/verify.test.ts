@@ -210,3 +210,10 @@ describe("sources from quoted wording", () => {
     expect(r.usedFactIds).not.toContain(8);
   });
 });
+
+describe("exam grades", () => {
+  it("does not take grade letters for names", () => {
+    const r = verifyArticle(draft("## Results\n\nMost entries were graded A* to B, and few were below C."), ctx);
+    expect(r.problems.filter((p) => p.kind === "unknown_entity")).toEqual([]);
+  });
+});

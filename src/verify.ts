@@ -58,8 +58,10 @@ const GENERIC_PROPER = new Set(
     "November", "December", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
     "Asia", "Europe", "Nord", "Anglia", "Education", "Oxbridge", "Ivy", "League", "Russell", "Group",
     "City", "I",
+    // Exam grade letters ("A* to B", "grades 9 to 4, C"); "A" and "I" are above.
+    "B", "C", "D", "E", "F", "G", "U",
     // ISO currency codes and common aliases; the amounts next to them are still checked as numbers.
-    "RMB", "CNY", "USD", "EUR", "GBP", "HKD", "SGD", "KRW", "JPY", "VND", "THB", "MYR", "IDR", "PHP", "TWD",
+    "RMB", "CNY", "USD", "EUR", "GBP", "HKD", "SGD", "KRW", "JPY", "VND", "THB", "MYR", "IDR", "PHP", "TWD", "UZS", "KZT",
   ].map((w) => w.toLowerCase()),
 );
 

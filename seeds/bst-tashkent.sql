@@ -1,0 +1,63 @@
+-- The British School of Tashkent (BST): school row, short name and 2026/27 fees.
+-- Fees are read from the school's own PDF (linked from
+-- https://www.nordangliaeducation.com/bst-tashkent/admissions/tuition-fees, checked 2026-11-13) by a script
+-- that also checks each row: the three terms add up to the annual figure, tuition plus the mandatory lunch
+-- fee gives the "with lunch" column, and adding the Development Contribution gives the first-year total.
+-- Term figures, the 4.5%-discount column and the first-year total are left out (derivable or per term).
+-- myispp has a verified BST record, but its fee source is a third-party site (international-schools-database.com),
+-- so src/ispp.ts skips it; its "annual" figures are the 4.5%-discounted tuition plus lunch, not tuition.
+-- is_client = 0: not a client of the operator (confirmed by the operator 2026-11-13).
+INSERT INTO schools (slug, name, city, city_slug, country, website, news_feed, ispp_school_id, is_client) VALUES
+  ('bst-tashkent', 'The British School of Tashkent', 'Tashkent', 'tashkent', 'Uzbekistan',
+   'https://www.nordangliaeducation.com/bst-tashkent',
+   'https://www.nordangliaeducation.com/bst-tashkent/news',
+   'partner-uzbekistan-the-british-school-of-tashkent-bst', 0)
+ON CONFLICT (slug) DO UPDATE SET website = excluded.website, news_feed = excluded.news_feed, ispp_school_id = excluded.ispp_school_id,
+  is_client = excluded.is_client;
+
+-- "BST" is the school's own short name (site path, page titles).
+INSERT OR IGNORE INTO entities (school_slug, name, source_url) VALUES
+  ('bst-tashkent', 'BST', 'https://www.nordangliaeducation.com/bst-tashkent');
+
+-- source_kind 'manual': entered by the operator, not by the news pipeline or the myispp import.
+INSERT OR IGNORE INTO facts (school_slug, key, value, unit, as_of, source_url, source_kind) VALUES
+  ('bst-tashkent', 'annual_tuition_pre_nursery', '149,588,000', 'UZS per year, 2026/27, Pre-Nursery (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_pre_nursery', '173,280,000', 'UZS per year, 2026/27, Pre-Nursery, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_nursery', '175,446,000', 'UZS per year, 2026/27, Nursery (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_nursery', '199,138,000', 'UZS per year, 2026/27, Nursery, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_reception', '182,201,000', 'UZS per year, 2026/27, Reception (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_reception', '205,893,000', 'UZS per year, 2026/27, Reception, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_1', '203,805,000', 'UZS per year, 2026/27, Year 1 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_1', '227,497,000', 'UZS per year, 2026/27, Year 1, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_2', '203,805,000', 'UZS per year, 2026/27, Year 2 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_2', '227,497,000', 'UZS per year, 2026/27, Year 2, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_3', '239,283,000', 'UZS per year, 2026/27, Year 3 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_3', '266,524,000', 'UZS per year, 2026/27, Year 3, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_4', '239,283,000', 'UZS per year, 2026/27, Year 4 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_4', '266,524,000', 'UZS per year, 2026/27, Year 4, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_5', '243,298,000', 'UZS per year, 2026/27, Year 5 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_5', '270,539,000', 'UZS per year, 2026/27, Year 5, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_6', '243,298,000', 'UZS per year, 2026/27, Year 6 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_6', '270,539,000', 'UZS per year, 2026/27, Year 6, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_7', '263,263,000', 'UZS per year, 2026/27, Year 7 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_7', '290,504,000', 'UZS per year, 2026/27, Year 7, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_8', '263,263,000', 'UZS per year, 2026/27, Year 8 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_8', '290,504,000', 'UZS per year, 2026/27, Year 8, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_9', '263,263,000', 'UZS per year, 2026/27, Year 9 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_9', '290,504,000', 'UZS per year, 2026/27, Year 9, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_10', '291,799,000', 'UZS per year, 2026/27, Year 10 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_10', '319,040,000', 'UZS per year, 2026/27, Year 10, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_11', '301,203,000', 'UZS per year, 2026/27, Year 11 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_11', '328,444,000', 'UZS per year, 2026/27, Year 11, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_12', '301,203,000', 'UZS per year, 2026/27, Year 12 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_12', '328,444,000', 'UZS per year, 2026/27, Year 12, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_tuition_year_13', '301,203,000', 'UZS per year, 2026/27, Year 13 (tuition only; mandatory lunch not included)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'annual_fee_tuition_and_lunch_year_13', '328,444,000', 'UZS per year, 2026/27, Year 13, tuition plus mandatory lunch', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'one_time_fee_development_contribution', '62,181,800', 'UZS per family, 2026/27, Development Contribution Fee (one-off charge, new families only)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'one_time_fee_application_fee', '700,000', 'UZS per student, 2026/27, Application Fee (CAT4 test, Year 3 to Year 13 entry, new families only)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'mandatory_lunch_fee_bg_to_y2', '23,692,000', 'UZS per year, 2026/27, mandatory lunch, BG to Year 2', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'mandatory_lunch_fee_y3_to_y13', '27,241,000', 'UZS per year, 2026/27, mandatory lunch, Year 3 to Year 13 (including VAT 12%)', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'discount_annual_payment', '4.5', '% discount on tuition, 2026/27, if annual tuition fees are paid in advance before 17th October 2026', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'discount_sibling', '10', '% discount on tuition fees, 2026/27, for the third child and any additional children enrolled', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'discount_referral', '200', 'USD discount on tuition fees, 2026/27, for recommending a family who successfully enrols', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual'),
+  ('bst-tashkent', 'discount_corporate', 'Corporate Discount', '2026/27, available for employees of organisations with multiple children enrolled', '2026/27', 'https://www.nordangliaeducation.com/bst-tashkent/-/media/bst-tashkent/admissions/new-fees-2026-2027.pdf', 'manual');
