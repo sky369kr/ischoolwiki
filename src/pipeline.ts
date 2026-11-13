@@ -37,6 +37,8 @@ export interface RunReport {
 const USER_AGENT = "iSchoolWikiBot/0.1 (+https://ischoolwiki.com)";
 const TRANSLATE_TO: Record<string, string> = { ko: "Korean" };
 const EXTRACT_PER_RUN = 3;
+// Runs a news page may fail with a temporary error before it is given up as having no facts.
+const MAX_PAGE_ATTEMPTS = 3;
 // News items one article may draw on; each is marked used once written about. Fewer per article
 // spreads a school's news over more, shorter articles.
 const NEWS_PER_ARTICLE = 3;
@@ -93,10 +95,28 @@ async function extractNewFacts(env: Env, school: School): Promise<string> {
     "SELECT id, url, published_at FROM source_items WHERE school_slug = ? AND extracted_at IS NULL ORDER BY published_at DESC LIMIT ?",
   ).bind(school.slug, EXTRACT_PER_RUN).all<{ id: number; url: string; published_at: string | null }>();
   let factCount = 0;
+  let deferred = 0;
   for (const item of items) {
-    const res = await fetch(item.url, { headers: { "user-agent": USER_AGENT } });
+    let res: Response | null = null;
+    try {
+      res = await fetch(item.url, { headers: { "user-agent": USER_AGENT } });
+    } catch {
+      res = null;
+    }
+    const outcome = pageOutcome(res?.status ?? null);
+    if (outcome === "retry") {
+      // The site is busy or down: try this page again on a later run, and stop reading it for now.
+      const r = await env.DB.prepare("UPDATE source_items SET extract_attempts = extract_attempts + 1 WHERE id = ? RETURNING extract_attempts")
+        .bind(item.id).first<{ extract_attempts: number }>();
+      if ((r?.extract_attempts ?? MAX_PAGE_ATTEMPTS) >= MAX_PAGE_ATTEMPTS) {
+        await env.DB.prepare("UPDATE source_items SET extracted_at = datetime('now'), facts_found = 0 WHERE id = ?").bind(item.id).run();
+      } else {
+        deferred++;
+      }
+      break;
+    }
     let found = 0;
-    if (res.ok) {
+    if (res && outcome === "read") {
       const text = htmlToText(articleHtml(await res.text())).slice(0, PAGE_CHAR_LIMIT);
       const { facts, names } = await extractFacts(env.ANTHROPIC_API_KEY, school.name, text);
       const stmts = [
@@ -115,7 +135,14 @@ async function extractNewFacts(env: Env, school: School): Promise<string> {
     await env.DB.prepare("UPDATE source_items SET extracted_at = datetime('now'), facts_found = ? WHERE id = ?").bind(found, item.id).run();
     factCount += found;
   }
-  return `${items.length} pages read, ${factCount} grounded facts`;
+  return `${items.length - deferred} pages read, ${factCount} grounded facts${deferred ? `, ${deferred} deferred (site busy)` : ""}`;
+}
+
+// What to do with a news page response: read it, try again on a later run (temporary failure:
+// no response, 408, 429, 5xx), or record it as having no facts (any other error, such as 404).
+export function pageOutcome(status: number | null): "read" | "retry" | "skip" {
+  if (status === null || status === 408 || status === 429 || status >= 500) return "retry";
+  return status >= 200 && status < 300 ? "read" : "skip";
 }
 
 async function writeForSchool(env: Env, school: School, runId: string, now: Date): Promise<string> {
