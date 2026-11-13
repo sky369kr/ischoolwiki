@@ -22,3 +22,9 @@
 ## 2026-11-13 · seo · S1 / seo-plan.md
 ### VERDICT
 - 결과: NEEDS_APPROVAL / 단계/대상: S1 / seo-plan 초안 / 근거: workers.dev 중복, 교체 글 404, 학교 페이지 메타, 긴 제목·중복 슬러그, 메타 누락, 학교 1곳 비교 페이지 / 다음 담당: 사람
+
+## 2026-11-13 · developer+qa(메인) · S4 / S-02, S-03, S-06
+- 한 일: 소식 페이지 일시 오류 재시도(최대 3회, migration 0007 extract_attempts), 번역 재시도와 빠진 번역 채우기 단계, POST /admin/rewrite와 옛 주소 301(migration 0007 replaced_by)
+- 결과: 단위 테스트 65개, check.sh 전체 PASS, 로컬 파일럿 12차(ONLY=bst-tashkent RUNS=2 REWRITE=1)에서 교체·301 확인
+### VERDICT
+- 결과: PASS / 단계/대상: S4 / S-02, S-03, S-06 / 근거: check.sh PASS, 파일럿 12차 / 다음 담당: 사람(운영 마이그레이션 0007·배포, 이미 교체된 글 3편의 replaced_by 채우기)
