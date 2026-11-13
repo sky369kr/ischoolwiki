@@ -14,3 +14,6 @@
 - 결정: PR #1은 검사 FAIL(도시 비교 페이지 제목 단계 h1→h3)을 같은 PR에서 고치고 전체 PASS 후 병합 (선택지 A) / 이유: 사람 선택
 - 결정: `.dev.vars.example`은 만들지 않음 (하네스의 비밀 파일 차단 규칙 `.dev.vars.*`에 걸림). 비밀 값 이름은 CLAUDE.md 10-1에 적음.
 - 결정: 하네스 원본 중 Pages 전용 파일(build-dist.sh, verify-dist.sh, dist-include.txt, deploy.sh, check.d/10-dist.sh)은 가져오지 않음. 원본은 docs/harness/README.md와 .claude/stack/profile-static-cloudflare-d1.md로 참고만.
+
+## 2026-11-13 · 자동 게시 켜기
+- 결정: `AUTO_PUBLISH = "true"`. 첫 운영 실행으로 대기 중인 글 4개(영어 2, 한국어 2)도 운영자가 원격 D1에서 게시 상태로 바꾼다. / 이유: 파일럿 8차와 첫 운영 실행 모두 사실 오류·출처 오인용 없음(원문 대조). 남은 문제는 표현 수준(메뉴 목록을 게시물 내용처럼 씀, 보증금 환불 조건 일부 생략, 기숙 항목 6개 중 2개만 적어 전부처럼 읽힘) / 영향: wrangler.toml, 운영 배포 필요. 2주 동안 매일 게시 글을 사람이 훑어보고, 문제가 있으면 `/admin/unpublish`로 내린다

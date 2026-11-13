@@ -113,5 +113,7 @@ npx wrangler secret put ADMIN_TOKEN
 - 파일럿 8차(2026-11-12, 본문만 읽기 적용 후): 영어 2·한국어 2 모두 verified, 영어 2건 모두 고쳐 쓰기 1회 후 통과. 고쳐 쓰기는 지적된 문장만 바꿈(`article_revisions`로 확인). 7차의 관련 기사 미리보기 오인용은 사라짐. 남은 작은 문제: DAIS 프로그램 글에 학비 단락이 들어감, "That"·"According"·"It" 같은 문장 첫 단어를 규칙 검증이 학교 이름 후보로 잡음(고쳐 쓰기로 해결되지만 불필요한 호출)
 - [x] 첫 배포(2026-11-12): `https://ischoolwiki.sky-b9d.workers.dev`, 매일 01:17 UTC 실행, 비밀값 `ANTHROPIC_API_KEY`·`ADMIN_TOKEN` 등록. 도메인(routes)은 아직 연결하지 않음. `AUTO_PUBLISH = "false"`라 글은 verified로 대기
 - [x] 화면 개편(영어권 부모·검색 노출 기준): 첫 화면에 학교 카드(교육과정·학년 범위·학비 범위), 학교 페이지 상단 요약표, 글 페이지에 경로·"In short" 요약 상자·출처 수·학교 요약 상자. 요약은 `src/summary.ts`가 기록된 팩트에서만 계산하고, 근거가 없는 항목은 표시하지 않음. 학교 사진은 저작권 때문에 넣지 않음
-- [ ] 파일럿으로 실제 Claude API 호출을 끝까지 돌려 보고 보류율 확인 → 그 뒤 `AUTO_PUBLISH = "true"`
+- [x] 파일럿으로 실제 Claude API 호출을 끝까지 돌려 보고 보류율 확인 → 그 뒤 `AUTO_PUBLISH = "true"`
+- [x] 첫 운영 실행(2026-11-13 01:17 UTC): 영어 2·한국어 2 모두 verified, 보류 0. 사람이 원문과 대조(BSB 학비 34개 숫자, 기타 금액, DAIS 인용문 전부 일치, 표현상 작은 문제 3건) 후 `AUTO_PUBLISH = "true"`(운영자 결정). 대기 중이던 글 4개는 운영자가 원격 D1에서 게시
+- [ ] 자동 게시 후 2주(안정화 기간) 동안 매일 올라온 글을 사람이 훑어봄
   - `./scripts/pilot.sh`: 로컬 D1을 새로 만들고 시드를 넣은 뒤 파이프라인을 한 번 돌려 글·보류 사유를 보여 줌. `ANTHROPIC_API_KEY`가 환경에 있어야 함. 클라우드 세션은 이 이름을 환경 변수에서 걸러내므로 클라우드 환경 변수에는 `ISCHOOLWIKI_ANTHROPIC_KEY=키`로 넣음(스크립트가 둘 다 읽음). 키 없이 돌린 2026-11-11 시험에서 myispp 가져오기(DAIS 10건)와 뉴스 수집(BSB 20건, DAIS 11건)까지 확인
