@@ -39,3 +39,6 @@
 - 결정: 2026-11-13~27을 안정화 기간으로 하고, 매일 자동 실행(10:17 KST) 뒤 게시 글을 AI가 원문과 대조해 보고(예약 작업). 문제 글은 사람이 내린다 / 이유: 사람 요청 "1~4 진행"
 - 결정: 근거 검사가 API 일시 오류(429·5xx·과부하·시간 초과)로 실패하면 30초 뒤 한 번 더 시도(`src/retry.ts`). 다시 실패하면 지금처럼 보류(fail closed) / 이유: 2026-11-13 503 오류로 멀쩡한 글이 보류되고 소식이 소모됨
 - 결정: ischoolwiki.com, www.ischoolwiki.com을 Worker 사용자 지정 도메인으로 연결(Cloudflare 영역은 이미 있음). www는 apex로 301 / 영향: wrangler.toml, src/index.ts. 배포는 사람
+
+## 2026-11-13 · 도메인 연결 결과
+- 결과: https://ischoolwiki.com 200, www → apex 301, /admin/ 401. `routes`를 넣으면서 wrangler가 workers.dev를 기본으로 꺼 옛 주소는 404. 중복 주소 문제(seo-plan 1순위, tasks S-07)는 이것으로 해결. 관리 요청(/admin/*)은 이제 https://ischoolwiki.com 으로 보낸다. harness.config.sh SITE_URL 변경, verify-live PASS

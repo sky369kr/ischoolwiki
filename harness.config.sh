@@ -2,8 +2,8 @@
 # 스크립트와 안전장치(.claude/hooks/guard.sh)가 이 파일을 읽는다.
 # 이 프로젝트는 Cloudflare Worker 하나가 모든 페이지를 코드로 만든다 (CLAUDE.md 10장).
 
-# 사이트 운영 주소 (끝에 / 없이). ischoolwiki.com 도메인을 연결하면 바꾼다.
-SITE_URL="https://ischoolwiki.sky-b9d.workers.dev"
+# 사이트 운영 주소 (끝에 / 없이). 2026-11-13 도메인 연결, workers.dev는 꺼짐
+SITE_URL="https://ischoolwiki.com"
 
 # Worker 이름 (wrangler.toml의 name)과 D1 데이터베이스 이름
 WORKER_NAME="ischoolwiki"
