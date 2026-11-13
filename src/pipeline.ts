@@ -1,6 +1,7 @@
 import { articleHtml, extractFacts, htmlToText, parseNewsSource } from "./collect";
 import { MODEL, reviseArticle, translateArticle, writeArticle } from "./generate";
 import { checkGrounding } from "./grounding";
+import { pickGuideTopic, type GuideTopic } from "./guides";
 import { fetchIsppMaster, importIsppFacts } from "./ispp";
 import { dateNumbers, publishedDateNumbers, verifyArticle, type ArticleDraft, type FactRow, type Problem } from "./verify";
 
@@ -36,6 +37,9 @@ export interface RunReport {
 const USER_AGENT = "iSchoolWikiBot/0.1 (+https://ischoolwiki.com)";
 const TRANSLATE_TO: Record<string, string> = { ko: "Korean" };
 const EXTRACT_PER_RUN = 3;
+// News items one article may draw on; each is marked used once written about. Fewer per article
+// spreads a school's news over more, shorter articles.
+const NEWS_PER_ARTICLE = 3;
 const PAGE_CHAR_LIMIT = 60000;
 
 export async function runPipeline(env: Env, now = new Date()): Promise<RunReport> {
@@ -125,33 +129,51 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   if (!facts.length) return "no facts yet";
 
   const { results: news } = await env.DB.prepare(
-    "SELECT id, title, summary, url, published_at FROM source_items WHERE school_slug = ? AND used_by IS NULL AND facts_found > 0 ORDER BY published_at DESC LIMIT 5",
-  ).bind(school.slug).all<{ id: number; title: string; summary: string | null; url: string; published_at: string | null }>();
+    "SELECT id, title, summary, url, published_at FROM source_items WHERE school_slug = ? AND used_by IS NULL AND facts_found > 0 ORDER BY published_at DESC LIMIT ?",
+  ).bind(school.slug, NEWS_PER_ARTICLE).all<{ id: number; title: string; summary: string | null; url: string; published_at: string | null }>();
   const prior = (await env.DB.prepare(
     "SELECT id, title, body_md FROM articles WHERE school_slug = ? AND lang = 'en' AND status != 'unpublished' ORDER BY created_at DESC LIMIT 50",
   ).bind(school.slug).all<{ id: number; title: string; body_md: string }>()).results;
-  if (!news.length && prior.length) return "no new material; nothing written";
+  // No unused news with facts: write a topic guide from the recorded facts instead, one topic at a time.
+  let guide: { topic: GuideTopic; facts: FactRow[] } | null = null;
+  if (!news.length) {
+    const tried = (await env.DB.prepare("SELECT topic FROM guide_attempts WHERE school_slug = ?").bind(school.slug).all<{ topic: string }>()).results;
+    guide = pickGuideTopic(facts, new Set(tried.map((t) => t.topic)));
+    if (!guide) return "no new material; nothing written";
+  }
+  // A guide sees, and is checked against, only its topic's facts.
+  const material = guide ? guide.facts : facts;
+  const label = guide ? `guide ${guide.topic.id}: ` : "";
+  const recordGuide = async (outcome: string, articleId: number | null, detail: string | null) => {
+    if (!guide) return;
+    await env.DB.prepare("INSERT OR IGNORE INTO guide_attempts (school_slug, topic, article_id, outcome, detail) VALUES (?, ?, ?, ?, ?)")
+      .bind(school.slug, guide.topic.id, articleId, outcome, detail).run();
+  };
 
   const entities = (await env.DB.prepare("SELECT name FROM entities WHERE school_slug = ?").bind(school.slug).all<{ name: string }>()).results.map((e) => e.name);
   const schoolInfo = { name: school.name, city: school.city, country: school.country };
   const newsForModel = news.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));
   const writeInput = {
     school: schoolInfo,
-    facts,
+    facts: material,
     entities,
     news: newsForModel,
+    guide: guide ? { topic: guide.topic.id, brief: guide.topic.brief } : undefined,
     existingTitles: prior.map((p) => p.title),
     today: now.toISOString().slice(0, 10),
   };
   const generated = await writeArticle(env.ANTHROPIC_API_KEY, writeInput);
-  if (generated.skip) return `model skipped: ${generated.skip_reason}`;
+  if (generated.skip) {
+    await recordGuide("skipped", null, generated.skip_reason);
+    return `${label}model skipped: ${generated.skip_reason}`;
+  }
 
   const newsDates = publishedDateNumbers(news.map((n) => n.published_at));
-  const ctx = { school, facts, entities, newsTitles: news.map((n) => n.title), allowedNumbers: newsDates, now };
+  const ctx = { school, facts: material, entities, newsTitles: news.map((n) => n.title), allowedNumbers: newsDates, now };
   // Rules catch numbers and names; the grounding check reads each sentence against the material.
   const evaluate = async (d: ArticleDraft) => {
     const rules = verifyArticle(d, { ...ctx, lang: "en", priorArticles: prior });
-    const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, d, { school: schoolInfo, facts, entities, news: newsForModel });
+    const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, d, { school: schoolInfo, facts: material, entities, news: newsForModel });
     const problems = [...rules.problems, ...grounding];
     return { ...rules, problems, passed: problems.length === 0 };
   };
@@ -172,11 +194,12 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   }
   const revised = firstAttempt !== null;
   const slug = await uniqueSlug(env, "en", `${school.slug}-${sanitizeSlug(generated.slug)}`);
-  const sources = sourcesFor(facts, result.usedFactIds, news.map((n) => n.url));
+  const sources = sourcesFor(material, result.usedFactIds, news.map((n) => n.url));
   const articleId = await saveArticle(env, {
     school_slug: school.slug, lang: "en", translation_of: null, slug, kind: generated.kind, draft, sources, runId,
     passed: result.passed, problems: result.problems, autoPublish: env.AUTO_PUBLISH === "true",
   });
+  await recordGuide(!result.passed ? "held" : env.AUTO_PUBLISH === "true" ? "published" : "verified", articleId, null);
   if (firstAttempt) {
     // Keep what the checker first objected to and the draft it read, so the repair can be audited.
     await env.DB.prepare("INSERT INTO article_revisions (article_id, draft_json, problems_json) VALUES (?, ?, ?)")
@@ -187,10 +210,10 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   }
   if (!result.passed) {
     await alert(env, { article_id: articleId, school: school.slug, problems: result.problems });
-    return `article ${articleId} held${revised ? " after one revision" : ""}: ${result.problems.length} problems`;
+    return `${label}article ${articleId} held${revised ? " after one revision" : ""}: ${result.problems.length} problems`;
   }
 
-  const out = [`article ${articleId} ${env.AUTO_PUBLISH === "true" ? "published" : "verified"}${revised ? " after one revision" : ""}`];
+  const out = [`${label}article ${articleId} ${env.AUTO_PUBLISH === "true" ? "published" : "verified"}${revised ? " after one revision" : ""}`];
   for (const [lang, language] of Object.entries(TRANSLATE_TO)) {
     const t = await translateArticle(env.ANTHROPIC_API_KEY, { title: draft.title, tldr: draft.tldr, body_markdown: draft.body_md, faq: draft.faq }, language);
     const tDraft: ArticleDraft = { title: t.title, tldr: t.tldr, body_md: t.body_markdown, faq: t.faq };
