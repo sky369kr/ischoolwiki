@@ -42,6 +42,11 @@ describe("parseFeed", () => {
     ]);
   });
 
+  it("drops utm_ tracking parameters from links and keeps the rest", () => {
+    const xml = `<rss><channel><item><title>Camp</title><link>https://school.example/camp/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=camp</link></item><item><title>Page 2</title><link>https://school.example/list?page=2&amp;utm_source=rss</link></item></channel></rss>`;
+    expect(parseFeed(xml).map((i) => i.url)).toEqual(["https://school.example/camp/", "https://school.example/list?page=2"]);
+  });
+
   it("reads Atom entries with href links", () => {
     const xml = `<feed><entry><title>New campus</title><link href="https://school.example/campus"/><updated>2026-09-01T00:00:00Z</updated></entry></feed>`;
     expect(parseFeed(xml)[0]?.url).toBe("https://school.example/campus");

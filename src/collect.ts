@@ -15,8 +15,9 @@ export function parseFeed(xml: string): FeedItem[] {
   const blocks = [...xml.matchAll(/<(item|entry)\b[\s\S]*?<\/\1>/gi)].map((m) => m[0]);
   return blocks.flatMap((b) => {
     const title = tag(b, "title");
-    const url = tag(b, "link") || (b.match(/<link[^>]*href="([^"]+)"/i)?.[1] ?? "");
-    if (!title || !/^https?:\/\//.test(url)) return [];
+    const link = tag(b, "link") || decodeEntities(b.match(/<link[^>]*href="([^"]+)"/i)?.[1] ?? "");
+    if (!title || !/^https?:\/\//.test(link)) return [];
+    const url = withoutTracking(link);
     const date = tag(b, "pubDate") || tag(b, "published") || tag(b, "updated");
     const parsed = date ? new Date(date) : null;
     return [{
@@ -61,6 +62,19 @@ export function parseNewsIndex(html: string, indexUrl: string): FeedItem[] {
   return [...seen.values()];
 }
 
+// Feeds tag links with campaign parameters (?utm_source=rss&...). They change nothing on the page, but
+// would show in an article's source list and make the same post look like a different URL.
+export function withoutTracking(href: string): string {
+  let url: URL;
+  try {
+    url = new URL(href);
+  } catch {
+    return href;
+  }
+  for (const key of [...url.searchParams.keys()]) if (/^utm_/i.test(key)) url.searchParams.delete(key);
+  return url.toString();
+}
+
 export function parseNewsSource(body: string, url: string): FeedItem[] {
   return /^\s*(<\?xml|<rss|<feed)/i.test(body) ? parseFeed(body) : parseNewsIndex(body, url);
 }
@@ -99,7 +113,9 @@ const EXTRACT_SYSTEM = `You extract verifiable facts about one school from a pag
 Return only facts the page states outright about this school: results, enrolment, fees, programmes offered, admissions, awards, campus changes, dates.
 For each fact give a snake_case key, the value exactly as written on the page, a unit (empty string if none), and quote: the exact sentence or phrase from the page that states it, copied character for character.
 Also list proper names the page mentions in connection with the school (programmes, universities graduates entered, named facilities, partners, named school events, festivals and holidays the school marks, competitions), each with its exact quote.
-Leave out opinions, marketing claims ("world-class"), and anything about other schools. An empty list is a correct answer.`;
+Leave out opinions, marketing claims ("world-class"), and anything about other schools.
+Leave out everything about an individual student, graduate or family member: one person's results, grades, awards, rankings, competition wins, sports or arts achievements, university or college, background or story, and their name. A page that profiles or features one student or graduate (a "meet our student" post, an athlete of the month, an alumni story) gives an empty list. Facts about students as a group (how many took part, results for a year group as a whole, universities a graduating class entered) are fine. Staff named in their school role are fine.
+An empty list is a correct answer.`;
 
 export interface ExtractedFact { key: string; value: string; unit: string | null; quote: string }
 

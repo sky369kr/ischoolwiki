@@ -25,6 +25,7 @@ npx wrangler d1 execute ischoolwiki --local --file seeds/pilot.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/bsb-shunyi-fees.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/bst-tashkent.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/qais.sql > /dev/null
+npx wrangler d1 execute ischoolwiki --local --file seeds/bisp.sql > /dev/null
 # ONLY=<school slug> runs the pipeline for that school alone (the others are set inactive in the local DB),
 # so trying a new school does not spend API calls on the rest.
 if [ -n "${ONLY:-}" ]; then

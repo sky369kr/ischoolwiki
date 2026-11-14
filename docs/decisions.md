@@ -58,3 +58,8 @@
 - 결정: Qingdao Amerasia International School(slug qais)을 추가한다. 고객 아님(is_client 0). 학교 소식 글은 날짜가 어디에도 없어(페이지·sitemap·마크업) 소식 수집을 끄고(news_feed NULL), 학교 공식 학비 PDF(2025-08-01 시행)와 academics·about 페이지의 사실로 학교 페이지와 주제별 안내 글만 만든다
 - 이유: 날짜 없는 소식으로 쓰면 오래된 행사를 최근 일처럼 쓸 위험이 있음. 운영자 선택(추천안)
 - 영향: seeds/qais.sql, scripts/pilot.sh, scripts/snapshot.sh. 코드 변경 없음. /adopt Q4(v1 파일럿 3개 학교)를 운영자 지시로 4개로 넓힘
+
+## 2026-11-14 · 다섯 번째 파일럿 학교 BISP, 개인 학생 글 제외, 추적 파라미터 제거
+- 결정: British International School, Phuket(slug bisp)을 추가한다. 고객 아님(is_client 0). 소식은 학교 RSS(날짜 있음), 학비는 학교 PDF 2개(2026-2027 본교, Little Ducks)
+- 결정: 학생·졸업생 한 사람을 다루는 소식("Meet Vanessa", 이달의 선수, 졸업생 이야기)은 글감으로 쓰지 않는다. 사실 추출에서 개인의 성적·수상·순위·대학·배경을 빼고, 한 사람을 소개하는 페이지는 빈 목록 / 이유: 이름을 빼도 본인이 특정되고, 출처 주소에 이름이 들어 있음(…-puthi/). 운영자 선택(추천안) / 영향: src/collect.ts EXTRACT_SYSTEM, 모든 학교
+- 결정: 소식 주소의 utm_* 파라미터를 지운다 / 이유: 출처 목록에 그대로 보임. 기존 세 학교는 HTML 목록이라 원래 쿼리를 지우고 있어 중복 수집 없음 / 영향: src/collect.ts parseFeed
