@@ -28,3 +28,9 @@
 - 결과: 단위 테스트 65개, check.sh 전체 PASS, 로컬 파일럿 12차(ONLY=bst-tashkent RUNS=2 REWRITE=1)에서 교체·301 확인
 ### VERDICT
 - 결과: PASS / 단계/대상: S4 / S-02, S-03, S-06 / 근거: check.sh PASS, 파일럿 12차 / 다음 담당: 사람(운영 마이그레이션 0007·배포, 이미 교체된 글 3편의 replaced_by 채우기)
+
+## 2026-11-14 · developer+qa(메인) · 운영 / QAIS 파일럿
+- 한 일: seeds/qais.sql(학교·약칭 QAIS·Amerasia, 사실 29건: 학비 PDF 20건, 프로그램 6건, 인가·인증 3건). 파일럿 3회(ONLY=qais). 1·2차 결과를 원문과 대조해 seed 보완(프로그램 나이대 누락 → "나이 미기재"라는 틀린 문장, 조기 납부 할인 "may receive"를 단정으로 씀, 반년 납부 환불 규정 누락)
+- 결과: 3차에서 학비 안내·프로그램 안내 영어 2편과 한국어 번역 2편 게시(보류 0). 원문 대조: 금액·학년·나이·환불·인가 문구 모두 일치. check.sh 전체 PASS
+### VERDICT
+- 결과: PASS / 단계/대상: 운영 / QAIS 파일럿 / 근거: 파일럿 3차, 원문 대조, check.sh PASS / 다음 담당: 사람(운영 D1에 seed 적용, 배포, /admin/run)
