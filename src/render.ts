@@ -146,8 +146,8 @@ ${(meta.schema ?? []).map(jsonLd).join("\n")}
     : `<a href="/#schools">Schools</a><a href="/blog/">Articles</a><a href="/about">About</a><a href="/ko/blog/">한국어</a>`}</nav></div></header>
 <main class="wrap">${body}</main>
 <footer><div class="wrap">${meta.lang === "ko"
-    ? `${esc(meta.site.name)}는 학교가 공개한 자료로 작성한 아시아 국제학교 참고 사이트이며, 글마다 출처를 밝힙니다. 운영: ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/ko/about">운영자 정보</a>`
-    : `${esc(meta.site.name)} publishes reference pages about international schools in Asia, written from schools' published information; each page lists its sources. Operated by ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/about">About</a>`}</div></footer>
+    ? `${esc(meta.site.name)}는 학교가 공개한 자료로 작성한 국제학교 참고 사이트이며, 글마다 출처를 밝힙니다. 운영: ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/ko/about">운영자 정보</a>`
+    : `${esc(meta.site.name)} publishes reference pages about international schools, written from schools' published information; each page lists its sources. Operated by ${esc(OPERATOR.name)} (${esc(OPERATOR.brand)}) · <a href="/about">About</a>`}</div></footer>
 </body>
 </html>`;
 }

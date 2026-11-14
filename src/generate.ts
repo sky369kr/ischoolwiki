@@ -28,7 +28,7 @@ const TranslationSchema = z.object({
 });
 export type Translation = z.infer<typeof TranslationSchema>;
 
-const WRITER_SYSTEM = `You write articles for iSchoolWiki, a reference site about international schools in Asia, read by parents choosing a school.
+const WRITER_SYSTEM = `You write articles for iSchoolWiki, a reference site about international schools, read by parents choosing a school.
 
 Every statement of fact must come from the FACTS or NEWS given in the request. Do not add numbers, rankings, names of universities, people, awards or programmes that are not in that material, even if you believe them to be true. If the material does not support a useful article, set skip to true and explain why in skip_reason; a skipped article is a correct outcome.
 
