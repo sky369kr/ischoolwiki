@@ -46,3 +46,9 @@
 - 결과: 파일럿 3차(ONLY=bisp RUNS=6) 영어 5편 게시, 보류 0, 빠진 내용 문장 0건(근거 검사가 1건을 잡아 고쳐 쓰기). check.sh PASS
 ### VERDICT
 - 결과: PASS / 단계/대상: 운영 / F-12·F-14 / 근거: 파일럿 3차, check.sh PASS / 다음 담당: 사람(배포, 운영 글 2편 교체)
+
+## 2026-11-14 · developer+qa(메인) · 운영 / Eastwood Montreux 파일럿
+- 한 일: seeds/eastwood-montreux.sql(사실 21건). 파일럿 3회(ONLY=eastwood-montreux). 학비 안내·프로그램 안내 영어 2편 게시, 기숙 안내는 자료 부족으로 작성기가 건너뜀. 학비 글이 한 번 보류(납부 순서 문장) → 보류는 안전하게 동작
+- 결과: 금액·납기·환불·IB 후보 상태가 학교 문서와 일치. IB는 "후보 학교"와 "온라인 학교 Eastwood Global"을 구분해 씀. check.sh PASS
+### VERDICT
+- 결과: PASS / 단계/대상: 운영 / Eastwood Montreux 파일럿 / 근거: 파일럿 3회, 문서 대조, check.sh PASS / 다음 담당: 사람(운영 seed 적용, /admin/run, 사이트 문구 결정)
