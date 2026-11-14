@@ -50,3 +50,11 @@
 - 결정: 교체된 글의 옛 주소는 새 글로 301 (seo-plan 2순위, architecture 선택지 B)
 - 결정: 교차검토 생략(PRD, architecture) / 이유: 운영 중 사이트의 역기획 문서
 - 게이트 A(PRD)·B(디자인 명세)·C(구조 설계) 승인 2026-11-13
+
+## 2026-11-13 · 옛 workers.dev 주소
+- 결정: workers.dev는 꺼진 채로 둔다("주소는 지금 그대로") / 이유: 중복 주소가 사라졌고 관리 요청은 ischoolwiki.com으로 보낸다 / 영향: 없음(S-07 완료 그대로)
+
+## 2026-11-14 · 네 번째 파일럿 학교 QAIS
+- 결정: Qingdao Amerasia International School(slug qais)을 추가한다. 고객 아님(is_client 0). 학교 소식 글은 날짜가 어디에도 없어(페이지·sitemap·마크업) 소식 수집을 끄고(news_feed NULL), 학교 공식 학비 PDF(2025-08-01 시행)와 academics·about 페이지의 사실로 학교 페이지와 주제별 안내 글만 만든다
+- 이유: 날짜 없는 소식으로 쓰면 오래된 행사를 최근 일처럼 쓸 위험이 있음. 운영자 선택(추천안)
+- 영향: seeds/qais.sql, scripts/pilot.sh, scripts/snapshot.sh. 코드 변경 없음. /adopt Q4(v1 파일럿 3개 학교)를 운영자 지시로 4개로 넓힘
