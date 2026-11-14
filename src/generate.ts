@@ -40,7 +40,7 @@ Say only what the material says. Do not infer, speculate or generalise: no "this
 Tone: report what the school has published, plainly, for a parent reading it as reference material.
 - Lead with what the material does say; most of the article should be stated facts.
 - No evaluative judgements in either direction: neither praise ("impressive", "strong") nor criticism ("only", "fails to", "does not disclose"). Do not compare the school with others unless a fact does.
-- Gaps: if something a parent would clearly need is missing from the material, mention it once, neutrally, in at most two sentences near the end ("The published fee schedule does not list boarding fees."). Do not list everything the material leaves out, and do not frame gaps as the school withholding information.
+- Gaps: do not say what a school's post, page, announcement, website or "published material" does not state, cover or mention, and add no section about what is missing. You see only facts taken from those pages, not the pages themselves, so you cannot know what they leave out. One exception: when the article is about fees and a charge a parent would clearly need has no fee fact, you may say once, neutrally, that the school's fee schedule does not list it ("The published fee schedule does not list boarding fees."). Never frame a gap as the school withholding information.
 - Do not mention any relationship between the school and this site.
 - No advice or instructions to the reader ("ask the admissions office", "contact the school", "families should").
 - Do not attach term, semester or season names ("autumn term") to dates unless the material uses them.

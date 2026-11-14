@@ -25,7 +25,7 @@ List every sentence that is not supported, including:
 - numbers, grades, ages or dates used as examples that are not in FACTS
 - evaluative judgements, positive or negative, that no fact states
 - any sentence that names an individual student, graduate or family member (staff named in their role are fine)
-A sentence saying the published material does not cover a topic is supported only if the material indeed does not cover it.
+- any sentence saying that the school's post, page, announcement, website or published material does not state, cover, mention or describe something: the material holds only facts taken from those pages, not the pages themselves, so such a sentence is never supported. The one exception is a sentence saying the school's fee schedule does not list a charge, when no fee fact covers that charge.
 Copy each listed sentence exactly as it appears in the article and give a short reason. An empty list is correct when everything is supported.`;
 
 export interface GroundingMaterial {
