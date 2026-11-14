@@ -14,6 +14,8 @@ BLOCK	git push origin main
 BLOCK	git push --force origin work/x
 BLOCK	git push origin work/x --force-with-lease
 BLOCK	cat .dev.vars
+BLOCK	./scripts/publish-school.sh bisp
+BLOCK	bash scripts/publish-school.sh eastwood-montreux --deploy
 ALLOW	npx wrangler deploy --dry-run --outdir .harness/bundle
 ALLOW	npx wrangler d1 execute ischoolwiki --local --command "select 1"
 ALLOW	npx wrangler d1 migrations apply ischoolwiki --local

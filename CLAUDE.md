@@ -197,6 +197,7 @@ tasks.md 표 형식
 | **운영 배포** | `npm run deploy` (main에서) | **사람만** (13장에서 차단) |
 | **원격 DB 마이그레이션·실행** | `npm run db:migrate:remote`, `wrangler d1 … --remote` | **사람만** (13장에서 차단) |
 | **운영 비밀 값** | `npx wrangler secret put …` | **사람만** |
+| **학교 추가·운영 반영 한 번에** (운영 DB에 seed, 배포, 글 쓰기 반복) | `./scripts/publish-school.sh <slug> [--deploy] [--runs N]` | **사람만** (13장에서 차단) |
 
 ### 10-3. 검사 명령 `scripts/check.sh` 구성
 `scripts/check.d/`의 스크립트를 번호 순서로 실행하고 항목별 PASS / FAIL / SKIP을 요약한다.

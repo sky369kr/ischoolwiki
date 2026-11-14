@@ -84,7 +84,7 @@ async function home(env: Env, s: Site): Promise<string> {
   const latest = await published(env, "AND lang = 'en' ORDER BY published_at DESC LIMIT 6");
   const names = new Map(schools.map((x) => [x.slug, x.name]));
   const cities = [...new Map(schools.map((x) => [x.city_slug, x])).values()].map((x) => ({ ...x, n: schools.filter((y) => y.city_slug === x.city_slug).length }));
-  const body = `<h1>International schools in Asia, from their own published sources</h1>
+  const body = `<h1>International schools, from their own published sources</h1>
 <p class="lead">Profiles, city comparisons and articles about international schools, written only from what each school publishes, with the source of every figure listed.</p>
 <ul class="trust">
 <li><b>Sourced</b>Every figure links to the school's own page or document.</li>
@@ -100,7 +100,7 @@ async function home(env: Env, s: Site): Promise<string> {
     { "@context": "https://schema.org", "@type": "WebSite", name: s.name, url: s.url + "/" },
     { "@context": "https://schema.org", "@type": "ItemList", name: "International schools", itemListElement: schools.map((x, i) => ({ "@type": "ListItem", position: i + 1, url: `${s.url}/wiki/${x.slug}`, name: x.name })) },
   ];
-  return page({ site: s, lang: "en", path: "/", title: "International schools in Asia", description: "Profiles, city comparisons and articles about international schools in Asia, written from each school's published sources.", schema, wide: true }, body);
+  return page({ site: s, lang: "en", path: "/", title: "International schools, from their own published sources", description: "Profiles, city comparisons and articles about international schools, written from each school's published sources.", schema, wide: true }, body);
 }
 
 function plural(n: number, word: string): string {
@@ -155,13 +155,13 @@ function about(s: Site, lang: string): string {
     : [["Business name", OPERATOR.name], ["Representative", OPERATOR.representative], ["Korean business registration no.", OPERATOR.registrationNumber]];
   const body = ko
     ? `<h1>운영자 정보</h1>
-<p>${esc(s.name)}는 ${esc(OPERATOR.name)}가 운영합니다. 같은 회사가 ${esc(OPERATOR.brand)}라는 이름으로 국제학교에 유료 AI 가시성(AEO/GEO) 서비스를 제공합니다. 이 사이트에 소개된 학교 중 일부는 그 서비스의 고객이며, 고객 학교의 페이지와 글에는 그 사실을 표시합니다.</p>
+<p>${esc(s.name)}는 ${esc(OPERATOR.name)}가 운영합니다. 같은 회사가 ${esc(OPERATOR.brand)}라는 이름으로 국제학교에 유료 AI 가시성(AEO/GEO) 서비스를 제공합니다. 이 사이트에 소개된 학교 중 일부는 운영사의 고객이며, 고객 학교의 페이지와 글에는 그 사실을 표시합니다.</p>
 <h2>작성 방식</h2>
-<p>글은 학교가 공개한 자료에서 확인한 사실만으로 AI가 작성하고, 발행 전에 모든 숫자와 고유명사를 출처 자료와 자동으로 대조합니다. 대조에 실패한 글은 발행하지 않습니다. 각 글 끝에 출처를 적습니다.</p>`
+<p>글은 학교가 공개한 자료나 학교가 제공한 문서에서 확인한 사실만으로 AI가 작성하고, 발행 전에 모든 숫자와 고유명사를 출처 자료와 자동으로 대조합니다. 대조에 실패한 글은 발행하지 않습니다. 각 글 끝에 출처를 적습니다.</p>`
     : `<h1>About ${esc(s.name)}</h1>
-<p>${esc(s.name)} is operated by ${esc(OPERATOR.name)}, a Korean company that also sells paid AI-visibility (AEO/GEO) services to international schools under the brand ${esc(OPERATOR.brand)}. Some schools covered here are clients of that service; their pages and articles say so.</p>
+<p>${esc(s.name)} is operated by ${esc(OPERATOR.name)}, a Korean company that also sells paid AI-visibility (AEO/GEO) services to international schools under the brand ${esc(OPERATOR.brand)}. Some schools covered here are clients of the operator; their pages and articles say so.</p>
 <h2>How pages are written</h2>
-<p>Articles are drafted by AI using only facts confirmed in each school's published material. Before publication every figure and proper name is checked automatically against those sources, and an article that fails the check is not published. Each article lists its sources.</p>`;
+<p>Articles are drafted by AI using only facts confirmed in material each school published or provided. Before publication every figure and proper name is checked automatically against those sources, and an article that fails the check is not published. Each article lists its sources.</p>`;
   const table = `<h2>${ko ? "사업자 정보" : "Business details"}</h2><div class="scroll"><table><tbody>${rows.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</tbody></table></div>`;
   return page(
     { site: s, lang, path: ko ? "/ko/about" : "/about", title: ko ? "운영자 정보" : "About", description: ko ? `${s.name} 운영자 정보` : `Who operates ${s.name}`, alternates: [{ lang: "en", path: "/about" }, { lang: "ko", path: "/ko/about" }] },
@@ -324,7 +324,7 @@ async function sitemap(env: Env): Promise<string> {
 
 async function rss(env: Env): Promise<string> {
   const rows = await published(env, "AND lang = 'en' ORDER BY published_at DESC LIMIT 50");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${esc(env.SITE_NAME)}</title><link>${esc(env.SITE_URL)}</link><description>Articles about international schools in Asia</description>${rows
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${esc(env.SITE_NAME)}</title><link>${esc(env.SITE_URL)}</link><description>Articles about international schools</description>${rows
     .map((a) => `<item><title>${esc(a.title)}</title><link>${esc(`${env.SITE_URL}/blog/${a.slug}`)}</link><guid>${esc(`${env.SITE_URL}/blog/${a.slug}`)}</guid><pubDate>${new Date(a.published_at.replace(" ", "T") + "Z").toUTCString()}</pubDate><description>${esc(a.tldr)}</description></item>`)
     .join("")}</channel></rss>`;
 }
@@ -335,7 +335,7 @@ async function llmsTxt(env: Env): Promise<string> {
   return [
     `# ${env.SITE_NAME}`,
     "",
-    "> Reference pages about international schools in Asia: school profiles with sourced facts, city comparisons, and articles. Every figure links to the school's own published source.",
+    "> Reference pages about international schools: school profiles with sourced facts, city comparisons, and articles. Every figure links to the school's own published source.",
     "",
     "## School profiles",
     ...schools.map((x) => `- [${x.name} (${x.city})](${env.SITE_URL}/wiki/${x.slug})`),

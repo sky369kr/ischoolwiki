@@ -8,6 +8,6 @@ export const OPERATOR = {
 } as const;
 
 export const CLIENT_NOTICE = {
-  en: `This school is a client of the site's operator, ${OPERATOR.name} (${OPERATOR.brand}), which provides it with paid AI-visibility services. Facts on this page still come only from the school's published sources listed below.`,
-  ko: `이 학교는 사이트 운영사인 ${OPERATOR.name}(${OPERATOR.brand})의 유료 AI 가시성 서비스 고객입니다. 이 페이지의 사실 정보는 아래에 적힌 학교 공개 자료에서만 가져왔습니다.`,
+  en: `This school is a client of the site's operator, ${OPERATOR.name} (${OPERATOR.brand}), Facts on this page come only from the school's own published sources or documents the school provided, each listed below.`,
+  ko: `이 학교는 사이트 운영사인 ${OPERATOR.name}(${OPERATOR.brand})의 고객입니다. 이 페이지의 사실 정보는 학교가 공개한 자료나 학교가 제공한 문서에서만 가져왔으며, 각각 아래에 적었습니다.`,
 } as const;

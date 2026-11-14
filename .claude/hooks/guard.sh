@@ -53,6 +53,9 @@ if has '(^|[;&| ])(npx[[:space:]]+)?wrangler[[:space:]]+delete'; then block "Wor
 if has 'npm[[:space:]]+run[[:space:]]+(deploy|db:migrate:remote)([[:space:]]|$|;|&)'; then
   block "운영 배포·원격 마이그레이션 npm 스크립트"
 fi
+if has 'publish-school\.sh'; then
+  block "운영 반영 스크립트 (운영 DB에 학교 자료, 배포, 운영 글 쓰기). 사람이 맥에서 실행"
+fi
 
 # 3) Git
 cur="$(git -C "$ROOT" rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")"
