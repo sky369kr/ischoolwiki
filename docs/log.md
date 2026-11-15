@@ -52,3 +52,27 @@
 - 결과: 금액·납기·환불·IB 후보 상태가 학교 문서와 일치. IB는 "후보 학교"와 "온라인 학교 Eastwood Global"을 구분해 씀. check.sh PASS
 ### VERDICT
 - 결과: PASS / 단계/대상: 운영 / Eastwood Montreux 파일럿 / 근거: 파일럿 3회, 문서 대조, check.sh PASS / 다음 담당: 사람(운영 seed 적용, /admin/run, 사이트 문구 결정)
+
+## 2026-11-15 · developer(메인) · 안정화 / B-01 소식 출처 오표기 (R-01, P1)
+- 한 일: 원인은 작성기에게 준 소식 최대 3건이 글에 쓰였는지와 상관없이 모두 출처 목록에 들어가고 used_by로 표시되던 것(pipeline.ts writeForSchool). 작성기 출력에 news_used(글이 쓴 소식 url)를 추가하고, 받은 소식 중 그 url과 정확히 같은 것만(usedNews) 출처·used_by·규칙 검증(newsTitles, 날짜)·근거 검사·고쳐 쓰기 재료로 쓴다. 쓰지 않은 소식은 used_by NULL로 남아 다음 글감이 된다. 검증 재료가 좁아지므로 검증은 더 엄격해짐(약화 아님). 단위 테스트 2개(usedNews)
+- 결과: check.sh 전체 PASS. 파일럿 미실행: 이 세션에 ISCHOOLWIKI_ANTHROPIC_KEY 없음
+### VERDICT
+- 결과: BLOCKED / 단계/대상: 안정화 / B-01 (R-01) / 근거: check.sh PASS, 파일럿(작성기가 news_used를 맞게 채우는지, 보류 증가 여부) 미확인 — API 키 없음 / 다음 담당: 사람(키 제공 후 파일럿 ONLY=bisp, 교차 검토 여부 결정)
+
+## 2026-11-15 · developer+qa(메인) · 안정화 / B-01 파일럿 (R-01, P1)
+- 한 일: ISCHOOLWIKI_ANTHROPIC_KEY 확인 후 `ONLY=bisp RUNS=3 ./scripts/pilot.sh` 실행(종료 코드 0)
+- 결과: 3회 모두 "collect: failed - internal error". wrangler 로그는 DNS 조회 실패, 같은 세션에서 `curl https://www.bisphuket.ac.th/feed/`는 프록시 CONNECT 403 → 이 클라우드 환경의 네트워크 정책이 학교 사이트(www.bisphuket.ac.th, cdn.bisphuket.ac.th)를 막음. 그래서 source_items 0건, 소식이 작성기에 한 번도 주어지지 않아 B-01의 핵심(news_used가 쓴 소식만 담는지, sources_json에 안 쓴 소식이 없는지, 안 쓴 소식 used_by NULL, 보류 증가 여부)은 확인하지 못함. 확인된 것: 소식 없는 학비 안내 글(영어 1·한국어 1) 검증 통과(고쳐 쓰기 1회, "Thai" 미등록 이름), 보류 0, sources_json은 학비 PDF 2개뿐(소식 url 없음), 본문 숫자 33개 모두 seeds/bisp.sql 사실과 일치(원본 PDF는 같은 이유로 직접 열지 못함). 프로그램·기숙 안내는 자료 부족으로 작성기가 건너뜀
+### VERDICT
+- 결과: BLOCKED / 단계/대상: 안정화 / B-01 (R-01) / 근거: 파일럿에서 학교 사이트 접근이 환경 네트워크 정책에 막혀 소식 수집 0건 → 핵심 동작 미확인. 병합하지 않음 / 다음 담당: 사람(환경 네트워크 허용 도메인에 www.bisphuket.ac.th·cdn.bisphuket.ac.th 추가 후 파일럿 재실행, 또는 로컬에서 파일럿)
+
+## 2026-11-15 · developer+qa(메인) · 안정화 / B-01 로컬 파일럿 (사람 맥에서 실행, ONLY=bisp RUNS=3)
+- 한 일: 사람이 맥에서 파일럿 실행(클라우드는 학교 사이트 차단). 결과: 소식 글 3편(축구 캠프, Early Years 정원, Make & Create Camp)과 번역 3편 게시, 보류 0(이전 BISP 파일럿과 같음), 고쳐 쓰기 2회(빠진 내용 문장, "holiday camp" 추론). used_by는 쓴 소식 3건에만, 사실이 있는데 안 쓴 소식 3건(할로윈, 수영, Reception)은 NULL로 남음 → news_used 수정은 동작
+- 결과: 글 5(Make & Create Camp)의 sources_json에 축구 캠프·정원·Reception 소식 페이지가 함께 붙음. 원인: 검증기가 숫자·문구가 겹치는 사실을 usedFactIds로 돌려주고, 그 사실의 source_url(다른 소식 페이지)이 출처에 들어감. 수정: 소식 차례 글에서는 학교 소식 페이지 중 글이 쓰지 않은 페이지를 사실 출처에서 뺀다(sourcesFor newsPages). 학비 PDF 같은 소식 아닌 출처는 유지, 주제 가이드는 그대로. 검증(통과 판정)은 바꾸지 않음. 단위 테스트 3개, check.sh 전체 PASS
+### VERDICT
+- 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / B-01 (R-01) / 근거: 파일럿에서 used_by 정상, 출처 혼입 1건 추가 수정 / 다음 담당: 사람(수정 뒤 로컬 파일럿 재실행, 글 원문 대조 결과 공유)
+
+## 2026-11-15 · developer+qa(메인) · 안정화 / B-01 로컬 파일럿 2차 (31a6504, 사람 맥에서 ONLY=bisp RUNS=3)
+- 한 일: 출처 수정 뒤 파일럿 재실행. 영어 3편 중 2편 게시(정원, Make & Create Camp)와 번역 2편, 1편 보류(축구 캠프: 고쳐 쓴 뒤에도 "선수 프로그램과 별개 행사"라는 추론 문장을 근거 검사가 잡음)
+- 결과: sources_json이 글마다 자기 소식 페이지 하나뿐(1차의 다른 소식 페이지 혼입 해소). used_by는 1차에서 쓴 소식에만 표시 확인. 게시 글 원문 대조는 사람이 학교 페이지와 확인("확인", 2026-11-15). 보류 1건은 근거 없는 문장을 막은 안전한 동작이나, 근거 검사 재료를 쓴 소식으로 좁힌 영향인지 작성기 편차인지 1회로는 구분 못 함 → 운영 일일 점검에서 보류 건수 관찰
+### VERDICT
+- 결과: PASS / 단계/대상: 안정화 / B-01 (R-01) / 근거: 파일럿 1·2차, 사람 원문 대조, check.sh PASS / 다음 담당: 사람(운영 배포, 이후 보류 건수 관찰)

@@ -211,12 +211,16 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
     return `${label}model skipped: ${generated.skip_reason}`;
   }
 
-  const newsDates = publishedDateNumbers(news.map((n) => n.published_at));
-  const ctx = { school, facts: material, entities, newsTitles: news.map((n) => n.title), allowedNumbers: newsDates, now };
+  // Only the news items the article draws on become its sources, are marked used and are checked
+  // against; the others stay unused for a later article.
+  const used = usedNews(news, generated.news_used);
+  const usedForModel = used.map(({ title, summary, url, published_at }) => ({ title, summary, url, published_at }));
+  const newsDates = publishedDateNumbers(used.map((n) => n.published_at));
+  const ctx = { school, facts: material, entities, newsTitles: used.map((n) => n.title), allowedNumbers: newsDates, now };
   // Rules catch numbers and names; the grounding check reads each sentence against the material.
   const evaluate = async (d: ArticleDraft) => {
     const rules = verifyArticle(d, { ...ctx, lang: "en", priorArticles: prior });
-    const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, d, { school: schoolInfo, facts: material, entities, news: newsForModel });
+    const grounding = await checkGrounding(env.ANTHROPIC_API_KEY, d, { school: schoolInfo, facts: material, entities, news: usedForModel });
     const problems = [...rules.problems, ...grounding];
     return { ...rules, problems, passed: problems.length === 0 };
   };
@@ -229,6 +233,7 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
     // One repair pass on the flagged sentences, then the same checks again; whatever is left holds the article.
     const r = await reviseArticle(env.ANTHROPIC_API_KEY, {
       ...writeInput,
+      news: usedForModel,
       draft: { title: draft.title, tldr: draft.tldr, body_markdown: draft.body_md, faq: draft.faq },
       problems: result.problems,
     });
@@ -237,7 +242,13 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   }
   const revised = firstAttempt !== null;
   const slug = await uniqueSlug(env, "en", `${school.slug}-${sanitizeSlug(generated.slug)}`);
-  const sources = sourcesFor(material, result.usedFactIds, news.map((n) => n.url));
+  // A fact taken from another news page of this school can match the article by a shared number or
+  // phrase; that page is not a source of a news article that did not draw on it (B-01). A guide keeps
+  // every matched fact's page: it is written from facts alone.
+  const otherNews = guide
+    ? new Set<string>()
+    : new Set((await env.DB.prepare("SELECT url FROM source_items WHERE school_slug = ?").bind(school.slug).all<{ url: string }>()).results.map((r) => r.url));
+  const sources = sourcesFor(material, result.usedFactIds, used.map((n) => n.url), otherNews);
   const articleId = await saveArticle(env, {
     school_slug: school.slug, lang: "en", translation_of: null, slug, kind: generated.kind, draft, sources, runId,
     passed: result.passed, problems: result.problems, autoPublish: env.AUTO_PUBLISH === "true",
@@ -248,8 +259,8 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
     await env.DB.prepare("INSERT INTO article_revisions (article_id, draft_json, problems_json) VALUES (?, ?, ?)")
       .bind(articleId, JSON.stringify(firstAttempt.draft), JSON.stringify(firstAttempt.problems)).run();
   }
-  if (news.length) {
-    await env.DB.batch(news.map((n) => env.DB.prepare("UPDATE source_items SET used_by = ? WHERE id = ?").bind(articleId, n.id)));
+  if (used.length) {
+    await env.DB.batch(used.map((n) => env.DB.prepare("UPDATE source_items SET used_by = ? WHERE id = ?").bind(articleId, n.id)));
   }
   if (!result.passed) {
     await alert(env, { article_id: articleId, school: school.slug, problems: result.problems });
@@ -452,9 +463,23 @@ export function sanitizeSlug(s: string): string {
   return s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70) || "article";
 }
 
-function sourcesFor(facts: FactRow[], usedIds: number[], newsUrls: string[]): string[] {
+// The offered news items whose url the writer listed in news_used, in the order offered. A url the
+// writer made up or changed matches nothing.
+export function usedNews<T extends { url: string }>(offered: T[], reported: string[]): T[] {
+  const urls = new Set(reported.map((u) => u.trim()));
+  return offered.filter((n) => urls.has(n.url));
+}
+
+// The pages of the facts the article drew on, then the news items it used. A fact page that is one
+// of the school's news items (newsPages) counts only when the article used that news item.
+export function sourcesFor(facts: FactRow[], usedIds: number[], newsUrls: string[], newsPages: Set<string> = new Set()): string[] {
   const used = new Set(usedIds);
-  return [...new Set([...facts.filter((f) => used.has(f.id)).map((f) => f.source_url), ...newsUrls])];
+  const usedNewsUrls = new Set(newsUrls);
+  const factPages = facts
+    .filter((f) => used.has(f.id))
+    .map((f) => f.source_url)
+    .filter((url) => !newsPages.has(url) || usedNewsUrls.has(url));
+  return [...new Set([...factPages, ...newsUrls])];
 }
 
 async function alert(env: Env, payload: unknown): Promise<void> {
