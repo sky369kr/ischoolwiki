@@ -58,3 +58,9 @@
 - 결과: check.sh 전체 PASS. 파일럿 미실행: 이 세션에 ISCHOOLWIKI_ANTHROPIC_KEY 없음
 ### VERDICT
 - 결과: BLOCKED / 단계/대상: 안정화 / B-01 (R-01) / 근거: check.sh PASS, 파일럿(작성기가 news_used를 맞게 채우는지, 보류 증가 여부) 미확인 — API 키 없음 / 다음 담당: 사람(키 제공 후 파일럿 ONLY=bisp, 교차 검토 여부 결정)
+
+## 2026-11-15 · developer+qa(메인) · 안정화 / B-01 파일럿 (R-01, P1)
+- 한 일: ISCHOOLWIKI_ANTHROPIC_KEY 확인 후 `ONLY=bisp RUNS=3 ./scripts/pilot.sh` 실행(종료 코드 0)
+- 결과: 3회 모두 "collect: failed - internal error". wrangler 로그는 DNS 조회 실패, 같은 세션에서 `curl https://www.bisphuket.ac.th/feed/`는 프록시 CONNECT 403 → 이 클라우드 환경의 네트워크 정책이 학교 사이트(www.bisphuket.ac.th, cdn.bisphuket.ac.th)를 막음. 그래서 source_items 0건, 소식이 작성기에 한 번도 주어지지 않아 B-01의 핵심(news_used가 쓴 소식만 담는지, sources_json에 안 쓴 소식이 없는지, 안 쓴 소식 used_by NULL, 보류 증가 여부)은 확인하지 못함. 확인된 것: 소식 없는 학비 안내 글(영어 1·한국어 1) 검증 통과(고쳐 쓰기 1회, "Thai" 미등록 이름), 보류 0, sources_json은 학비 PDF 2개뿐(소식 url 없음), 본문 숫자 33개 모두 seeds/bisp.sql 사실과 일치(원본 PDF는 같은 이유로 직접 열지 못함). 프로그램·기숙 안내는 자료 부족으로 작성기가 건너뜀
+### VERDICT
+- 결과: BLOCKED / 단계/대상: 안정화 / B-01 (R-01) / 근거: 파일럿에서 학교 사이트 접근이 환경 네트워크 정책에 막혀 소식 수집 0건 → 핵심 동작 미확인. 병합하지 않음 / 다음 담당: 사람(환경 네트워크 허용 도메인에 www.bisphuket.ac.th·cdn.bisphuket.ac.th 추가 후 파일럿 재실행, 또는 로컬에서 파일럿)
