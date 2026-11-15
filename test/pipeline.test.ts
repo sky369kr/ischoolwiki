@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canRevise, pageOutcome } from "../src/pipeline";
+import { canRevise, pageOutcome, usedNews } from "../src/pipeline";
 
 describe("canRevise", () => {
   it("sends sentence-level problems back for one repair pass", () => {
@@ -22,5 +22,21 @@ describe("pageOutcome", () => {
     expect(pageOutcome(200)).toBe("read");
     expect(pageOutcome(404)).toBe("skip");
     expect(pageOutcome(410)).toBe("skip");
+  });
+});
+
+describe("usedNews", () => {
+  const offered = [
+    { id: 1, url: "https://school.example/news/fees" },
+    { id: 2, url: "https://school.example/news/art-exhibition" },
+    { id: 3, url: "https://school.example/news/swim-gala" },
+  ];
+  it("keeps only the news items the writer says the article draws on (B-01)", () => {
+    expect(usedNews(offered, ["https://school.example/news/swim-gala"]).map((n) => n.id)).toEqual([3]);
+    expect(usedNews(offered, [" https://school.example/news/fees ", "https://school.example/news/swim-gala"]).map((n) => n.id)).toEqual([1, 3]);
+  });
+  it("uses no news item when the article draws on none, or names a url that was not offered", () => {
+    expect(usedNews(offered, [])).toEqual([]);
+    expect(usedNews(offered, ["https://school.example/news/made-up", "https://school.example/news/art"])).toEqual([]);
   });
 });

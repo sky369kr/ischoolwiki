@@ -17,6 +17,8 @@ const ArticleSchema = z.object({
   tldr: z.string(),
   body_markdown: z.string(),
   faq: z.array(z.object({ question: z.string(), answer: z.string() })),
+  // The url of every NEWS item the article draws on; only these become its sources and are marked used.
+  news_used: z.array(z.string()),
 });
 export type GeneratedArticle = z.infer<typeof ArticleSchema>;
 
@@ -58,6 +60,7 @@ Style:
 - body_markdown: 500 to 900 words, ## headings, short paragraphs, neutral and specific; no superlatives ("best", "top", "leading") unless a fact says so; no calls to action
 - faq: three to five questions parents actually ask, each answered from the material
 - slug: lowercase ascii words joined by hyphens, under 70 characters
+- news_used: the url of every NEWS item the article draws on, copied exactly; leave out news items the article does not use, and give an empty list when it uses none. Only these are listed as the article's sources, and the article is checked against only these news items.
 - Do not mention iSchoolWiki, myispp.com, 36.9° or any marketing service.`;
 
 const TRANSLATOR_SYSTEM = `You translate iSchoolWiki articles from English for parents reading in the target language.

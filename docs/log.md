@@ -52,3 +52,9 @@
 - 결과: 금액·납기·환불·IB 후보 상태가 학교 문서와 일치. IB는 "후보 학교"와 "온라인 학교 Eastwood Global"을 구분해 씀. check.sh PASS
 ### VERDICT
 - 결과: PASS / 단계/대상: 운영 / Eastwood Montreux 파일럿 / 근거: 파일럿 3회, 문서 대조, check.sh PASS / 다음 담당: 사람(운영 seed 적용, /admin/run, 사이트 문구 결정)
+
+## 2026-11-15 · developer(메인) · 안정화 / B-01 소식 출처 오표기 (R-01, P1)
+- 한 일: 원인은 작성기에게 준 소식 최대 3건이 글에 쓰였는지와 상관없이 모두 출처 목록에 들어가고 used_by로 표시되던 것(pipeline.ts writeForSchool). 작성기 출력에 news_used(글이 쓴 소식 url)를 추가하고, 받은 소식 중 그 url과 정확히 같은 것만(usedNews) 출처·used_by·규칙 검증(newsTitles, 날짜)·근거 검사·고쳐 쓰기 재료로 쓴다. 쓰지 않은 소식은 used_by NULL로 남아 다음 글감이 된다. 검증 재료가 좁아지므로 검증은 더 엄격해짐(약화 아님). 단위 테스트 2개(usedNews)
+- 결과: check.sh 전체 PASS. 파일럿 미실행: 이 세션에 ISCHOOLWIKI_ANTHROPIC_KEY 없음
+### VERDICT
+- 결과: BLOCKED / 단계/대상: 안정화 / B-01 (R-01) / 근거: check.sh PASS, 파일럿(작성기가 news_used를 맞게 채우는지, 보류 증가 여부) 미확인 — API 키 없음 / 다음 담당: 사람(키 제공 후 파일럿 ONLY=bisp, 교차 검토 여부 결정)
