@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canRevise, pageOutcome, usedNews } from "../src/pipeline";
+import { canRevise, pageOutcome, sourcesFor, usedNews } from "../src/pipeline";
 
 describe("canRevise", () => {
   it("sends sentence-level problems back for one repair pass", () => {
@@ -38,5 +38,26 @@ describe("usedNews", () => {
   it("uses no news item when the article draws on none, or names a url that was not offered", () => {
     expect(usedNews(offered, [])).toEqual([]);
     expect(usedNews(offered, ["https://school.example/news/made-up", "https://school.example/news/art"])).toEqual([]);
+  });
+});
+
+describe("sourcesFor", () => {
+  const fact = (id: number, source_url: string) => ({ id, key: `k${id}`, value: "v", unit: null, source_url, quote: null });
+  const camp = "https://school.example/news/make-create-camp";
+  const football = "https://school.example/news/football-camp";
+  const garden = "https://school.example/news/garden";
+  const feesPdf = "https://school.example/fees.pdf";
+  const facts = [fact(1, camp), fact(2, football), fact(3, garden), fact(4, feesPdf)];
+  const newsPages = new Set([camp, football, garden]);
+
+  it("leaves out another news page whose fact only matched by a shared number or phrase (B-01)", () => {
+    expect(sourcesFor(facts, [1, 2, 3], [camp], newsPages)).toEqual([camp]);
+  });
+  it("keeps a fact page that is not a news item, such as a fee document", () => {
+    expect(sourcesFor(facts, [1, 4], [camp], newsPages)).toEqual([camp, feesPdf]);
+    expect(sourcesFor(facts, [4], [], newsPages)).toEqual([feesPdf]);
+  });
+  it("keeps every matched fact page for a guide, which passes no news pages", () => {
+    expect(sourcesFor(facts, [2, 4], [])).toEqual([football, feesPdf]);
   });
 });

@@ -64,3 +64,9 @@
 - 결과: 3회 모두 "collect: failed - internal error". wrangler 로그는 DNS 조회 실패, 같은 세션에서 `curl https://www.bisphuket.ac.th/feed/`는 프록시 CONNECT 403 → 이 클라우드 환경의 네트워크 정책이 학교 사이트(www.bisphuket.ac.th, cdn.bisphuket.ac.th)를 막음. 그래서 source_items 0건, 소식이 작성기에 한 번도 주어지지 않아 B-01의 핵심(news_used가 쓴 소식만 담는지, sources_json에 안 쓴 소식이 없는지, 안 쓴 소식 used_by NULL, 보류 증가 여부)은 확인하지 못함. 확인된 것: 소식 없는 학비 안내 글(영어 1·한국어 1) 검증 통과(고쳐 쓰기 1회, "Thai" 미등록 이름), 보류 0, sources_json은 학비 PDF 2개뿐(소식 url 없음), 본문 숫자 33개 모두 seeds/bisp.sql 사실과 일치(원본 PDF는 같은 이유로 직접 열지 못함). 프로그램·기숙 안내는 자료 부족으로 작성기가 건너뜀
 ### VERDICT
 - 결과: BLOCKED / 단계/대상: 안정화 / B-01 (R-01) / 근거: 파일럿에서 학교 사이트 접근이 환경 네트워크 정책에 막혀 소식 수집 0건 → 핵심 동작 미확인. 병합하지 않음 / 다음 담당: 사람(환경 네트워크 허용 도메인에 www.bisphuket.ac.th·cdn.bisphuket.ac.th 추가 후 파일럿 재실행, 또는 로컬에서 파일럿)
+
+## 2026-11-15 · developer+qa(메인) · 안정화 / B-01 로컬 파일럿 (사람 맥에서 실행, ONLY=bisp RUNS=3)
+- 한 일: 사람이 맥에서 파일럿 실행(클라우드는 학교 사이트 차단). 결과: 소식 글 3편(축구 캠프, Early Years 정원, Make & Create Camp)과 번역 3편 게시, 보류 0(이전 BISP 파일럿과 같음), 고쳐 쓰기 2회(빠진 내용 문장, "holiday camp" 추론). used_by는 쓴 소식 3건에만, 사실이 있는데 안 쓴 소식 3건(할로윈, 수영, Reception)은 NULL로 남음 → news_used 수정은 동작
+- 결과: 글 5(Make & Create Camp)의 sources_json에 축구 캠프·정원·Reception 소식 페이지가 함께 붙음. 원인: 검증기가 숫자·문구가 겹치는 사실을 usedFactIds로 돌려주고, 그 사실의 source_url(다른 소식 페이지)이 출처에 들어감. 수정: 소식 차례 글에서는 학교 소식 페이지 중 글이 쓰지 않은 페이지를 사실 출처에서 뺀다(sourcesFor newsPages). 학비 PDF 같은 소식 아닌 출처는 유지, 주제 가이드는 그대로. 검증(통과 판정)은 바꾸지 않음. 단위 테스트 3개, check.sh 전체 PASS
+### VERDICT
+- 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / B-01 (R-01) / 근거: 파일럿에서 used_by 정상, 출처 혼입 1건 추가 수정 / 다음 담당: 사람(수정 뒤 로컬 파일럿 재실행, 글 원문 대조 결과 공유)
