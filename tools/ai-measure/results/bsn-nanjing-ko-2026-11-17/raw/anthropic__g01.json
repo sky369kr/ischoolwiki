@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g01",
+    "type": "generic",
+    "text": "중국 난징에서 가장 좋은 국제학교는 어디인가요?"
+  },
+  "started": "2026-11-17T17:47:33.080Z",
+  "finished": "2026-11-17T17:47:58.797Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "중국 난징에서 가장 좋은 국제학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011Ch8vJp1DZ1GDEwZFdCmC3",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS9gUKEAgTGAI4AUIIdGhpbmtpbmcSDEP6nMxsk/i7KbssmxoM+ATNqEfDvbamHiPfIjBDxRMFrQiuE6AU4uk7Np+g5bPesIAUw6JweiNCpal9fJnIwnZIVbrD0d9psuHUXeEqkwVKuS47KWuT+r3sJhmPnTIciIFe2EUm8GypS+TXhnsW37M7RsVqyh0lGQAu1zaSNmWz19q8RarSjqBTXlm382xGLmf61ICtnlh9AQMHRqdwoU+PMCtJAY6IuvJQ9Mv5gj1W4B6IHokChkvRytAHo4Prk8JQf4cyTwGtyQg4Ej5X3b8OD3+1XY+sCzm8m6F5W7OWafjRvWEYR2KdownuLpKT2yByyx5cAcRr7wdXSvdfIh9U3xY3lQfWudMHje+DC0Zoot/kxGLT4AhyQPAczS3Y5d26bDMS9wXkgcxvamC4SoG8/CoIxSnMF/LX+AvqOFG0oVD1G1IECelZVgFPAqJUsmWdXbv2k/NK+j/psCK1xbpw07RIwB5ACv4FxlG3IeKQoLWzpou4Dn6uCJ2h9nyFbokXrSJsYWEMFMgQPL+Pb/LnBDZQ/yKsZQd/Czuq/jtb1+F96uIP5fFYf7LjZl2ZJoO6V4AVtdamlNm8dY8bK3oE397pbl3LQCM9wYFsE4Acm1Mbe/8UGclJOMfvRCSlqbmDhiPrQoIQphp3EO6TL3NLp3rxFXUtuKshGCrextSrUyWfUe8WB3bHULhhY2PGAe5/qqK3oyRur9YTOF2qDldw0IjFjpqpEpqHCtLKZoQ+4B/GnBvNbw34nYs2ifblmOCHo0Yezq8BqhqIo31z94zSWGYGYQ01v/txzPHOtoikYr1FZcaGb3kXIaLRDekyEkFY1c6S6793QgYB2xrHm8gd6Ud3zfnPJw4wcsPfY/zFPB0yiW1i83blDjUJttP6vdvy0tNjfE61zhYsvhRrI//8wuadhyhC4nq7Fff3YDZ3HeJpZqf+cq3vDWz4zieHSQuww1VV2Wjt2yAxJCRzRvVCRRgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01XT1UzJ9Rmd6hbri1Bu9rTx",
+            "name": "code_execution",
+            "input": {
+              "code": "r = await web_search({\"query\": \"best international schools in Nanjing\"})\nfor x in r[:6]:\n    print(x['title'], x['url'], x['content'][:600].replace('\\n',' '), '\\n---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01TibSTr69UjrRiuq3STQyxg",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools in Nanjing"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01XT1UzJ9Rmd6hbri1Bu9rTx"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01TibSTr69UjrRiuq3STQyxg",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing",
+                "encrypted_content": "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",
+                "page_age": "1554 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "What are My Top Options for International Schools in Nanjing?",
+                "url": "https://thenanjinger.com/visiting-nanjing/nanjing-guides/what-are-my-top-options-for-international-schools-in-nanjing/",
+                "encrypted_content": "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",
+                "page_age": "539 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International School in China",
+                "url": "https://www.nischina.org/",
+                "encrypted_content": "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",
+                "page_age": "1202 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Nanjing: 2026 Guide for Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-in-nanjing-2026-guide-for-families",
+                "encrypted_content": "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",
+                "page_age": "30 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "High School Affiliated to Nanjing Normal University Jiangning Campus",
+                "url": "https://en.wikipedia.org/wiki/High_School_Affiliated_to_Nanjing_Normal_University_Jiangning_Campus",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "List of international schools in Nanjing",
+                "url": "https://www.teacherhorizons.com/schools?cities=Nanjing",
+                "encrypted_content": "Eo8KCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDAX7doMQ8ZiXmc0QEhoMc/ygBMroqNzLk3/sIjDQTMGm4Gb679WDzfNlP21aan3OG+xjqZcb9ZwcqxAOMvGsLcMFr64CCvwNOzyred4qkglzq5ZFMSwnvmg3pMSePXohQJB586MfRFbWBFnfYJ5qggxZZQdWbQHxtP47Q85BSXV92Ou7zBo2PSEiQM3b7qInrqEc6FTfL5Ei8ez3/oBMlaclg3fd8yPVztUbfKd6j/F6WQwGn1IRexjlgetbhoocwwAfJzCRcAKf1FfD+6CWqApLN0MMvYrFzaQckQ1GIY04U3dZ85fkvxxz3MyzSJIe2yyCZBbVI3dow9nesOqRc86Io62CNDqdZhCsTSZsUyplVyoEJrmeNskEBVrzz89hA8quvHVKHXWXdyFGAdW/KzqadLgof80m3QdzGkNQaHgi7oLWEXhsuiVha26V22EnisHbfwwwtWmDi+IrPq3equ/XG+ciIlSVIv4NrbXxRn49EmLUF87blDsyisNCn1T9JLuyeWM67sJQuhzpCUVqutcgp/U1WyVZi6rwYrFslgopGrUIX8yY3iI2jaZu4/1YDVYRXL1pRXa2E7F3jciTJJN2vlhG0/5LFUfAQItkE0aPXRdnItcww2c6KC+wSKkK5kZ/g+mTtsTutvjNn20zyJuyMLFimRSaMA9CDgdCbfUgSjtkeGzl7DaEsOQrpyLWI9GhA2ymgwG6MDYjo01J9Ga66O/mYCB39UROXeYTneeBcDI5U3RpKnc9TPN+WbvbkVISjyTSfWkSONSXDSA+uVKAXdJuA0KId5E+tzwmsvmHHlkgPPwepIWw6vRknXWRMb1DpKGVg2glZ7Gw48eOrD2uEia3AAuFoeHL7xMFdmb8hD45mi19/mKi9rVjbfWqVP5srq0kMcZvQ+/lYCL0E2u6b0SjUzMR9mbqaXRBrdO+1YIneVuUtGvU3CrzANH6tmpSI+WI6EEtw1cfI7ZSR0fDe3xQ3MHkhU7z64S+fsjUCJ40N3r3sToPhZKasq9Bt3/8VYO97mVzu7ftqqlN5HpaeELbUR7fxiPuRO/8fKRorGtyZO+cxzc2x3wpmujGl8vnsfNycr6sXdJsaZR/ArsLU6dHrbHqb7RP/iGcl4A924I4R18ky9FJ856GqNoAwk6RqNLcqCdHgBz7R/0H81CxZhIJ47NtIr0y65/lWeSEmikiO6kU4kMkGkRDp5HleFwItWQFp+5ffnIhbu5snPdx6DCRnHFSMNElyHEG0we4NoFgOMa4VMscGLG6/qJQcy2FkM6cj0LUMPjbJS1hCuTi2/vEzeFVF42wbZoJ2lOlZB34PP1WeVHLsMqQphP0ChEkAuCCUqTi5f8MvFtZ4+UHp+Et3dG+v54Q8WCpy57MCb86/gKJNRmmPWg1agybpQRkNW1AmLZOr6YB9CH3nn+yXcYQC0dwNYBC5d/PpvVoGvTRU/53A6klD3+bxy+hmc2YpJ+FO6IS9yiclGaN0KllUX2Tzf9H9Xb1syrtRKsoQye65qDBE/YvKPgQxr/5Jp7KBWXSGgcO7aYYdkhhmUFCnBnwJgyE2obR8TZ1Mi/Ythuq4qC5HgI5eFEYHfAHcea36qybdZeb3DYRLhzx1HFbFYIqnP3sJS/4+nHIJ9y5aD7udiKbtmjM01bTRxp0EhkYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "KingLead Rankings - KingLead 2026 Global School Selection",
+                "url": "https://jinglingedu.com/en/info/research/analysis/2026_0724_1808/",
+                "encrypted_content": "EssNCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDEaqzlTFAmMtIrAZBhoM7/VNylJOib9FGjofIjBltn8qNCqziEHDev86eFiN7hVDGCoR8CjYW3Fm5qrjTVS7CiYwkx3Q4/cB4K33xY4qzgwy82kqRrNZZzCH8NngQN4Jy6+yEa3u3FEEwX31s1DbwH2zo3LoFErMudFWoG7l4K5XbSglJsnrwGfeFNwBxL90VX/KcTU5iTgQSeb1jk89d9C8gHMkZWqqbTmg4zZSTGhgHwvsG7w0uOWMkPzD4WYErXXWWCukxK9bFFcyMDi9lMJBg/HuyLkESqM7QEGEZj3gvP6CWvckVrMxtxPymHHxjr8v12xnoRClyf4Hcm8Yz/2Kq2qSxdEPkCSrxlwY0wX7XJh9ZFWQcAQ7g/8ab9779aIJPVmkBxig1E/wx7fwK86Ze6UpxY+Csl+qFeoIGDFs/ON5z2ozRr6EtGg9WZxd2nTyJZl8Kyb2LxXAIhUcGSNSqjscp+4e3JyyI5yD5CP+hyVubZ/iYZ/NxVZm70McXDtXrWq4vxtvyV2cC1Gve1P/lGJ4wdRnuW6CtoUmlDg1DJtiBHlMy0dARr19cGVgfzudZfuZTFFRUcr9NorsCFblsBLfCR4SFFOkHG1ms2wx2CWrOq3hOA1as4xYq8901v3gnS9CjZjrYR08ysiHclqqgwTAY/9821/qp0A9ULKAwVCWoNatpQ3O/wPAZtn6yBwRGu+BKMEx1XF86DrOWdYlmnNoT/LJ/oTL/oOfhKEBuhu9kpyPnFiEqRSuPoCTH0GCfms7OoXbEIkwdrAKKYASr7OXHWpNMZiHBFCIby2FGt/DC593S64DD3Dq/zQ7b9kjLZcCQdgFMdyT2poLoT+PfBFm61W8mICJ3Ajv4I1mMHeQEH3HEhPiivPAd6oqBwRdK80xvI3kIlShHH23gZNJr7k7vFh8hJeBPx3j2fsP3z2o1qKHH91VOEJPleacopOY5sdBnSZcWzijYWoWczm3kx45eTwY1qs7OwVfj7FktdzcNaen2ibNccZbhCCaJY4adRfNhnZ1tH+D9iL196YnawgXl46QEBj8odZ9qwwohlkMk3Sew8/Pl/CFl1eHLPNlWzFyml3Tj9+G7N/iARyNj9M/uM9ZDrdUsAKkQYC8cnkHWk/EO1NNj7ZhlwdnWZTvBIrHWxgyVVt5yNo7iZD9xnXQk6iVOzV8ivZvJpHBZknSTD8A27ksKxSVbYRXfCj9yopYnJEt7pZelRR1ssuMaXoavyVIElhb/AGnCK3QMtZ8wgdsI9nTjMWIOob3h5mosG8x+JCTnhrNvqhL6Pp672W8VpM2b4VsHffROCmd7F+CfvYXVlOgBWXD8DzDGZsXi7GmhS4ERvo8TzUTonhWRfN9sfYSzAngzd6YKsWrhuM3Oe6wkHyjsS575PEj/+Xwexn9jRx5dnHalrsug6p1drZVKdKyZZzLwLMw9hdXKpOdfzGznXa/gqJ5fiJkVw7Fcs+NCqNljYdZZU15/B3ShPB8O76rkJtCXIG64l1rplsAk9V2WygZxTWuwHHFZlrOvVWDg45IrwSjokkp0TJCJU+r3ZDpAG3H8DUEXcFUdysQVM1+8WTPcCngIfI5y/fVKCCYOE069urfib9keO4a7j/E+db693yl/fEfpmWPlf6OREF8nHW1vYe9JOAG2vKYqjcGZETq2vUS2hqGOuDmRjwLz4735qX4DPrdXjOE/+o5Ed2KsnOER0FxE++NllzquTSBoR/lK7L7IfdrGhSzdq6o7jG6DupAqCuLyNrG4BeExMKcfL0DJ1YkDgtsdYZLdUUE8O2MGj4A6VdGkqIgNDrDiwEE60rroAdcMs4yrDv+WXbeW8ySzPeAIrpk/BT6PAu8xmIdQJaNOFBOZ2JtJsjPc4NV0vX+CfJhOfyZIlkxL3R/J+eaYXRDsALT5IuRCP4pn+0XZkR/3N0Q0PxyTuSOfwtvK24R2b/uy1iQDjMyvhCURD24IVqbxwB3gGGtAendfnm+nvzCUj3Q+JVdVWQe202S4p4b/J0f59SgDr2Ub14FNadIQjGXNbkuu2ts15zi61AWZiqQGXeQJCO/aHCanVQLkkvPAGEzUIO5ERvbNnbyxCDGTEaL8o6TFl+iBfJPXzoae5KEj+QSy+/1ZI30uLzpIieoCnMLk0JRudrj3KtmsdOm6xIP2udJgFIozwmVIH/Rz8y08PbBSggWNYceZMgu4f+XNyZChYNXr3r+TM9gEpcmYoYVzk7T3ANorNaFxzqgJ2cHN5EYAw==",
+                "page_age": "113 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Nanjing",
+                "url": "https://world-schools.com/best-international-schools-in-nanjing/",
+                "encrypted_content": "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",
+                "page_age": "420 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01XT1UzJ9Rmd6hbri1Bu9rTx"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01XT1UzJ9Rmd6hbri1Bu9rTx",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHewefB3LoMxxBfXWRoMKpWr3uiNZBzDrqFoIjBeP/TbSFo2zolxW4GYoE1NRd2ghGAu5hKDgEIic89+tmRWzxWUYM9XOzAmm4DHXdwqEq4I29v82aSuGpTelrxoPNcPvxgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01XT1UzJ9Rmd6hbri1Bu9rTx/cell.py\", line 10, in <module>\n    print(x['title'], x['url'], x['content'][:600].replace('\\n',' '), '\\n---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CEd9AiFgaFeR9Atjh2xYZX",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nif isinstance(r,str): r=json.loads(r)\nprint(type(r), str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01CEd9AiFgaFeR9Atjh2xYZX",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'list'> [{'type': 'web_search_result', 'title': 'The British School of Nanjing', 'url': 'https://www.nordangliaeducation.com/bsn-nanjing', 'content': \"Part of the Nord Anglia family of premium schools, **BSN is the longest running British international school in Nanjing** with a remarkable record of academic success.\\n\\nExplore The British School of Nanjing (BSN), China, the longest running premium international school in Nanjing and part of the Nord Anglia family.\\n\\n# THE BRITISH SCHOOL OF NANJING (BSN)\\nPart of the Nord Anglia family of premium schools, BSN is the longest running British international school in Nanjing with a remarkable record of academic success.\\n\\nAt The British School of Nanjing (BSN), your child will achieve remarkable academic results. Our students go to the best universities in the world, which is thanks to the exceptional learning experiences we offer, our world-class teachers, and curriculum pathways that are personalised to your child’s talents and passions.\\n\\nAt BSN NANJING, we teach students how to learn, encouraging them to think critically about their own learning processes, which is a fundamental part of metacognition.\\n\\nThe British School of Nanjing | Nord Anglia Education - Feature Cards Pattern\\n\\nThe British School of Nanjing | Nord Anglia Education - Feature Cards Pattern\\n\\nUsed by more than 30,000 schools worldwide, the curriculum is globally respected by the best universities.\\n\\nOur global languages department, for example, developed an award-winning programme that has seen two of our students achieve ‘best in the world’ IGCSE results in Mandarin.\\n\\nWorld's best teachers\\n\\nOutstanding teachers shape lives, which is why we recruit the most talented British and international educators from across the globe.\", 'page_age': '1554 days ago'}, {'type': 'web_search_result', 'title': 'Nanjing International School', 'url': 'https://en.wikipedia.org/wiki/Nanjing_International_School', 'content': '- Xue Heng Lu 8, Xian Lin College and University Town, Qi Xia District, Nanjing PRC 210023 中国南京市栖霞区仙林大学城学衡路8号 邮编:210023 Nanjing Qixia District, Jiangsu China\\n\\n- Type: International School (non-profit)\\n\\n|Nanjing International School\\n\\nNanjing International School is a non-profit\\n[International school](https://en.wikipedia.org/wiki/International_school) in Xian Lin College and University Town (仙林大学城), [Qixia District](https://en.wikipedia.org/wiki/Qixia_District), [Nanjing](https://en.wikipedia.org/wiki/Nanjing), enrolling children age 3 to 18 from Pre-Kindergarten to Grade 12.\\n\\nInitially, the school was named Nanjing American School and had five students ranging from Grades 1 to 5. In 1996, the school was officially registered by the Nanjing authorities and changed its name to Nanjing International School.\\nAfter three years of operating in rented rooms at the Nanjing Foreign Language School (NFLS), the enrollment at Nanjing International School grew, requiring more space than the two classrooms at NFLS.\\n\\nBetween 199\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "난징에서는 보통 아래 두 학교가 대표적인 국제학교로 꼽힙니다. 외국 여권을 가진 학생이 다니는 정식 국제학교로는 사실상 이 두 곳이 중심입니다.\n\n## 1. 난징국제학교 (Nanjing International School, NIS)\n- **위치**: 치샤구 셴린 대학가 (栖霞区 仙林大学城)\n- **형태**: 비영리 국제학교이며, 만 3세부터 18세까지(프리K~12학년) 다닐 수 있습니다.\n- **역사**: 학생 5명의 'Nanjing American School'로 시작했고, 1996년에 정식으로 등록하면서 지금의 이름으로 바뀌었습니다.\n- **커리큘럼**: IB 전 과정(PYP, MYP, DP)\n- **특징**: 오래되었고 평판이 가장 좋은 학교로 알려져 있습니다. 학생들의 국적이 다양하고, 이익보다 교육에 집중하는 비영리 운영이라는 점이 장점입니다.\n\n## 2. 난징영국학교 (The British School of Nanjing, BSN)\n- **운영**: 프리미엄 국제학교 그룹인 Nord Anglia Education 소속입니다.\n- **특징**: 난징에서 가장 오래된 영국식 국제학교입니다. 학교 측은 학업 성과가 뛰어나다고 홍보합니다.\n- **커리큘럼**: 영국식 교육과정(IGCSE 등)\n- **실적**: 학교 발표에 따르면 IGCSE 중국어 과목에서 '세계 최고 성적'을 받은 학생이 두 명 나왔습니다.\n\n## 고르실 때 고려할 점\n- **진학 목표**: 미국 등 여러 나라 대학을 두루 생각하신다면 NIS의 IB 과정이, 영국식 교육을 원하신다면 BSN이 잘 맞습니다.\n- **거주 지역**: 두 학교는 위치가 서로 달라서 통학 시간이 크게 다를 수 있습니다. 집을 구하실 때 함께 고려하시는 게 좋습니다.\n- **입학 자격**: 중국의 외국인 자녀 학교는 원칙적으로 외국 국적 학생만 받습니다. 한국 국적이면 문제없지만 정원과 대기 상황은 미리 확인하셔야 합니다.\n- **학비**: 두 학교 모두 1년에 수십만 위안 수준으로 비쌉니다. 회사에서 교육비를 지원하는지 확인해 보세요.\n- **기타 선택지**: 비용이나 중국어 교육을 중요하게 보신다면 난징외국어학교(南京外国语学校) 국제부 같은 현지 사립 이중언어 학교도 대안이 될 수 있습니다.\n\n학비, 입학 일정, 커리큘럼 같은 최신 정보는 해마다 바뀔 수 있습니다. 각 학교 홈페이지에서 확인하시거나 직접 캠퍼스 투어를 신청해 보시길 권합니다. 자녀 나이나 희망 진학 국가를 알려주시면 더 맞춤형으로 비교해 드릴게요."
+          }
+        ],
+        "container": {
+          "id": "container_01Maer5Qm5Za2ZR1rWcmmMCc",
+          "expires_at": "2026-11-17T18:47:40.421349Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 20036,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2030,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5909,
+              "output_tokens": 167,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6453,
+              "output_tokens": 85,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7674,
+              "output_tokens": 1778,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 680
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
