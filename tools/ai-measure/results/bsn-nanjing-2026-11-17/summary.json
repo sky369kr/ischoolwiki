@@ -1,0 +1,1885 @@
+{
+  "run": "bsn-nanjing-2026-11-17",
+  "generated": "2026-11-17T13:56:52.923Z",
+  "answers_ok": 15,
+  "answers_total": 19,
+  "coverage": {
+    "anthropic": {
+      "model": "claude-opus-5-5",
+      "answered": 15,
+      "failed": [],
+      "basis": {
+        "cited": 0,
+        "retrieved": 15,
+        "none": 0
+      },
+      "mean_sources_per_answer": 55.2
+    },
+    "gemini": {
+      "model": "gemini-3.8-flash",
+      "answered": 0,
+      "failed": [
+        "g01"
+      ],
+      "basis": {
+        "cited": 0,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 0
+    },
+    "openai": {
+      "model": "gpt-6-astra",
+      "answered": 0,
+      "failed": [
+        "g01"
+      ],
+      "basis": {
+        "cited": 0,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 0
+    },
+    "perplexity": {
+      "model": "perplexity/sonar",
+      "answered": 0,
+      "failed": [
+        "g01"
+      ],
+      "basis": {
+        "cited": 0,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 0
+    },
+    "xai": {
+      "model": "grok-4.7",
+      "answered": 0,
+      "failed": [
+        "g01"
+      ],
+      "basis": {
+        "cited": 0,
+        "retrieved": 0,
+        "none": 0
+      },
+      "mean_sources_per_answer": 0
+    }
+  },
+  "ranking": [
+    {
+      "domain": "wikipedia.org",
+      "type": "백과사전(위키)",
+      "answers_citing": 15,
+      "total_citations": 173,
+      "generic_answers": 10,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 15
+      },
+      "answers_retrieving": 15
+    },
+    {
+      "domain": "doris.school",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 14,
+      "total_citations": 73,
+      "generic_answers": 9,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 14
+      },
+      "answers_retrieving": 14
+    },
+    {
+      "domain": "alifaedtech.com",
+      "type": "미분류",
+      "answers_citing": 14,
+      "total_citations": 44,
+      "generic_answers": 10,
+      "branded_answers": 4,
+      "by_provider": {
+        "anthropic": 14
+      },
+      "answers_retrieving": 14
+    },
+    {
+      "domain": "ischooladvisor.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 14,
+      "total_citations": 33,
+      "generic_answers": 9,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 14
+      },
+      "answers_retrieving": 14
+    },
+    {
+      "domain": "nordangliaeducation.com",
+      "type": "학교 공식(BIS·운영사)",
+      "answers_citing": 13,
+      "total_citations": 71,
+      "generic_answers": 8,
+      "branded_answers": 5,
+      "by_provider": {
+        "anthropic": 13
+      },
+      "answers_retrieving": 13
+    },
+    {
+      "domain": "nischina.org",
+      "type": "미분류",
+      "answers_citing": 9,
+      "total_citations": 29,
+      "generic_answers": 8,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 9
+      },
+      "answers_retrieving": 9
+    },
+    {
+      "domain": "international-schools-database.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 9,
+      "total_citations": 26,
+      "generic_answers": 7,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 9
+      },
+      "answers_retrieving": 9
+    },
+    {
+      "domain": "thenanjinger.com",
+      "type": "미분류",
+      "answers_citing": 9,
+      "total_citations": 12,
+      "generic_answers": 7,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 9
+      },
+      "answers_retrieving": 9
+    },
+    {
+      "domain": "gov.cn",
+      "type": "미분류",
+      "answers_citing": 8,
+      "total_citations": 22,
+      "generic_answers": 6,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 8
+      },
+      "answers_retrieving": 8
+    },
+    {
+      "domain": "teacherhorizons.com",
+      "type": "기관·기타",
+      "answers_citing": 8,
+      "total_citations": 11,
+      "generic_answers": 6,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 8
+      },
+      "answers_retrieving": 8
+    },
+    {
+      "domain": "com.cn",
+      "type": "미분류",
+      "answers_citing": 6,
+      "total_citations": 12,
+      "generic_answers": 6,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "world-schools.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 6,
+      "total_citations": 12,
+      "generic_answers": 6,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "edarabia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 6,
+      "total_citations": 11,
+      "generic_answers": 2,
+      "branded_answers": 4,
+      "by_provider": {
+        "anthropic": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "tes.com",
+      "type": "언론",
+      "answers_citing": 6,
+      "total_citations": 11,
+      "generic_answers": 3,
+      "branded_answers": 3,
+      "by_provider": {
+        "anthropic": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "toptutorjob.com",
+      "type": "미분류",
+      "answers_citing": 6,
+      "total_citations": 11,
+      "generic_answers": 5,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "educationdestinationasia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 6,
+      "total_citations": 10,
+      "generic_answers": 3,
+      "branded_answers": 3,
+      "by_provider": {
+        "anthropic": 6
+      },
+      "answers_retrieving": 6
+    },
+    {
+      "domain": "waisnj.com",
+      "type": "미분류",
+      "answers_citing": 5,
+      "total_citations": 7,
+      "generic_answers": 5,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 5
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "openapply.com",
+      "type": "학교 공식(타 학교)",
+      "answers_citing": 5,
+      "total_citations": 6,
+      "generic_answers": 4,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 5
+      },
+      "answers_retrieving": 5
+    },
+    {
+      "domain": "britishschoolsasia.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 4,
+      "total_citations": 6,
+      "generic_answers": 2,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "schrole.com",
+      "type": "기관·기타",
+      "answers_citing": 4,
+      "total_citations": 6,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "linkedin.com",
+      "type": "블로그·포럼",
+      "answers_citing": 4,
+      "total_citations": 5,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "britishschools.co.uk",
+      "type": "미분류",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "teachaway.com",
+      "type": "미분류",
+      "answers_citing": 4,
+      "total_citations": 4,
+      "generic_answers": 4,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 4
+      },
+      "answers_retrieving": 4
+    },
+    {
+      "domain": "basisinternationalschools.com",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 7,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "prnewswire.com",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 5,
+      "generic_answers": 1,
+      "branded_answers": 2,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "ib-schools.com",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 4,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "etonhouse.co.jp",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "etonhouse.edu.sg",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "jinglingedu.com",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "jlhs.net",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "lps-china.com",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "waiscz.com",
+      "type": "미분류",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 3,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "youtube.com",
+      "type": "블로그·포럼",
+      "answers_citing": 3,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 3
+      },
+      "answers_retrieving": 3
+    },
+    {
+      "domain": "zhihu.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 12,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "xhd.cn",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 5,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "guojixuexiao.net",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "internationalschoolsreview.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 4,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "isacteach.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 4,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "guojixuexiao.org",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "hanlin.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "ibo.org",
+      "type": "교육·인증 기관",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "prnewswire.co.uk",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "ac.jp",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "baidu.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "basisoverseas.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "beijing-kids.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "british-school.org",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "chinaeducenter.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "chinajob.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "chinateachjobs.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "dipont.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "echinacities.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "englishuk.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "expat-quotes.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "facebook.com",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "glassdoor.com",
+      "type": "블로그·포럼",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "internationalschoolsearch.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "jingsailian.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "seriousteachers.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "shfamily.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "whichschooladvisor.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "wycombeabbey.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "x-newedu.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 2,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "yahoo.com",
+      "type": "미분류",
+      "answers_citing": 2,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 2
+      },
+      "answers_retrieving": 2
+    },
+    {
+      "domain": "qq.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 6,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "bc.ca",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 3,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "cnblogs.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "rgsgi.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 3,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "125school.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "163.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "51guoji.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "asdea.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "dulwich.org.uk",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "languagecourse.net",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "rgs-guildford.co.uk",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "rgsg.co.uk",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "sohu.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 2,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "aapt.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "anthonymillard.co.uk",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "basis-global.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "basisindependent.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "be.co",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "britishcouncil.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "britishschools.net",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "campusreel.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "chazidian.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "chinaservicesinfo.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "clang.cc",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "cloudfront.net",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "collegeazimuth.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "collegedata.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "collegefactual.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "crosslineedu.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "dipont-edu.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "dulwich.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "edt.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "edu.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "edu.sa",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "eiwarch.com.au",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "elitebritishadmissions.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "english-schools.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "eskedu.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "gaoxiaojob.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "google.com",
+      "type": "기관·기타",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "gov.hk",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "haworth.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "hope-studyabroad.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "htschools.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "ieduchina.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "ieduonline.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "indeed.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "instagram.com",
+      "type": "블로그·포럼",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalschoolguide.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "internationalschoolsdb.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "isacjobs.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "isn-nice.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "jixueedu.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "k12digest.com",
+      "type": "언론",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "keatschinese.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "languageinternational.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "linstitute.net",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "mumsnet.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "necatbritishcollege.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "nengyuanxx.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "nflsxl.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "nis-eg.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "njit.edu",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "npac-ntt.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "openapply.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "org.es",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "phillipian.net",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "sedaily.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "sfkedu.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "smapse.com",
+      "type": "학교 비교·디렉토리",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "teacherrecord.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "testdaily.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "thebeijinger.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "thebritishschool.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "trustburn.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 0,
+      "branded_answers": 1,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "turkeyuniversity.org",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "weebly.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "wsszzx.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "wycombeabbeyasia.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "x-new.cn",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "xhby.net",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "xuanxiaodi.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "xzhiw.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "yangtse.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "yxuetong.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "yzwb.net",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    },
+    {
+      "domain": "zhongkao.com",
+      "type": "미분류",
+      "answers_citing": 1,
+      "total_citations": 1,
+      "generic_answers": 1,
+      "branded_answers": 0,
+      "by_provider": {
+        "anthropic": 1
+      },
+      "answers_retrieving": 1
+    }
+  ]
+}
