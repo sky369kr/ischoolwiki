@@ -1,0 +1,605 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b05",
+    "type": "branded",
+    "text": "What is the admission process and tuition fees at The British School of Nanjing?"
+  },
+  "started": "2026-11-17T13:56:20.520Z",
+  "finished": "2026-11-17T13:56:48.113Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the admission process and tuition fees at The British School of Nanjing?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011Ch8cgC8jdFmb6TnppGx5U",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy",
+            "name": "code_execution",
+            "input": {
+              "code": "r1 = await web_search({\"query\": \"British School of Nanjing admissions process\"})\nr2 = await web_search({\"query\": \"British School of Nanjing tuition fees 2025-2026\"})\nfor r in r1+r2:\n    print(r.get('title'), r.get('url'))\n    print(r.get('content','')[:1500].replace('\\n',' '))\n    print('---')\n"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01UGSQsEX87o4XXFYCZ7eJAU",
+            "name": "web_search",
+            "input": {
+              "query": "British School of Nanjing admissions process"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01UGSQsEX87o4XXFYCZ7eJAU",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Admissions",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing/admissions",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing",
+                "encrypted_content": "ErUKCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMFVDesC3biCJDLQgBoMXAeArNJ+9USPWNWlIjAxevDX7F4vIfuDjceFYcV0uSlwAGqIH4hCdVit849oWrKaM0QU01tjmvFwLoQbeQYquAmH2sCgltin4QEeJWrQZYDNRGalCOmZH9rU+sJeQr06ANZAzMeJJeKP0FTRoFiMlfqgB24Z/G7ilpQfLclljl5dHjJVlFY91GGdhyGG8y0L7FcH9RLg8qYiRFWBJaKP9McQTf2vIGKOC/XMG+UZMw0yiTIYiXw0hiLaky4uZaq/s12jkg6Xsne0tEyNZDWtEh9YZxp/boEotCoXUNS0xuXRxFMN0LcnDFPpzndItQ8gGVZ+buaK8hMWynkB6Uy9dgSGmDcNSy6k31BWwW7HOCUzfdhKngwtadRjmbeltklXxVyoBysaUnotuAWk4AIKc3JgnlAc4jtwhz2IqPlyNdiXsxz/h9r80kUhnCisd8NpnamlpnZGbv/inBv8dNtJsa1Z4cOadPdqq5XKUyfzrx/h2ynTzYFh18kd6Za3y1QxzrxlRCuoTxMm1A3bBgWggnHcu5Vmf7BB+RLyOfh4ehHF+3UhWA1hC02nSsOa+zf+I+PNug4asVsTsYMVcUNWMcbH+Mo7GhEOvZzQu9uxejBt8oRwcoFkmM/KvydeOAGaQShc1nKQ2zMnXAie4Hsn4lI8qVz/JfBjBykZckq7CDEr5S88yPKfdBfOycB7RkTcQcFAMKT98ON9dXflKL+0plcncH6BHKqIclXfAG7v7YBK5fETq8muJ8xF2omys0Zs/r7mCXzR6t54FH+M2oBf1435iuT+oZDpu2QUJEPeZADUs7qkAsef1LMcGvRmOBTlplxiT5wulh8MbYQqeS2HPEcraFnOrBI3wd5FPZP5fwoe3vS3UKcyp1/ezY/C1NxhtQoDwiswLDSqgZ8QPzxWfMXRjt8Zf1oj5TSzyH9TNltyJzaJDXB2SS05UYX/lTZZ2BbVN5+wh1bx9OebinI2haGU4GMh+3o8icduAY39v/OfdI4WAh40MpSBzQu3kx0gPANe8bhM4APmVwlrmMSkS7gsG4p9pCIQCftgiqrbdOlBRxCfGbV6oaAGyATG2UwzxIm4M+Pk33SCmPZesMbmcHZxduTbTzPhQ8xmtEJl0gTQr4rqndNlDsTHCHNWkLD63MFSn5Fvj+GggYihIbYz/EEjk2/vN7neH5WyAJMPyJEi6e+ugeTPSXBE3XAtpkuhjBpccpTCA+BPknVAF0FiCLCrgMe2csJcRkxS0/FSkcJzAymMwSA3BIA3i2ktuXQEL/KzPrb8MaeSn92hQ6BWY9ajdSa1ttXH95YU0rcDQ9e2BlbtLgAINk9GmuBmbbkvXVl0xUxaOobZmmY8E4qCoHWUhvA2mGg7rPO0oLr8Eu8ZmA5CE0AObF2kQXGylF3QRftgwFYTEuoPHMN7CIyQQgyYyYAsu08GkA6QH77Q4r4ECv9FEMZD57yg/rSzvKD5vVwQG8pcHW4VOAnZdUtzIIF81QvUtQCm/wLJcpOnkFEnw0FVQjV2M6TxcXrdVcbfpXQ9tRl1vZglxNqu7Jf7SK1you80SjB9y679tMG8MaPe8cHep6Hh8JiUO7qWPVAgG5FZrxe1aKnjpiH7ndzSEcmXNPoVcLWEocYdFT5fYJxfYqwPphNLML2IzpQsSKbNy9TkhWwJkVdAoseOL38kHOz3RErBTS3WHBgD",
+                "page_age": "1554 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Entry Requirements",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing/admissions/entry-requirements",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.doris.school/schools/china/the-british-school-of-nanjing",
+                "encrypted_content": "EpwNCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDM+/fGraTlKHL6sWEhoMSMpmI8lmQX6b868UIjCSokP63Tjox3+DrH0EhYsCB5UGK3Z3qUNSQ0Ozq3Zfm9fwPQrd1IaAwo3lsmP0Ud0qnwxVn+TSEj86fbsKT92CgWpYiytIGCOQ1xim4E6rrbWqZrFX8kumB4NqgUmCvcJqgmw3mvPAikOwgncNsJ7dqnAPu3YjM+HmaSGuFCKa7flg7qqVRQuGzK2vvLmx+5eu+tzg6kaHzBOOfwvMmY6QK4bzVQJX3Dwc+juclG5xvl1VIgJ5x2Spz6FSfvcDfbf6fiDsrhuPgDZPYq6uQOZWmLBP88WEBv4qvdVdj+lbjWvOBcM4ZE0IQsOOuNSCMM0MX51cFB/+sbCl8+hxtyvqJ909XwWe2c0EO1sJ6kwba0N4+zCcOvNgvCBcz6vbvmHYJXk/PHCBaTwxGuxXM1229NNP4ZuPupKtId5K7YuxEPPkKDSdMW9LvxHCQKYI9OLDUttJQuM0MOFaQl/wnn5FCIWOS9OKvjziSN5Ltv2rg56aX9XalB4rkN6PH3w0V3+5ti78KPEwG9Jv6OP/LLk53snsuNplow/sy6stabaZ4MzDWc0VuLnJzWGrxnQ78e3wH96jf2sodDTvt67nWguEum3ujmeAddIVrQ1fqzTz55YrNmmUFIfkKsgds09MERp/5UHCKPHHK3eJ10/ttORORE0G0yDjZLhw2OiZLtPdm2ukjqE+5XFUc/algNnOFD+hvDJmUWrojGezESvCw8fi+kIIz3RYKaHyaLi4cmpu79E2+eWnQmSFgBwZn41p5ckSfr50d8/z8QxG0fSDRWo3pait3d05rZa8E0vyjdNOaPqhA4jdNrUm3x/OEFQUMWeNJJ16wS/CiNn5KnM3fLuo2SVf1mx3bU1pyAwidOxLjeKBIMttGJEZQ0djfD+gk8UdQlXXCT8EBD+/1rv65P4azHNHyJMYl1VsDDRy3vgGkEJwNTVkMARNCbDYvgW9YdGLgCqK0HzSs9my2HeXaTvoZGBhxQmJUQnNpI3HW6Pv+8YwJqCmbfpZonO8x+jAFqL4xyJ+g+8Yf0hP6NFRTcEBhvtZSRenTYUsBJXVCUKofmZ2f2YWFo7MDGBXhJVtPd9BEcvR9lS96YaICCjBoOZ3io5LOL5lWsdFZsdywTKhvbNIopJpMrk6LqYVEmxcKGTauzETSBJG6kjsfOlIOlj7fpfRLwTSkBR5C1WrJ7G8r5BqtZ5aIyENJsjMTYhXvMaZ1p+MMJ9/LOpB9/qxJPmdg0jBAztFUAiaOjnSDKJ7VBdetxcMgDvOT7UyjWgKnbphznwo0dnH1Cm00LPlpxdB6RufudxVp2i1pRL1WtV1jaUZajigt/NSc8u58uGonbidE+LHJga06PtcuptDXQP6t3oCtu9qJ1f0qcZkcjC9KmHL2rNPowDVJE0pyZoAJIIji7qZO7U8RNURlbmq3Csb6PppefPebZ6bLAWumbH4SN6plns4Z7j8Ae+5MWUmMVhXbSWHF2t4z7kmVl9P5Bb8SNnJN06/Ntg+4zV0EmWl3l6/3airAtMjnAXtnoNz6eww5xhW69oShNk4tC+OQZdCHzYQcNOsB3l1TGcMb5HUt5cmeQ+Jpp1Iegtd9wndKuscDRY4BniELbXishPee2zg6RtmS2J0FzWjWkxv46LpHYYOKg5GCcUz0uhP5J9xy2JVOaRJXPF+ee19w3+bmp9E6zzo8Zjd9CEAvZYJx0QC/RHWzZe/SdVloPsY8GMzO6BpebZ+2uwY1GaK00h64Ppbk9HOUwmmG7SuIA7lOAVpNvbstuL7WHDoQmaix+LHa3hUzcDC7WJxJsg7v+ZVgpTNRdxEpsx25e5lVqmTa4g+699OZk/g/RXLOmv5YhEPvrkM6JYi6uIOgMFtOTFj62oG4pIvWH/qBEERA//FmL84lxqr8NujYJU+ITd3XD4x4JHu4iRyvHlji04W925UrrntCNPdudJ8TR0lU+eyf8zuF0vGiW/97IXROZOTlmS5PYHGvkAK7XXkJxwelLHtFmLy4/svdes1YXaurIMKUozHDigYhTc0K6GU8yt0NTDrvjrG5sLWgEq8PJEqhNOIAAd8CTXnrLiWaESj6wJeOMkjDPHrHDZDMqCI0dL1YO7oK4dvwqOlAbljY+knyMESPHRdt/Q4CDyLyxAkONYAlQEsdffbGAM=",
+                "page_age": "42 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Tuition Fees",
+                "url": "https://nordangliaeducation.com/our-schools/china/nanjing/british/admissions/entry-requirements-and-tuition-fees",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://search.openapply.com/schools/the-british-school-of-nanjing",
+                "encrypted_content": "EogJCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDG8gHrpKULDMRzUNqxoMOjC9JkDzd/R8cQD2IjC6Y/gy+E6sCjUCD+ibGGaIQ3bIP0CaW8lS1pt8dM9Vv9rhtFTXfDL+nbQ1dBjB580qiwhf2c1lBokNtlZUxR4QslvcruoFewU8uSTgdvnlNjyoUwJyR+WlvdDucvzV2RLa8wcCZVf3ylgVxHlE12F2Xrz5vRRv54++o5wKDTE41k6qvU5IUfc0vu8ehen8XUoLDIGmD0h6MVQMxAIdGhZIGkt/ialBnhOGvF5mamnCetHoxr1X9Av61kjFAqEc7AC+xYf1WcJQ+lXOdqNjXdVxXdwuwvYiSx4u660zJqLXxl1F90gU0fxvJRjG9N0gAqswgSDtHaUwrYr8oRu3g36CXSPquSvvPd1xRR61O30hwMEBpdkupsiw/Bwv3j8rNr9CTQk2W8TJ2oKwWbEDZsve1Sk3lHaHo0Zm0rP0XVI8XO7xsIxwh/bj9H8A4ADBZyykki/puia4+b2Ywcd85pNcDtsmelHqIU9M4UzYNop9e4OzjpSCwUEzQQ2MgSeD74EOKe0kj2FTIOFRpwcSaJLG+U63/649/9fFw9aCB3c08+fg1YBVSCS2sP44WeZOeNTqLk1wqD+IHKpCeFpKzST8hzXmE7A38Hzokwyn/pBLBxRUhZL5iDmlwQ2XxIVTDY3vQA/1Kks3oOJ42WjNHT4lCcvXzS39oyNCqi4Q4jzxh7AR2b+M0OJrVH618xXi+2tuMCTZxyk9eF86SVAvMeg3huD7HcfkoGqwICzJf2tQlnXwoO7/rve+6S7AHJeeVV7/NTokK/ycb194bdvJPUqfMJ2oe96rSzcHkfNTfyD5PGINxx+008tzzEl09qrB92PJPfy+KtG5ZD1HBMJgsjOjS96cYpZpwMBDBaR7u6mE7pkEmUHLjD00KjfRk4IHQQmXjcgfryS1g25Ea71f8xbbmkyoo3em0CnENSvMJCt4Zk0Ks14HbEPPnIyAavnHn1hCzW3uwX4CbyB+D8BkjUVayjVquGBm6xQ3bMCC97C71DQtGd4q788ACj8o2X0loPcda6FP9taptg8uDj5toLiqn9uzt1+8yqrOaUYhKIGPkPWwwor40p9z0aq6PNQcXc74DCRY54yVrsszLlqj3sXU995sQSXQnHM9KoAzNhrNN0b8KL/hSiRlKtMBCPVw7IqgKALVMcVL/hiK1bPwa/1MnRyWHzxxN9wjwcwHm/N/UV1+MWdQVfaHdGJ4DF7DTX2YV6T/aGlDQ9l2G2EsV9rBXMXfbZwKBuN5oVBjpvfI5uHK24hOgI8mgY9EmGFLIARLXDwjDDtBVd/6PrHe8IxHsL1MkSpbfjr7k/4RLcqF40y9u+hwkNPZELMG5U4180ur14hASZmW6MiAnMl6X/O3g3jWlb3CbKoVgRJ33n2HErLsFLN3RjGvJL1KDb4cFTFCk2pKqb+Plar6xBQ4XaYy6UVm5YA9pjkiPDccGE4YAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://www.seriousteachers.com/globallinks/9800/the-british-school-of-nanjing",
+                "encrypted_content": "ErAKCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFm0O8H3IgAp7lSvPxoMkgkPAjIyN8ZxSWXjIjDyQIIhGU9bAQnWOjJBZobCUEKuRpqos5vBXLIIz7yebQLeHAduQUDAj9tnFQE9dssqswnYNpVXYzpSVUFPWlR0YK5VJhYueHKbNdaer86VgrNAl/VYg/iBS1y9OP1XNZR+I1UfX2w7bZBg6wM1lNG7vamn4h3WXYtkHTA5T7EOfxL1GwqLJ3Feb4kjpMohy+GQPxiRKm1HduYkITjtIo/VNtqs2rDr7xjFIFnazSrSoRfDLQbpFW5hr6bp/PJEyo5JAzGu5DJBdrKzy86v3bsNYC1XLbVPJxJX+morzYE7gbkHJaBGPMnjdfUiGcAhXbkSkRou6M0x04o4iGSuI6v+mG4Lwlw20Rr0wOk/R+py2cmH1jx359DEjzIqVBEXF/gqhy8C9IOFfMD+zphLr5/myu1CLPrwB9rnHJi4xHFzWwKvKWq6wrRA11mtyAUkcuENfYT+IWN5T++t7N8veGehVKwI4Dnt4CAJXEmXLj+NglLa7/wJDFwD2ro33Q9/zxhE3aKmIbjoz3jp35bBJkrK3hA3BZD6SuL4qgABart/+4gcTbbZuPP034n5+Crn4zFTeK1a5m+TT4kcx0KROuY2kmAM46WsLQTMM4fpzGYU8FC6SeoZXfM2ezr7xaM9EyRyAEqWsAptxBmeSD0bhdtcwb7ijnuihjc8B2nGYiYviCOgcaTzb1hice0FeguBjTHynOOdcQs7dc69A+MarooBDY+p3+xlIsXUxQwFKBfY5LyTHI5IBZA3SpilX0uUnXgywJv27AKdCZXJVPlJVPaOGbdh4KqibFFCyql1ZYwyqguodMFzBNO0AF8vinNMYPZpRD5M5DJzWeu+notZRTWQ9FuomnnnslV+TgJROB/XTFh2QO8LSyZ//s+VwnBrerySw9MEbbCN8cSYqFFX4uKbADafQ55aSg3lO0WTrT88R+VWadMC5arQL2L3nXFjm4bVXwmSpAsu7aKtClbxY5zkyacLbFXQTnwX04yJzChqSuOHGqsSkPtY0vjfragXxzptKaGvCpbiG4Yl58vb8indvVyHUs5fheb9/Le8pQEpXGmLwhKMXvMol/HRQuBLS/zxNM1hlOcx2Fyp6C4oHCqjbKzrGoYjCcjzg/SNS0JTacU2QInr1SUda/8UZ/oZJBCzdxCUVdnOgl0hUTqGzUpu8rxlmPXFgMg2laGhEO2jhfNJEMxvqU1oKI94KwPKneL2NntaCDiU0m/rXlM098Tb+sXZcxD/tTO6Oh+4JL4wdh5ykRXcelj0V10/I3AO/7lQz550t65puWOFLyjU24sbKhoCiDCz2xNYT6f9mmpy2wBqu+aijxj/1voUpTjPrfNPU+lzR3yQdXq8fVvV83e4SGsWv/QvsTAFAvnkBcKX8CowZ/+0V3ACbIw6DYWYzm0+WQkZqou8uiYCkhhaGP8Gky6BlkCyvzMxxgXr+dBchehUzDE11sVQczmGvPf/Jk4MTJ98RsfzDOxEHXspTkvi5VYSrVFF330n0J5Cj/qnKP5Mf3Ua9SYkyw4OeltR/piHdiEbBcHTAPxXuBq+/5Qa6awUkiweG72EaryzaRAk3Z3wsvf6xbMVvlVf4qOIgqmfZ4qjz/6FfQ+EyxnJkHGnjXEtqHEF1Y5v7AfAOmy2Uxx4XsPYlyEncX4i72rRBOOaFZvZ9GYYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing - Education Destination Asia",
+                "url": "https://educationdestinationasia.com/school/the-british-school-of-nanjing",
+                "encrypted_content": "EpoECioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIfk7JYOxlQKYLaC9xoMeWjjJ4hb7M0AbqxFIjDv6fcj/yXCui4RBzv/8+X4Ecv9oHuBlKjUVNvlWQmHwcasityzIYYVzgcJ87R+J84qnQN28R8Lf48s8wcNnDXftKYfZE4S04dTUCgFPwKvpgtYQqd58fycizYmGQjytqev2x7KoY7D9ypzs2s9g5gZfHaRjTFWRweSMkfEO+dpeJldsU9vlhuV8Igy0eZQwKfA+dqnD8CD16AXkxExuAF2y5isVOiYCULzcbZsrFxX32EhE5aPqx2Qjzri0Nf8kG27yxLs3/iWoLkKGOIuL3E1vpfN91LvG+zlGRTG+WDZUUy1XjIfIPSSR4PotRaMjiJ58uuq3Itq42QnN1IzGfLkL1NTrHBpNBtCG/MxBiFYfPls3I3kGRd10k1+IoevwpryOF5zsdWZR/skNz+d+mGPEUMp2j0/jnyhD9c1UouSoqrI9euKP2Molh8TgMlxkObGjPeKdJ1/xr924PWAV3zwyhyPUJtdQ/525Das1COTRpBq28YTqOW9etnpLJsGY1tB/pfO5qyKK1yZ8YqcQ3fF307t9e/3W26I7gbGWxn3V80SxvFgDeJJKWsOiUcNJkwVgDCK0FTZ6supzQlEExbSnt+uq2yibLzPLDpx2WK/VBgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British School of Beijing",
+                "url": "https://en.wikipedia.org/wiki/British_School_of_Beijing",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015QJ1ruBcYdYTd3wYHFDXd1",
+            "name": "web_search",
+            "input": {
+              "query": "British School of Nanjing tuition fees 2025-2026"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_015QJ1ruBcYdYTd3wYHFDXd1",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.doris.school/schools/china/the-british-school-of-nanjing",
+                "encrypted_content": "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",
+                "page_age": "42 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Nanjing: 2026 Guide for Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-in-nanjing-2026-guide-for-families",
+                "encrypted_content": "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",
+                "page_age": "30 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School: Fees, IB & Admissions 2026",
+                "url": "https://blog.alifaedtech.com/nanjing-international-school/",
+                "encrypted_content": "ErYKCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHKnqEreOUszDbCt4hoMg8OcOGuYdL/3oZ1fIjC+Dlgd13FzLFNfgQcoYXwSSsXjR1lvNgFXqPvsmSn8888qxicd3F0nKXiPIUMJe0squQk6MrJdexfTyPKkmc31XtYPSpSoj3ktRXZYDrDsx1iYNf7xmZkoBgy2WMoha1Ud1UwX8UQlKr5Rf7VOqcUijVT8Ai8Xv7Iis5n9M38gd6nEezyanbAO/PGN6MVpYCN+wQq7/U78ThDDub7guJDdiqVP8X6ZyXGNslUKAoSDEDVN7tiY2TSCc0RjwWdYEZkydeimG9aBBQNupRf6R/gBGNUHeAAfX4F6whiCCIdrsrWIfrXARxh9pgc3Qgc+5xUUo1QhlLFShx6YNA29BomqDEhpJP8gnT3P84bxVhAMLrQmzjLarJjOpAJ3LdCCbX4ax/YP53ZvgNq7xWzvpDaA6ruAkGAZ5KR9XURZmqNxeZoEuNTWsgk62C9e65jQIEn/4rYEuRD8VlRUL/ZAsMhtRP1aRx4hAU+DQaeGYkTl1AUmEBZZoIN5JMhjSaNKaG+CWqVmncJBDmF5kry32mPP+B4eBdf89wjUUNjE9fY1hggEVkfXK4kRs9gPCYYEYo1itts0SrggcKTv3q7MAGnQv3kNWojppCBGfDGRFz4A51auYvYg5JB5sfL6PH1Cbxd81xu4izGNLBwXGjR/R66WpdE9qF66gmWYu19sRQHbR+dClDn5rcH7ID6O6gcHInzZFNO7AdDDf+cxexSFdoLTqRSRykVG6T5hzsiUopNjPzkI+qk8VwEoierF/WWzQy4ZtAza+52n7dmdLpWBwfKgDi4CgwgNQ1AhzDGpr16pGh+UoQOFfDN1mT5bOyxB/F+XkbiOS3hIQ1YTaltbwHhc2NKJ1Tt+0n4UzoRDfQvCDTKpYpKrZUjUsA+qZ9Pcud7ohtu/tlaeaRqBEo0r/U/lFUfFkOobZCy/BPh1qhMWHr0VFcH5+AfnxMf5l+1EgajG+CXNwlZ1x8q4iB0Jo+r/tZ1loVtOo50OwFB57ZZCmBwjfr2VFXv8is013sCVyVAPF2wmMvI0GIDpGBiXqK2ne3QghIS5nMxWwjTrh3HFSsOMLxtrNfUVtowg68TKTzRO4UL/AQhztZV6hYU1HekeF/Rw+Y9e85xVPyi2yfHJJWsHEsnMd7nm79SfS1SvSMTv3sijqDv13z/+QAjbEHsZPt9s6s4TSSEyQy73j9nzk6DdlACCzv0OIcpEnTclK/gwzDLOJxLPqANKVvUHTMCzcipiELDB1OJWr2T7k7Kw38P2zZdEw/QIfh85eKsbiw2lsvu2bzMVldNi7tRgM8abdV7xix0sOKvu7LmgkVEgnHp956iDyFPbNXZUEnODkPg7soXXWDjK1xrxb/Z05kkaIn8QBJCO8W8zUGsUqq8JX1l67Sc9uub2ebEXI08vwWy4T0SRCGZhlC9gAxPF7yUtzh7CPjrjA9ZhRjIc9quQGrrVTeH+JDUT7mtIQeLf49REZ/v2Nq+PC9b8AAEXq4w8QbpCZiqTPXa//gSnFso90ChzULoJgJ/06PD4mUcQ+2YFAabd6/7GlsXgvvrvd0+g2OlhXDjY7DopICcgfUzIJ9HSiZL3AuxIlcFCLfiWa1rXhsh1i8C+h3p1tA9zvICi7K9kmIst7UW8E6jnvR6ZOLhFAl3aVs0LFd1xVCV75073mJr1oVFs7HAKOIcYAw==",
+                "page_age": "140 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing (Fees)",
+                "url": "https://www.edarabia.com/lf/?id=377477&ins=the-british-school-of-nanjing",
+                "encrypted_content": "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",
+                "page_age": "47 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fee Schedule for 2025-26",
+                "url": "https://www.british-school.org/wp-content/uploads/2025/05/Fee-Schedule-for-2025-26.pdf",
+                "encrypted_content": "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",
+                "page_age": "565 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Nantong: 2026 Guide for Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-in-nantong-2026-guide-for-families",
+                "encrypted_content": "EqkICioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFXZE1Th6oMHegfwThoMw6NBsaUl+S+u6vHBIjCCW+ODqKCrcotzchYRgtYCqp2mqUHYV0sA4h+O7QXNlMB1Dd95iGA7w+5FL8l5AesqrAfINlsXeCZHAm+LvilRfFbxszeX1NOsKT9gVyP7KcqOAiUh/daRIylyE6JM2BbH8Ac5GDn/23tAaVYq+J+8IXLIyXgScCgah+XhisUT3uIz6pYaRKF46FW5GCr6WPgPSTWcUUyCQ/d4In6++o/kCbLxvnXFo3Gwo6dNIalwNa1djzfBdU7MMIk8IAcNEO4LAWxnuMyQLKH022j7jCETgkbJaX+t+vsST9tELaTgbxXjMnBJ3SaYIa9cgxalaM0F9cJ0g90HnZpqLc4w05AP2yPzTvt2FV94VocxJ41xhQGKTdSKjv9kLkcSMu724Yy0azT6cUChA0j+lf4PaHIqeoOoyUIAT+gWiDpUp+RP/yB3ssKryU/d8+nwmEVIjdZ3HdCcNdErPk9gei2glwiArpM3ySsMfY6cobPvjs4XvNTc4a0syoAuUFmse4AurOjR7rwqSvQaknNzCvw0fk/jaShmkj55CEbf23BtjeRIdIA8H/rA/9F3T6Ame9KTzt14hOZDFT5babg+zLcMSBltnRvljhiCaLTIoKXP7bM2JrcH2byv+t65jGLkqh3rBmNbuMYNazs0FOMph1H916KZdsbW7vRYDX64vT/KG+3JNeQb2559+Ur9ce0zCjAwdIl1v6QA95wbjEOdcp4HX1x+lXw64ohJ87bGmUnBw+1Ww/KllPivK9uHMWt6PkgnXBUo0pIjdeykDxocuOIJ+HWRTzAsVxgyXLtUjDIJ/96beOPmwKqWB1FooBztmyvEzQMcGWDBI6kwfxtpcV20AdQpC0NRnkRG0+mYAA0wXn9o/4T1KvBpdT+PjZtUDcsZ3OnRYU/jr2P5ei2b1JQkgnr0l582FRI5dTm3X1mI3fT6MyXxGxUYAqiUhglqsY3pERHggk/mUY+7q5rn+QSEIpcWf2NqNtK+k2eGQ3uISQ7u3DrUNydkJoUB/3Y/XR/GoMuh8/CmgU9We31VoqSGkSM3DrM6GAGCBns0Txq8bGmGu/ZYFQiRgI0NSEne13bZbWkHHNE8Yne1WnhiShiA0gXy7KCArKoB3JjFRLF3XOGzfCRQyjhjLAnPD3fS4L1nEe4WqEWSvZxsdy3c/gC5MloCBM4xezXnPC902LyosIWCr0Wanv0agw5B1BUFSWrKnDSYgQev2+WedAjjAobzlFAN0UgvG2sLWjQSJUh3q6nezcz5HV4EXq/i5OjcwVKlRXWk3+l6Ci5C2qQcNIrpXPtronmE/nuFbnA4o2nQ5wiIGAM=",
+                "page_age": "28 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing - Education Destination Asia",
+                "url": "https://educationdestinationasia.com/school/the-british-school-of-nanjing",
+                "encrypted_content": "EskFCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDAPdVfglioSBueekehoMuEFfmCLqZ6HnwvFZIjAdJkj1xwutTLXMcz+zAyrLOweLLdDdZVISlBXQ+vx1UoL7REV4FWZVOPjQSP0r460qzAQlKJtFPukOrDoQfoiEHQ0opcPHP3HRHnlzCVafiS1DKNgD2UFbSxHKL6YNxO6wanho3oYKBR29I+RcsyQ2usrlhGosiyeccWOUK6yWnX2x3HyMmXimCDmD3qsTZ8c76S65BfROjA6ZqumJPdGBFxsUS8RiEeSl4E/huYr0hKdm3fdGnfFkitQ6axXvujoUCjgr5XQhQslYnOyQIKhdmZnI2SuZgZun/xdaSgc/KGNkv6FhxvLvgDK5kcoVPh1linem8xVZjYvLeqpLNPQvB7xzfOV/lJlW0twY8dbFBJpfHMSNXm8dlNl1bn85m6k5I6RlLHkMphCnKUiUMweiSErgbBfxWMrUuOxrA+A6KBpxGh/ZCbFUQRVd6L9/LLEaPjB7N/wIfFExDNe9ypimXpHf18QUFBLwSboygzEG8Xmvf+KjfK6fGPYsVn2OXR6f4g0pkrgycDycCvc+v9RJCbzTNtWfahdAnx8213+CNlYI64O4y0qsc+uyrsvfba1PWpqEsofI4q8MIKMU8eAvHtcYAHQd42lG4qZmvlETWsbTuiNHBtrB8sq/4q+L+bX7FUta7xmbHSzBlx4UM4uHQUjnsnNT9kbOHPXR4wHkFVAuxT756rTRahuDObSfnQcRCF4xmznE7hEK7WuO0f2Ro6S0BfQ4Y85wt9WZUNEHRcQyY3fQ7a7ldxhvCz7XSWOlVQ94EwgzWdLAd5i3C/XHep+ZIks6UsT6+oxRXrgyZqPiZWFb37/I7S/Sw6r0HlWSY05Gas7bs1z4gh4Ci7EYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing: Details and Fees",
+                "url": "https://www.international-schools-database.com/in/nanjing/the-british-school-of-nanjing",
+                "encrypted_content": "EsMHCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDF2QSrO8ZtEDfNvexRoMBLg2AgRqSHTrYErlIjATmBdDbNcgrLtTCo90X17xKnSjHut5P//coxjjDfovrZIrrH7FCeTRKWRIv5e7skkqxgbsUF2JQ0/GPeqcJ3Zp0m+ek2/iqO4sQ9gcarZuqcmiJRXWvu1YwESbXfQc7Dw/LEPTe/YE+KfOVsZ2VjeFyWWX6Mi6ZrBKD4fJvki30kiisvrSoGg0upSaBrsc9x/yNB8PYFj04sJROmKa3Z6FRzubbUxyHYCJ/NJIcaESH103CluKNvlZPzAd1jYyKoM44fJBOr9tFE/sUsGmC84hbBOGT8jw05/myLertHUxodgb5iuiWlDFPRPxVYwx92vyKPXQIDvToDQ8Mf4IyQVK0l4KfKT67qKo/yDcjsai2YrbwmEL9WWgiNsPPO/6Ge9I0bg8aPGbf09DRW/0zajPk1/8xjNkmgf6Vb/Pk4V5ttwMBBBf/v+UbDMeKTbk2hI2wjlUyEBa4ME4lXx09YH85HN3eJOq0odnqbOF1TKmBzvJ06QbkChU9heo6rX93ZwlYI4mFFpg1lTORGUxf6sC4ZnPEvR7MXXV/6QWca+KiOua2ax2GBIUqPFfbzfWGFB9pEcSpFo0rKWJz+fT+rt4JagpJYtq9Z/jM92slg3OJqGJsQfPrUXOLf8JxnPJOIo2uo3ZMq8JqHaF+zOT5TyiioITeMRY1dAMAhCU8GSN3QBFCXoEjAch1PvOll3BUNZlIUBRz9BhVFEOodXgL69LGf6J36atuOOVP2gw9ByfdvGrppFqasGl76SHSqTH6idfeg2B52VNrZzndkig4nxr3bvSQgwxCJQud+4PZIyVXPRP/c/GUo3+LmlXuIPxY32KQMAXXxZjlqeOQTMUGvBCYtpNddMYw9hNCU/Tk28n7RHpZ3n5fFTjaJIwtmgsEB44+W6yqr1FYg9x6wx8MqP/VOyFtlefrAMyRFx2ATrYV2wh12bdmZdiIsDawCOlpbB5tDCzHZoYWKTkk4eEn2+zk5FPXfDpWqVWN9DVFTKiaZ4+TnzBwWv0h6LkVCims579MvaE2wRfKep/7Lh349E1qPSRscA9VB6VRMpDq7DpYoT6+sG0LkenrhzaM5N1roY+bS6FPWPlQESfgdzstfCOqTz08CorBqcMeAFnkI/FMPMP7O8Ggljdy6ZHcMS/I6wPM8hpCE1MtelljNpOGsqaKhTX+HrMVnpMGAM=",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "List of every international school in Nanjing",
+                "url": "https://www.international-schools-database.com/in/nanjing",
+                "encrypted_content": "EtUICioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHACNpEU56xhoxcdlBoM0vwtyA6jM/o3unC5IjAeHU9eVMGY9zctJwEkgFd1z18jOCSIb1ULaS7WZp0M9tpV3kRQuUu4ZG8Al/A4wSkq2AdI34+cbPd3AZ/CSWTSsuteBRlQKp6Mq4ikgGyIdMwOGytn5/6TR8lKfMjIwl+N2j6vazWlO2PNs4FD420g37eWZn9as4b3lConi5kifCE5BmEMveZ8t6Xrx+Ofwy7aMRv9Kx9UUlXgZj4qYOAGzL0S92qjmV4PPFCz1X0WSpU1HU0QjL2W9Ia+aQWSN53SnY+HOYksinOvbuTWCXgpskj81u5FWj0ehMAQJXUWLuM+phlS/nXUcS0L112sGdvvAnh53N1RcifLuZzd7qdIysFg9YbfFqtXVYDO9+U2upLwDWYnHssmbm2CMNnl5lbjuMF5cj0m1wziA88k63ITOL3rGwa7XycEpZlD++zBJ11cpOcO0lnttbQgNO+W+2/n9Tq4u+iYU95UNLVK9khgEZZCHHJnoOaGhWj++194xDGeiSrzkomT0D+9FPO+2YcMtRJSVl7pukR3vorloaU4ezsPtZjol0QKXkG4B7y0fgQOvThC8JryNXovDFCN/wHnca79yeq2yGo517MEHjzDgLZPrcXcQ0oYtvS77HaDMZ2Vr7RgIAlkJ4T6fLePtxh41UK3KjHpUf/27z/AcRECT5s1Y7rDHv04YUsyQ60MnGUwQjhShPk2/V64mGZMGGBu/VhMAsY4unHjMCsObGpAgtjspvgC7vzSu69TxupqvWya9gQh3aApxvx4Wbxr/yf+KcRNTCtHxDGnW2jQ6a8K5QrGH3XlnAooVqHBQlAvGDhfaSs93rjWiuw9UUnxmbW517RaXmbZ7IJlT2rOfqTX+WxrB+4bW0URHqzrmRgMW+ccBHEW/qRRIAIUzdErJLOaBViuW2OG29qn1XbIfqG5hHRAuDbGl05SRB/ihHVSGs7nAPcj/hrMB/jQwXeRO3Y905kHOMDf3xq3cTjg5EOph1dPB3VheAQ5CDhlAT1h8oWeK+1mVXumrz//+B3M9n0UWBNLCNBA3Eh+WvcPIJzjOiWQZz6ZrLJeIb1LJUTuO94GrxFOqtlZg7i+zNjlYkhh+jsYqgJmD8pAiNuPqPJnx9FcHgKdYF9FFgqvxHvRMPOXFH7aeM1fmhlU+Hakc/Z1YvDt5b4e2yMs7yA1xJqFJykyIe2Gz6H/Ch+A12ppgwFp52rFa3HkYixolqjZnYLtfePVmEWVSIUKOd3cC2zK3HGPiFd9UxGI/om5OtuXrVOi3vl6qLpuidjv/Nj4W4Y5+F20yHZErj89CiPmzTJhkOo6FVjUmemaHLlGfVJaaIxghJlWhVGXsgYqULA7w4bbU/CQ5amKO8rDa8GPdhRxe3hRiOlQ8A6K0wMYAw==",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMLWsXqqe4PJhLfbsxoMJ/dMke8OQtGSSyGSIjDfT2TtE4RF6cWvzQ/bBXf9l8B2e2ACuVb5b28fTn/pSE3MlkWAPJi2QioQTwQXQ9gqEiwsP48d5bfFNPVmqJ4DP4BUGRgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01MiPx1SBWtEFtS28ZLDAiQy/cell.py\", line 11, in <module>\n    print(r.get('title'), r.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_018GAC9pynERZKdgPViJRGfp",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r1), str(r1)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_018GAC9pynERZKdgPViJRGfp",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'> [{\"type\": \"web_search_result\", \"title\": \"Admissions\", \"url\": \"https://www.nordangliaeducation.com/bsn-nanjing/admissions\", \"content\": \"# Admissions\\n\\nAt our outstanding international school in Nanjing, we offer places all year round to children aged 2-18.\\n\\nEvery family\\u2019s application process is different, so we\\u2019d encourage you to get in touch with our admissions team to find out how it\\u2019ll work for you.\\n\\n## speak to our admissions team\\n- We\\u2019ll explain our The British School of Nanjing admissions process at the start and help you through each stage.\\n\\n## STEP-BY-STEP ADMISSIONS PROCESS\\n\\nGet in touch with our admissions team to find out how your child will thrive here. We can answer any questions, talk about your child\\u2019s needs, and take you through the application process.\\n\\nAdmissions | The British School of Nanjing - Feature Quote\\n\\nTHE BRITISH SCHOOL OF NANJING ADMISSIONS\\n\\nA reference from your child\\u2019s current school.\\n\\nYou can find out more about the application process, and book a tour, by getting in touch with The British School of Nanjing admissions team.\\n\\n**How long does The British School of Nanjing\\u2019s admissions process take?**: It depends \\u2013 each child\\u2019s application process is unique.\\n\\n**How does the process differ if my company is paying the fees?**: If your company is paying your child\\u2019s fees, our admissions and finance teams are happy to deal with them directly. Please let us know as early as possible in the application process.\\n\\nWe\\u2019ll assess your child\\u2019s English proficiency during the application process and set up a personalised programme that will get them up to speed.\\n\\nAdmissions: +86 (025) 5210 8290 admissions@bsn.org.cn\\n\\nThe British School of Nanjing 16 Han Fu Lu Jiangning Nanjing, 211106\"}, {\"type\": \"web_search_result\", \"title\": \"The British School of Nanjing\", \"url\": \"https://www.nordangliaeducation.com/bsn-nanjing\", \"content\": \"JOIN OUR THRIVING COMMUNITY: Send us your child's application. \\u00b7 **We\\u2019ll invite your child to do a short assessment, either in person or online**. \\u00b7 If everyone\\u2019s happy, **our admissions team will confirm your child\\u2019s place**.\\n\\n# THE BRITISH SCHOOL OF NANJING (BSN)\\nPart of the Nord Anglia family of premium schools, BSN is the longest running British international school in Nanjing with a remarkable record of academic success.\\n\\n## EMBRACING INNOVATION IN THE CURRICULUM\\nWe have a 100% pass rate at A-level. And in the past two years, two in three BSN students have achieved scores high enough to gain entry to the world\\u2019s top 100 universities.\\n\\n### JOIN OUR THRIVING COMMUNITY\\nOur admissions team will make sure you get a warm welcome and guide you through the application process.\\n\\n- Get in touch with our admissions team today \\u2013 they\\u2019ll talk you through the process and answer any questions.\\n- Come and see the school in person \\u2013 or join us for a virtual discovery tour.\\n- Sen\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CayVgwfLiWJJvyATtJnVn5",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nfor r in json.loads(r1)[1:]+json.loads(r2):\n    print(r.get('title'), r.get('url'))\n    print(r.get('content','')[:2000].replace('\\n',' '))\n    print('---')\n"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01CayVgwfLiWJJvyATtJnVn5",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "The British School of Nanjing https://www.nordangliaeducation.com/bsn-nanjing\nJOIN OUR THRIVING COMMUNITY: Send us your child's application. · **We’ll invite your child to do a short assessment, either in person or online**. · If everyone’s happy, **our admissions team will confirm your child’s place**.  # THE BRITISH SCHOOL OF NANJING (BSN) Part of the Nord Anglia family of premium schools, BSN is the longest running British international school in Nanjing with a remarkable record of academic success.  ## EMBRACING INNOVATION IN THE CURRICULUM We have a 100% pass rate at A-level. And in the past two years, two in three BSN students have achieved scores high enough to gain entry to the world’s top 100 universities.  ### JOIN OUR THRIVING COMMUNITY Our admissions team will make sure you get a warm welcome and guide you through the application process.  - Get in touch with our admissions team today – they’ll talk you through the process and answer any questions. - Come and see the school in person – or join us for a virtual discovery tour. - Send us your child's application. - We’ll invite your child to do a short assessment, either in person or online. - If everyone’s happy, our admissions team will confirm your child’s place.\n---\nEntry Requirements https://www.nordangliaeducation.com/bsn-nanjing/admissions/entry-requirements\n**The final step is to invite your child to an assessment**. Every family’s application process is different, so we’d encourage you to get in touch with our admissions team to find out how it’ll work for you.  # THE BRITISH SCHOOL OF NANJING'S ENTRY REQUIREMENTS ## OUR ADMISSIONS AND APPLICATION PROCESS BSN is proud to be an all-inclusive school. This means we’re open to any student who will benefit from our outstanding teaching and learning. After making an initial enquiry, you’ll either visit us in person or take a virtual discovery tour. You’ll then fill in an online application form. The final step is to invite your child to an assessment.  ## OUR ENTRY REQUIREMENTS Below, you’ll find key information about The British School of Nanjing’s entry requirements and admissions process.  Start dates  There are no dates and deadlines to work to – we’ll fit around your needs. We also understand that plans and schedules can change during the application process.  Applications  You can complete our simple online application at any time during the year. We’ll let you know as soon as we’ve received your form.  Restrictions in China mean we can only accept students with foreign passports. This includes Macau, Hong Kong and Taiwan. When you apply, we need various documents from both you and your child, including visas. Our admissions team will give you more details.  BSN is primarily a non-selective school, but we do assess every child who joins us in Year 4 or above. We do this to make sure our school is right for them.  English as an Additional Language (EAL)\n---\nThe British School of Nanjing in Nanjing https://www.doris.school/schools/china/the-british-school-of-nanjing\nAlong with the online form, send supporting documents. … **Your child will complete a short assessment, including an English test**. The assessment helps determine fit for BSN and ensures a good match. The results guide next steps in placement.  # The British School of Nanjing ## Sent to the school ### The British School of Nanjing has been told you're interested. Schools typically respond within 5 business days. We'll follow up if they go quiet.  **Consider booking a tour before committing to apply** — most schools prefer it. You can also book a virtual tour or just a chat to learn more.  ### About this profile The British School of Nanjing is a long‑standing British international day school perched on Cuiping Mountain, serving students aged 2 to 18. It follows the English National Curriculum from Early Years through Upper Secondary, with IGCSEs and A‑levels, and is part of Nord Anglia Education.  ### Admissions 1. Make an enquiry. Reach out to the admissions team to learn how your child will thrive here. They answer questions, discuss needs, and guide you through the application process. This initial contact helps you understand the admissions timeline. 2. Take a tour. Join an in‑person or online tour to experience BSN. You'll meet a teacher from your child's year group who explains how learning happens. The tour provides a feel for the campus and school life. 3. Send us your application. Applications are open all year round.  Along with the online form, send supporting documents.  Assessment.  Starting school.\n---\nTuition Fees https://nordangliaeducation.com/our-schools/china/nanjing/british/admissions/entry-requirements-and-tuition-fees\nAt BSN, we accept applications throughout the school year. Contact our admissions team today to arrange a visit to our campus or book a virtual tour.  # TUITION FEES ## THE BRITISH SCHOOL OF NANJING'S FEES: 2026-27 ### Tuition fees Fees are normally billed in RMB, however, tuition can also be accepted in USD, GBP or EUR.  Application Fee: RMB 2,500 Non-refundable and payable upon applying to the school.  ## STEP-BY-STEP ADMISSIONS PROCESS ###### Make an enquiry Get in touch with our admissions team to find out how your child will thrive here. We can answer any questions, talk about your child’s needs, and take you through the application process.  ###### Send us your application Applications are open all year round. As well as our online form, you’ll need to send us some supporting documents, too. We’ll let you know we’ve received your form straight away.  ###### Starting school Once their place is confirmed, we’ll make sure your child gets a warm welcome. We’ll send you information before they start and invite you to a family induction day. This is a great opportunity for your child to take part in activities with their new classmates, and to speak to our brilliant student ambassadors.  ADMISSIONS ARE OPEN  At BSN, we accept applications throughout the school year. Contact our admissions team today to arrange a visit to our campus or book a virtual tour.\n---\nThe British School of Nanjing https://search.openapply.com/schools/the-british-school-of-nanjing\nAdmissions Contact: Matthew Shephard  ##### Nanjing China  The British School of Nanjing  ### The British School of Nanjing  ##### China Jiangsu Nanjing  ### The British School of Nanjing #### Description - Day school tuition No Information - Grades for day school Pre-K/Reception - 12th Grade/Year 13  - Boarding school tuition No Information - Curricula UK National, IGCSE, Host Country's National - Type Co-ed  ### Academics ### Admissions Information  - Assigns homework Yes - Use of technology in the classroom Yes - Language of instruction Chinese, English - ELL support Yes  - Native English teachers Yes  ### School Life ##### The British School of Nanjing **Head of School**: Matthew Shephard **Address**: 16 Hanfu Rd, Jiangning Qu **City**: Nanjing **State/Province**: Jiangsu **Country**: China **Admissions Contact**: Matthew Shephard **Admissions Phone Number**: +86 2552108987 **Admissions Email**: admissions@bsn.org.cn **School Website**: www.nordangliaeducation.com/our-schools/china/nanjing/british\n---\nThe British School of Nanjing https://www.seriousteachers.com/globallinks/9800/the-british-school-of-nanjing\nThe British School of Nanjing (International Schools) in Nanjing Shi, Jiangsu Sheng, China. … The admission process includes an application, a short assessment, and confirmation of the child's place.  The British School of Nanjing (International Schools) in Nanjing Shi, Jiangsu Sheng, China. The British School of Nanjing (BSN) is part of the Nord Anglia Education family and is the longest running British international school in Nanjing.  # Teachers Join Post & Hire The British School of Nanjing BSN offers a personalized approach to education, following the English National Curriculum, including IGCSEs and A-levels. The school emphasizes academic excellence, with a 100% A-level pass rate and a focus on developing confident, independent learners through innovative teaching and exceptional learning experiences.  **Category:** International Schools  **Location:** Nanjing Shi, Jiangsu Sheng, China  ## What curriculum does the school follow? The school follows the English National Curriculum, including IGCSEs and A-levels.  ## What is the school's admission process? The admission process includes an application, a short assessment, and confirmation of the child's place.\n---\nThe British School of Nanjing - Education Destination Asia https://educationdestinationasia.com/school/the-british-school-of-nanjing\nApplication fee  # The British School of Nanjing Nanjing, China  Level of Education  Preschool/Kindergarten  Primary Schools  Secondary Schools  Pre-University  Curricula Offered  British  Ages/Levels Taught  3 - 18  School Year Schedule  August - June  Uniform  Yes  Transport  Yes  The British School of Nanjing Fees Structure  Admission fee  RMB 201,130 - 204,196  Application fee  RMB 1,600\n---\nBritish School of Beijing https://en.wikipedia.org/wiki/British_School_of_Beijing\n- BSB Sanlitun in 2022  Location - No. 5 Xiliujie, Sanlitun Road [Sanlitun] No. 9 An Hua Street [Shunyi] Beijing, China  - School type: School for children of foreign personnel  - Website: The British School of Beijing  The British School of Beijing (北京英国学校) is a private  The school was founded in 2003.  Originally both Nord Anglia campuses in Beijing, Shunyi and Sanlitun, were operated as a single school, The British School of Beijing.  The school offers a German Primary Programme for German-speaking primary school students in Klasse 1 to 4 to study core subjects in German, following the Thuringia Curriculum, whilst integrating into the English National Curriculum with non-core subjects and a variety of whole school activities.  As of 2011 the whole BSB school had 1,150 students from 50 countries.  The British made up the largest group of students at BSB, about 25% of the total.  Council of British International Schools (COBIS) Independent Schools Inspectorate.  [↑](https://en.wikipedia.org/wiki/British_School_of_Beijing#cite_ref-10) [\"2016 School Choice Guide Focus: The British School of Beijing, Shunyi (BSB)\"](http://www.beijing-kids.com/blog/2016/01/07/2016-school-choice-guide-focus-the-british-school-of-beijing-shunyi-bsb-%E5%8C%97%E4%BA%AC%E8%8B%B1%E5%9B%BD%E5%AD%A6%E6%A0%A1/).  [\"The New British Schools in Beijing\"](https://search.ebscohost.com/login.aspx?direct=true&db=hft&AN=509815676&site=eds-live&scope=site).  [What is life like at the British School in Beijing?](https://www.bbc.co.uk/schoolreport/26751021)\" [BBC News](https://en.wikipedia.org/wiki/BBC_News)School Report.\n---\nThe British School of Nanjing in Nanjing https://www.doris.school/schools/china/the-british-school-of-nanjing\nAnnual tuition at The British School of Nanjing ranges from RMB 121,919 to RMB 286,640 for 2026/27. … RMB 15,686 · Term 1 RMB 6,274 · Term 2 RMB 4,706 · Term 3 RMB 4,706.  # The British School of Nanjing ## Sent to the school ### About this profile Fees RMB 121,919 - 286,640  Ages 2 - 18 years  ### Governance and Ownership Fees  Annual tuition at The British School of Nanjing ranges from RMB 121,919 to RMB 286,640 for 2026/27.  **Tuition fees (Academic year 2026–27)** - Pre‑Nursery (half day, age 2): Term 1 RMB 48,768 · Term 2 RMB 36,576 · Term 3 RMB 36,576 · Total for year RMB 121,919 · Annual payment (single payment) RMB 118,262. - Pre‑Nursery (full  day, age 2): Term 1 RMB 88,668 · Term 2 RMB 66,501 · Term 3 RMB 66,501 · Total for year RMB 221,671 · Annual payment RMB 215,020. - Nursery (age 3): Term 1 RMB 88,668 · Term 2 RMB 66,501 · Term 3  215,020. - Year 1–3 (age 5): Term 1 RMB 105,130 · Term 2 RMB 78,848 · Term 3 RMB 78,848 · Total for year RMB 262,825 · Annual payment RMB 254,940. - Year 4–6 (age 8): Term 1 RMB  RMB 15,686 · Term 1 RMB 6,274 · Term 2 RMB 4,706 · Term 3 RMB 4,706. - Tier 3: Annual RMB 18,116 · Term 1 RMB 7,274 · Term 2 RMB 5,435 · Term 3 RMB 5,435.  {\"name\":\"The British School of Nanjing\",\"makesOffer\":[{\"name\":\"Year 2 (age 6) – yearly_fee\",\"price\":262825,\"priceCurrency\":\"CNY\",\"description\":\"Total for year: RMB 262,825. Annual upfront payment: RMB 254,940.\"},{\"name\":\"Year 1 (age 5) – yearly_fee\",\"price\":262825,\"priceCurrency\":\"CNY\",\"description\":\"Total for year: RMB 262,825.\n---\nBest International Schools in Nanjing: 2026 Guide for Families https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-in-nanjing-2026-guide-for-families\nPractical point: BSN publishes a full fee table for 2026-27, accepts payment in RMB, USD, GBP or EUR, includes lunch for full-day students, and charges a one-off EAL fee of RMB 18,000 for students who need extra English.  # Best International Schools in Nanjing: 2026 Guide for Families **Quick answer: What are the best international schools in Nanjing?** For foreign passport holders the main choices are Nanjing International School (full IB, non-profit), The British School of Nanjing (English National Curriculum to A level), EtonHouse in Jianye and BASIS in Xianlin. Published 2026-27 full-day tuition at NIS and BSN runs from about RMB 190,000 to 293,000 a year.  ## The shortlist, and who each school fits ### The British School of Nanjing BSN opened in August 2007 to teach the children of expatriate families and now takes pupils aged 2 to 18.  The Nanjing government listing says around 40 nationalities are represented, that BSN is a member of COBIS, and that the school runs 10 bus routes. It is part of Nord Anglia Education.  Best for: British and Commonwealth families and anyone heading to UK universities. Practical point: BSN publishes a full fee table for 2026-27, accepts payment in RMB, USD, GBP or EUR, includes lunch for full-day students, and charges a one-off EAL fee of RMB 18,000 for students who need extra English.  ## Frequently asked questions ### Which international school in Nanjing teaches A levels? The British School of Nanjing follows the English National Curriculum with IGCSEs in Years 10 and 11 and AS and A levels in Years 12 and 13.\n---\nNanjing International School: Fees, IB & Admissions 2026 https://blog.alifaedtech.com/nanjing-international-school/\nChoose BSN for a British curriculum with IGCSE and A-Level qualifications. Also, consider it if you have connections to UK universities.  # Nanjing International School (NIS): Fees, Curriculum & Admissions 2026 ## Introduction Annual fees for 2025–2026 run from RMB 252,716 at the primary level to RMB 268,956 for Grades 11–12.  ## NIS vs. the British School of Nanjing vs. EtonHouse |  | NIS | British School of Nanjing (BSN) | EtonHouse Nanjing | | --- | --- | --- | --- | | Curriculum | IB (PYP, MYP, DP) | British NC, IGCSE, A-Level | IB PYP, British NC, Cambridge | | Ages | 3–18 | 2–18 | 2–18 | | Annual Fees | RMB 252K–269K | RMB 213K–273K | RMB 115K–181K | | School Type | Non-profit | For-profit (Nord Anglia) | For-profit (EtonHouse Group) | | Class Size | Max 20 (primary) | Max 20 | Max 20 (KG), 24 (older) | | Who Can Apply | Foreign passport only | Foreign passport only | Foreign passport only | | Key Differentiator | Only full IB school in Nanjing | Longest-running British school | Most affordable private option |  **Choose BSN for** a British curriculum with IGCSE and A-Level qualifications. Also, consider it if you have connections to UK universities.\n---\nThe British School of Nanjing (Fees) https://www.edarabia.com/lf/?id=377477&ins=the-british-school-of-nanjing\nAverage Tuition Annual Fees: (CNY) 206,750 - 264,800 … Fees at our international school in Nanjing are normally billed in RMB.  # The British School of Nanjing - **Average Tuition Annual Fees:** (CNY) 206,750 - 264,800  FS1 · KG1/FS2 · KG2/Y1 · G1/Y2 · G2/Y3 · G3/Y4 · G4/Y5 · G5/Y6 · G6/Y7 · G7/Y8 · G8/Y9 · G9/Y10 · G10/Y11 · G11/Y12 · G12/Y13  264,800 · 264,800  Fees at our international school in Nanjing are normally billed in RMB. However, you can also pay for your child's tuition in USD, GBP or EUR.  ### Tuition Fees | Grade | Age on 31st August | Termly Fees / Term 1 | Termly Fees / Term 2 | Termly Fees / Term 3 | Total Fees | Annual Payment Fees | | --- | --- | --- | --- | --- | --- | --- | | Elm (half day) | 2 | 46,892 | 35,169 | 35,169 | 117,230 | 113,713 | | Elm (full day) | 2 | 85,258 | 63,943 | 63,943 | 213,145 | 206,750 | | Fir | 3 | 85,258 | 63,943 | 63,943 | 213,145 | 206,750 | | Oak | 4 | 85,258 | 63,943 | 63,943 | 213,145 | 206,750 | | Year 1-5 | 5-10 | 105,130 | 78,848 | 78,848 | 262,825 | 245,940 | | Year 6-9 | 10-14 | 107,406 | 80,554 | 80,554 | 268,515 | 260,459 | | Year 10-11 | 14-16 | 109,196 | 81,897 | 81,897 | 272,990 | 264,800 | | Year 12-13 | 16-18 | 109,196 | 81,897 | 81,897 | 272,990 | 264,800 |  ### Additional Fees Application Fee: RMB 2,500 Non-refundable and payable upon applying to the school.  Refundable Deposit: RMB 12,000 Payable to secure a school place once a formal offer has been made by school.\n---\nFee Schedule for 2025-26 https://www.british-school.org/wp-content/uploads/2025/05/Fee-Schedule-for-2025-26.pdf\nAdmission fees are non-refundable at any time.  **Reception**  **Registration fee** **(valid for one academic session)** **30,000** **30,000** **30,000** **30,000** **30,000**  **Fee payable at the time of admission**  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | | Development fee (one-time fee) \\* | 625,000 | 625,000 | 625,000 | 625,000 | 156,250\\* | | Admission fee (one-time fee) | 150,000 | 150,000 | 150,000 | 150,000 | 150,000 | | Society fee (annual fee per family) | 5,000 | 5,000 | 5,000 | 5,000 | 5,000 | | Refundable deposit (equivalent to one term’s tuition fee) | 245,000 | 216,000 | 289,000 | 289,000 | 346,000 | | Book deposit | - | - | 2,000 | 3,000 | 3,000 | | Term fee (one term fee payable at the time of admission) | 245,000 | 216,000 | 289,000 | 289,000 | 346,000 | | Total fee payable at the time of admission | 1,270,000 | 1,212,000 1,360,000 1,361,000 1,006,250 |  |  |  | | Term fees (payable every quarter thereafter) | 245,000 | 216,000 | 289,000 | 289,000 | 346,000 | | Late fee | INR 1000/- per week (or part thereof) per student after the |  |  |  |  |  **Bus fee** **(optional service)**  Gurgaon Route  **NA** **TBC**  Delhi Route  NA · TBC Lunch fee (optional service) · INR 260/- per day (meal)  **Description of the fee schedule (2025 - 2026)**  siblings in/joining the school, a concessional development fee of 60% will be charged for the third sibling  **Admission fees** are non-refundable at any time.  **Refundable deposits:** At the time of admission to the school, a deposit of one term’s fee s is payable in addition to\n---\nBest International Schools in Nantong: 2026 Guide for Families https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-in-nantong-2026-guide-for-families\nNord Anglia Education lists starting fees from RMB 72,000 at its Suzhou bilingual campus to RMB 154,000 at its Shanghai one, and **RMB 213,145 at the British School of Nanjing**.  # Best International Schools in Nantong: 2026 Guide for Families ## International school fees in Nantong The only published benchmarks are Nord Anglia Education's starting fees in the region: RMB 72,000 a year at its Suzhou bilingual campus (roughly US$10,000), RMB 154,000 at its Shanghai bilingual campus (roughly US$21,000) and RMB 213,145 at the British School of Nanjing, an international day school (roughly  ## Frequently asked questions ### How much do international schools in Nantong cost? Nantong schools do not publish full fee schedules we could verify. Nord Anglia Education lists starting fees from RMB 72,000 at its Suzhou bilingual campus to RMB 154,000 at its Shanghai one, and RMB 213,145 at the British School of Nanjing.\n---\nThe British School of Nanjing - Education Destination Asia https://educationdestinationasia.com/school/the-british-school-of-nanjing\nRMB 200,204 - 201,130  # The British School of Nanjing Nanjing, China  Level of Education  Preschool/Kindergarten  Primary Schools  Secondary Schools  Pre-University  Curricula Offered  British  Ages/Levels Taught  3 - 18  School Year Schedule  August - June  Uniform  Yes  Transport  Yes  The British School of Nanjing Fees Structure  Admission fee  RMB 16,000  Annual fee (6th Form)  RMB 214,620  Annual fee (Pre-kindergarten)  RMB 99,900 -178,526  Annual fee (Primary)  RMB 200,204 - 201,130  Annual fee (Secondary)  RMB 201,130 - 204,196  Application fee  RMB 1,600\n---\nThe British School of Nanjing: Details and Fees https://www.international-schools-database.com/in/nanjing/the-british-school-of-nanjing\nYearly fees: from: 元221,671 to: 元286,640  ## The British School of Nanjing Verified badge - Based on 10 different criteria including price and location - Fees personalised to your childrens’ ages  The British School of Nanjing  City Nanjing  Curriculum British  Leaving qualifications IGCSE and A-Levels  Language of instruction English  Age Range Ages 2 to 18  Yearly fees: from: 元221,671 to: 元286,640  ### RGS Guildford Nanjing #### IB, British, and Chinese curriculum, Ages 6 to 18 Yearly fees not public  ## Quick summary of key school information - **Yearly fees:**: from: 元221,671 to: 元286,640  School fees range in CNY valid for the academic year 2026/2027  {\"name\":\"The British School of Nanjing\",\"offers\":{\"priceCurrency\":\"CNY\",\"lowPrice\":221671.0,\"highPrice\":286640.0},\"typicalAgeRange\":\"2-18\"}\n---\nList of every international school in Nanjing https://www.international-schools-database.com/in/nanjing\nThe British School of Nanjing is the longest running British school in the region. … 2 to 18: Yearly fees - 2026/2027  # Personalize your search! ## The British School of Nanjing The information has been verified and approved by The British School of Nanjing. The British School of Nanjing is the longest running British school in the region. At its idyllic mountainside campus, your child will enjoy life-changing learning experiences and achieve outstanding academic results.  Curriculum **British**: Language of instruction **English**: Ages **2 to 18**: Yearly fees - 2026/2027 **from: 元221,671 to: 元286,640**: Your personal score  ## Find Schools in Other Cities #### EtonHouse International School Nanjing **IB, British**: Language of instruction **English**: Ages **2 to 18**: Yearly fees - 2026/2027 **from: 元124,000 to: 元181,000**  {\"name\":\"The British School of Nanjing\",\"offers\":{\"priceCurrency\":\"CNY\",\"lowPrice\":221671.0,\"highPrice\":286640.0}}\n---\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSwwUKEAgTGAI4AUIIdGhpbmtpbmcSDPRS1eYbCYVNBuKzxRoMNa4gc6PRXWx0hqWmIjDX5speguxHSeslDm6g8YbLIYT9GYWQnynE8Pv4cniGKEu4fkcywUs2g5Qxwtcze8kq4ARy0A8EXi5QhCufrYIWAQ4eJgMKfDugkXpOikbl7pDOvWIy1zWNxQau3gzowJ29A6j+nkDBLGD2Zeo6AhK9mHxks7YAY3z9OdZjrvQ9/ggDwGsuYA4lcJHOWjB2JB4hnpgcrt6Gqrea6MFu7ucc1nCA384/JAwfPm6XpUFPil5z3jbVTbDlvbfqnYxk40wPsgNUjT6qkyiF8/UOMOtNQxWFV2ERqXvmeV3Hl8jIIjHQ2m6lxpVJWKFlKuxYLwEV3RYHAxNVF/PNW0H76EkJCdz3565K0Pte+3jpGjJxNjC6Be49HIH2jSZAvmnjRpxGjlyslJvIGOK9Jj9PhZQyjFfSLp/cu1plqCehfoP4XjJLfTH5qcokERxc9IIuuDI5695mePzq08mxSvqLYUsh/lvwVuTU5wT1zhQ5hPYDYU6dBuTeN1OkGZcIkVqvHgkk3org6EDhwQLlkIIssfRfCJbrHBtauOwb8kYq5QI+EbqEqtzmO8PcBlsR4q7wjnCiEw/y9NMGz742e5C/QTnm9a7BgvfoBZQ26HLVTX/g5rCkLAUcXlbTuwKJjvaE8tZMUAe/qJ2DoXloRg59Qhp0jXUiOrStt5JbIPU/xbEogZNWHuOTbOZfq7IEdEMcCgJT5LKDQfnk5NgXEt3ceQC7dF1NcArUpvlmkfpdNnZCRIhtlenWhaJEN8AHvZKaATb2Bj8mZ61T5TqHoZXeN7Bufxv8pySc5+jBzzJIn91xhbsv8WB2xEhfWMFQvgE+KtbDeHbRZOt7F/YbC1m/5xK3Y1WRFlMa3OVrGWqozU5rJNpsfBgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Fb1y1w1sFzV2tRun8qJo4Y",
+            "name": "code_execution",
+            "input": {
+              "code": "d=json.loads(r2)\nfor r in d:\n    if 'doris' in r['url']:\n        c=r['content']; i=c.find('Tuition fees (Academic')\n        print(c[i:i+3000])\n"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01Fb1y1w1sFzV2tRun8qJo4Y",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "Tuition fees (Academic year 2026–27)** - Pre‑Nursery (half day, age 2): Term 1 RMB 48,768 · Term 2 RMB 36,576 · Term 3 RMB 36,576 · Total for year RMB 121,919 · Annual payment (single payment) RMB 118,262. - Pre‑Nursery (full\n\nday, age 2): Term 1 RMB 88,668 · Term 2 RMB 66,501 · Term 3 RMB 66,501 · Total for year RMB 221,671 · Annual payment RMB 215,020. - Nursery (age 3): Term 1 RMB 88,668 · Term 2 RMB 66,501 · Term 3\n\n215,020. - Year 1–3 (age 5): Term 1 RMB 105,130 · Term 2 RMB 78,848 · Term 3 RMB 78,848 · Total for year RMB 262,825 · Annual payment RMB 254,940. - Year 4–6 (age 8): Term 1 RMB\n\nRMB 15,686 · Term 1 RMB 6,274 · Term 2 RMB 4,706 · Term 3 RMB 4,706. - Tier 3: Annual RMB 18,116 · Term 1 RMB 7,274 · Term 2 RMB 5,435 · Term 3 RMB 5,435.\n\n{\"name\":\"The British School of Nanjing\",\"makesOffer\":[{\"name\":\"Year 2 (age 6) – yearly_fee\",\"price\":262825,\"priceCurrency\":\"CNY\",\"description\":\"Total for year: RMB 262,825. Annual upfront payment: RMB 254,940.\"},{\"name\":\"Year 1 (age 5) – yearly_fee\",\"price\":262825,\"priceCurrency\":\"CNY\",\"description\":\"Total for year: RMB 262,825.\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQStgYKEAgTGAI4AUIIdGhpbmtpbmcSDFQA5zemGKvApu209BoMBSFX0fPuT/e/dqK8IjCpmdFnBzLzD8mX8HfUkBJ4qpw7g1WFrWtAWqR8B09ZivTmnzKtdNBPeR7ydFsSR6gq0wXDLkFgUU/yFwjKPYQHV3bp7ILN8u+ZEukdYcRB/Dq0wHjC55DSBgbybrLKPMnPn4ArSqgxL22nb0wCvf8giT6v0M/+C1ae/lTv5TTwhS29ojifayUfjghKERg7qeRNNRgPQY0dR1tGZ5oVTOlYWX/hblcmKuTAnps6ZQU51kH3kCPffzxeO2JjuujbNaublwuV66eBbX3h7RaC+66PSHcOkCuZtqLlOcEgazI/towLBuDhmNMGfO4cQ2mcW8KXEFDbjz/smrwLH1Y4jAETzbKdMFNLMtZRMln9ukW2asUnEGIbcOLUp42ZRs+usJzfscvmVylbrCSRhxyRXxfU/4Bd9gDUEaBkesJwtAtYn38Zpzujfitpi3da1j8T9X6GXOeo6mIhzFX4pcIh4vthoyArzhp4m5kyIM8Udikxeso/XO6ZXlJh54FeiT8aIr4ii17/lW1Q7R621zNCpfs1CMpbQe8CZu5EOAfKPM6DAO7HT7wdxt7GSOC/M0fUDaXkN1E8FYM9h9dvvTkgYIx8PKJD/I0p7ual27Ni77U4lbZ6h3Fb0ihEPrOmuU7H0XHpl50DcaIt0f7IxnVHPn3GTkJL6OVdXj1cRRZaVbOSEe9tU02BWFvC7UkwwtxtY9IgM4RVpaGHfq/rKwNSyGtdkib4okwJIBJBOUoRduNP9pSTs/5a2PaRZRJfItvTwNPk5G6t8JJdOALdm20gkus9u+RzoE9nFgx+a/Tg9G104kzNARff5rjuiOIM2wlnQsOrg/u9fExNUFwyoPY7m/r/63upviTTX7jHzcibCtjftSeGHSWhTe6gc+sn9XzOXaQrbyf/70RHLCAFDjrTOXV5TG6ynfNezLm5Sjwn5kj/+eMWCk9MVIwWZK6P2m3dK3m5UvhRycEep9Mma1n/liVFthhyC6BnAuLvP38wFQvKYRu5bs/uAq0kE645QU1tWijATDk2xz8YAQ=="
+          },
+          {
+            "type": "text",
+            "text": "The British School of Nanjing (BSN) is a Nord Anglia school that takes students aged 2 to 18, and it accepts applications all year.\n\n## Admission process\n\n**Who can apply:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Restrictions in China mean the school can only accept students with foreign passports. This includes Macau, Hong Kong and Taiwan."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "You'll need to provide various documents for both you and your child, including visas. The admissions team will tell you exactly what's required."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**Steps:**\n1. **Contact the admissions team.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "They'll explain the process and answer any questions."
+          },
+          {
+            "type": "text",
+            "text": "\n2. **Tour the school.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "You can visit in person or join a virtual discovery tour."
+          },
+          {
+            "type": "text",
+            "text": " On the tour, "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "you'll meet a teacher from your child's year group who explains how learning happens."
+          },
+          {
+            "type": "text",
+            "text": "\n3. **Apply online.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Along with the online form, you'll need to send some supporting documents. The school confirms receipt of your form straight away."
+          },
+          {
+            "type": "text",
+            "text": " A reference from your child's current school is also requested.\n4. **Assessment.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Your child will take a short assessment, including an English test."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "BSN is mostly non-selective, but every child joining in Year 4 or above is assessed to make sure the school is right for them."
+          },
+          {
+            "type": "text",
+            "text": "\n5. **Confirmation and start.** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "If everyone's happy, the admissions team confirms your child's place."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Before your child starts, the school sends you information and invites you to a family induction day."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**Timing:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "There are no fixed dates or deadlines; the school works around your needs."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "How long the process takes depends on the child, since each application is handled individually."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "If your company is paying the fees, the admissions and finance teams can deal with it directly, but tell them as early as possible."
+          },
+          {
+            "type": "text",
+            "text": "\n\n## Tuition fees (2026–27)\n\n"
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Annual tuition ranges from RMB 121,919 to RMB 286,640 for 2026/27."
+          },
+          {
+            "type": "text",
+            "text": " Examples:\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Pre-Nursery, half day (age 2): RMB 121,919 for the year, or RMB 118,262 if paid in one go."
+          },
+          {
+            "type": "text",
+            "text": "\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Pre-Nursery, full day (age 2): RMB 221,671 for the year, or RMB 215,020 if paid in one go."
+          },
+          {
+            "type": "text",
+            "text": " Nursery (age 3) costs the same.\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Years 1–3 (from age 5): RMB 262,825 for the year, or RMB 254,940 if paid in one go."
+          },
+          {
+            "type": "text",
+            "text": "\n- The search results I found didn't give the full breakdown for older year groups. The highest fee, RMB 286,640, most likely applies to the senior years.\n\n**Other fees and payment:**\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Application fee: RMB 2,500, non-refundable and paid when you apply."
+          },
+          {
+            "type": "text",
+            "text": "\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Refundable deposit: RMB 12,000, paid to secure a place once the school makes a formal offer."
+          },
+          {
+            "type": "text",
+            "text": " This comes from an older fee table, so check the current amount.\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Lunch is included for full-day students. Students who need extra English support pay a one-off EAL fee of RMB 18,000."
+          },
+          {
+            "type": "text",
+            "text": "\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Fees are normally billed in RMB, but you can also pay in USD, GBP or EUR."
+          },
+          {
+            "type": "text",
+            "text": " Paying for the whole year up front costs less than paying each term.\n- Bus service is extra and priced in tiers. For example, "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Tier 3 costs RMB 18,116 a year."
+          },
+          {
+            "type": "text",
+            "text": "\n\nOlder listings online show lower fees from earlier years. For a confirmed quote, contact the school directly: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Admissions: +86 (025) 5210 8290, admissions@bsn.org.cn"
+          },
+          {
+            "type": "text",
+            "text": "."
+          }
+        ],
+        "container": {
+          "id": "container_01XJxjWY99KmGKJKxaMvaKPJ",
+          "expires_at": "2026-11-17T14:56:34.952385Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 54398,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2060,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 2,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5905,
+              "output_tokens": 169,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6428,
+              "output_tokens": 64,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7623,
+              "output_tokens": 124,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 16833,
+              "output_tokens": 149,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 17609,
+              "output_tokens": 1554,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 86
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
