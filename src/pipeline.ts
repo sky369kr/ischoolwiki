@@ -227,6 +227,8 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
 
   let draft: ArticleDraft = { title: generated.title, tldr: generated.tldr, body_md: generated.body_markdown, faq: generated.faq };
   let result = await evaluate(draft);
+  // The fact pages the writer says it drew on; a repair pass may drop sentences, so it names them again.
+  let factSourcesUsed = generated.fact_sources_used;
   let firstAttempt: { draft: ArticleDraft; problems: unknown[] } | null = null;
   if (canRevise(result.problems)) {
     firstAttempt = { draft, problems: result.problems };
@@ -238,6 +240,7 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
       problems: result.problems,
     });
     draft = { title: r.title, tldr: r.tldr, body_md: r.body_markdown, faq: r.faq };
+    factSourcesUsed = r.fact_sources_used;
     result = await evaluate(draft);
   }
   const revised = firstAttempt !== null;
@@ -248,7 +251,7 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   const otherNews = guide
     ? new Set<string>()
     : new Set((await env.DB.prepare("SELECT url FROM source_items WHERE school_slug = ?").bind(school.slug).all<{ url: string }>()).results.map((r) => r.url));
-  const sources = sourcesFor(material, result.usedFactIds, used.map((n) => n.url), otherNews);
+  const sources = sourcesFor(material, result.usedFactIds, used.map((n) => n.url), otherNews, factSourcesUsed);
   const articleId = await saveArticle(env, {
     school_slug: school.slug, lang: "en", translation_of: null, slug, kind: generated.kind, draft, sources, runId,
     passed: result.passed, problems: result.problems, autoPublish: env.AUTO_PUBLISH === "true",
@@ -470,13 +473,22 @@ export function usedNews<T extends { url: string }>(offered: T[], reported: stri
   return offered.filter((n) => urls.has(n.url));
 }
 
-// The pages of the facts the article drew on, then the news items it used. A fact page that is one
-// of the school's news items (newsPages) counts only when the article used that news item.
-export function sourcesFor(facts: FactRow[], usedIds: number[], newsUrls: string[], newsPages: Set<string> = new Set()): string[] {
+// The pages of the facts the article drew on, then the news items it used. A fact counts when the
+// checks matched it (usedIds) or the writer named its page (declaredPages, B-02); a named page that is
+// no fact's source is ignored. A fact page that is one of the school's news items (newsPages) counts
+// only when the article used that news item.
+export function sourcesFor(
+  facts: FactRow[],
+  usedIds: number[],
+  newsUrls: string[],
+  newsPages: Set<string> = new Set(),
+  declaredPages: string[] = [],
+): string[] {
   const used = new Set(usedIds);
+  const declared = new Set(declaredPages.map((u) => u.trim()));
   const usedNewsUrls = new Set(newsUrls);
   const factPages = facts
-    .filter((f) => used.has(f.id))
+    .filter((f) => used.has(f.id) || declared.has(f.source_url))
     .map((f) => f.source_url)
     .filter((url) => !newsPages.has(url) || usedNewsUrls.has(url));
   return [...new Set([...factPages, ...newsUrls])];

@@ -194,6 +194,30 @@ describe("names and sources from real school pages", () => {
   });
 });
 
+describe("sources from a share or a plain figure (B-02)", () => {
+  const shares = {
+    ...ctx,
+    facts: [
+      ...ctx.facts,
+      { id: 9, key: "ticket_price", value: "100", unit: "THB per ticket", source_url: "https://example.org/news/show" },
+      { id: 10, key: "refund_policy", value: "100% with written notice before the term", unit: null, source_url: "https://example.org/fees.pdf" },
+      { id: 11, key: "pass_rate", value: "250 per cent", unit: null, source_url: "https://example.org/odd" },
+    ],
+    entities: [...ctx.entities, "THB"],
+  };
+  it("does not take a price for a percentage with the same digits", () => {
+    const r = verifyArticle(draft("## Tickets\n\nTickets cost 100 THB each."), shares);
+    expect(r.passed).toBe(true);
+    expect(r.usedFactIds).toContain(9);
+    expect(r.usedFactIds).not.toContain(10);
+  });
+  it("takes a percentage for the percentage fact, written as % or in words", () => {
+    expect(verifyArticle(draft("## Refunds\n\nThe school refunds 100% of fees with notice."), shares).usedFactIds).toEqual(expect.arrayContaining([10]));
+    expect(verifyArticle(draft("## Refunds\n\nThe school refunds 100% of fees with notice."), shares).usedFactIds).not.toContain(9);
+    expect(verifyArticle(draft("## Odd\n\nA figure of 250 per cent appears."), shares).usedFactIds).toContain(11);
+  });
+});
+
 describe("sources from quoted wording", () => {
   it("counts a fact whose quote the article repeats, with no number in common", () => {
     const quoted = {

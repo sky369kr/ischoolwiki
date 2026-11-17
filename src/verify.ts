@@ -136,10 +136,27 @@ function numberTokens(s: string): string[] {
   return (s.match(NUMBER_RE) ?? []).map((t) => t.replace(/,/g, "").replace(/\.0+$/, ""));
 }
 
+// A number written as a share ("100%", "45 per cent") is a different kind of figure from a price or a
+// count with the same digits ("100 THB").
+const PERCENT_AFTER = /^\s*(%|percent\b|per cent\b)/i;
+
+// Each number of s, keyed "100%" when written as a share and "100" otherwise.
+function kindedTokens(s: string): Set<string> {
+  const out = new Set<string>();
+  for (const m of s.matchAll(NUMBER_RE)) {
+    const token = m[0].replace(/,/g, "").replace(/\.0+$/, "");
+    out.add(PERCENT_AFTER.test(s.slice((m.index ?? 0) + m[0].length)) ? `${token}%` : token);
+  }
+  return out;
+}
+
 function checkNumbers(text: string, ctx: VerifyContext) {
   const factNumbers = new Map<string, number[]>();
+  const factKinded = new Map<number, Set<string>>();
   for (const f of ctx.facts) {
-    for (const t of numberTokens(`${f.value} ${f.unit ?? ""}`)) {
+    const s = `${f.value} ${f.unit ?? ""}`;
+    factKinded.set(f.id, kindedTokens(s));
+    for (const t of numberTokens(s)) {
       const ids = factNumbers.get(t) ?? [];
       ids.push(f.id);
       factNumbers.set(t, ids);
@@ -156,8 +173,12 @@ function checkNumbers(text: string, ctx: VerifyContext) {
     const ids = factNumbers.get(token);
     if (ids) {
       // Every match supports the number, but only a distinctive one says which fact the article
-      // drew on: a year or a one- or two-digit count matches facts the article never used.
-      if (token.replace(".", "").length >= 3 && !/^(19|20)\d\d$/.test(token)) ids.forEach((id) => used.add(id));
+      // drew on: a year or a one- or two-digit count matches facts the article never used. A share
+      // and a plain figure with the same digits ("100%" and "100 THB") are not the same fact (B-02).
+      if (token.replace(".", "").length >= 3 && !/^(19|20)\d\d$/.test(token)) {
+        const kinded = PERCENT_AFTER.test(clean.slice((m.index ?? 0) + m[0].length)) ? `${token}%` : token;
+        ids.filter((id) => factKinded.get(id)!.has(kinded)).forEach((id) => used.add(id));
+      }
       continue;
     }
     if (allowedYears.has(token)) continue;

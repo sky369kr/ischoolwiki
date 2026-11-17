@@ -19,6 +19,9 @@ const ArticleSchema = z.object({
   faq: z.array(z.object({ question: z.string(), answer: z.string() })),
   // The url of every NEWS item the article draws on; only these become its sources and are marked used.
   news_used: z.array(z.string()),
+  // The source of every FACT the article draws on (B-02): a fact restated in other words matches no
+  // number or phrase, so the writer names its page.
+  fact_sources_used: z.array(z.string()),
 });
 export type GeneratedArticle = z.infer<typeof ArticleSchema>;
 
@@ -29,6 +32,9 @@ const TranslationSchema = z.object({
   faq: z.array(z.object({ question: z.string(), answer: z.string() })),
 });
 export type Translation = z.infer<typeof TranslationSchema>;
+
+const RevisionSchema = TranslationSchema.extend({ fact_sources_used: z.array(z.string()) });
+export type Revision = z.infer<typeof RevisionSchema>;
 
 const WRITER_SYSTEM = `You write articles for iSchoolWiki, a reference site about international schools, read by parents choosing a school.
 
@@ -61,6 +67,7 @@ Style:
 - faq: three to five questions parents actually ask, each answered from the material
 - slug: lowercase ascii words joined by hyphens, under 70 characters
 - news_used: the url of every NEWS item the article draws on, copied exactly; leave out news items the article does not use, and give an empty list when it uses none. Only these are listed as the article's sources, and the article is checked against only these news items.
+- fact_sources_used: the source of every FACT whose content the article states, copied exactly from that fact's "source"; leave out the sources of facts the article does not use, and give an empty list when it uses none. These pages are listed as the article's sources.
 - Do not mention iSchoolWiki, myispp.com, 36.9° or any marketing service.`;
 
 const TRANSLATOR_SYSTEM = `You translate iSchoolWiki articles from English for parents reading in the target language.
@@ -123,7 +130,7 @@ export interface RevisionInput extends WriteInput {
 }
 
 // One repair pass after verification: the article goes back through the same checks afterwards.
-export async function reviseArticle(apiKey: string, input: RevisionInput): Promise<Translation> {
+export async function reviseArticle(apiKey: string, input: RevisionInput): Promise<Revision> {
   const material = {
     school: input.school,
     facts: input.facts.map((f) => ({ key: f.key, value: f.value, unit: f.unit, quote: f.quote ?? null, source: f.source_url })),
@@ -135,7 +142,7 @@ export async function reviseArticle(apiKey: string, input: RevisionInput): Promi
     max_tokens: 32000,
     betas: [FALLBACK_BETA],
     fallbacks: "default",
-    output_config: { effort: "high", format: zodOutputFormat(TranslationSchema) },
+    output_config: { effort: "high", format: zodOutputFormat(RevisionSchema) },
     system: [{ type: "text", text: REVISER_SYSTEM, cache_control: { type: "ephemeral" } }],
     messages: [
       {
@@ -145,7 +152,7 @@ export async function reviseArticle(apiKey: string, input: RevisionInput): Promi
     ],
   });
   const message = await stream.finalMessage();
-  return TranslationSchema.parse(readJson(message));
+  return RevisionSchema.parse(readJson(message));
 }
 
 export async function translateArticle(apiKey: string, article: Translation, targetLanguage: string): Promise<Translation> {

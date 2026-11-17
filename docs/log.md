@@ -94,3 +94,9 @@
 - 결과: 학비 PDF 출처는 오표기. 본문 "100 THB"(티켓값)가 학비 PDF 환불 규정 사실의 "100%"와 숫자 토큰 "100"으로 맞물려 usedFactIds에 들어감(verify.ts checkNumbers: 3자리 이상 숫자는 단위 무시하고 사용 표시). 본문은 학비·환불을 전혀 쓰지 않음. 반대로 "About the school"이 쓴 IB 인증·IGCSE/IB·BTEC 사실(secondary, ib-diploma-programme, btec 페이지)은 풀어 쓴 문장이라 출처에 없음. B-01(소식 페이지)과 별개인 사실 출처 매칭 문제 → backlog B-02. 문장 자체는 seed 사실과 일치(근거 있음)
 ### VERDICT
 - 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / B-02 신규 결함 / 근거: 글 3 본문과 seeds/bisp.sql 대조, docs/backlog.md B-02 / 다음 담당: 사람(ops 분류 P1 여부 결정)
+
+## 2026-11-17 · developer(메인) · 안정화 / B-02 (R-02, P1) 수정
+- 한 일: ① verify.ts checkNumbers: 출처 판단(usedFactIds)에서 퍼센트("100%", "per cent")와 일반 숫자("100 THB")를 다른 값으로 봄. 숫자 뒷받침(통과·보류 판정)은 바꾸지 않음 ② generate.ts: 작성기·고쳐 쓰기 출력에 fact_sources_used(글이 쓴 사실의 source) 추가 ③ pipeline.ts sourcesFor: 작성기가 이름 댄 사실 페이지를 출처에 더함. 사실의 source가 아닌 주소는 무시, 쓰지 않은 소식 페이지는 B-01대로 제외. 단위 테스트 4개 추가
+- 결과: check.sh 전체 PASS. 파일럿(실제 작성기가 fact_sources_used를 맞게 채우는지, 보류 증가 여부)과 원문 대조는 아직 — 클라우드는 학교 사이트 차단
+### VERDICT
+- 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / B-02 (R-02) / 근거: check.sh PASS, 파일럿 미실행 / 다음 담당: 사람(맥에서 파일럿, 교차 검토 여부 결정)
