@@ -1,0 +1,593 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g14",
+    "type": "generic",
+    "text": "난징에서 중고등 과정이 탄탄한 국제학교는 어디인가요?"
+  },
+  "started": "2026-11-19T12:14:21.538Z",
+  "finished": "2026-11-19T12:14:54.208Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "난징에서 중고등 과정이 탄탄한 국제학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChCGWy5MBXan54Y4VpFFK",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSkQgKEAgUGAI4AUIIdGhpbmtpbmcSDCE4Z9/hf1ni/LhLIBoMblh4bW+y+Lhg1hImIjBBvwgTytrIpm/rSTfO6z+XRx5PeIYOb5qBbI09sA9W0FVNnlYOu2GeX3PsgURFMUAqrgciuV8xrNs3nPJ+e973+pT3J2OiEbHxZF9WDUqXBSIcRw1Eres2dOwQyF9IhnYEYRl4nK6ZMdlwcG/X6/z9hYcIfHd4S4oHh45+gJbCFJt/7joST8gSLanVwxOSbnTauLU7oDc53e/meMhcrqDRaaHSJ0C65rgp2qu/XIpIPLd7YnavWYV3tjNfWXTK6nwZiZU3LhZHZiZL4/NUdo0V82B+ymkD9eNtS4tOE9BcOV0lrUiLqAs96wp/MrnGACgcZxEjXDI4M7eEa4cmqPff0ucFSl0Slx60fXTYZhGoF9COlfadt7fB9N7CxLCOe+xMYXEhLgEwDlrkxvtreI3EK50xGb0FmROFEnlCD9HqUPabid9gvEBo6haiIj0G4g/xpfRanT+xygle0BLG7ReOvHolbqK+PoNpN0t/9H55NTvMmM1XBRKDH0Neh4k+F5VCvLjecenP+RMW+uP8Cz+28ItoDJ+jISn3VFEgnr0ZOvs5rYXF8PZqWKL+msZztSpTb/7CteP5rcOkyBXeSAGxDkyxDVWk/ohID8wvDRIooq4fF6E7r43dLSdWz5CVfr2u9J3JZA+CJnkjFPVStWETMQJFjAlLQEx/1BaykqMErz7Ah9m67nQcMzjQYMRHDuPnqc6OFYHGhLVfLg4qkEhERGPL//uNuC1OWlzVlmwqXmH8trSrmPdJew/FWM79XXBO0rO/Bv8W5cPhdRt9/HOsQYxe0DCv+dozJO7wkQn1u7tCYbXtaAGeLhccNQJT0PAWdskFqT28ECGnRFrFulu/CQI3zyqZhowk8xWgStefve/rBmNbR2danLlrqt3xBAAg3PLZBWkaDBkMKzkT/Zqo4pxcny/e185pwqt9olG0udU0+DH9ENHR1ir6RBPpPP04BQ4df27E2lAeu92ZLkFIaYwbTop+RJkgYNR4coGluxEMhHVJHB2UaHxpYMonutS7p3qy2Atm8vh4HVmYRhtUvfX9w3aS1bPSJUJDn1voOnx30RMGI2Bt1QwiYHexu7B1Tf1WuwTDBKk+kTKniymuL/sc5jkn+0qe2BwOcYoV8GoGLjck1KCDTw3zBC2NnOVz/YAkdcepD0GK6Z5LC4GOr7W1fDe43IEzBP3xR4JOAVG9PKkFvP26puB1qJHkE63R/LcleE3l2CEUymuwGIG7X4wXbxtSwPD2aYjdRJE91ogiSmYgv4JzKcjRJxZWZUDCeMRBbl1cMKyRpj/IaTuzjvcSyNZONuWjZ6woakgo8xYYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_012pdEY91m9JY2Md6VEErPWv",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nfor q in [\"Nanjing international school secondary IB DP results\",\"南京 国际学校 高中 IB AP A-Level\",\"남경한국국제학교 고등학교\"]:\n    r = await web_search({\"query\": q})\n    for x in r[:5]:\n        print(x.get('title'), x.get('url'))\n        print(x.get('content','')[:500].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CFgBn1jeJrJwu2FEWXe7Rg",
+            "name": "web_search",
+            "input": {
+              "query": "Nanjing international school secondary IB DP results"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_012pdEY91m9JY2Md6VEErPWv"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01CFgBn1jeJrJwu2FEWXe7Rg",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "World's Best IB Schools - by IB DP Score",
+                "url": "https://whichschooladvisor.com/uk/school-news/worlds-best-ib-schools-by-ib-dp-score/3",
+                "encrypted_content": "EowHCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDKPwZePTwyesT8ehuRoME1Nq32ly1MVmxGCpIjD1bswzjIpaWHI8WMOc/4FPKszSPYvFFVVSOr0gi2MD8gt6WClJM1odEqyE+I4+wdwqjwYajcb0pm6r+Fhw8jMSWz7DFliyjDCaQxbmcz/G97z8s1vu5q+VjOoHgDf3AQGkGwsmF/kkW7JaqHawEnC9ngB4ieXth3a24UMNs06iWUP5jQ5uUf+xBnZCcG5IdIHn5uBZsvpuYDInT00MEWboWgEoGiGJUEpN7Yl/qrZoNB0d0xjhAhgD5RxBXwIVVQURtYyNx2XzRi/pxIffuxTyAEPDtnFz42ntlBSsOjCKR3dhoXhVFOYFScXOazzOUico0ur4/sQa413cKC7+dNu4GJv1QeQkGis1p0o4+yKBFBwibMMY+MN8X7ODF/AdGMu4xG4RMTgoMTCC5pVCb5GM4JQyy3C82ehdSYY/QTRd7mnHj0AX2T60qg56yGLquE1cjTdikn4HPqhP/5o+GjPwHhuNW2M+4tj01Ci4tRFAgiOjjzGu7AZ6FUcNzv8gqWJS0OGg9yljzP4i+R9GvyrKLw2EyeIhWV6L0riH0uKk2giOS5+uZ8QKFyXRHP5KogN+fSVvpHal7/x1ro+J7tUX3J/yq3B82jZ11egFkkK3mYE1By8jooKQm6OpN0n7AvdIgMpUFoj5fbVV+/cODBR7MF//94Iu0IjC2RR8QEFJIblCkSEvGaC+z0XikywmbqFH5eGZEfdfN608+t5LyQzewLPlvkME3pIZBwwKS2g9mHv582t6HDUrIisBUuJpE3fKXIeurtEDjGSJNbho5+9trg5S8mavR5bAGRFd61cMF90dcTunaBg4y70Ukfh7/v//WQMaZ7XcMABoFTDNp5W0cT3VOo7xsI8Aqm4dTmtWA8qWJciLJgcAGuGwrzgMoF5wr2Qu8Io+WzyUYt3ogafC2I88CZ0HLKG0aqL6GnulH5sYr8oBIi7BK55tpvccL40BDcxNv0a/hB2ndveAEeLz0ZdSpe2KQSf3DBjMvSGRRHFB2Cx/ccND3o5EX7H6lqa7GV9Ca1/ESZZ/LcjC08SzxlrNWZMq9X30N4JmxUlu4cLGExHjTiE4CKLO9pGVlUSeQ6SNqnwXFtYaHHo0YZ8OcoQYAw==",
+                "page_age": "69 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Outstanding 2025 IB Results",
+                "url": "https://www.nischina.org/community-belonging/school-news/newsposts/~board/featured-news/post/outstanding-2025-ib-results",
+                "encrypted_content": "ErgICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDKPi9xYY57T96QlTPBoMdoKRUvIgKwI/Hfs5IjD41lYbsvpCnIAfJpErZRpQR8Y7SyUuf0GIepOg/RCaic2I/HB/U3qZl29DGLYVyIAquwen/CMKOwXIWBb3ljzvPCuj/6cRHRVma0LTpEslLoUpPitZrUPNRKfUowSZVdJrYWxsOhyPb0XjEKqX2+7Rw9RqPPOrEca1cQWfW28pA6ITSyQOByHP9YKrTmbdNKfheM88U0cErevoK8Xgnr1qinVB61ytTg9371w6zz6nUHkqRDuwM7AEiCVPfkFSMQ/cW1dJNsyFbO4LyZN/aElWnvpWgjCr93P0fyuM7kWL5F5KY0eSpYtNVltVGYj8RC2u+zInLuCl90e1MK4C46BPNrOK2gcqAucWAdjOdm0DjKtwW8npAYd6o/DB9obSLTi0TDCSbsa4znsgwwQWYEw9gpRsj0D3GWzJDKQXywaXjN4LgPM9P32YURSkPTXsyU9XBMzOYdP1QeLKi5TyhZjF+rshBppFPG8cFTnY9aTFRucOPdZtVnPG7RSRDOHzVoRtBfkiI/1giYBwKuZ9KapKs+le2FGVolE6bwexMuUDFktMoYt7ddZH1sJO6HS/ek/gioTYPoMSarAl/m9duInV4E910o7RkjS9XwjtRd0dm8+07LYLTEDmMb9giGTYKMGNguxidknghXg+KJ3sY36BJPM4qNbldN273whq9UBYbYkv6grl0E5BCT1iSqgpwZ0O0/LXkPv48LPg4zg5nUtL6TisQ4OJWYx2Cb6t6Pi16nFPxbaYS8MGsr0gEwKJOKaWTTGoq+/S71NLau61u/Wf6N1CDI73LgXC804qYz7WZ4nHJITu4t5aNpSGPebqBMtWmBbznMBDvMEpPWCHuGtqrkximQ2xB6cnZBCtNZmWyQa/RKisf2ChCKWz0LWbCtQeOVXfqsOW4+g+ADpy90SoticuRlfH5CUMfjjErPP0b2ss9u3SCs/K1cVKsvtTD8fL+ruyRtdSIMV1275VwdbqAhu6seHrquNSZLb92eD5ufS3E7X6Ixt+5KBHzwOzYOGuqr2gAR8uNifb9tYYnJgt0SMc9WTJ4oOqrAvykleFqM1evMLHExa6fWHihKYISuTEHrnDm5j5TMESYOPulKeYd6RjQE/5jnPHmB7uIGP0JZ3ds005sxPRSXO6w3CxQnGjYbhCnAxZEbNU7DylbctTVDfveyGznlZFAdgTmrHAE0BarKsl7FOEG8NWqGyXvb9gBNwkGYUrQEGxtU7zBfjHarP8Q0aj2jioljp64K5x4FsjnudL4G5nf/+xEHSGZZB3wXQyIn9ImrRQ36vx7qNtCOApVmGvE6ku9NI1CJRoZ5Ta8eNXQJCM1gCeI4a1GAM=",
+                "page_age": "470 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIS IB Results Once Again Exceed Global Average",
+                "url": "https://www.nischina.org/community-belonging/school-news/newsposts/~board/featured-news/post/nis-ib-results-once-again-exceed-global-average",
+                "encrypted_content": "EvkICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDEoCYlhi/psmXfzWAhoMQSumcOThRBzT/5dxIjBPA8zCITcRMiH2Prd/gCgRvlZSOVvGwCeeTuG7Slea+RoW89co092TKteXAU9WRZ4q/Ac/l8yNWtVexxVowVWP/lwx7gW13xrpUWH6HeI+DOOWWTuIuLdU7Akq5RuV3HSbFdXB+3U2kEk65is0u4YVOtv6UEMnkJdoV28jsdW/vsKnGK33D/Ma4LmV/h9AC9HK9rzchOHH9mbuzIlurhf8/1spK1roM8fq954ZZX+HGpqcTf/lPOYapnDYeEvrK0L79Bwf4wGBY06Kc4hv/GlqgF0GBcZ9DGVqS8PSzfwOv8Zzla24EHxrnKXv92tr3cwLt4VLuZ4ZGtkIocUmiIv1rEu+IwPzGM0DfRjMEyh9kUz/GUmIHGEiXfqXiO53bketAKwqn78kFnIlK1U3cB9kQljAHQhRNjZgiJcCqbErKl0cnIichCWcx1PXX5JsVQGPm5vOm2oD4EgaCZgHzH9vdY0FZOX/2j9MxR3MUqeH0wV+bNqhJbF6mB+IXjoxcWVQoBhSGChmSUxI597TGN+TicBeTXyY4c8PB5hxha26VAKvmBRhfdFrZNEKxo4E6F75VhgKunlFLkA0B7Zt/F2F3qTT2G2BMEEfiHfsWwVp2axH3bWiNMFL4KxzN11TaJNKcJPYEfrsCycSZ0Yua0fONgFytY7NEbQvw/TVYPx8QG2UfqX3ZLjyRZyKmDJZ0XIZDWJcqhnSU+BGqtruGi/xs0ghClsk2kzZ/g71kynrBmbWy/DjzqknP42NCcdI86b1y5rsgnVtNQLbQ916Ix6MOhGco9CAmbM2XZ6N1M4hwKcZTT1WhfYf2+oK7pw9mRFxDas67hEOzQ0DjA3MIZyg2qnV5zrwJ6FgrxwURgei1Qy6G1/mnKZKiMvXuf1hBywqS5RXbUv+H3n4Am8SCkrE5Qm/fbUq7bMnflmVkXxfeacFup6MhRLOKQTp5R4z6dnisCrTqbQy+Xe3RvWilp1OL/7wMOB5o3UkDg21q0sxIKMePoWOHW/pV5yC3CfewNUMw8j0M49NUzPEsz7deW8T5yBPsXAETENtLJZcaBAm8t0AvJo6XHCFsHoEZYkzXBFytlq6RugpHlRGj8mDGzZJtNg/ESlbOLvLLjgaUThm5M1B6OBhPpvyT+pUv/YUTfs2RhxqcaUNfvQb7IlE/b9MxH7tqwXdE05ANM5x1cNiDEVdXA+VcXUQnFCVAiIOBF5FfFTjuMfI3zv+0NuqS88iCTIXrgd/e0jM7tXaElimiczduXAilGNUTBKkj5+gVJBC0RnLQHhFjynqcHjSLhFx8qFAbauKxOIi/q1aHdrMuV+9urrAyYKOe2mn9GVre+WuVs7lbNTxCHRfFx5UyLdZ+vQZTZV9WQO9XJlxIV+OLS3wZ89cKnKpkT7LlS2oVGnFjBKDy4FRSc8JX1cwA4cYAw==",
+                "page_age": "841 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School - IB-Schools",
+                "url": "https://www.ib-schools.com/schools/3123/nanjing-international-school",
+                "encrypted_content": "EsEDCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDDuGiLggzj9e5wHAOBoMLSohxYhJNOM5amh1IjAJp9O12XAcLrfaEtp2fxNAVQYzRXTre11133ESX4ss6GMQEdlBWOvUTz9ZAUE2DkIqxAIqasWc1o/VEhTAYofF0MmVhlJKuw7WDl7LlS/OxbmSDTzjewBFkVF/BgVIewalG20uXkLQxTHKJQVPoJuFobMsihYcQBxQcy4nHZx11eeVW2ciYz5+489pyedOTbV2DEpoF6jFZXMEzKg25SDNZd+by1tOWyCPmwQBcN0G4hCv6wH7gstFmVoPMNhuZIv230gw0sA3KC5xykArXeWxueigJp+GIjcH69Br/cPGxUbJ50Xj8jon8o+rJhdV47pgLUAGa86EwCOQRERW5LAcFBv5hYpvwAmrZKbt/eQ7OeJNAqV5Ii2xxUFILlTG4Wj+r46j5TkGp4jBkFtJo5fgpdQiDpG3YnApNZ25moEzoIyRNXZXLFf2A3aDypx7OuZDwgSZ03ifYXFjSr1V45ABiXXAi6PzmxMajUibHoyksDsvBzBszcAYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "AISD - Nanjing International School - NISChina",
+                "url": "https://alifaedtech.com/schools/nanjing-international-school",
+                "encrypted_content": "EvAKCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDO/igLDbf7PJsRVN2RoMXYlF6BOVE2iYBcRwIjB9h2mpLdbJovAj6Cir4dG3vMdlklh3CxVqnzUReXch5AOmMLFkyzMZOq8r8Q0tN8Uq8wnWt/04VXzyCPQd32xBmBBBo5nbWfZ+/VccKPw6X5lQPwB3QdoUY6hq8Y/FERmDOJYtCTMMyn+SWM0GqDRxSqOeMUp30/fTs+yh3Nx9zPJbpjd49MmYFWQrDuIIkxn1ut6o57SCPVdejf6GhitEc4S+VGBuJr5aOL0cVblpAgEfgWFwqqSwnC53vETegxrV/OzVEzUAzyATGW0DMlGhc2fpAgWns2RWsFBM2Smi/iP2HbjCiKVJFMhGqpW7RzcnZz9T0ewhIAP0v+oHBacwJQ1al8Z9dkCYtP5Z1AY+Ii3IvFJwgpSI/C4UwunWrAdu6zQG62F+uGF47VwNoKcTelBNnKaTcRp/C0EQPFXS2De+UI869JTeMs3c+5sMFTxTnSuO+qeLAUl6lKB60CilMB6j72ci1kKi1e5x0zDKeOIJxANVTC27eDgtHIS1DhwKLXlal0viAO0MS9LxIvUB8WFDdzA1AkN862UPUSVgTPnz2vLDgwJP5GFDvmVq097/kRssyIdhZ44CA9E4sVnb8Fqe4ztRsyFLXD4TiRxjoWt8kV/GSdD3af1f4jv5vjJ3vyjBM5wTVBHsgT4EcTitfc49P0lhJ7DwrUrYO6KYvf1Qe1N6QL3NM0rqOyoMRaRzMvyfmc8h4tsHd2Es7s9BQIhKStU1Fml3gaoDGsvfKczFoScrWTL63XGOhOuM4bX2ahDBmqOpAupEezBQxY6Ynlfc/A7aSph1xGCA0wpVibzhMOAq5eOdvo41T0m/cpq0LKfjd1+Xs0CD40MgSov98nkn/IiN4EvQRMdJjjEM15HnKGDzCMxpxofbq8XRwZ00E/r2ySi7KKiJu0fQlJnr/6oU8GqgHmnpduvL7XOzeZYxx4c6eG8OGtjuY1WwkPyQzKA1ZurtJkbObZETgKiRLihLMJUuPjOLT/PknHa3Ae8hVWCidpl5pRxdXF5xecmEMbyxSWew1LKUx0dBrrioLmN9ggNmnr2c+quXukoK05HUi/g6+h9wPG57U6i1SNOiH72YV+Rcvg8h3u2f/0LKd3eeHXobapMZJScjnLeEfugBvLJcNgjc+Gi5RS/Yo3FzJWfMrrDkbOcYyo1qKLQjrfkRKVcwgA6REIiybSpEqGsG1++aoR3hxz8LtmQ7aZ3omSKOd621BhcqpzuGM8IDUdR2zfApbrS4qGonMHg9tPGm+gfRH8Vzf5XS5Lo3aT71ZLLu5FdT6ADN1dHZykpx7ljg2gHkiMCneMTABqtc6U2EAPbJ1jHB418Dmwf4/txxVL5Fu+Jl12SAtj3knXBGHsoiUvmvdKnnAw86XjMsppgc8rwjCA/LkokUFfhgsu4j1YfMYhvevRqP8MWDvHFCtTy4DiUkLfA7KP/17KjfA6tPZ1cvW1Y4g3M+qd9bqYnTpPPf1xn1gk+AaeZKEGKZz+s6lMeoU9EQTKbG0hVpahlE6rG2YyfvsetTRyKnNkXBDqSXG4AQ/1B75eK3WXcJUHAgmAG+q3damv2o0SL213Rkc5j3vMuptqE62G2T7mm7peyzqCcB1r9UIzlY4NjFM6YaPZRhEF/qmvhsAomMFpGMaUVdpjWq2bc/y6x6IJwhFUwjYjh87pUSQzsWVGg073NiEpY/vBm/l3rWmDQLoxTv1YOtVBkvZRlMf9w0YWX0j3BIR2JDWI1DlxcJGJFsgC7gDojJGAM=",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_International_School",
+                "encrypted_content": "EsUNCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHkj34v5BaI2OQeWaxoMU7vbMio2hGTwwx/0IjCngHjKUEnCfbVdJm4fc6B4EWn/e7Wj5ub7ihP7zyWGlbPF4WtFZGr23FDXZwAHMNMqyAx7lfEUnIIB6zXtTmFXSNh5O+yIsPSbowgNw/KgOvr5oGDDFs8ek2L2qfZm5TCOi/lGoI5JmPhL8aqJLS/vBuNmEb6c399VXNgQ/9vNx4y/4oaplvalzS4Xx4VVyT5lsnGdlEhLny/V1XbvcdaeFTlXXzJyw9CO93qmAFm6EJ+dcxKzJMiwrAi2rnWAdc7sTgej5yqw7mNHTJ6frCOSWL7mqAEapG6ScMflIumkkNqKJDLM/1/j/lyaqxJyiEPdklqH43OZVIAZgW5mDI6ULCq54G0TglTQm46nLFzC1evqnJKe2ncKlzdPzZ0dbZmdWxbqVPkLjT4GrfIYukoATJnZFjX5yN4RY2tqUONJWFgxrnXRYT3dlceQLPY0Y53ItG8Bh8PJtcN3HJqgguwzzgmJ/dWAp/2I3rAVzZx9H8fwBAzRzP7jnwSV3x5UYq1nLH6dRvEIs2Ew00POg/asN84E5GlQD7I7NOT9udeHQqVMrRygrgNobAxEOgfVKsczGYTyv5Ur+u9giikHtIibKggjSbLiHE6LccmR9FLTIf5NMn2Wa9cin/3/TtRClaYDlPJ1QhgBis0uty55C42ZiNhoucehueL57CliEYHqBrsHXxVIe7fKzHvz58KH51NuVZajPM+8uM6hZORsnEPtpB3ygbg5Hp1GHnQOTbbTKNm6Mkt/+4is8exywYOhv5hsv4MleD0OB9ogFr/ohfCilPXl8bB8t8zGCAgqq5eNPjddiMez0hDf2s+w/+dR1SFNG4Xp3igTQSPiykbwsfTB1Pjnu6ZHIMxh9cSVbLh6VUK546k/Jl1EYch2A42apK+4uPDp9hLuhPcb6O+F39039d/uzLJbTnUudC6eT2keSkEC7qgj+rFen16B7gxInYutMlgc9wv2c51qHuIK+K+0h7FdT2lAqMP+evRWlw+EdJPy99JVOr+lJzH3Awb7ApuQtk+P7jhGH7s1RukpK/vtCsdVMCitc9/i4tzCKrYUmjRPV2MfeFqsJa6v/jdN+TbJ72rzw+YiqufNYnUR5JGDf70lmKTS807AQ8NM56/RmtChnwGnLYDtNz6AJf05DYN7gwevcM0cFckdv9KNDmC3k2w2qHlYkdfFyyfbRUeMoiWL0fQ27iQB2MFv0DX+enWIMhuLuAjmPxJyYWZGQK4GP3I9sjBJCzithr8y4+UJCdsTfRlUG2KdkNx55Rdg091VIHRS5r2SXgDLinfurjvQCMDccMqPsxDWb5u9yl2LWn7mXOAf047DYsRf45FNLyO9eC7q+6TkKEqpI0Bf+h0WVUsepTbOCD58i9bX7ka6wLGzWbE8/0qoAFK8ljoFnIabl5P4qbyYTfYMVBtLp5lSjnE+C/8RUNDZSgKK0aVDEEzreb2XePIAUznBLhcnJjyBldk4zbQw1vesl2Lb0o/Vzt4F9W/fH6pDg1M6fQQLFOIs1QhO2eYty058hVu/d1jtf8k7V4UD6rbSfXjNbk7jAgL60tUBTSKHm2qElnnmCBwy4J5Si4MHr3xYpwi17J/j3/OFPbPs4l59SrI+dRdMiXmA5gWLpFX2nezfNProNRV3C1YFTwR4BxeTacbzJEFQEz2mGiD68SI0zwwg2AEduYdeTPcNUHGYZYIuih7kBHDoBrboAikJ905SpY3vgLGCpv3/ly8ZtME8xBsG/2YXIOoJ0CAU2JEN4DjfJPx6/BkUT2HmW3z/2ORnHKEmbTHoyP/2R1LnjxtJNFXNOZV6Ox001ro0B5vqbwcJEHq2Q6+GozayEM1i2uh5mhM8/1uhD/+wrgZQmCjjZZrC81HP5UEZP8Q2G2A0tIADTee0rAntMgp7/PaD8quNNAqnWE6ZBOliU4lBm4hQg0GKFfNH3WSpnlyPPmS6MPue6AKBYlyOERQ2X71bRecztiM5YYu9+WIK7t+uysARE/jFVe1e4Ti8Ub8S/O2zz4svx9gl3U/EwHvr+EfWhekG0G2oE1KcKRcJHsKUtXuep9Fpugin7kWmb5su3dDLJ5I1tSWywh6YLvpQS0Mwk4fm3dEUrIW2ZFFZHiOWUySoQvWjO37ist04tAhCFDU0ir9ckhKiTTteKLutE9UexRDVkD4kRWWigc+CwUTXSSiNwLLbvq2gs6YHW3OQNlwaLHUYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Chinese International School",
+                "url": "https://en.wikipedia.org/wiki/Chinese_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "IB Diploma Programme",
+                "url": "https://www.nischina.org/how-we-learn/secondary-school/dp",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "World's Best IB Schools - by IB DP Score",
+                "url": "https://whichschooladvisor.com/uae/guides/worlds-best-ib-schools-by-ib-dp-score/3",
+                "encrypted_content": "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",
+                "page_age": "350 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_012pdEY91m9JY2Md6VEErPWv"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_012pdEY91m9JY2Md6VEErPWv",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIojXE3FOwW+w0xQMBoMUr8aNxbnN60NO3gdIjAv4T8yC4ucADVbOklHJDMhNY1gGzMj7+3Gm25oTVo9gPp/POu5ERi0WOD3mOMI32UqEqVbHHGiOpWV/sj6vg0OqzIdMxgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_012pdEY91m9JY2Md6VEErPWv/cell.py\", line 12, in <module>\n    print(x.get('title'), x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in [\"Nanjing international school secondary IB DP results\",\"南京 国际学校 高中 IB AP A-Level\",\"남경한국국제학교 고등학교\"]:\n    r = await web_search({\"query\": q})\n    if isinstance(r,str): r=json.loads(r)\n    print(type(r), str(r)[:3000])\n    print(\"=====\")"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_013XPvcC7W5z9pzAcySPBPT6",
+            "name": "web_search",
+            "input": {
+              "query": "Nanjing international school secondary IB DP results"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_013XPvcC7W5z9pzAcySPBPT6",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "World's Best IB Schools - by IB DP Score",
+                "url": "https://whichschooladvisor.com/uk/school-news/worlds-best-ib-schools-by-ib-dp-score/3",
+                "encrypted_content": "EowHCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDLmMP8EI2I4Otyi3txoMlNmnOvJN3qrdbGpJIjAFPFiE3Sq3roUXZ/Auh1TUD9IOTW2E18/d4qujGXKlk4PZfbKDKzje3oNXEBlQqCQqjwbhgHY10txN0dkCs7dy56BjeJwwfCMhfWwCNQ+cyST1GPOku35v6nSAp/H6ck3JX6D4P7KBPgcdymfH5RGW5kVI6diwwVb6S/wH7XJFWntDP1V//Xxwr0H98dLaK3+DUDC4LVznONU/9okw11hgC5BJM5F5yYR4jzX8+ZVG1bMty1iTUbog3A4bpJUuB/2ZhwSSKyEu+hFda/gslOgovbo10l0e2+QNBsn69AlBrOdUN8e1fQANB+Ul241yMXnq9lALMhhU+DlZUQw+AmKrlD4gsIXKU25fScGl0EH19/83wgTZ2p0WH03NS1MVsJgThIdj9MUV6ytjEUnOJletMjvvA1scAPz8aAyKYPt7+x7yNK27EEOeC+TOVuQZxHM/f/gKPF67xxLdKp7Y4HqqyEaIogWp8lLSQfozZw7tpCSrkNGzGqyVz2DhewAEocBZjDtDHPH13mrgvgqbVcv0uORhDY1EQInhHe4S+mGzPDZup2eHl4uUSHzQbN1hSFFKfbjgvQ0BjJ/5xVQ6hZVOwyxNSLddjvOyk0yW2GfjubOfqw43fckHMHfDRFL7rE5arqrwOh635PVHpcVCB0YkOy87jeTbMYb66JbB9OJkN0N+FLBeSr0z/7ZUGq2pKSgi6jbD4ML0MJrP54OUJm7lym2Q9JTWXlE5anXOD+feoUiaYuhbUPDS3KJxYySDiTeIjrnqnC0uXb8Xgs+iTYZgQPRzK1y4ysT5Pr0WBjrbP+oTeYbmUJsUTzWfeHLD4stoGU2UuyCSN2YMjM5Or1JpmOhkUbHEEhAYvN4eW+kaytcMjSgdkQDYzonVaXdI73x6zXXr39p/MssjlWgILvkjK5m/Z3Hl0LC6xuLOpEeQjgB5HQCSFX0CPGJYoR3BTT+cvH8lQV44SrZ3tHn+aJHnYLK7zDRWiCJLEAHS4itxemrsM977R46LO5uyRwtBivIjTt7799vlszMyR0zfvCNVbbd+J/pwb1OKvanHpwWikXr5LI/xTysNeFisapV/AfRW1gtw+HHHT5GJeCt+s7LFItsYAw==",
+                "page_age": "69 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Outstanding 2025 IB Results",
+                "url": "https://www.nischina.org/community-belonging/school-news/newsposts/~board/featured-news/post/outstanding-2025-ib-results",
+                "encrypted_content": "ErgICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDE+V4JQKLOi7l5b1lRoMEyaGBtty3QHb4FN6IjAwtGxjXr9etmeSOt/7L/zayk6HH4IzcCI+z4UabEnheK5PVm9mIJF01AbYWwXB/IoquwfoTmAbUGVGflp9p6MSJq+iy49fM1i8/71MZF6Un3R++4qerdjUhW13uVdFVIvDjFSvAyCddu9FZvdqnY4dQtjMI2/klSuHwgqdFp+3TJVxDvS7QotG7+Lz+Lc5s8ss3bxZEDZwl4HA4ZUp1J8V3TpS2lPiyrJhcip9PFiMHhOUMImuch5Osg2R2n/qFMZUKo93XI9AB+dicPD8w0TZHSWAblaWBCv8HsPvRMpHLSftny5t5pUH45ACSDhEvR+xzZW4V/GvlASarG1HIdRhjydtqSkEzJTAON7NKnius3S+tvtCXo93Ge/Jx7L6zLWci2a7OkAqFYbXAGPFYqeVMNgcm6esU/ZhksUZKCQNKrz/BgAnbAR2FLPg7Yh5WXkT2nVf4C9DhYp5wlFDJrQXSYIqloS+TpG1W6/AfhXvaJPF9wDsoPCnC0ttlbiyWzDRw7Ia/RmsEZAAJpn/9mDsrbqr11jeYHbWt5V+7OH8tmx5YxHimqcmSySkN0BAXrKGh0qbvlgJMNJuPw8K/BTDKAcTdpa3yhtvkM1b0ANUpV5g4k39K/exeHkb4dGHnVmoppFp4SAgHbYDK6x9TE7q5czU9jh+VtN+PkMw7bB75N1r4WMFiBdASgbE19XBOfmPiNw/ojyi9G+p6ZP3pTxE7014J9luTmjt++fzLosnggRaixtC6o88CryhOPs3olykyGrkj4R+xgoap641jo6CSO/uHFKAW1UPfuHxBXjV1jJu68PGg4xXoOVwNX7/l4EbQe9eMfrGqtd107Mc3e3zQnVuzOhRyW0grQZxwDuS+8J9ug+XlEDtK8z8JbX8j/END1d5qSJwU87g5U8IGvzSt6uhaNnid1jzBoVd77OFrk0u+EhtdHVtEea4xXn48wa3UUp1gNhs/BZEgpbpsWFu5T7s9ZfDD6Fdk5SoZ8MHGE9Yx5z9NziUPiVIGD0MAJ7RowdDwWRp4AaAhpB4hWZ9p/wgNjG73ECqXN9732b4Aum798AfEN14LS1JAGqBx8XqLrF4Ch/r6xHcs076UDOm7ohMoW5Qq/ra/XBngJkTjGlbfVzjUYFL+E7p4/H42kxKXPqVDuphNwS/IzYBmgPe7H0bLuC+UQ2Q++ngDXSPKRKiSCtCgiHVlQuGEpqDWCm3aBpf4B548vZ8uBW8kapAhEGVZkeFq3wFFqBBB7K+FmBwxr5KS/2JNnXb6OtoKn48eSIzc/7eLBHeMOgTjN/ZdScyCjPSMqLTHDqUYZ/nNWNI7A2iEufMjuVBJA7GGAM=",
+                "page_age": "470 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIS IB Results Once Again Exceed Global Average",
+                "url": "https://www.nischina.org/community-belonging/school-news/newsposts/~board/featured-news/post/nis-ib-results-once-again-exceed-global-average",
+                "encrypted_content": "EvkICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIRVVjdAjgEXtd/EMhoMt0FarxPQh2Rxa/+JIjCJhm0mr1t70pgVetiCbQSPhaRGNbtM3PsMP4eUbsBjUNJwMGwdUL6wHrsAVxc0qdkq/Adol6/bjHHrvDDOXOQmD+YDQM5rid4Al/mhk4lubvquCUENI7EX+W+yCc/GSDO4JFKsrIxINZN3JRZGgsg/MtBgH0uNxbHoPYbf3+R5eTblLnISvTFKzwgGORQtzFUMncryozUUYW7wJKK9MVX/e8PJE1m2EVFqnXcFjZSazvyqZJv3i0q8no+AGBMiXPCWnUdO11juypHW2MSpqUiDUiU4grMxblEHfr0wyA7T/bBDSosYS0QEYDR2S8cgxogAiK1cBsmhzix0eQTXZPsaN8+NiXO/ioOw+x00v1nz2EO3nYWt4ls9LYg4CSELOD/ZEpTzblT65bCPRQAFtq2+TJX2kpNqk7uedWP0bOC7ayWujKNXfF8g/NyInntDRe069Q782xuqXBVjB7dZEDdi34pFP5N2+oI4umVYjWmHRd4mVSz25ScwkIBAql+fj08jyb4nChySCaNBN4tgWNEuDEOBPQu4AGI+h2gpi9fweX/rnDu9w1Y0cV43kw2TfNZCZeTCFjVD7HCg93Hhf1ggmhlCd9h4WivQP9UeCcPaKki217R4VDPeJ6zG4JGszft5+rJoEaeqAZbdaB8ae08+c2bPr2RIumz4ZdJB9jliP7qzlHWAZiTCQC3sHDE6CKo5r+tTqJuncY35PLaiK2p+dQBZlRBNqRMgk9QiG4wY0Z1hu2xWp8DTCIdG/OdMcbDYdeIPksEvN9QAgnRhKSjsOYxY8/7l7fRnqS/CDx77EafwvLm7LVcecfjRYcZbjM2h3ET10QxWx9EWUoiJcyXPoRQxhL7kPpZmG3NXIW21DpAoNH20cvjVWR9ZO64ScnjIP9FKzjq+0KNSLlLAknG/aIv2lUvt5pRE4+0yTo6PAYozip3qzGCOu0zPfEebNSWTw3SrBbrQoyfMoRdddBCtBP5xnLe8P049+BygHbdPiUxtmF7cwDUGPckJsgwfjU6YK5kbWBReKeJvxIw/FQbSJ56IDr7DPTKKiaA63JuBsWN8pUCehaUFUB4mo6JzeKK3ke+y4ru90LtbKVrx8Q0RSVX55vzDsq6nckrlSPSUCvnB+4nK423P7u/AKREApLhZcgs4zp1emKwRjQKTZ8EJ1kmjpxYxBFZyXzNrKT0FSvWa0+fP3t1/xO4CYpSXFBi90d3VHMMxvgA5pb9eBNQyqX/fimB3qcU71ITVvDszixpXx0vnTwlv+fyu8d0RScPboHEwGrE8+HcAKmCetMqhYQ8gh5vUaNBhswqs4uJPb1lT0rzqCeyidLSl5oB7Bqizrjl9rxiscOgN7Q84sY++aLK/iDkWR2rUv7NyhEcH53tn0xlKeLMAJ91EkxDO026/0NNPmnIAffEglYD9nsQYAw==",
+                "page_age": "841 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School - IB-Schools",
+                "url": "https://www.ib-schools.com/schools/3123/nanjing-international-school",
+                "encrypted_content": "EsEDCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDEGrg38h5sBB5upA7xoMQOA9fqn+fUOmIJDUIjBIuNJ8DItRRBnl0jPE4Xn8dyP1ZFUFEkyuLk8ZAHqcG65EJGIdPOSZ7YLoIUFkBJUqxAI8sgQI8oX/jQhyuz29mgnSNqe3Tajn/JK0Gq7EZdYpVBlavNNycvpoAq64xKuqwMIvmt+arsGFcjooWQEtg+R+wK0mQsUfLT8oSc77wKIgPV3rFBoQx+TiSCc7bJ893IDDF+bKNbvaKoRsxAJFzP8cllXGbtKD5SU2BukfTSNQuIYmQkXHL8ML/vrNLbSWcYWyCcmhb8A7Rz5wh66IN4RHm0RRlHD4Za0klRc0ZsUdJaazIGnfCSUqbLyb6drZ1nsRuEZt4NFlEQXEG5Oakm/6aF+6/JJSGvZYfdwjTAbggKd4w+ZFG+ag2j9w7DFc9364CvB2d2m9CdG7qq7DQAOsGoqktirqaWubCRezh8lkBPfAM55ZzPCapFPJ4OCo/gSpQbPR3bDIiHUvXNG7zWoD0JKOqHEsVFfQDPx4Cv4ywZ601XgYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "AISD - Nanjing International School - NISChina",
+                "url": "https://alifaedtech.com/schools/nanjing-international-school",
+                "encrypted_content": "EvAKCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDP0zIh8XnbdysTzruRoMDsQw3O9nMqiTLM2GIjAGjxdueoeY6iNVnGDBndW+RCrwTkzNSpQsnQaFgko5gr8ncc/ga7r5w9mAEoflzUUq8wm7CNbGAolPtOTS0MQ5hCJwJaGNoSrT356Q9347KUbTMmU3xLO9TXu0Y2JVeYZYUQuSVsGFWm62fWd+ObPyfQw/N0ZKVI5+Y0FAMLhbccVcZHbCxce1pJtjdNoh+pSBG6BJLpvrHxiAxFSZhSO1++mXlcpQET/KKL60vmvVup/qtT3W58h4UhgtMYUJUgzV7KXIcDMxKaUDWG+96LKlAvZYmXlzBbbjrSlqBA47+kwOVk7be86+Q82j6iLAAUEuLb267fb+9l8ACvCyjRoD3yqYHulK+8dXJ+awl1VtS6+lMO7PlYxi0Hu1E3E8JbKi8HjB+HyHKoNVWqhR/XFuPfgvOSwAfeo8ROyqaHRrxK8cZjmr5GHxIRXxNX2/8k0fwki7AE3ectE0tqyAkb8rzaLRH90LTcVvuVhJq1GC0XTeeg6AhVYFrcgghWvkZn+r5GldINi0X8zF5I6ALijnYAicYa9DrNnouBxXWWHkHDHa/XZv2KaOEoRc1GmkrTMtmW/ywtFkPwoSKSaCRXGfgnrREQL1NrGW8oOonqkySJ0LspZPALhNGV4Y8SJtk4XNS+LJUtbKixu6ChV5jJCmLl/B08loinRC3uD+c8ZP5nTZV4zd6l2gfYrHbEgh1U/lAhjFSrr1x1oLz/1yxoXEYuo3OKQn76lWBeM9Qiyd2thgWlWcPFwljAkjkw5KJW30lSAXasJGmfS92KKdvtFXlsawTJbH8umLBkkPMD+UMfdnqkfUCJRsSvz+iT8Tc5bfgBTmjBHjYMBDNwAe1gv5FDvnEh4IxIDviO9v9iUBm5ofA1HsH5NDLLM6JtH4Xa0+Ee9PpLpFez7PiDUgZeYbvZtAbvevFr6x1CTTEjDqwv4L7XcmCmG2/PBThC6BFXLF3qfZRnGcYRR4oeVV8jIAmePdz/0wfgZ11wqHjt64qZBhySzs5GH5A83WMpq+NeQ7IEW69JWR9zDNM+JefuqKG2LSEBN+aypF97hXR52Lz18KoDyQ4OOI7+H/9QhVZ9ATnpN4YG2iQJa9dT1zIzgZaRLM0zoKUJktLkRSCp3rL0Cl+oOCYwyJuVOsgBKHc4IkT/NCNkVF/tqVqxCypwsUJwiXmkUuxtujvnutblGYT29inT7yP7/f1Gb8vcOcXJZWaeCv/pADaN8RjDZMVUmCx4U2GTMl0BKLRHXlRMf+2c2rDFnWJhYuxVd7D3AWxkV379FRhwKVNZXzB5tmzwtaz78SnujKmzBYsq2BfUCp8n5l0YkYkA8Qj5qcWJKeHDEg/yatxJmNy2cdCG3Q+poGveF2+yCr+p30+VQtKbuFU057fXjwBTUbhnxsO8GA15mFj0iYP7g4/6AygjuvxzQ4j7jG6XKFi097VG9UOqP7HkWdVSYu8vsky2iK52J9lk6Z7BtSqrEisowzXrQnJreU2jIF9XcU8wjReBlvrf7Vujf64nHnqf75gsxSp7nUwwcWHZq/1anmVq2o5CjgvjAwCGuO3CSWYXwTe6zms2wWBhRruQ2AnAqYXtF0DMBmNvb4tzoQzlqR5JvVKmnStkhQ5ljCuwImKJSoiUNp+ie9/Fx1+5wtOTS+NDs25tRmFYvqrrheflxuvdtZclNvde8l6S6f2L3goaq0JsX1ESsywDQDfHvm/AR/sdyacov04TO1pGP8V33aiVYG+XGpCpVtm/pIeIzxGAM=",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Chinese International School",
+                "url": "https://en.wikipedia.org/wiki/Chinese_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "IB Diploma Programme",
+                "url": "https://www.nischina.org/how-we-learn/secondary-school/dp",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "World's Best IB Schools - by IB DP Score",
+                "url": "https://whichschooladvisor.com/uae/guides/worlds-best-ib-schools-by-ib-dp-score/3",
+                "encrypted_content": "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",
+                "page_age": "350 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01TeaSKtHyidWb7KQCVCzhga",
+            "name": "web_search",
+            "input": {
+              "query": "南京 国际学校 高中 IB AP A-Level"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01TeaSKtHyidWb7KQCVCzhga",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "南京高中国际班有哪些？_课程_A-Level_大学",
+                "url": "https://www.sohu.com/a/717685303_121124320",
+                "encrypted_content": "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",
+                "page_age": "1172 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京公办国际高中汇总|南京国际高中排名一览表 - 国际教育联盟",
+                "url": "https://www.jingsailian.com/guojixuexiao/1596617.html",
+                "encrypted_content": "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",
+                "page_age": "477 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京国际学校 - 雅思",
+                "url": "https://nj.xhd.cn/njgjgz/",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京南外/金中剑桥/赫贤/威雅同款ALEVEL辅导课程推荐，课程详情介绍！_犀牛国际教育",
+                "url": "https://www.x-newedu.com/n/202609/65826.html",
+                "encrypted_content": "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",
+                "page_age": "63 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京哪些国际班开设ALevel课程？新航道南京alevel培训机构怎么样？好不好？-南京新航道",
+                "url": "https://nj.xhd.cn/alevel/961869.html",
+                "encrypted_content": "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",
+                "page_age": "738 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Oxford International College of Chengdu",
+                "url": "https://en.wikipedia.org/wiki/Oxford_International_College_of_Chengdu",
+                "encrypted_content": "EqoICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFrTj9RgnURiIfRYXhoMBRuxJK0Cb+4sytTbIjB9scUaFA78o5+fINNFEd3q6iONU3O4R+3Lp9/JM0GgUH+KcPjvZayf7lOKDNaVLu4qrQcFWq9SVVm/fFY0G3pwRlngcRog14SDbcmAZmRa91DfCq3ZSOzZBYsq325lgV71TZdqfMFFRkXRU20C+oVzIn5PnWahqP5rvdi/f/hRR/yZz0xVYfz7b8SF9+C2GlpKdN450H+36iJJ4ItFtA27O50APCSPs6uJ7kohVWMgVYR3/p77oQzHLXnXZWmbAK9lpvB1LKdIowWF7x7Ft7EF5dpWz6rAGHBRXastVM/RnIGVY/JL5QQQ/ijSesD3J9DnB8/eVi87jN/s55gB/lltiEZN2OsL4mutqnOi6H4IFHiv4XXVjjylfMxfUYTOieMJM9qP1pOwtcLj4jXUOezYr6NvOorDE76JMKmA+zDfpIkUqCMuOD+fb7QOAdhg2NAAhwQoGSqbDHHjpjUPVmabUMxPoLpMg6C3cyjNKgdeBc/UdhO+LCcxPCdU/6IPBZum7xwr+wAbDupZcwHNe5RpZ0VvhoxaxKRjyZrgG7WhgBQj623zhbuPXIFlSu3aH80yDFTRhs4fExZZIXuvLL33U1AxFU9hyxUh0+4/BIQn5cPepoudNECltzqnc/lBGA++oC0IKayM2rCgob60ElQAKKtGUyRlo1OcaCgEQRvdLEOMIgjU6/qLw2fLpmPmbUTWZAhzxLIRG1SZ82+lGtHaTCzBBfXagExM/N73LDwUvYJqxam6zZuCWNL+kCWqeu6DieMtD8p2z+qSSJB2U5Sk96i6UMVk7oWMJXIUOC7ipi01EdGYc3766zkSvciP2uF75TEceYz0Ksnbc08It3+FKODRzIRw7GIvn0BUskqbWnho6Vk74+e3IOki05FyxMngwMr9WT/gF7J+1YH54G3Q411vRAyXKtFD9M0bZ1usXrWAEFS/foc/p48CRij/jpJuSZxi9kVjUk9FCHLB/S0pnYmQS1cXIhRJiSIDdCvi0exfZvghpkQVoIGONtGRc1cbaO5Vrm5YKGLvEAnjsCmmm2elof5zgIsrQJpIKJJc3VUB2JZc0/OUH86vuSNZGuTTAMUC497hdMTgugViCRztA2QVLckhkP/c3pQHG/SapIJlqa3jpyCG081Xov5Sp225ZzIvRyLuUILjYqIA9fcgPxcWlCYk6xSIY3FI0xGK3uLZlSIKZBX4+rKIzdMscGYzQrk5pk/AUoXLMcjIqiVIfFhMFEUrScGzUOp8itXuVRFxhuTbbwQ3g0qdHxmPvvzIwpDqQGtj/+5wws+zbRQeSxXnZJSVMURG0a4i0annqxgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京A-Level课程类国际化学校汇总-国际学校网",
+                "url": "http://www.guojixuexiao.org/zt/14863.html",
+                "encrypted_content": "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",
+                "page_age": "527 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京开设IB课程的国际学校汇总-国际学校网",
+                "url": "http://www.guojixuexiao.org/zt/14848.html",
+                "encrypted_content": "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",
+                "page_age": "527 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "南京外国语学校国际部2025年招生简章！-国际学校网",
+                "url": "https://www.guojixuexiao.org/jsschool/jsnews/3019441.html",
+                "encrypted_content": "EtoICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFMWrTjZvWa+ehlqqBoMz7JzWYbSGaxWUO1UIjBksvpAcDM6uwfzpBB2jvYkovK9w9ZnmR4T0+66O8JGx+zTL4V0Ot0FJ18wYqlD+FUq3QdvzpZdmk6BuUjZ8E3GFW5NxmQ6tudn15n0dBJMw8tfVFHNAaNVT1N8fwWoCv3Q10lh76CZ8R6ktLtedglcsrIbM0BkKnfXeUnSLc+WoetnAdlkV+DTVge/cYyolbPbUsgUy/6gUrZb27CX0uVre+yCqOzGsKTcYgFdBV7MdD40kbHEK62RIZY8DShGvXMkl29cvKJfdpQZWlvuqcRxBcwPCJWJkQ1aVDgNX39N5AvRhVtXLP0fcoN1VFx+8vkIGw/mbN/W2vPRq7thw2AF7tYOu4j+G/0CzxAUCGlSn3uHJSit5KceCVBTICXoDzSVAQOWUzr5VZl951ZZWTVe/522PAOw7LrSQb3rWv4ex57ram1FvglKLK46/BrBfAkhZLRSlp7wZfGGtCLK3FEwesKUcBwE1337nc/COpvxk8jqDGzyQ/5lqHY3z97ihT1fAMPTwMbKCIzpthJ+pQeaVHuuYPknHdmPrdpf+YxMCsdW9BvvKio0r8e+fIS/OGwS39BY9YAHj3Z1hMRqwyD2yjplOhwUladx0Vi++VJElBCoytD7lXvD3WUhVd+lzVwiYZ6SOEEhr8fK7rOoRtFShvZRPLzz3kLeEFQo3aT17sR6mR4cxwNuGR86cLdQPrZik6TRqetV89vCu5401Jm1TiIQ3qJGmKb0bdQ5hSwtlpvO3ePqdILGgRlXhaqqzmmWXsYmloLfSBUhnAT/uGDJjaqR6fq+vcdBJ96lbwhcYO8f7B3w1GnbXc7/iLX3UVadHoxxI1w+Y6H3epZUjVMOKW8Urn7Wpx15OolR2fqHrD6h+nfqa7FZT0BN98MG3HIaN/P4h4wlzkjr2Qjluv1q5keVpQPgjaPLV524CVvfCWuGI6LDQvbw/cKkwTGLepDZgbMaIMT3DzdZJ2FXc654yhp8uw7E0i+MsQrYnhz6O0c4sWIsHG8pt9besrp3ANmJ62QwBX7nUIY5XmxGeOOb2xhg+VyrBpIFO67Ywrzmltl3sSPRm6HJ39STJbbIqfAbXd1RHo5ccki7HAfi6Ss7ZrJlOYPsQ5wXX+6Xqh/7Btbd0TRGYvkPbTUXiJ+IwZNRsMi6PZRV7W4xWrzl9CCMOPCjw1sRpX52JWL4mkrKTGPA3kHwiz/uPWfcpki3Lh83Je0o+J9cEFNaNTGlGyOre1iixdPJJrflaDODwnWQ+drh+F0ONtDFYpC6DIx1hv2hn/+EYuCzafFIJupX/WsnmrR4G10Wugf6FkZLAdU6JbL6B1LrmckoiPHo2Nd8aMfS8JJ6le6g+yFssJLxq0bCMI8RcyitrOh8Al0llD9+7RgD",
+                "page_age": "689 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016QZmv1uEL6UWsr1TUQe8AH",
+            "name": "web_search",
+            "input": {
+              "query": "남경한국국제학교 고등학교"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_016QZmv1uEL6UWsr1TUQe8AH",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "국제고등학교 (광주) - 위키백과, 우리 모두의 백과사전",
+                "url": "https://ko.wikipedia.org/wiki/%EA%B5%AD%EC%A0%9C%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90_(%EA%B4%91%EC%A3%BC)",
+                "encrypted_content": "EsoFCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDLeiIPbFKhpirGtGKxoMpCUnAhyY9tAGSCvsIjCGAUTl9C9hs1Qs7OIlzbWrU2yD5r0ZGbgOVSfWfiDG5tSjb0R2xZq3SzfiIkvdhXEqzQQh6kq9YidPw6CQatFquKaWgqQUB1OttYU1spFa+no5j9/PyiqW2DPS2CDzKFNRoHP7ZE1Qp2NAT0XOT8yurDeFF4f0rUvhRqCGBb4Yj61MQcovd6o8nlWCsNA9n+AQ+ZBkBRCMebBU2Z45WEX7re8+8xVpNipfRJclKRkHOvTLn8CLF60HSKWuZQNnfAPwTbzckWiYu612mvaR6+fFts/at7NUSkKCt2AjmaxaA75XBRZwuT10CPUv1F8BrXlXhDF0O09nNgrDvyX2buNFOK8szDPTwU82e8q/wdLt1LOXOzaziNjGrUVG/m9DHTg09LgTa6FvFJieKafl6Ee7PkUGZlaEL62IKjpRuwWjhZlLMYQGrOdMk5II9KVwDPbfj9wJBX4eTXwH0BgWciNHA7uYYQfe58oj7NCP9TtVXUdIeaEYnQ4vYFZ1k1vkygrGNp8m0uG0ZItBJ+La3XB7Xa5xzygNbuKyqMu9bG67CrGlRdgX5vgxjXXLjzOancPyln/gBluSGP5uFY2WW1lE1b/shASyrUNcy/ngbTvB3WIBw7ildJSFlswgk+I8A10m11ZFGRQ/tM7KQ9qXPR5twH9lhfCGtU+UEO+TxOCt3AwcV2mYLleHJkXmvSHffy+X9zGgx/CgJ6zj3EoCIJIQRmrN3cPXxOykAIfK0S9VxiNl/5GV8LbzY6ZyshcqEgy9I7FgzjnCRK4gYuzKomH8yVrveK0E9Qe00heUPGP2BsmCQq01Um1hD3/NDjupOgj74zriaAuI4+x7ucHheCAYGAM=",
+                "page_age": "140 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "북경한국국제학교 - 위키백과, 우리 모두의 백과사전",
+                "url": "https://ko.wikipedia.org/wiki/%EB%B6%81%EA%B2%BD%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90",
+                "encrypted_content": "Ep8DCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMH5c9Ax/dW0KrjdWxoMZwPqbKHLmTuK076gIjDEAEgcplK4nwykcv0Bhxb1XiS7ZvIRi8W9tbZCMhqFeTvzkgBbjqo2KskoUi1nnMUqogIJGIaGZrWEJAb2dkWmE8pTcZgzY7b3zwM2pPoid0OKTg7JY0xZz5pVZ9WZvkjaO1XpcOhhY6EK8RSJ36Gc9/OZVV6Ebm8UEPbto3hcYJ6QxjiiaVuIu/yIvSjwKcBqLdDCQnMAS9ICoRh0JFwIlvNNqW27AEen+oiQrkHAr6t7ABxlMMUdClcMAN1a3paVWnOvcsgexH1m0ChGB/ByPOe7kQcZATCJ5KiIxkWT/U51suALCP3H4aEaJTPULiafqtUnTA13IzPXU+Co/ark+T4xUZzk/HqIxP9m0Bcc0XkjTrQNccYPp/TOxF+DgkXZnRrFJ+72kCCN2Dy9BGahXxy0gg7tGDmI8LPbtKPpoWgv0VF5+QyF1YGEN4Qhm4zJlgfNkxgD",
+                "page_age": "246 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "남경실험국제학교(남경에코국제학교)",
+                "url": "https://www.chinaeducenter.com/kr/school-nj-nsxx.php",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "재외국민을 위한 행복한 교육정보서비스 - 재외교육기관포털",
+                "url": "http://okep.moe.go.kr/koschl/orgInfo/info/view.do?edu_inst_id=001600310002",
+                "encrypted_content": "EukFCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDF39/YA1LwMeaN1EsBoM6ynOImkK2v3d1BUaIjCv+yP9bJolYAEvDJYyDt4rTqorg0HyHWiGyMzzFRXwarIuGlNxcE1ngkh9tRxhoj0q7AQxyUlIPgvpgjOGGih0abq0m3H4G4sCbL5hn/o4SiOvOQuvol7UwqeFJ47Y+KEy5n51V/YQVBlyoy5fl2Ey2wtVjnRkB1N5oZpXJBCfRtqZqLPSFISCjtGtDWRx7twKz7HQNVpp84kTI2XrOjZaN+d2cj1qxQvVuKuNKZWkTxFuZVv4GKRarm+nWpOapdz9RoWKJunt5PeuS7ASNgPLGEiUaKpLPYGhYCGcZuUyS0kB76OqutrmYWsbrw2pezKXvUzA9vqxckUoRPQFFJRdfwQnCkNKGJw5S02dhJmT1IS3cxbX8AZSELPQUZs1STRkyq/YtvDB96+Q2RfhTb7RIenyCTma+Ywtvk5Kny4fJ58I8MDCwvI8+20t+He/1I5wkbUPtOm6YOPeikP+8XqHtnDxxCNgE+mCmdo2EhDSHCbmGCdtLTond04Tgme4IFV8/Zmi0MRJElvj/6Te1HmqAVq+T0HAWlgF3sJyTHqzg5Ko6MjwFBvpn7zoyMEtG6EwSGU+2cLMC5pYydpVrnmi+pSMrD7WmTH1r7AfQt6qRyKyRh6njwH6OJdXZ9eMozQ5FRruqOp8AsG5O1V+Bm4lM9Zt8cRDMI5/LjzHiyZLBcxQ5KE05cTaAE7VGQUdyJ9J21iC+ARQteMWB8+AMmrzAi9wHRoXwS3MiKPmzNqJkqLUPqTKTj8BP6vF/df5SsfzuesB8UG+GWgJXeVZ31XyXuvP/H34cGyRUOYOJoPWHhQAgA8fd5wn095RvFg6s6sp/TLukdGryXw3dav7qHR2a8LweCgA5XIsWdqYBkDuCxVUYERGry7DDs2l5+33nhgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Kyungbock High School",
+                "url": "https://en.wikipedia.org/wiki/Kyungbock_High_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "남경국제학교(Nanjing International School)",
+                "url": "https://www.chinaeducenter.com/kr/school-nj-nis.php",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "경남국제외국인학교 - 위키백과, 우리 모두의 백과사전",
+                "url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EB%82%A8%EA%B5%AD%EC%A0%9C%EC%99%B8%EA%B5%AD%EC%9D%B8%ED%95%99%EA%B5%90",
+                "encrypted_content": "EsgECioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFJhEVyVi7kq45/wexoM6Kr4wkTecuMFuLA+IjBcENZoaNgFJ1PA2tUjbDrcoh3kc2evyVvkl5sEB48QJyAbXgImy62hdDvAK/zetEoqywOTkr/9MjmyxhL0ilHIsVIvUfiKIaOXKxQCiC4ADNuvJo5tcx7dvdRqLAu6oVYoJvurM1+TZXNDc+7DoqB1UdJYNFoUkSPjcjI2ajftJ+QH98qDRTh2Qd32mCh+uo53hmyn3Ylp98zPE8XiDn1qfHwaOftORtuBL33rK4yeTMn7AgCV1v445RmKsI3KVt7pwQ2f6X1zy+v37QU8JVD5V6LjO2A2rA9pPh8GDZ5iGnJ/P34ahGO96fs8w1dlJiR/YXw1MnWMeIneBxuJYWLooFfOwX9Fu6hiTZx9303u1RshbA19YrBdZxzebakbK30dWZTjE2gmFKaTiCoJR4BJtfOnBeiMM1afhgmaHBMV1CbK5sR8bjR0FxbBblH0VHeP5jmxjYeQDat88WfcCkUkO/WJr58+bsqbu4ocOO5gNQpuzZ5NGv/PyNNIjEvaMvSMCD2yxIVPiVyp/V9SKGUl5L7dEaYjFzJCDIL9ZmUCopjYWIijRSdd0U6xIyLfVhlcFY2AzUVqB9yiw3+m4ijC+m1YI8ZWnXz+2R+RdqZBFMNnZd+adhy/xQfJ4huO/Q//AJdFl8luCuhIjyPmJd67AjeizhWttygh2sP96DkYAw==",
+                "page_age": "577 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "한국국제학교 제주캠퍼스 - 나무위키",
+                "url": "https://namu.wiki/w/%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90%20%EC%A0%9C%EC%A3%BC%EC%BA%A0%ED%8D%BC%EC%8A%A4",
+                "encrypted_content": "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",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "북경한국국제학교 (r52 판) - 나무위키",
+                "url": "https://namu.wiki/w/%EB%B6%81%EA%B2%BD%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90?uuid=39ff5686-92c3-447c-a129-f7c3c7ed2551",
+                "encrypted_content": "ErUFCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHu4Wi779gYShkaAwRoMnfktQAFlKgjpCkziIjA1gXbmaJRhPcDguXiZFgReDr39731tUVFkFc0hSNZWY7cMRGhrCVJ0Gb+N31FNMIEquATwz0HA5tlQ4ngi/DN9arsZRAKQnpVD1AlNFfzMF+7YEZ3S0g81S218UaxLTN+oRCLraJbo6lf+jX3KTr1nSRU0c0hvosKpoKKetiOU2CdATHkfdSjhuIYjYsa6hk+mmmFuKA0Oy/+yUerG0NLFBcSZLgJFGvD+ANP4iqdpoQoP54B+Cyhy85l+Pi/Ab817KGcvX1BjmXCxu1zis51y8lm7Igcp/NU+uso99sDRnFlasyF5WVq9R64exYNpoLljnWttYApkWRSb/tRSCan/dgbV7mYUGf0GeigZl2uU1XC3OryiKENw7SFYAJSdgaif2ZsS3+fdUwcqFdfD/pgQGIaAQWuE+69SYKPqUc/oF/m5LaJyc4boaa9Tx4jfyeDQ/WS0chB/6DP1ol9QlYI6KHKUDcghHA7j3SNmedDQgpUmG5crFGNUiYlC6/oe7DLQFX4c2/Pqjd3m+JT9bICKZeti/zybk2UQswqI4PKaD4fQilW2Ok6brvQEs8FWvBT3O38kvJmX/NZN2Dq8si38lOkxMXqNWibwaiZ29NejTJMkgob2G64/tZ1UKUNFTq5430XBKPEGncAwRKRF5E3b1/vgVD4ttVEzS4jrns/+ofD0pSD6yEB3xVY15dMSLZtg7ypwavv4/srnk77zm5qyThbH72rYvsciNATj1yPkaFqF709GNjU+WKoUyaCqsZJg0Nm3YvWPxyaDr52+F5MwxE+XhFssgK5diOc38bhlo6dDSKrL5wJu2JKmGAM=",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01PEs3jHWh4L5nSevWiKAWWt",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "ErpuCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDEkLpuuN3ry6OTvbNhoMY3lrtBhuSQ8ZPI8YIjDLATnqwHDdMVlDMjoVYqanyG23aHqTSqaJdbYoIUx+mPEwUwcsv8mRl1vb0bO1pFAqvW2DO92EbzHGgqREfZ9ZeECuoFfrJXVLttc8HJWZtcyBv0AeT4witRrupWQrds9X2AddwuMZd8/aSHSadGTa4/BMxfTceiW38tsgae+0AB9LYeOH4rmDpX/8zFJX8JumsNSQjY6O3cgs2hrB/RUX/fq3gGpySn/JXjeAKOH+q9LJhkdcZQpehb3wf3uC2/F0z2lYICrfNGsjfohnSOXareQQippIZtrF2IkyfFkCdsBk4hERhVQRz/UkxO6Dke32xp1aL2kB/vAuUf2QAUZO2SvEqoRvqsQ0H5lF4CYCw42DHtUbO/eR/3UI1onMsleRADTY6yK8U9IHZe+HSOUm8DFs5P825SbWbN7NBkzjY8yrCUevDQzwVm5PwzB3UmZ5SxGdyNa5VAIXtEE4A2lt5zZSQL8BEZXq77LFrLX3iazXgY88oWbq12IZvqpUwlZjABrFRGGmbVsFMOyQ3NamxIHoQabLldrbNpdeqewP0LQQKmEeRcVQrIfe+/mwrO9+owXg6LJUk/aAhhBI14BcsEFM8hPvnrkIFJXRp2FFnQTGSY/dKbDCPAj2PzPtfm8cR3kFFkjTJhPwKggvShbcSrWotvai6WxcJ9kL/FgsB4UPZT87dnmTcK3dBLdgi2zort4NKRhgCjqGl9ICgiAvHkATn8OtZDIfd5JQFcNEx70n/jjQq6xJCqG+s+vAeoaA1sq2U4jMkrGvsugiIZjUpNQLe9NbbT9y5mTpLs3X5MSygRfUGEcAsWnO2qmFK8L/1T1vdq71KXaxgBuG9fjVfJBlJPnGN+WMzS9ehgLfKhQwCpwKyutGLYa1BKRJ9LVhibqTTl49ItbcCKwUSPiRQFXj3HUQ5Kt6sHMc7tH7eKHv+EaBYZc8HxCN8w7VZly9wy1Cblq0GVdY5dMxw+fyBgyqTdHNN2sTohtmXYNrG+6H/uM3MBscgyva0/eucpDCqfPsy6GTVWwDN/vfGkNk4uL9MC9L5bRmnQRH9QtH+vIZCSjuWaQ7Z/R0+rYwjfeO2MWbal3jtI7Ar0XZSswmMQVjgbffbIkAlYYT59gJSbbs3lp5VeoQS89LDyC9K2ey1eB4PjGSNzW0VPWTFZzwwLWN0pq8sEPfxmtkRrCPpLeeoqT3U87xxqplE2QX1gvql/pxEIkpIzUgDl3MXViCfr5C2Ejqb4qZ0VTA6t3NX0kwTzPcLQgTyG2LG/Ke4dav3Cu+BTt8mIbQk8+s5wS47kbOWtEYtoMvzkNDYbHkaPMi5Y8Y0B0eJyHtlaDCkaBVFrocJ7jN3IQ9DqrHAqlavJ7uuvFETXUsMsc5ERrVhp/KzRAgQZC3X3wgdK8CNwEqethjczjSE9KgDOp0REEdZks8XPeN0v6NKHuKzHmVwPJHfP87iCYvlQ23gWjin23HzZ5h4NFOEttaxNMnblPQl6E3kjlh7iV1uc1yACSS6itYi9Wzf109dGFniJRc924QDTwNzmFE9cLZRGv1CSjr9OQfi+/z+IINTgzFPXRjg48kzHSpGR7umerUq63mhH6UmAXDb1Pam9xs/RDMLj0vqxpR/qNRjwidD3vyIzmR1irZjf/sYVCshsYpOXIXrS2/qm0W2Mmumg3LuHwum4uoe/puDGX0EyBo2XoZqMnstayzcS5WUriVgPml+4nmTr2ykXK4c+Kx49kZ/vSebwJ7u5SZ7lbGQ+phUh0ep7hQxwMnmfPX2nLXlFjWvTVpYXxLrqcbsUvEvWi/PqOzf/8pwGugbBhHngUSgkc2HO8eKXDG6eUOiQ+VGaxv0ikJw8MENZSVlCSi303w2GfvlbPi0o11S5et297WTe2b8kqmQU6QmbHllGDpA2NSjF7t9EnLwuy0+wBNSW7tZAu5L7t4gJC8h8F0o5pZiCvUXsS2sl6PVIgh1F4A30z7hqBgWeUBu/0cduJ67XiAlfMJiDYiR8h2b/2csDp3dcNPL9E0SoYzHb6IXfkaJj3F3e62Gi8X6PvWPycQ/oeYRGNMMkuiRNBBpsErmO5LNbc40qzd4Zgi+keVtmIWfuLMBcT+HnVFpD9AjTF8zEwFubczTWUlQyz+5rUcpk9JawCFincL+Gbdg1B6eG+XoP12RO0NOnnKvPfpYWldkL9mIPDPAhyL4IXw6lEDOTrbGVfxPO9234TtwC103WwWsSHX2ih2DwsAW/fXYEjfR2+2CVeryAyQh/u3XPD3PweAgGzDr25otXf4YkOVyfC+UMz6iA1YnyQzv9tVN0o5ij0AldNbZmeHjYPPIsYeFw45j1wFaBBCf5wfKYTyJ+V24vZtFsiLXjFxApmsTNS3bK+AACbQr8kOe/CTk5tleT8GNegLdU5/tCShEM9VBsGZ2/SVcGexkm7ollmRe+Z0weQPPQMTmrTzNuCHusxaC9Gc9wE3mBKfhS/7/BLmqPe3w7u6M66MC1sB2uyG6KBmB8xwi2B7lcAGeAuP5AHWnJMrgD21L3cNJD9ZGfyzkhsb3BJ7v22foJQxlI6Hg8PbhBFpfsxWDZBH0p6AmWJ1YfHk52ngWPlIOlB6SwI3cJ+h+7UriwRvehIO3XjlNgPM+RcYq54KVsMNCY9CXzuDkGQ6Cuza+1O3eiuoj+du16c2jlKuIMRY2+bze2bZrjn3yVQIOaYHtYG1bkLPWO7aot/qV78QPqX+mazZHXcxtLcwvOSHqy4PNBEUPUqN5ViYIqImtGCqLHPJbxfrreMss0GmG4ZF3JRVPpi5I1PoPtarYHP3Or3ZpqmSi3wpUhwCklyivOChaXfDIQh1iL/Kq1VdfHF2DRS19yzmkpuE6RELx0Jx0zYG1Y4ZGTR6eYSW+Whd1U29Fcfx6fg7T0LB6W+iYW28O3l+ONyDAnJtVIqsqnJ4yhRQx9MXZMiMpRke0jX7bsv2CVS+2ZIP8WnzpT4v9lx6JE7RVlafOrLYXDMLoxNlhojoknJNBbKZYX1FK6RFE0xfFBlQOdni+Vd9kz7uXLNMgvJ8IL+RLwFJkkK8TMMk5h5ocJNwttJMdikLuNrWUVBWa/mHlz5HUYUjTZ+1v8INqYwJ6bDgPVBpCYd7FVhQ6BLrjK8Hj8EQYjN2pIOF+Qo+TRpL1fZVm6D3YF5aNzuxTNPFddG5MNXkxjkOk6X8e/6sAc+aCLN4T6Ha4plocEBBcEU7CZq0XNBYP8lFmR4R7Y4Yl1anX0bJUi2Mrhq41OMEjQdLUaudzNmMuooxcaNdOt/jGoGpkYCpJvwPL8/KsCK1VDbTYgXHLCBjWqrYARWsuzbWQTJNbRpx275wtoxvklH2KAzKYR1agjho9fBy1kzaiBHIn9EIuUTOQWG2IXlJ6CUX9o9AgCR3qzZyoFvtXvMj/2DQGGFX8m84JCBA2JWXVli9JIjkcAr6eOHTZGqdHiV/gxcRdFLHQcEPhg0olOybXYQabzPfU9htj1iKODpsKV5h5XT1seoqxUeID5qaMTRKOnM1UCV9qPUL2bDLFKoe38kuMrGCeiq+hFdU68BtFKhZtC5hevbJRSg4It3WdTMw4rlqOFO/nYN/sBZjSHZuVazMQyPDBc1FSnMnaNCT+mcTecwPoRovm15uGxhT1B1gNvV5N2WPzL1MyY5EmKgid0FdWNjT5E7JR3y0czA2OQZHdGi+xE7tn5R2eqn1+TnTzxeQLXZV25t5vxLNiZZp/Lq/4FZV2k5PXLNwR9Yvgc4LdoXpsK98biZqqDU0SSfL4IShRyW6AWQAfI0uoVeJljXQcS34/DRd7z7Hty9unnShVTFeMRnBdIgG/yfMNliG0E8zGcHcYFWxcG+cncJNuXubLBYBx3jXxr2Oa5nM6t1YTj0WfvHircy9MvceIuDM9vUdeXprVUpRqhH5ACxyoJQLP0M35b9NjIJJXt+bi0wVzyWZQDgHuCOhZnsrnhU40V29p3lD42iUpqxQSjL8wKAiE6G+UCFOaj9K+U2xsoYQkv1nQBfxWb0xB+iBNcTsqyv61Tyxcu00jQKzuSd/Io3JycTuo04EnWiTmh0aO0qR3aCCNVgo4TUqwe1IuWnZ7p20bdOnm+RBSH2eezZg8Elk0jxWZz/UPgi5CUGGwIbRbcSdHT81EPlpZAa0wDZ186JpIXKRoteSmIvDQRA3A9qZBQ+gr2zpc8ai612uj/VQ4iIKDZ9sTEVo+UH82geteBcQMhrAG+id8eyx298g/VSS5g8DbnqUd6cvq3ze+E7PVRorKArK7xTmRrTj/BHeRTf92gZY9qoKAZO0crIaR6yJy2HRXDdOi8N2dljjgyMBNpCOXzceizDWoDyRNs1/i3XtAwJx78gSJfrOZR4Fz0YhkbzupPgQ50S7hVbBwD/r60rsP+a7xcL0gmG8I4symTGoX48/tMeFK5gLdZvnxsclStuVgJvJyp9RxnHrrAE46aPg83Hp/289uzCxruj5Pf2hg4Vf30+Kwn102KP+afukMeilXvCHj1bU3MiM6LFvxDEhOaYQvoEmDjYFiHsBHTAHdSqVrWDpqeepxSQv66l60ol9GTSCfR6zkGVzpVg4LWwlaDzrlokK0wXUsR8oFMwSgDpJZYGK3BzFA+M4Rf8RNGTLO/eFxck72dQlWZ1z82poKiwf9MpKnRKc9yEFU/BBJELmayhR1I084/s6b7Kr9NdILT9iwzITOwF4icBzt1r5Q9vnxO83RRJcchyC8riZvvcHTwp28R9fmcNxBDzWAlA5AHgq+vc3NolhhZclKXF2BBjomJ+W/uDSSSGJj2YwxSViJCVuCazGTPHQiY/EjBv0JjKE/nFiXxK0wMiwPo7uSBhNxjyuCbww27VbUJfideHxIqtCayaO24eCQp6uEkp47T0qnCo6qX39KLl44MqZQyLt7QLYtKYm3bDytfjYjSOKSZMzzar+uPE6CYXoRw9J2lX01ecRdzT7mPW6xk8GzbeNHf0ovB3XxVyMzCclGx5JNFidKj1iPtGqEZFk13dlwwitvzEsRAMngXfEIVK0wJMyhWkP3yI8M2V+TgfCurX5qH6eEHn1Q3R5A3rILp5FkD1Ol936DtHxo4tOzIFvB3IJc97ghNhjPvdod1csmpGDP321DUNkdjmgZ1B5egVqDoJ0cm8W783D0fD13qS88mbfi/AgkKrly5WUOvNX7xeSwFx6w/BUdrU+duyMzyXhU3+stN8ymwDM2szo/Ha/Lcp2Zyp3w2KG5UAem4mYm0V2+jj+E/W7Fu9k+q2w53aK1mOn4GN/M4JT5GvQ0CBCiAU9okQAJiHQP6rCEKIjyF55PwMb842ZTzZAx/m7gFwZ2i6sroJfkt4nyfS9kVC0ZldHdNk59aJ9sfGvQX2uUmbuHWqU8sVpvSq97Ayqy8PMmrDi+eBRnLQUFRWosCH5ivFCV8BMxROVhTW+ZxrJOsiiGDJMYa/W9NPIgF3Ql0Ov2NEF3yxR5AABvfgT6YpBKAI9HUYuEP95w6tMMa6cF+8jdq/RDBQUILw3ZJt9Uu1YHSy/Lnv80BtxH42Q0cVOcqrl9C01iXzL+fDGj/dR5nI1IQXX4wxRpl5/R2TQLd6A77tF2Ondh+2roD4uagtkcNdFAub6F6Ly+DhgpUIUg43jI76ary1FOOzXSRleo4hLb3ltrU3jEWS4K2x0bUvD4xMsEivT2ju6/isf0eOTIKSFqI2hVtSrhJRT5ZYrAVOa/X/S53EwZt7hbx2zTXpBl3xzdfzkIxUDjqdbMiP4kpPrMFPO31MFDn0sGMLcZgg5Jj8wxxangrbYsJKLYm6fxEKeY2UbcmnkjNXQeNACz20R54FLZarGP4L2yiPdfG28M+SVBDY8V/E2w6ScMszsyJlwlg3Py2Xgu7ARk8ZzXSOYEMMC6KCHvz8uTzsMGFuA/HzrNUlvqY55PKczrGGmCgssp9wiC5UgAVW2RSlsNmTklvBznblQjQCkGDHe945EGOpNpUrjVYGrNxNpZzn9cH56vV670PwVE4EdLBLISzp8v0rZXIyiYqppOmgosPtCHNw6EOBpaHBHi5xEg2NeLndK3RwjWzRepquvPJgeNMgRlOGWuRsP9crSkqHu/GP7CerKTaUGpwwA0ShgPElsFiVCKrB+U7eM/DjpVcSuCUf04w9hGX6iw68bID8cgTm4+7ntyhB8twD2mlMG1TwbPnbNg2gmH0DWkdvzcaU9H13hiqnuS8dVC3F014zF6Fi7WGJLKXs5CW6onpXn2cVqTWIYJccvl+Q4EV0XaPWk1lMWjJ1fYy6+9DAfL+dSORXyNWvZ7KJiYPEHvo9nihcsfCBuGoAJXkiZ7d38eispg3sBB3X3SREsvJGThlakIPFgGbFlTXqbtcZyNdVLh2uO/RyZVvgBTzSRk1G46GMOrko8h03ORAbQUpkUC5JxBXiPRqg+fFvZmXqYDeIm2tctqpdsx1mRNvGyaWmcELyWUQE6acze1Vp8FaQlpUU4boYKn6cYfIhTAQGJGigMjVkx15QSuRpII2kqV1tzKm4SPfkxYLnkupKcdu91d1Oec7DQlKSLgGhNkS6TyMnLJsL6TJDMHSh5HAgkGAQtKECm29YbgUcYi1lcudzVHDeMtWZJ/xtLDgscHgOnOBbXfu3KRQwIJNYZL8W0ZN8aHvwqHrsNzMgq05lUDTDRdGCwQU+D43oIv2u5vOnvMpkxpuWRRPQsvTgnSD6kwKE4rBOtTn5CnRsINOPJWRdw2y5yF/NoKUmun6/GJsGNw4Cwwne7fizhAkA3+SNQeWbobXLWpH2j1HEV/Q0wKe0j9vkoYfbvJztDhhQ8CpCFjwOa5jXqf+2C1DXBI8CTWu4J40f/BxT96I8fWLhhaDJwQp6FYfGsdkmV5srYzTfMRbqVx6CV/bN2aqtc+IzGwDK7IBSMLcz6sC9nn3orZ8kjKYghvKPFCxZa0ARC8tfc0BTX2idBn+0K8b9Ywk/Z5WXrN5ruYkxdXQjgyJWEUCVN0uUeut8OZS3f9kUOpUiG+g+nRriAFsOwqbYI6LFT1drRWBar8uiuJ6CvBgveqjHQTJ7K69TWt7gXLcbh4oHWkpNBljczuYcB9m5PyAY1ptFuA7aouAWMx+t70iw5pRntqM/2KRlg8t1F/RU0FtMF668qCALgCIJtCSWlUNc06kbGs4UpQe/viUkMQ69pSdouVyoPUo2rvr9RwlnGtDxswXZ/85F6gjBIicvsRPbGXIDtz5On+WEBCzWT1TVmfgohSKBRab7nbfu5yX/WQc5tI+IDgs0EgTeoWikcH6rE5VaWjo+kCKoDtBV51yTtqu3Ko8vAcZ2ju4ciAVwaR07GjkkyZ9C69KjbL90MJ3SpelWJMqid4tvzVQDfImM+sba2HTSdnc8aGR5oN9q3VlQb5eYgzEoykbaeMfob/m63YrJcE56ZTzjJU+PlecAswT31i638d2YkqPZPcZyNLMY7JBZZmzXBGhzpOHBuuiH3hEno1cU6W0XcNhBoKrLI3NoJBM4cLBcIUu6510Pg4BQJJA5m3HrRVlVTWg2DhsIxfhUW2ddXaz3YbYqBtgbXyUk4/H09g7uqqvgKmegWwHQVIRdUNII1VN4cyclg7PulIsP/tCKGhWphrgioV+gkOrM15futs9eXqJG1UE0sE48eWjDu4eDSR2F5W3KrIteo+5NABn7KNiTDSFY5eXQsE9kgh9G3fv7t0D23pP+YA/mQ+ckFSAd7f683hau6QdlGLUSO1UGGzmuF464wKCL8esA1lCypYeLjS/BNXEgrMC7RJwzUF/cLNjR3q8kLHh6D9/TW5v/sP3tgkezG43ZJ0h8TXk33Yj5BVx3KI6KtODKQ3tE/+/qSmR4PzoAn99Ghem8nIMIzQlO7piI6UM/AlVrtffhNCYsNFPSOSFWERx9hu3zK5wJUqaF3LcJRsflTS888jtHd8eOFocqK16nNul8k287B+kDxWUxPCpy6rPfxSPhj217P4dY96c2y8l4x4W7Lf5FUuH9EWjtS6eC4gx0eF4X8jzF8oZUFIdvFRIrR9U1XPbvAhPdmuY35UwbntBqY6yVcnxdWTl030/OjzHMpr0mTaGVc6MJpahM/eyYE0diSg3EXdjC8jXQqNKcaeIZ637byKdt1yykEX8fCCYIZayOdPrTsZZ9TuiXbtM81CSZEAR2NV3iLbmVnut/lcbs1FUJCCaY+PSwnWhXsRgqIVjKMbigvCVEaUgN/mTkJ2uc6MrxXDDVFJRzkdbhYiUQenMojVDjEgb0ZXvIcQNF4R21J09SQUSC/MWCOXXt/FLKWnvnSLfpt/y53YQ8gQyiAakIcRwils+fLwdTu5gRSQ1+7uj1vn8RjDA2wapKn0GLEy/07t8hUb3FLU/ckrCJPXK+EfB9vJo087FS5ZZGIe6BQPlUGtWb+3CWlKkwfCYcElwjvvFFKFIxhes3ldahn1WyoVfZbkGLvtBCXnMFzYQfPaXjw/fiB4ltouPMy9u0lQyxNuyOTO+n1x12nYdtoQ287EJgvbtclL1RoW/nrEixAhagptKeYuzJCAJXviT59ZbxRwqDB5PGfab4bsdqImSTTTKZctTreMyddjDo60Wz47164dwoj5I1c8Zyk4JSGvwGggGo4zdNc/MI/r7He3GT5USDTqbTLizP2inekE9l3C8qzVHX3xp4Kp3isvYPvSOSSq1zET+zoklMEWyISED1tkvi5t7tQUQpMnfsI0HjbBL+yPKdT0pokLfW+FIjQnZ+JQrxfemX5Rc2qAm/424ip/4B3claRwoEjN+LTK3vMDJgbUeon9PKdG4CHTfVHCRTboyzlBDX/CEzsOgzugR0P8XO7Ahl/gZmFR6WUVSf44IAPIEF7E1KE7pphHFAv19SKfVSKZROnt1e3VFgkOO1+HpKPvDE9Bh+ErQoyCo20/m91SNtT9duc6oSYii6TMWPYEly3rVXoQnAP2dOASpkeiTqNHWQG0tA8WR9eLOYi2W60SZnKdCf7+HSHvRrCwGSkrQCNlSJpupIZ920s7yZa5rL7q0GUiVjKACUQ4C+Dewqnhi+NWsC0M+vS2D/FS98aba7zbytxVw9qIwGwycBRh5cMBAdbMAknPc4fLryzAq4agLJgf3jtuWZjWzmu5tWNS66KV1gvDGQKOrwcszCKRxxgIRVzvV7UsGLisPNtmYdpcj14IMNKQT0RNQtrrm3iWbbuVmGK/hd57sFufbE7kd9kdwLOaBdX0fEwxztjp4FbjJxDWRc6Hx+9AJCNOFzjlR8uPftK+t/9VnJXIsbjvHSi6YgprPu86IDPGgjeE8a2JrHgsB3Rpe+IJIkw9qClhufnF1wVN1ay9mG9/2lqahwrWrozRILHCq0q5S6A8F/AcKO1ALfckCYUGtxz/DvQuo2bypLQc5JyJvRJWRDZVry7KhetuyXWrTD8+I1+a/pbAfr01gpGEElEUF/acpaDISDJ9qtJqIJ8qk3FM0I9ACMGCMIfULy4j0eq6+9JQ0pKCh1wAse4SfrQkZeth72t/ZOPACYsCTEFJYuXixKJp4BvNABv6HGT55VNZc+H/iAXod1kKiNGM75fqa0Ugla+1dGkwjRZvEYQdGWvgaZAL9lF49X62vrhN/c62aTn9fc/FAW92cjJ+bST9jxqXOu2ESCkAqXKZ8D9s/4mm279ceVf7A5Vo/512eek/9E+bhSCtauoWcyJbali2Xuqs+MXVpBKJ9p5roY+RkT0mzuLOPhwx28fUT8BjXKk61GM4cDblOQcPg7bDzMF1lbXjbe68lbeuqOrg2vhABuMwLx/lL1MI6Of3pamct4RkQgkxnmPRy2p4um0rAl8Qrjc0yeQ3idjTZoLsJeoDgyTNFyTNdDnP6bZFsiXHknhOGa2iZ16LcatT6yerDJF4amgxlbD6HpXVxP+TOqgQ3d1DqxDvYPU/SmaBZfvBWfysLfTwqGmTS9W2ayQcVQliw7D4SmriQA8B1cMzt9Vad521UVWfl4z1nRR1E9wlgcFL+A/miGdlJWmZ/gWf1VInIT+no/7sGRuqEQ0v2ha+dzewNYx62+sIpL5J3mjI4vwOG/9PVsuoEg6Tz/UbXGO9YPvqwnZ823vd3ETenn3vqFnjxO2p8CSmwioSNcg08Hd+wt1FjFC1UPrKXZpz4XaPlko8rdEqxZyEdTBYILY+uS3jlTxfOjoDByf63OhXEr6E/qJJ/kVke5YeZTbzxwXzzz9krm/WSN7SvXCjXqPiOTu5ez7w13008DygZ4XcI5RfZFejpSpS46GVOMVz5hWbjmYqmaTWLd/gdvIUYBu+9XWRnPuRjbqohPwXEfssZaqVNdGumNTHvCdssncyICYKlZ9QoZcEIA11NfTlqGSoOgoQqV/VSkz5osQHD6yKYrxPnJm0oXZakgEo6moSGFQAp865lw20SQYpmSiGWtPUMhBVTOnULgB6cbb2RFE5+uEKad+fO8qr0I4yhz18rgVsWzmvep5a4RlW/Hef/PcFv7FHAz91i6lODgkiENWrzDTEvGn+6uPET23gYlg7Th/DvJoGlIDF1fgvXOa76rngXh5cHYVu5KvFHH5x4OLDrxo+FO3PanQ7l9uXTXyB8i0uyOhmKpArfpd+wyw+UG0EwNWs7Y0snNdS68RYQqXO7SArUS24DBPH7kPixWqZpZA+/a45nQ6WQvSBSFSgsxMFTZ9+H4nDOsklP6/WOVw08cF2XG/2JY1qGNTpxd9jqeHWMPETwXXpaQKK1sz1A8iZbb2Gx7eRjpPYw2TKskGMUywoM75JQqKcxYPQ67/bUZYVhz4wExNriHQ08yTBjZmvImHg5E6b1OHIz0xpVqgMT7ASGErRJav0rOOdtSB/6digU1PP8wFQtelnXLZ/KeKnulDLNDarEfOjQ4g+yatziikvw1aI+BkwM/DgeLgZrrJiR3WshWMGktPawksH019zE/WQbDfoD65/FdQqtUgXH9k4Agt+mbMaorMLNkvmPyPalQ01eFMSlM/gaUCL7Kg9ZHk+cdYx8VGtxn2TdaXQW8USuOrI47zdcJHzo/L7BWDZDDmt6XXgLavy/IXOFAIxyiwGf/p86LD2fclUr+ITwa+8gD9tsvLw2O+QiGZKafQOqMqDrokaexz3g353yK4FHP7eA2iGXqYAC9x5KIDA/ukp23LCO+QyB7rxA7vyhKzkXD0c80pV11LhsZYuVv8x0Pjz0kSnEQEliZ4sx86TtpazGyTz/INcWuBTARwf9WIUsGoTAW2ztfRCm00zcOMOLgIsD/ZbyBGlkGdqx4SMpbgq9ZhzTs51xD+pBeP8UzxWvm9yUqjscsTy+ba2nSLPoLJt4aGLEUFZ2wk49OcdBDhQuWOTix4s/9hVKVahu93WVfbvVLH+vKcpypm5nJAgp9Q2/MyjdZVfT7iZdJowFKmEKKgTtypeUWSvx92N7ueHwGbqaiFmEspo0w36iaeSmH7Of0GdR46H7UNaFUN1Wdrfvx7PqWt8HL75oOVuRnKLL8o2E6+YIViz/fgj3JTUsPgyDQ+D0Lfm1e6baay/63ymx4qK55L7qgfWY1jDUG+8Rdkmg3+idR9hznQo8KrArIXnbeQvVCJXlljs1wBD5aEBCkhlYAl8ghugKo3Msyay1i3NHX/isr3DYOaXdB7BvcYXQRdJ4XbfvqcQes8Z3AAtV1JxLupHVmt9uY2buajst5TfW2305ZpGsmAEjr/sT7PeIsPK53hp0QlfZAoCb63uMFA/1LF8GlUxgidvGCbGCmXOBbF/E1yjG3LzQ93FNUWI7spC1qVjtKHVaOQ5gOMtz4DSdQ4TfSXns1YRvy9wTUpazq9p51OtkiaS7bbgrLD02boFC2xOHNt5hJmsBr9+hY4ysR5Zp7/+gIlqwlsVPwQPFQZmCwGfJkJR+VWZw1NLQ1z2t36+qCz0WAO08YqvVkL1jntyOyEDsdINZqLnyp4DKuNGT0UIhVMhx1P+bi33UM05FJj2yS9f6ayFKkAo15ec2+cWlnWtDmwFSY7eD4kx69uTvp8Ysy9fTED+7VUsZUxC24ecsV6c2oflCLR5dqNbVm4byoGLVOGkTZdKFvVQ6XkqC359OWZ/4x80rpzUZIPsntA+yWVI9UjkwmcohkWGHPojO8JZjEpq1Vv9+VsANMuV1nJxmK7MqdTulfSM2FFw1MeJUn4MO3Nb4flRUR74RhC5p/XEiUT02RmqKgyfVMp/kqnE0o2FFqKSmKABytzMYPVGILA7XQClCTbVaG0HxqFmZKXzRUS2WUUrlghNx/Yz+2dfISyJogYispea/1jAvhG2orL8YgQYJv/2JU9T1VXNjFmh7y8hWalLy6aXwDU+BeoqeeB+BooVMtSN1l2HhGACgJ4dQk/WwfjVh6SqJhnruGXrKW8falDZZHTcf3xF9PPda/jt7tbBhhTXoVX8yAUzh++64YkZ7nBK9938vGEWqgbDkc1Tb2F8sLj9NpqSxg7meFnrgv6r+HNcsJ30YepxZVK2qJLC/ii6TVkzFwOtnKeB2HJRofs7XF7JB1KpSW3PBWyI9h+ZL7etwbT+Rci/i96EKc/de96YJSh5eJocXnoHUD/npSBc3qCIzLt5sT/5tSuLpLewvkQJdxFJj+1MwubIU8ozraGVYREAfuAgnJnGo19wpHMz2dUSF0ByFFjPiZ2anKKh9O3tYK4gEDR1i1HzBoRFduiEqp5D2ZKKunA6q6g5s59CyfKnaokUHya83SW65r1ejIG1bhUJQQ5Op6bNIseb1YGyAzDphfd7pTLvK9Jgn7vremxvbiaQTLl5NGDPXjWy07bYlJyStGrzp5Br2OH0Ei76fzGxnDXLB5r6S2HVWlvIkKoGlYd2ws3oSSruoX59Rs4sgUcbti/EdBOBZd1K7iDqnfxWWurRVFTlFLluEt9R4Gi0V4pU3HAh/2P3cWLx+iBwGy5JoPsl7d/r9PqfVDpDBpOkXnbSRrw5YAdNP6LPYFYdEC6xbTQz8wxL4EG2FuMhKUb3bNs0O1H6hpyY4REHf4B1UYaaGoWE2bcYLvie37HFVsLp6RcG4+gFCiyWINtI+eOmtlsJKrYBiJc3p/FjQ9VkWaxXN6Q20MuQzH97X9xrRZPZcc3dnNM0vrfk4WmE8cTAyXstTS+Qd9OevAXrvld9V7xr+jtgHb31yPZ4WgQ7RUWquNq/u090vWqRDaYWrC2T5hxIu3mOWVhSICTN8HiBUomORIoSNykqCXUb+NHM+XJ3CsOKJ+lvYq0/x6CR8p9AGfEijbK9B1runfVRgim43ROWJxhi1mkConJkKoP8ua1dz7Qds9mS0thkcX/SgRpsaSeg2sJOp2FvvXYYQiQKyq2PAZo9BaIbUAeUJ/hns1JuJD23utEz0ckttiSPX/9IuFmMeCifvXD2aQXUizH/dcsWzJTuHIB9r1TbYl0mrFxVtisi9ji2zMbCn8XUD5wN50DhEMphb7vQOBLPF0yBlvozLVa7ClWDxKwrpeoaLtfMRlwhjs/oQ/tDWvVenjQ5JIykLD4J9/dXjlihOFOXdK1nl2i6TjiU2a3E6Y9LQs/dz6aNrE1AnDll0ojfXkVPVRfOy5ErhNIy5hisR/M44C1xSMCHnP+RsubmO1lZAbwy+dmjC2dJx6tG9n0prhuLbVtao9Xiny/ogZXEjhqEl1TrLOHY6PX8lRWsbQVmMDWrXywP1In1nMLx5l4zJ9+PXTY0dIWz0iqCv4sdOzKeGB6ZgNSwpoMY/e+ezJeMnkWCB+GFMz/5gX7a93KnPtSp6iixcYFeLtDF+NUyD7oiEAufvZAMkpaF1B4vjsg+IksO5JVEmPo7PEGYe/dNgatA+lQZRD9IsOhxz2pM5xZ1gdnZ0sjvr3yFKkdXJksv7ILiJpBcbr5NZ/rugwzy40sNItGw9Lp2z/796Rqa4G1HXWFHTs0GAgRmyYZKVWGUGWcHj/+j66nUI/ydp/Jb4sxzVp+MH3xEcoKx/mjg7AwZDkUBV/rp50SL0o7p5mKY7CSB49wZeYoOnrZFd8yPPjg/NMPsV2ShNIj5NgTskqnGiOS3cVlFFUJFh/hPWFAQVuICS08OfAQwyChyVpSxL72PzOzrOB3D3JrMecaTr189MTJtsyNu/sZuRKUId5M0CP9ucDlyz2ST6L3HZ/EZoNliPdsQzy2sDVAON44Fk+FD2TmgWBm+/nmlmoznOf7Q9hJtweDPyIpD44nYIJGP2V830nR7ri9aohNfoJcHcSjJwmGlLMArRYMKD5W7851EGgS9Eutib2VD281AVooA7R8ejMn+bqQui9LK3ImumM0d6MGxGhTzXNlvDqXZyUqelx5o2Naq+X7xAmwgHPPPyPVmYFRc+UhvSBxRES4mV9UBHhLRfVz+H7RNUC+8TKqVmjxYx6IHkwhzeEUtAtUicZtmPoVmiq+6BFiPH00jXWmSpBO5W65avx8VpajaxIh07W3BlDNkyiRD2QsHd3nuO3SMrPNYiK3zAVaqMXR25xNL2dbizpWmV5FUTl9ONhDss+CagVIXmZ5yRcRkde2gcB6Hx1knv845mRnlb9hkn4Lkgj1vn5eWcVUM1p3jg35JxymIXkfdBf3cm40hh17kJdVGUyd2GViR7/haAM5ZUgopYtChXxSh0uxRbsavxMVa/CwX2SbiwXjhAB+wg4aXayA9LPRf0Ms3fhK8UV+6PG1OeEXRrTfUcw2CeoudWtfy4uJkAFlHD7N+QHscdWeK3H3cefS19fryeLYqLCYyqErlXUEMtgTiO5a3zIDKVMMuviMhnkNtGTSyw9GriRJffq9xXRihFkmukScjg7Fo8XxvhnCSGluNKje774XSmQUeUHFmYNj3GB72UEejKf2eVL49+PSxvTfU+MF/dUy54sthVXppvE6goUFlE+lyfoaZrmaGMrL4ObgXfyUN8MAajB26gg/zAIqQINxmZh7RiBnqDQI7/inUkv6zs1Mw7q5GO3o5oxgOgalQzG+bn3OrucFVI9Jta5k4GyiJFWPj1Ibxoej3dBdXkPZdZ3CunOECmhccLXAbvi5ZdqB98IQAYT8/RZcNQ7/r3g1Ya5nVt5tFMWmGu0+PlvwnJBVZ31JpSp+aqLYL9aBivqZok6fSVIF/P55XfU1xvaVwpXS9Zmi7yUF7UsmzrdlNqA/a88s0Xuv17bJo1NewCjiLjPdZdGnYs2FwVZ2e6gEe5HxbaGvg/OEkj/iJStwsB678sVbDZF4i/c1mqX3qo6MlSJjxKaKZ240Mk/ERNBVYPf/QpqOrFL86Tste+JT1NRmw9H8mPEziGE6fLB0PAkmTqoNGO7lwqjnh75jlO9q9m4H+TessTi6D5NtkfsmSjNNeyC4ThyyYmkIL/u0eu3v5OO7Gm20XzzEc9oMW+hlYCOJkt4Pe/SAiIJSfYo7mp2CxG2BPbOQfXundp+0d6l1iY1MItw37FpJC99jKSz7BnzB6YicbNNKqh+4ASmAfy28EzEsc4ZzirlfvZhoVYTtEgWUa8xNMpP/MNu5/b89rT+BQuIy5XFjarBbFHe2e6Kb3RMiGM7FtMt6CDKgTfrAjeFAkzZgLLUMMj2FcWVi98mMN/OVq8lf65KRDvPvwpj7jHgmk5bQNbeC4w/+HC8fT/c+t+VR1aUEdpSRD/S24CYgLNvRWq8pkvEKCsACfduNlTWX6KbWc4RKPEUlUKR8xbXKHKCFdHKDxtmtI0Jtx9BuE2QzpKUryn6WB7gk6XXD2pRTKfBnuPrHqc0dQnlRxohVcUNA12xyHmriRy+IpzJ3XtU6RSBjrQe4euWUY1PQt4LX7ivfK8UeyggV/D9tViS5vMRg0CwPMtBtWQNBQ8A1WUSxmwhWlMAqvOGONTlJoFt51zjQxjjXsG+36JFRl0olLLFCyMl3dJ0GA6ZmeQ+50J8zsu+AGKEqiBHxPHbwNYRpgaY5+A44VJxfDcNk132mpETJCJVtRb0FCYCD1oVv9jCvnrj0iddSyaE33f4OWbF9bOuad7FS6CbJIdp5zhTdJDAlfbmAM4I3CS5xwbjRzezjxY1W48/pOM3+cs9ZhgNTzEe9gg81wY9im21zHfPXZw5UNJ3FsKTSiDWEpLQ39PvJ+KmUnZ1W26c4WqJ1flW8fDmTbbXBZFje0oMIiCNmwIx9/3fYlS8mSBrAYdxYpKpsu3JRghVp6mdDt5u9b5jggjQRyUA6+nkmTyGdvREcO3R6soJmeMF8deF2Gu4wux0QijP7FvsCtQS7eVioQbsE9lP1ktsTbMEyAn7JYbJ6MaR2jme2n1UIl1yo3dfIdq4OaAdJX5sCCkjSCp8RiCzP+kIOtFJi9nARZ0RzJE28gVcQCXeFbOqzk6o0RSspRZs0X7AgeN2I2iBeNQ990lM/esGnlPa6vYDH6Ui4f6orUMvA6kN6/Am9U4GfoBWzk6FmqZEoArVdcPtkA4o9D331vvp8itXM/oiO5iD4vSbNF5ciTasFSgY7sJmVArNv+d9vf5db9o5m8ni04r/+SQUDhwXCejIT9WZqLYsmbKINu5MnImwhlehT0MyRRyFcetOqiEkXv5UrEgwuiUXLLpwst/X4IaNv8RxUDkEhOijykRQaeVsDxei7d2QEzUR0tgD/9d5c71Nb3ng8KOwHOr0rie1aNFKK4NFiaHdhy9g4/2Zn5MVwbMDkkEVrQSdXKOQQwfqGoOMaKljXOTnaMVyG45etVWZ7RqHWtfF4ZEleb7s6KINE9+7NDL58E0bwn4A8PYmkZxbLZp3Y80skEXpjiyzNV8CmCNk0JMvWgwRiWh1Ie6jgCRBQ6BqNIxUbVh51+pZjG80YnHlkd42nnKUa1SaIxhEvjl5qZhnx5MIUK+SxjcmEe4beeeGoRq39Dasx1u3V/ahSEqKPvjnmV+8OZvVQcK+mfDAq8+HSRHCq+ou5UlaVuaH7qh/3YyffgWgew4xL8eX+b5oCGl1zLbBWSy19RsPuDxFkUyTLmtuibFF71iBemfjFVHrGK68TleHymu+PhqVI41pL3aDLw3l84zIPxMYl9z3zyC0ZE5Bgmn5pnK39beoIpsziIBGNTDzAf1ZxgLwCOtIP2GYONn3d2RoctJVaIkOK5wksVJ/biEmfAJrIzbBFh0SritrZpCVMy5YyJB2BohJYirVTTZ4jL2lLNiqn9QUGQMZjbqPK+lwAMK0N/STEC371LRH+lbeR0Dl76a2mGVN0owY4Oev79d8EFifBotBxMjpPOPO5sx34oxd5wCmbNvj9bgv73KOzC3l5ii9c0owbLBcJGDnBA/RRj2l9GSDAU49cGq3bj5CW5IuRg9jPfnlvMRrj37+NptgoPDO5lbMJehydRCsSEiyCZSh7TBEdcSRCXJUyd20Hw2ykLmoDTGjF0qfVCSBqAYjiFkMAvM0IuRXBsT4cU5mVvodCUQfI4R7ZgUjB4+wDBvhexQIbbPEIP95yTIJpT13sUSA+4QE57Z8s2DN6htnmMbsEip6Dbl1oQoSgVROTzryUd/sZK81Hd1cXN5Y/va4Ty3b0a6cxpsf/GMJDs9pbaMy2IADs7MbLoR/sQbUgsRfWaF+n0OBVNPR31IE4bV2O4s1G4fz3WpATlPjjpAG71ilTnHXfD3Gf0EtlxBYNLx3PzgVZeM9m3k1/pgbw50IXDbZkyaLpKqxZQVq3Z8ceQBt86uMFxmmAomJvs74fv8jLJgNgwkCllftwk55RtwUfnTXPbJ+K0rWfS5IucO1ZbIL1mQuZ9lsQYO/cQ0aO5tgbgbxiBBJZ1AfIvkMR3uxCXHYcGW0iJlhATHKn5A3oXJeOg4XjFTp7Tejc9uZBDb/QzJYMCNFIC5XFuBU0dqz4g4LJqHqhFGogcxcEpnH4JAugx7m6ffhrRr5PFD87K5xGl3IrQQ24dkqz8POVCogsQNf1N98pfatkJVYRrn9s0T9Uv3MbwKQTsttlyuIrJVmxtVSitoMohpLbarkhR6IHjJyXXBsobKgIVQwCjBfdfEB3VKQ5A6bRUTN6OLi7qu+0R8VKAcUYhi9EGVK+r5nEpHLDLSYx5CMx9ADeVDEzSbq1DlZ0eV4xDpEpl+J+6jLjPILuJE0ahWuQJU66hbvgUSAdEukbNidCy5cfKnXI2ITYtEXwjAEE+s9aMaIhrHhE/Uf+XJzaOMR4HfEr6mOhTvsOT+8IHoDbSI4EZi8Omp1nh579efzvw0iwgzdZ7mmi7CLGVRGfRSA+W+eAeK1QXGA5GC2pEomxfHIaanK6U5OE2CIx/UvrYnfcA3jXly2t6p4TPADEsjTwQMbpHGH6+6xAzCUATy62mu4j+nPzmOzOnRREeN6Werf+0r/28NhAz6LVTbB+CIrAd/2sOvFgtn8FCroFooqJnrOkTL/38sj5WmMY3L/v48xfcrJHHv5urmdu1ZU4yGqaOqSlumf9HUWcr1Qg//JFgr7vux5XWZaz1QQLC09eEoWQW0jERpJwZnFK+gAr2ysYVqDTacqH4z/hXDYABlGPpUskyMl/1EeZUhSQwIzKpeMhjm0d/cypl2GBQ7J6/BLeUuP1auRlL1XQgMCmc0qLAhRdrL1Nj9KwXjGM5Ydvh1WCnUE2zUbWeS0ADS5Z5KqyokloX+x03JwdhbVgG5d1qkOY2M9Vcnynx9xFZIl5giICjHxcaoaHlz+yF2yM9ig1E1IJTmtcXxeFy9z5grzMkf7TdQjkXmXiSum8zZg6xaBp1G+qX5ux7LZwUpBOyWHtvREsODkSjSm2dXXrPIGkbqnjY9YIWtedQDiHvnsAgKIYAw==",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS4QgKEAgUGAI4AUIIdGhpbmtpbmcSDCUivIa9KQKpuLmrsxoM0mDWFXFyGdZ+J0uoIjAf9hsUpnA/pitjOMGmPESrctP4PGI+S51ercXZ1LPY1BPwqVgWtotpOye8qpRxa2wq/gdvWyBq89/w1UC2+ExXr/4Z5/QiiwyPjK8vSP2R1y9UOuWHZ0ZV9XBifAHHDKyRpGjufQtSjTasLIr1zeb9HqYZc3KYqFGFP0y0G5DdJMe1qDfrcFEdait7C0nlNBqfaPuIGcGKVPfx/O3BvYeOUdHEN+jQmt0PUE9bBZbqx0ZDpjuwEE8ypMV0yrGUa0RDtKdQkuspOgpLUMR0AO6RHnuNS9W/larNUK7tKBGM+d9HSVW2FWwjyt5eqv00OiyPckitd7NoKo0OMdv+FzECK0tu2Ei3ivoQQGU5ndbTCzW7y53xF0jrsvgH04WC44wwpkK2P+ZE6e7cbjjgh6SWfwApCn2GqaSDTE+ZXZI8zDbPUSCZu/XssKMpgQwh6WJtNxSrLkZVIhypEi82iRhEx3qxKk7q3Zo9hyRw/FwGi5nm9Cf4+PvrLqjIcxF75DF2o9ajQCqlq2b6wO54IcCkPfpHfKIKtJYFvUiMOXHRHmEaNemIep/dDmxIxa8wdLlSSK6iJlMf9Jgs7DXwF830wo701PNW3tWnYJXpHnV8cInBAM9G22NVRhc1yvNlcfuYna+0OgxiyIiD6uLGWcJ2r77lCh8iIo4S+TQOu7RkZbsfg+TIy2X8rqY6sJ+JR/YU1QGuBzpJ1wUcn7sjGC7n9nb81tXhfAwCPWfMvOZFmljiQnKD+rGwGfBHp5AJvZ7nkv+9DTBoZWM1esVNsqyzKwGEpcq3q9B5dl2GQGWb8d3+caJskl/i4q65fHxVH6Xwd+/p/DhdjyFxtxbhUkzJri9aMguC/mKv5rX63vqp5Mb9Fe0OJziwCu/crsikvHtgj8eCr5ASp0R+gEICCQIs3BHdtzRRxFmWHWCALuZEoKS6jv/ZVb+nP/yEeqnxyChUS9+/vrJDW39cxS0Idd8vqWvWZMYbkfz8SoembEWMZ4v8yUuS4gZ5svf3a+dx+Yrof5nwvzTsNnH0mM4LC+cckyqxo+gkYO/kjw0hVsVeudMBNnwG/JnldimjWBPecCuJUS/RPpDm64fG+Myyf3e5BILF+r0uvgO4XakdYgKVO3OueoAiOOrkyx2DYSoJkJ+rzmYAL9c8YYfnF3wwl9H9IsOXimRqUKgapuizsMlMUCb0G0gkWc8ibPc7IzfK2PIYsoE3+LifHk5Ho+VRFCGg3/0KdqR13D6cqHpQ1x8NFmzYZ2nn7m6QLiOhGzq1YWd97fA9TLoZ+yOgWotNWMK+e4jGI/9iT7xxFTPCfWzmx7Bid9bzrTwwV35hsiTCfjdxZMsN+LBwhldCRsMc0f2AXXj/lfB2HGGjKXSn0X0rF5BzzoHrudnwsrBwCzvWDPQCAcCA/1S8cm1PHF0uU0GTDhgB"
+          },
+          {
+            "type": "text",
+            "text": "난징에서 중·고등 과정이 가장 검증된 곳은 **난징국제학교(NIS)**예요. 다만 국적과 목표 진학 국가에 따라 맞는 학교가 달라집니다.\n\n## 1. 외국 국적 학생용 국제학교\n\n**난징국제학교 (Nanjing International School, NIS)**\n- 난징에서 가장 오래되고 대표적인 외국인 학교예요. 유치원부터 12학년까지 IB 교육과정으로 운영됩니다.\n- **IB 디플로마 성적:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년 졸업생의 IB 디플로마 평균은 35점으로 세계 평균 30점을 크게 넘었고, 합격률은 100%였습니다."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "만점인 45점이 두 명 나왔고, 졸업생의 50%가 이중언어 디플로마를 받아 세계 평균의 거의 두 배였습니다."
+          },
+          {
+            "type": "text",
+            "text": "\n- **해마다 꾸준함:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2024년 평균도 33점으로 세계 평균 30점보다 높았습니다."
+          },
+          {
+            "type": "text",
+            "text": " 2022년에는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "평균 38.0점으로 IB 성적 세계 순위 상위권에 올랐습니다."
+          },
+          {
+            "type": "text",
+            "text": "\n- **주의할 점:** 중국 규정상 외국 여권 소지자 위주로 입학해요. 학비도 높은 편입니다.\n\n## 2. 중국 학교의 국제부 (중국 국적도 가능, 주로 고등 과정)\n"
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "난징의 국제반은 대부분 중국 일반 학교에 소속되어 있고, 주로 고등학교 과정에 개설돼 있습니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n- **난징외국어학교 국제부 (南京外国语学校):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2002년부터 캐나다 BC 과정, 케임브리지(A-Level), IB 세 가지 국제 과정을 차례로 열었고, 업계에서 국제교육의 선두로 평가받습니다."
+          },
+          {
+            "type": "text",
+            "text": " "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "1년 학비는 IB 8.4만 위안, A-Level은 고1 6만·고2~3 7만 위안, 캐나다 과정 6만 위안이었습니다."
+          },
+          {
+            "type": "text",
+            "text": " 다만 중카오(중국 고입시험) 성적이 필요해 외국인 학생에게는 문턱이 있어요.\n- **기타 주요 국제부:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "진링중학교 허시분교 국제부(A-Level·AP·캐나다 과정), 난징사범대 부속중학교 장닝분교 국제부(UFS·AP·A-Level), 위화타이중학교 국제부(A-Level·AP·EJU), 둥산외국어학교 국제부(A-Level·AP)"
+          },
+          {
+            "type": "text",
+            "text": " 등이 있습니다.\n- 그 밖에 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "난징외국어학교 셴린분교 국제부(AP·미국 고교 과정 등), 난징외국어학교 위화국제학교(IGCSE·A-Level), 난사부중 국제반(IB)"
+          },
+          {
+            "type": "text",
+            "text": "도 선택지예요.\n\n## 3. 한국 학생 참고\n- **남경실험국제학교(에코국제학교):** 한국 학생 대상 과정을 운영해요. 고등 English Track은 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "미국 고교 교육과정과 교과서를 쓰고, 영어권 대학이나 한국 대학 재외국민 특례 입학을 목표로 합니다."
+          },
+          {
+            "type": "text",
+            "text": "\n- 한국 대학 진학(특히 12년 특례)을 생각한다면, 난징에 한국 교육과정으로 운영되는 한국학교가 있는지 재외교육기관포털(okep.moe.go.kr)에서 확인해 보세요. 이번 검색에서는 확인하지 못했어요.\n\n## 요약\n| 목표 | 추천 |\n|---|---|\n| 외국 국적, 영미권·글로벌 대학 | **NIS** (IB 성적이 가장 확실함) |\n| 중국 국적 또는 중국 고입 경로 | **난징외국어학교 국제부** (IB/A-Level) |\n| 한국 국적, 영어권·특례 입시 | 에코국제학교 English Track 등, 학교 방문해 비교 |\n\n학비와 입학 조건은 해마다 바뀌어요. 최신 정보는 각 학교 입학처에 직접 확인하고, 캠퍼스 투어로 대학 진학 실적을 요청해 비교해 보세요."
+          }
+        ],
+        "container": {
+          "id": "container_01Kd1bSmSF681KwDe7C6QB1Y",
+          "expires_at": "2026-11-19T13:14:35.409545Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 25403,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2299,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 4,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5913,
+              "output_tokens": 347,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6611,
+              "output_tokens": 163,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 12879,
+              "output_tokens": 1789,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 321
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
