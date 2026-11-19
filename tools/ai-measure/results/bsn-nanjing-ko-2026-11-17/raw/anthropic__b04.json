@@ -1,0 +1,305 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b04",
+    "type": "branded",
+    "text": "난징 영국국제학교(The British School of Nanjing) 졸업생은 어느 대학에 진학하나요?"
+  },
+  "started": "2026-11-17T17:56:01.453Z",
+  "finished": "2026-11-17T17:56:15.499Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "난징 영국국제학교(The British School of Nanjing) 졸업생은 어느 대학에 진학하나요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011Ch8vxGvzit79biMu2NscR",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_017XwyeVeNXrAUDSTWbiAegb",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"British School of Nanjing university destinations graduates\"})\nfor x in r[:5]:\n    print(x.get('title'), x.get('url'))\n    print(x.get('content','')[:1500])\n    print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01EPgzmekgY6YsEY4rEFHqcm",
+            "name": "web_search",
+            "input": {
+              "query": "British School of Nanjing university destinations graduates"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_017XwyeVeNXrAUDSTWbiAegb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01EPgzmekgY6YsEY4rEFHqcm",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.doris.school/schools/china/the-british-school-of-nanjing",
+                "encrypted_content": "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",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing",
+                "encrypted_content": "EsYLCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDJ60FpuKLhjraxSzYhoMfc3c2Q351gcWQAORIjCAgqVadotJ6AC0seBqZ+7fUxGRUdl/4GUsLIjHjAJpGiFRGXvIHjBn7bZQ6AWOL2YqyQon/YDWklrPgnAOzUDXcyF9TYu7dm52t+LPmJ/BLJ802stGc47vZiLs5/TiViWKR7ZaxVw60qeAHs8T72/7UjREJlFB22Rt1s7hPznWIAAZ0KLzKpSbkM8+1Z/vQfl0UsGqmzfUSZi2OSbQoncw6vpSHnLHb73VGLnoxNrYuq3zNDlLONcGICzYt27GqtcSOrJV69YIv5v3XKpHPNskCsbU+dWNuc/K/twJ+2Wh1Pwxw7+Du+nFEIFzTgeKDJXioN4dvEyqID+FpvDyF9cyuu1fZiq7/xWQ2U6Qxj/1DXKSLFx/T/K9QfaB8UhOeSZkvlzfHgPHkLpAQnwntGdDl8iz0Lr9eA/Pgavr26n5m8/Tepl+ISrMM94BLAnQ3nFstS2g5spis92CpmnFkYWIZtiuOVRpWGAjXac4wW4dAxPM/lJRg7ocTnt4oBq6zTpSTHX1s1dnQn1F/zYbjVcJFm5bR8wfwzSg+jHDDrZ88hufctqQa4SWhw575e2oqNxRnhk0buRhI+GeSfYGhMhzdLJBB1jaZEsMHCa411sHhhfn/XTfy0LT4Y7+t3vy7MSpePDdbiShb3/SE+CiH3MFkces7xtnbVXXHaCcyQDprVaqFVx/6iBMaT1eUwLog+5Ul21W+5smrVIcMX+agoI7h7RnovCChrNqxLu+npfub8l8b1uXeQnFw9lvGQlckfech8KjVHZIi+IfbwL2Ombsq+Jizq3DTtPcw/7uMaE4aF4oQdJfnO5bQgE5Whkr4pCHICWrpgX3GDElhyHHW+bT1GGT2EehKoIj6CiT7JKUwcSwSCMm/T1cYq/5j7xAbySzxOZPxXKKk2p36sUL0xmAchp3MHfPewuESIIqGy/7qV1QYbg4c4z6io5xNU2Y52qsfw059uwH84vUjGlIfajRYfEcBNOY6whXA1mG5GDCHcu9I6N6JsRaXjR3w+zkKNUwTLyTGKfHMLpBndruEvj4nE/F1zsT6AsSumxkNxS6TxPg/ap8DuAza3mm8qPWD8VT4XIHVgE7Mbs/JIEp6HY8lnfVkRbwZbWzgjjXD7FHdS8CrW9r2EzsDFD2vf1D+q+ASHEHHaSA7X7dcRVGk+ncRXIbpktDbI+ZaXrH6sQSZvDDxcI5A4CgcFQJVJPH1c9DprJKl+myswRJCTfrJ8MgrFWBUaq9nWh0ko2Thabtf5ReMw2l1rPx0i8tHyj3njd/APdDpcBZK7DVZEYtRD9pkT4BzVQlOuzab93toI9gmC/0ffhtOSsHkhsIGv36QXy4z6/4gpHEHDpyYs0nDl8Y9Nms5ROFB4wyN0X/0mtDVzTfWMqA4B8z0en7NzTLMXHSvGCobyYKXfSwM31O/FcAu9LgXHJcj1HqD0V6qG+9qyZme3Vl2oIEZp6IpsFC0q2MsRn3SVYmm53Qu7g12snrZ1wozjQd7gfNkvwYxpTKzEgR7hGObIVdkFucn9f3lCMYiCjVe/4t2RzCz5Kv1+uH4S/WNPyY4mo966SZwitILBFCdHELYAboHLOeKF96EsHe1xeefQ+bLhkRbTu2LKTcspZbZvyBeJo7YDRsaCKzmNWHeCpJH6Uc2kF3lcUKxeQQ2fThMLP0hfBnse/NN/kEBMAf7V6dnmi1pOUsn1AgMdBhAwAhjvRbtblPBVDCWXCzMeXRUPsRIiMrkCjXDK4V0EkqCjySfdkZiRxCvsyOOKwo9UlqrtNhfIgXUyAB8y7Cp2dqcNm9R810O5g74W7JskCHU7DHwuymtb4THvkWff2R/bNw114G/1AET/RglThIi73bmktQP5Z3k6sYAw==",
+                "page_age": "1554 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Nanjing",
+                "url": "https://www.nordangliaeducation.com/our-schools/asia/china/nanjing",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing - YouTube",
+                "url": "https://www.youtube.com/@thebritishschoolofnanjing416",
+                "encrypted_content": "EoALCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDGCGXUH3215uf8c3KRoM3Ot2Y5zzrK5JQpBvIjAhjrEQwC+QU9DlrtJbAMGVB6yPuVJJjvriZ+zW8P4aPTaW4HNEvtQz7vSQjL7WHScqgwrWCyUoNTzfDaYQ3PpLHrKBlEG23CikBY6MpOmP/50F7pkrBVoSrIyqG95yfNrqdbLOzdJp8wnmr1PRayAWanv1iNi5Co6DfdldveVlOxUYmtpDPcxN96kLALbjI09q+hl0ZR89Mn2RP1CMJ2LX8XfH+oivLYmHCNw45vIp04uhgNNvVPzoK0473ywIDxH4f/hKJ4P+cbpqnjJIEN8HkoUM2QJQTIKdeNGcpbDBb5LFOeuHztOfwQZscfQcUsOzQYGd3WrEX84zN1XHJbB4dJJiQmiZiEl0MwL1WyekSMJbMgWujeNzRtTvdILacYS0qyCVCooEmxhhXYwr9MQJxCsrU43kbIA7CHQIqTbYF3+ZoRj/Gb+eDGMtETyJJL5oJUFniPPxTHExT6ieeqpvRTmaloTijraJsOTFZDW6AKEkjk/EyJGP7Tmumg6/NsSGO4TrvSZ1LIsaZzGXB9gG+0dtbCP4KxyFp+DhUv6Ooiofp+rwJHlA5+7An0I+aNBvDIExdWvOPTBa7QW8L7k0omYIeAhBnO8DAzf+51s4pYBWbwpOoJ4PhljTsBI69niCF+H8NfsBVQOhrB4oAsZV5v4P+1NgcHjLrZVraZq7J7Rh+Ls9OM86D9RmkpGJ4m/2I5PVRQL5JzMYCJPaX5BgS6QSA1hdmlLW+1HMvY19g9To5Gb5qqduLMPlod5Mw3BpcSmfa/jB7mgM/0DynF5pKBWq2CEEd9kk8obOmwmfI39jNUH5pyV2m5B3pu2UKplMmYo5lplHB2qeguONOZi0u3NKRM/IYOt/Qwsc3On9QfOknqmFCipP4XNorxeWObclWwG17TC/QK+yXh5bM481sSh6bD151qrQduB6p3q40QSX2USsu9TyfzE8grSRsa9FsCVtAQDTtf/AuqZTAnYNr1ZvGObCGHQl64W2ERbCrpVWZlXsplvkKjvv0DuVp4H9bVwOSkAdeM90aqr8XTd2zf9CjzuuFEhUml4afz2yup58Igj5izzxzbxghBwV7cfYfRy+q1USF/sU57bi5VnGjO3RuMCUXeNXtAZmMudFU2AFPgmGJXELSYpH8P2BsM3U8c7iK804NBAhYo1C7evhRwwR0orMw8VJ4/JOkLqxRSwfY8x4p3hxEqgHK3iM51gktJEKdrDjLqVnZ0mhgU/9oMWycGwPZHfL4MKDeWTvuk2I0L2d+wVMq4EnVUorY5wgz4FrupErqfU4RvNeVpZcbPOWwWEeoQQno0z7NSHFwIULzSkJQwPJl+7i00p+SrG7mgnB7THIw6zJZdjDghSUMms4sIwQjSbf1o79v11okb4gPQo96VMI20lG6ItoNOgEgzBs7ULqVk9GfR93Zc89SmzjUmE6DqrQtJOWHuNMT0ZdXhvNfI1omJ3kzTRMt0PBVDPgXxG/QQWzDLwZLq0qbWgOFJBWLShp6ETgWFxgXAeIfE6EKQ7UKsyCou0Kzc0FkZE/XumbEwPA0+ynR+JiRoHKe6DOt5pE9cMcG0vIkQdOPnQ0SaBTMCGQl0sUoUq5L+2akboaHlzO0uwMV1jCsyZivLGBqHXqJfszBshGshWK07sb+GQ25D2/ENtcvZ2urUdJpGbXoQJ4ZXEseK7lgzYzJ+Ifz+/muBpsdI8ipdCtBZOTHLAW4O0IkfQKJvMOtdPpdaHoB9+STva/aXPbvysocm35HbapF/XRzCWqNqJ6hbPbYRgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.ischooladvisor.com/china/jiangsu/nanjing/the-british-school-of-nanjing",
+                "encrypted_content": "ErcNCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDACUx3TEUxHRPEWCjxoMqUcN1oIwj2XKVFZFIjAUrBmZA74UwPLQgBnW6AFXZy6+cM8kIzAyPTOxUAXGPTP0BibtL8uW/Yq7Y/BJzpIqugz7FCcUdtGRUUx7SuhVYBZdQMFRvQpXVFm2SQzkaScbCwTQDRxSrhdfalvL8EE0PMBsJt8coInsUQiUgoGLrNqHEzU6dvm3nR/cI3DOxq7Pvdbg9fVk0cOnrrKSSPIrAluIvAzU86rQ2AkNlTW2SxpvoiVGQwR42vS4CUOeMf7O+/x1jrtJBJLNGDY0Ksnw1WTGDMekmlaJoAZOFoxUEgbELwjSiQwabZxxU8hD/wggl7t/HTDBozzNCNbNi9UPUMy/gIZykC7mZI1yTsVLf5ecuh/FTcaUecpUjIEw4ES2Zan8puX5bo4dw8G5Wdeny/DUnJ+W3hvZ3NP8eiRU3f749/b6CIo0JagUikJP7MDXCs7RUaKv/ugYVkqYymwq/0wwvhESBA5oZSu1OJ4Rehq2/ixPClauq1lonT5p9kKSh7DIHrBrgSLwenrGQ4La2CObWvNlxPxJg4tvLOx92EXtkrCyXbOLsA0K0XtXSJ6zR+vaEXIxQgtKfr5ZtDBCsOsO/h8WruxQOLiZdK40IV6UCd2RHQf/2i+aBhPptBNq3Jsdr652OEmbpgMlD7sF4Pgktw8U8Z5sszWAv8MwCzA0MuK2Wv9AYAu1bZJUJ+5z/AwDQXX1pRMGO0cJyJDrGqIL+2yqbv1HrRRf1aKLcLkwzMZDDP4VmUpghS3uAWmLV/gXelnjNRvVTXXvmDTiH/UE6GXjBcTIgo4lWrvOU4il8oATxP8pA9jYEASy2YcgGbOcnc8vExt3SN9jbFidFifrj5oSm9CqNnPdgg/SkyM9G+81egygKzMRQREFcN58byQW+aIxXtOyrw0sZpQXwFelTgDa6JLBRdRDejQLiNU2529MPbYMqoTpQuIHXaI/54w8auSLmfj3a3MuoS41W1z3kcjp9x/jAVuG+9WFW+UbCN6rP1EorgWJlKxLs2NhVbrK1r3pujpdV8GquHRNRYnZXL4yX+E3LtT3Yso4rcD7nH1xQrdeRR+uI/19uGUdv8EHPeqp28HURfO8qxEEB5wy/23Gzxt5fx3yS/Hm6BUDsSPXTKxfNuYRw6xZx343R5AKUgwYGw+Cn5yAsI2Nan5Q8rndqqzfTy3c8Eks3kLW/GAkoHqE9zVAnlXMVqa5iShaOptIkxj5JupLDH+JntmobRD3y9w/RHpCB/QKDxD680WiHbjH4TkyXG77xW/if5VjFnxFww5k/41QVNPaEN8bvOsrW2Tynqhsmrea1u3/icWYo73XlRWpothpB0mtmVEhPep5J/gHkHsA8JjRkayKKoqAjZpPg5nqlPX2oW2DZiUWi0/xk7ZYdxYoHE8jEFFozYPjwjy9bIFgAqgix6kcOykPmPUgcEyq0+fle16RB24fzfUYQ4Vc4kj04N5HqBLcy2T5XRlthcyqm4KkeN98LjTnddHvHmLseyySKrjoT6UDFoDSGJ9YYRNKfpb4CS7t3dPwW5kdj0TRMzPxSADtz1okxCB1Hk153m7NNPIy+5wwiNYMw8EuTR1MGmB3iynbwgzkUQLwikniNffDpbLbqYCL/6OGKtU2UIZNLKBh05+nTEHd9QXKLVs18qQwrm98CRhhDc5P/DaMsntpDOsvhjgOBrAPK8l4MP3eFYfW8dKkB+7lG0CvO45Gi1RD5cuflEZ85e64QMab6VSYUgEPE9w/nDcPPcAIbkrnZ91ZUce0sITCWn3iCVC9XzUGgeOlomm/U+lge3mgMOkITA7r6SImjjnyxNXZpn6DBIg1jLYmBJqYzWsa2/kWjem/XEM27pngYkFjScBkDnHfw7Pjve4LP6Qf0v4HM1ef2W2HIBpdCUkXfttMeU0FXuO8oS/JbwleRjr12bCe86CrtrYpxC5SrUwytJHiSEXA3SkwbariBeVVZsCO7DGiuIr/5rHbrEvHDHfKtgjJQ/kTDAUF8/VQFiarngc5//ChAmqsjqxrozvf8gcwWBTifCJVa/+y/jwqB3BEHkEWHoOAumd7qS9L7JmHHQo7MYzsMN4TaJlvpIt0wqcpIcp8c2xKdCXasMaq+YD7l1iXjVYwbA0jbYutxRDB53gGvSyTkjfoJ9H513yNd7O6UGWF543jCkRDzVq9T2Q3Esq3sIbjvaNDmtVIqrStAjf1GAM=",
+                "page_age": "46 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Schools Foundation",
+                "url": "https://en.wikipedia.org/wiki/British_Schools_Foundation",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Graduation Ceremony",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing/news/2025/june/16/graduation-ceremony",
+                "encrypted_content": "EvUKCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDPMZ1+zI3CB+EwXEGhoM2acr+a0T7QvTLFLeIjCPR+tAnQbjo3RKaFjcdWVcjJPaVMOFsNxwkT2JiZyuIn/p3CG2q02icmj47nBBFZoq+AmpH0D+t1detKmuZiSsmEZgtBYnwpeKRFw436AWxu7pjl4FQ4YI5XyJdkfVJx6PhkOPqCB5meeBvy7beI6jHto8ESl7i7sqgMFo85AwwfEH7z5zDD8U7yzrqstppAFXX1mxELEPIav4SiNwltV/tMVH1Ev+pB/ZtaUOvoS6TBlCxfSBcLCAQOHFc5vbtMMd2hRLn+CmCiAEZywll4KLhMlV2fg9xg39cvZ25mUXsf1MMSNc+lsLou4+2SuFgG2LSXtZLlOw10jZhHAmudFVpvWd7tjIdrmY2LZDtv8l3u7nCcBluFTiFk6gs7+DOeBLHW7I151vHe5FiPYLh2U127CI9BVdwaRS67L1wxCSREvgjxezd+AsC1WQ8UydMbOKBB8oiv3u0N/vbo+Q0D6qFoReqAUdCtbXE5jAkaBPeSB/jzY6kWlOyE10SO5Zc9r5HVyxoIAyub4VambTF9Kf1Mb2GBqr0RTSo8bDkQhQFTJ6m1saCVmb/O/SqpsdLWjuUum+hseN4pRC2KMeJpAbUrHg787S9nOfUYRduKOEtPrwl18q7kOHP4EYiW15jaYbydP9e+zOZ+DpU+P80hWfK5WZU2DsFzqMzRwJ5C9fs7tNx23M2zG8Vl72QbxA4UF8yxczioSEPfEc++GVB6e/4qTj66EmZpbWPQwZoLupo3TG1t1Xmj106CfPbx42qHXeWgsltvwgSGZyQFfmxzByPtifACj6EmyTjMR51iFKGNugMvvd0GWcFZRiayRkiNvDwJTrIa8oOoDSldv6ErLrqDeM+QJvAh7GjbhWnYQzpa/hTJ1xlc2Gv9cseSm7zVwetEnUZinFdIMgRPUks6rlqnHHmhg1mjWMVgBXvFBuZ1MOrWkFQ9Bt6sEBhelAaTB6ETE7o5IhgTziTvXVvvq14w/N5QgIMb52oW5wuNgHG0S+adSC5FW/p917VcelF8UJSPubPtsusrsfUUymEEbMCXXLAHWTDcENMKAjPs3gWXnzZ2KuqVf2e3UO/6ysmbBtmFDuYZrvZQzLLstFPWxmZ2pmcWmipWrR8dhEYl7zes0V82I2ZeddyxffInlSPohrOCB6rh/LK7Jk5DW4cMeD+h5uPvsxZZPJRP6IRMSlkZITWzG4fZTaKRgYZMHyiyrwKJDBsA66QDDiqcU3cP+FbOAB3TS2Ba4wVQLW3vkBA6tIzWgHrvE8h5YhxeNVn3D0U6eEgndoKCUpJSKbVOksPMdijKA+IgR7SSC98YDvaSbMK+QKel6ue5cSSeEMnpNU90YS1ZmDZ8Qi/Nrn2TdyrasbX+kS0a1MnqzEMTDNrPbbgsPbvHKAq9EE9L7xZXpVUAhqT+oZLeuBScQXDeu6JQJsIU2HyMLlHhJWOVodWkjaj/m3zZP+Ik4UOAc6abD+UDd1oQGbPzUo2UOAGWRoZghhkucWPFym+KKMZ5SUvgEjXpEoj/oRffcPyAxXrbsPDiYW8u3EL4sU4SfYaARasFi8/prTefhSi7mphaBcG1G+jq8a4HcsyjyK15RfsgDLgo67avUI3VyzP3y+nOxvaJ0RyCnsRz7gjsSuWRjNBkfko+pQ+1JPH6hemHclDEMmu85YyjaQLKYR2rB+QsoNLWhIzPY4tGHt0SiRCi4Nun+QHxZWRZASpr88AxACWndFKOSIMmqumW7bSzr75AN5youiMwPYihzOfHMYAw==",
+                "page_age": "510 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing Foreign Language School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_Foreign_Language_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing University Business School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_University_Business_School",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_017XwyeVeNXrAUDSTWbiAegb"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_017XwyeVeNXrAUDSTWbiAegb",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFRgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDCa8W0EtxSE65ZUSJBoMS8f7zlJKi8IcV42VIjBIoK/5aSTScyBHpA+LoPffLhfCugdtaUCMWmPNXrgIaz+JxoYlBn65bkhcO+Tr7GMqErmc70e+RS5TZkcHGGGBaaOPhhgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_017XwyeVeNXrAUDSTWbiAegb/cell.py\", line 11, in <module>\n    print(x.get('title'), x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01AzWD182Dj9ez7GuAwQ1bY1",
+            "name": "code_execution",
+            "input": {
+              "code": "print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01AzWD182Dj9ez7GuAwQ1bY1",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "[{\"type\": \"web_search_result\", \"title\": \"The British School of Nanjing in Nanjing\", \"url\": \"https://www.doris.school/schools/china/the-british-school-of-nanjing\", \"content\": \"Two BSN students achieved 'best in the world' IGCSE Mandarin results. Graduates have progressed to universities such as Cambridge, the University of Toronto, and KAIST.\\n\\n# The British School of Nanjing\\n## Sent to the school\\n### About this profile\\nAs the longest\\u2011running British international school in Nanjing, BSN has a demonstrable record of academic success, including 100% A\\u2011level pass rates and 75% A* in 2021, with two in three graduates gaining entry to top 100 universities.\\n\\n### Governance and Ownership\\nThe British School of Nanjing teaches British Curriculum, EYFS (Early years foundation stage), Cambridge IGCSE, Cambridge A Levels for students aged 2 to 18.\\n\\n### Exam Results\\n100% pass rate at A-level. In 2021, 75% achieved an A*. Two in three BSN students achieved scores high enough to gain entry to the world's top 100 universities. Two BSN students achieved 'best in the world' IGCSE Mandarin results. Graduates have progressed to universities such as Cambridge, the University of Toronto, and KAIST.\\n\\n### Higher Education Progression\\nOffers from top universities worldwide, including Cambridge, University of Toronto and KAIST; Class of 2025-2026 offers total 38 universities worldwide.\\n\\n### Academic & Intellectual\\nThe school teaches the English National Curriculum, including IGCSEs and A-levels. 100% of students pass A-levels; in 2021, 75% achieved A*. Two in three BSN students have gained entry to the world's top 100 universities in the past two years. The global languages department developed an award-winning Mandarin IGCSE programme; two students achieved best in the world in Mandarin.\", \"page_age\": \"43 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"The British School of Nanjing\", \"url\": \"https://www.nordangliaeducation.com/bsn-nanjing\", \"content\": \"This outstanding success takes our students to the best universities in the world, **including Cambridge, the University of Toronto, and KAIST**.\\n\\n# THE BRITISH SCHOOL OF NANJING (BSN)\\n## OUTSTANDING ACADEMIC SUCCESS\\nAt The British School of Nanjing (BSN), your child will achieve remarkable academic results. Our students go to the best universities in the world, which is thanks to the exceptional learning experiences we offer, our world-class teachers, and curriculum pathways that are personalised to your child\\u2019s talents and passions.\\n\\n## REMARKABLE RESULTS\\nEvery year, 100% of our students pass their A-levels. And in 2021, 75% achieved an A*. This compares to the UK average of 19%. This outstanding success takes our students to the best universities in the world, including Cambridge, the University of Toronto, and KAIST.\\n\\n## EMBRACING INNOVATION IN THE CURRICULUM\\nOur students\\u2019 academic results show this approach works. We have a 100% pass rate at A-level. And in the past two\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSpwUKEAgTGAI4AUIIdGhpbmtpbmcSDI18d9ewZioXv1+A3BoM6nZgtdjdMXmTiXZ7IjBtVxED5Ni8ghVlz7RcH3CosbEYKqqWRoyG+zIh+Mn3dyrIKp4Htz8fNroNDLGHtz0qxARKL4edVBjMEYZGcbmJJoxLkPS/ZOb4NrZIh/0SY8lLq/04TwXBiuNnf48M5fjLXU7XCsTm//NkHMnvrKw7OkdEt6d567TgnDL0m3uYIjLssvkOBNMwvcK96vKIKcN3Qxxe1D6Bsi33am2qaov18TOY5sP9B1OzmN9ZZje7m6E6XeMQgc3t7OQPPqHRcB6bI/E0kSccRYUOZ6ZPQUK2pk4BP42dweK/E12fR4lWSCLj7J+3ji3HXlf0ff3wcR+IcRMd20bvXWToG1Z6DRWuWV7UOE5qSXz3FNe9kf65pVXBYRsHG3W+OpJvyi4f0MNHEe7hNaMJQOPdMnvPwRfAE5EZLVckXGaNL7YCGuURpabSpnBebQKXce0yd/wRfCfd8C2lhpoBARXSGOGYEeO0ThQ2H2cuQQl80g+eJD1LO6H91W7WrYIccYuC8Y7WEgW36LJsdnYIwKCiRy6s7QcK3gPGLHKVQdXy6CNK4qu/Llx6/hhfd86npWa2vCal87uAdChUMh47xGRn6AeaMuNBjydL6xLwyx4mu/wi/XQDrBU9A0ki1mkdj5rMdUzQd2JdrA7E3zlKTNtRfanODygsxqDmTS5R/e64xdgkR2Oc/Wb3ZJRNL7AFOATuAb3wDnF0+RvQCWBFbPYlCA0egmbnsuWg6mr8h1qZiTfIamaraT7Uyxvo5O6Y67UFiwkCRuMAOuMff+pzwrROihwltGuMCkMrcA7BAoToByNHIbaLBUUW8X51QcYUMFre19xHaqd4MXDBYJPhGAE="
+          },
+          {
+            "type": "text",
+            "text": "난징 영국국제학교(BSN) 졸업생들은 주로 세계 상위권 대학에 진학합니다. 학교 측이 대표 사례로 꼽는 곳은 영국 **케임브리지 대학교**, 캐나다 **토론토 대학교**, 한국 **KAIST**입니다. 학교 공식 사이트에서도 학생들이 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "케임브리지, 토론토 대학교, KAIST 같은 세계 최고 대학에 진학한다"
+          },
+          {
+            "type": "text",
+            "text": "고 소개하고 있습니다.\n\n**진학 실적 관련 정보**\n- 2025~2026학년도 졸업반은 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "전 세계 38개 대학에서 합격 통지를 받았습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "졸업생 3명 중 2명이 세계 100위권 대학에 들어갈 수 있는 성적을 받았습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**학업 성과**\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "매년 A-레벨 합격률 100%를 기록하며, 2021년에는 75%가 A*를 받았습니다. 같은 해 영국 평균은 19%였습니다."
+          },
+          {
+            "type": "text",
+            "text": "\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "BSN 학생 2명이 IGCSE 중국어(Mandarin)에서 '세계 최고' 성적을 받았습니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**학교 개요**\nBSN은 노드 앵글리아 교육(Nord Anglia Education) 그룹 소속입니다. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2세부터 18세까지 학생들에게 영국 교육과정, EYFS(유아기 기초과정), 케임브리지 IGCSE, 케임브리지 A-레벨을 가르칩니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n학교가 공개한 자료에는 대표 대학 몇 곳만 나와 있습니다. 38개 대학 전체 목록이나 연도별 진학 통계가 필요하시면 학교 입학처에 직접 문의해 보시는 것이 좋습니다."
+          }
+        ],
+        "container": {
+          "id": "container_01VdyYrJ2hDtWtjzzav267nE",
+          "expires_at": "2026-11-17T18:56:08.197919Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19902,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 946,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5922,
+              "output_tokens": 128,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6402,
+              "output_tokens": 58,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7578,
+              "output_tokens": 760,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 24
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
