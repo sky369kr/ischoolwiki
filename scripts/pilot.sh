@@ -27,10 +27,13 @@ npx wrangler d1 execute ischoolwiki --local --file seeds/bst-tashkent.sql > /dev
 npx wrangler d1 execute ischoolwiki --local --file seeds/qais.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/bisp.sql > /dev/null
 npx wrangler d1 execute ischoolwiki --local --file seeds/eastwood-montreux.sql > /dev/null
-# ONLY=<school slug> runs the pipeline for that school alone (the others are set inactive in the local DB),
-# so trying a new school does not spend API calls on the rest.
+npx wrangler d1 execute ischoolwiki --local --file seeds/bsn-nanjing.sql > /dev/null
+# ONLY=<school slug>[,<slug>...] runs the pipeline for those schools alone (the others are set inactive in the
+# local DB), so trying a new school does not spend API calls on the rest.
 if [ -n "${ONLY:-}" ]; then
-  npx wrangler d1 execute ischoolwiki --local --command "UPDATE schools SET active = CASE WHEN slug = '$ONLY' THEN 1 ELSE 0 END" > /dev/null
+  case "$ONLY" in *[!a-z0-9,-]*) echo "ONLY takes school slugs separated by commas" >&2; exit 1 ;; esac
+  IN="'$(printf '%s' "$ONLY" | sed "s/,/','/g")'"
+  npx wrangler d1 execute ischoolwiki --local --command "UPDATE schools SET active = CASE WHEN slug IN ($IN) THEN 1 ELSE 0 END" > /dev/null
 fi
 
 if curl -s -o /dev/null "http://127.0.0.1:$PORT/robots.txt"; then
