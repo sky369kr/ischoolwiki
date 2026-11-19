@@ -100,3 +100,9 @@
 - 결과: check.sh 전체 PASS. 파일럿(실제 작성기가 fact_sources_used를 맞게 채우는지, 보류 증가 여부)과 원문 대조는 아직 — 클라우드는 학교 사이트 차단
 ### VERDICT
 - 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / B-02 (R-02) / 근거: check.sh PASS, 파일럿 미실행 / 다음 담당: 사람(맥에서 파일럿, 교차 검토 여부 결정)
+
+## 2026-11-19 · developer(메인) · 안정화 / BSN Nanjing 파일럿 준비 (사람 요청)
+- 한 일: seeds/bsn-nanjing.sql(학교 행, 소식 색인 주소, 짧은 이름 BSN). BSB Shunyi와 같은 Nord Anglia 사이트 구조를 따름. 클라우드에서 학교 사이트·myispp가 막혀 수동 사실(학비 등)은 없음, ispp_school_id NULL, is_client 0(사람 확인 대기). pilot.sh: seed 추가, ONLY에 여러 학교(쉼표) 허용
+- 결과: 로컬 D1에 seed 적용·ONLY=bisp,bsn-nanjing 활성화 확인, check.sh 전체 PASS. 파일럿은 사람이 맥에서 실행
+### VERDICT
+- 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / BSN Nanjing 파일럿 준비 / 근거: seed 적용 확인, check.sh PASS, 학교 이름·소식 주소·is_client 미확인 / 다음 담당: 사람(is_client 답, 맥에서 파일럿)
