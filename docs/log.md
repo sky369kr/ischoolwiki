@@ -106,3 +106,10 @@
 - 결과: 로컬 D1에 seed 적용·ONLY=bisp,bsn-nanjing 활성화 확인, check.sh 전체 PASS. 파일럿은 사람이 맥에서 실행
 ### VERDICT
 - 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / BSN Nanjing 파일럿 준비 / 근거: seed 적용 확인, check.sh PASS, 학교 이름·소식 주소·is_client 미확인 / 다음 담당: 사람(is_client 답, 맥에서 파일럿)
+
+## 2026-11-19 · qa+developer(메인) · 안정화 / B-02 파일럿 1차 (사람 맥, 2bacbc6, ONLY=bisp,bsn-nanjing RUNS=3) → 수정 1/3
+- 한 일: 파일럿 결과와 본문 대조. 영어 3편·번역 3편 게시, 보류 0(직전 1). 학비 글(1) 출처는 학비 PDF 2개뿐, 표의 금액 전부 seeds/bisp.sql과 일치. 글 3·5에 IB·IGCSE·BTEC 학교 페이지가 출처로 들어감(B-02 빠진 출처 해소), 학비 PDF가 학비 아닌 글에 붙지 않음(B-02 잘못 붙은 출처 해소)
+- 결과: FAIL — 새 빠진 출처. 글 3이 오즈의 마법사 공연(소식 6)의 날짜·티켓값을 쓰는데 소식 6 페이지가 출처에 없고 used_by NULL(다시 글감이 됨). 글 5의 BTEC 영양 수업 문장도 소식 5 페이지가 출처에 없음. 원인: 작성기는 작성 차례에 받은 소식(최대 3건) 밖의 소식 페이지 사실도 사실 목록으로 받는데, sourcesFor가 B-01 규칙으로 news_used에 없는 소식 페이지를 모두 뺌. 수정: 작성기가 fact_sources_used로 직접 댄 소식 페이지는 출처에 넣고, 아직 쓰이지 않았으면 used_by도 표시. 숫자·문구 일치로만 걸린 소식 페이지는 B-01대로 제외. 단위 테스트 갱신, check.sh 전체 PASS
+- BSN Nanjing: "collect: 0 new of 0 items" — 소식 색인 페이지에서 /news/YYYY/M/D/ 형식 링크를 하나도 찾지 못함(주소 또는 링크 형식이 BSB Shunyi와 다름). 클라우드에서 학교 사이트가 막혀 확인 못 함
+### VERDICT
+- 결과: FAIL / 단계/대상: 안정화 / B-02 (R-02), 수정 1/3 / 근거: 파일럿 본문 대조(소식 6·5 출처 누락) / 다음 담당: 사람(수정 뒤 맥에서 파일럿 재실행)

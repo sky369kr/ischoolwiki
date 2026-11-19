@@ -265,6 +265,14 @@ async function writeForSchool(env: Env, school: School, runId: string, now: Date
   if (used.length) {
     await env.DB.batch(used.map((n) => env.DB.prepare("UPDATE source_items SET used_by = ? WHERE id = ?").bind(articleId, n.id)));
   }
+  // A news page the article drew on through its facts, without being one of the news items offered, is
+  // used too, so a later article does not write it up again. One another article already used stays its.
+  const factNewsPages = sources.filter((url) => otherNews.has(url) && !used.some((n) => n.url === url));
+  if (factNewsPages.length) {
+    await env.DB.batch(factNewsPages.map((url) => env.DB.prepare(
+      "UPDATE source_items SET used_by = ? WHERE school_slug = ? AND url = ? AND used_by IS NULL",
+    ).bind(articleId, school.slug, url)));
+  }
   if (!result.passed) {
     await alert(env, { article_id: articleId, school: school.slug, problems: result.problems });
     return `${label}article ${articleId} held${revised ? " after one revision" : ""}: ${result.problems.length} problems`;
@@ -475,8 +483,8 @@ export function usedNews<T extends { url: string }>(offered: T[], reported: stri
 
 // The pages of the facts the article drew on, then the news items it used. A fact counts when the
 // checks matched it (usedIds) or the writer named its page (declaredPages, B-02); a named page that is
-// no fact's source is ignored. A fact page that is one of the school's news items (newsPages) counts
-// only when the article used that news item.
+// no fact's source is ignored. A matched fact page that is one of the school's news items (newsPages)
+// counts only when the article used that news item; a named one counts, since the writer drew on it.
 export function sourcesFor(
   facts: FactRow[],
   usedIds: number[],
@@ -488,9 +496,8 @@ export function sourcesFor(
   const declared = new Set(declaredPages.map((u) => u.trim()));
   const usedNewsUrls = new Set(newsUrls);
   const factPages = facts
-    .filter((f) => used.has(f.id) || declared.has(f.source_url))
-    .map((f) => f.source_url)
-    .filter((url) => !newsPages.has(url) || usedNewsUrls.has(url));
+    .filter((f) => declared.has(f.source_url) || (used.has(f.id) && (!newsPages.has(f.source_url) || usedNewsUrls.has(f.source_url))))
+    .map((f) => f.source_url);
   return [...new Set([...factPages, ...newsUrls])];
 }
 

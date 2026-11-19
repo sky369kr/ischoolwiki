@@ -65,7 +65,10 @@ describe("sourcesFor", () => {
     const withPages = [...facts, fact(5, secondary)];
     expect(sourcesFor(withPages, [1], [camp], newsPages, [secondary])).toEqual([camp, secondary]);
   });
-  it("ignores a named page that is no fact's source, and a named news page the article did not use", () => {
-    expect(sourcesFor(facts, [1], [camp], newsPages, ["https://school.example/made-up", football])).toEqual([camp]);
+  it("ignores a named page that is no fact's source", () => {
+    expect(sourcesFor(facts, [1], [camp], newsPages, ["https://school.example/made-up"])).toEqual([camp]);
+  });
+  it("keeps a news page the writer names, though only its facts were used, not its news item (B-02)", () => {
+    expect(sourcesFor(facts, [1, 3], [camp], newsPages, [football])).toEqual([camp, football]);
   });
 });
