@@ -5,8 +5,8 @@
 --     fee facts need the school's fee PDF (linked from /bsn-nanjing/admissions/tuition-fees) and are added later;
 --   - the news index follows the same Nord Anglia site layout as BSB Shunyi (seeds/pilot.sql);
 --   - ispp_school_id is NULL until the school's myispp id is checked;
---   - is_client = 0 until the operator says whether the school is a client.
--- Name confirmed by the operator 2026-11-19. Check the news index and is_client against the school's website before applying this to production.
+--   - is_client = 0: not a client of the operator (operator, 2026-11-19).
+-- Name confirmed by the operator 2026-11-19. Check the news index against the school's website before applying this to production.
 INSERT INTO schools (slug, name, city, city_slug, country, website, news_feed, ispp_school_id, is_client) VALUES
   ('bsn-nanjing', 'British School of Nanjing', 'Nanjing', 'nanjing', 'China',
    'https://www.nordangliaeducation.com/bsn-nanjing',

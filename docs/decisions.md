@@ -94,3 +94,6 @@
 
 ## 2026-11-17 · B-02 교차 검토 생략
 - 결정: B-02(PR #24) 교차 검토를 생략한다 / 이유: 운영자 "생략" / 영향 받는 문서·기능: F-12, docs/stage.md 교차 검토 기록. 파일럿(ONLY=bisp)과 원문 대조는 병합 전에 그대로 한다
+
+## 2026-11-19 · British School of Nanjing 파일럿
+- 결정: British School of Nanjing(slug bsn-nanjing)을 로컬 파일럿에 넣는다. 학교 이름 "British School of Nanjing"(운영자 확인). 고객 아님(is_client 0, 운영자 확인) / 이유: 운영자 요청 / 영향 받는 문서·기능: seeds/bsn-nanjing.sql, scripts/pilot.sh. 운영 반영(seed 적용, 학비 사실 추가)은 파일럿 결과를 본 뒤
