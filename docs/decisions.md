@@ -97,3 +97,6 @@
 
 ## 2026-11-19 · British School of Nanjing 파일럿
 - 결정: British School of Nanjing(slug bsn-nanjing)을 로컬 파일럿에 넣는다. 학교 이름 "British School of Nanjing"(운영자 확인). 고객 아님(is_client 0, 운영자 확인) / 이유: 운영자 요청 / 영향 받는 문서·기능: seeds/bsn-nanjing.sql, scripts/pilot.sh. 운영 반영(seed 적용, 학비 사실 추가)은 파일럿 결과를 본 뒤
+
+## 2026-11-19 · BSN 난징 제안 가격 (예외)
+- 결정: BSN에는 한국어 아티클 100건 / 1년 / USD 4,900(네이버 블로그, 3~4일에 한 번 발행)을 제안한다. myispp.com 등재·관리 6개월, ischoolwiki.com 소식지 10회, 매월 정기 보고서는 멤버 혜택으로 무료(원래 6개월 USD 5,000 상당). 네이버 유료 광고와 기자단은 블로그 통계를 본 뒤 따로 제안한다 / 이유: 사용자 지시("BSN만의 예외") / 영향 받는 문서·기능: BSN 종합보고서, HANDOFF.md 4장. 기본 가격(6개월 $3,000 / $5,000 / $7,000)은 그대로
