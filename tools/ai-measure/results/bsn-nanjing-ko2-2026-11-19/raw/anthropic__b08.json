@@ -1,0 +1,477 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b08",
+    "type": "branded",
+    "text": "난징 영국국제학교(BSN)는 한국 학생이 많아서 영어 실력이 잘 안 늘지 않나요?"
+  },
+  "started": "2026-11-19T12:17:05.634Z",
+  "finished": "2026-11-19T12:17:33.511Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "난징 영국국제학교(BSN)는 한국 학생이 많아서 영어 실력이 잘 안 늘지 않나요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChCGj54bjcYZvDkp3TUaN",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSrwYKEAgUGAI4AUIIdGhpbmtpbmcSDGC+etD1/CYjhgLfUhoMEKZ2pCn63o52eAAjIjAksadp8E9t0mTSg9WokHlRLOLSxW6V4Jw8Kn041gieTD5USQxYXlkqw+25o343AzQqzAVz7FV6tpsVUsJqSATTRnPbUXWAha5HY+cXz9HG0lQejL9uVK6503/WZhoofiwunrax3qbmg/LrZw0pHjRL6LW1b+nTwrpC8Vbwifxg14b3rgUBxi20anGE70u9ua6D87grPaaa0+57aEMr2K47Lge5IhnMblvyRWzs63zTkiYed4sadhoDyd1KyXDanBhIvq4FLVqRVVtlz0NHcKLwJCJY8NKbu5sSZL56VjVlCk5WHmvJJhvP0yvkaXUv9wRL2WMsbOJH5sTTz0DcQpsRTHSc69oSwd0Dvqa3h0fqtlJKA6J+JwUQHC8Tc+smuyd8tnrgBs3J5JEOO7iVgSS0yogWQmeyQ7/Fq+UdcJpU2ajFes8KBaCgkAJd1ASal+kYmdvAMEJqOx3+TIwlQewRBHzSCVtZBUL+iv1CoNDZlWo4cd4srihTUzd9XXBvl06zSPjbi8tlZUfTFrUr2ujE5DA7Oxxw/Ca9XsO7499+taHhbMuizFxepnaPHYrKMyVuHg1xG+IracNXKV72Jgq6etyGuTuYGnN1IU1V8ImQPBJq8ZI3Kd8ZKqoPdXRCZ69TA26hdh34Xdh5Tutruk1AS7QfZS2Rv0/TwY3gbHrMrL8Tqm0J0uD84sue72boXwNVxetIqA3LGP7c+HIh479CvFsokKQmdu7KckQEzyx1o7ujIPDLAm3Gfk101pULsfD7iPfs9NhW3jd60Qkh6zUCD6YhtBtlPR716PMprIN75VWFeP+0w7613XYOGYzsDelIz7japoRA4Wl1tCOInjTA1zALRbv3BnB853eUR4giu0m2yR6b1RsOn0N4wFLShDsWu+WPd0oK1hqpngdNYi22upNQ//bi+QwMDVIhUCzkgyulNg/20LI9RWsPLOq4RS9mJ9B4AL39YjOb3tJ2L8oFOjZFHfttZNaQ55XRUqOmhGtpXZOzOtO5SQJxLs1BJRgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01KCN8e7VFSKtQ7F2PNtWJfL",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nfor q in [\"British School of Nanjing nationalities students\",\"난징 영국국제학교 BSN 한국 학생\"]:\n    r = await web_search({\"query\": q})\n    for x in r[:5]:\n        print(x.get('title'), x.get('url'))\n        print(x.get('content','')[:600].replace('\\n',' '))\n        print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WcmKTS1jXcD9ebmCxWVmuj",
+            "name": "web_search",
+            "input": {
+              "query": "British School of Nanjing nationalities students"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01KCN8e7VFSKtQ7F2PNtWJfL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01WcmKTS1jXcD9ebmCxWVmuj",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.doris.school/schools/china/the-british-school-of-nanjing",
+                "encrypted_content": "EoELCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDJgUZuBqCLVzGrzhABoMeasd1a0icuMmrL8AIjDDZuSqhgKzbGQcJS10fX83Zq1zCveK0BNQfRdEZay8djza/QqVLu40PsIS6sMOmmwqhAruMdfVoMz8Dog/ztgaVNjuBwVes9/fAHXFjs8H6vfaM3309lgnIWJDdWe/1/2DaUYlAFnm2SrAi+d5dIohAwupFnTb8vCeaGlo3aLrcIF574hibkauakAW2KV6KvhhOa8/r4ItdP6AearvwBjbC6W/5ye/FAJ8PKuJDWnGSmQkNDDB2ZAUbydg73uifJH86M26jYleMwgjIflWR8vPB95Uiv6PrxpRCAbHNUMq/AT1HVQrpyepsAZmqotQK55lgB3AvzwvRkHunYDIuW/PoDvBuF+vOmGZ19V5QWF6QZZdP1i4224IBdg9XscRkV8o0ehPdgh+uQdC/z3x6QK3V+g+IZsebhJ8PTFUwEjxGMcYF017uxztzgB6zuHitVUsIqXTb36mrs3SmWdidR4NTv2r8iF5QTubHmGzxW4bQFUqEbjA+7b4zPMo7kbN4DJGAhrg+TEbZNkeljP+wUfUIIBu/5h/qVNy4S4XkyIIVwb85AfbffuBaHMPIhorueiZNe4haMnacSnYA/dxAvO291ll+Dv6k6SUqmcbh5NfqdxMplNq/0Gtek5+OeDEPgzvQBaLcGCSFpM4y4EG0Owg5dgliy5vnAGfnAJme05qulqqj8gqcCPFk05w+P5UHopgav9V/IX2BiFTNswymGNdBCy6f1Jyv4hvYDdFfiWmWzZWa6jF7NoruZBLuMWEP/5Dlgcx55Mngj4jHA7micdb4moZa9d8znT9qIRWaW7ESGD5dcd7J+26SEUyBecxXm+MlTh6/1YpANbBuoMkkth9FiBlrULtaFZhmPnypZnALlRasBtLCqQcdtQRSyXZBsijgIQj+wrDT7LqET1bomN2MnI+AIKvI4b9eYtFwiGnb8DRqCxfbudsQ9+eZlVj+caiGrssmqcY36mpfuYqgi1PRDozWn7AiEUywxACbMMX3rxjZg85mHHA/xkF/sOf1B7HRCGYcrizAlJGyaEL10xFDYrkX2TZ1DU8U9xx5W/ISzK+69oF5LZvJGkIK2lmYo9flTw4YWh9QobNVxbfXZ1Ca3mi/hVywsQGQc/erRRBr6+x+nAAU83/sJJsX3xRPFS08TT3usJHdsIEyhxSH4uaqmwykdLUE9OekDUeRowKD0su+/pdjQb6y87KS8nC/6ZC0olWh1qo5tnRLQKSA98zUP5Rpr8Gs730dWWVekDt8YUEsv6LmMSjpa84b85vq16Ew6oOto+ef4zk2SOik/ZwMdfpBMBRKyXoGhRx44X+iZDnWNBgN7ecHjNOQbCqVLA+j8BQtmVzx8c+SgryUJRQwkiZ3kbi9/WJK87WLzWutWiQrr+Dlzom7vrimC5fWyyg2GiJQENZ6+PHzidBj3glwk0ZD8hVBc5yDaByUzx/nvSWaZHYy/iL0U/e8JgiyfBtQoTdlHerw/xj/mIGx0Bct006Cg4liCTibU2XOTrq/CYswFxdCqkPFyDGbjA8GvcXC2ocRGd3wPhG4nKfmltuQOUMr0OEzn8sD2sO5Y7q7Pnqx1cDIRtqUH7an4lwEDOVbu0Fck/fTHB1FQm4eSDGzJSEmLveMpsf0ILfaeTD0e/wHRdTAKD33roDc/bmC50K30DbFFtMU38kViN01r6NDKjWZaltiGt44xvwjyrGg9jKb13Hsv9AeKJkce1QnlBraT7zIQ+JT1JxA2SDpCfEvR4SKd3WP6ppP0zwqooenhY8q7RsercYAw==",
+                "page_age": "44 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://www.thenanjinger.com/community-health-education-city-guide/schools-education-community-health-education-city-guide/the-british-school-of-nanjing-2/",
+                "encrypted_content": "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",
+                "page_age": "5049 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Nanjing",
+                "url": "https://www.nordangliaeducation.com/our-schools/asia/china/nanjing",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://britishschools.co.uk/british-schools-foundation/asia/china/british-school-nanjing",
+                "encrypted_content": "Es0GCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDNoyhU0QFC5lupm1bxoMxvVlbf+c5kykNf65IjAXr2bv09j+EmlFPSV2Lc2Xk4TFjYIuiHUl8u+FyN0f4nBePamR/Sou1ubpnI8fSU8q0AUCYHyVxwcknJVofQIkxz+yiRQrvo5WkciBY9HDBhsxJMSHMp8SheJXzSgqWg2zG/wjstWcn4xhajBIC9XUbu0YlEhBe4gm5J1sD9f5VtVgBoO5B1905hsfE5HYO/3N/XSZ8rIYStt21YuNXGQddMGLlXdWurIBjBX/5dZl0IAlIC7ZuLeBUxTqmSYrgECGrdanjNlR0+CQ2mjYVrnc/aLYJTa8kqrydB/hGuDK47himRksCmPNPIMkFKYNMIYNQYNWwUmGIkDzBEs6eBmc4vapBYDeruFrVpvQVMpvM/056W2KCowf1pCAMb/myrO/VTnHt5obc90HjozWlrHWIjAMxtavBa/EqrMpVcOzwJMU+7/RUq43g8zuizyHpNrNdt0xr2WUopj7f+2Aw5/d1koiOQeFRuIPGQXiYJ1OhgNOR+sdZXtXpCQUziEaIgmnJg8D4Rfph90c2orfk6IQJsyix1gM7R+5binMWC6AwP5ZGJqvD/353hJhqS66C3mR0Fk9bPw5a7aAJOiTclwUH/LDCzIrBj69NtdmaeihFIw0QvWgVxxk1XltK3pNUz8ulN3jKLQw+7+Os2Tl7aApv4x3xrcQOYcXjwoXCx1s2OwyTo4D3m92bgcLm75t2VfT9Jcz40l6lgkIaCddm2rq/BfsrBxAShF+g5uk+cOa3NSAEFqRNh4u2DpA5PUo8YPbO7kP04iXCCTSJxPuXUuj7wtDDSyU0/G3RMlA/x2yI17rFIveklhr7s3FcqayXYJHicS36Fcx64yMFuLbP4I+3LVi8uj/u1hxjg0CVl2HV/hg8XBGTqN1x5V+W+DXCWhUQTthXGjU/Q6a5acV5wVGejJEH66AiU2zHKsW2CJlve//YPfHbl9P+GOe40fMeKOUp8+LX50IENaHdEJg1d4Rwz8VI2ZcO+PAercnebueru3lNYqlWCt3obZjE+t+mJVqd0AYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "About Us",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing/about-us",
+                "encrypted_content": "EoELCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDDUlbYFvY1poX+xLKxoMQfOgHsitFlpr9EmLIjCZ2j0WodBXQEMSPZa1LYotlgw2ZzDj5uyQ0A6gXdaGDuyaY4VPnwUYA2hrNQYz6AIqhAopugjjrJFq8A6V/FUTkbYM19h/KOOpaNTC4OPY9Zu5YgaNNWZlW2UGJucXAQ9WDCMtN5oeDq04kQnXtdYrmMmWkUJNj0G6nXDgfXIAllQ5ouAWnWO40ixU4ohCL5PxVHxdShkQKO3kxnECci/stuRznMz7m3waIEEFTHgKyLlbCjJ8LVC9ufOqgKR5Gj1ObjqEt/UzwxTRmMRLTLEZwexCU3T1ckQ0xZT976jhO+efzC94XGvwuqhAr4S8RCXU/3x0Y9xnAV3+EpfUwIpvkpy9M8MNTEDIFJyGNLtZXJkXyMLPXe3V2mnkkPst6z8QFfiYUnucSyJAnHyYrevf1xfaMrTR+ncvODsSBu3pdosqxpRtll0zSN2BIvmC5LarzTsqvCdRiySZR1085YEIm3zmApY+irKhOh3sDD4hqNI7ak/2Ihd8Irj6bkGKBsz4rmmGNWEheZHE6XEqYT5sLCv4XlQK4nMcceOcw8MGTra9371YxiERGWe6cA/V5pqdRNgu/0cQ+rmNGs9bmWF/SEfauOes8OPDnfIPD+v4+jfDIxwmzplkkxp7rf54TxQdVHAVfi0ooQrGOenxjy9GG2nwdv1qgg/vNGChNlqUnq13n3QzrP31ILGjKjq2Ns7FdktuelgdLsvnMApIseCX3G2ob29RGNTExwgBE+H5Yj1LMGk/WBCAXHV14KyYf5FXr5IDSvYbP+ACPeDaPs4hnNgyrxtgdcLV0UylBVraF5d3ApLL/2tF+Fiv0mebGb2Z6NZANLUDmIJd/oa1YIgH8hcccKFfMLqK/35S1EbCCkPudo7nI8pn8egegvEAIIupz5HjvIeuYWqxB0tCGcR7xR8CikArM3B6D078sKF5PRvIE/rvnUBtQ0XLnYTa+tm5UyyysmlL58oh1FK/zPZnsqlpXH3SpJJdY9agC+VAIilP7FOVl9FZDkEL/wF/AuqJC8r8VibjnyI2eb3sHREbXXhG1R5NI9dd0BKnMjJ7j3iZf7g3vX2IhYgm4DZUHSNsCLLuOHzIfKLiLfEMng1NciXANKN9NcLPhDmnuz4QiFE+DBslTWVGHtgXm2vIXEaMoHxc2l6DpALatqPgeEgX24aw0mLUd3NjiqfaahIsio95EqouQWGGT3p4GwGIQNWuvXdLKDJZ36E+gdE0djqd+RNDbeyV3BLFFUlC7bGg/w2pY5mC531h33lUiGL9Qjl016oCVgx92YHMRGteoXnOgVkw6y2tPdWi1HcmUhyMb1Xeb2LdqeNFyY26Vnqj8kF3wt4XklH/5VHu0BkwrSfcNkMAH/gIDBqRc8oP2HJRf0yEblcE2G8neWNCjNns91HYT4lnEXjmP0B1Xl4izlg/Pa5L/8jL8HVw2iOLico1Xfns711OkP4+Xy7vDKuk7LfVrc4y7oRaxoP7KFPa9Q1rJGqaQZgFBjavif24sb7GNMMkmuJGbhvkKv1dMmzOzmZi9ycaWpGW3ZBrdbNPH/xuAf+PbXPDKssC7zBgsm0MrPzcNmAh5FGJJCA8isqNcBAJ+wQyihTJxsEtXW6rbqvUuZFMXeVa+b6pHw0sx35G/7exfmbvkQrrIQNn68twEeS2xMARuJ/plgVGP5UpeTzzPw47c4TSZX8Cerx7Yj2yqaVU3MeKyV5eb094BI97vdOihbtnGrPLWSUqIBUJHH9XFT5rbEHV5W0aA1X6/7oz7+wixhC8LqcYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British School of Beijing",
+                "url": "https://en.wikipedia.org/wiki/British_School_of_Beijing",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing - Nanjing Listings - International schools",
+                "url": "https://listings.echinacities.com/Nanjing/detail/15425-The-British-School-of-Nanjing",
+                "encrypted_content": "EuYNCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFZek5rK97pABbrCEhoMV7+VPbACx7U+GNKuIjBsQAZfa+9zDQHpSPfL/G7c3W8pgVQy/AyBISRM31wlCTSwfgoQ8DQkopz0/ZvZRjgq6QyV2V59de5+w69uDxs0sqXHyhGTjbt67DPmM7E61lW8Em2PWLS+3h2cTExAE9ak15Uf3+f1/35BWZ/+t9C4USr1TT8jbkphJvKTvPxOJw4X03bn+5bCzhxA+kQi3drw13dyW2m4s3SxkbVHXZ84NeJ+FN7WcPUJCRxq0D+NHLnaeWHyNN67T/zN6bAEY7wywuIXTXwvJUthFmaMwlE9PUpVq3WJEPBE0sN3+iSquRjbSpmPaNqDifrtg7NkfOwVKLp1ICTiIHG3N0idW9T0I5x6xSSDKOILtbMUuQaAAqQgCg58huHsBmbqR+Y4FAaA+gMdImXx7W7j1dH0CEe9hwV2BAzJfDvYu3nMpa0mOyUOmDoyzl8ZE5Rqbjg5tXcXbj0BZmKnMHa0N/g6tKU9KL5Iz6l8h8gB9fqUU5TLjWXzmuRoEKK6687X3tc2ktOfYYwCzOGqcDYpSQ8aiw8dbtkjtBWqDHjb1tyY+5g9y87BzrmTgcLxseovMb6nnjhKTmA+4i468smqbWURSKY1vUb/SGfGZtEGpgLWcmSgmUObQJGz52XvXndkf7ujRUZ1dhFsSflsJl+zBWhOTmLzRNdy/Te0tRPGlfPu4CkTNQIRNbqh9wnnHGXcafownsc4nWrtP8YJbeGiROxNcHndUHB4+ynMl+lynyZfmCoo/lZObJCwlGNrd8lBgDF/fYuZzvodSICdU8wzXtbl5tUyZZyTTh7VaPHSt4qpBmxJsF0ya6vOCX96Savwh8qnUjBf3GO+jdDoF7SFvc0Jy9LX5kpvYHTmWt3sEpAdRYcm68t0OwKrtRgxga6wFyGyLTXvByjO0/NweEq5SgBGWJzhBbIttn/YIXd+QlSw+tHcf+oIebaOYKCs7iFlYSrsfDWpsVYdb++w8lCAXBoXNnyUCjhCs2payX5aVLc+AT+Wm7f0AaQomXwBcNhy7vXhmHKpKz+yvWnt9bcuX8xxq5r9fDW/M/lysD+e6l49+tgHEr/wN1cO5glp3S8PKSE++riLYJ4/vwFlFDwexgloElvdsU2QZkgAp6G82ZFi1FXEFErJsd8yBb25g+0Tr/Dgyr1tOkjM2RB66IoYnQGr7jhrWUxRbDlCbzfSG5oc1FD2/pL80WBtDi6keFvz7+9qMbiBT9tHCubHaVBkdReCffv04O8xR9yrNy+2QPuNFluuVJf5swV1P98q6xGdPJcoVLWCfloZwM/VgbGCScS/T0hFDJ5kVBgM8hpmooKgnNxjX7oZYkifXpUv8Q7Jpkxz1tM9+wD1gZW/olGxw5c/6sdqyGAQycFWDnMXvV9N+UYjPJ/PAAzCDMGmFLE3SSIjGoN5rbumZSX42RHe+kBy//iK2lKMt7BIhbeuuB7poiCbwpOwK4PnizXLnzRdbRwXRDt+Rk3Ly3uvCuOfRStJtKV/kd7h5kAwqSwnowWxHLqvlzG8aQ4pkWzuPHsjR9T7dNh+Iuk7E4PNCBr3gh9HhM2Fc1AwzSOlEroBvldG+U9hr9gDvGNaM0uhukBIZkHxSB39vBDwfZI0jxrM1cu/o7uIG+ptbOicmsPmvwh5ieuYVT39iO0bWbA9FgHH1ycofxBVJCVIQPYRS4R/Ik4WCoefR7sX9UNYX+M7H5l0M2bctSLLmXVa8TYkLS7MbkCROHJDqMgMzSloxShIjbI0Emswr3pijnLPZ25MF/iNiBiAfrC/fjIM6qkbKoL00OhpHI8wkLyCgA7f1JRAJLgzjtz7as1BnO8xe5Qkn7jYbdzQDtCpfkcVuXBulP4ZV6GCl2mU+15Gw/QodPQizGoAY1ZGRwO9E3avK/1rNxzKinc49l/v3jdR980VjCOpGJ5OPPBbM1qArNByDfroh6Ro5P87Qhiy+yg2z3dHHiAaZCjGUjXGaj12BOD/QXJMBcdjzGKQGj87N30X+FKT/di1U9Nne6/lnl7+o8pFlAfR0j+YQ7Rc/0yUn8dJAzzghodnA1V4L3DTMK4VAnXPCShUSrUvxaHLIuJYcNQAyXtXbcrqo5nKzs0CRAkhWtW8ZV2lHo1pw8ue/+6nJEg81ZVonmb7hc9Fl+8h9np1Ky99uy1PXnHnkZW1tMYj5S727flB6Cyf6McZpvqALss6GK7wIzVzi0sGxWp3LcqAtpZmjujAtokGcmxY+Pl52cW4K40MhL3eyAwNzK8gXFBClFcYAw==",
+                "page_age": "5055 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Schools Foundation",
+                "url": "https://en.wikipedia.org/wiki/British_Schools_Foundation",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British School of Ulaanbaatar",
+                "url": "https://en.wikipedia.org/wiki/British_School_of_Ulaanbaatar",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01KCN8e7VFSKtQ7F2PNtWJfL"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01KCN8e7VFSKtQ7F2PNtWJfL",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBco4YnZNwUUO55lahoMNkdxiq5438yp9IxxIjA245hAhyUUN8RKefSUH/XekD+D0b28UZ/o6kk18bWoYcvDNwIgUoER/yaMyLmtEDQqEonibmbzFHqDyzktR+Jo/cyS8BgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01KCN8e7VFSKtQ7F2PNtWJfL/cell.py\", line 12, in <module>\n    print(x.get('title'), x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01FuZxYwkNzqBiU8UughNtHF",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in [\"British School of Nanjing nationalities students\",\"난징 영국국제학교 BSN 한국 학생\"]:\n    r = await web_search({\"query\": q})\n    print(str(r)[:3000])\n    print(\"=====\")"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Q5VH67wjDJtdVotScBaDUW",
+            "name": "web_search",
+            "input": {
+              "query": "British School of Nanjing nationalities students"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01FuZxYwkNzqBiU8UughNtHF"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01Q5VH67wjDJtdVotScBaDUW",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.doris.school/schools/china/the-british-school-of-nanjing",
+                "encrypted_content": "EoELCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDC+r/sFphgsEWxprSRoMdZapkwjvocjbLO9EIjDGRF6cOZui2eoicbRX6PBJ/sLkFmr5119iv3aNnAD6X8BjgCltDv5TiH6epftQdAsqhArr1qs4PKZuR7Ul7eqhibwR/alJbgw8O4ReXt3ukhMblvbw4HoLv66fbZ9orzlFGPOAULkL0QbwhXhUjZs+Ef9GgEpbAfmEm79IKKTOQfq6UjuPG0vRbdWKTaihNxlbsvkP0MEDqcv5ePcMexNO/S/j5XJ8OxNDQJLfkLK6nw6C9JzCsovzT/cleCIwefTKaBMHUr6PV3SCCHYiUaYvCIjXva2Tg8qd4nU6o5V4CXXopFD+Dr96aQYv3pKpJWZNozA57ooPJp0B5RF4wQ2UcDySDw52RIfl8Kdi/kmLjJL+Taio0HMn/kAHzs1gdB16EocQ/lSybJ+/pn3KocpoZ9ZC/J87OYQCnIbePsIkil+QlUndRnr1j7KXGtqdYzlPNvbHPV1dZ9pnv2gqJXA1Px/IX3k90icXgpxDFhhJEJrryId/5RXNvBHutPne0DouVGsFiXCD6t6R5pD87sXmQ6/Fsxn7GXJu1EhEkZ4e8G2l0bw7cn3nowL9OyozNNqhPX4QwLrwdN6bxYAVmzJksjXQtjGyXFFTw1EcYm6ldDZUt+yrudXewWzRS/AQqcBLvW/qI8RM4kxBwPmzzPfywJWgewy/C8R1o5ceo9HO9DtFQu8fNGPpeOkw+EFVguRrHXeUXNum0OvQVNfqjvaW6uwiDgxWCZUn0vn7PxRdCRGC92xWA9jBKW+CX9UV1J41U+2SRDilfG857nBfwchsD1En7WN2Oo5k5axbSYWdJq7j8Jz1q3PB20Z39qYDHrX1qNbfqXWA+ewOPKEtsvKjwzISqcuCWwdTcp3Ce4LJACEXt9hlat2J/H0KdQlv9X1C/QhEzWHreV+WpoOHkRSblxXXdN6XicAC3RncqhHUGrJGprOuWWazstMo86m8e/W0DRMnN7lbpk0COfPZ5L6CptAb54S2A2ryyKmNRB/Jy1WJN5kJ9VO/PKQxWaZsDoX4+7CLubGOfDgvsXGfC4f33ibLQLnvvB4id5VBqb+j61sRRBIkX1jRZBYI/9pmP20f8N6QDj8PZ2b9B2ZLraXUKOwprxPEwb5pjTDaLlNhLpBRJb2FFtWqZ/HJMoiy9g8qOzGSymt4IZWE7dY0g9tEpofSzYVxEzpLFg9iab7u6TWlD4xgXW/R3rhxXai1pTIjefYhKcOeTILvs9+1vAGA5QTP9vC7R5FRWiYb/DfdVxJv/ZKMeyS6z9OnygzCL0VCBIy+JIDWvpbh5AKUtr60QKXqafgUCnvVvHOFDAB9zN7qz2pFCL7VoD7RG/XVtGnyVMH10ryJnDs94a31iygV78S1w+qTc87ohQgcthcKca0MGYlfi65L6VzR8AE+lD36ChXKHyFlHf5KOy0v7yRD8Ifh+3w5F8EQj9sz3mTqYKGJKp29z/3SbZ4PnZZYx8rb8q6uZ2nKkQbD54L7TkyGwM6Is4DEMdMzo92TkPo1ZJKJl3ArPlX4l9pcgFNMNrSkcbigZ/nAK3qwYITRFQTaCbuC7E4a+/ciVxhTcM3ENQuUs9comQcswltCrbhcUPZPfsio2D1dJp3xYtzPilRXE77VlM4kBX+ZdxweqrePbh7pAjYD3wS10Hb3hWY53NzJk9FYL538Ybet+f14G17V43+4C3omLOriUFHqwiqpJcNkdZOB3/Wssa0C6uuPNngjB8g3O20FHeliRR0Y2yoNdqDbrQXxPpcfDIrF9bvMaqyMlqm/AGAYAw==",
+                "page_age": "44 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://www.thenanjinger.com/community-health-education-city-guide/schools-education-community-health-education-city-guide/the-british-school-of-nanjing-2/",
+                "encrypted_content": "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",
+                "page_age": "5049 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Nanjing",
+                "url": "https://www.nordangliaeducation.com/our-schools/asia/china/nanjing",
+                "encrypted_content": "EpMNCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDEZfXoazzFFgH8YJRxoMbXf2lCaZMz97Th3ZIjASl02Y/49uJ+ed+KUXLautxyR/aUUpFFSGpu27oHN5UgN1zWEe6NHRdC077SlVIZUqlgw4F+1Hy4c2LFoXEJOv1LCKo+6RK8IBBdcwBAmWzs7QQKlzI/3gMfVJORHKKAMxpdUdSTUWdJd6dqk8//ggScDEkq1E9CvyURVaGUAtyP1mhJYwrTd3LCiOJSh7IcmcJZ0EwJN44TAOYRGSf6JtI0YVxGm3Se2DdGB7NrZbp4eMep7Wulaj0VCgWUVgBuiBHk1aoBWZYXX0javykV9e2rO6+3O6DvnHm6mE50KL1bs5N++JJkXeB8eg2SXkryfYw0awYRz/pn5CaNl3/WbRmhzKFNNAKQbbjDbtflofaqH0ngrHGsGe9MPZ/7XDJ02davfOhw7SbtuIexnJcIHWOS4+ZP7aNq8zCDiLTkAxYhW/2Ykt5Oe5EkEDthZxVH3SGaycqopKhNHTEb0AogAYlaeU4LwtjdcMfn2v/+A/KaevMnHbB3ym95SvAhx6t9IEx1TYwF8nOo/tbko4Af76INJQ9+KVROptGwfs1K68LOPW0sQC26AEBDyMhynnm+HBaiz2iOjhDnjpXHA0fWVF5X+8MednRX9vyUizRVmTOzutRgOwAqc7tj5f2W7tTuZJixA/j5veZ1RlRnVKc5Ln70/fhL0GcZvf1yAEfs6Zb0piiYKlol8wz0TxkNMrw4fgYyUIAjk3IdJepLLeRWhmQl9aspdJNZvt3F3wtz2m3ReUQ9SeSMAWLezqaHnoBrm+YXsjxlbwm1DCc+FaHQZST5Bof/Hs7+Koki620nNdacSTAsxoGZycx05fMtOzcd0FBg1ipFCfRsLVJGSAT8m/uzyZnVEA28fc+JQH63dqyG/MXO8kVjOP4vQeHf0YLi0dLiNoK/16DeR3PbOIv7Nm2SQri7gE8uIUOeDMR1u8at6RNcqgvEzlXH4c83Kr1/pIurrZaxRjykYuG0IafZud+6ZNIoWe2g9McIM92eKcgy6FMMERMkLd2aBW8hmuggk1gh3WehWIV8ZConhPO7uu7OqXYCSVLnFYgf1WUxGZzbbbXrwKuucSSsByNNpKgVFL3s2zIC3n0TxLuaZqiM1Ux+WEfNMPgKhPInGhd52fo9bTurMgLU5uyn8sIoPx683UD8CWUP/MiexmvawBIiEF4hx6JCMGJkIMPgEC8yCvPOrK/c5rBeczFhhWNwqxNnyY6gCrRGoxCBk9o6FKhdHecRQvDzkKmx7y5MPu+u8XlPqL9j1dOa2Ndvs3Kq+3mv0GXh3ia0n9QMzKL0i0P7CuibM3qTHElQP93ssffdNjkrkg/Wz0Fr6jTA3vFZwrNo1N3Ifq21q6Jha7n7j51xDslMlT27OrWVY76vKdBCpJMU90gkpC/gRSJ7t505pwvLKugHn+DfQWtvEiOZ4sDeLoUCVXAQznY36FMX1//pw9ANfoonxILZqjzfPTW4X6QWlr6wFeiHHZSU+69MVOO3h4I7ER2muVzlz0tCbqs4+VdubzFp6h4oeFGYhNYiQzmqnMMnRf2cpi6piGxBo4Gb5e4Q2jW85vao15J8bUsf8j7pTcM4XTsiM6lr9i2GuvIkG9kxlQF5i9Lxuq4+eCOS3WMRK+qGbrZ0Sa2r8feP0MVAqiKAsmGpImdLGEdJ8QxjbIFvx6frt5y8HGND92zUfxwUmVh8SiONOs68/fXudf04eEFu6nWdPtyGoePMxG7jpSnFga4N6fkglM7llItWTFbnIhRRNpKFNt5ieSAlQhaIeZUXsY+OodJCfGGs4Ou5M4BcUcLMagmX/kTXdkS3XKCWRhu3cZWNF1TvLxpFIodz00/uTp/R+xHG9N/sT+SOhHQQmoxXjHf/3XqTP61btde2+Ioz/rZL/8XlXOPPn7jrNVGBtO8F2GyVcqekmWLZ7OmHq9yyLGj6EMbk3YRQyaDLeQKa4+pmqhWB6Tv96Q0VXqRAmaDvMP3K9OGcuNz9l7HB/9MB9STcKQxF9A09HkZTE15LTPHxe9sjl6CXwVrqtHIo4ur75JWf/nP8TaE5QUK8/39fgK1GIumUtHfo9iWSorkGi8leeKrITIa/00hgX2YoSXVHFgz0GYD7vd3kdEB5LabSiM03AhEiLheCK5NONf3BINhcmRGAM=",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing",
+                "url": "https://britishschools.co.uk/british-schools-foundation/asia/china/british-school-nanjing",
+                "encrypted_content": "Es0GCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDGRbZ0gZbfRdF3SW+hoMTFNfPzR3JcAIdIS6IjDTeAzlHr/hmfvFOAxqSdZNT+eEnFMPE0UrZsHgKRo7e4NEyTHYTc1T3YYfecJVZ3Uq0AX1ZT1KXqCHYoxOlQhmkUUxbeq0X5LwRC/+zMI5qbVJHKGDZBmA6q7FlJHLshabiiKm03I+CDBWiW8XWO1EbUtnHJ0Zx+Y9n2pqDrznr7wU7w9cJKT106fg/CaS8a5Sz6d9sZDDIp5oO7Un3awnz2kxY6OQx4nEwAtBO+uozNUJWInXaQ49ZbSJUKZMK4N0bO+94bbX7nO23j697RAgjt68m5oRd694u8yXvGI3qZeclbr76FVvfNk/aOlPhMBeQZQnsQgfxYHyOI9LHFquOaHIL/Pgaq+L+mW1i+ayq+WnM0g2J42Zsn4bNn4YIEKKsdzRxegKI5qey5LlqfinR971Ax6FhbSwBOY4CIzyvOpTs2fWfEuV8o8X7CGS0u5Hr5Z2FO4VvX89tL+7RFL2oeM1MevISNWqa2lnlX73pW0bvGjfNbAMOdgcEAnFmr5VWlp8Blwj3oq055OMvZABnsgrzNg6/A+XKPh+tH6+Wz4FTZyWvI81wFJB19/HA2uC5Cq14LsK9pJ6kCxpHT9gorMe1jzxalpr1aWUV8aflBVR+tsTv+wKcEAXVWO+scAbiewB+WTJGkkeBFkiB3BtEbv0LVZDE3uyJn8P5/sByLruHYMZy8OUfY/bx5FStfKxdjk8USpAUIdQqoDxyfy3xKjTpQ8mkACjk/kN7+Y//dF7o2aiG9ptU1JAGYxrf5FCvxF9eN4fU2ubWL6vyBUjZJjaGyvOGzgpp1HaMJZBsHCSwfaMw3wPOfhxj7fLqPPn2gzGCI0AG8GZO1EhVAKjDqA6ushjLnuL14HDx8xBdwmr1nQFQl4AO89TjKPxhakSK/IeaWXQCHmPf/DpdDWVo7lS7tLu9k35ZXSW524sVl8OU3tAZL7Pvvfy7sccZKo8i/az0zr12uYGRppmb6yZJMPexmbWT1/z9n9S6QrXcYF1Npg7IyT05ccsPrcrGSleFOkYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "About Us",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing/about-us",
+                "encrypted_content": "EoELCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFggp2FLr8R0BYhZ8xoMGQty7xeBEtfaOwWxIjApTUio5+77WHIt0Lx75u/PGnrYuN/LoGI8ObnciV/SNTbgTXANlQaf93+wHjMdkEwqhAqlKK5MXQIJoQOvCI3AhctvUMpFwt2YcjfLOy3Pz/U5Zt7T6WCoOWTGSZXxzBF6n6I7FWya3pPVKR7k6N2PF/ZdFd+xTEec90M3SeWx6Vq3G8BH5fge67QO9wr8MavMWbdY8BEelPiBHs/3dPsEEoi6lx/SHHf9uOMmea+9t4sxCSwowl93l2EZOYfljEw/L877QgqejXnSsVCgibyRRWHaZTygJ7/e7up7nuEvekmmbawehEuRFCUeB5yCMHf1berexqYVI84fWrfel/n/cz5Uj53w+TgJCQl3mGSXEv+JMPl5nLm7NhXgAtRbK+kBZI5+Wn8dLaVlrpY4OYTbWCgzXhNJDr7yeosLMvakE05lOm7RzxxL1l/tYdxhqgvsSz7qzWvo9QBAI3QgcMTAu61MwDANuhWc/TvU82hSGTp80poIuR1rCrckDvEifb8bouk80UOLw7y5IkD2sLrzYNTnA/L5SAJf+SCXGdhS3ywWJYxw9uJ03/J4syubZLv5IKOOLeG8OfH6c8uUZbqj1xyZWH2Q3mH7O2ad9T+JQhZZsKZJFjIUXMF9b+m3PH+1pfN0wXtgZI3Qs0hFN2gSl+7o4wgQIv4ruMh2aRgZYKtP/ncFmC/sLoJ2V9d/OcHDFZKMhNwPbzjIuDCCHYORsrb+MZDhwTZVoVw3k0PkRT26LsAA5twszVjnAepn5+gczEwRLk7WITvoj7En8KqT9JgMboHUqFOwbECnb6AEMeTrtOEMknRFgbiK5tAdJcSDKZt999CnAv+SMLc21HHEqgKd8LqYoxbu5uLx7g+yeTbC8xPnJxbrArcTMYM/y8zqUCUPZ3Ywb2rUEA7DY4Gnokv8pDXkLOSsu3s4IhDG+Ux2801C99ZKNXX+3a8HSSyst/h2lMs/S8HtNUTGgExmp3/yWmjSZN67Mfv9nMUNIZKH6ap3J1GtCmFBhum9JOnLfieA2da2lr6KVhGiBd0zJv8kc920XlU3wA4Ls8JwPtg7QFQ+0Xep5vNx1uSWx0HDDxXevtMhHoUXb7VQmEwVxDyVSrz+HyYyi43Q5BeQ9Z5UQU5FW2plg0W0X56nAgiuo4wP56fgdJN1BiCzVtC2JouyzXF1h4j46mHBUBwLxmcqecyvAQJvlRCjX6pd55C+YKiqNP/UORs9JEw6kxG+2GJ5uuS8Fk2mHcv8/aG2WdQVmole/LtCC+lVMpf7rJqp7Aw9n6tH4ush9EOK4eQBKlpdqI/5jtNxLj5cvJIgibmRjkGoCVf3M3BjxcIxq3txwO03VCngorPXQunojddhTmV0D4IwkWjx/2Ie3NUichi02s37aMjqaA7ETj/liD231p+OlPROxSh3zEMV5wDD2PPClxVK8pfHRYgd64IYdIK/Y/gI4l07K/WMbv8jVSQ/jEpUMoOuU4SAdgZ8SZNE6do7hL5ztUMWN7hA74gBvTkJ2WsoYpNgp1woCV61QICL2cFVymHtKI9ypfoFDIUoznRDcWdJJH06PfDT+knI49ZK/kvC5/b3qq0oG/ueGigv//11Yrr9ZvSQXggVRBAVBx71tXBhM0rANv05QEYSP5xAb+2nKD3YDQbBO3QY3c91Aec35p5q7iHjsjl6Z6/xXmM1p35S5WBct370YkJUaCc/nGvcpWCI0syrqVGrxeHna74/xD46c3VjNN53qziGvqnWNgwC9TvlgLnHtwydTEAwhzW0mAYYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British School of Beijing",
+                "url": "https://en.wikipedia.org/wiki/British_School_of_Beijing",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing - Nanjing Listings - International schools",
+                "url": "https://listings.echinacities.com/Nanjing/detail/15425-The-British-School-of-Nanjing",
+                "encrypted_content": "EuYNCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDGJKG69XrkZw76hhARoMRFemja/37HdpI07dIjCeWl7E62U8HjtAKUlhwjodsHr//NcA2bOebjsKBwjPcXV5dSO4yH1D7tDYcXazFVkq6QxGBEih3sqS1n1LwFVy92vB8gusPtqC6Lyhr1dJ5F59XnjumjV02VHVS+Ht1ZX8Q3jcMBQOIzxp0xp4BIIDX3JFjXi9UsWDsKwIXn15nr06XVlJt8aZCZrgwmOSM3AlVCEWMJhmJ9HTJXbi6zsN1rWtX+uUdglJMnFhvGImhwvwF08kixk1CCZG6IeWFCgflIcrtG9QVwWJkQTUcYWsnlznWOJ8eyPC3LWk10wQBgdkrOdNA7gaFc3GZOhGwVdcZcKzxooUzCl2ClWThpnHDuEGc8zW3GHKKe67Iu15j+qsgvtqzEF5/l4y+CK7yawZ70vjAcqA+VkrX4No+u/uOkyeh8V5n5ww2hkFT9oaah1GiHbnUiZ4qSyiWqoa1Ppnf/LxI9C4rI3wGICgE51Wed/o9lx1dlw8RDvaDRHYv9SpXXCyWRTU+do4Vdn9YxnD0JTsT/FLZLQYxRPAVYsxc9sVWPnZ0D8hc55zN4axsXzJvm8Xt7gelivVlOobFwJB0NR2P+FOE0dw8N0Na9oQNCGeWwBdPzDXCEE5l+GhyTw8OC3hdYCb5H4NBzGFoQbsiFa2qMjBYucnB+FP1WMkmtewTZsGDG5922sXGGuA3tfEasnQvgroBMS7IT1N8eTgYhOM4Ljgl5mc0pOc3GO3moZCn/rijhb49+4a8fFyBwvJnQ4+zigx6+s69+emuZEo0bJK2Cky4D8j31zvf33Gy1LkKF4KPF7SRf9gDDxdlRi/AOPe/M4YvPeyD2tB0t2lMcErNfG5LnWLPRkJLCFCXzuF5EYda5U1qyetWbwpVis1FOdikZMHKfQWP024nUx3WVoibsIkgogCI7moy1TFHEArEEWXEURQcMi2wOW01P12ZooQ8slyaW2HxPS05frYTSDg4MH0C8MmGrmUugvbA0ZXeFNNYVOiTdF3EPqaFfXx/XhYThATmvWlAHRtTtAAZPInDPNCWEaOYqhhIs/e+Y1ajF1Pg1gGgMcEX9lsH3SPATU1GvVqgmp8tU6KxUnMp6QPUS26SYusp4BRaBTHMlUDSw2uXfMZgclLyrwpwM6/E/U4PmoAn88ppdbL0CLHn9Z/M1/aM1QfPLcHMCQ75c0VQJF/x+D7DBsrpqjSGubAhHsQ3BP3NWmiH2xLVYcZVXbXbm4RBApEJKEhYfHNrIkLWVmi4t4olpA/WSJxCZfYrjM74B1XG4Bd6QxLbN91cbwpOQkZNefvhcNp618sngntakJNNeFUrxXOGEBREkBAsp+2E1bEhHdqt9BmtqBJ+/dY1ZpoYQsmDldPdR2w8czVPdaxLX/OQvWefTgLfmjA1uyJ58in4I0KA7f6Ep2upy+my/bxp1qtfZ3y9u9IuZ8sMeutJP70yy5PuJVEk5R5KdCg0NurEtkOvrMIO+BCPNSc3NxOjNGsPB1BKZNnqolc9QbGYXeIiXZZyzv9x8HqKJJZdxJxSO9hF4e8doQDlRTMeQPwktMXpCIeg9cvwtBXZSvq1Wz5m+z8hY+b4rqmIYMlX1toyQIUpP7Q/cp/U3mYyxx7RpQVQ5LZzTocsth5FZaPxsyuM1gxh4k8X+bRCXVNZ0fpXcWlVeVQqADpJlhGt2RBbqOLAsN6kdWjDMM5O0405YtlAVF1CjBRp0bMefZLc6VLQg9lgKyy9Gfz/I3cfTah7ME9DV9pap4Q91KWp6Ez3+bA+rS10wdgEoee9xjqREpO0VPK3lOitk85c6Uu6TEQ/gLSkzOKhWFdKXxtAoFModZCMnichu4Yi6L3rERQP6WqiWCJhZp+Jl3Bls1NQ9mfGfY/HGrhT+aDSFpOHoJ5OdsoV+2LXwSSVfo7g8J+3TDgRsvMK7ksgLsdEyPqQToYr0QvJ8tMv8PVUBiSMVuUi5V/QvbFZ97KelDwnisF/yzj3YKWyMTKW70zodKDPRgqvDpQJmrE8bfXkCzTNSuYnF1raYAW5HUORSvZHVliC3vn/kdAj7y8vVDX8IwSLOBdso7yC7rKH18xKNJfw8b0bEESq/kQXx288pK9TS7SbPgDEMOLisr7PcCaoLx7quWuKEDGIFUbTipY0AemlEyrgjeFwztjuvaDhFYFxRxVkHldXuKcbZiwIn9b9CgewyPEDohzebs580JUC2ITrgDaF8t0GHRfKAH93+D07ahX05YQ4FXthmjEpAFCEGh7R1FIosm0svIYAw==",
+                "page_age": "5055 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Schools Foundation",
+                "url": "https://en.wikipedia.org/wiki/British_Schools_Foundation",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British School of Ulaanbaatar",
+                "url": "https://en.wikipedia.org/wiki/British_School_of_Ulaanbaatar",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Nanjing International School",
+                "url": "https://en.wikipedia.org/wiki/Nanjing_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01FuZxYwkNzqBiU8UughNtHF"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01VRrnNic2C7NBjUGZBkQCAm",
+            "name": "web_search",
+            "input": {
+              "query": "난징 영국국제학교 BSN 한국 학생"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01FuZxYwkNzqBiU8UughNtHF"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01VRrnNic2C7NBjUGZBkQCAm",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "BSN (r2 판) - 나무위키",
+                "url": "https://namu.wiki/w/BSN?uuid=d00f947d-0453-48a8-8341-f901c0b2c877",
+                "encrypted_content": "EsEGCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDKHIijYLhMYA8CNZYBoMd4cqZNH4DAJqDdvZIjBdq4N/4BUZUDxODTbdS+N4UKFB5vEmApbhsWGEprmU/INq/XSK0RzGXhHvVfl+t74qxAWZdui5nOdRGbet0BcOR4EJMt3JV7fHedcrgFrTSEdUxw/Vd1IWorYXV7KoUUUvrm2YMWUyf5nXM38xVhqdcmFuEJ2qV3YMT7rq1nDjeCdM4N3qLTzwQj1kuyFqmb+gXJYDSIuYZXWYxikDvzkKBWR0TXy+dhVX9eRDXiOUjc/l1238zzovXZ2Q2AE4fQUeHFaOwF5cD+r7qA98V7ziRiQ+aJ4wl2qhEfY7ytxo/DHPX4X9BKHSo/G/WvQB7v1FwZoCv3Z765Ov+tS3TGNupC/yg8Y/pdlHa1AlRsJqCY9dUb60oqz+va7ywDZBR2xm+wwgUWbvdFFGGG5Q9BCfJ9TjQzcu9OUxbWxtsGXErvjuQfThfgyqMFLNnCCyS3U4v3zTklpfv1PiYXVTnvWoVuDptbkiN3ojgpURRbKm4qDQN4CjZsu2mPCiR79VeBK8k5fJxFGlDscD9m8TFv+hdPDRomO0BC14G7sJynvbXlKLUp4Yo7Gk/w6El0iQoi4nbjfaVMQrGyo4pHXY0xfxkzzaWVFGylCKMFJ88DpZoeyz1qkgPOzzjUVM5JCaMyJw/6J203vU1VSPHN2c631uJ+prnIC2BbzwdWL4EYnWbSIc4VsyctBy1AvOapYJSnOfXDRposmwo0hwkPE41A+K1jIBwQr1rExhEervcViLGslPoTsVvy4jTZEfvWtCJSUY9oz49wdQViGQBP8E60iFielzRmK2oJdUNkBqZ00FMRinJHSIBC5gLi7dhUDMR5ui5oaXPg6BvqCCazYicoq9j//jism8wq/cgTwU15n4nIZOkJmspn2vHoGVFy5H2yXuiPIMm3GX1XmxsYm4slBqUEjPTCex5n8t9mVhI92G4vlCUGUoT7ADg/GWWjUVv4HrqYhTmq6hV7QdFSUK4hTQVVPTgYEw7haDmX6x5RudXIijbB0LcosYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "난징국제학교",
+                "url": "https://theuhak.com/nanjing",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "중국 주재원 발령 안내 — 상해 · 북경 · 항주 외 자녀 국제학교",
+                "url": "https://issc.kr/china/",
+                "encrypted_content": "Et8JCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDG2vyba0y0A5Tj2/ZBoMaBKFsYUt0ZWIiMvqIjDCj+rNO+RN2Oe0XjQnKGUXjGthHq0+Nf0A/NEP1EoDPDZAN27Amwkz2HmgIfNog00q4gjqSklOCH2MsIieF4FsETTqHDynmm8pCa8pKdka+eFFm0HZ0CG5nedc0n1KHRoqMdE5oVFg5yPgZhCmZFKQ6e7NcMr1f1nJPt5ztONDtfc8HtFjCj8m9bFO1hvCp9zzYEiPU1IgyrO+fFqOQgsiX/sXsvAu5JcdiFFMb/GmNwGXrfCF1vSKt0PHfYQ4UVNQyzWbPwmCSn+evcabGowpDgoyxOZYq979pT+qdaKCXnmMetzJzboNI83pph/ififQOvpOf9oLoFRqT37ELL0ztFu0+VWYwoKf3D0sUqhK2uP82OR40uMSO+T0S5W1oSS91Mw9rXPJ11g1Zh18p5LavBqd/5UjqTsD2m2VGsOncigYBK8YscmSDlwHb5kJqPPwf7lLGoPBihWJnf5OJmvL/3ACxr73fnN0sGpJ2j7N/XQmoJoMwV9G9IFubVSLVBtH3TX+bTwdHrolPJW7KZ+ZYHH7pM5ATMK9Ii++J+5rDBdRdewDnDtN6hrOSv4K3YGyq5qpXj/w4iDeoNK4kNdjKSNBx6I0hOcQbgM377jKjzH+jRmxerN9wpUSopxzWsVc5JWL3zoE8Yc6+AxgrymMiT+qDr9B4QtzLFbXWADom67m/HA+jNsB6Eg2EL7IPrd52XNO+iy2SjwVl7S3/Kqn/4hjg+rHPnjM27TtQF7X0fkBppmqPuqeZXmdjWoj7IkuJSWcUTyO6E63z+WiKmyswW87juj8uTFy5vO56a0dWmXZvTd0ZNVq4jeTv47bXSEuGaI7Hcyy4SXJIf7kfSubfY9KwBBFAIBXcXw4tr78btACWVObsZPbxBJIjUaGAqiUaJ5PwWrfulVeOZNFzcAAWv1bVF4VqhcEnXzGOyIO8uDukx63GLB8OWUdMgwO7qTyyHQcqNd4WeNZ8v48wCO2gs1RSKw+5kTZixY76Dm48WIXqF6MRQNy3qxTQP+Cb+Z4MMWX+JNSZx2x1SAarW19eCfEZ2S3wMFZcHl7bi2nQZirGIBP+nVQXTCXJXE3R2PHB+TpSCHAWHDbtxh7OZYhvdjv67FhIuJv8/eSGeNpC1bkvbaxrpY1+RwX5SSeh1NDmLVvChvJbVk498gWuyEaP0AeJYr75fdqE/AMEkIQmGzD7FGUvv6pCd+xyHLwbF7S2jUpfDvpzxincN783n4lY0qoFkjR8vEZouiI7mAjXLoMKO5K+qb669CMDWPzDjxkmwO+pDzLuwz5kTbWPh0yb+KDig1cckoIt+Y7fi63qfaWIYMGBKbGZ36BWgh2G439lupRMJRbM4wR4uByaH/oVgYRLdJXg5r4Y+6/+5UwQV66dFtSRglE9I5FqjM/BZkY68d2fNIVpo9vUNIogLb8S11ta2tLNGAnloYPGtevP6SNu+gU9WsOUroK1aPyVvJhDC+ETs/vSMIhkMI7E1rUQGaclcs0ZmY/moFF/ZTjHKxmrePDMwcWQXpb7fORejDSWLGnrZSmRvXkm5+ynMgzl77O45cYAw==",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Moscow Korean School",
+                "url": "https://en.wikipedia.org/wiki/Moscow_Korean_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Yanbian",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Yanbian",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Busan International High School",
+                "url": "https://en.wikipedia.org/wiki/Busan_International_High_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "BSN",
+                "url": "https://en.wikipedia.org/wiki/BSN",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British School of Nanjing in Nanjing",
+                "url": "https://www.doris.school/schools/china/the-british-school-of-nanjing",
+                "encrypted_content": "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",
+                "page_age": "44 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Entry Requirements",
+                "url": "https://www.nordangliaeducation.com/bsn-nanjing/admissions/entry-requirements",
+                "encrypted_content": "EtELCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMnMTBkuApw6AR6gzxoMS8X1wIAaMNB6ytqVIjDBYdUlsY+iM2cFTE1b1KU0vCDUHAtosSYVQw75e64+AOVAMfmeyL1bPElPVWISknsq1Ar2ROsgKkXVisbHF6VuGKdwCIIT8/9GyuN/McWiCqy7HbZm1Gtrs2jgGjxxlcfUs3uab6EXzB+a6vs7P4jeFv0TFK9OSvyFG+54sths9zsWqzBhay93HpOJZjG3DIJQ3FoOyQNtoINmkonfVYctl2OC2LTvxnsycwlzpbgDHxKtWvUy56Jh69yIZf2Bs5KGU6QTAqPdpcAHjJy7EfQ517Tb5BBnvk6mYXwI3yRGu9YqjzEI9c0DYWxUm17gdtlNhwrDob/Tj/vbNwssZyW7A1lPfCiGFsWVklBLHfVtgZqzQAZ/0wXvC/MOvFAzlVsWYy7NktZwv6OWFw5gX0zY9ZsHX6qAHYIvqU5aRDDYwrnLmlj3Ux0RBFQZ4CT0WXmY9Ohi3ADjObEJ4GVdViu91pLFxV7YBEn7rJY3HtHlUiDbTc2uVYXQIcbAD7/mVuhRG5y+F3DJieDcHMzowzhULs+JFPbnH2H7ojq1Rkdx7wUUYCfgeKaRFJvTsr292XR8HqPGdPoWVWsKiUvAUWvtFp71NdpOa0tLHDx7VOn/k8bqP9HRNR3P4Zup8fRm2hwZ5H8xB86B9IsXNj9aqXiG1efalrGhOgWxcdXppoM1fjsSV+4PCDtkTYYdCnLWJLp8VDlogEp5Uo1b8e4zSLz21fCnyzKwblBH8Qqyrymb09DxKhfpIsHx8Z/ZLf1D7BPjNVAwT4rhaW8usb4sbGa72nxsbNRORTCQ9f9wBMm774J4YJ9zcb9BArhWAqj6x1rDcsQJY29SBn9Zq/kAiSbdcjRUib8hjnrDywotbMwLL1tiirSodVtGC/Gy9VDLvec/KHc2VaLWNDVyGlsJVrH3WkpdptkVO0WSmIs+IKLjCx7Gvo8NAuLYjDOP0joBO+fjpc3NWywflDAExW/OqPfrf2LKzoEHJ2Guyet8idKjp3GqyEqRz30kegI+L0MoKu6yo/vX9YYN0p1pxbAjx3mJiyP6RxIAwxnO7Siwc9aXz/q/TysziZdAhvGmHzkLZ2NURZyNOlw3DZpa9+nWefi/4U+Y9KrjYfaoipa8cvyTZwQtWoswKPVIcwvVGzgoMhn/yoH/S56D5EK1uIgr+Wf0RiVuWUB8yTww/wuxkDpFJHaxcwVgjdrp0nS9omIG8NDcGRMLOwJePfZVH/J61yXM/duj32k7z95lSTCH93x3FQPKV7y229aGyET2fkAY1+tNnRNBa4IrfH1xxcg6VGUK/My3H0NfLa+ZOeVobwRfXL5XppOXElXgpqbGqhXeQviBYPRQg6Yv9ZkjS9jaUDJS0wS3GuHAVQQMvzpjUbC3fHJMTOsqgO/XBiCJc5SCZ9ZcGLS5vlRf9FXDz0it0vMknv3mcAnlilQwu1yRQVNerZxVP+GppsK8R9F7nOv4/bZW2Bbsw7t0uFdQYwVTNq9N6SAhGB9w1Z7d7VPgjbIk/X5/54vhvFOkYfGsj9ncnnqQNvRHthmOKqkg++6eK1VADa+FhCqX9woq1hY0nmyDNJp0rFP2d1ilY6g6per5iwD93IxyaJqibF2FD9e6SgLYhJZEqwjxnIbUZJqCZSn5ieeM/7G7QMDW2/inIW3qNiGp7STDlmH9rgKHp69Nyx+PgF4wTIib0mMPoQo7mHkBDCnPldgYTAPVMDssb1n4i4IIqRnc5D4wq7/KiDtJpqEBuj/pWcRPQV7UAxLdarSOH2Js4RKMznDTGJ/eDOa9EiAjgtUtgXq8NQsxT1Wp9HJSBS026ZgEllTk6x54nCEdh/D1GMzn57x6NjkkCmvrCfwIfpf+hF+NHCgi3ZQXjhcjnvOu7zm5JxgD",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01FuZxYwkNzqBiU8UughNtHF"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01FuZxYwkNzqBiU8UughNtHF",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSkQcKEAgUGAI4AUIIdGhpbmtpbmcSDG6pqQqwMxLy4fmI3xoMQOOjprOwEuSuKoHtIjDRio1MMMKfsFx7TuPLAsL4LdRKV7ZjvM+fg3MdAZNNxER0fzQAVJM2BalXvNgzOpwqrgZ4DsG8p31SZ6VDeKHq5TT4lPG2dVfG8z5bk70sfJqrC9GaKutxAS3EEm11eIXbqtRL4hw1V+ulPgdQR4qevYkv4/+u5aqAZ81jq5rKCn52kDFwq8GjVzU17yywgIUdc3sGlESfNj+5K9HkkvyDGp3hRb7FIpZL/PAO1eROPkTFkiiFGq+pB50RuP2qyIlUC70txTCDWdrRvLGCUCMcIByPXIW5UYDxzFALR3YTd+ObFDWmOA+yhOdoKmQ1WwOeELr+4UydtDAQbANNqdehW2op7jqN9RBrEuv/SSbMd6mPHTz/qdisJrFAy8WjCG2YrsC79aAJn1AIMggsAss+cX2z1SN3Ml4HUeszcJADU/aYm16ChFElVCeB4fcAEycyhEki47rLu1EDv9WltHIcdvBFPuwZeHJAdymApsrEnqzwKN0f1eVmhvxqtHsLzQ73/bES7bwX4FtsiTa2NxdrG2lLYTLI4D1S9esjOfY4g7y1YQMHoucMprZNCFk6fV4LGOjjqM41vShHw6sa5AphUi2LpQEJVxE5aD9dmaEZUCLe40/30dmxVpOXyMPmdmB2qTv9+FM3GtO/PAl1WtVVnO+1cUj3O2+zSeStCX/8C+Jhwc0nwlzW0LtUeeCqCu3LVG3E4UM9+42wUDACSgLOwf/Re14YcUHflS+7Mzr0T/KYnb8MDBwD3XAXPFaf2XGacL0uBSEMqPIz0fDbQGHJm1ilNw3No6QL+jUR47X5YKZbggdRd7lL28JWMvCnhrS0VUrlZlAOPoOvsNLltlXC9Kv+OtGKfTmITQeRvIVFVb8EVMBstFitxCOItPU/xP0EkP1/OEXylS7EQyfRydFbjC2GE1TPYVcC9PS7zpv94xr2jxh1ZCm9mhC3L3Djulse0y+8hyTOkS1ymQyqTGUG1V8xuzHhNkVM442FH+B7K6fpKZMCqV+g7qBk5rvrHKBS7T37oPwLXgIutBNqLOV3I9AfSwO8WaIbzL1qH6At3q8BXxXpG5EUvDPOatOwzoxh8Mtq5x4BKdphL3Hg1x4C54TxPtUnyUf1iVpFJizpqLPvPGADrQ1gFdE2lZUQCXY2GAE="
+          },
+          {
+            "type": "text",
+            "text": "짧게 답하면 **한국 학생이 많은 건 맞지만, 그렇다고 영어가 안 는다고 단정할 수는 없습니다.** 영어 실력은 아이의 태도, 학년, 가정 환경에 따라 크게 달라집니다.\n\n## 실제 한국 학생 비율\n- 나무위키에는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "한국인의 비율이 28%~30%로 가장 높다"
+          },
+          {
+            "type": "text",
+            "text": "고 나와 있습니다. 다만 커뮤니티가 편집하는 자료라서 정확하거나 최신 수치라고 보기는 어렵습니다.\n- 학교 소개 자료에는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "30개 이상의 국적이 있는 다문화 커뮤니티"
+          },
+          {
+            "type": "text",
+            "text": "라고 되어 있고, "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "학생 수는 450명, 일반적인 학급 규모는 18명, 수업은 영어로"
+          },
+          {
+            "type": "text",
+            "text": " 진행됩니다.\n- 예전 현지 매체에는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "학생의 약 50%가 영어 원어민 배경"
+          },
+          {
+            "type": "text",
+            "text": "이라는 내용도 있었습니다. 하지만 오래된 자료로 보이고, 코로나 이후 중국에서 외국인 주재원 가정이 많이 줄었기 때문에 지금은 비율이 다를 가능성이 큽니다.\n\n정리하면 한 반 18명 중 한국 학생이 5명 안팎일 수 있다는 뜻입니다. 수업은 모두 영어로 하지만, 쉬는 시간이나 방과 후에 한국 아이들끼리만 어울릴 가능성은 있습니다.\n\n## 영어 실력에 영향을 주는 요소\n**불리할 수 있는 경우**\n- 영어가 아직 약한 상태로 들어가면 편한 한국 친구들끼리만 어울리기 쉽습니다.\n- 학년이 높을수록 이미 만들어진 한국인 친구 그룹에 들어가기 쉽습니다.\n- 집에서 한국어만 쓰고 한국 콘텐츠만 접하면 영어를 쓰는 시간이 학교 수업 시간으로 한정됩니다.\n\n**괜찮을 수 있는 경우**\n- 수업, 과제, 발표, 시험이 모두 영어로 진행되기 때문에 학업 영어(읽기·쓰기)는 꾸준히 늡니다.\n- 어릴 때(유아~초등 저학년) 입학하면 대체로 빨리 적응합니다.\n- 반 배정, 프로젝트 조 편성 등에서 학교가 국적을 섞으려고 신경 쓰는 편입니다.\n- 영어 지원 수업(EAL)이 있지만, 한 국내 유학원 자료에 따르면 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "EAL(영어 보충수업): 14,300위안 (약 250만원)"
+          },
+          {
+            "type": "text",
+            "text": "으로 별도 비용이 듭니다.\n\n## 실질적인 팁\n1. **입학 상담 때 직접 물어보세요.** 해당 학년의 국적 구성, 반별 한국 학생 수, 쉬는 시간에 영어 사용을 권장하는지 등을 확인하면 좋습니다.\n2. **현재 재학 중인 한국 학부모 이야기를 들어보세요.** 학년마다 분위기가 꽤 다릅니다.\n3. **방과 후 활동(스포츠, 음악, CCA)에 적극적으로 참여시키면** 다른 국적 친구를 사귀는 데 효과가 큽니다.\n4. **집에서도 영어책 읽기와 영어 콘텐츠를 늘리면** 학교 밖 영어 노출을 보완할 수 있습니다.\n\n결론적으로, 한국 학생 비율이 영어권 국가의 학교보다 높은 건 사실입니다. 그래도 영어로 공부하는 환경이라 학업 영어는 충분히 늘 수 있습니다. 회화 실력과 원어민 같은 자연스러움은 아이가 얼마나 다양한 친구들과 어울리느냐에 크게 달려 있습니다. 국적 구성은 해마다 바뀌니, 지원하려는 학년의 최신 정보는 학교에 직접 확인해 보세요."
+          }
+        ],
+        "container": {
+          "id": "container_01XSUZYMX7zQbd8y8xEbgsyb",
+          "expires_at": "2026-11-19T13:17:16.098775Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 22376,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1963,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 3,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5929,
+              "output_tokens": 232,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6516,
+              "output_tokens": 122,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 9931,
+              "output_tokens": 1609,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 167
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
