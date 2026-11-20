@@ -28,6 +28,19 @@ describe("parseNewsSource with an HTML news index", () => {
     ]);
   });
 
+  it("reads an English month name in the URL date (British School of Nanjing)", () => {
+    const html = `
+      <a href="https://www.nordangliaeducation.com/bsn-nanjing/news/2026/november/9/first-offers-new-beginnings">First offers, new beginnings</a>
+      <a href="https://www.nordangliaeducation.com/bsn-nanjing/news/2025/August/a-levels-results/a-level-results">A Level results</a>
+      <a href="/bsn-nanjing/news-search?type=news&amp;pageNum=2">2</a>
+      <a href="https://www.nordangliaeducation.com/bsn-nanjing/news">News</a>`;
+    const items = parseNewsSource(html, "https://www.nordangliaeducation.com/bsn-nanjing/news-search?pageNum=1&type=news");
+    expect(items.map((i) => [i.url, i.published_at])).toEqual([
+      ["https://www.nordangliaeducation.com/bsn-nanjing/news/2026/november/9/first-offers-new-beginnings", "2026-11-09T00:00:00.000Z"],
+      ["https://www.nordangliaeducation.com/bsn-nanjing/news/2025/August/a-levels-results/a-level-results", "2025-08-01T00:00:00.000Z"],
+    ]);
+  });
+
   it("treats a root news index as covering the whole site", () => {
     const items = parseNewsSource('<a href="/news/2026/11/10/yes-ai-no-ai">Yes AI, no AI: how students learn</a>', "https://www.daischina.org/news");
     expect(items.map((i) => i.url)).toEqual(["https://www.daischina.org/news/2026/11/10/yes-ai-no-ai"]);

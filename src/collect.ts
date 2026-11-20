@@ -30,7 +30,11 @@ export function parseFeed(xml: string): FeedItem[] {
 }
 
 // For schools without RSS: article links on a news index page, limited to the same host and
-// the index's own path section, with the date taken from the /news/YYYY/M/D/ URL pattern.
+// the index's own path section, with the date taken from the /news/YYYY/M/D/ URL pattern. The month may
+// be a number or an English month name (/news/2026/november/9/, British School of Nanjing).
+const URL_MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+const NEWS_DATE_PATH = new RegExp(`/news/(\\d{4})/(\\d{1,2}|${URL_MONTHS.join("|")})(?:/(\\d{1,2}))?/`, "i");
+
 export function parseNewsIndex(html: string, indexUrl: string): FeedItem[] {
   const base = new URL(indexUrl);
   const section = base.pathname.replace(/[^/]*$/, "");
@@ -42,7 +46,7 @@ export function parseNewsIndex(html: string, indexUrl: string): FeedItem[] {
     } catch {
       continue;
     }
-    const date = url.pathname.match(/\/news\/(\d{4})\/(\d{1,2})(?:\/(\d{1,2}))?\//);
+    const date = url.pathname.match(NEWS_DATE_PATH);
     if (url.host !== base.host || !url.pathname.startsWith(section) || !date) continue;
     url.hash = "";
     url.search = "";
@@ -51,7 +55,8 @@ export function parseNewsIndex(html: string, indexUrl: string): FeedItem[] {
     const prev = seen.get(href);
     if (prev && prev.title.length >= text.length) continue;
     const slugTitle = url.pathname.split("/").filter(Boolean).pop()!.replace(/-/g, " ");
-    const [, y, mo, d] = date;
+    const [, y, moRaw, d] = date;
+    const mo = /^\d+$/.test(moRaw!) ? Number(moRaw) : URL_MONTHS.indexOf(moRaw!.toLowerCase()) + 1;
     seen.set(href, {
       url: href,
       title: text.length >= 8 ? text : slugTitle,

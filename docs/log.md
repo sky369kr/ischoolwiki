@@ -131,3 +131,9 @@
 - 결과: B-02(R-02) 완료. docs/ops/releases.md v1.0.2
 ### VERDICT
 - 결과: PASS / 단계/대상: 안정화 / R-02 출시 후 확인 / 근거: verify-live.sh 19항목 PASS / 다음 담당: ops(매일 점검에서 보류 건수·출처 관찰)
+
+## 2026-11-20 · developer(메인) · 안정화 / BSN Nanjing 소식 수집 0건 원인 수정
+- 한 일: 사람이 맥에서 소식 색인을 받아 봄(200, 108 KB). 기사 링크는 /bsn-nanjing/news/2026/november/9/... 처럼 월이 영어 이름이라, 숫자 월만 받던 parseNewsIndex가 하나도 고르지 못함(BSB Shunyi는 /news/2026/7/26/). collect.ts: 월 자리에 숫자 또는 영어 월 이름(대소문자 무관)을 받음. 날짜 없는 경로(/news/2025/august/a-levels-results/...)는 그 달 1일. 단위 테스트 1개
+- 결과: check.sh 전체 PASS. BSN 파일럿은 사람이 맥에서 실행
+### VERDICT
+- 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / BSN Nanjing 소식 수집 / 근거: 링크 형식 확인, 단위 테스트, check.sh PASS, 파일럿 미실행 / 다음 담당: 사람(맥에서 ONLY=bsn-nanjing 파일럿)
