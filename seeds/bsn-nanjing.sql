@@ -5,8 +5,10 @@
 -- Notes on the fee table:
 --   - the school's annual totals differ from the sum of its three term fees by 1 RMB in seven of the eight rows
 --     (rounding); both figures are recorded exactly as published, and nothing is computed from them;
---   - bus Tier 3 is left out: its published annual fee (18,116) does not match its term fees (7,274 + 5,435 + 5,435
---     = 18,144), so one of the figures is wrong and we cannot tell which;
+--   - bus Tier 3: its published annual fee (18,116) does not match its term fees (7,274 + 5,435 + 5,435 = 18,144);
+--     all four figures are recorded as published (leaving the tier out made the writer say the school lists two
+--     tiers, which is false). Ask the school which figure is right before relying on it;
+--   - the unit says "Total Fees column", the school's own heading: the totals are not the sum of the term fees;
 --   - the age column gives the age on 31 August of the first year group in each row.
 -- Left out on purpose: "the longest running British school in the region", "award-winning", "the world's best
 --   teachers" and similar claims; exam results compared with the UK average (no figures); one student's individual
@@ -36,42 +38,42 @@ INSERT OR IGNORE INTO entities (school_slug, name, source_url) VALUES
 
 -- source_kind 'manual': entered by the operator, not by the news pipeline or the myispp import.
 INSERT OR IGNORE INTO facts (school_slug, key, value, unit, as_of, source_url, source_kind) VALUES
-  ('bsn-nanjing', 'annual_tuition_pre_nursery_half_day', '121,919', 'RMB per year, total of the three terms, 2026-27, Pre-Nursery (half day), age 2 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_pre_nursery_half_day', '121,919', 'RMB per year, the school''s Total Fees column, 2026-27, Pre-Nursery (half day), age 2 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_pre_nursery_half_day', '118,262', 'RMB per year when paid as one annual payment, 2026-27, Pre-Nursery (half day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_pre_nursery_half_day', '48,768', 'RMB, Term 1, 2026-27, Pre-Nursery (half day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_pre_nursery_half_day', '36,576', 'RMB, Term 2, 2026-27, Pre-Nursery (half day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_pre_nursery_half_day', '36,576', 'RMB, Term 3, 2026-27, Pre-Nursery (half day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_pre_nursery_full_day', '221,671', 'RMB per year, total of the three terms, 2026-27, Pre-Nursery (full day), age 2 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_pre_nursery_full_day', '221,671', 'RMB per year, the school''s Total Fees column, 2026-27, Pre-Nursery (full day), age 2 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_pre_nursery_full_day', '215,020', 'RMB per year when paid as one annual payment, 2026-27, Pre-Nursery (full day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_pre_nursery_full_day', '88,668', 'RMB, Term 1, 2026-27, Pre-Nursery (full day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_pre_nursery_full_day', '66,501', 'RMB, Term 2, 2026-27, Pre-Nursery (full day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_pre_nursery_full_day', '66,501', 'RMB, Term 3, 2026-27, Pre-Nursery (full day)', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_nursery', '221,671', 'RMB per year, total of the three terms, 2026-27, Nursery, age 3 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_nursery', '221,671', 'RMB per year, the school''s Total Fees column, 2026-27, Nursery, age 3 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_nursery', '215,020', 'RMB per year when paid as one annual payment, 2026-27, Nursery', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_nursery', '88,668', 'RMB, Term 1, 2026-27, Nursery', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_nursery', '66,501', 'RMB, Term 2, 2026-27, Nursery', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_nursery', '66,501', 'RMB, Term 3, 2026-27, Nursery', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_reception', '221,671', 'RMB per year, total of the three terms, 2026-27, Reception, age 4 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_reception', '221,671', 'RMB per year, the school''s Total Fees column, 2026-27, Reception, age 4 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_reception', '215,020', 'RMB per year when paid as one annual payment, 2026-27, Reception', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_reception', '88,668', 'RMB, Term 1, 2026-27, Reception', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_reception', '66,501', 'RMB, Term 2, 2026-27, Reception', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_reception', '66,501', 'RMB, Term 3, 2026-27, Reception', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_year_1_3', '262,825', 'RMB per year, total of the three terms, 2026-27, Year 1-3, age 5 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_year_1_3', '262,825', 'RMB per year, the school''s Total Fees column, 2026-27, Year 1-3, age 5 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_year_1_3', '254,940', 'RMB per year when paid as one annual payment, 2026-27, Year 1-3', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_year_1_3', '105,130', 'RMB, Term 1, 2026-27, Year 1-3', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_year_1_3', '78,848', 'RMB, Term 2, 2026-27, Year 1-3', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_year_1_3', '78,848', 'RMB, Term 3, 2026-27, Year 1-3', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_year_4_6', '273,338', 'RMB per year, total of the three terms, 2026-27, Year 4-6, age 8 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_year_4_6', '273,338', 'RMB per year, the school''s Total Fees column, 2026-27, Year 4-6, age 8 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_year_4_6', '265,138', 'RMB per year when paid as one annual payment, 2026-27, Year 4-6', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_year_4_6', '109,335', 'RMB, Term 1, 2026-27, Year 4-6', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_year_4_6', '82,001', 'RMB, Term 2, 2026-27, Year 4-6', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_year_4_6', '82,001', 'RMB, Term 3, 2026-27, Year 4-6', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_year_7_10', '279,255', 'RMB per year, total of the three terms, 2026-27, Year 7-10, age 11 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_year_7_10', '279,255', 'RMB per year, the school''s Total Fees column, 2026-27, Year 7-10, age 11 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_year_7_10', '270,878', 'RMB per year when paid as one annual payment, 2026-27, Year 7-10', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_year_7_10', '111,702', 'RMB, Term 1, 2026-27, Year 7-10', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_year_7_10', '83,777', 'RMB, Term 2, 2026-27, Year 7-10', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_3_tuition_year_7_10', '83,777', 'RMB, Term 3, 2026-27, Year 7-10', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'annual_tuition_year_11_13', '286,640', 'RMB per year, total of the three terms, 2026-27, Year 11-13, age 15 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'annual_tuition_year_11_13', '286,640', 'RMB per year, the school''s Total Fees column, 2026-27, Year 11-13, age 15 on 31 August', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'annual_tuition_paid_annually_year_11_13', '278,040', 'RMB per year when paid as one annual payment, 2026-27, Year 11-13', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_1_tuition_year_11_13', '114,656', 'RMB, Term 1, 2026-27, Year 11-13', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'term_2_tuition_year_11_13', '85,992', 'RMB, Term 2, 2026-27, Year 11-13', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
@@ -83,7 +85,7 @@ INSERT OR IGNORE INTO facts (school_slug, key, value, unit, as_of, source_url, s
   ('bsn-nanjing', 'one_time_fee_eal', '18,000', 'RMB, one-time, non-refundable English as an Additional Language (EAL) charge, covering support for students who enrol without the appropriate grade-level English proficiency, for as long as needed', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'school_lunch', 'School lunches are complimentary for all full day enrolled students', NULL, '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'uniform_price_range', 'RMB 40 to RMB 400', 'per school uniform item at the school shop; a separate P.E. kit is also required', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
-  ('bsn-nanjing', 'bus_service', 'Arranged on request and at the school''s discretion; fees are based on the distance travelled from school', NULL, '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'bus_service', 'Arranged on request and at the school''s discretion; fees are based on the distance travelled from school; the school lists three bus tiers (Tier 1, Tier 2, Tier 3)', NULL, '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'bus_fee_tier_1_annual', '13,255', 'RMB per year, bus Tier 1, 2026-27', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'bus_fee_tier_1_term_1', '5,302', 'RMB, Term 1, bus Tier 1, 2026-27', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'bus_fee_tier_1_term_2', '3,977', 'RMB, Term 2, bus Tier 1, 2026-27', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
@@ -92,6 +94,10 @@ INSERT OR IGNORE INTO facts (school_slug, key, value, unit, as_of, source_url, s
   ('bsn-nanjing', 'bus_fee_tier_2_term_1', '6,274', 'RMB, Term 1, bus Tier 2, 2026-27', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'bus_fee_tier_2_term_2', '4,706', 'RMB, Term 2, bus Tier 2, 2026-27', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'bus_fee_tier_2_term_3', '4,706', 'RMB, Term 3, bus Tier 2, 2026-27', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'bus_fee_tier_3_annual', '18,116', 'RMB, per year, bus Tier 3, 2026-27, as published', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'bus_fee_tier_3_term_1', '7,274', 'RMB, Term 1, bus Tier 3, 2026-27, as published', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'bus_fee_tier_3_term_2', '5,435', 'RMB, Term 2, bus Tier 3, 2026-27, as published', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
+  ('bsn-nanjing', 'bus_fee_tier_3_term_3', '5,435', 'RMB, Term 3, bus Tier 3, 2026-27, as published', '2026-27', 'https://www.nordangliaeducation.com/bsn-nanjing/admissions/tuition-fees', 'manual'),
   ('bsn-nanjing', 'affiliation', 'Part of the Nord Anglia Education family', NULL, NULL, 'https://www.nordangliaeducation.com/bsn-nanjing/about-us', 'manual'),
   ('bsn-nanjing', 'founded', '2007', 'year the school was founded', NULL, 'https://www.nordangliaeducation.com/bsn-nanjing/about-us', 'manual'),
   ('bsn-nanjing', 'students', 'more than 450', 'students', NULL, 'https://www.nordangliaeducation.com/bsn-nanjing/about-us', 'manual'),
