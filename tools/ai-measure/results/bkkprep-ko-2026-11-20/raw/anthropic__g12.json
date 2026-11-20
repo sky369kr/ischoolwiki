@@ -1,0 +1,431 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g12",
+    "type": "generic",
+    "text": "방콕에서 아이 영어 실력을 가장 빨리 늘릴 수 있는 국제학교는 어디인가요?"
+  },
+  "started": "2026-11-20T16:55:56.783Z",
+  "finished": "2026-11-20T16:56:24.976Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕에서 아이 영어 실력을 가장 빨리 늘릴 수 있는 국제학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXoJb4GhAwdDD4hq9ts",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS8gYKEAgUGAI4AUIIdGhpbmtpbmcSDL4efY1HpudJP16rbRoMIftLnMSL/nZ3gbGNIjCEBQURxeSz3TwgydtdCL5Viof4cZE76PP0ivBJKtpd3dCxiQPR7Ajas1igCTfGQToqjwZSz6HBhWyZ1cxVo7vYKil6sTpCHN4VovURWrtuXvBYIpoAqjSE3pYq8cc12AZL4PpOGoIXqrfrfmIDJOmhm1wNYb7/RUzSS7312bo3xnmEAEUOeFY68+o44BWLcOnjMw94kmoG6APYahqypdp8G5xdUdWx6stFzfb3CunxXP/UpemH+aWfT3JhBh+ePL4E5Ua1IrR28NenL1oQHE50dTee5CBJ/PtALA/baulWs1bpHn00Db61BKfxuvkgK24lhVyAo/TX5j7AQZOks6oOSEg+3iFRq4WGj/Q90mBQJnUiW+HSZXCL/7YSBkAuVwfetHDc2W5ywprMDlekXrtLxOjvNTrf3MSlU+Z13LrdAjjsDgfKRO6Zuh1OEazfufIlbUKG1L3FdJuGdxYLxKUD2fPgS+IXPq23mu/BhSdHlKqTDJhSVxHwe5f2CXV/z29ia2lQ/RNE4QsleM6VbuaRkFEpVTCkTzO9GGu0Zg5VJN+xYp1y2a7tKFBEAa37xqEo65MdoKLqa/7xDCvkKSoLAP8F5BCwcNW8kpXWIE8XWZCDlytbXu5N87kIx3h8sKYkcoXLNExbsOLj7+KQc6qyM9GADxwpB+xIP7d1VrjILEIOCDeritJ8+1MRXdI6gmpdvrjq4kjur2ZpxjXWZKRcT+7yfCVBXBwapyKNR2mYlBTC8crGa6bv3pwBSFpt0Lo+nJBBfAx3MTFSjMSQR8QX0c4lBY5qqOSX7l70Tvtu/s8s4Gz6+EXDmSmHDJYZlnLJZjD5vIFO0HVzSTDLp5W12n/t11VKAv4+z1Vg1KPa56ukqTb0sE3QldAb8MT2lj3JlLg9nL8MSULLKlZBwCpdz9K6pVDTUyEpnGbyQ3e+6Cbg2ebSqsZqD1bNLTaB/TCRx8dwk8Ts/ZIaEWmDaST7tdFv3StCj1iMzn0lRy5l0npn9zqHvGcugZpmKVebDU2HeL+41i0hl9aBr9mpvc/8UmY38sQNJbwNV2Fbo6WZBl1Hkr9BkLMqBwDa8T71xHQECKLpSrMJJ6IEK8Z9Fp0DIwEYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01F5QApcVjVcshP5jADXaBtW",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"Bangkok international school EAL support English language learners best\"})\nfor x in r[:6]:\n    print(x['title'], x['url']); print(x['content'][:600]); print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01X7o5erh19ATffxgNeUYgoP",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school EAL support English language learners best"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01F5QApcVjVcshP5jADXaBtW"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01X7o5erh19ATffxgNeUYgoP",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "English Language Support - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/curriculum-academics-learning/student-services/english-as-an-additional-language-eal",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "English Language Support - NIST INTERNATIONAL SCHOOL in Bangkok, Thailand",
+                "url": "https://www.nist.ac.th/learning/english-language-support",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "EAL - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/curriculum-academics-learning/student-services/eal",
+                "encrypted_content": "[omitted]",
+                "page_age": "665 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok (2026 Guide)",
+                "url": "https://blog.doris.school/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "8 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Languages at KIS International School Bangkok",
+                "url": "https://www.kis.ac.th/learn/languages-at-kis",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British International School in Bangkok",
+                "url": "https://www.bangkokprep.ac.th/school-life/multilingualism",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Student Support Services at ISB",
+                "url": "https://www.isb.ac.th/curriculum-academics-learning/student-services",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "ISB (International School Bangkok) Review: A Premier American School's Unparalleled Facilities and Tuition",
+                "url": "https://www.eltschool.jp/en/column/isb-bangkok-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Elementary School Bangkok: 2026-27 Fees Guide",
+                "url": "https://nijinglobal.academy/en/international-elementary-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Primary Schools Bangkok Expat Families 2026 Guide",
+                "url": "https://www.globalinvestments.net/expat/primary-schools-bangkok-expats",
+                "encrypted_content": "[omitted]",
+                "page_age": "160 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01F5QApcVjVcshP5jADXaBtW"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01F5QApcVjVcshP5jADXaBtW",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDPCKOp3bbmARz4Y38RoMBp+/XvJPxGdoOKMGIjDLNz4iPG5V0rG/YbK2pjeAuRxxnUSS3YfSlXvYzkiWOPIFeBdRWDjnQcb0kmjlN6EqEhujgaUY+rX2DrSZ39pg/BtmTxgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01F5QApcVjVcshP5jADXaBtW/cell.py\", line 11, in <module>\n    print(x['title'], x['url']); print(x['content'][:600]); print('--')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DVUoA2NQeMR9rf6ch5gmja",
+            "name": "code_execution",
+            "input": {
+              "code": "print(str(r)[:1500])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01DVUoA2NQeMR9rf6ch5gmja",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "[{\"type\": \"web_search_result\", \"title\": \"English Language Support - International School Bangkok, Premier International School in Thailand since 1951\", \"url\": \"https://www.isb.ac.th/curriculum-academics-learning/student-services/english-as-an-additional-language-eal\", \"content\": \"EAL learners are supported in a variety of ways. EAL teachers support EAL students in their mainstream class by co-teaching, working with small groups or individual students. Our EAL staff also provide small group classes for some EAL students.\\n\\nStrengthen language skills with English as an Additional Language (EAL) program at International School Bangkok.\\n\\n# EAL-English as an Additional Language\\nThe English as an Additional Language Program has been designed to meet the needs of students who speak a language other than English.\\n\\nTherefore, we wish our students to acquire English as an additional language rather than replacing their native language. Further, we believe that native language proficiency contributes to additional language acquisition.\\n\\nThrough the Sheltered Immersion Model, students learn language as they interact meaningfully with others in the language-rich environment of their mainstream class and as they study intellectually challenging content. EAL learners are supported in a variety of ways. EAL teachers support EAL students in their mainstream class by co-teaching, working with small groups or individual students. Our EAL staff also provide small group classes for some E\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSwgUKEAgUGAI4AUIIdGhpbmtpbmcSDIWaa1v2uHAxJ6U6rRoM83nWlNlhghA6QSr2IjDOTj1h7E/zwDI+uGVzjkBe//grPzEhwPo0WKe4Wrp2tWZKKLIKySkfZGB17COSkh8q3wQCkMrqqQ39DROP2TpTKBVz3fcKI+BlHjPP6eXS4U2iDb/16vZ9I9X8HkLynfAudd1g68DGIQHpn+S1b4dVXr0qjxKKAa/1Lo5EPEST4n4c61Ap6Brwrh39loMDrqHTZnaZbUVtdXe6asO7Fa/9ZkAUlHST/nVD3LigmO4xklJHdMrFQpm6HqI7U1gV44+SFNLMQN9qcCFuQAlHWnhlg++BX9LUIg0P0MLqaDq4XKDq3b+IwIvnLxghOSbg7vWW57NGM4OUMGT3A0ePfTaKFcliBK9K6v3pk88Gqfg1EqlEAAfncbg3PKyl9v0fUEynE/Zl319TdB4/G0PrZNILUwqZqebZXAwBOlKKUc1fUXmBRV/n45uxEA+Dzo01Dxpes+w0fYf2JEx/daup34+sirLBaOtjnKF0C9xaZZOz+0C9Nmorzd2jRL2mcyxRPTRQfv8tXNaqbaZ6xe9LV7A9f91/TuAYeeDzLSCCMMSHnMAktjeRrdQy0r+MofEMPjBYpYPys6z7A3uNbfpHCnIUDWLikMKxSGBw/AVqup92pNRY08Z8M5DxETBBqfwC2F/cLixoSVfv/KnFWC18+FA1qKVZnywKouzF/xBm5dZvAepDOtKiWmTzx3UGlMCjv2SrsDnYZ1ZoTxQk03DvQvGhyZV8CtreAQ7gPOoomn4ha7r6oF7bW0MVduW3Fq/dPKmTFYStA5HVw/zRD6VJ43L/gOZP3Os+mCTXxC/S1VKQ7F1Et0VROs0IYBdIM2TrQ65i+JpyY7GWnreEQ/eA6MMulJwMc0p/+mdFqBGiySYPS2qZGAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01G34zyzG7cNpgWFNrX5dE5M",
+            "name": "code_execution",
+            "input": {
+              "code": "r=json.loads(r) if isinstance(r,str) else r\nfor x in r[:6]:\n    print(x['title'], x['url']); print(x['content'][:500]); print('--')\nr2 = json.loads(await web_search({\"query\": \"Bangkok international school native English speaker ratio Korean students\"}))\nfor x in r2[:5]:\n    print(x['title'], x['url']); print(x['content'][:500]); print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01A5MijK9uiU8wQGpJPEizpf",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school native English speaker ratio Korean students"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01G34zyzG7cNpgWFNrX5dE5M"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01A5MijK9uiU8wQGpJPEizpf",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St_Andrews_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Koreans in Thailand",
+                "url": "https://en.wikipedia.org/wiki/Koreans_in_Thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Complete 2026 Guide to Bangkok International Schools: How to Choose Without Regret and Top-Tier School Recommendations",
+                "url": "https://www.eltschool.jp/en/column/bangkok-international-school-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en-US",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Daewon Foreign Language High School",
+                "url": "https://en.wikipedia.org/wiki/Daewon_Foreign_Language_High_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Grace International School: Details and Information",
+                "url": "https://www.international-schools-database.com/in/bangkok/bangkok-grace-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "REGENT’S INTERNATIONAL SCHOOL BANGKOK: DETAILS AND FEES",
+                "url": "https://www.international-schools-database.com/in/bangkok/regent-s-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01G34zyzG7cNpgWFNrX5dE5M"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01G34zyzG7cNpgWFNrX5dE5M",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSlgoKEAgUGAI4AUIIdGhpbmtpbmcSDGbJSPWa4wnpWUepohoMm0DhJ/n2s1IwHZB2IjDCe+W010OwjJIJoS2vWk1vagWe9iq9HQEtmb1MW1Cm9vL56qul4tlr2R58QkBpFskqswmqHhiKOzJBg5aIAiupAOdRXgSZ/nS0pry8me0zJknm93Djt+ehcOz3NInGautPd3C1sTa76Gu8wjU5tuspgW6nsisM+S1BnsMyf1c/lvYYf4pre4wAvtvPVVn/s388owvqxtR20igXu+3jJrGNIMQqusUqLanuBwvKpt/mQ2ZdTst61Of80EY6JM8icHcNWR4KeOrB/Nq4gQbdV70BoMqVVGumhkPm8M8/s4ynJU525AjM4PEJnMuJrIqquqyVcTNa+3AK2lCwBokQQZcAIUWQEquoL0MuO1Lboikr/jP7dRw1B5UOJLLuf3mwwUjCte2RnMWtyua5+JRg5AwWiFiUc07URz6GLZyvIg55ZTYRB9fsM2hGgJNF927klbfkN04ZH60/tzXME3IZ1xz8E7fimdwP+EuCWDxuHlTqvxK2O9HokCopPsUYxcXjBKetDbSW1NeFrfVYhQLMIACaSBxl+GaeJZ1IvRKrLUDiLCssa9Sib9clTA1ZwQDXfggz84aIh8h7ANutLmZ5AjwtkrlnWw6jhY1IuqxVVI1TqRwZhBzrMvgMF+FEz3RcQIXzvDi71LZNJSUnXKBqzbO812ZV/At1A9rJXzmpTVeK3wmOMi4ZtwQTn2NSg5weLUSN7zo6/ZzJVWSgk/fVbKUKcLtG7/KC0lpe+nS+NLevyC1PmyNPe22nh0gH/qkEIT7ytgy8oRt+fz8c0YqrHuud1uWpQPVUr2RuCGPa1MUlNrNsYGwA6SDxrXAM0kA7LZeRElsDVwuAZpyszc09lZd10cUeHQPXph8E5Y19fuw4BmwdMPbdxMuU7kMd5PTGaAyi4g1xNCq2jM/Z9TbkbKVsuPqiHQQzWQ4UzrWD1LqeW3SPI1ZW+Y8HafLmu7clBxXWgN2eItJwlmV7iM4tMSz17dgWuDRsl2TaBrMs3OG+JNLxV8jYmmK9yIqNNDeiMR9mY+leR3pQniClFx9VBXsfnhfH0Zuap34kuSjz87ya3wZpqUF1KvxXZ2i9yJ6c3cUL5MP9va6wwUUVQMrdbH4scWJt1qhcK++oDgfy20rySH1K6mfRxcZ7VIMTcihkc6INHi+JqygjCSwRY0QKCMjoKZelMtJMfGXRKUSYQcE0gF5HcR+WTL2ea+mAK4tuQFzwAqCklaeyllt1D9Qo2d1crlRqG0LgU/mMhNs3x5wvP/ns0ewPBnP8dcZ8PliXeXBJIeen0UWmptBHMdAbTfeTHCGV5egvcHpSU1wkv9+uV9gq6VbucNqQa6a9Bmnt/zLuqbFoS9SjC2WNycRQY4lDMafYMCCZcqDxkrlIh+7GGocnxNCCbnK6Eytl9oCDE2xrSQpfLDp/7ovKNgJnFnBVCGKMphxHnqXBM7zDiJCU10HD2s5JYltWIZe8hfhfXjFvyQYV1G+tJ+BdetyCOmDg4urdsK7csapgEuo1I8wD4SCEfTHNe+k9VgrO/thpyY0c/eoLxk1WxT/MfbJFI6yZxPyqtBWqlsiadqYALcBP5bE19+k9jQAY0lhdihr18krZek+i6WVc+AINCy9jZLXdWMkN1lHl1Qc7AgueXNOD90FuuAGR3E8vlEsbg6nMsdigd9BPlV0YAQ=="
+          },
+          {
+            "type": "text",
+            "text": "방콕에서 영어 실력을 늘리는 데 무조건 가장 좋은 학교 하나를 꼽기는 어렵습니다. 학교 이름보다는 아이 나이, 현재 영어 수준, 그리고 아래 조건들이 결과에 더 큰 영향을 줍니다. 그래도 많이 거론되는 학교와 고르는 기준을 정리해 드릴게요.\n\n## 영어를 빨리 늘리려면 확인할 조건\n1. **학생 국적 구성:** 한국 학생이나 같은 언어를 쓰는 학생이 많으면 쉬는 시간에 모국어를 쓰게 되어 영어가 느리게 늘 수 있습니다. 여러 나라 학생이 섞인 학교가 유리합니다.\n2. **EAL(영어 지원) 방식:** EAL은 영어가 모국어가 아닌 학생을 위한 영어 지원 프로그램입니다. 따로 떼어 가르치기만 하는지, 일반 수업 안에서 함께 지원하는지를 확인하세요.\n3. **입학 나이:** 초등 저학년 이하면 몰입 효과가 가장 큽니다. 고학년 이상은 명문교일수록 입학할 때 일정 수준의 영어를 요구하는 경우가 많습니다.\n\n## 자주 거론되는 학교\n- **ISB (International School Bangkok, 미국식):** 방콕에서 가장 오래된 국제학교 중 하나입니다. 학생들이 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "일반 학급의 언어 환경 속에서 다른 학생들과 의미 있게 교류하면서 언어를 배우는 '보호 몰입(Sheltered Immersion) 모델'"
+          },
+          {
+            "type": "text",
+            "text": "을 씁니다. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "EAL 교사가 일반 수업에 함께 들어가 가르치거나 소그룹·개별로 지원합니다."
+          },
+          {
+            "type": "text",
+            "text": " 다만 학교가 니차다 지역에 있어 시내에서 멉니다.\n- **NIST International School (IB 과정):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "초등은 EAL, 중등은 영어 습득(ELA) 과정을 운영합니다."
+          },
+          {
+            "type": "text",
+            "text": " 학생 국적이 다양한 편이고 스쿰빗 시내에 있습니다.\n- **KIS International School (IB 과정):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "아이 필요에 따라 EAL을 지원하고, 6학년 이후 입학생은 영어 수준별 EAL 과정에 들어갑니다."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Bangkok Prep (영국식):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "영어를 처음 배우는 학생을 위한 EAL 지원이 있습니다."
+          },
+          {
+            "type": "text",
+            "text": " 유치원 단계부터 영어 몰입 교육을 강조합니다.\n- **St Andrews Bangkok (영국식):** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "태국 학생과 외국 학생 비율이 50:50"
+          },
+          {
+            "type": "text",
+            "text": "입니다. 영어 환경 측면에서는 이 비율을 고려하는 것이 좋습니다.\n- 이 밖에 Bangkok Patana, Harrow, Shrewsbury, Dulwich 같은 영국식 명문교도 EAL을 운영합니다. 다만 대기 순번이 길거나 영어 입학 기준이 있을 수 있습니다.\n\n## 추천하는 결정 방법\n- 학교 투어 때 꼭 물어보세요. \"한국 학생 비율은 얼마인가요?\", \"EAL 학생을 반마다 몇 명까지 받나요?\", \"EAL을 졸업하는 데 보통 얼마나 걸리나요?\"\n- 쉬는 시간에 아이들이 실제로 어떤 언어를 쓰는지 직접 보세요.\n- 학교만으로 부족하면 방과후 영어 활동(스포츠, 클럽 등)을 함께 하는 것이 효과가 큽니다.\n\n아이 나이, 현재 영어 수준, 예산, 거주 예정 지역을 알려주시면 더 좁혀서 추천해 드릴게요."
+          }
+        ],
+        "container": {
+          "id": "container_01LabW744BNWdQsUFMmikfQA",
+          "expires_at": "2026-11-20T17:56:08.526708Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 29131,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2187,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 2,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5927,
+              "output_tokens": 212,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6504,
+              "output_tokens": 58,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7022,
+              "output_tokens": 205,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 9678,
+              "output_tokens": 1712,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 361
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

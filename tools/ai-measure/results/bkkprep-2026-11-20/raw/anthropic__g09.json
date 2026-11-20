@@ -1,0 +1,977 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g09",
+    "type": "generic",
+    "text": "Which international schools in Bangkok have a strong, caring community for new expat families?"
+  },
+  "started": "2026-11-20T16:53:30.573Z",
+  "finished": "2026-11-20T16:54:09.023Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Which international schools in Bangkok have a strong, caring community for new expat families?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXcXd5KgAJTKMFX8Qgn",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS7QUKEAgUGAI4AUIIdGhpbmtpbmcSDBhjVhkhU5KUENE5RBoMa5zrqhoMmnJ7WJcjIjDHZOkBYlWAXefzlBHJEm3ZfBbQKpVGUAYRKlDz6FVbMkdX2eqTKVJw0Cn+P0krtiYqigWszn2fnMCwCq8COp/1XRw3V3h5Qyr8IiU1Y5cYI6B0ID3dDcvw/cKthLgyp+BifcDSxsxuma9uYYnb3NLSHXTFrTEYfzNulsX7BVdKXtcQRUcIf7QZuCI3VuzQxr4Pn3n7F3OA2rDLrXSktraGOmCvj7ldnIrAXNib9C2YW7QW+FJKfzBIqp9a52Lh0v3g1gfOyyX/z0ee/uQGQpDIuVIns61hoFPMx3UONFT7xwpCGLShQy2mfgn/2k7A7nl7aq2nmt83mZwcrj5ixuB8z66qT1XqmqpjzMTDtRQ7prlyZkYiC8p2slcVdDmksthTJWDTy0+xl2XtHH1hWj+KslvN8g6INcyItL88zrJzCHA+DXia3E4NDIozqljb3pOXDgWJ9zECAi66nr4S9qxy45SiYKlSBrz/8rHPM0m+A7bOF8mAnGh8AXUXZLKIe9vfPeQWIRSrq8Fm3UPKYlaxlJ5LdlruXU0BSFJhKZj5jhZGLFbIhBEUVq8Vo3MPGOizo3sJ1+IXErY2QoVrii/8L+oOAaCBPasyCFjk7TSRVhbyCVFVMKoE4p/yqeYVtk8wlHPtbJdpcWifQJzCD1bT0EMxBaOadzkXpifvOQ9+qEgFVjDMrYAyEEFJ+amx5m/BwQSbHC0/8/pKEohaxsKE5ZuwhZwhFcroxU3znn3V5XGIod3OIOozDZIkppJPH5emS1fsrFnVGOTxlJGRSHdKAgmSxNUDyog3r+UqEl/U/ZVEQlekYx/2EFPDtDjjQaT5tVXLUrZIzVRCwRAaocka8mvp6FLWHtVGvu1lTCOuBXBdvdquPtbbehshj4LN38v19lbpde25WiW69BKqu/V7Gp4aXkewJrOAU/sxWhgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_018dDp4CqPCN5z2bjKBvMWPA",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"Bangkok international school community new expat families welcome\",\"best international schools Bangkok parent community pastoral care\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:6]:\n        print(x['title'],x['url'],x['content'][:600].replace('\\n',' '),'\\n')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01BcfFCw1Qfkuehrr5MhXuWw",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school community new expat families welcome"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_018dDp4CqPCN5z2bjKBvMWPA"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01BcfFCw1Qfkuehrr5MhXuWw",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "How to Build Your Expat Community in Bangkok: A Practical Guide for New Families - NIST INTERNATIONAL SCHOOL in Bangkok, Thailand",
+                "url": "https://www.nist.ac.th/blog/how-to-build-your-expat-community-in-bangkok-a-practical-guide-for-new-families",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://isbangkok.openapply.com/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 Best International Schools in Bangkok 2026",
+                "url": "https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best international schools in Bangkok",
+                "url": "https://www.expatarrivals.com/asia-pacific/thailand/bangkok/international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: The 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-guide-expat-families-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Choosing the Right International School in Bangkok",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/choosing-international-school-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "79 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_018dDp4CqPCN5z2bjKBvMWPA"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_018dDp4CqPCN5z2bjKBvMWPA",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDDv1AOrgiGGlLmJn0hoM9+F5+C5v9fI00Wx6IjDddgoBMlRGmRSZlUxBRC0E7g8OI79t5Ww/2+Vv93mJvfrgu0owF348UoYMS3OlFqcqEiDpz0cEhcZnU6aYC9naiyhlHxgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_018dDp4CqPCN5z2bjKBvMWPA/cell.py\", line 13, in <module>\n    print(x['title'],x['url'],x['content'][:600].replace('\\n',' '),'\\n')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_0151BztJ2HLiSKRHmLahAY1v",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    print(type(r), str(r)[:300] if not isinstance(r,list) else '')\n    for x in (r if isinstance(r,list) else []) [:6]:\n        print(x.get('title'),x.get('url'),str(x.get('content'))[:600].replace('\\n',' '),'\\n')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CmXLNYyz33Bd5x1W1ndYio",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school community new expat families welcome"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_0151BztJ2HLiSKRHmLahAY1v"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01CmXLNYyz33Bd5x1W1ndYio",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "How to Build Your Expat Community in Bangkok: A Practical Guide for New Families - NIST INTERNATIONAL SCHOOL in Bangkok, Thailand",
+                "url": "https://www.nist.ac.th/blog/how-to-build-your-expat-community-in-bangkok-a-practical-guide-for-new-families",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://isbangkok.openapply.com/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 Best International Schools in Bangkok 2026",
+                "url": "https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best international schools in Bangkok",
+                "url": "https://www.expatarrivals.com/asia-pacific/thailand/bangkok/international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: The 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-guide-expat-families-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Choosing the Right International School in Bangkok",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/choosing-international-school-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "79 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_0151BztJ2HLiSKRHmLahAY1v"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01NKkWdcLAjG1aBYvBR1Z74j",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Bangkok parent community pastoral care"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_0151BztJ2HLiSKRHmLahAY1v"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01NKkWdcLAjG1aBYvBR1Z74j",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Top 10 Best International Schools in Bangkok 2026",
+                "url": "https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Expat Exchange - Best International Schools and Bilingual Schools in Bangkok",
+                "url": "https://www.expatexchange.com/ctryguide/28719/108/Thailand/Schools-in-Bangkok-Best-International-Schools-and-Bilingual-Schools-in-Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "552 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "King’s College International School Bangkok",
+                "url": "https://www.kingsbangkok.ac.th/en",
+                "encrypted_content": "[omitted]",
+                "page_age": "611 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: The 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-guide-expat-families-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Choosing an International School in Bangkok: 2026 Family Guide",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/choosing-international-school-bangkok-2026-family-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The-2024-International-Schools-Guide-from- ...",
+                "url": "https://www.bkkkids.com/wp-content/uploads/2023/12/The-2024-International-Schools-Guide-from-BKKKids.com-20-DEC-23.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "1085 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok for Expat Families",
+                "url": "https://thairanked.com/en/rankings/best-international-schools-bangkok-expat-families/",
+                "encrypted_content": "[omitted]",
+                "page_age": "226 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok 2026 — Expat Family Guide",
+                "url": "https://thailandknowledge.com/best/best-international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_0151BztJ2HLiSKRHmLahAY1v"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_0151BztJ2HLiSKRHmLahAY1v",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSkAcKEAgUGAI4AUIIdGhpbmtpbmcSDMczDU61jHgZgKpnNBoMQpcvc0hcSZpRKlNhIjDnAujVQF5UqtxPqIyKPY+3QpJFOA9FpvobznCPRXIfQKdPSdvhzcRVFn1weVb8dpUqrQaj3MkmxberDYXoj/L6kE3LoTL9l+rr7z5Y6vPhEj3MRxSX3m57Y/pzxHoBWGIzauNubRCwAEKqpwbXVNIha9NP1KvLu2849nXCQCz7s4oRskptA6VzVxHpWJP6zLOvYJHBF19k7ReyEoA5fg29UcG8DJyuT4geC30PrKJGyG9lTXVIGIuQ+fdAzdN4aV12UaFddq4zFAJBSW8KKjOD5k7MiFEKL/x9PwA7QWK0KDiy3qjUjwJtiNHTQRokmHCXZiY1ZKrGyQA52suQTjEZ7uqtP2b9AZzL51AzijVdQRT05HivhfR35mDJdZqsiaklBUYBop9nzFuOGMr/Kekc2D4t6ebpzjGo+vphFKB91N7SzQ9IdXC3ThIN6kjSujFAxR0gwoeQFZHRt2dgyRMQbhB50/mn2cQ9NUjWMATrP5KNRwnpaVbA0nNP1QD2G/gHKp3ZxFiO12XVVswN5uFEhEm9y349UOc7rW/+P9uqUHfK4O4LTM12h+cN7KkA0BWjcinaOUxtfxLrf2+auK11dsMFHdXOpClIOEcUEv/q1E1su8pxxoBvTUVWkFzXzfcXfVnSZozgbLSUQTUKg6bxqvE/+tsD6yddM4v+72sFmK9lxG7adw4ZXxZIXViWC6PsJCaAlQOUn7S0x+HKuoB2cXQgWUk7iF9yVCS8gBKtJBLqjqgx2//LFGYapSAcsz4cgYAdRr6+PiENs2KoU3Xi0Prh6RDGGv+ARoDCh+0dhtCJ/pombBNqwtVl+eWkrJFJMTLpfGPo36kcmtimbbdRAHJmYuzDosa8CAKVW+jCCywmqyKMSk/Ak2RyX/kJDWvenzOL4ywk5AP+7RAjaOi77P8KmOXdGgxSaxzqhCTIv2DMXOgUhcq+g8z3SfS/xJO2GLwxWAD2RBTONC2QvjyUOsZf2bmXFneuFN6aZYtPVakj7SxetkZgFfkeU7BLTo7U0s1whaqVY+o/WwEOWPKHdcsr2EgcOxa8it4+vXsZb2lE04Iv3tJfbgEbDmljlZ3r1qMl9Zo7zDwlKVZcVIVE1nL0UrSGWUAsfcqUgBcKGd1+N7z73SSTxM9d9+1/lKoYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DSP9YVrKwt1sh368rtzFXk",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in [\"Bangkok Patana School Friends of Patana new families welcome\",\"ISB Bangkok PTA new family welcome buddy\",\"Shrewsbury International School Bangkok community pastoral new families\"]:\n    r=await web_search({\"query\":q})\n    for x in r[:4]:\n        print(x.get('title'),x.get('url'),str(x.get('content'))[:500].replace('\\n',' '),'\\n')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DbM8KrSmr2Q7ouzU2vRZso",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana School Friends of Patana new families welcome"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DSP9YVrKwt1sh368rtzFXk"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01DbM8KrSmr2Q7ouzU2vRZso",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "PTG Welcome New Families - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/ptg-welcome-new-families/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1905 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Supporting New Primary Families on Their Patana Journey - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/new-families-coffee/",
+                "encrypted_content": "[omitted]",
+                "page_age": "163 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "PTG Newcomers BBQ - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/ptg-newcomers-picnic-2/",
+                "encrypted_content": "[omitted]",
+                "page_age": "94 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "New Students Get an Advance Look Around - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/induction-day-25/",
+                "encrypted_content": "[omitted]",
+                "page_age": "459 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Welcome Back for the 2022/23 School Year",
+                "url": "https://www.patana.ac.th/the-patana-blog/back-to-school-2/",
+                "encrypted_content": "[omitted]",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Warm Welcome at the PTG Newcomers Get Together! - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/welcome-new-parents/",
+                "encrypted_content": "[omitted]",
+                "page_age": "665 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Term 2 Starts! - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/term-2-starts/",
+                "encrypted_content": "[omitted]",
+                "page_age": "312 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Our community - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/life-at-patana/our-community/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1417 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "New Families 2024/2025 - Bangkok Patana School",
+                "url": "https://patana.fireflycloud.asia/ptg/new-families-20242025",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DSP9YVrKwt1sh368rtzFXk"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01DSP9YVrKwt1sh368rtzFXk",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDD9bdLX8ChLGgGpW4BoMfoeSFACTp4/TZkkvIjAxLn6nKOJPmu/GSBnkevvhcQecZJSWeIq/6sKsJURuoC9PuB/eHSlk5iC4ThxTE9IqEvKSi86lFKn0w8g7lgmcSPen3BgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01DSP9YVrKwt1sh368rtzFXk/cell.py\", line 11, in <module>\n    print(x.get('title'),x.get('url'),str(x.get('content'))[:500].replace('\\n',' '),'\\n')\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015gYK6qx4cZZ8QLFLg6Aouv",
+            "name": "code_execution",
+            "input": {
+              "code": "print(str(r)[:300])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_015gYK6qx4cZZ8QLFLg6Aouv",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "[{\"type\": \"web_search_result\", \"title\": \"PTG Welcome New Families - Bangkok Patana School\", \"url\": \"https://www.patana.ac.th/the-patana-blog/ptg-welcome-new-families/\", \"content\": \"**The PTG welcomed new parents to the school in the Newcomers Coffe morning**. Although the PTG could not hold their tr\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in [\"Bangkok Patana School PTG welcome new families\",\"ISB Bangkok PTA new family welcome\",\"Shrewsbury International School Bangkok community pastoral new families\"]:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    for x in r[:4]:\n        print(x.get('title'),x.get('url'),str(x.get('content'))[:500].replace('\\n',' '),'\\n')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_013vkkwLGoFVk5yi79TwEjBf",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana School PTG welcome new families"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_013vkkwLGoFVk5yi79TwEjBf",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "PTG Welcome New Families - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/ptg-welcome-new-families/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1905 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "PTG Newcomers BBQ - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/ptg-newcomers-picnic-2/",
+                "encrypted_content": "[omitted]",
+                "page_age": "94 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "PTG Newcomers Picnic at Patana - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/ptg-newcomers-picnic/",
+                "encrypted_content": "[omitted]",
+                "page_age": "452 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "PTG Welcomes Newcomers - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/ptg-welcomes-newcomers/",
+                "encrypted_content": "[omitted]",
+                "page_age": "805 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "New Students Get an Advance Look Around - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/induction-day-25/",
+                "encrypted_content": "[omitted]",
+                "page_age": "459 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Warm Welcome at the PTG Newcomers Get Together! - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/welcome-new-parents/",
+                "encrypted_content": "[omitted]",
+                "page_age": "665 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "New Students Join Induction Day! - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/new-students-join-induction-day/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1557 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Our community - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/life-at-patana/our-community/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1417 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "New Families 2024/2025 - Bangkok Patana School",
+                "url": "https://patana.fireflycloud.asia/ptg/new-families-20242025",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_0181c8i1F32Gb9Rwmq48WRoF",
+            "name": "web_search",
+            "input": {
+              "query": "ISB Bangkok PTA new family welcome"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_0181c8i1F32Gb9Rwmq48WRoF",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Welcome Wai - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/school-community/welcome-wai",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "New Family Portal - Arriving in Semester 1 - International School Bangkok",
+                "url": "https://isb.ac.th/admissions/new-family-portal-sem1",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Campus Orientation for New Families",
+                "url": "https://www.isb.ac.th/community/news-detail-page/~board/es-news/post/campus-orientation-for-new-families1",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "(Update) PTA - Welcome Back Coffee",
+                "url": "https://inside.isb.ac.th/parentportal/2020/08/28/update-welcome-coffee/",
+                "encrypted_content": "[omitted]",
+                "page_age": "2275 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Elementary School Weekly Update",
+                "url": "https://www.isb.ac.th/community/news-detail-page/~board/es-news/post/elementary-school-weekly-update-1767278826078",
+                "encrypted_content": "[omitted]",
+                "page_age": "308 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "ISB Admissions",
+                "url": "https://www.isb.ac.th/Admissions/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Middle School Key Upcoming Dates",
+                "url": "https://www.isb.ac.th/community/news-detail-page/~board/ms-news/post/middle-school-key-upcoming-dates",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "An Expat Parent Reviews International School Bangkok ISB in Bangkok, Thailand, Report 3694",
+                "url": "https://www.expatexchange.com/advice/62/3694/108/Thailand/Review-of-International-School-Bangkok-ISB-in-Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "ISB (International School Bangkok) Review: A Premier American School's Unparalleled Facilities and Tuition",
+                "url": "https://www.eltschool.jp/en/column/isb-bangkok-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01XWmQS49CDoHhiRbEAoVjeJ",
+            "name": "web_search",
+            "input": {
+              "query": "Shrewsbury International School Bangkok community pastoral new families"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01XWmQS49CDoHhiRbEAoVjeJ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "New Parents Orientation - Shrewsbury International School Bangkok",
+                "url": "https://www.shrewsbury.ac.th/shc-parents/new-parents-orientation/",
+                "encrypted_content": "[omitted]",
+                "page_age": "80 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "doris - Shrewsbury International School Bangkok City Campus",
+                "url": "https://www.doris.school/schools/thailand/shrewsbury-international-school-bangkok-city-campus",
+                "encrypted_content": "[omitted]",
+                "page_age": "232 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "New EY Parents - Shrewsbury International School Bangkok",
+                "url": "https://www.shrewsbury.ac.th/shc-parents/new-ey-parents/",
+                "encrypted_content": "[omitted]",
+                "page_age": "108 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok City Campus Bangkok",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/shrewsbury-international-school-bangkok-city-campus",
+                "encrypted_content": "[omitted]",
+                "page_age": "189 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok City Campus is where families come together",
+                "url": "https://www.nationthailand.com/class-of-future/40058683",
+                "encrypted_content": "[omitted]",
+                "page_age": "361 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok Riverside Bangkok",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/shrewsbury-international-school-bangkok-riverside",
+                "encrypted_content": "[omitted]",
+                "page_age": "381 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok City Campus - HoneyKids Asia Thailand",
+                "url": "https://honeykidsasia.com/thailand/shrewsbury-international-school-bangkok-city-campus/",
+                "encrypted_content": "[omitted]",
+                "page_age": "329 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School - Riverside (Fees & Reviews) Bangkok, Thailand, 1922 Charoen Krung Road, Wat Prayakrai, Bang Kholaem",
+                "url": "https://www.edarabia.com/shrewsbury-international-school-bangkok-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "323 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok (Riverside) Review - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/shrewsbury-international-school-bangkok-riverside",
+                "encrypted_content": "[omitted]",
+                "page_age": "126 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01MKqMAv6c5RmxWxEhceRBeJ",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSywcKEAgUGAI4AUIIdGhpbmtpbmcSDMM+d28W9XwQfnf/cRoMLmTlRDpX2eUnr9PdIjDJHqYEVV1Eaa13bdc+ol2uGslyoN3Gv1SA8pVvR/fXhEq5iAkLBoqlb22NXxlhS7Aq6AZX1+pvWog8v4No1kxYyalDzlvUQrj1MbCV6ODjg53sjXOyCbZB+ShvoGgI8evpO1aWevozQJTuqGEG3hBei5DKoKJhLb7tHvvFCjpNJOAFN+BNzhMNMgf2o9Y7J0cGtDaZpVXNDUf1WrMfTdMbx5/VGWLuZgm9Q975Hezb+XzeSqzZpS3DIL76joRRsZm9b6k6sEf1i16YCw6HjspTnfOfZ3uCqsLPZAWwYDo3XSznQn709XwEgsu7elezXgaU9374f7CXISNkQnSwVapD+O+AM5lhXc3Hj5msDWmh6c1GrETaiGFfIQcYpxCBkO3amnWzz+RhJiB9ejhXE1jaZvLy1vbc1HsPJ1bJM+FQ9HgMDoASGQhuu4A21sXvNwSXOLilB20G+5sFi9p4pwlxCVC6O7iO+mh6vQwh3+OXRx+RfBW7jYd+N14+SkVTjBUXdohi84Mm+YNwKFo8gDhbev8JiGYyxGhPUHjeD44Ddl0iJX0XP9VBSzYtUyJHvceIu40BmjQ3rpIYDUP3/N+lSkCXv7ELc91vqKAveKs5e5K+HrfBHnDVhuqqrC59Dw8KBwk9MbKzu74SQRQZmZyeERQF1GOMbgR7bJ7f59aynA9F2ZXeT2uXL9+QskBF4NQFtn2o+r5NfT3356zV1udTyZ9Q41GBBJoMGYNyb2Tf6/625eiBdDsXFkqhYrM30aP1qNe4Q6LMH59F6MJhuo441xRonYuBaNFlXjeNOmtzCrygPkTENrA7wMBFgF+j17SiRLwLdctLhKiMa3Xhla2+FLXu2rS84lkYDMrq8EN8tPxvhQdwHhe3FFJfXgs7PKh2IzCv2755EJezYP1KL8Qq0gz+lKIJpAovZVHD1pLcysBp6Z/5A1i1et3Q1bcesb2vXZ4CO01FXb1ShVpDk1J8zVaYUpfRDlTuQOfs33Y9srxH4XX+bsNLIma8cQ8sIPDTtPPwLv7Jb/6nc+TKLp1TUdJNX7IqezvwITY7J/dSai0HS4t4GbKI4qeu9AMseAoKO6a7xgtnfI2a2Jt+nFfwt8FIDdWZDEw/s4GKg7o6lruQnKKu9upeTfYmAhNPvqPNmi0FZepFFc8v7xolhhYHgw8m9DQ3dB4g1OjbzDQ1aL7jiwWIRg7llIWOMImiPW3TuwYXttu+QPePAxgB"
+          },
+          {
+            "type": "text",
+            "text": "Several Bangkok international schools are known for welcoming new families well. Here are the ones that stand out, with the caveat that much of the evidence below comes from the schools' own websites and from guide sites.\n\n**Schools with structured welcome programmes for new parents**\n\n- **International School Bangkok (ISB)**, American curriculum. Its parent association runs a group called Welcome Wai, "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "made up of parents who are keen to make you feel at home. They host social events and activities throughout the year to build community and help new families settle in."
+          },
+          {
+            "type": "text",
+            "text": " ISB also offers "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "individual meetings with an elementary school counselor"
+          },
+          {
+            "type": "text",
+            "text": " and a parent orientation for new families.\n- **Bangkok Patana School**, British curriculum. Its Parent Teachers Group (PTG) holds a Newcomers Coffee Morning and a Newcomers Picnic each year. The "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "PTG welcomes and supports new parents and introduces them to all the events and activities they can join during the upcoming year."
+          },
+          {
+            "type": "text",
+            "text": " It's one of the largest and longest-established schools in the city, with a large expat parent network.\n- **NIST International School**, IB curriculum, on Sukhumvit. NIST notes that "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "most international schools in Bangkok, including NIST, have active parent associations that host coffee mornings, welcome events, and other such social gatherings throughout the year."
+          },
+          {
+            "type": "text",
+            "text": " One guide calls it "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Bangkok's leading IB World School"
+          },
+          {
+            "type": "text",
+            "text": ", and its location suits families living in central Bangkok.\n- **Shrewsbury International School (City Campus)**, British curriculum. The Good Schools Guide says "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "pastoral care is led right from the top, with parents saying the school goes above and beyond on mental health and wellbeing."
+          },
+          {
+            "type": "text",
+            "text": " New Early Years families get to "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "meet their child's class teacher and teaching assistants and connect with other parents"
+          },
+          {
+            "type": "text",
+            "text": " before term starts.\n\n**Schools known for pastoral care and inclusiveness**\n\n- **KIS International School** (Reignwood Park, IB curriculum). One guide describes it as having a "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "genuinely inclusive community, strong pastoral care, and outstanding music and performing arts programmes."
+          },
+          {
+            "type": "text",
+            "text": " It's smaller, which some families find makes it easier to settle in.\n- **St Andrews International School** (British curriculum, several campuses). It's cited for "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "a strong reputation for academic results and pastoral care"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **King's College International School Bangkok** (British curriculum). The school says that "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "everyone is involved in the pastoral care of students"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **International Community School (ICS)**. This is a Christian school founded with the help of expat families. Families looking for a faith-based community often find it close-knit.\n- **Australian International School Bangkok (AISB)** and **Garden International School** are also worth a look. AISB is "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "popular among families who may relocate to Australia or New Zealand later"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**What to check on a visit**\n- **Mix of expat and local families.** Schools with more expat families tend to be better at welcoming newcomers, because families come and go every year.\n- **Buddy systems and help with moving schools.** Ask whether new students get a buddy, and whether counsellors check in during the first term.\n- **How active the parent association is.** Look for newcomer coffee mornings, nationality groups, and WhatsApp groups for each class.\n- **Commute.** Bangkok traffic is a big factor. Families tend to build their social life around the school, so living nearby helps you connect.\n\nIf you tell me your children's ages, which curriculum you prefer, your budget and the area you'll live in, I can narrow the list down."
+          }
+        ],
+        "container": {
+          "id": "container_01GcN2DN9fin9JRhpSvVK8ea",
+          "expires_at": "2026-11-20T17:53:55.862091Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 56453,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2289,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 7,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5907,
+              "output_tokens": 199,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6479,
+              "output_tokens": 187,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 9702,
+              "output_tokens": 274,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 10354,
+              "output_tokens": 57,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 10548,
+              "output_tokens": 201,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 13463,
+              "output_tokens": 1371,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 205
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

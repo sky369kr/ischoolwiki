@@ -1,0 +1,1392 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g06",
+    "type": "generic",
+    "text": "방콕에서 IGCSE와 IB 성적이 좋은 국제학교는 어디인가요?"
+  },
+  "started": "2026-11-20T16:51:36.432Z",
+  "finished": "2026-11-20T16:52:27.185Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕에서 IGCSE와 IB 성적이 좋은 국제학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXU7wpkm9HXfQrJCrqW",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSxwUKEAgUGAI4AUIIdGhpbmtpbmcSDDL3s3KbXyzsozUoaBoMPnWeIggNTQm1kE64IjCJFNaYE2JmS84iEYWfXXj0BhUw2G3FkPKZxGW/y0W70mz+BJ6gO4PPuO4WTU3H9b0q5AQbxTMWnjsQ3STkDa22nSmnlLbg1oMvIzfti0dATB2MlY93efZhITdBFtEZNUPigX3nbX5VvU5PtL+eN5a9X8W7m9HmwF310OMnBtMSPCxaZDNyyls/GCKPnNpu4JtF2+mA32RE5N0uDrWxY5DXT0+bQNKERfJXIY7TLKVj/TqAfwO4fmF0UUz20SPQyPW7LUftLwk+LUWO7zAp9FG3+0yxQMQFdLIrcfYiFeSjDGaY7Gb7cuy2X3dyr7f2VZMq2+7Vr9N5L4mjMloz/7HXdv52dEs6tZN7Lh3Xwvm4HrJxCMfPI64bvfG+xKDExBsg0FJ/DIVMXYT5mzrjW2i9m2VlN6UP9qhngLrxRQAnTxYegzm+yqlFY1/SxB39lhXMGe819IgTLJum8BLyn0/IvuzcWgmCBTfMlIu5u6AggI8+Ztfumi95es10sDv1rEI+P0bVxlBELBHgb6hn1VDJJpOH1Jz2J2rrvW/K7yG+EFCGJUeRrFH4OyA2irLfz6BE1/BANjye1W3Wk6uPDhz45ifNadvP6lmVANBoEV/JfaDGvkZO1bJpdL+PskEPJ42z7PzsuJJD+00rRh5L+LiRDNnvtvSmp4LA4EQCWKpZP/hSR+8mvg/bO1KuvWGNVg8+wa/kKT62oQmch+aqI1gOoVRSMqy5AEdAlN9IzXJflDFAkGvWxnpU5ZjCDeoOSuI0hs8rX0TzS8kmWSVmmDwxNuBStNbSsITNzbcedBzYKqykYtNtm85m63T1PnBxqOij/+K18IcLJtwn1K4x6K2qDE84Rctpxf+o8AOVPcoWkoL2jga31MQYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01LiQ25VR9UP3DFwYnRjr3XV",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"Bangkok international school IB results 2024 average score\",\"Bangkok international school IGCSE results 2024 A* percentage\",\"best IB schools Bangkok ranking\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:6]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:700].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WVzpyAA7yw24AuUAfW2kh2",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school IB results 2024 average score"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01LiQ25VR9UP3DFwYnRjr3XV"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01WVzpyAA7yw24AuUAfW2kh2",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Academic Results - KIS International School Bangkok, Thailand",
+                "url": "https://www.kis.ac.th/learn/academic-results",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Congratulations to the Class of 2024 for Excelling in the IB Diploma - KIS International School",
+                "url": "https://kis.ac.th/congratulations-to-our-class-of-2024-for-excelling-in-the-ib-diploma/",
+                "encrypted_content": "[omitted]",
+                "page_age": "248 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Outstanding IB Results 2024 by Bangkok Patana School.",
+                "url": "https://expatsinbangkok.com/article/outstanding-ib-results-2024-by-bangkok-patana-school.html",
+                "encrypted_content": "[omitted]",
+                "page_age": "836 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bangkokpost.com/specials/inter-education/kis_bkk",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The 2026 Parent’s Dilemma: Which Bangkok School Actually Prepares Your Child for an AI-Dominated Future?",
+                "url": "https://medium.com/@nayokow/the-2026-parents-dilemma-which-bangkok-school-actually-prepares-your-child-for-an-ai-dominated-1f002e850dd8",
+                "encrypted_content": "[omitted]",
+                "page_age": "308 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bkkschools.com/kis-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Jumeira Baccalaureate School",
+                "url": "https://en.wikipedia.org/wiki/Jumeira_Baccalaureate_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "97 International Schools in Bangkok: Tuition & Curriculum 2026",
+                "url": "https://scholae.cc/blog/best-international-schools-bangkok-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01LiQ25VR9UP3DFwYnRjr3XV"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01LiQ25VR9UP3DFwYnRjr3XV",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDByw8qLM+A02Iq8M7RoMM2x5kMsh1UxNoC0wIjAgxqXZ7QyhooJVJ10Ry2EhJ1Di5206QEI+sbQpwDDV5HHIyiCg4qAe4SYbtCWYd2UqEoVQD0GmPt1t555axTbr9pkxSxgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01LiQ25VR9UP3DFwYnRjr3XV/cell.py\", line 13, in <module>\n    print(x.get('title'),x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WUs3Zy5WDAPJwrYHk3uras",
+            "name": "code_execution",
+            "input": {
+              "code": "r=await web_search({\"query\":qs[0]})\nprint(type(r), str(r)[:1500])"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Sx5RL8mWf1SMTMjS8huQdH",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school IB results 2024 average score"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01WUs3Zy5WDAPJwrYHk3uras"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01Sx5RL8mWf1SMTMjS8huQdH",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Academic Results - KIS International School Bangkok, Thailand",
+                "url": "https://www.kis.ac.th/learn/academic-results",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Congratulations to the Class of 2024 for Excelling in the IB Diploma - KIS International School",
+                "url": "https://kis.ac.th/congratulations-to-our-class-of-2024-for-excelling-in-the-ib-diploma/",
+                "encrypted_content": "[omitted]",
+                "page_age": "248 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Outstanding IB Results 2024 by Bangkok Patana School.",
+                "url": "https://expatsinbangkok.com/article/outstanding-ib-results-2024-by-bangkok-patana-school.html",
+                "encrypted_content": "[omitted]",
+                "page_age": "836 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bangkokpost.com/specials/inter-education/kis_bkk",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The 2026 Parent’s Dilemma: Which Bangkok School Actually Prepares Your Child for an AI-Dominated Future?",
+                "url": "https://medium.com/@nayokow/the-2026-parents-dilemma-which-bangkok-school-actually-prepares-your-child-for-an-ai-dominated-1f002e850dd8",
+                "encrypted_content": "[omitted]",
+                "page_age": "308 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bkkschools.com/kis-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Jumeira Baccalaureate School",
+                "url": "https://en.wikipedia.org/wiki/Jumeira_Baccalaureate_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "97 International Schools in Bangkok: Tuition & Curriculum 2026",
+                "url": "https://scholae.cc/blog/best-international-schools-bangkok-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01WUs3Zy5WDAPJwrYHk3uras"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01WUs3Zy5WDAPJwrYHk3uras",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb",
+            "name": "code_execution",
+            "input": {
+              "code": "qs=[\"Bangkok international school IB results 2024 average score\",\"Bangkok international school IGCSE results 2024 A* percentage\",\"Harrow Bangkok IGCSE IB results 2024\",\"Shrewsbury Bangkok IGCSE A-level results 2024\",\"NIST Bangkok IB results 2024 average\",\"Bangkok Patana IB results 2024\"]\nfor q in qs:\n    r=json.loads(await web_search({\"query\":q}))\n    print(\"##\",q)\n    for x in r[:5]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:500].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DCUrUWZa2VLvqKts3ncvSa",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school IB results 2024 average score"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01DCUrUWZa2VLvqKts3ncvSa",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Academic Results - KIS International School Bangkok, Thailand",
+                "url": "https://www.kis.ac.th/learn/academic-results",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Congratulations to the Class of 2024 for Excelling in the IB Diploma - KIS International School",
+                "url": "https://kis.ac.th/congratulations-to-our-class-of-2024-for-excelling-in-the-ib-diploma/",
+                "encrypted_content": "[omitted]",
+                "page_age": "248 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Outstanding IB Results 2024 by Bangkok Patana School.",
+                "url": "https://expatsinbangkok.com/article/outstanding-ib-results-2024-by-bangkok-patana-school.html",
+                "encrypted_content": "[omitted]",
+                "page_age": "836 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bangkokpost.com/specials/inter-education/kis_bkk",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The 2026 Parent’s Dilemma: Which Bangkok School Actually Prepares Your Child for an AI-Dominated Future?",
+                "url": "https://medium.com/@nayokow/the-2026-parents-dilemma-which-bangkok-school-actually-prepares-your-child-for-an-ai-dominated-1f002e850dd8",
+                "encrypted_content": "[omitted]",
+                "page_age": "308 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bkkschools.com/kis-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Jumeira Baccalaureate School",
+                "url": "https://en.wikipedia.org/wiki/Jumeira_Baccalaureate_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "97 International Schools in Bangkok: Tuition & Curriculum 2026",
+                "url": "https://scholae.cc/blog/best-international-schools-bangkok-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01SStsLYN5U1kNBPCMXnHEe5",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school IGCSE results 2024 A* percentage"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01SStsLYN5U1kNBPCMXnHEe5",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Exam Results - Shrewsbury International School Bangkok",
+                "url": "https://www.shrewsbury.ac.th/academic/igcse-and-a-level-exam-results-2024/",
+                "encrypted_content": "[omitted]",
+                "page_age": "462 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "King’s Bangkok IGCSE Results 2024",
+                "url": "https://www.kingsbangkok.ac.th/en/news-and-events/news/news439",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Examination Results",
+                "url": "https://www.sis.edu/bangkok/en/bangkok-campus/examination-results-0",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep: British International School in Bangkok",
+                "url": "https://www.bangkokprep.ac.th/",
+                "encrypted_content": "[omitted]",
+                "page_age": "197 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "IGCSE - Regent's International School Bangkok",
+                "url": "https://regents.ac.th/academics/academic-results/igcse/",
+                "encrypted_content": "[omitted]",
+                "page_age": "421 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Britannica International School Budapest",
+                "url": "https://en.wikipedia.org/wiki/Britannica_International_School_Budapest",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "King’s College International School Bangkok",
+                "url": "https://edtlive.b-cdn.net/livenew/media/bpsls1qw/kings-bso-report-_march-2024_final.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "984 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011xgLBk4rEWJ4GnkDSuUgDm",
+            "name": "web_search",
+            "input": {
+              "query": "Harrow Bangkok IGCSE IB results 2024"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_011xgLBk4rEWJ4GnkDSuUgDm",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Post - Groundbreaking Academic Results at Harrow Bangkok",
+                "url": "https://www.bangkokpost.com/business/general/2380186/groundbreaking-academic-results-at-harrow-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "1542 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Complete 2026 Guide to Bangkok International Schools: How to Choose Without Regret and Top-Tier School Recommendations",
+                "url": "https://www.eltschool.jp/en/column/bangkok-international-school-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow Bangkok: Admissions, Fees & A Deep Dive into Thailand's Premier British School",
+                "url": "https://www.eltschool.jp/en/column/harrow-bangkok-international-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok: Fees & Fit",
+                "url": "https://harland.com.tw/explore-schools/bangkok/harrow-international-school-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Harrow_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "GEMS Wellington International School",
+                "url": "https://en.wikipedia.org/wiki/GEMS_Wellington_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok Bangkok Thailand",
+                "url": "https://www.gotouniversity.com/school/harrow-international-school-bangkok-bangkok-thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Curriculum Schools Bangkok 2026 Expat Guide",
+                "url": "https://www.globalinvestments.net/expat/british-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "160 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011odZRBzsPKf6F12yx452sQ",
+            "name": "web_search",
+            "input": {
+              "query": "Shrewsbury Bangkok IGCSE A-level results 2024"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_011odZRBzsPKf6F12yx452sQ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "IGCSE and A Level Exam Results 2024",
+                "url": "https://www.shrewsbury.ac.th/academic/igcse-and-a-level-exam-results-2024/",
+                "encrypted_content": "[omitted]",
+                "page_age": "462 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Post - Shrewsbury Bangkok Riverside Celebrates Top 2025 Exam Results",
+                "url": "https://www.bangkokpost.com/thailand/pr/3117880/shrewsbury-bangkok-riverside-celebrates-top-2025-exam-results",
+                "encrypted_content": "[omitted]",
+                "page_age": "408 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Educational Context Curriculum Testing 2023 IGCSE exam ...",
+                "url": "https://www.shrewsbury.ac.th/wp-content/uploads/2024/08/School-Profile2023-24-1.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "841 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury Riverside Celebrates Remarkable 2024 Exam Results - KAOHOON INTERNATIONAL",
+                "url": "https://www.kaohooninternational.com/sustainability/545339",
+                "encrypted_content": "[omitted]",
+                "page_age": "780 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School - Top exam results and university destinations underpin our students’ academic success story - The Australian-Thai Chamber of Commerce (AustCham)",
+                "url": "https://www.austchamthailand.com/news/top-exam-results-and-university-destinations-underpin-our-students-academic-success-story/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1528 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok — British in Bangkok",
+                "url": "https://getwherenext.com/schools/bangkok/shrewsbury-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok Review 2026: British International School in Bangkok",
+                "url": "https://brightkey.co/en/schools/bangkok/shrewsbury-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "171 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "SHREWSBURY INTERNATIONAL SCHOOL BANGKOK: DETAILS, FEES AND REVIEWS",
+                "url": "https://www.international-schools-database.com/in/bangkok/shrewsbury-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "GCSEs and A-Levels Bangkok: Schools, Results & UCAS 2026",
+                "url": "https://www.globalinvestments.net/expat/gcse-alevels-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "160 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011EF9QmZ54t838emSa38rPZ",
+            "name": "web_search",
+            "input": {
+              "query": "NIST Bangkok IB results 2024 average"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_011EF9QmZ54t838emSa38rPZ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST Class of 2024 Soars to New Heights with Exceptional IB Results and University Offers",
+                "url": "https://www.canchamthailand.org/post/nist-class-of-2024-soars-to-new-heights-with-exceptional-ib-results-and-university-offers",
+                "encrypted_content": "[omitted]",
+                "page_age": "606 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST Class of 2024 Achieves Outstanding IB Results!",
+                "url": "https://www.swecham.com/member-updates/nist-class-of-2024-achieves-outstanding-ib-results!",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - IB-Schools",
+                "url": "https://www.ib-schools.com/schools/3544/nist-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School Bangkok - Fees, Review & Admissions",
+                "url": "https://international-schools-guide.com/international-schools/bangkok/nist-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School Bangkok: Reputation, Fees, and Admissions",
+                "url": "https://www.eltschool.jp/en/column/nist-international-school-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 5 International Schools in Bangkok (2026)",
+                "url": "https://international-schools-guide.com/insights/top-5-international-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "140 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best IB Schools in Bangkok",
+                "url": "https://international-schools-guide.com/insights/best-ib-schools-bangkok-results-rankings",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "2023%E2%80%9324 Thai League 3 Bangkok Metropolitan Region",
+                "url": "https://en.wikipedia.org/wiki/2023%E2%80%9324_Thai_League_3_Bangkok_Metropolitan_Region",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_0113TQy7S9C1FM6c7UCgH2eg",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana IB results 2024"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_0113TQy7S9C1FM6c7UCgH2eg",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Excellent IB Results - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/2024-ib-results/",
+                "encrypted_content": "[omitted]",
+                "page_age": "863 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Outstanding IB Results 2024 by Bangkok Patana School.",
+                "url": "https://expatsinbangkok.com/article/outstanding-ib-results-2024-by-bangkok-patana-school.html",
+                "encrypted_content": "[omitted]",
+                "page_age": "836 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Bangkok Thailand",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "923 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School, Bangkok, Thailand",
+                "url": "https://expatsinbangkok.com/listing/bangkok-patana-school.html",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The 2026 Parent’s Dilemma: Which Bangkok School Actually Prepares Your Child for an AI-Dominated Future?",
+                "url": "https://medium.com/@nayokow/the-2026-parents-dilemma-which-bangkok-school-actually-prepares-your-child-for-an-ai-dominated-1f002e850dd8",
+                "encrypted_content": "[omitted]",
+                "page_age": "308 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://www.patana.ac.th/wp-content/uploads/2025/09/School-profile-2025-26.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "445 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://patana.fireflycloud.asia/resource.aspx?id=3739327",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://patana.fireflycloud.asia/resource.aspx?id=3227544&officeint=on",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01DAze1hJJSpWvhsq2p3W2pb",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSkQgKEAgUGAI4AUIIdGhpbmtpbmcSDBZyfeD7WCxJD8XrwBoMPVsQLMh2ukXOln1uIjC9G+30ifknipPEfB90xGqJ/GN/Gw4R9pkXBLHA4CfgP/Gd1DjGwqMYM2Xmok/bFF4qrgf6MO9H/SqWBS1BWh9y9Awi3hK3YLvpmCF05EQrk2c2CUgsZDPp8vEAtDzT3Dowps26au0ZpyEfiM5f526Nxx2uhpgXUkd7wplumD1FVJH2JwFl6I2+gpBBiTWRdKh31xUA426DugW5rNuSBMVKdOgNoF7C4NOZiMDG7PbIBHo3LG0E5xidRUsJEGdlvUCrsste5Gsgubv/wV26opE9dhzftbd8IxJIAEOM00h9NrEa6+lZhUFHDO3w5L9c1nIceQ/60r4JyyybFkgagGk75s3n+jeAHYaPMh2VWpisJQ5b18RyR2UHQfmLz9AUyJZov7jJ7I6KJlKi+OUu8at7ZRYdm0n9CkyY2HioMRCxhF07Bq8XVg8gSctQSwYatiVn6PXdNmD6Y+roct5TYx8cRVdMozRAEAgkb3iRmd9ZlSG0JzQ4778IXuWFe2novlpfU/mCgmi7OTZq91/nt/0w96j8/JeScuB31Ou0czo8R6oQ8+sS1OE8N3ZxcQ0K5K4M2mka1JGN7SkbN1Wzs3pyX+6FtjHncQoBWvqCY7e9+FTYvZKSx1oy0XAJlhbzsXzCPS/WMFxk+qI9HCgOoMmYci0FSqOUb9tjAy9QlIGQ3tgrF8vyXSAYZWgJeDv6M35C0w9bH8dR0uCLVAggeLL6gIsaLxbgl01EpVSKN+dTREuj3F7vbO9c8nOVZWf2FkrAw420pj6ejCCZhNqoWFmPr1gkH0uULXbYV2RoS4JW7BzJAKUlwCjIOg6d6yp6XCdJPkqnCcK/DSQDM4CUJzTExqaCTxoxaadYw7I3xl+HdSxBFx2XlFAvclIHU7BGznjq2BpLcuHfcy2BD/gA+Ry1ORW6tupfHQZXZWNdKzEtObVyJWFgqtsmwpIuvZAJVyoppKh/ryGjnFs5K1zQY8okIPBfslMbaj5fs9iLtKJYYvU4a5JEQ6uKvOSi97aqGFt6gom+9ojDmKA6uWzyhgO58zrPc1zXIJTVHp4qhhAB6EZw7UnDlPTc4Z0GiJb7zbSfgrPWTIPxzpaE6a1f85Xy0ZWXUO4v/iERtYRFpD1zgw8GXeVXzTNiUtWlpzGWsX+5IHh9w7Wn+FDr9tnUhNmBnJ9PPeYHZL/N4au3R963pTpl6fRYJNpk75HQe5w9Wwq02+c2aRTUtvicLOS9Itj/8Ts8Io9xfWboLTKCeEKjHakFzTE+Q2VdLDWQMrZdFiWRwi8UTp0hkEmjdxgBWrl4+1vaJk+0wzCvDpbKiQ67pxUYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4",
+            "name": "code_execution",
+            "input": {
+              "code": "qs=[\"International School Bangkok ISB IB diploma results average 2024\",\"Regent's International School Bangkok IB results average\",\"Harrow Bangkok IGCSE results 2025 A*\",\"Bangkok Patana IGCSE results 2025\"]\nfor q in qs:\n    r=json.loads(await web_search({\"query\":q}))\n    print(\"##\",q)\n    for x in r[:4]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:400].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01PPtGC3p6h4ALrXr3xPdhaR",
+            "name": "web_search",
+            "input": {
+              "query": "International School Bangkok ISB IB diploma results average 2024"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01PPtGC3p6h4ALrXr3xPdhaR",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Academic Results - KIS International School Bangkok, Thailand",
+                "url": "https://www.kis.ac.th/learn/academic-results",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Congratulations to the Class of 2024 for Excelling in the IB Diploma - KIS International School",
+                "url": "https://kis.ac.th/congratulations-to-our-class-of-2024-for-excelling-in-the-ib-diploma/",
+                "encrypted_content": "[omitted]",
+                "page_age": "248 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Our Performance - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/about-isb/our-performance",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Baccalaureate (IB) Diploma Programme at ISB",
+                "url": "https://www.isb.ac.th/curriculum-academics-learning/high-school/international-baccalaureate-ib",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The 2026 Parent’s Dilemma: Which Bangkok School Actually Prepares Your Child for an AI-Dominated Future?",
+                "url": "https://medium.com/@nayokow/the-2026-parents-dilemma-which-bangkok-school-actually-prepares-your-child-for-an-ai-dominated-1f002e850dd8",
+                "encrypted_content": "[omitted]",
+                "page_age": "308 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Jumeira Baccalaureate School",
+                "url": "https://en.wikipedia.org/wiki/Jumeira_Baccalaureate_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok",
+                "url": "https://www.bkkschools.com/kis-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Brunei",
+                "url": "https://en.wikipedia.org/wiki/International_School_Brunei",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01BSq4XZa83vQDGy67xt1UWR",
+            "name": "web_search",
+            "input": {
+              "query": "Regent's International School Bangkok IB results average"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01BSq4XZa83vQDGy67xt1UWR",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Regent's International School Bangkok : British Chamber of Commerce Thailand",
+                "url": "https://members.bccthai.com/bcct/asp/corpdetail.asp?CorpID=512",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Regent's International School, Bangkok Review - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/the-regents-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "420 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Our Performance - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/about-isb/our-performance",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Academic Excellence",
+                "url": "https://regents.ac.th/academics/",
+                "encrypted_content": "[omitted]",
+                "page_age": "456 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent's International achieve the highest IB scores in Thailand - YouTube",
+                "url": "https://www.youtube.com/watch?v=_gqf94Xkv0s",
+                "encrypted_content": "[omitted]",
+                "page_age": "4100 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent's International School Bangkok — Success Abroad",
+                "url": "https://www.successabroad.org/regent",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent%27s International School, Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Regent%27s_International_School,_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent's International School Bangkok: Fees & Admissions",
+                "url": "https://schoolvita.com/cities/bangkok/schools/regents-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "REGENT’S INTERNATIONAL SCHOOL BANGKOK: DETAILS AND FEES",
+                "url": "https://www.international-schools-database.com/in/bangkok/regent-s-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01BVfpW4MnE9UK3amkAGz5x9",
+            "name": "web_search",
+            "input": {
+              "query": "Harrow Bangkok IGCSE results 2025 A*"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01BVfpW4MnE9UK3amkAGz5x9",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Work With Us - Harrow International School Bangkok",
+                "url": "https://www.harrowschool.ac.th/about-us/recruitment",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Post - Groundbreaking Academic Results at Harrow Bangkok",
+                "url": "https://www.bangkokpost.com/business/general/2380186/groundbreaking-academic-results-at-harrow-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "1542 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "FAQs - Harrow Bangkok",
+                "url": "https://www.harrowschool.ac.th/faqs",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok School Profile 2025-2026",
+                "url": "https://cdnc.heyzine.com/flip-book/pdf/01686232b5183aa86eb14d8c035d5203384a8db7.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok: Fees & Fit",
+                "url": "https://harland.com.tw/explore-schools/bangkok/harrow-international-school-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Harrow_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Education Development Trust Harrow International School Bangkok",
+                "url": "https://edtlive.b-cdn.net/livenew/media/kugamu1k/michael_harrow-march-2026_bso-report-final.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow Bangkok: Admissions, Fees & A Deep Dive into Thailand's Premier British School",
+                "url": "https://www.eltschool.jp/en/column/harrow-bangkok-international-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Curriculum Schools Bangkok 2026 Expat Guide",
+                "url": "https://www.globalinvestments.net/expat/british-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "160 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01KU7r9NUW9ZmzMo58wfR1B8",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana IGCSE results 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01KU7r9NUW9ZmzMo58wfR1B8",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School, Bangkok, Thailand - Spear's 500 School Profile",
+                "url": "https://spears500.com/school/25341/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Bangkok Thailand",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "923 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://www.patana.ac.th/wp-content/uploads/2025/09/School-profile-2025-26.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "445 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The British International School in Thailand",
+                "url": "https://www.patana.ac.th/",
+                "encrypted_content": "[omitted]",
+                "page_age": "4 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Congratulations on (I)GCSE Results - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/the-patana-blog/congratulations-on-igcse-results/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1920 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Secondary Schools in Bangkok 2026",
+                "url": "https://globalschoolguide.com/cities/bangkok/secondary-schools/",
+                "encrypted_content": "[omitted]",
+                "page_age": "320 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01E7codjC3pEz3qzwpuSzHV4",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSjwgKEAgUGAI4AUIIdGhpbmtpbmcSDEuP/c9rafoKJOpS8hoMvtjnpWM5WSN2l7F7IjAzUPut3fvmnxxfkG+rH75YSKtzAXUdY61MsHki+qcP606bpyr2MbrGDR9+AHXAbjAqrAfvZQ6MhnisactDEhSW/K28lIDOGXQ1mTREirFZKF+wxhhuciKIVcFBfmVOY/Sz8B4lVeVKz8YLOzY+bZdnbu69SqpQ+EqsQeULWbajrqh5QvowvHumlFCqTqbHum7uTQKxcjVbtpvq8HgsxuLlJ1mT+blDWnQMfdB/WugicaOjbdSqJJsrtheOnP5eNlKzIB7zrYMh2/ZbxyHDp9O4dIXnQxcOlYryQg/CFgsZyFlKzzfBjI7Rwhz6vgGJsHLl8BuHjnQ2+4U7e6P6oc9kXHxO9shwS8fCKCm4zfdlyJU32xrjh/g3G6NXGzNhjYaoDZkl66tUWID4RxeCdboVay2wZ4LOjh2ZmWSFP+RMkPcdPDRuoSMX0WDqFP2JdANGJiIdib9SEeEB9sUeQbAIQNu6gtqJeTEFivHL02cScCVkOUGndcAEdE333QAfMn8qGeEvUMmshRmXaNnGXdOTB4tDlBOg1a0ylh7i9AuPceFFRS5n6oepPvc0njEgbo8xa7AwJDCWpIibbRwSZxsHbfhKl4mV1ksuY2BxIeFTdIYmu3UG6cFPKwZHRjvHpxPpwEakgTYR0aVzTfl+Erbsl+4Nmfcl8gCJ5P5/ifPF3jZMqgZ5y7Ol7jDxTIlZ8D5ueOzRkztzsbWBZn8O28Ml+Fvx6eLumX3ANU6CTPFx6+kmtiYFbw3ff1mfIuIU8N2P5UsUK9rgHtAwxASWoDRVQMjLEQQcvPtbUiEYP1jSgTtEgHiRN3nu+xc+mjRZwg/CE6JmWwvylGu/EkEFKKd/8zr3PGGottori1E3P3vHjcPliB+VwptIuRF/ZPAuiwenSCBgsEKK1vZED1Zl81QBdx5nCzVP/UQ1Csp0VdBDZyyexViCqyPSpGcXVc3ZuBIa4UNga9J6+rtC/W+mLTAgjCqGphXI8UQuWkood973ULpsxAljPzdk5li7ctLO12Drf8157xlXgBoSCYyZXh/csfN4lsabHP6pQGeHnJByfpulU4XWzbWfITEBQLL2BQBQo18bB/WMl+rSNyfsIszxueKbSpN+6aXNpS5AdkOT1685M2Euq7cq+NhhsreT1M4mqKgA1dWvrmReoZ87x4/Ml0+UKnvM9mt2qKcRP/p+h94Pv+6gcbaBpEI+wuUP+FOlzD2RSGyHav5AsUJkRz7cet8NHc2kE9C7ahHXiYE39lIHDLt6/VtokHPO0vbgftvw+Akw6z8/H6MUw4UrL3D8HUDZ0A194MpSCvI0Y/LeGAE="
+          },
+          {
+            "type": "text",
+            "text": "방콕에는 IGCSE와 IB를 둘 다 가르치는 학교가 많지 않습니다. 영국계 명문교 대부분은 IGCSE를 마친 뒤 A-Level로 넘어가고, IB 상위권 학교 중 상당수는 IGCSE 대신 IB 자체 과정을 처음부터 끝까지 운영합니다. 그래서 세 그룹으로 나눠 정리했습니다. 아래 수치는 대부분 학교가 직접 발표한 자료입니다.\n\n## 1. IGCSE와 IB를 모두 운영하는 학교\n\n**Bangkok Patana School (방콕 파타나)**: 두 과정을 모두 보신다면 가장 먼저 볼 학교입니다.\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Bangkok Patana School celebrates remarkable IB results for 2024"
+          },
+          {
+            "type": "text",
+            "text": ". 2024년 IB 평균은 36점입니다. 같은 해 졸업생 122명 가운데 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "15명이 45점 만점에 43점 이상을 받았고, 40점 이상을 받은 학생은 24%(세계 평균 9%)"
+          },
+          {
+            "type": "text",
+            "text": "였습니다.\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년에는 (I)GCSE 결과의 66%가 7~9등급이었고, IB 평균은 35.0점이었습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n- 입학 시험으로 학생을 거르지 않는 학교라서 이 성적이 더 의미 있다는 평가를 받습니다. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "These results are even more outstanding considering Bangkok Patana is an academically non-selective school."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**Regent's International School Bangkok**\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2024년 IB 평균은 33.2점이었고, 약 10%가 40점 이상을 받았습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n- IGCSE에서는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "47%의 성적이 A*-A였습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n## 2. IB 성적 상위권 학교 (IGCSE 없이 IB 과정만 운영)\n\n- **NIST International School**: 2024년 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "평균 36점, 합격률 99%를 기록했고, 55%가 이중언어(Bilingual) IB 디플로마를 받았습니다"
+          },
+          {
+            "type": "text",
+            "text": ". 2025년에는 약 110명이 평균 37점, 합격률 100%였습니다. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "NIST's figures of '110 students with an average of 37 points and a 100% pass rate' are overwhelming."
+          },
+          {
+            "type": "text",
+            "text": "\n- **KIS International School**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2024년 졸업생의 IB 평균은 35점으로, 세계 평균 30점보다 높았습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **ISB (International School Bangkok)**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "94명이 풀 IB 디플로마를 받았고 평균은 35점(세계 평균 30.8점)이었습니다"
+          },
+          {
+            "type": "text",
+            "text": ". 미국계 학교라 AP 과목도 함께 고를 수 있습니다.\n\n## 3. IGCSE 성적 최상위권 학교 (IGCSE 이후 A-Level 진학)\n\n- **Shrewsbury International School (Riverside)**: 2024년 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "IGCSE 성적의 78%가 A*/A로, 영국 평균 22%를 크게 앞섰습니다"
+          },
+          {
+            "type": "text",
+            "text": ". 2025년에는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "IGCSE 성적의 74%가 A*/A였습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **Harrow International School Bangkok**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년 A-Level은 70%가 A*-A, IGCSE는 71%가 A*-A였습니다"
+          },
+          {
+            "type": "text",
+            "text": ". "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "IB나 AP 과정은 없습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **King's College Bangkok**: 2024년 IGCSE에서 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "수학은 84%, 생물·화학·물리는 91%가 A*/A(9-7)를 받았습니다"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n## 학교를 고를 때 참고할 점\n- **선발 방식**: 입학 시험으로 학생을 고르는 학교는 평균 점수가 높게 나오기 쉽습니다. 성적만큼 학생이 얼마나 성장했는지도 함께 보세요.\n- **응시 인원**: IB 응시자가 10여 명뿐인 학교의 평균은 한 해 결과에 따라 크게 달라집니다. 몇 년 치 평균을 비교하는 것이 좋습니다.\n- **진학 목표**: 영국 대학이 목표라면 A-Level 학교(Shrewsbury, Harrow)도, IB 학교도 무난합니다. 미국을 포함한 여러 나라 대학을 고려한다면 IB(Patana, NIST, KIS)나 IB와 AP를 함께 운영하는 학교(ISB)가 선택의 폭이 넓습니다.\n\n**요약:** IGCSE와 IB를 한 학교에서 이어서 하려면 Bangkok Patana가 가장 확실합니다. IB 점수만 본다면 NIST가, IGCSE 점수만 본다면 Shrewsbury와 Harrow가 최상위권입니다. 최신 결과와 결과 보고서(School Profile)는 각 학교에 직접 요청해 확인하시는 것이 좋습니다."
+          }
+        ],
+        "container": {
+          "id": "container_01MeS2TfZx4AMQoiZcxnhGPQ",
+          "expires_at": "2026-11-20T17:52:08.087165Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 53121,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3019,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 12,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5918,
+              "output_tokens": 232,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6504,
+              "output_tokens": 79,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7139,
+              "output_tokens": 264,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 14935,
+              "output_tokens": 363,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 18625,
+              "output_tokens": 2081,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 316
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

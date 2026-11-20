@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g03",
+    "type": "generic",
+    "text": "방콕 초등·중등 국제학교 TOP 5를 알려주세요"
+  },
+  "started": "2026-11-20T16:50:16.069Z",
+  "finished": "2026-11-20T16:50:40.075Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕 초등·중등 국제학교 TOP 5를 알려주세요"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXNC3TmfrYF3zAvbFzH",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS9QUKEAgUGAI4AUIIdGhpbmtpbmcSDL2vq5bXlOK3qoH4PxoMOj9J4+tl3TpPfvGWIjCJvUm3J+CLq5f2rNF8AnJ03braTErBhaKnKk0qqOEU5kj2JQCK7XHHpwu0GHkwYp0qkgWvXk2wc5oOHRWKKbHO5w6LJGOrK0B2I/2FTxOAsiwGo2lP6xU7CHylMUZhIvLC+q8hZM5kVcXKQ2b95MPhHt51kH76NP0eQ0xHWgOf7SIWhph3ZZ4qr+sHpNRt6Aj1D5EKDnxTJZhN350BGv5/05TDwei7FNJrJGcwLla4GEuJ7u+6ZJuQPZB5rNIXriQ7rFi/xT79NBnP5X7rEUpEi5b3yWo00C8FHS1y+O1698UqlpBulFDn88YinVcyMomh5R17VZXdItM6dRyR3hSCjY7StSXBI13MeD37Vcsta/e09CzpFFcHbnHZoMiwF5X2/j9e8zrcFYRphY/FrWRw/mIJ61aih9trTmKx/N+CtBueisaajsPDTyIQiYiKUsx0C80SylKcPP/BYpKXLZ5NibWaE4lUcZchhCIXlIRHawtJha4n7GAA4WMgP57n3Y7d0mLqk2lKdztPyT5Wo5OpHx3nxIwmvYAiqpzhioCONKmcvAxOHMEb2N552rHUsf8wqHWBI260N/+DR3Oe5gA7X8+tTPU5h6iyiaLb0IxoWUl9OlZwz77mJsok4UVuAE/HRnrA0S85rafFng1nSLzROkCqSggk955FiHb5nVB7Q6igUSbEIsKhJaXsE0c3M6vrsMXwXr7z+Otb/VA9tB40t+w7tHLmCCwX4Bb8vDJQqFg8RQ+5zAt+kpLZjNsoLPnlkaEytb0QZ4/Qjw8kyjpGOSNvNDcPPq+psSu77ijAEO0jcbtbIvdzjU0/p34LlprSJ3gd+fXfqZ0qPCmuVqoIWSJ1ULRsLarphKVRny7Tpzn/Z9Wz7ZIzdZOMUfeM2fRdT6fQbzdVP8RLKqXchPE4aKcqwAKJOYtSygK32izd6VU/FQVVGAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_018z5Fe6CqgjazFDuisGf5jr",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"best international schools Bangkok ranking 2025\"})\nfor x in r[:6]:\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CBnNyT9CSeBAFYVFhKweEr",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Bangkok ranking 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_018z5Fe6CqgjazFDuisGf5jr"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01CBnNyT9CSeBAFYVFhKweEr",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok (2026 Guide)",
+                "url": "https://blog.doris.school/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "8 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 Best International Schools in Bangkok 2026",
+                "url": "https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok 2025–2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "294 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School",
+                "url": "https://en.wikipedia.org/wiki/Shrewsbury_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "VERSO International School",
+                "url": "https://en.wikipedia.org/wiki/VERSO_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "American School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/American_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 5 International Schools in Bangkok (2026)",
+                "url": "https://international-schools-guide.com/insights/top-5-international-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "140 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "10 Best International Schools in Bangkok (November 2026 Rankings)",
+                "url": "https://www.international-schools-database.com/in/bangkok/top-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "192 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_018z5Fe6CqgjazFDuisGf5jr"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_018z5Fe6CqgjazFDuisGf5jr",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBCbKDn3bzd2qgN/uhoMQFPDrprS6QmXakOsIjB5EjTOHYCRvp80zq9DtnGQxmMucNrw3AcJ3fvHVjIecJXN2IT+2zqRkBCiirPmhecqEpLrXKNbiIoAEna28VN2Za7cbxgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_018z5Fe6CqgjazFDuisGf5jr/cell.py\", line 11, in <module>\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_012aQeRTrnQt6kZip1uNE9H8",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_012aQeRTrnQt6kZip1uNE9H8",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"Best International Schools in Bangkok (2026 Guide)\", \"url\": \"https://blog.doris.school/best-international-schools-in-bangkok\", \"content\": \"What\\u2019s the best international school in Bangkok? There\\u2019s no single \\u201cbest\\u201d, each school offers different strengths. Families often shortlist **Dulwich College Bangkok, St.\\n\\n# Best International Schools in Bangkok (2026 Guide)\\n### Best International Schools in Bangkok (2025 Overview)\\n\\n| --- | --- | --- | --- |\\n| Dulwich College International School Bangkok View Dulwich College Bangkok School Profile  | British, IGCSE, A Levels | 2\\u201318 | Follows the English National Curriculum with IGCSE and A Level qualifications |\\n\\nAndrews International School Bangkok View St Andrews International School Bangkok \\u00a0School Profile  | British, IB Diploma | 2\\u201318 | Offers the English National Curriculum through to the IB Diploma Programme |\\n\\n### Other International Schools in Bangkok\\n\\nBangkok has a broad selection of international schools serving different curricula and family preferences. The following schools are also part of the city\\u2019s international education landscape:\\n\\n### Other International Schools in Bangkok\\n**Harrow International School Bangkok** \\u2013 Offers the English National Curriculum with boarding options and co-curricular programmes.\\n\\n**International School Bangkok (ISB)** \\u2013 Combines an American curriculum framework with IB and AP course availability.\\n\\n**Shrewsbury International School Bangkok** \\u2013 Provides an English National Curriculum pathway from early years to A Levels.\\n\\n**What\\u2019s the best international school in Bangkok?** There\\u2019s no single \\u201cbest\\u201d, each school offers different strengths.\\n\\n**Which international schools offer IB in Bangkok?** NIST, St.\", \"page_age\": \"8 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"Top 10 Best International Schools in Bangkok 2026\", \"url\": \"https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok\", \"content\": \"**International School Bangkok (ISB)** \\u2026 3. St Andrew's International School Bangkok \\u2026 4. **KIS International School Reignwood Park**\\n\\n# Best International Schools in Bangkok for Expat Children\\n## The 10 Best International Schools in Bangkok for Expat Families\\nThe schools listed below represent a cross section of the best schools in Bangkok for expats, selected across curricula, age range, and community profile.\\n\\nInternational School Bangkok (ISB)**\\n\\nISB is one of Bangkok's oldest and most established international schools, consistently recognized for its academic rigor, extensive extracurricular programs, and large, diverse student community drawn from over 50 nationalities.\\n\\nRegent's International School Bangkok**\\n\\nSt Andrew's International School Bangkok**\\n\\nKIS International School Reignwood Park**\\n\\nGarden International School Bangkok**\\n\\nAustralian International School Bangkok (AISB\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSxQgKEAgUGAI4AUIIdGhpbmtpbmcSDH2cjo/x9bmW0UhdARoMcM6oE1xpVhTRksd3IjAb5z3Wx3XnOlwuL8yvssO0J0c8UJF557BlKYZEP/QV/oVyDyQ+XN/ERlkGddtiIcYq4gcXOgWvyoeoyn1sRvIhjYYSodwNBEqakla/3K2kTkePWYMS8Z9YW7aHsaqFkgaOVIv1JHN15MsKOhx3NtFd0Yj8VCAcAetPXnsfyTDcuScgsnWZc526i2yjGIYAd12sbgmKrjLCe1MOOT8T6gLVII7GVg0qL2EJo+iOjw17S2bkZe+5iYEkMOt5Fe1iUiPfGlEf5Hmx75bSWenmDBO1nv0ES05kYl5ca4/VDJta05TaL5KPI1xInGk1pEDHpWWt9GoAdTUYBME0JRJpK9lfZB85XdxWRBPqWtLku3V07aVcrLZ4kJfd2NWf/kHITFfSqtAQNRr/SckJobsm8HaLR4ucxu7fWPpLCShaBljrH/9ADR5uNMEhZfZu163ENSDAeT3DSCuD7ZGbdQLhD0E2EH41oiuLZvB5L7/YylTYkO2v8qVFCccbd+wM/66iCKzczvwRFCbUbwGa6/9aBZAHPWt0eFSsmWccZpiUTDMQi5kqP2zG9+FxLewD21OtNDrzrYlih0xUEad34e2FjboAGm4uLY+9w1nC+HxLYb1LU8nYAxAf77TVG8jV3VqLAZmTSUupmvJTWfFoE+KiYF2atOJNaK6Mo9N2znk2xoV/g744LWJVUhz9me4RBPh+/e6Z4fSv/JFd5CRvT7/RpydBXUn/QUtp8KHu9ZiAj2Mwl31RPTV5mnEG4yKpBMeONvh4jLctMdp39pMWu9KZJCwcHV1cnfGEpivTHq93dFVdg3bWRlIxHFm9bE6zBRipObBOQB/qHi3yPTN3af7hHP2ath6jzEvbafuhGwHE+do5EN70NkNmJFvVllHCqdzTZLUf5rMXjKEEkQB70uIldpsT6KfAxknHwneLsZ7I5cmNcjuqM/Ovc2VxBZozj0ilalBETqy9uWTxFll7X0c5afstjx8WBLPOqf0/gr1PUoh7fPvi7zIoTnLN4N5THqtCfWcilQa9t/5oySfer9qcsjJ59EV4QTuK+/3pEI1Hky21h/GUVCRODste3k7HU2ND/pjXFtjzs4QeqnYQCAgYZtsA0EimjlrNWXI3TXOxY+reV4SF28kaWF9IeeI7O9lEgvVXM1kHxIhISqyAiRhnCGGp839PDOeQZcGghyngR4fLPcsGZOCrqxJxuY4EmWG9YmBN9S6D+EjeHn3iXtrCf6x+Afh2ubyRugnYYMFeytT8IijocOqbTdN6VscNN4xf2ybWWPdFeTil4XHD1nU+OGC1+RnNKNKNleTKOrkiBgm4hxS8KV/M93uNEVAST/eJaSj3HoThUToC/7b2lImgHYpDUm7MocRRyQwGoCbn0ipWgOiPn30rGAE="
+          },
+          {
+            "type": "text",
+            "text": "방콕에는 \"공식\" 국제학교 순위가 없습니다. 그래서 아래 5곳은 학업 성과, 역사와 평판, 인증, 교민·주재원 선호도를 기준으로 가장 자주 꼽히는 학교들입니다. 순서는 순위가 아닙니다.\n\n## 방콕 대표 국제학교 5곳\n\n| 학교 | 커리큘럼 | 특징 |\n|---|---|---|\n| **1. Shrewsbury International School (Riverside)** | 영국식 (IGCSE / A-Level) | A-Level 성적이 방콕 최상위권이고, 옥스브리지 등 영국 명문대 진학 실적이 좋습니다. 짜오프라야 강변에 있습니다. |\n| **2. International School Bangkok (ISB)** | 미국식 + IB / AP | 1951년에 세워진 방콕에서 가장 오래된 국제학교 중 하나입니다. 논타부리에 있는 넓은 캠퍼스와 시설이 좋고, 미국 대학 진학에 강합니다. |\n| **3. Bangkok Patana School** | 영국식 → IB 디플로마 | 1957년에 세워진 영국식 학교로, IB 성적이 우수합니다. 다국적 학생 구성과 균형 잡힌 교육으로 평가가 좋습니다. 위치는 수쿰빗 남쪽 방나입니다. |\n| **4. Harrow International School Bangkok** | 영국식 (IGCSE / A-Level) | 영국 해로우 스쿨의 자매학교로 기숙사가 있습니다. 리더십 교육과 전인교육을 강조합니다. 위치는 돈므앙입니다. |\n| **5. NIST International School** | 전 과정 IB (PYP·MYP·DP) | 수쿰빗 도심에 있어 접근성이 좋습니다. 비영리 학교이고 IB 성적이 꾸준히 높습니다. |\n\n## 함께 많이 고려되는 학교\n- **Dulwich College Bangkok**: 영국식이며 2022년에 개교한 신생 명문입니다.\n- **St Andrews International School (수쿰빗 107)**: 영국식에서 IB로 이어집니다.\n- **KIS International School**: 전 과정 IB이고, 상대적으로 규모가 작습니다.\n- **Regent's, Garden International School**: 영국식입니다.\n\n## 학교 선택 팁\n1. **진학 목표**: 영국 대학을 생각하면 Shrewsbury, Harrow, Patana가 맞고, 미국 대학이면 ISB가 맞습니다. IB를 원하면 NIST, Patana, ISB를 보세요.\n2. **통학 거리**: 방콕은 교통 체증이 심해서 집과 학교의 거리가 아주 중요합니다. 수쿰빗에 살면 NIST나 Patana가 가깝고, 논타부리 쪽이면 ISB가 가깝습니다.\n3. **학비**: 대체로 연 60만~110만 바트 이상이며, 학년이 올라갈수록 비싸집니다. 입학금과 보증금은 따로 냅니다. 금액은 해마다 바뀌니 각 학교 홈페이지에서 최신 금액을 꼭 확인하세요.\n4. **대기 명단**: 인기 학교는 학년에 따라 대기가 길 수 있으니 6~12개월 전에 지원하는 것이 좋습니다.\n5. **한국 학생 비율**: 학교마다 차이가 있으니 투어할 때 직접 물어보세요.\n\n자녀의 나이나 학년, 거주 예정 지역, 원하는 커리큘럼을 알려주시면 더 맞는 학교를 골라 드릴게요."
+          }
+        ],
+        "container": {
+          "id": "container_01T1XnWKtmHg1roLD2GfiPH2",
+          "expires_at": "2026-11-20T17:50:22.558904Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19982,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1760,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5909,
+              "output_tokens": 176,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6452,
+              "output_tokens": 65,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7621,
+              "output_tokens": 1519,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 251
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

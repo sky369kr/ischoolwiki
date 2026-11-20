@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g02",
+    "type": "generic",
+    "text": "Which international schools in Bangkok would you recommend for expat families?"
+  },
+  "started": "2026-11-20T16:49:35.524Z",
+  "finished": "2026-11-20T16:49:57.129Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Which international schools in Bangkok would you recommend for expat families?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXKCbN7hemQiosCMrLJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS9AUKEAgUGAI4AUIIdGhpbmtpbmcSDNWbjRgIkXmWFPgcGBoMctU+wAZoi1Oyx0c9IjBBrs6ptPXU4Vz/FZ85jPF/4mpXCAgwf0m4HM3YuFsUne3OSf3FQAim/L9N7oSIvKgqkQXf6CEf0S9z6Osw/jCE9XxRyLsv/lDorW3eYyO6hLns/8DUObar9D34nnxkhJxHDnraskxQL/xGA5iwBpnMVcsc6NRXVPHKupPQdDztoSG5T1TPaDMh9xaNYkde2pRqQlhQRqIG+81k4fSE66MRKp1BR/tEHj3lmEiR+7ijpfQpsWcUuu9KpRFc9hq1jvqyoW2ZwQIQ78chMFkHkjRT8lrHP2VI5vdyTMbxxNwhzLt4Mbq7rJfRUsNGwGy/JWPLLA7DFqQfsCeOgOfF2056t8fMWzlzZf1fOiSw7t3wpaPS/NUXaqZmSQxh4ewwMQWlI+4y5DqDUO9vsbJTFi68RQKLBKB9q/DSqhlmu/J1DD3CTQZ5KkQAv9OXikTuLYU8ZY8cAM4PlKyZC0cODzRS6DdXh1pcqIObfxBFHW7Zj8kaIeAgK25ZgwrSSMa6FnCHWPLor0AKDcO8iS3L9fLDs3Ps3aXKAQItnQu1GVpFhwa7sNJ1sg7xRgEIHrix8elA09QD9cGU88MvTbDjQMtAbeVfr1Id/GAQ1UEYiq9iNPbdF72QJUgFRPu7m1HwMM35BvLOiTQTFLuaeFvi8QvKyn+Q/g7gyaSxZ6sr6P7g05s1XibQl4a6awmewu8vUc3GAcuQUH6Rt/2iPgcVHBkEqiOp8q02B3Irhkz0ejN8uCfvZkf4bz+yZv4+jMCTNd9+xC4oPtMot1HiAl6O2S6tiECAu1yeHbiqriHLgrKg6skG5HBeDKi45ssHJeIfXzlsyZkGFjnezUShhLHmRCxOxduC9bZq9CvLq4Lb13WiCGY4gDoccf6ylcqvqPwArJ/4N3oTXpLcLZk7BIxzdDYc/JOQK651FE5OjfD5cElrTgI0/4YYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011QUmq8mYfeeN1AziPt6QsJ",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"best international schools Bangkok expat families 2025\"})\nfor x in r[:6]:\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01BhapD41joHY8usUSf5EkM1",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Bangkok expat families 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_011QUmq8mYfeeN1AziPt6QsJ"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01BhapD41joHY8usUSf5EkM1",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-expat-guide-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Bangkok 2025",
+                "url": "https://alestriaproperty.com/blog/a-parents-guide-to-international-schools-and-education-in-bangkok-2025",
+                "encrypted_content": "[omitted]",
+                "page_age": "438 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Bangkok: Complete 2025 Guide",
+                "url": "https://expatsthai.com/guides/international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok for Expat Families",
+                "url": "https://thairanked.com/en/rankings/best-international-schools-bangkok-expat-families/",
+                "encrypted_content": "[omitted]",
+                "page_age": "226 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Bangkok: Full Guide for Expat Families",
+                "url": "https://www.superagent.co/en/blog/international-schools-in-bangkok-full-guide-for-expat-families",
+                "encrypted_content": "[omitted]",
+                "page_age": "158 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_011QUmq8mYfeeN1AziPt6QsJ"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_011QUmq8mYfeeN1AziPt6QsJ",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDMkfLLtvaigQ687IgBoMM+U8YKBBdDtkPLtNIjDJ7Sei20xfJv4NJPDRtBuBeaX61509uLY9uQr/PbhxkKiCJQ6U3ntVjkCzXDYT94gqEjajmyifbx1Qo6dSFADIWwA9uhgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_011QUmq8mYfeeN1AziPt6QsJ/cell.py\", line 11, in <module>\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_012rEhuxANdnCePjFzMEe4fJ",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_012rEhuxANdnCePjFzMEe4fJ",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"Best International Schools in Bangkok: 2026 Guide for Expat Families\", \"url\": \"https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide\", \"content\": \"**It is a particularly strong choice for families from North America**. \\u2026 NIST International School and International School Bangkok (ISB) are consistently ranked among Bangkok's top international schools.\\n\\n# Best International Schools in Bangkok: 2026 Guide for Expat Families\\n## Top International Schools in Bangkok for 2026\\n### NIST International School\\nNIST International School is Bangkok's leading IB World School, offering the full IB continuum from PYP through MYP to the IB Diploma. Located in Sukhumvit, it is ideally situated for families based in Bangkok's central business and residential districts. NIST is known for its strong academic results, diverse international community, and outstanding co-curricular programme \\u2014 particularly in arts and sport. It is consistently ranked among Asia's top international schools.\\n\\n### International School Bangkok (ISB)\\nInternational School Bangkok is one of Thailand's oldest and most prestigious international schools, founded in 1951.\\n\\nIt is a particularly strong choice for families from North America.\\n\\n### KIS International School Reignwood Park\\nKIS International School Reignwood Park is a well-regarded IB World School located in northern Bangkok.\\n\\nIt is a popular choice for families seeking a smaller, more intimate international school environment.\\n\\n### What is the best international school in Bangkok?\\nNIST International School and International School Bangkok (ISB) are consistently ranked among Bangkok's top international schools. NIST excels in the IB pathway while ISB is the leading choice for families following an American curriculum.\", \"page_age\": \"24 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"Garden International School Bangkok\", \"url\": \"https://en.wikipedia.org/wiki/Garden_International_School_Bangkok\", \"content\": \"- 2 Akart Yen Akat Road, Thung Maha Mek, Sathon, Bangkok 10120, Thailand Thailand\\n\\n- Type: Private international school\\n\\n- Accreditation: Edu Development Trust, Cambridge Assessment International Education\\n\\nGarden International School Bangkok (\\n\\nGarden International School Bangkok was founded in 1999 to provide a British-style education to both expatriate and local families in Bangkok.\\n\\nGarden International School Bangkok is accredited by the Edu Development Trust and authorized to offer Cambridge International Examinations.\\n[[7]](./Garden_International_School_Bangkok#cite_note-7) The school is a member of the [Federation of British International Schools in Asia](https://en.wikipedia.org/wiki/Federation_of_British_International_Schools_in_Asia) (FOBISIA).\\n\\nAs of 2025, the school enrolls approximately 390 students representing over 40 nationalities.\\n\\nRetrieved 2025-\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS4wYKEAgUGAI4AUIIdGhpbmtpbmcSDKysehzGCzlOyV3LIBoMmkLb/P8/4wiSjiYaIjCQDMATtwqHa4txU+p6olegB2iWQKwXJwI1aCR/rNJIWuBW6asiWbrCwJb/FYBmLagqgAYlbJ/d2X7qbKBUrd1+Rvfypm/cvydJ9Wh1Z9gYiHdenIuW0sBQoancukA5++1rDk4ERKxeOiC9jJCF1syTkKI4Hh9mwUoyITOGSknsmNGNqJYasn2UqSnq2b1MbMY+E8wHEp42jLEmCO54l6bvJydejJ8UejWPXxiPTuznIxgdCSm5zZ9vqjOg263r2ijESZMRo3WLQJJ3Ilm+cOk/9IDxaq1bSsvKpTwY55RLJBdNJ7Vx4r0QYQQzuqaBDvGMsBuH5oz92t4euxQcgnHl+/PsG5Md3Y8JVwvp5RXfgCw7neYc1c3lb+K11icvKNBtkMhSiXGTbvjT6StvNSCUVToSXaT8IO+0zJX02JbXL3aH+h6PyQp/4EsJYLWEKynYCWy+o3wh0EA60iPhPaooxZVDe1QqxhFww+tt1jTJw07DYhWD4Z75Dp/Pjgd7TWkAP4O9ZvxrvsDTBh5qor5X9PZhzHANe/BVdoZNkt4luH826dk1LDbwTFEgin6WP2eDTI+sgB7WI6QmDdKPIEf7L//DlHe+ykiihKsWV3lPhpd1I6h/FQxrXrhokchXtzE4ASsqomK/1kzpbTqp3XF3mdEAWJH59bfRBwtfR5EcwRTIJW4M2xOQH/3JAWb23BDTHZgvYRRRlbSy7wiPRjdILIV/ERbqvFzwODKeKj+M9FhS2oJX+g5ErFalLSA3NofwUKCH1kPXqsn58W5131t3RkRkhpTyIuT4yfYTB2JCSi8iNeTxZUSwn6iSnJape3ZJAlkyXAS6Xf6VSsQAXUfk3lZWXp2TlfHqdm7l6KWk/evPdPxh0XtUsQn0418irPnh6Fn3GinZw2ubNO4v7f8q4YsJDAlIueWT1rP7Q/XO0bUwHu4ZnvaDBdbrgynuI96Ewg1sCGld2kmMD4a6fsh02Qieqktfw7Anb13l27cAFti6cyv4KE5nYNl+wQI7UWdp0Mu0+4EZK0UQa64pwPLf9XqiLRVsl+h2/zg521OZGBvI1N93St6OmeKJSXXcPbZELZMYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "Bangkok has more than 100 international schools. The best one for you depends mainly on which curriculum you want, where you'll live (traffic is a real issue), and your budget. Here are the most respected options, grouped by curriculum:\n\n**IB (International Baccalaureate)**\n- **NIST International School** (Sukhumvit Soi 15): the first IB school in Thailand and the city's flagship IB school. It offers the full IB programme from primary through the IB Diploma. It has a very diverse international community, strong results, and a central location. It's not-for-profit and has long waitlists.\n- **KIS International School** (Huai Khwang / Reignwood Park): a smaller, close-knit IB school. It suits families who want a more personal setting.\n\n**American**\n- **International School Bangkok (ISB)** (Nichada Thani, Pak Kret): founded in 1951 and one of the oldest and most prestigious schools in Asia. It has a large campus with excellent facilities and offers both AP and IB Diploma. It's especially popular with North American families. Many families live in the gated Nichada Thani community next to the school, but it's far from central Bangkok.\n- **Ruamrudee International School (RIS)** (Minburi, east Bangkok): an American school with a good reputation. It's somewhat cheaper than ISB.\n\n**British**\n- **Shrewsbury International School** (Riverside and City campuses): consistently among the top schools academically, with excellent IGCSE and A-Level results. The City Campus serves primary-age children and is closer to Sukhumvit.\n- **Harrow International School** (Don Mueang, north Bangkok): a sister school of Harrow in the UK. It offers boarding, has a strong leadership and co-curricular focus, and is a big campus far from the centre.\n- **Bangkok Patana School** (Bangna, Sukhumvit 105): the oldest British international school in Thailand. It's not-for-profit, combines the British curriculum with the IB Diploma, and is known for its very strong sport and arts programmes. It's a popular choice for families living on the eastern side of Sukhumvit.\n- **Brighton College Bangkok** and **King's College International School Bangkok**: newer schools that are growing quickly. Both are linked to well-known UK schools.\n- **Garden International School** (Sathorn): a smaller, central British school following the Cambridge curriculum.\n\n**Other options**\n- **St Andrews International School** (Sukhumvit 107 and other campuses): British/IB, mid-range fees, friendly community.\n- **Lycée Français International de Bangkok**, **German School Bangkok (RIS Swiss Section)** and **Japanese School Bangkok**: for families who want schooling in their home country's language and system.\n\n**Practical tips**\n1. **Pick the school before the house.** A cross-city school run can take 1–2 hours each way. Most expats choose the school first and then live nearby: Sukhumvit for NIST, Patana or St Andrews; Nichada for ISB; Sathorn or the riverside for Shrewsbury.\n2. **Budget for the full cost.** Top-tier schools charge about 700,000–1,000,000+ THB per year (roughly US$20–30k) for upper grades. On top of that come one-off registration and building fees, buses and uniforms. Check what your employer's package covers.\n3. **Apply early.** NIST, Patana and Shrewsbury often have waitlists, especially in some year groups.\n4. **Think about your next move.** If you might move again, the IB or a British curriculum transfers most easily between countries. If you're heading back to the US, ISB or RIS will make the switch easier.\n5. **Visit and check accreditation.** Look for CIS, WASC, NEASC or BSO accreditation, and talk to current parents. Expat Facebook groups like \"Bangkok Expat Moms\" are useful for this.\n\nFees and waitlists change every year, so check directly with the schools. If you tell me your children's ages, the curriculum you prefer, roughly where you'll work and your budget, I can narrow this down to two or three to look at first."
+          }
+        ],
+        "container": {
+          "id": "container_01TAxUW3mKuqZm25warSiSLi",
+          "expires_at": "2026-11-20T17:49:41.915520Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19912,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1646,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5903,
+              "output_tokens": 167,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6438,
+              "output_tokens": 65,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7571,
+              "output_tokens": 1414,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 109
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,609 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g05",
+    "type": "generic",
+    "text": "Which international schools on Sukhumvit Road in Bangkok would you recommend?"
+  },
+  "started": "2026-11-20T16:50:39.024Z",
+  "finished": "2026-11-20T16:51:07.488Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Which international schools on Sukhumvit Road in Bangkok would you recommend?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXPt71y3McE7pHQToeg",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS1wkKEAgUGAI4AUIIdGhpbmtpbmcSDOty44fManiuMNpABxoMF4iV/m7VTSVUhiJxIjBc+bffiA79GmX8HVws2ujp5wIMASoDqI3Gb/iBDsq9mxws/xa2/hpkIKTwBv8kj4kq9AiMtzt20pVAiD8Vpr9xALkBNDF2phU9NAyKe3BOShG1ZKr6panWYKXmgVflg/TE+WnoD6wScjJCXaCac67uCuhzxgSChwPGAisJid8gT84Eln/kJQ1h84aKa/Odlw9tHSv1P4jvZxtvT39H9guYWehmT6+cpN6hwrRjVmiO05kEGsoYKkhdanzb3cESkMHa/AwshsUhgJ9DY9UK2qxqyaGbAnzMYK3x9uBc7y01iZ6uZvSMUOhKmD90apcru8PXcpt+GVgPQ4cMcWXv+ybSkp9iuubsWrA9LImYBviyGOzM7b7LFBC7EJI1I6Um2lZj46WUBhObb5ae0JpfbNvTouQvF8+bytH6v5khcOsJAKYKJn/9ocxJBYZOoLSQkHQNqRMsE0sfjmejRH6v+81Do++qWIs/XcvNRL968EkJiDxejmwV6XUU6qjgNXP6/lCNsZ/pgOyH1DaAmDGDjjDCG8ofbTJB2V+hZ9UjjgfrRkSgyJuMEGm6CVFfEEg1qvEgQqKxBKSG3oYt2/bFp7Xe1W124L5nkaZMla2aiAvx/6TH1pawNyVQnN3CxYy6OI8I1OMv+IQKtKwN8JNc/IMrUf6BvJ3aPu9j0KJvag/BU5IacffuXOBbEo8QMUFFJWoHTjdhsjiFlmGkUSRR/b7318Wn0hogCMnKmeAfsYX71d9uMsI/JDpMASHGL3pZbTKgTAyez08KNuyqgjY69gwRiUDZaZNvZPSyHJT/rHiBOrl8685RkVAenKQMB3yUA7wZbnt5rYM4fMKjlpDCqKhbN2R+Ghp90+kQptQfvg2zmiHiElPT8ODC+JrBTZ+yM7Z2YuxBIrtj/+j0xOlZcHIrwaVbA6EEn+MBw98e/x/8VNGdU21o5CK2tOPNlYIo86C++hCBOrliVXxnNurv2OWS5ShoVLyfAIbOYzM/yEEQorY7H8gz873aTBBOzFDNxfrIerEbR/GHuIXHR+NHGeWUXp6VTHtSQqDos3GWcWJV0FoonnQmFYktxQXKKeSDdV7b/hQFhH3r5Kn5hDBt8JL7+thmLOOpH5my/euNUannXH1y8Y+kk7BSeSal9shFMeGRN0Uvhurk7sYC0oN409wnKnb0P7QPQ9Wk7jXd3EhJNKdjg7lVropQHqHs0q8t7Hjj5/C1pJVj+QUKZ7ycxzoBPRmMD7dzlH4RTCXPPcgLyoCuAE7wNmWwO0c20zhk60olqfGzZfcPIiHSoxjgzKqnXebEiT1JwWL+vFVdFl+KaLT4LSG85CE7LZ7LDrNJIuncJKbT+o85tdGf9OlXdufdQOqxZ6ZpEvKiZGVtGTnJW1tBJhUOpnGsJSME/+m88WOU5FUeWX6b+X7ap4lcYGfrL6pXz08VLlhbCr7CtNmrrmR7LAiJ0N86107bSB+qiNs+aqH2NzpnJ3GmC7ce6qV7kUeS6l77Y/89lHgBtkXKvM4O4IcdLjOCfNiPBj7mbu37sxWz11QVQgntAxo386LVcNab+QCI/dfHFmwRVzljRMisZdDiR2oYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01NhkGW6gzTMCSY1twyf47GR",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"international schools Sukhumvit Bangkok\",\"NIST International School Sukhumvit Soi 15\",\"Bangkok Prep Sukhumvit 77 campus\",\"Bangkok Patana School Sukhumvit 105\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    print(\"==\",q)\n    for x in r[:4]:\n        print(x['title'],x['url'],x['content'][:300].replace(\"\\n\",\" \"))"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01UhFfRq2uPrXHqGErqkwBpv",
+            "name": "web_search",
+            "input": {
+              "query": "international schools Sukhumvit Bangkok"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01NhkGW6gzTMCSY1twyf47GR"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01UhFfRq2uPrXHqGErqkwBpv",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "List of international schools in Thailand",
+                "url": "https://en.wikipedia.org/wiki/List_of_international_schools_in_Thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok - TutorChase",
+                "url": "https://www.tutorchase.com/blog/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "845 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "American School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/American_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Wells International School",
+                "url": "https://en.wikipedia.org/wiki/Wells_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Andrews International School",
+                "url": "https://en.wikipedia.org/wiki/St._Andrews_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Singapore International School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Singapore_International_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Home",
+                "url": "https://www.australianisb.ac.th/",
+                "encrypted_content": "[omitted]",
+                "page_age": "50 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 International Schools in Bangkok by Curriculum - BLT Bangkok",
+                "url": "https://www.bltbangkok.com/special-content/50141/",
+                "encrypted_content": "[omitted]",
+                "page_age": "36 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "How to Choose an International School in Bangkok: 2026 Family Guide",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-bangkok-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "79 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01NhkGW6gzTMCSY1twyf47GR"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01NhkGW6gzTMCSY1twyf47GR",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "ErkBCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDAUPG4Qfgbjqe1jnLBoMrAlUrbHwEq9O5X0GIjBNGhIqGyEC+1r5wmvlhnvYjPvNkqpr8OrZmb8vKtR3Yf51RXqqfoN7TKGiEt8WrPEqPRrOZ8J7QeDWzfSmCRNPVOeKXYy0S7s9lQyD7wl8kwZo7U4A3PfVKxLy9Qgo3TmEu3ALGcUH0EvgSNTVJAYYAw==",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01NhkGW6gzTMCSY1twyf47GR/cell.py\", line 14, in <module>\n    print(x['title'],x['url'],x['content'][:300].replace(\"\\n\",\" \"))\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    print(\"==\",q, type(r))\n    if isinstance(r,dict): print(str(r)[:500]); continue\n    for x in r[:4]:\n        if isinstance(x,dict): print(x.get('title'),x.get('url'),str(x.get('content'))[:300].replace(\"\\n\",\" \"))\n        else: print(str(x)[:300])"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01SJdUyW94QSdMHs1L38xzJo",
+            "name": "web_search",
+            "input": {
+              "query": "international schools Sukhumvit Bangkok"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01SJdUyW94QSdMHs1L38xzJo",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "List of international schools in Thailand",
+                "url": "https://en.wikipedia.org/wiki/List_of_international_schools_in_Thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok - TutorChase",
+                "url": "https://www.tutorchase.com/blog/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "845 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "American School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/American_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Wells International School",
+                "url": "https://en.wikipedia.org/wiki/Wells_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Andrews International School",
+                "url": "https://en.wikipedia.org/wiki/St._Andrews_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Singapore International School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Singapore_International_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Home",
+                "url": "https://www.australianisb.ac.th/",
+                "encrypted_content": "[omitted]",
+                "page_age": "50 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 International Schools in Bangkok by Curriculum - BLT Bangkok",
+                "url": "https://www.bltbangkok.com/special-content/50141/",
+                "encrypted_content": "[omitted]",
+                "page_age": "36 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "How to Choose an International School in Bangkok: 2026 Family Guide",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/how-to-choose-international-school-bangkok-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "79 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01PLDu2XB5rmDPfottCfQrCK",
+            "name": "web_search",
+            "input": {
+              "query": "NIST International School Sukhumvit Soi 15"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01PLDu2XB5rmDPfottCfQrCK",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://connect.amchamthailand.com/list/member/nist-international-school-1549",
+                "encrypted_content": "[omitted]",
+                "page_age": "261 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Contact Us - NIST INTERNATIONAL SCHOOL in Bangkok, Thailand",
+                "url": "https://www.nist.ac.th/about-nist/contact-us",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School Bangkok",
+                "url": "https://expatsinbangkok.com/listing/nist-international-school-.html",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School (Fees & Reviews) Bangkok, Thailand, 36 Sukhumvit Soi 15, Klongtoey-nua Wattana",
+                "url": "https://www.edarabia.com/nist-international-school-bangkok-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "50 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School in Bangkok",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/nist-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "18 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Anglo Singapore International School",
+                "url": "https://en.wikipedia.org/wiki/Anglo_Singapore_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St_Andrews_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Y5GiGADckWMYK2h7yT4CL1",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep Sukhumvit 77 campus"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01Y5GiGADckWMYK2h7yT4CL1",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory and Secondary School",
+                "url": "https://connect.amchamthailand.com/list/member/bangkok-international-preparatory-and-secondary-school-4790",
+                "encrypted_content": "[omitted]",
+                "page_age": "261 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Primary Campus - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/our-campus/primary-campus/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1178 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Campus Virtual Tour - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/campus-virtual-tour/",
+                "encrypted_content": "[omitted]",
+                "page_age": "890 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "PREParing for a greener future - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/news/preparing-for-a-greener-future/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1612 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Contact us",
+                "url": "https://www.bangkokprep.ac.th/contact-bangkok-prep/",
+                "encrypted_content": "[omitted]",
+                "page_age": "182 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Our International Campus in Bangkok",
+                "url": "https://www.bangkokprep.ac.th/our-campus/secondary-campus/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1201 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory & Secondary School",
+                "url": "https://www.canchamthailand.org/corporate-bangkok-international-preparatory-secondary-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://bangkokprep.wixsite.com/secondary",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "List of international schools in Thailand",
+                "url": "https://en.wikipedia.org/wiki/List_of_international_schools_in_Thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01UufyisNC4QMLJMuuiJSTYA",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana School Sukhumvit 105"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01UufyisNC4QMLJMuuiJSTYA",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "73 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Contact Us - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/contact-patana/",
+                "encrypted_content": "[omitted]",
+                "page_age": "72 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - School information",
+                "url": "https://www.teacherhorizons.com/schools/asia-thailand-bangkok-bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "613 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.canchamthailand.org/partner-bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School (Fees & Reviews) Bangkok, Thailand, 643 Lasalle Road (Sukhumvit 105) Bangna",
+                "url": "https://www.edarabia.com/bangkok-patana-school-bangkok-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "19 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School, Bangkok: Fees 2026/27 & Reviews",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "72 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bang Na District, Bangkok Thailand - Apple Maps",
+                "url": "https://maps.apple.com/place?place-id=IECF8C7AB3C72CBA",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.bkkschools.com/bangkok-patana",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "American School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/American_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01DPfsE1sfpvwjikbpf36AyL",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Ess2CioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIHUVehA3AhHLQurUxoMspq1mKj92fwFN+yvIjBjb76pUiY4ma1fv77VWVI2QXh+P+ck1hTzDQzxlmmZ8+HGUhR6mtFhM1cbI8qDZSIqzjX6XXuw+vIHEIdU4h7F/ixpJz88REgEtk8PVoK0ntJ6Y2o8f68rwpM3T18nt0C/yLh8LrwrIJeTN8V9iBQFqOMTOk9PnA1m0HYpCJBSOdNeQvAjPKpn8ZVj6kXe4juwebuC5wjzDdzpymFXIWec6SFDm+CGb5he9MsEmomUwkUPu/bhDGESQ8t/YMgfxd9hIM1lgxya/81+X8JqD0kTW1k0JBaDBQDOmlMcxg1eSt2bKIcm/uvRV7BaKXXJCDtyQwocPu4ciAHASgFzRynvRiDVdQ8LulQtnP60UoGQOgWhC7VMh2D6sDOYC4Fp8hxzKbu6aBFQFT93npFTQLu80akwmtiv7XGkMz4p/sfR7PWUWgNKi7LFouauO99FULZzh317gxIRuWAJ5GuVgow+c2kAGTzsI7YZQK8WKIs9y3YJbwQ/eOSST5fyFBbjIxntaE3UluRb3surwXoykIpxCdgixF3WkShBv84iILAj8ykWODctqoaq5tQ6HeXlkfDSTVEcU9EAGiBDQ1BD4iO1/QxfqCXHhJQe0Wko/AAAwoqoNRte/K3BiWmNB520dXVQB8k8GYg6mZ/qfkUlW1uvERQcTtAWzjFl/MgVWDcRaZMUmoED5XUIyu1OL62Q9NC6TCfzkLf52VhPizWiA1pJ4cvYX8wXOQZzAHG7L1pXg3/qgJEbN3Ym7QxQ3MQXkXXhkHTcrnKi2b/QCbji8yjVWcRWt7AOPwklvTbvS4f+CFt7fnA8P0BKy66AWhzrBOcvaiyiELs2DFJqucVjCcGXSABgs6qKqawf5W5K4oqwz+a9BL9MR+UFKTrIEIfv6KwkiYm+2QQU53nn6LCIyrBhzvDvp+gw1o1ReAcUfVyYE23RAIRUEJanZidcmWdG6wwxX4Ua8bvk3cgThCUsXENMAJxQZGkKuvIbCAgZaDIO7edkuJkFA+Qhg7puXWDVlnWN/p++Dmf2V3CMHTmaNr1uWS413Jkuj5meqq0mmzaK2bRHYhwoz2ubONFgvO+vGk7LCQ5FPboyvjFTC5zzqkdUKe4u4ZI5YK4Nu5/Ttgmim9IxqaVFTk5eb+xucZa6Ycs8M2CQdITzeZ5XfV5xAOg9x0L1sKeaa2Sb+Ea9Xvokv9WfCUc81Ot3XEuRvMaBZWZWCHmIp2NNS681WdzljF45zBkJ/wcpNkiBPdtzJfPTOZWyzI6IT7WiOkDBXI17WCMi1xAwgFgGLQlKiRYH768UNemix4XnyCNPdam5u9vJlPzcQIGCYITwadHMYllxg2q6T6G8iwGnxtiIYFfLiHExy5dsWpQ2pgI+krNVZoh0hIs4GU57v/MrD0gNUO1bOG+JQLwOWhj9/0NMqrmDxiDpammjAwlED8TbbtToF2n3nHYUcrLoR9dwl9J1br21Kva6Q5oXmLXxSCB35+2oJIOZwozPHML3m6K1bkxuA0hw4bol7+iUxe357QDqXtex/slOh3zQgcNnQaUUYu0zRC3j6vGJdHlfUO/IzEdsu3ZvbOhmsRYM3XbAd9bzb8qW8PZnn8iOIDxcihCZzWxdhcMIG412qg8lUlC5K5UEL2QcGj/hE9qS0PjlD8SCDOpIMt4+ix8eX8m2bZ9cHHlUdDeLVe85gjhaORGIuS5pjebElaKb/vjRRkvRJkieGBorjSnzzAVkGpvgPjKUvQvoWEbH3WjDHlW+0Uw2vefjEF1Pshazil4hpnuMbf7kMxKrbYKQ1Er3uxrDEix9532TGj3kVndXuXCUGfyNuezzz7+Q3wdtqJSLA+n5nsiT34k8mmDunHgoW3y1gmbUb9Nts8SZJ854N03ErfSuMNwGjd+uktTEO1gq3S19hrke4XiObHaOyNiksZjUXLt2ihNhd/40GjJIBLbdgIncZNZjISW4v800sfzbnEzj3aIA5P6UOY3hl/+oJN2xTvzUOm6gt5zGiHEyJKzzpHxi8/WsshFXb8iuN+dtY9rhLMAMOsiXzP7jjSRPnSq0kCkd38/1BL5DsS/eL/+2xFaVRQHYqX09vdhgOkdiadGS5fMtmJyPZ30mKJS95g91vr4g1A2SVnVN9qWN1Z+nJltOXjYPLDhoV2u9gawkYR9X78FjIykj9q7nolJW6YAvVUHACq/rCf1xwUquSLOf5xPNNpM2xWOpp7hJaDD+wZmsHKU/LxYblLGwKUHETJQsXFoqJIv7+uS6ZLbD1l29K6tV2PmylYQijHjorQkDzWkz6BoIlsijw+lGmTaJldvdgcj7TcZkGwRFx+kbf56hzIEH43opv6+sDhMmuYGsMIkuoCJl/55srm1SQ28y8qTlmYK29YmaEUpFk4ssbi+AETXNGWlR8FDf6bopSQrL8utuYydqZc94Tc3dwv9Z7S/eKwwamJIIiuw3zhaGddoD065DtM28N9KRix7FIFzFm0QAShxDn+f/iLO82uR2zWKFVwAs/WIsoQ9iTxeG3dfOFTUGD9Vy7g2rgI/3ViUSNmS1QoPuDMWsCqkhKR8UR36z281vWpPKLwv5DNme4qQsl2oHRLoBAunsgC+ZhbUGhyrEHQzDq5smakn+ABzPjERu1wlZk5JL4NNR4whHeIT9uHAdWi9wkPmSM1XqR9CEhYhrq/TQQj7ODyUuclOGb0wO58IEK5Fsi5/vW5EXUS8EfdKJbdG1pjq14lB+17LD8mfJbMFTR8N6woPtn+4CMtEoW/KinxLNXLKxO0YYkFhO4sqTCoJENe7n8/vwObnAIwt4FHdlc9EJJRNgL1lOmkm/zlhacTnbweKoiXojn2kl5ms1ihf03Qt1rJauT6BVno+c6z/9adRBaI/iETFlJ2/5jqrPUOWDuhXb9iooSEJvgfjHQ01P/wfDkoiGpVOuwCWmm7K7Kzh8anO5XFGglE6utyjIdnWFxPRjo3rLti2Wd56T2CNaiFK3KUJ2/hsZ92/Ud/e+ooqc0ng5ue5bjq1VErBLixJneUyaYhBOaEEhVwXmOVZPp+d3gKDj5DfJXcXrgrlA3uKtlYmGSVHH/2oFvHRt08HZSKCg3duGV/fF6Vz7tl6OLOJDDnF6wU1SHzA0/lb1i+xYqpPhcR9mJlgPC5XedHRLzwaV/HgagGB6p7amozbhzS62cap6HYtzFwQPTCP8YQMJh+mGDleiGQbKLYLKNtoleXnSq9eADwbTq2pGfTiT5msbq8evaxP7Gg8co6f/CoUUUIxfdcQ9mUc/iGwmb0d/YoTWBEvazhIF/7Y+ETNcRdmvQyIapKGzilDhh2yJQtYeG6DU3YTXdrD7YhAU+tHC9ZGV/hHunsPL3Qu6K3/Af+owsLmyoLHXaUD3aDYhqJd9G68gLezMWcyHXGt4h0dsxfB4whL7LgkGaIXszuorczc4R+bguZMdDto2S7Fbbd2ej3PiKNJTDQPi18b/zBwmXTmAMnjmBANe2rcdgItrld41e1FrohSKnDrYU1yaTKhrht7IAd8bHLvG7nX5pSJJocdw1ECW2rButt59Z5vaiHDxwKFUMaRrVhBLQVbqlKOkvFLkpQVlm33NncruDuBqJzayI3eutFFsOPPj5kKode2XToEIOwTJOz61vn8ipKHoPRgNu0NtF3JSnz+V/hfJV4/iQsIvM7igLuXFLI/NzWia3NuqfxQ1XrBbumxAuFwCQ+0VE62bvXztg7PIKVu9uGWfQFSBRQg7wEWFODRxxS3j/2T/00BSxNPjQxZxYH9W9Vb8BF71kRbBhv0pzGrUgJ8YM71re+/6te3aoX0vfCoAhjkvhcSgstXvxqQgsLQwRlf6Bv1lCegUp8aoifVh0EQWXaE0mA1Hgri5kwmDaF6foG+qnmn8AHaXosJp+k6adJcxQLPBk/O+UbnaHk96uNMvurE6KqFv253/oq8sEhS0RbUL18cakis1ZatjpoJVdW/3XtIObwG/IetjPfxImQfV5LZdLndNLvpMa11ki5eIdEZZTL296KdYQhN9iGsRHwJqnIe5aDI8nQApBtp6e2zZ6Jo9cODiaicPo7ri4uhRp7n6zqSON3/+8He0XDEf4lHaHxz7rGTv3Ytyo2k1hHJWZTM+/2xCWwZEi7eoHa6W2jcB3vU0OUncaIYBHIzHCdUApFIVaDqB/YPUM2b2O/tyiiPuQcVgcdqGhPIkJZgG6UjrQbvtaAjYlTwij8gQ1u3NKqbi4p2gdZnF31mkj75rkzWjLd6QJGMTM4a5/XX52UNLE3Y2VkSVZVASDi6RUhQKQxZDBZnA0sOa2joftAzp4CkcJ1w4tL2UAgFxhDqtVCsbj+jd5OS/hRUYuf8v6B5stGLNcxNB5gl1C8IhGSLTEryO2NcZF4XyLrbLJMm6OuJnF91EhksBjtTduya3qtO4bQT0b53oIiEzNkyhBfhk+kxzwyiiESI9sMgjOmlqgprFVPhD5hDeswknpnmEAQdBN6SeiwOuk1uxKF0bxnjRmiOVmS64nflgDD8zuMXW75wNxqgKT3f/At9fbL6ZYqX8CyoaxhiZnIkD8GMKG7wBqaQmWXClvu2yzE2ey8rHESLr62kbdCM7p2NjNTX35Z0V9WU7mNJJSveB2+48UHvMRaKtgo/cZ9C1v1ZVkFt/cSON8BIMABla0nfJ8XHXo8qph/ZdUIYUygqHfsXLHrtkRYXWFxJ0s/iC4Rs15J8wx5DX7CiFTauEjeK7oMjuN/xJ8JfaYrqJ/Du0NJ0VE9cpbJQX3KZ4mb7B+nhtqCoBhqEBV4KoykL5U4YRctnr06Ssx8kWvz4gaafsrpwFDTdzr1X0KZ65qvPK5RVtC3R6b7qNRHocG7NMndFYFeWqDit/1AEvdg1JvrLEyQxA0BpJXD6STmcdclSpsypK0Lus/8Q0jdBbMKCHfL/hZOEv/A7pgvH4qo9Y7K6BpU2SkzfTDZlofwOfJADtKmDuOT6a4K/SDog3T9jvvq8+Or7ByN/dNbofatr9loL9AShD9bpfYE7nBUgEOEwLw0qTrgsQxloRZQ7CME86CFeBANjfHc5qkLnutQG6HfjjG61/p4zU/rZf5v8ajLoA4UnuMqwkNAkH2qDg3n2lZ8VJf7GLNHu1J2yP4UtyFLGbSUV7XXn4uiIKrT83EbzzbiFG4rzqlNT6agJq9MWzwXqUV78i5hHZj/29nCC2KdDo8iMRIIDcgVBzNYuonvM/MNgeKxfcqJidL8zJf2b2omU00/rQLjC2IEJexACtQN132j10M0VcuNQVrXYJHt+TO5yBR0GL+3GUPaazU8oLQlZ1alo2y8U2c5o3x39at9PSTLzLvplPv9eGPCayQdqZanIl+RjbbSS70NNdXuZH4D7EMaZND5m189/vIRBkozg8Yre6nBIE1U1mR2JysCr0puRr7jEvugg87YWBkaYG0v66lnnUKdvx/69OxHsyLj0GaYXsw8nnHlGD9e4e6hz4MAmI43oP6tB/qrYBhO110dYcT0OLGPoUZw7B40xs+GzVQ/51w9+3KgaJ+H4SePsTsMre6sC0s/UwFZv0wxZ+8GoqfEcOTpJgjB+i7r4lhZlXl34hgdh7Z+wx+yBmVg+5ZuaB25qnAy40R0Xn8+4BI/pYbd0CA2v+TGnL/mhyMi9w+VJJ9kEbYnNzrHsT895wT+r6ulQM4Dd0OoXnioM6PCRh+uufq+LD2QV2PFqnQVlNaZJvlYc5ufjAOWUSCR4ObUwo4H8vaU5bG5Q/k6U1uILXjxc5KFps2F36B4ktmPBoFkbehPUIYFQf7EUkkRwJeuSZ/fXDXEeEeIKOYED54RkHsV67C6wjb4nYk5/zO6YWVR7KjKMlaYfTqzgV8gUXMngDPcmMo/zql42oOdWO7ndkRxH9szzbVVrMBiz2gpQHZrsq009siEKhFROfqz8q353d3biIcm/gWQTj5k/EPTTJGA6eW03EDTGWrVh0HTh8hILrvHKJqoC6Snp+aOJ/Yd8/04qH+oXRyF1b2dVfJjDwqjoD6fO8SU1Q+1IcLwiYF2RsGNQMRFVPqhzC8nM0NUR7yz2y/t+HEakF8JN5x7qPLr0N2fPbVG/G6fKB2qDkfEkTH+AeOcQaAklmhhjwG7P3KMbqfxBl0UiUYqUdh1qu6vh/GbJVTxy/UyMsRUi8rozYeaqO9b4mpQuo3sVGlYMDMXIdjR8zB4UsmwRU1kiYVuiiLWK50zN0mLRqbHItm0SMcWG3LA8P5jn1/gCvo7JNGKUeB+XO3/u/18CjfMG35sI6Z/fIed8lrPPke0EcrLD64XJK5GcgnyHkQEXvy7UjMeiuN6hrqe2kTCX24tYV/HjQCLAuuCbAWcvllXkFFjybVP9dPSLVtXcAFJcAA2StyiYc5XvR1ee3plRPwpHgSdJGXRLIJUhwtqqHiVDjUsqYgHhWzT/3nzOG0+ekD4U56TNZBVjph/rAuQmY0F1wqKYEqnEewhFJ+UA6FJpOILTZJJTHVeVXYIA2B3ntMEDkwK2ZqGVnNuw7m7zCCD8e/ZXgfi8iwCQb7ruA9eosXVM1ExIo3QuoUMOsO63r+Db2t1PNb9E4GL8ARcaRPELx5C8kvqQhzRLfrsKhcLIgWuQeMjEFJxToxk2LXtJQIC5sgyLqQWHLPwU8q5lFwQzhIGXonqPDOs/Gllv6ezLFnmM3jeqaTR4zXaYj+DhMXHRSHNFBXG4Yt+3EAiG5Kzz0USDShXvt3/6SwjvqY5oTZ4bAZdCIflRl9xzAhADzx6LDG5j1J8fmDj8Eof9bayH1VYkpZVaJVe/+cpx15iQVDxqV/P+xMD0krnUrLy/ajoWg27x3nLqYwdqShoDdgjCUhc1z9Pr9V+GYYA2kkfhlqtUCJfG//3UDcRwEpHnyMgNI21Yd71jaEsWznO7QSG4uFTS/cmp9tBGAV0CrFtOsJ69FaWrQxZ/63SU78YA1mj72E0RKZJU7xpLL+tgzin/rh41PVBwo8JVrLSGBhL9jUR2SQYz/xLt659S6gde2q8KR98T0DvjrEM4FWSGFPZaZg5kXRccYk9ObhZmb6LNWPwDz3ghRp0cDaX361aL2Aujy9fARUJYJh0dPxTJIcMCN2ijUyuJLwTugB/c01/2Ix+8vD+2TzHyKtDF8uKr0paiqZLoEahk62Ntzl56c/YTpg3BtwS37z5i01g5sonnjj1kjkN9etG/+Lc2bLYNvPhXSuduOZ1sGyqhrS+rigcMyp5l1t8vEcSYsGQRM+Q2Bb/ehuneBbzgoV4j7T+sUvJ1cy2WKptrZblOfNe1+o9V0kxdtc2mpNUlyli9t90qegWpjqD/tKku4uehgYSBTFoNwVAfSrYkjANBtXrg7B80sRz+6cH5yvC/v7tQ8PllbKzTrsP1KxTbYU11hKW5wRY0fZoYucfPcbiAujMTG7K43c+DyNgenZlzFIGVgk5F8kyOT3yTrVkpTflbhuQx1sZf1dIBCbzOG3sawsD2fTXaFUx9oJrOAKcO+a37dub5HngGIGrM5Ea/3m/ty2WtqXK9gua4QMbkViwEh8C+ofqWMx696TZmbggI93Dx2Xpy/kFO63oU4uAoTuKmA8yo8XkexHCC3T9Y/x4MNNdHwtdXFzIIqj7YlpF/HYOEst0SLMMZULMtDK6gwQ/Y/WZMGsh36S0zNNNBTVNvO9HV6f+mxBkamvSgZTzk8nW4DLyBRW7IHBON4evZZp7aLoOlcPLg/1/lFw9ESa22KmZlRPTCKoH5VmJIJlQ987J8HV3etx+ec41oTSV3tQblMvqmshTCb9N0QKT4UoXY7nIDkOGAvaRk1QWENeZ+Pp/eFsRHMotz9vNNp6Evk4EdsRQQiqAOUAHiWfbxW3SfpzZySq75NA5iZM/Cn/0dIvwbyFMnbgliU9BtQDQQ77n+paHcfnWoO18bd/VodGxkXNVyWiIIH7OdvNhrFWqdEcyYMSW7uQDsRoA+Ws73/feKtzjM4ulNV2CEPBG1WYdab2h1cHNITN/1gDRrod9i0LXiRID5VneJbrKdMfDo2igyaZVKoWnVGM5dhjG6c3a9/BHTu25t3nPvCt+pxemJzcZNa8sdXcMYRT4A+hcRskVPE0dSuimzD6di7bIoPRb7NsByRgT6UwbdDpQc8vJZDxH/HLQUgmNfyEXaeBybZKIvi6PCpLD9YXOl0QJQyGJmo2fBCsseEwN7n8qiTZ9Kw7lu31Swrql2ZtOkeHt9UYdxEsIRH5xan0qV4FQwveWshfCsQ5DppsnAilrFRjq5WFk7HeKPAp0tdieseVfQD4LEqW9Hk8EW0XMZiDwzl5rFO2+vha0bNss922XGZN3+MA5UlBhutH0e4ucJ1DXQNjWVkxWkPbyMEt6bVw102x1jaDhxm7IbBh0OQ/O2/eBfphE5DHt0khOP/Xih9/Qolf0zruj6VvF+ZB4JHrHr3eUK4woSoetPEHgOZsiFLAQ9Q3LZz/NB6IX5AOJ17vFaFH261SDov/VaSk5HwDeR157IZw4NO84wNeNOP0Yjo0s0XwK8DgDu8km4jxU6hk1j/Kqo8w6nHQ7ctdqo13jXOkAjVpI0AUo5gA1G2wv437/a3mxWJZgRmA41vKzEfhGm2Xk8QJgqZzBYBDS1zMrllepSg+Lql3BOwwfnopw+SSoplYmOM9OzUyolk2u0DUfvOgZa2pc0M+eUDnbORA0xUizOxJ6dV/cn/50gwHEYwfGeXzoefG2SdOS28an4eb1/DJm4IeD4nC5UGrntqR41fEKMhUd6mxOc6hnGFX56gd9YjSiUweZ+dGvWchNvCdle/jCgkFhMLoarMJEZSRcaTTXGipcqiuFH3eG7MwcIU8w4DbRnSrWgGKiox5iKdWNCL8YMbrwPHjBUTFRv20DVgdCBYtiydGduKgxh4GL4315qRl+HToS9V0M3iCSzJgTjjYI8uPX9YE5pu0v0o/QH1QQFkA/975gxhrg3LHfGVM8JjFv77LSp7QYPB8vI0WjMqTDpYJvVKG93RbdKWAQMKwfcAmUTFFw13gS59MP5FyFI9lok3xNIbEmqPWW7EkzruXRYwZm9xF/byHY1aRUEcVqyJxZgs7aTjJYsh5eY583qDC41I82bTeOEPlOacJKLDDKAi91lUIZD14FsyuVhRXiZp7igLHeRhnGR6uDEXHmsB8eSyxlALMMHuMgwXPpFtnILZN64sDQkrlORDg0emohqUJ7uefdXtBko+TqkxGAM=",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSnwgKEAgUGAI4AUIIdGhpbmtpbmcSDBUM365F9PDqlZkITRoMI8eaMef43jrAEp4FIjDqMg/ApJ0c2M6v2LMl0mbSbMRSAc6sVKsm1UW3Rdup1SSzol1458Il3BXRqQRL7aQqvAcs2xDOHKFYpgkUPo0DERYfsY/LL/q8eljnqSS4IHvwHGb9T/hkvucQZvAiIEf/kHOrHk/UJxHNdqAn19APEsOyp8/Wd2j0IfdCuFN7K0LN9kn6aXRPO2lH+xMuzDQ6aeDe3+a3hJwLpGm69M8Cp5X34WgndKhl8H7HJhSdxSvVwWyzgzQmo6T1A0RGdH6j5Ul3GTwcrD7oxpn8DcUArA5UppZd/jEick4l1D26ITI15FJP3Etwj3t0x64zeaXWNlRycxIuQhg1JrRxDA4Ji83kBSei9MegWUKc/Tfu/VHj56ErQKptOcNryXePaDUZJrSXoCJ1h3080xCs6NbYoJt9Q5S5E9zJP4IvvNTtZr6sjY8ZiZxTRmpkYHbOqajB9nPmH8kX+vKOgdXnMNMT4JWXxMPOu5+dGUch5sLCU8miy4PLl0Ve+dzof/KAOTFo1G7Nr/ppZWsqgnAGTbsGz1R3lYCUxhwH51rz5EFm0FL83ylD4WUk1jhWIoDDLhAyMOHDdp/SQCNFQCKuLWXJwPlAdh3aKsjyTUxCVwkT9kg2cejiapz3Djge4tDImGO0s/jewpMAatkqYdXnOtkqZbjlxzRDjB2rp+YJF0s7byxidqcOqUMzPnBqAvDFfQg9xMuLsjOjh7rpvTMj1zYT5XcvY01/VhlR3+YsZOOjy3Fs5q9C3UHPWT28htkiaDRT6vpIBukncj/qfNBudPO6i22xCY2GFWucGcH4JfmSe+3k9u0pSzNKnCYCzMH4rMpuGuFio39WNW0J+Tte47129lyggeu9vuxqbZAvADilONNRtuAhPOcdqrsUHlWXb1awoE/n+LmNvKkvIrj8ttsyslzOX90h2/iz6TecrI7ZttG2Jv30AYJuXQDM3dmvzjuaPHAafMcKPyeRfjiT0O7s3+oNBX6y4N8sAY9V6EYsWtGsJecJV3TSYEbL4QhKp19Id7HWprip8s3T5GTz1j1pim2jckKtwKBNnA/jHow16o3t0LfwkbYeXNp6fe0aOH99qbMiW8KDw1O6lylGtjKjZK6fY2uQqrAaCHLf12AQUpiQ37rSv3O4LskKjvJ/WOVIIjin/K5k/66L6EhOfrV11wesMFvqoGdn7oJ1/jBEQd8qBat8J1sdYOS2CHAytOnkYLcqvRrv+yX7IfzmB0O2e47PrGyvJ7CvASqQjMyIp1IC8eUR0nn26moSG6z9HbWTAEbuzJOSKba416BWtv6/Fba79cmtqyIMSHWSudpAW3u4oKXCd7Zwoa8s0V5QKhgB"
+          },
+          {
+            "type": "text",
+            "text": "\"Best\" depends on your child's age, which curriculum you want, your budget and where you'll live, so here are the strongest options on or just off Sukhumvit Road, sorted by curriculum.\n\n**Central Sukhumvit (Asok, Phrom Phong, Thong Lo, On Nut)**\n\n1. **NIST International School (Sukhumvit Soi 15)**\n   - Teaches the full International Baccalaureate (IB) programme from PreK to Grade 12.\n   - It's a non-profit school accredited by CIS and NEASC (international accreditation bodies), and has a strong academic reputation.\n   - It offers a large languages programme and more than 300 after-school activities.\n   - It's a few minutes from Asok BTS and Sukhumvit MRT stations, so it suits families living in the city centre.\n\n2. **Bangkok Prep (Sukhumvit 53 and Sukhumvit 77)**\n   - Follows the English National Curriculum and the IB Diploma.\n   - The primary campus is near Thong Lo BTS. The secondary campus on Soi 77 is a short walk from On Nut BTS.\n   - Its classes tend to be smaller and the community feels close-knit.\n\n3. **The American School of Bangkok (Sukhumvit campus)**\n   - Follows a US curriculum and is accredited by WASC, a US accreditation body.\n   - It's a smaller school, which could suit families who want an American system.\n\n4. **Anglo Singapore International School (Sukhumvit 31)**\n   - Has a Singapore-style focus on maths and science, and fees are usually lower than at the top-tier schools.\n\n**Further out along Sukhumvit (Bang Na)**\n\n5. **Bangkok Patana School (La Salle Road, Sukhumvit 105)**\n   - It's Thailand's oldest British international school, with about 2,300 students.\n   - It follows the British curriculum and offers the IB Diploma. Its campus and facilities are among the best in the region.\n   - It's reachable from Bang Na BTS. Many families live nearby in Bang Na or On Nut to avoid a long commute.\n\n6. **St Andrews International School, Sukhumvit 107**\n   - Offers a British curriculum with the IB at a lower price than Patana.\n   - It's part of the Nord Anglia school group.\n\n**My short version**\n- **For an IB education close to downtown:** NIST\n- **For a British education with a top-tier campus:** Bangkok Patana\n- **For a British education in a smaller school in central Sukhumvit:** Bangkok Prep\n- **For a US curriculum:** American School of Bangkok\n\n**Tips before you decide**\n- **Traffic:** Rush hour on Sukhumvit is heavy, so pick a school near your home or near a BTS station.\n- **Waitlists:** Popular schools like NIST and Patana often have waitlists for some year groups, so apply early.\n- **Fees:** Fees change every year and differ by grade, so check each school's website for current figures.\n- **Visits:** Tour the schools and ask about class sizes, support for children learning English, and staff turnover.\n\nIf you tell me your child's age, the curriculum you'd like, your budget and where you plan to live, I can narrow this down."
+          }
+        ],
+        "container": {
+          "id": "container_0138naozvPsbRZyFpfkcVrgb",
+          "expires_at": "2026-11-20T17:50:56.136707Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 22603,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1902,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 5,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5909,
+              "output_tokens": 501,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6804,
+              "output_tokens": 202,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 9890,
+              "output_tokens": 1199,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 428
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

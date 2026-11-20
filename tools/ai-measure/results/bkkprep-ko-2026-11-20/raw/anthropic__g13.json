@@ -1,0 +1,517 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g13",
+    "type": "generic",
+    "text": "방콕 국제학교 중 교사가 자주 바뀌지 않고 안정적인 학교는 어디인가요?"
+  },
+  "started": "2026-11-20T16:56:24.977Z",
+  "finished": "2026-11-20T16:56:53.700Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕 국제학교 중 교사가 자주 바뀌지 않고 안정적인 학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXqP9TVHvntPMwcKD92",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSzAUKEAgUGAI4AUIIdGhpbmtpbmcSDP+KbiPSpadZIgu7ThoMduxGpdqdNvrQD4TNIjDwggngicMhllPNChEaMHLSF3dOGX+SL2BFj5NACXF4ZZJUyBJ+QnYw27sI0eEttd4q6QQn/iAY64QIqwHkOjOFUxte/mzbSz23bKvxrv7ShIeWliK3a5KeULo7ebeicUeDPEI+lxYav8Og5wK2HdRMZOU2dSS2SPz7jA76VRNICBgEQv20qdEr+/DpLqh7YRISt0WZZ5n16o8m3qBXYuDSGzYCmyEenLjudoj/Bl6WrGzM4r1oNHG0fd1XQ01xAcRDlhTjG06aGkduaInWqlliHhQVa1KydTtT6XaG5c5dFjR09aW753FxWSWrJZgRXT3N10JHEOJ87Ua81Gx+U2IFsrvMSwBp6pbItfdF+ee6644txwk+6vZMY4e+8Vw+qJeFbUxEwTzD9B3nRkVfXuIFItMrEX6KgAlQO3bzMnxYgNL8rOmPvhKW5HmNsGx5TQzJx39+YaOBYJ/312fh+Cwe9gvZPzyLPma4eaKOy0mU7PWXuHh6nGlpH2gvy8lz8jNx2sex42c+x5fEZIuLQIXUhEAqaFwiIUkmJ00Y4jXjd8FuuuDQfHeMcnZhWsKf4S5dU8QDmNqLVEAiDy6U5NQiS0iUZV9r/zssEkpqQuvmD/uSItezn9eKQNJXnCvYLKF+3mkvbgxJYS5aENDJHfjpvB0v5PxsA6jwQtJTV0lgQOUiuTBC7Hlw6lMRzpFLOj3rGUUAzo1zVDRir6DrkRc5gCWZ4+TSbzFizlY+QI/NbZlF2jrwnpNyFrMBDMOFASaJ7Sk6uCpVpf/0dSazZjPGbFrRYwJPBdTR+sZj2g8p+kBCY094WymPVerVoNh7rP429OPPjngHqEnpVmO2GoYDzRh2CytkLbxthwoNYniwkBY5zBvGg3Wo6+r0axgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_018H9h8Ktp4dhD6Ypj74wpDA",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"Bangkok international school teacher turnover low retention\",\"Bangkok international schools teacher retention NIST ISB Patana\",\"International School Review Bangkok teacher turnover\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:5]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:600].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01UdqbXNq87xv5aqgUQRPUMa",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school teacher turnover low retention"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_018H9h8Ktp4dhD6Ypj74wpDA"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01UdqbXNq87xv5aqgUQRPUMa",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Renowned Bangkok international school in pitiable condition",
+                "url": "https://www.nationthailand.com/life/30318004",
+                "encrypted_content": "[omitted]",
+                "page_age": "2044 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Walden University ScholarWorks Walden Dissertations and Doctoral Studies",
+                "url": "https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=5672&context=dissertations",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Guide to Teaching in International Schools in Bangkok",
+                "url": "http://www.kuruzovich.com/guide-to-teaching-in-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1717 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Inside ICS Bangkok's Bet That Culture Beats Teacher Turnover — Students Incorporated Blog",
+                "url": "https://studentsincorporated.com/blog/ics-bangkok-culture-beats-teacher-turnover",
+                "encrypted_content": "[omitted]",
+                "page_age": "1479 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Why Bangkok's International Teachers Rarely Stay Three Years — Students Incorporated Blog",
+                "url": "https://studentsincorporated.com/blog/why-bangkoks-international-teachers-rarely-stay-three-years",
+                "encrypted_content": "[omitted]",
+                "page_age": "1171 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Teacher turnover in Rwanda",
+                "url": "https://arxiv.org/pdf/2009.13091",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Why Thai Schools Lose Foreign Teachers & How to Retain Them",
+                "url": "https://www.schooped.com/blog/why-thai-schools-are-losing-great-foreign-teachers-and-how-to-stop-it",
+                "encrypted_content": "[omitted]",
+                "page_age": "526 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "RMIT University",
+                "url": "https://research-repository.rmit.edu.au/articles/journal_contribution/Strategies_to_Maximise_Staff_Retention_among_Millennial_Teachers_in_Bangkok_International_Schools/27437916",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "View Static Version",
+                "url": "https://express.adobe.com/page/U5t9pNzichZ45",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Get the best experience in our app",
+                "url": "https://www.tes.com/magazine/archive/5-tips-international-schools-tackling-turnover",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_018H9h8Ktp4dhD6Ypj74wpDA"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_018H9h8Ktp4dhD6Ypj74wpDA",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDD0O9KsFnRbsphFsxRoMcG/LY8y7JKzI0oWtIjDhEbGvHqFKhxD2DYjrdcnIx6YZvJq4shaegy4xI1QA7lmza9yzJDVXwL1BuL9dLh0qEjSAT8Sx/Ez12rn7d2ypef75NhgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_018H9h8Ktp4dhD6Ypj74wpDA/cell.py\", line 13, in <module>\n    print(x.get('title'),x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    for x in r[:5]:\n        if isinstance(x,str): print(x[:300]); continue\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:600].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Tbu46AG8ipbj1YWkVigPWC",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school teacher turnover low retention"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01Tbu46AG8ipbj1YWkVigPWC",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Renowned Bangkok international school in pitiable condition",
+                "url": "https://www.nationthailand.com/life/30318004",
+                "encrypted_content": "[omitted]",
+                "page_age": "2044 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Walden University ScholarWorks Walden Dissertations and Doctoral Studies",
+                "url": "https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=5672&context=dissertations",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Guide to Teaching in International Schools in Bangkok",
+                "url": "http://www.kuruzovich.com/guide-to-teaching-in-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1717 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Inside ICS Bangkok's Bet That Culture Beats Teacher Turnover — Students Incorporated Blog",
+                "url": "https://studentsincorporated.com/blog/ics-bangkok-culture-beats-teacher-turnover",
+                "encrypted_content": "[omitted]",
+                "page_age": "1479 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Why Bangkok's International Teachers Rarely Stay Three Years — Students Incorporated Blog",
+                "url": "https://studentsincorporated.com/blog/why-bangkoks-international-teachers-rarely-stay-three-years",
+                "encrypted_content": "[omitted]",
+                "page_age": "1171 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Teacher turnover in Rwanda",
+                "url": "https://arxiv.org/pdf/2009.13091",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Why Thai Schools Lose Foreign Teachers & How to Retain Them",
+                "url": "https://www.schooped.com/blog/why-thai-schools-are-losing-great-foreign-teachers-and-how-to-stop-it",
+                "encrypted_content": "[omitted]",
+                "page_age": "526 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "RMIT University",
+                "url": "https://research-repository.rmit.edu.au/articles/journal_contribution/Strategies_to_Maximise_Staff_Retention_among_Millennial_Teachers_in_Bangkok_International_Schools/27437916",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "View Static Version",
+                "url": "https://express.adobe.com/page/U5t9pNzichZ45",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Get the best experience in our app",
+                "url": "https://www.tes.com/magazine/archive/5-tips-international-schools-tackling-turnover",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WfDndeE8zoSAwP1VutG2gt",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international schools teacher retention NIST ISB Patana"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01WfDndeE8zoSAwP1VutG2gt",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Teaching in Bangkok: Cost of living, schools and social life - Teacher Horizons",
+                "url": "https://www.teacherhorizons.com/advice/teaching-in-bangkok-cost-of-living-schools-and-social-life",
+                "encrypted_content": "[omitted]",
+                "page_age": "56 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Teaching in Thailand: Salaries, schools and what to expect in 2026 - Teacher Horizons",
+                "url": "https://www.teacherhorizons.com/advice/teaching-in-thailand-salaries-schools-and-what-to-expect-in-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "50 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "How to find an international school job in Thailand in 2026 - Teacher Horizons",
+                "url": "https://www.teacherhorizons.com/advice/how-to-find-an-international-school-job-in-thailand-in-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "99 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok, Thailand - What is the availability of international schools? What has been your general experience with them, if any?",
+                "url": "https://www.talesmag.com/real-post-report-city-question-answers/45/7",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Thailand",
+                "url": "https://thaicitizenship.com/international-schools-in-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "422 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "View Static Version",
+                "url": "https://express.adobe.com/page/U5t9pNzichZ45",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015US23wmqVAcS38PdsUjrki",
+            "name": "web_search",
+            "input": {
+              "query": "International School Review Bangkok teacher turnover"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_015US23wmqVAcS38PdsUjrki",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Australian International School Bangkok Reviews in Thailand",
+                "url": "https://www.glassdoor.com/Reviews/Australian-International-School-Bangkok-Thailand-Reviews-EI_IE4830345.0,39_IL.40,48_IN229.htm",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Renowned Bangkok international school in pitiable condition",
+                "url": "https://www.nationthailand.com/life/30318004",
+                "encrypted_content": "[omitted]",
+                "page_age": "2044 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Thai-Chinese International School in Bangkok",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/thai-chinese-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "36 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Roong Aroon International School - Not as advertised",
+                "url": "https://www.glassdoor.com/Reviews/Employee-Review-Roong-Aroon-International-School-E4652825-RVW71712040.htm",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent%27s International School, Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Regent%27s_International_School,_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Community School (Thailand)",
+                "url": "https://en.wikipedia.org/wiki/International_Community_School_(Thailand)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School",
+                "url": "https://en.wikipedia.org/wiki/KIS_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01AodNcrFzdzmZeypbNnbFAf",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "방콕 국제학교의 교사 이직률은 공식적으로 공개되는 통계가 거의 없습니다. 그래서 \"여기가 가장 안정적\"이라고 단정하기는 어렵습니다. 다만 교사 채용 업계 자료, 학교 측 발표, 교직원 후기를 종합하면 다음과 같이 정리할 수 있습니다.\n\n## 1. 교사가 안정적인 편으로 알려진 학교\n\n**최상위 학교: NIST, ISB, Bangkok Patana, Shrewsbury**\n- 교사 채용 사이트 Teacher Horizons는 이 네 곳을 방콕 국제학교 중 최상위로 꼽습니다. 채용 기준이 까다롭고 복리후생이 가장 좋으며, 교사 연수에 많이 투자해 교사가 오래 남도록 한다는 평가입니다.\n- 한 교사 채용 가이드에 따르면 방콕 상위권 학교의 연간 이직률은 **약 12~18%**입니다. 국제학교 연구에서는 20%대 초반부터 평균보다 높은 이직률로 봅니다.\n- NIST, ISB, Patana는 비영리 재단이 운영하는 학교입니다. 이익보다 학교에 재투자하는 구조라서 대체로 교사 처우와 근속에 유리한 편입니다.\n\n**ICS Bangkok (International Community School)**\n- 교장은 교직원의 **평균 근속이 약 8년**이라고 밝혔습니다. 국제학교로서는 매우 긴 편입니다.\n- 다만 학교 측이 직접 밝힌 수치라는 점은 감안하셔야 합니다.\n\n## 2. 교사 이직이 잦다는 후기가 있는 곳 (참고용)\n- **Thai-Chinese International School (TCIS)**: 후기 사이트에 \"교장단과 교사가 계속 바뀐다\", \"급여가 낮아 이직률이 높다\"는 의견이 있습니다.\n- **Australian International School Bangkok**: 비교적 신생 학교일 때 Glassdoor 후기에 교직원 이직이 단점으로 언급됐습니다. 오래된 후기일 수 있습니다.\n- 이런 후기는 개인 의견이고 시점에 따라 상황이 달라지니 참고만 하세요.\n\n## 3. 학교 방문 시 직접 확인할 질문\n1. **올해 새로 온 교사 비율**은 몇 %인가요? 20%를 넘으면 주의가 필요합니다.\n2. 교사들의 **평균 근속 연수**는 몇 년인가요?\n3. **교장과 학년 책임자**는 몇 년째 근무 중인가요? 경영진이 자주 바뀌면 교사 이탈로 이어지기 쉽습니다.\n4. 원어민 교사를 **해외에서 채용한 비율**과 계약 기간(보통 2년)은 어떤가요?\n5. 재학생 학부모들에게 \"작년 담임이 아직 있나요?\"라고 직접 물어보는 것이 가장 정확합니다.\n\n**요약:** 교사 안정성만 보면 **NIST, ISB, Bangkok Patana**가 가장 무난한 선택지이고, **ICS Bangkok**은 근속 기간이 길다고 알려진 학교입니다. 다만 학비가 높고 입학 경쟁이 있으니 예산과 커리큘럼(IB/영국식/미국식)도 함께 고려하세요. 원하시는 커리큘럼이나 지역을 알려주시면 더 좁혀서 찾아보겠습니다.\n\n**참고 자료:** Teacher Horizons (teacherhorizons.com), kuruzovich.com 교사 가이드, Students Incorporated 블로그 (ICS Bangkok), Glassdoor, iSchoolAdvisor"
+          }
+        ],
+        "container": {
+          "id": "container_013HspQnRZnguwCzzB5peEgQ",
+          "expires_at": "2026-11-20T17:56:37.221250Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 22960,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2062,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 4,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5924,
+              "output_tokens": 236,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6514,
+              "output_tokens": 169,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 10522,
+              "output_tokens": 1657,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 344
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

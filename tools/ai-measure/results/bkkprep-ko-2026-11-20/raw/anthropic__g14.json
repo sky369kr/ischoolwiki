@@ -1,0 +1,333 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g14",
+    "type": "generic",
+    "text": "방콕에서 중고등 과정이 탄탄한 국제학교는 어디인가요?"
+  },
+  "started": "2026-11-20T16:56:53.701Z",
+  "finished": "2026-11-20T16:57:27.926Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕에서 중고등 과정이 탄탄한 국제학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXsVuohGjLJuuiq89Z4",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSqgYKEAgUGAI4AUIIdGhpbmtpbmcSDHuzOEsHDcBHn3SARhoMq3Hx1oz2UJtTvupgIjCm0WQ1UlT9hepgAw9xjeZG860ddv1QAaDaWxGP9cVO4FTYxzvhEAO+YfvFm894gWsqxwVtBwbVXgdr2qvdN9Nd8erxJhYP2NpRaj0tbE8ssRKT9ZazyfBPFfzCjesRdghObTCjeS5KOOXe7FwwoFFy+jc4Ph1Ii5w91gFBa9zOzHh6u0577j1xMHAkiXTUn4LVTbpwQ/IDCrvkY9GsZm+7YxpI/6E90NUls0+94JF1QwwS5LZFA0F5Rw40vLOJKFTuBO8cvvlXwUoHvShgf+XY8HcFPtDRfkSfc9h3MeCB1o3e+u60a1qgImuXqoa5elfgYiBf5Qb9wCMNqNANxKw9bzG3GtxkKeyN/QiDqeNa+GoPbZe5Pzp8cue3XpAuEJlpP0dtX8yTXHzfGNcmBUlEnXskThbhYP4FIigVM2Xz7vQu8O9Lol+cn04CLly8RS4algrmU/eMEVff8xbb0Gviiof4NmAFul9W/gRMgYGmo9CdMCF/tYT2gVu9c0N5s8tokbyW8XdflD7sYr5WVYhaHw66aXKTTtL+KtSUd1f+OywaZm7Iy9RqtsBo+1Dspz1Li+klsjaZaOWH+jW/6pmH7Xop3w34DmcEEllqbMnCwImaK3ECqIvauFzPcJxfBGYJuclvT+7ICC5qYZqB5n19frTbNAmxQKFaG1eTDF7Huvcx6bg8VixRpXlfQaR7nhRySQznlhmjUbhNBIWCr7Upj7J1LtZ6eFbicHt/iFdovTdxaipyiZr2GxDMzhIyEBRBhKgBqFwVJ/FweiAzcHXBUmaUmQbPjer67rvSFk6R1obzqaFaZsoVmpRXuJxYfjiRNeJVmC+mo9J3g3do1bwuVW+brWdd4mRhmw3NSpkC0UpLpBiB2Pp4SpSHq37HD45IzUMtoF06ny+4zNOrwhWkoBA7XlqKJanJDZhPxkuen96qILU6TpSmMAyX9gnIycM1jXbQy5/euByib6F1Dcd+DZx9HrEsrX6JEQyAT2PQ6ccmKHEGYHfZ7fEYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01AEDrB98QZXRZcD1TtAqHJo",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"best international schools Bangkok secondary IB A-level results\",\"Bangkok international school IB results 2024 average score\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:5]:\n        print(x['title'],x['url'],x['content'][:600].replace('\\n',' '),'\\n')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01TgrTigaa1SQg1XmKuYUjNd",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Bangkok secondary IB A-level results"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AEDrB98QZXRZcD1TtAqHJo"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01TgrTigaa1SQg1XmKuYUjNd",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok - TutorChase",
+                "url": "https://www.tutorchase.com/blog/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "845 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St_Andrews_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International British School of Bucharest",
+                "url": "https://en.wikipedia.org/wiki/International_British_School_of_Bucharest",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Complete 2026 Guide to Bangkok International Schools: How to Choose Without Regret and Top-Tier School Recommendations",
+                "url": "https://www.eltschool.jp/en/column/bangkok-international-school-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best IB Schools in Bangkok",
+                "url": "https://international-schools-guide.com/insights/best-ib-schools-bangkok-results-rankings",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 5 International Schools in Bangkok (2026)",
+                "url": "https://international-schools-guide.com/insights/top-5-international-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "140 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AEDrB98QZXRZcD1TtAqHJo"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01AEDrB98QZXRZcD1TtAqHJo",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDEFEMDhCzjx2XUGfbRoMQMTmIgxCjLEsbHvRIjAC+gcWOL/gn4gtqSBGWg6L5LCzqt7gVXmTABH1hV57giQS5C0l+EwLE9FrnkbQHeIqEkaui2iyOKn+Llk+gZyrr8BryBgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01AEDrB98QZXRZcD1TtAqHJo/cell.py\", line 13, in <module>\n    print(x['title'],x['url'],x['content'][:600].replace('\\n',' '),'\\n')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01EgH3f9671M14GHsVkddsqb",
+            "name": "code_execution",
+            "input": {
+              "code": "r=await web_search({\"query\":\"best international schools Bangkok secondary IB A-level results\"})\nprint(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_013sN7aYWxfKkzNgRXyD7UA1",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Bangkok secondary IB A-level results"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01EgH3f9671M14GHsVkddsqb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_013sN7aYWxfKkzNgRXyD7UA1",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok - TutorChase",
+                "url": "https://www.tutorchase.com/blog/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "845 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St_Andrews_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International British School of Bucharest",
+                "url": "https://en.wikipedia.org/wiki/International_British_School_of_Bucharest",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Complete 2026 Guide to Bangkok International Schools: How to Choose Without Regret and Top-Tier School Recommendations",
+                "url": "https://www.eltschool.jp/en/column/bangkok-international-school-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best IB Schools in Bangkok",
+                "url": "https://international-schools-guide.com/insights/best-ib-schools-bangkok-results-rankings",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 5 International Schools in Bangkok (2026)",
+                "url": "https://international-schools-guide.com/insights/top-5-international-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "140 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01EgH3f9671M14GHsVkddsqb"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01EgH3f9671M14GHsVkddsqb",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "EskYCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDPNirAOYb5zsPyuikxoMq4I6RzkxZ8BOkKICIjCAuOw059kx4YV71m99Bsa3Dw16U7ATEFjoEjV1uOSByTi6G0PbJawXFopMZhKXxdsqzBe30uJIxJGGOt3rArZXwDtuw+R9hT/DjC/hbVh1lRR26nF6VXR+pIZblP131ajz/lvof8W3WBRxRhhV8batwvQTf2S050roWsjbMZElyl1ppVv3KsRhfshVvDbuooil6h2p+WjSgZ50Qpg4Bt8XSpK4kns31jjhXfrftS0I8WwJ2Zr4YkaGCRl92ZO4W7+e2MFMGFIBEe0fgY/BJGfsREaa4nMO/O+yALvtczGJCIe0+xv6FuUpVgwX7DipRcG8UA5Qyc0b1LyicmdgNX0qyNom/AVXknyyQTxTSXtT12L5WZOIV+nWyEvwYNdywAcz1XJ9ewCm8Ago6KheZt4DTsCY7Drv8k72qGoLy4Q4K3AvX/3ClVQqiVvRPAKq+Msgj1cOtFmNSTYSn4MYGyz4UKvZTEYeRpNfkYLePn1117N5QC2rIvyBAJUV+EHPwi2Nr80BVjQsICk0FYFk+Uxwc8eI1PkUI6W73BEp5N4Sfblq8ejuxRcFD+ayUGw4S6i96kfxDN+a215g04CGv+rlXN8SNr/myxQ1JMOyA0sp418CQ2FhEcqNlQPrXGgvRq2Fg6tmANWqJiqjbGevZYtB+9gExctl6jaQ+2/Ta+yJxl7OSPTnb4AB0/OB/uo4l/9lQS+QwYpSkhmMuCWpc9L86atf68T2nqhmlDTABpGr2SLy/y+sCQkyjxJNsRb2r+JBD+sdqoi4NEl++XfZv0trEeyl8bQniIx/ds/H+HGEDCrMfkMcZzFtsXU5MDIL022hl8NCFWSgytEeceSUgZarJhTO8ds+hjSgZGuO2IQwVabUGmrNWVKbsMJ+Ef+MKmc8fQc9VV+JaO5W4KbWX5LDh62M5q7CJK9yLYqy/IRYq6WQq3+VpVLN/B5fLU82OU0tYFB56Z+KcfBkeiDxXPx5IFXhfunsFkMbDQlfWoGannajveKRdEWoSsMxdJxhIBtF+PRcZsEptUyEON/+zTXV+PJGhh8fVNoo1iC+Z8FapnQNutxdzfmSorxi3rKFd8BzcTLs/cQaS6sSp0jn8G3EHVnW/a0/Wnzadm1XqJBQXRS6BuWiRLMTSqJdxvcckgxc19N4wz4KAQssUCFhRTXt8M/PTeE/whtp2fZwsOlmPhNsD4F6RKSRdAwUrYSjOj6gfdmwMLL+xpE0qZZlmk4gC7aFjEgi0Rcww5Z3jvnWTIgGFNkYUSJNO2EMTvSmraR1HvRy/02bxa2C7uoBJXjJr4dBWYmCU7o/IMsIQoT5+WhPcn4F6HQJ/x1hiRGlKk08Tb1Z4CZOzywAuxPPS1vF55I3nmOgcYSXomDBOCYLSaWz25TCNadz1+HdoK8YLRIJCWh/5GnfZu7h30saMX7v3PH8xnMOlZM1Lyf2TPbwESZyG6ct7Wyjj6Jl1Yqk3u9dm0kZJBFV8+QA5AI2zK5ygI79pNfcoVgdcwL7RfYUY4pUFnOeccP2kK1GCI4wrdoO9BOCm94adNlBjCQ3eOhb9Hfari7QW1Fn3j2sea5bZaPy/nbBLPgIX8l48BgiSz8Nh8UOfS59hyplpNXVFH5+rALq8KhEwtubtfOSupag9HHvHsyn7jPKJ9zMQ15RBD82XndkFGZVLqtRzAslLGJFu+xkiuWfvJesphud0MbbWx7vUgRci03GArghHEfUpwP7GPCKyeekKloOKOhPY5PJbbCWpDWHA0vRY2GVqol0f8bpx07Bp9JEBS9fEJepq39RautRJgGD2yL/YA2Fhy/Kx4tPsBayH+N14+BauLmAWPpm/yORpYPcKAoXAYa4KyBJbhYbdGca7AjYkvPlCtaHk4NIYSCJZWDPd1uCKbWbD2JXP6Jtu6X1gDDpyoHpc2mB98nN0prlNyXxIVMPLg6VXA0d4VpPMMdO8V4Ud1CADZzl2Pxe1CnmXfQHh7nr+HMfWtN6XfDPuta7k7xYpG4Y9ow2TS61fxKBtUR+04oGf3n/mVbivu3bFeaz6kKlwzMtCyRuUMd9CfVlGAwpPWchOFAyRencwB2/OIHFu2dOW3vawMHifdLTDiRPErFfTzldfWjevcDIrtiyFIoDK/sQW/5iVhTW5xCTrJGeqVCuxyCEkTvxnov31um5Q7FLMTbTcdOk93AnJha3uwNs7XTBZXJpS/Wns1Lf/0Cc5n3rS8ogLfTiOUSc19NSuJW56NhAB5p2hRSnHyO7Mpc+C1n2trUKWhRURC2UNscU7U3/O7J/qbijLxHr2IPwhKRlklndMS480QcRxfmFAVg9dxKs1R1sSnAdDzRxTxK2NTUgG53G323vZP5OtpTDmTRhJ1gBT6DkO9xJmy1872Y4bCbEPCKV/32nRKHHnOzFNYCDJGIy1IC3gVtMQBbbnZM6pPFJmuoO18F4ZES/2Q6gajNiXV/xhHBEtriW/jmY0+lkvzgcaf6BIBKOZyrZO1aq5sZL05ZSQlWdKIv4yh7/zcwEIpMcRktVFWS16VTaQh9moKWJhvNae/0jJO0VSH9BtQ7isDzJQGyMZLjGvW313rGskUbP5ntnpKqaOK/bqZBUXOuuxklwH/OTAjiPI1vYvoz/+xe+VsGJLoH3DRPBipfyBA13cnfBaq3M0VCCxrit9OUzZCf7lfUOrSqos8oUoCcFzE7aGB7rwa1PMTDqUOd9ihhKEj4qQMLT1uPoDYmV40DA3p+6ilOdaCXXJnl9sVpLHEM+n5d0KtYYVzOq+oAWYh0kFwABLFGm3ZlCzCLJqm4Rtslze8FcwiP1wa+MVDbl6AwJbZGVRWTJ0Li1N4V4sphSk43ctaJtb2BxfJyG283jwht7+yw1O5I9XtPLEI07YH4Vjut+p6cykDNttDbJg+PiBubsxCcZwP3aSr3V4lRrSOSRt4om5nfRiOyBOI8QHdqCG6ERtuxbFDOPuoPr4DJwV7L6PAF6ulFBQCkvzM7izBDW4sVlMSahnXUkzNLN6B7FYyBvAwghVMW1eREXzxhUAAPr/hVFwz8ToLp820fxb77N0zPseM5vyQ9HZAm78C9IaHJ89FhH0CxNiYd0K6AhOiRwL02uowKYO++FVzYhkbBlQ8ItuqNKF0/2ZHg9N2Z8Xny8g8gFZkHZRTFpgBP6B1e0E/15EZyJUnOvm6XCljn0AJh44LKkDqDoM5+YcoHW5TVxZwDZ7piHT1+JaFFlKM+/txRrVAeQ7ua8CDTdd/0cv5cKx702FFy1qG2fccvV+C+VYA0uByJ858F15fGxv7wjauH73bc8bx6K6EDrI1y0MIl4Bh0RPbOLv+2EH0QQbD3avaBhA57GFbo3e8BOFlBjFD8jUbg9NM4B9mduu6xIo40LoXXCHFq258YHNSdlCoe8NfMDgHqVisMhY8yGsI3RNXM3/mZR456jN3vPfuQLwSlA5OWrcWZ3+ut0WhyTY+ekRRi6mS1PhivPT+L/R6/KvZYMm4xspXUQf0AhxwbA6Bn5y/qMdAgt5dkxzRorNOyCAYAIHYto7OJbv7jOHJ9g2yNTNQhc2xQTA+2D+LbG5LW7DftxdUKCRLfaDFf379pA3+V/ZweZGJm4hqKBMPfPrG6/N9TAAkF4zDH20zAnTErGbMUHGaHI4XDY1uMKraK21rqt7CWSXRibTG20HtjrCIeeWmrkV/gIRLg2mm+CE7zmrwJrobHfa7tBVV5Y5l73f/h4QuJiStbv8+JxxskoJ/zbXL4W2UP5tUeHP2DqYS9a70KTMaW9wzTzokUifPki3BEPcAS/tpVj2T0XGVqlSnoEWgCkr4ByIzyiB3UfmuN68gfG4OsNEk6y3K0nsayn9HsEytBFtojbRrxUS2M0UoF58oOYNy0TPreTZokFpLEDTm/jzuIS2t48U+Nu9/u+H8bHQzws3ROAr8nac+sX+pBP/sqHuSawzRybUNYXNV+AmBcsfbF9Y5Hqwu7j39Ug1vcAhnCMbCUaxOyosqRWvcfHVpuZmk5JIOXH5edi0dYRLF59y4mXHDaBsq2BsL21lMFdjM31Fcv8jmwlnu5UOOUtzzKwoH/X4o9qXPEjkUxq8u4YCS1CDhgD",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "현재 평판, 대학 진학 실적, 커리큘럼 완성도를 기준으로 방콕에서 중고등 과정이 강한 국제학교는 아래와 같습니다. 시험 성적은 해마다 달라지니 최신 결과는 각 학교에 직접 요청해서 확인하세요.\n\n## 상위권 학교 (명문으로 꼽히는 곳)\n\n**영국식 (IGCSE 후 A-Level 또는 IB)**\n- **Shrewsbury International School (리버사이드 캠퍼스)**: 방콕에서 A-Level 성적이 가장 좋은 학교로 자주 꼽힙니다. 옥스브리지와 영국 상위권 대학 진학 실적이 뛰어납니다. 시티 캠퍼스는 초등 과정만 있으니 중고등은 리버사이드 캠퍼스입니다.\n- **Bangkok Patana School (방나)**: 1957년에 세워진, 방콕에서 가장 오래된 영국식 학교입니다. IGCSE 후 IB 디플로마로 이어집니다. 규모가 크고 운동·예술 등 과외활동이 매우 다양합니다.\n- **Harrow International School (돈므앙)**: IGCSE 후 A-Level 과정이며 기숙사가 있습니다. 전인교육과 리더십 프로그램이 강점입니다.\n\n**IB 중심**\n- **NIST International School (수쿰윗 15)**: 초등부터 고등까지 IB 전 과정(PYP, MYP, DP)을 운영합니다. IB 평균 점수가 꾸준히 높고 시내 중심에 있어 접근성이 좋습니다.\n- **KIS International School (후아이쾅)**: 역시 IB 전 과정을 운영합니다. 규모가 작아 개별 관리가 잘 되고, IB 성적이 좋다는 평가를 받습니다.\n\n**미국식**\n- **ISB (International School Bangkok, 논타부리 니차다타니)**: 미국식 커리큘럼에 AP와 IB 디플로마를 둘 다 운영합니다. 캠퍼스와 시설이 최고 수준이고 미국 대학 진학에 강합니다. 다만 시내에서 멉니다.\n\n## 그다음으로 고려할 만한 학교\n- **Bangkok Prep (수쿰윗 77)**: IGCSE 후 IB DP 과정이며, 학비 대비 만족도가 좋다는 평이 많습니다.\n- **St Andrews International School Sukhumvit 107**: IGCSE 후 IB DP 과정입니다.\n- **Ruamrudee International School (RIS)**: 미국식 AP 과정입니다.\n- **Brighton College Bangkok, Wellington College Bangkok**: 영국 명문 학교의 분교로 최근 생긴 곳입니다. 시설은 좋지만 졸업생 실적은 아직 쌓이는 중입니다.\n\n## 고를 때 확인할 점\n1. **진학 목표 국가에 맞추기**: 영국 대학이 목표라면 A-Level(Shrewsbury, Harrow)이 유리합니다. 미국 대학이라면 ISB, 진학 국가가 아직 미정이라면 IB(NIST, KIS, Patana)가 무난합니다.\n2. **통학 거리**: 방콕은 교통 체증이 매우 심합니다. 거주지를 먼저 정하거나, 학교에 맞춰 거주지를 정하는 경우가 많습니다.\n3. **학비**: 상위권 학교의 중고등 과정은 연 70만~100만 바트 이상인 경우가 많습니다. 입학금과 보증금은 따로 내야 합니다.\n4. **대기 명단**: Shrewsbury, Patana, NIST 같은 인기 학교는 학년에 따라 대기가 길 수 있으니 미리 지원하세요.\n5. **인증 여부**: CIS, WASC, FOBISIA 같은 국제 인증을 받았는지, 최근 IB 평균 점수나 A-Level A*~A 비율, 대학 합격 명단을 공개하는지 확인하세요.\n6. **영어 실력**: 중고등 편입은 영어 시험과 인터뷰가 까다롭습니다. EAL(영어 보충) 지원이 있는지도 확인하세요.\n\n자녀의 학년, 목표 진학 국가, 예상 거주 지역을 알려주시면 2~3곳으로 좁혀서 추천해 드릴게요."
+          }
+        ],
+        "container": {
+          "id": "container_01ENkyAcays1xrxAQtjNgJLU",
+          "expires_at": "2026-11-20T17:57:02.747014Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 20219,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2703,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 2,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5914,
+              "output_tokens": 226,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6513,
+              "output_tokens": 90,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7792,
+              "output_tokens": 2387,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 865
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

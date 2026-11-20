@@ -1,0 +1,1789 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g11",
+    "type": "generic",
+    "text": "방콕 국제학교 중에서 한국 학생 비율이 너무 높지 않은 학교는 어디인가요?"
+  },
+  "started": "2026-11-20T16:54:55.263Z",
+  "finished": "2026-11-20T16:55:56.781Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕 국제학교 중에서 한국 학생 비율이 너무 높지 않은 학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXimeqx24v1fDPtdDN2",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS6gUKEAgUGAI4AUIIdGhpbmtpbmcSDM7BL3LO1YPq5Ye5rRoMCZq68V4CoI2DjoMIIjD6xRm3zx9BVSaQtUXMesLp30yWBhO+Ozcjk1L5jnH0UNJqazOusH168n+mgu7WFwkqhwWA4CVG7+LzAb2Mg0z/iY8XA5caS09+ec/pcRmTuS3fw+9xJFsxhvw166sjNZ6GFrg2oHA7xzQ5QjuC9hBH6dlwwFEGwBcDbNmpNdWoM2IjOm5e5wqVbgf7dXAj/TTD8MWG4UZ29ZouP84gPbyGFezF/3jt+LElVwDPoYJdfKJAIY6r0zTOIJY6LYFfewIMIvYXDYOFgJMiPMzvJENk7l6XHcZT81wy6LWC1RgDgUXMMOWr9KsVnCmss11jQ8/ghs9Z+g5v0u7mndBB+w3d8BYnFaOvW/E4iO548nzofWFgsPuMbrM2tDV5TLK/O+VdxDhL5viOVHKDRVEPXuJBzQihvBACDyfXLP6NK7CTzNG0m58ZdJWQvUqN5trdlfarrN9tN0/BXoL8GWSXIZQhFnCxJjcs8wpggF2UZMGnsgvOq2cmCf9H/bQS61trrjFzZz+Pui4XhPSMJAPX5POe8zSbCcYbsIuhZFbYQPW/nxGVAO4GuSOLAJNVLe1pzfxHcdlNJJdiPKYLC5ocskKAvIru5PAhuPQfaxTb1yCC3hwyYcfkljaYW+aes0Crjvq2FZ0q089o6EwvqgNzAI7l8eU2f1lK98uoL4UchfODCUwfZM5X5DXJDimJRZIxDClkhW0XkIwubFiFlrPd4uRTd6piWEkYdGhAEAxA5Bs9Qdzl1cjGU3NKaCGHhPbBF0c6Sc10iXsIn76+3AIMUPhDzcM7EkE/3UTtx12g4X6xfg7zLGWPhNB+om1gYshdrykegd3O5A7ewZciHBDXSo6kYNFbbgMUstFHIPN5P8kt0sMTy5wRwjy1TyhylIJKPKNI4r1QyfKmZ5uNLTE8AXwWmPWBhEWRQIu/DxgB"
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01UdSdgQsexkWYyYpsJgWWDY",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"방콕 국제학교 한국 학생 비율\",\"Bangkok international school Korean students percentage\",\"방콕 국제학교 한국인 적은 학교\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:5]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:600].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01TmJfai1bKhSwYXLwcnmm9v",
+            "name": "web_search",
+            "input": {
+              "query": "방콕 국제학교 한국 학생 비율"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01UdSdgQsexkWYyYpsJgWWDY"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01TmJfai1bKhSwYXLwcnmm9v",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교 - 위키백과, 우리 모두의 백과사전",
+                "url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%EC%BD%95%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90",
+                "encrypted_content": "[omitted]",
+                "page_age": "578 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교",
+                "url": "http://kisbangkok.kr/44",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕 최고의 국제 학교 - ShowMeHome",
+                "url": "https://showmehome.io/ko/blog/bangkok/bangkok-best-schools",
+                "encrypted_content": "[omitted]",
+                "page_age": "596 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "태국 방콕한국국제학교 후원의 밤",
+                "url": "http://www.k-tcc.com/page/sub51.php?boardid=JS_board_board04&mode=view&no=1500&start=60",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕 한국국제학교 - 한국민족문화대백과사전",
+                "url": "https://encykorea.aks.ac.kr/Article/E0068075",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Busan International High School",
+                "url": "https://en.wikipedia.org/wiki/Busan_International_High_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School > School",
+                "url": "http://bkkuhak1.cafe24.com/bbs/board.php?bo_table=shcool&wr_id=15",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Tokyo Korean School",
+                "url": "https://en.wikipedia.org/wiki/Tokyo_Korean_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Beijing",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Beijing",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01UdSdgQsexkWYyYpsJgWWDY"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01UdSdgQsexkWYyYpsJgWWDY",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFdNGwUimjEdK43pbRoMsnT3WvVtX9x1Rz33IjD8okvnc8fIWpscZZxDt73Jr9qFsETwQrk8jthRS5jWYlZU9MZD7Q8z2iqaTk+M4iQqEi5N1L3e0PWq0jnwwkGzWPG9xRgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01UdSdgQsexkWYyYpsJgWWDY/cell.py\", line 13, in <module>\n    print(x.get('title'),x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    print(type(r), str(r)[:300] if not isinstance(r,list) else '')\n    if isinstance(r,dict): r=r.get('results',[])\n    for x in r[:5]:\n        if isinstance(x,dict):\n            print(x.get('title'),x.get('url'))\n            print(x.get('content','')[:600].replace('\\n',' '))\n            print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WARbnQMjGvy8SuM9ozSv12",
+            "name": "web_search",
+            "input": {
+              "query": "방콕 국제학교 한국 학생 비율"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01WARbnQMjGvy8SuM9ozSv12",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "[동남아 조기유학 광풍] <2> 한국학생들이 점령한 국제학교-사회ㅣ한국일보",
+                "url": "https://www.hankookilbo.com/news/article/200806120153504254",
+                "encrypted_content": "[omitted]",
+                "page_age": "6736 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교",
+                "url": "http://kisbangkok.kr/44",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕 최고의 국제 학교 - ShowMeHome",
+                "url": "https://showmehome.io/ko/blog/bangkok/bangkok-best-schools",
+                "encrypted_content": "[omitted]",
+                "page_age": "596 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "태국 방콕한국국제학교 후원의 밤",
+                "url": "http://www.k-tcc.com/page/sub51.php?boardid=JS_board_board04&mode=view&no=1500&start=60",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕 한국국제학교 - 한국민족문화대백과사전",
+                "url": "https://encykorea.aks.ac.kr/Article/E0068075",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Busan International High School",
+                "url": "https://en.wikipedia.org/wiki/Busan_International_High_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School > School",
+                "url": "http://bkkuhak1.cafe24.com/bbs/board.php?bo_table=shcool&wr_id=15",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Tokyo Korean School",
+                "url": "https://en.wikipedia.org/wiki/Tokyo_Korean_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Beijing",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Beijing",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01KibaiQeQtfGQ7xVnHNEJdo",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school Korean students percentage"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01KibaiQeQtfGQ7xVnHNEJdo",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Division Enrollment Third-Country 41.1% Host-Country 30.1% American 28.9%",
+                "url": "https://www.state.gov/wp-content/uploads/2025/04/Bangkok-2025-Fact-Sheet-Thailand.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "598 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Korean International School - NamuWiki",
+                "url": "https://en.namu.wiki/w/%EB%B0%A9%EC%BD%95%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90",
+                "encrypted_content": "[omitted]",
+                "page_age": "251 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Hanoi",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St_Andrews_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bishkek International School",
+                "url": "https://en.wikipedia.org/wiki/Bishkek_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview of International Schools in Bangkok｜まつざか｜無理しない経営",
+                "url": "https://note.com/kazuomatsuzaka/n/ned03fb54d9f2?hl=en-US",
+                "encrypted_content": "[omitted]",
+                "page_age": "223 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Koreans in Thailand",
+                "url": "https://en.wikipedia.org/wiki/Koreans_in_Thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Complete 2026 Guide to Bangkok International Schools: How to Choose Without Regret and Top-Tier School Recommendations",
+                "url": "https://www.eltschool.jp/en/column/bangkok-international-school-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01GNT5PdAXpXp679JKiSmpKb",
+            "name": "web_search",
+            "input": {
+              "query": "방콕 국제학교 한국인 적은 학교"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01GNT5PdAXpXp679JKiSmpKb",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교",
+                "url": "http://kisbangkok.kr/26",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교 - 위키백과, 우리 모두의 백과사전",
+                "url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%EC%BD%95%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90",
+                "encrypted_content": "[omitted]",
+                "page_age": "578 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교 - 나무위키",
+                "url": "https://namu.wiki/w/%EB%B0%A9%EC%BD%95%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90",
+                "encrypted_content": "[omitted]",
+                "page_age": "1245 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교 (r38 판) - 나무위키",
+                "url": "https://namu.wiki/w/%EB%B0%A9%EC%BD%95%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90?uuid=6bf14c7b-eabd-4890-a4fe-184d1cac43ec",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕한국국제학교 (r23 판) - 나무위키",
+                "url": "https://namu.wiki/w/%EB%B0%A9%EC%BD%95%ED%95%9C%EA%B5%AD%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90?uuid=acb8a58e-0f0b-49b6-920e-e43a0404b109",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Moscow Korean School",
+                "url": "https://en.wikipedia.org/wiki/Moscow_Korean_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Mongolia School",
+                "url": "https://en.wikipedia.org/wiki/International_Mongolia_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "태국 방콕한국국제학교 후원의 밤",
+                "url": "http://www.k-tcc.com/page/sub51.php?boardid=JS_board_board04&mode=view&no=1500&start=60",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕 한국국제학교 - 한국민족문화대백과사전",
+                "url": "https://encykorea.aks.ac.kr/Article/E0068075",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01CFdFMqTeREyFpBeH1zEkRC",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSnAYKEAgUGAI4AUIIdGhpbmtpbmcSDPEFSk5T7oQ4noVX1hoMkkNfN/UMaxQeb+DOIjCCKQemMovZqv0C9/GHRHdaxN6clUSmM6PvAHvbJ3FZK9lX7zOjwggqCNSmkq6pT1UquQWNL88Mf52aI04hSts2XNZQGX4TE82iiVPnsuKp9hRcZhnvpRH74933F58GwpSP7f5sCrfq9QqDv8WInSdTZAidqK70VSDzATLt5Iq1z7uyI2RCgCZ5rL2KE6LHswuff++nk4RMxRUEH/k7eMcp4ReAHoCHLZxTqijJM+gnz84rCNQloqrzARMT6P7LfkeTXbHLCc0uYFm45niKyNFX1daLlbRyw3SyEA2JN8rZACCscAEnYAU7hQn0h2rLdCl93gkaO0jxVeRG6UYb9cFEGEMWzgcQZAX6Sq1/bSlst3M70Zs9MCbVROmfLMpBt+7Ias3XUJbrLHGl1y96CB3d68rEDsGCpjsUphtal+4SKBga4WvHX6PZdfXNDn3XYFXiu1DgU3+AREgP7LtYFPphVjeODS04KEYZqCcEn/pyX07HUSwCfxMDYMGVKnlGrSCywKGgwwWrOLM5E62DSTWIaMS7x4xc9QPfo7FAMYlRDjoLpyg80nt96Yg2a7O5gIRj9B5AVYF7nLJgbfmCkJFys/BpD9V2p35RSQBsXJ5XGF7fHAv+J5fu1YLNH+AI3JF5IW6A5jjQA9ZHLVUqAerEVC8goYuEgzyom6pWBOwKg8lOh9y9xnSBdE9iiiXLE8ZLo9Ce7PMHh3r5hk3AWXfwk/SwWI9AcWknEGxJj7ba6en3wM9/PHLVBApZD/3msBsOpkC1dFHIWfEeUiaJ1Fk1gNjMCAS8Bus6Dme1OM0mjZPASDvSsq8lKd+rBIORG3qADAX7NgIEHIefQuMhS3h4ig2gaR59pajTBy8yk2cV1hm6PPP61+oKLmUgAWYQW9egkP1YNcSM8t8LAieu/c7dABoQAYhs/jKYGPGtFG8FYXC8qOBY8XozMB3EAd9KvV2248rNJ94kJeLNbIp3EFzxDyuwBgtV3I+2A5nRGAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL",
+            "name": "code_execution",
+            "input": {
+              "code": "qs=[\"Bangkok international school nationality cap policy\",\"NIST International School nationalities 60\",\"Bangkok Patana nationalities student body Korean\",\"방콕 국제학교 한국인 많은 학교 추천 후기\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:4]:\n        if isinstance(x,dict):\n            print(x.get('title'),x.get('url'))\n            print(x.get('content','')[:500].replace('\\n',' '))\n            print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01GGaKhnoxDYHPsiZqAVccpG",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school nationality cap policy"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01GGaKhnoxDYHPsiZqAVccpG",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School Bangkok: Reputation, Fees, and Admissions",
+                "url": "https://www.eltschool.jp/en/column/nist-international-school-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Admissions in Bangkok: Steps and Timing",
+                "url": "https://nijinglobal.academy/en/international-school-admissions-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Guide to Teaching in International Schools in Bangkok",
+                "url": "http://www.kuruzovich.com/guide-to-teaching-in-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1717 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Thailand's schooling system: everything you need to know",
+                "url": "https://www.talkeducation.com/news/thailand-s-schooling-system-everything-you-need-to-know",
+                "encrypted_content": "[omitted]",
+                "page_age": "252 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Singapore International School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Singapore_International_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Pan-Asia International School",
+                "url": "https://en.wikipedia.org/wiki/Pan-Asia_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Lyc%C3%A9e Fran%C3%A7ais International de Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_Fran%C3%A7ais_International_de_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01LSYcJmn3E7LsRhse1yF7wQ",
+            "name": "web_search",
+            "input": {
+              "query": "NIST International School nationalities 60"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01LSYcJmn3E7LsRhse1yF7wQ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://search.openapply.com/schools/nist-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - YouTube",
+                "url": "https://www.youtube.com/user/nistschool",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International Schools in Bangkok: Academic Year 2022/2023",
+                "url": "https://propertyscout.co.th/en/property-insights/top-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "360 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Director of Teaching and Learning - NIST",
+                "url": "https://www.iss.edu/wp-content/uploads/2019-NIST-DTL1.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "2496 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School of Amsterdam",
+                "url": "https://en.wikipedia.org/wiki/International_School_of_Amsterdam",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Hannover Region",
+                "url": "https://en.wikipedia.org/wiki/International_School_Hannover_Region",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - Schrole",
+                "url": "https://www.schrole.com/schools/nist-international-school/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School of Kenya",
+                "url": "https://en.wikipedia.org/wiki/International_School_of_Kenya",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://dailyschools.com/schools/nist-international-school/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_014QwWZRjrViMPaRWKmumSDY",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana nationalities student body Korean"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_014QwWZRjrViMPaRWKmumSDY",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "73 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Q & A - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school/school-q-and-a",
+                "encrypted_content": "[omitted]",
+                "page_age": "546 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Bangkok Thailand",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "923 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://connect.amchamthailand.com/list/member/bangkok-patana-school-1226",
+                "encrypted_content": "[omitted]",
+                "page_age": "261 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://www.patana.ac.th/wp-content/uploads/2025/09/School-profile-2025-26.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "445 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.relocatemagazine.com/articles/relocate-global-great-international-education--schools-fair-schools-directory-bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "137 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - International Schools in Thailand - Thailand Schools",
+                "url": "http://www.english-schools.org/thailand/bangkok-patana-school.htm",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.bkkschools.com/bangkok-patana",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01XhJfugQsD6599bfW2unSur",
+            "name": "web_search",
+            "input": {
+              "query": "방콕 국제학교 한국인 많은 학교 추천 후기"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01XhJfugQsD6599bfW2unSur",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "태국 국제학교 · 한국 공식 입학대행처",
+                "url": "https://theuhak.com/thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Moscow Korean School",
+                "url": "https://en.wikipedia.org/wiki/Moscow_Korean_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "태국 국제학교 조언",
+                "url": "https://m.taechoclub.com/place/view.html?Cidx=TGUB001&seq=1208",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Mongolia School",
+                "url": "https://en.wikipedia.org/wiki/International_Mongolia_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕에서 인기 있는 국제학교 TOP5 (비용, 커리큘럼)",
+                "url": "https://mystory10000.com/entry/%EB%B0%A9%EC%BD%95%EC%97%90%EC%84%9C-%EC%9D%B8%EA%B8%B0-%EC%9E%88%EB%8A%94-%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90-TOP5-%EB%B9%84%EC%9A%A9-%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC",
+                "encrypted_content": "[omitted]",
+                "page_age": "550 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "한국 가족을 위한 방콕 생활 가이드: 아이들 국제학교와 거주지 선택",
+                "url": "https://vietnamlife.info/%ED%95%9C%EA%B5%AD-%EA%B0%80%EC%A1%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EC%BD%95-%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%95%84%EC%9D%B4%EB%93%A4-%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90/",
+                "encrypted_content": "[omitted]",
+                "page_age": "442 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Beijing",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Beijing",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Busan International High School",
+                "url": "https://en.wikipedia.org/wiki/Busan_International_High_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Hanoi",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01CvWgYUWmCVYuxYmPtx94DL",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDKuRBKRFOBtTbJ4pdhoM87sAEJpiHMZVfOXYIjDzWs610O5xVRUTdbDdNF8KS39LBZbcK+VNqW6HWGDoFTnsep6oBYb+yMvK/vzuVfkqEmHkvdGT3oDfsSYt01ziYypVhhgD",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    print(q, str(r)[:200])\n    for x in r[:4]:\n        if isinstance(x,dict) and x.get('type')!='error':\n            print(x.get('title'),x.get('url'))\n            print(x.get('content','')[:500].replace('\\n',' '))\n            print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011Eyg6WUzr3ttwTfuUoJUs7",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school nationality cap policy"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_011Eyg6WUzr3ttwTfuUoJUs7",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School Bangkok: Reputation, Fees, and Admissions",
+                "url": "https://www.eltschool.jp/en/column/nist-international-school-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Admissions in Bangkok: Steps and Timing",
+                "url": "https://nijinglobal.academy/en/international-school-admissions-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Guide to Teaching in International Schools in Bangkok",
+                "url": "http://www.kuruzovich.com/guide-to-teaching-in-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1717 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Thailand's schooling system: everything you need to know",
+                "url": "https://www.talkeducation.com/news/thailand-s-schooling-system-everything-you-need-to-know",
+                "encrypted_content": "[omitted]",
+                "page_age": "252 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Singapore International School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Singapore_International_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Pan-Asia International School",
+                "url": "https://en.wikipedia.org/wiki/Pan-Asia_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Lyc%C3%A9e Fran%C3%A7ais International de Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_Fran%C3%A7ais_International_de_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01McxiGqTSbcExboNvRPkJVw",
+            "name": "web_search",
+            "input": {
+              "query": "NIST International School nationalities 60"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01McxiGqTSbcExboNvRPkJVw",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://search.openapply.com/schools/nist-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - YouTube",
+                "url": "https://www.youtube.com/user/nistschool",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International Schools in Bangkok: Academic Year 2022/2023",
+                "url": "https://propertyscout.co.th/en/property-insights/top-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "360 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Director of Teaching and Learning - NIST",
+                "url": "https://www.iss.edu/wp-content/uploads/2019-NIST-DTL1.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "2496 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School of Amsterdam",
+                "url": "https://en.wikipedia.org/wiki/International_School_of_Amsterdam",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Hannover Region",
+                "url": "https://en.wikipedia.org/wiki/International_School_Hannover_Region",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - Schrole",
+                "url": "https://www.schrole.com/schools/nist-international-school/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School of Kenya",
+                "url": "https://en.wikipedia.org/wiki/International_School_of_Kenya",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://dailyschools.com/schools/nist-international-school/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015gCQGqXfTZU7F5kaQn6VGz",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana nationalities student body Korean"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_015gCQGqXfTZU7F5kaQn6VGz",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "73 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Q & A - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school/school-q-and-a",
+                "encrypted_content": "[omitted]",
+                "page_age": "546 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Bangkok Thailand",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "923 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://connect.amchamthailand.com/list/member/bangkok-patana-school-1226",
+                "encrypted_content": "[omitted]",
+                "page_age": "261 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://www.patana.ac.th/wp-content/uploads/2025/09/School-profile-2025-26.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "445 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.relocatemagazine.com/articles/relocate-global-great-international-education--schools-fair-schools-directory-bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "137 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - International Schools in Thailand - Thailand Schools",
+                "url": "http://www.english-schools.org/thailand/bangkok-patana-school.htm",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.bkkschools.com/bangkok-patana",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01MnAxjEPesZM7QBjvuuoTzd",
+            "name": "web_search",
+            "input": {
+              "query": "방콕 국제학교 한국인 많은 학교 추천 후기"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01MnAxjEPesZM7QBjvuuoTzd",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "태국 국제학교 · 한국 공식 입학대행처",
+                "url": "https://theuhak.com/thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Moscow Korean School",
+                "url": "https://en.wikipedia.org/wiki/Moscow_Korean_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "태국 국제학교 조언",
+                "url": "https://m.taechoclub.com/place/view.html?Cidx=TGUB001&seq=1208",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Mongolia School",
+                "url": "https://en.wikipedia.org/wiki/International_Mongolia_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕에서 인기 있는 국제학교 TOP5 (비용, 커리큘럼)",
+                "url": "https://mystory10000.com/entry/%EB%B0%A9%EC%BD%95%EC%97%90%EC%84%9C-%EC%9D%B8%EA%B8%B0-%EC%9E%88%EB%8A%94-%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90-TOP5-%EB%B9%84%EC%9A%A9-%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC",
+                "encrypted_content": "[omitted]",
+                "page_age": "550 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "한국 가족을 위한 방콕 생활 가이드: 아이들 국제학교와 거주지 선택",
+                "url": "https://vietnamlife.info/%ED%95%9C%EA%B5%AD-%EA%B0%80%EC%A1%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EC%BD%95-%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%95%84%EC%9D%B4%EB%93%A4-%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90/",
+                "encrypted_content": "[omitted]",
+                "page_age": "442 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Beijing",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Beijing",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Busan International High School",
+                "url": "https://en.wikipedia.org/wiki/Busan_International_High_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Hanoi",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_016VT3k1gTYVCBJfGCdhDKFL",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Ev4ICioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDFCFOEB/kbjpAgygjRoMURwEjvF5/3zj5y32IjCBkH6M1mMCYfmvWgBXqZeCoRPFTaDRx7HkGhSPSj90kjwryCHHu4GukslC2IJDOzMqgQhAGr25DrNJyZKn09XR4VIOoqsE2ciZUKbYntINdWdyTQriEpH6txtrmFIAFhrl07+AFmfwXtO17a2dJdxsyy7Gc7+8jvW/bNSm8fdYfHPRUce8MnrdtYG4G2URkmL/eaS/0wwdbiwh4f6UeuJ7BvZkyWloLYrdmCQAN7yXdjEpoo/lrLalhERvaJghoJZ5s0bcP3HagZqdjAJut6RJHESr23LdHL646rwUlNmKGEwbCvNe8B7puz32XkW1vg26f1h9T14HJQEog52Ld+I+hGQzr1y7WjXxnz5+fBbiUdq7kYX87Ts0n0NHBGPP8uk5rs0A1dzSNs4EQfoF0E0ztpem0sMhP7vcWyUGvnY5csTvSyhg2cEYOtGHnQ6RMHsrC4WHqssSqEFaW4rCMwVtbsdhKUaHwgghj6wMWtjjNES6YlSPKR07IErIkbmn38YiqclUwr3G8yAdRIq8/zSZHBilDdun4qfYlIs9x0NJTSsn7DQX3RbsPWFLPTMj4EXYpzHLkTH5uCq7/mSdYHK9E5E/gQbxYZ4NuaiMBjrkbVB7O8FrseMxlCVj13y5B4JnSoQpBsNQYa0dxPYftYnH7McZgrYVr4IVzn7beWGy1KG3Bf6ZbTezZGyFc8FI+SZoiI0BSlO8IzPw2gARI96RH4RHL+mmtydJUrA8PScPeJKK2soiQZUVcrENGEbuHlmNZxz7Qw4yereY8eDfXq/rOd+36lT/sj1O2G32Z4iM0Ig4j3Xm/VTQXp8E7nt0br3x+fjj7LHKBNOmq6GtVmQhy5OtNnwqprrMDef45i8medKgIYVJskEl8Pn0pjIukyCP2oYKysgGCaKBxlyFrzjs3i8E03TIjpm/lT0/1dCj6eMNxR8t4u/fUpxK169ORRRnzw8OgQeu5BWq/mCfZd8meaRMpxBDGK4FbjGjUD7wc8iUcUYHZGL12fhainVOlbCpoOH67dtyq62ErpNO8kC8pBJ1V/7WFph29f3V+mbmv8m/yOo7FUV/vBGDmQG2FRjQr2uN2cZvBAWyyDkAZMxAynJ0xbMEknOHK1xshtQy93VBtSDJ5e20/A22rlhMOl9I4ycahSZMIHbrISfCqo5hiHE12VurHCAnDpZ0PFHppd4MINcLdSEfQ0x/wAq0jBmF4PhlLk+8+Skr1JNf43wY/lwHPIRm13vcTQMrwoAIIKCKrBrior0RFnWqiEj94qbOcfLD9RYNlp47WI/5zcmH9f8J0LtMr9tIZuy4QblUB/dsJMO8OREcbieETrINmnRdLILguksluZB64wfRkT0hjJ5ek228UXqDNBh9BHAzsHKIFRkMgt5MpZZIZsakhsoX9ltlBpXJjE7aPCPU7hgoRv38BhgD",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSngYKEAgUGAI4AUIIdGhpbmtpbmcSDPZE1dB3uwf10U21HRoMukYG+MjSJ7kMSt+OIjDG9DzyH4GVt6lDJTaxH319fDnw4Pr1z9A26h3tLepT+oNz5uL8deBuG0b//7+wsNsquwWzFKAXAIKduorv6m6UhwkBsBgS8VjslESdxkrS0O2g+QS2K6/PFxm0d9apAp5+tiMvQytGpel+DiwuNwvXI52cd4LQlnozBqotq1QXhIoKy05xQX8z8pTsdV/CBmf0mhDhdoBy9FCccyK5TiolcJDpLH15Vx6exrpndw3V/0RAn/gKibcZr5x6IQGT6ge/LneC5KUXfdCubvdtdusejbCPd1IujkbHBpWmRJ/F1FlQUD4EYokQWjG5qPk7IomEvNYdrARVysRU2oxlk0X64JBSC2JYF6FHaR0uI66Xx0/agF4Hb/O7KkG2O8TxGx/GWEellp8t0LRvhHQvSSpOrFYWbA5VsmFGAy1sER1bjo25O5D4VdZ2mKxE6dfq9b8L6HC6ymqk3Zve/DZgkwEdmkeSqujGaBG/RLrJaekBJSoQ/z0buVcH9cYlFQJwBdVA23tRrAEtuAsskdk1XaLvMWhZ6Pb5gYDKNH0QLU2etiZtMWFBIpsVbYh8531KjR2u2/DY3p823CwmNUbMIoYNdOBWaR4p/2w6JV5rHp8h7iYpggWtXQB+eHjT4H5XHmK1GtieJqRzxdMyqWNY4F7oqEHkxRrRLB6AWLv3YolG+eay6haRNjF1Yc9rO9tzpSflrp6Tu8XLzsuk4lLwfkoZuBD3pyOFb2knl3eqPg10PiXXC6H4PwPQPd2PXSSTbEnPY5RJERFsiip6N4cvE+WiQWohOXpPlYfgKQj+Urrrygo35p7cyfpEZ0ct1slIhCKPnkRj2fZT09Pls3Q28HkIjPvJZDZ9rrtR32LWT3TAuuaMs+jBo25kgMomEvyA/WpQ+bwhSVSwsWDjSRz2sVKeI0L1o0l2gWazhgE+9h9JbXDq+OTMjIpqJhNNqJirC6GIVy+za3EFgvvoPNlGVFE/IiErS+Pr8bKOjtrJ+IIYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    for x in r[:4]:\n        print(x.get('title'),x.get('url'))\n        c=x.get('content','')\n        import re\n        for kw in ['Korea','한국','nationalit','cap','%']:\n            for m in re.finditer(kw,c):\n                print('  ..',c[max(0,m.start()-150):m.start()+150].replace('\\n',' '))\n                break\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016veHKF8kr6iGrEXHeJtnJi",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school nationality cap policy"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_016veHKF8kr6iGrEXHeJtnJi",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School Bangkok: Reputation, Fees, and Admissions",
+                "url": "https://www.eltschool.jp/en/column/nist-international-school-review",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Admissions in Bangkok: Steps and Timing",
+                "url": "https://nijinglobal.academy/en/international-school-admissions-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Guide to Teaching in International Schools in Bangkok",
+                "url": "http://www.kuruzovich.com/guide-to-teaching-in-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1717 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Thailand's schooling system: everything you need to know",
+                "url": "https://www.talkeducation.com/news/thailand-s-schooling-system-everything-you-need-to-know",
+                "encrypted_content": "[omitted]",
+                "page_age": "252 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Singapore International School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Singapore_International_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Pan-Asia International School",
+                "url": "https://en.wikipedia.org/wiki/Pan-Asia_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Lyc%C3%A9e Fran%C3%A7ais International de Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Lyc%C3%A9e_Fran%C3%A7ais_International_de_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01NKfEDZ7Rz66MXBZMPnoE2n",
+            "name": "web_search",
+            "input": {
+              "query": "NIST International School nationalities 60"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01NKfEDZ7Rz66MXBZMPnoE2n",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://search.openapply.com/schools/nist-international-school",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - YouTube",
+                "url": "https://www.youtube.com/user/nistschool",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://en.wikipedia.org/wiki/NIST_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International Schools in Bangkok: Academic Year 2022/2023",
+                "url": "https://propertyscout.co.th/en/property-insights/top-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "360 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Director of Teaching and Learning - NIST",
+                "url": "https://www.iss.edu/wp-content/uploads/2019-NIST-DTL1.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "2496 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School of Amsterdam",
+                "url": "https://en.wikipedia.org/wiki/International_School_of_Amsterdam",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Hannover Region",
+                "url": "https://en.wikipedia.org/wiki/International_School_Hannover_Region",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School - Schrole",
+                "url": "https://www.schrole.com/schools/nist-international-school/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School of Kenya",
+                "url": "https://en.wikipedia.org/wiki/International_School_of_Kenya",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School",
+                "url": "https://dailyschools.com/schools/nist-international-school/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01W12emc5znoTrk74dnQiktP",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana nationalities student body Korean"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01W12emc5znoTrk74dnQiktP",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "73 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Q & A - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school/school-q-and-a",
+                "encrypted_content": "[omitted]",
+                "page_age": "546 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Bangkok Thailand",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "923 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://connect.amchamthailand.com/list/member/bangkok-patana-school-1226",
+                "encrypted_content": "[omitted]",
+                "page_age": "261 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Mr Chris Sammons, Head of School Mr Matthew Seddon, Secondary Principal",
+                "url": "https://www.patana.ac.th/wp-content/uploads/2025/09/School-profile-2025-26.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "445 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.relocatemagazine.com/articles/relocate-global-great-international-education--schools-fair-schools-directory-bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "137 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - International Schools in Thailand - Thailand Schools",
+                "url": "http://www.english-schools.org/thailand/bangkok-patana-school.htm",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Patana_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://www.bkkschools.com/bangkok-patana",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DaccM7PXZgx9skoDoye8i4",
+            "name": "web_search",
+            "input": {
+              "query": "방콕 국제학교 한국인 많은 학교 추천 후기"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01DaccM7PXZgx9skoDoye8i4",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "태국 국제학교 · 한국 공식 입학대행처",
+                "url": "https://theuhak.com/thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Moscow Korean School",
+                "url": "https://en.wikipedia.org/wiki/Moscow_Korean_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "태국 국제학교 조언",
+                "url": "https://m.taechoclub.com/place/view.html?Cidx=TGUB001&seq=1208",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Mongolia School",
+                "url": "https://en.wikipedia.org/wiki/International_Mongolia_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "방콕에서 인기 있는 국제학교 TOP5 (비용, 커리큘럼)",
+                "url": "https://mystory10000.com/entry/%EB%B0%A9%EC%BD%95%EC%97%90%EC%84%9C-%EC%9D%B8%EA%B8%B0-%EC%9E%88%EB%8A%94-%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90-TOP5-%EB%B9%84%EC%9A%A9-%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC",
+                "encrypted_content": "[omitted]",
+                "page_age": "550 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "한국 가족을 위한 방콕 생활 가이드: 아이들 국제학교와 거주지 선택",
+                "url": "https://vietnamlife.info/%ED%95%9C%EA%B5%AD-%EA%B0%80%EC%A1%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EC%BD%95-%EC%83%9D%ED%99%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%95%84%EC%9D%B4%EB%93%A4-%EA%B5%AD%EC%A0%9C%ED%95%99%EA%B5%90/",
+                "encrypted_content": "[omitted]",
+                "page_age": "442 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Beijing",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Beijing",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Busan International High School",
+                "url": "https://en.wikipedia.org/wiki/Busan_International_High_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Korean International School in Hanoi",
+                "url": "https://en.wikipedia.org/wiki/Korean_International_School_in_Hanoi",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01AnprH6EyS62CGHAhYwNKhU",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSwAYKEAgUGAI4AUIIdGhpbmtpbmcSDFQR0Z2+MuKN2AnatxoMObL7Lo7moK8M8rUkIjAtSJCRvlqXcrJJOtThe1Of63XcEyTAWz2SC4F/qvXC0e7qs4xlRPOsr8dxdrSszVIq3QWXbe5j9J6fiNviPXy4NmLB1nxYuLx34et0iUagIO/MBKG2syUDzAGDZvH2wDfB6tqeS7EDP/1kvlmMBaQGC1jRRw74MxQ3cQ5tuR+PIm6Gdf8fe25I2+2QMeCb7IsAhAtdl8akwF8WznxRPGbq8mjeYKQdLVyoLfitwPL/6CtanJYkXA7PXfIuT966W2BhXeLi1s+O9eo6Pk6+hA1GG9t4x/6A8+R3GbEbiWPP9+qa4fT4Tb3coexsaGxdt8R1hCSIdN7aYlncvxuM1wjUxvfgzmrs+U6SFptTkdtlTotZ0Zo+ggjkCi5lKtNxrcdIBzVEe901WjGq+MDM0PIBb5P8j3PN0Mn5WQUBCgpvJM4ADJAnbCRPKx2/Oivv/EOdbevZfHSNYFbXPxD1nkzyx8LoIaghH85b2sa/FLPO0MciXqW4t6h8xC/bCisFK0rqSumaLDp5GR7QR3X3Vs1EuYJBMYtlM6HzOMNp6Qso64fDGTRrZ4wYort5QcGDDnQYshuQOgRaZ8PRiX015f/aCOQD3Syn+jXKYMVqF3uQLQ9SVAmhdSjDr20Aa07KOCdT4mxdq+MLreR9zIJUk8knhf15rF2xGQ9MEcDZJX9PVE9N9JR17ph2Fv9Js21VWj4/cy5SJYoBpgIdjoX1tdEiaXFpn/eu1joEEs77wER+zAgExOd4SK/bkd+9ZlvWVdalhJ4x6NszsCcaT5jiELRAGNWkqketNGDRrdOUBtGLl3dmsMWxQBnes0Lq9y8i9WxNwB0MpwSnvG2K9pkb6H17jk83rl1UtVzZE+/rhOsfC0OM8MPk/TgcdfNFjqD4JZ4VpTOZ5NIVFuXCpFjRmrCrh01ppQxmGIKmLgl87zwvTcO/wtxsYgExyGWTkTkTNnQBHfkF/NuCi0AJTNMszbCeukqNisgBEYO8WORpxmK5EslWkWFmlv4LsU78aerUkfL4tBk3brUaH6E/1KvdaNd7GAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01KdwJ5shDYBxYzjuXGQhDis",
+            "name": "code_execution",
+            "input": {
+              "code": "r=json.loads(await web_search({\"query\":\"Bangkok international school no single nationality may exceed 20%\"})) if False else await web_search({\"query\":\"Bangkok international school no single nationality may exceed 20%\"})\nif isinstance(r,str): r=json.loads(r)\nfor x in r[:5]:\n    c=x.get('content','')\n    print(x.get('title'),x.get('url'))\n    for kw in ['20%','30%','cap','nationality']:\n        m=re.search(kw,c)\n        if m: print('  ..',c[max(0,m.start()-300):m.start()+150].replace('\\n',' '))\n    print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01MVHgJmZyCMCY5kdWd6vQKE",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school no single nationality may exceed 20%"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01KdwJ5shDYBxYzjuXGQhDis"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01MVHgJmZyCMCY5kdWd6vQKE",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Policies and Placement - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/admissions/policies-and-placement/",
+                "encrypted_content": "[omitted]",
+                "page_age": "105 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Admissions in Bangkok: Steps and Timing",
+                "url": "https://nijinglobal.academy/en/international-school-admissions-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Elementary School Bangkok: 2026-27 Fees Guide",
+                "url": "https://nijinglobal.academy/en/international-elementary-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "The Complete 2026 Guide to Bangkok International Schools: How to Choose Without Regret and Top-Tier School Recommendations",
+                "url": "https://www.eltschool.jp/en/column/bangkok-international-school-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "225 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British schools in Bangkok: curriculum, fees and how to choose",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/british-schools-in-bangkok-curriculum-fees-and-how-to-choose",
+                "encrypted_content": "[omitted]",
+                "page_age": "3 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "A Guide to Teaching in International Schools in Bangkok",
+                "url": "http://www.kuruzovich.com/guide-to-teaching-in-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1717 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School",
+                "url": "https://en.wikipedia.org/wiki/Shrewsbury_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01KdwJ5shDYBxYzjuXGQhDis"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01KdwJ5shDYBxYzjuXGQhDis",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSjgsKEAgUGAI4AUIIdGhpbmtpbmcSDNcbc0xe+Y0bBLjvHRoMqXH3+gLmBl1B5XtfIjDiCcCj8YdY07ooYfQIAB5y7vh8M4vrSMC4MK8Fa+z1/eyXMn3sZWBIAaPsqIx7oFoqqwr0oj+CGFD9rZXECV8IJ5PmAVzgUfKAuY63j90sVvBzj/m/TExzD/P6jGn6AM5Il1tjRzbCpWwoEsJg/6GoJXr7YnfcFT0Wtq97tVNk7Ges5slh//5kEgEtwcxwJ53C/mXU9pwttnnM9OwXJqJygPOEugIskrmjWJknpI7F+aaz4hk2RzJ9RTtY5tl1/k4LLsULDkLLt0HJMM29JyP5O3obTAPoAMpwgOC0zelz9oMpMkE6n3i7IvHwI6fbfCa7UIBXs9wV22u6N7u0PK3aH9Oizzc38P2OwcNw+Aa+tdJDM0j4rfipLsmwDJBRY/ZqBSGYzm2DPsqvHD0HUXGGA6iZtVH02lc9qCTKg03W1tSSXfdQGP+5KxKw3U1KUd9AUmdHzoMTXr5Hz1oecSh4ac5HzFq1QN5hKx2L99XKTaWrYMgqJYacvzYqUUgh3N5zNLdmBxVnzuJbtE74mlo8JpdRwaRIikK+l0eX7CVgnbdeLD7u+cYn4XcGFYS8PFtGJ55VJxpioWiyDH/ep/cW/9bJ3Eji4dLDeoh5IABu1K+i0o5p9c84VHgjjzGkAVZJTlfF8qQJwXqnUYQ/HhyTjpCiUsIpDLMKydgAotNK7b4OpdfrvOKna28DhDRutkLNle71R2quHQgvUGLu8akw1UWAfxdU1Xeyx3GfR2B577vppqC6FA/o1S5zGsi4n34CLcVUb414MrXEMIMkrMBquUyPEt1qu5KeSR/nVFpC+tr6KZl62aZh+KDMGA3E94gQUGNGx9oPpp9E+76rlJWVuipR2OA9An/SMRFlRf2Zg+l0X7CNWKOJFALk0vNdKkvf44Lz/6/hnlG08FFKK8TRXgjBxfewibWzEz75ZW01Ovg8OhKEs+u2i6KWzFeFO1ZvKRET9MusZi/KJMCBZF2H3MxoWcBE5EUdinkzc9j9DYnW/O36JjGD8aIi7Yex5xnDIvTTEoEMaxgEmnnsliVHZfPtRkDOfEraBp+GtI//AMSO01dtAkPr00wMtX3T69jIIT5PG9q6lhfLf+NuAV34zm8pVfIoa9sdjljmFQYdeSsBbjNDuJvkPVsKWHEQdFvH48pY8nNHaMcO8hO9V6inx5weN8nwBsHjuaLeuGiTZ9GLpzzhug0RdJIibXFeYcgQDGSSA7pIKepiXadfD0wkgLNvvU8pg1pqQRvoMLlb/7yyjWlsCZylbTbXbY/OEuPdX6Zzy7ifSZke/R2RqkDbcGq92cBsHIHUuFJ+otmVax1X49THy+J1Kq/OIbisIzaH0pgH52/zuhron7km+R+KmfCFKxiO9piZJrMSY4AjxGcPHIRvwB1IfXYCLktwcDdHCkcqV+CHzh/mTzgqUlB5REj+IU7r6yYuhcZJMuHoA1DwlqAZpt4Ii2MMrH7C3ex5E/+hPE7t5ISqGaOWPkhEBaO5C995enFNntuJUK9D/WHrSaF6W/osUt/f9kjzD9fnTtC/h61YUeTwvHiVB17nXiu3B5digV/7drLLRvfqFNGqp+UwTiZiSEzJUEFE6lW1F+0l6sth1vQm3+W6FJVX5o3cZJc8Pm9nz6cdohoN0+tmaJEYtIbaLPEDQBsTwkI9HZmeW2xyRfxBozsKBUVBOVsV6yD4/Cs9MZIbunrh4f0lFT8/oNBrFbdhWIWgRWzYN0VVf1Hrj2x4DhwVWD/MJ3CE+S2rBujsbH4Q+u5RBfqDflkVGzTuYprCe4ZVTRYzaGs4/upa3teEUbMjzc7/+XtshKrqq7HUzLR17cEYAQ=="
+          },
+          {
+            "type": "text",
+            "text": "방콕 국제학교 중 한국 학생 비율을 학교별로 정리해 공개하는 곳은 거의 없습니다. 그래서 가장 확실한 기준은 **한 국적 학생 수에 상한을 둔 학교**인지, 그리고 **공개된 국적 구성 자료**입니다. 이 두 가지로 보면 아래 학교들이 한국 학생 비율이 낮을 가능성이 큽니다.\n\n## 1. Bangkok Patana School (방콕 파타나, 영국식, 방나 지역)\n- 학교 입학 정책에 **한 국적이 전체 학생의 20%를 넘지 않는다**고 명시돼 있습니다. 학년이 꽉 찰 때는 다양성을 유지하는 쪽을 우선한다고 합니다. (출처: patana.ac.th 입학 정책 페이지)\n- Good Schools Guide에 실린 국적 구성은 태국 20%, 영국 14%, 미국 10%, 인도 7%, 호주 5%, 일본 4% 순입니다. 상위 6개 국적에 한국이 없으니 한국 학생 비율은 4% 미만으로 보입니다.\n- 학생은 약 2,200명이고 국적은 60개가 넘는 비영리 학교입니다.\n\n## 2. NIST International School (수쿰빗, IB 과정)\n- **국적별 30% 상한**이 있는 것으로 알려져 있습니다. 대기자가 많고 입학이 까다로운 학교로 꼽힙니다.\n- 학생은 1,600~1,800명 이상이고 국적은 50~75개 이상입니다. 국제학교 바칼로레아(IB) 과정 3단계(PYP, MYP, DP)를 모두 운영하는 비영리 학교입니다.\n\n## 3. International School Bangkok (ISB, 미국식, 논타부리)\n- 미 국무부 자료(2024년 12월 기준)에 따르면 학생 구성은 제3국 41.1%, 태국 30.1%, 미국 28.9%입니다.\n- 주요 국적 순서는 태국, 미국, 중국, 한국, 일본입니다. 한국이 4번째라 위 두 학교보다는 한국 학생이 많을 수 있습니다. 그래도 어느 한 국적이 지배적인 구조는 아닙니다.\n\n## 참고: St Andrews International School Bangkok\n- 국제 학생과 태국 학생이 대략 50:50입니다. 한국어를 모국어 프로그램으로 운영하고 있어 한국 학생이 어느 정도 있다고 보는 게 맞습니다.\n\n## 학교를 고를 때 팁\n1. **입학처에 직접 물어보세요.** \"학년별 한국 학생 수가 몇 명인가요?\"라고 구체적으로 물으면 대부분 알려줍니다. 학교 전체 비율이 낮아도 특정 학년이나 반에 한국 학생이 몰려 있을 수 있습니다.\n2. **국적 상한(nationality cap)이 있는지 확인하세요.** 상한이 있으면 앞으로도 비율이 크게 늘지 않습니다.\n3. **학비가 비교적 낮은 중소형 학교는 주의하세요.** 동남아 조기유학 붐 때는 한국 학생이 반의 절반을 넘는 학교도 있었다는 보도가 있었습니다(한국일보, 2008). 오래된 자료이니 현재 상황은 학교마다 따로 확인하는 게 좋습니다.\n4. **한국어 교육이 목적이면** 국제학교와 별도로 방콕한국국제학교(한국 교육과정, 약 176명)도 있습니다.\n\n정리하면 **Bangkok Patana(20% 상한)**와 **NIST(30% 상한)**가 정책으로 국적 다양성을 지키는 대표적인 학교입니다. 그중에서도 공개 자료로 보면 파타나의 한국 학생 비율이 특히 낮습니다. 학비, 커리큘럼(영국식, IB, 미국식), 거주 지역을 함께 고려해서 고르시면 됩니다."
+          }
+        ],
+        "container": {
+          "id": "container_01KYWbihtoa1Y4koxhtGwNn7",
+          "expires_at": "2026-11-20T17:55:39.467068Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 94499,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 3076,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 17,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5924,
+              "output_tokens": 238,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6515,
+              "output_tokens": 213,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 14243,
+              "output_tokens": 259,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 14525,
+              "output_tokens": 164,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 15118,
+              "output_tokens": 241,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 18206,
+              "output_tokens": 281,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 19968,
+              "output_tokens": 1680,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 358
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

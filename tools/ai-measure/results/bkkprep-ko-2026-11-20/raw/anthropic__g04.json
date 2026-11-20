@@ -1,0 +1,312 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g04",
+    "type": "generic",
+    "text": "방콕에서 영국식 교육과정을 운영하는 국제학교는 어디인가요?"
+  },
+  "started": "2026-11-20T16:50:40.076Z",
+  "finished": "2026-11-20T16:51:00.717Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕에서 영국식 교육과정을 운영하는 국제학교는 어디인가요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXPxd8Lm73Wzc9bNwia",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSgQYKEAgUGAI4AUIIdGhpbmtpbmcSDCyq6nF/rEfw62KMSxoMpAHYDJ5MLGO1g6HVIjCdpiq22fEBUWnyAS2mmBNjwzEuUssexfavo1KZfhtG26TtROWmwepJWdGY7vxudz0qngU+aFwol1MLZUszV8v1pXdthXED6pINjrpvfNfs8jO0103II0SVD95XoK/IXXDOTJlPI72qLFiJdUFipgxo8pFA4lURawZkQyxVLkpHejhyFR9wLrOcZky+IOjLSkA+OlTcbwSylYeTKLiRrfPBhwoufMBNPS65AG7A1t4cAo12Hh//FMkiJgH0QxPmfjpJBKaX1htps7vHq5XZSy0WP2JT0zodvT8uQyEP5ZxtdhB3se2FSkXDVGY1/jKq1VsxPiqtc2lAnxCEiUdoA86AXFp18HNN/QRr0xNdzukgn8EvB0wyxHlk3Od78f9D6upN0Z7hNnT/aG60rztazjBuZu9rCaf7kJicyZoFdpWzR0rO8mKL5CcwZjtb+5b2x4U6nlrS6YpDGuJ2oLnBne56HO9UV7Ou0sjMsWHok+LQ5G1GtAeRRY0LkO/riUqLYbcd3nmV9YDndgIHMKe/H3vpgSHpWhGj8qnIgR36pP4VzUMN0rj/0kCzDRKJFI5H46AELa+mcFtbOUJAVJvGjMPCvpIGaLVuYYSNW3VPPBfZ6Mtu+XgOMBH/GeRKsXu3yh8D944VD40JOkLtkoEmNo94GM38fhM+ymdLKTNhbxcEFFVzjaGJth1PSNg9a7VXzv3vLjpIiWu5m/Wu84BUkHqscFXmRH9N4k2Rs8ykoMPvOJsGXpJuXsXgbiCnqEwCACEEJb2RiMf4eKCqQKO8LyxFt29+OGQ1VxbMbC6SpTUY9FvUiKMy0rMltxuIcAnMa2zjOUESNVNi0JMCbx+YzjicfjUPCTE+4WU9Pi0i7xsgS1OvA/NqTfCm7/iL3IYd48h9ofSlhO6rJSOUHSZNlDpZAU3Z/FvbiAo2e6i7JHOpD+7zYkBTzMdqaaK5KFBU2nPCGAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01WiRN8cinqJferzM2buKBDX",
+            "name": "code_execution",
+            "input": {
+              "code": "r = await web_search({\"query\": \"British curriculum international schools Bangkok list\"})\nfor x in r[:6]:\n    print(x['title'], x['url'])\n    print(x['content'][:1500])\n    print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_011CxUzMHZ2JkuK1GRg6a2H6",
+            "name": "web_search",
+            "input": {
+              "query": "British curriculum international schools Bangkok list"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01WiRN8cinqJferzM2buKBDX"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_011CxUzMHZ2JkuK1GRg6a2H6",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "British schools in Bangkok: curriculum, fees and how to choose",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/british-schools-in-bangkok-curriculum-fees-and-how-to-choose",
+                "encrypted_content": "[omitted]",
+                "page_age": "3 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Schools in Bangkok - BKK Kids",
+                "url": "https://www.bkkkids.com/blog/british-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "997 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "97 International Schools in Bangkok: Tuition & Curriculum 2026",
+                "url": "https://scholae.cc/blog/best-international-schools-bangkok-2026",
+                "encrypted_content": "[omitted]",
+                "page_age": "240 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Curriculum Schools in Bangkok",
+                "url": "https://www.bkkfamilies.com/schools/british-curriculum-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Schools in Bangkok: Fees, A-Levels & Areas",
+                "url": "https://expatschoolguide.com/guides/thailand/bangkok/british-schools/",
+                "encrypted_content": "[omitted]",
+                "page_age": "9 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "10 Best British International Schools in Bangkok (November 2026 Rankings)",
+                "url": "https://www.international-schools-database.com/in/bangkok/top-british-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "227 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "20 Best British International Schools in Thailand (November 2026 Rankings)",
+                "url": "https://www.international-schools-database.com/country/thailand/top-british-international-schools-in-thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": "210 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top British International Schools in Thailand (2026)",
+                "url": "https://theinternationalschools.com/th/top-british-schools-in-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "108 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "British Curriculum Schools Bangkok 2026 Expat Guide",
+                "url": "https://www.globalinvestments.net/expat/british-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "160 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01WiRN8cinqJferzM2buKBDX"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01WiRN8cinqJferzM2buKBDX",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDAU9b6Btsacxl5dduBoMJZKXMKq/GauFMoREIjAMkfgzriJugrrdxsyZ1rp/xl4+FuoqAoL7ApFusYTCAlh/Bo9lilHPLLHuNd3Y2MIqEvwsdwbtoi8C+UinnuqGqNovWRgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01WiRN8cinqJferzM2buKBDX/cell.py\", line 10, in <module>\n    print(x['title'], x['url'])\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Vb4Y9gtkQZyTgijBV5QzGD",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nif isinstance(r,str): r=json.loads(r)\nprint(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01Vb4Y9gtkQZyTgijBV5QzGD",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'list'>\n[{'type': 'web_search_result', 'title': 'British schools in Bangkok: curriculum, fees and how to choose', 'url': 'https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/british-schools-in-bangkok-curriculum-fees-and-how-to-choose', 'content': \"Quick answer: Which British schools in Bangkok should you look at, and what do they cost? Bangkok Patana, Shrewsbury and Harrow follow the English curriculum through IGCSE to A Levels or the IB Diploma, and Dulwich College Bangkok opened in 2026…\\n\\n# British schools in Bangkok: curriculum, fees and how to choose\\n**Quick answer: Which British schools in Bangkok should you look at, and what do they cost?** Bangkok Patana, Shrewsbury and Harrow follow the English curriculum through IGCSE to A Levels or the IB Diploma, and Dulwich College Bangkok opened in 2026 with Nursery to Year 7.\\n\\n- FOBISIA, the association of British international schools in Asia, lists 29 member schools in Thailand, including Bangkok Patana, Harrow Bangkok and both Shrewsbury campuses.\\n\\n## What does a British school in Bangkok teach?\\nNot every English school in Bangkok ends with A Levels: Bangkok Patana teaches IGCSE and then the IB Diploma, and Dulwich College Bangkok says its students will choose between A Levels and the IB.\\n\\n## British schools in Bangkok to shortlist\\n### Bangkok Patana School\\n\\n### Harrow International School Bangkok\\nOther British schools in or near Bangkok on FOBISIA's list include Brighton College, Wellington College, King's College, Rugby School Thailand and the St Andrews schools.\\n\\n## How much do British schools in Bangkok cost in 2026-27?\\n\\n### Do British schools in Bangkok offer A Levels or the IB Diploma?\\nMost follow the English curriculum to IGCSE at 16 and then offer A Levels, as Shrewsbury and Harrow do, where sixth formers choose three or four subjects.\", 'page_age': '3 days ago'}, {'type': 'web_search_result', 'title': 'British Schools in Bangkok - BKK Kids', 'url': 'https://www.bkkkids.com/blog/british-schools-in-bangkok/', 'content': 'Brighton College Bangkok … St Stephen’s International School (Khao Yai) · Storytime Preschool Bangkok · Thonglor Greenfield Nursery · Traill International School · **Tinytots International School** · **Wellington College International School Bangkok (WCIB)**\\n\\n# British Schools in Bangkok\\n\\n- ABC Pathways International Kindergarten\\n\\n- Ascot International School\\n- Bangkok International Preparatory & Secondary School (Bangkok Prep)\\n- Bangkok Patana School (BPS)\\n- BERNIE British International Prepatory Centre\\n- Bright Skies International School\\n- Brighton College Bangkok\\n\\n- Casa Bambino International Preschool\\n- Crescent International School\\n\\n- DBS Denla British School\\n\\n- Hampton International School\\n\\n- Harrow International School Bangkok\\n\\n- Kensington International Kindergarten\\n- KiddyKare International Kindergarten\\n- Kidz Village International Kindergarten\\n- Kids’ Academy International School\\n- K\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSxAYKEAgUGAI4AUIIdGhpbmtpbmcSDG0GTlNC0amyoU5j6hoMXwv+RNDmxNxNue+QIjBm4kfpYKSPq0Fx7YlWmp7Dyz7VBU/7ejDl0epixVyuNbK6JkI+r56UW+0Hx925OBkq4QXjPnjvTggru6zcTFJBegQUb9K9rHEszZcJ9DX5FERFWO0xIzc6Xc7WyEEs3/5rGfTKE2wbRcaJlDBrK2N4FSQ873cy2B/Bg6NpLzk0/xAD0VUaxYBTlhd/7YwlFH6Uhq7SfE694Tz6M9ifXoDr7MGtQuuT2tFUuNRjjqJpmhoA7pm1Iu5WeUtDwBfzRcAQbA0jWbVqFxqf3n7omyPezaLpp2HmcaIYgbriWsv3KaDp2yFrf4oqsbr2qa/2NcnPWOsgPkFiCKWbwrChOhOxjjvFXAXUlCLWOkbj5uCnaae+TWYXVCFur7W7zqulRmaA00CUkOB6o5Na+xvaaP+TII8VULDx0rO5XiceHd8Y526x/YOcRQG2R04Jhf35hQnfHdVSXPn9XA4Z8NV2X675Nq5JVP9lDEJ7tgVWYhLdioaoQf2vTDUi5kYkkQiWCt0b18Zfb9OcFaEGudvMwqhmKBOgOtkPjeg433aFuiPnR5i3FuRwu0/vhDmcKZVP6x5rU2QAyeCDIeZSVSfX6ZUcoq3627FiX/N0Jeb7iG29+EThg3phk6yGXDPbJcayeoeuv6+J88T/BtVggqnz9NAFEomibNvD7VIq0B1rZVOf68u+Ee4ENaSHj5ueArD4nuOS8aWoWMGy13dXzDTb0JMlH1ILBLX+61YMgtp+HVX85qt4wHo9mabXMCW0G1Jkm0IBtEdeUrOI4ZuPCHSXfvbV4zs1XZJ9Ujm/wRRlFBkpNgAmXnTEVlIdLBYUsdtgNAIvWV1z+DlMmhxAA7wCW/lgjOXuri5A2ASrOhBqTIW2dqIda/ZC47qLvK9F2v+daIztvAzFaWPTS8bVQ9Oc5JuKP/mMD4/yMnadTn4UK0lSCs7GLKmsYiVjgra51r9VL86uLGfrRuh2QPowxYKgFcpxZrcs8b9YuLakZwdI7sWTXzIA4skIAoPcF+6BTC6QsXgD9j4XeZnJxaBH0PFU+KtPivtHzxgB"
+          },
+          {
+            "type": "text",
+            "text": "방콕에는 영국식 교육과정(잉글랜드 국가 교육과정, IGCSE, A Level)을 운영하는 국제학교가 많아서 선택지가 넓습니다. 참고로 영국계 국제학교 협회인 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "FOBISIA에는 태국 회원교 29곳이 등록되어 있으며, Bangkok Patana, Harrow Bangkok, Shrewsbury 두 캠퍼스가 포함됩니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n## 대표적인 영국식 국제학교\n\n**1. 방콕 파타나 스쿨 (Bangkok Patana School)**\n- 태국에서 가장 오래된 영국식 국제학교 중 하나로, 1957년에 세워졌습니다.\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "모든 영국식 학교가 A Level로 끝나는 것은 아닙니다. Bangkok Patana는 IGCSE 이후 IB 디플로마를 가르칩니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**2. 해로우 인터내셔널 스쿨 방콕 (Harrow International School Bangkok)**\n- 영국 명문 Harrow School의 자매학교이며, 기숙사도 운영합니다.\n\n**3. 슈루즈버리 인터내셔널 스쿨 (Shrewsbury International School)**\n- 리버사이드 캠퍼스와 시티 캠퍼스(초등) 두 곳이 있습니다.\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "대부분의 학교는 16세에 IGCSE를 치른 뒤 A Level 과정을 제공합니다. Shrewsbury와 Harrow도 마찬가지이며, 6학년(Sixth Form) 학생들은 3~4과목을 선택합니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**4. 덜위치 칼리지 방콕 (Dulwich College Bangkok)**\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2026년에 Nursery부터 Year 7까지 개교한"
+          },
+          {
+            "type": "text",
+            "text": " 신설 학교입니다. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "학생들은 A Level과 IB 중에서 선택하게 될 예정이라고 합니다."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**5. 그 밖의 학교**\n- "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "FOBISIA 목록에 있는 방콕 및 근교의 다른 영국식 학교로는 Brighton College, Wellington College, King's College, Rugby School Thailand, St Andrews 계열 학교가 있습니다."
+          },
+          {
+            "type": "text",
+            "text": "\n- 이 외에도 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Bangkok Prep(Bangkok International Preparatory & Secondary School), DBS Denla British School, Ascot International School"
+          },
+          {
+            "type": "text",
+            "text": " 등이 있습니다.\n\n## 학교를 고를 때 확인할 점\n- **고등과정**: A Level인지 IB 디플로마인지, 아니면 둘 다 운영하는지\n- **위치**: 방콕은 교통 체증이 심해서 통학 거리가 중요합니다. 예를 들어 Patana는 방나, Harrow는 돈므앙, Shrewsbury는 짜오프라야 강변에 있습니다.\n- **학비**: 명문교는 학비가 높은 편이고 매년 바뀌므로 각 학교 홈페이지에서 최신 금액을 확인하세요.\n- **인증**: FOBISIA 회원 여부, 영국 정부 인증(BSO)을 받았는지 확인하세요.\n\n원하시는 학년, 예산, 선호 지역을 알려주시면 더 맞춤형으로 추천해 드릴게요."
+          }
+        ],
+        "container": {
+          "id": "container_017X8nLVB4j6i9ScfgoHZUNV",
+          "expires_at": "2026-11-20T17:50:47.954896Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 20105,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1591,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5915,
+              "output_tokens": 176,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6440,
+              "output_tokens": 88,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7750,
+              "output_tokens": 1327,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 125
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

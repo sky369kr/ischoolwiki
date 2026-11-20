@@ -1,0 +1,391 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b04",
+    "type": "branded",
+    "text": "What universities do Bangkok Prep graduates go to?"
+  },
+  "started": "2026-11-20T16:56:40.635Z",
+  "finished": "2026-11-20T16:56:59.640Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "What universities do Bangkok Prep graduates go to?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXrYDBsYuv1bwhVWY36",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Qp3fpYjy3irQvnr7BrEnEP",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"Bangkok Prep graduates university destinations\"})\nfor x in r[:5]:\n    print(x.get('title'), x.get('url'))\n    print(x.get('content','')[:1500])\n    print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01MxUPJQTPwi2Kjp2c6eoKvj",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep graduates university destinations"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01Qp3fpYjy3irQvnr7BrEnEP"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01MxUPJQTPwi2Kjp2c6eoKvj",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep’s University Offers",
+                "url": "https://www.bangkokprep.ac.th/news/bangkok-preps-university-offers-grad-2020/",
+                "encrypted_content": "[omitted]",
+                "page_age": "2456 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Future Pathways",
+                "url": "https://www.bangkokprep.ac.th/sixth-form/university-destinations/",
+                "encrypted_content": "[omitted]",
+                "page_age": "422 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep Celebrates Graduation - Scandasia",
+                "url": "https://scandasia.com/bangkok-prep-celebrates-graduation/",
+                "encrypted_content": "[omitted]",
+                "page_age": "3812 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep British International School",
+                "url": "https://www.bangkokprep.ac.th/our-students/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1178 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep Class of 2022 Graduation - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/news/graduation-class-of-2022/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1535 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep at a Glance - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/bangkok-prep-at-a-glance/",
+                "encrypted_content": "[omitted]",
+                "page_age": "462 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International Schools in Bangkok: Academic Year 2022/2023",
+                "url": "https://propertyscout.co.th/en/property-insights/top-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "360 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Review: BKK Kids Checks into Bangkok Prep Secondary Campus (Part 2) - BKK Kids",
+                "url": "https://www.bkkkids.com/blog/school-review-bkk-kids-checks-into-bangkok-prep-secondary-campus-part-2/",
+                "encrypted_content": "[omitted]",
+                "page_age": "815 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory and Secondary School (Bangkok Prep)",
+                "url": "https://www.school-track.com/international-school-guide/bangkok-international-preparatory-and-secondary-school-(bangkok-prep)",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01Qp3fpYjy3irQvnr7BrEnEP"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01Qp3fpYjy3irQvnr7BrEnEP",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBYHr6Z0OtHjOY4fXxoMlSwhXChU6szng8peIjANJ3B+cxsXt0TfOaaJh3hBLSnDb8igDrNYNDYw85/zZ+0hytWC5jmRUQ5i+y+IhR0qEkFw0KpT/HlxgmLrRfXPhoii1hgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01Qp3fpYjy3irQvnr7BrEnEP/cell.py\", line 11, in <module>\n    print(x.get('title'), x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015uSnuCYiZjTk1VsUe59fzm",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r), str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_015uSnuCYiZjTk1VsUe59fzm",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'> [{\"type\": \"web_search_result\", \"title\": \"Bangkok Prep\\u2019s University Offers\", \"url\": \"https://www.bangkokprep.ac.th/news/bangkok-preps-university-offers-grad-2020/\", \"content\": \"Students have received offers from top universities and colleges including UCL, University of Bristol, University of Bath, University of Manchester, UAL, Imperial College London, University of Exeter, Newcastle University, Durham University and\\u2026\\n\\n# Bangkok Prep\\u2019s University Offers \\u2013 \\u2018Grad 2020\\u2019\\nStudents have received offers from top universities and colleges including UCL, University of Bristol, University of Bath, University of Manchester, UAL, Imperial College London, University of Exeter, Newcastle University, Durham University and University of Toronto.\\n\\nOther global University destinations with applications include: Ireland, Canada, The Netherlands, Hong Kong, Thailand and India.\\n\\nProgramme \\u00b7 Number\\nEngineering and Technology \\u00b7 9\\nSocial Sciences \\u2013 (Psychology) \\u00b7 7\\nComputer Science \\u00b7 6\\nBusiness/Management \\u00b7 6\\n\\n**Universities with the most offers in February are:**\\n\\nUniversity \\u00b7 Number\\nUniversity of Bristol \\u00b7 8\\nUniversity of Bath \\u00b7 6\\nUniversity of Exeter \\u00b7 5\\n\\nUniversity \\u00b7 Number\\nUCL \\u00b7 12\\nUniversity of Bath \\u00b7 8\\nUniversity of Bristol \\u00b7 8\\n\\n**At Bangkok Prep, we prepare students for life beyond school. Their next steps will usually be to join a top university, anywhere in the world but, usually North America, Europe, the UK, Hong Kong, Australia and the top international programmes in the highest achieving Thai universities.\\n\\n### Congratulations on your University Offers Prim S\\nCongratulations to Prim S in Year 13, who has received offers from The University of Bath, University ...\", \"page_age\": \"2456 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"Future Pathways\", \"url\": \"https://www.bangkokprep.ac.th/sixth-form/university-destinations/\", \"content\": \"University outcomes: **BSP Business and Law School, Berlin** \\u00b7 **IST University of Applied Sciences, D\\u00fcsseldorf** \\u00b7 Lancaster University Leipzig \\u2026 University outcomes: The American University of Paris \\u2026 University outcomes: University of Navarra\\n\\nDiscover your future at Bangkok Prep!\\n\\nBangkok International Preparatory & Secondary School\\n\\nFrom Year 7 onwards, students at Bangkok Prep follow a structured programme of advice, support and guidance encouraging them to explore their interests, identify potential options and then strategically plan their future objectives.\\n\\nUltimately, Bangkok Prep has an enviable track record of students successfully progressing to a range of top universities throughout the world including The United States, Canada, The UK and Europe, Australia, Japan, China and Hong Kong, as well as leading universities here in Thailand\\n\\nBangkok Prep students consistently progress to the most prestigious universities around the world.\\n\\nKanthanut joi\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01R4RMpS1t2Krhj7MmBLzYD7",
+            "name": "code_execution",
+            "input": {
+              "code": "r=json.loads(r)\nfor x in r[:6]:\n    print(x['title'], x['url'], x.get('page_age'))\n    print(x['content'][:2500])\n    print('---')"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01R4RMpS1t2Krhj7MmBLzYD7",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "Bangkok Prep’s University Offers https://www.bangkokprep.ac.th/news/bangkok-preps-university-offers-grad-2020/ 2456 days ago\nStudents have received offers from top universities and colleges including UCL, University of Bristol, University of Bath, University of Manchester, UAL, Imperial College London, University of Exeter, Newcastle University, Durham University and…\n\n# Bangkok Prep’s University Offers – ‘Grad 2020’\nStudents have received offers from top universities and colleges including UCL, University of Bristol, University of Bath, University of Manchester, UAL, Imperial College London, University of Exeter, Newcastle University, Durham University and University of Toronto.\n\nOther global University destinations with applications include: Ireland, Canada, The Netherlands, Hong Kong, Thailand and India.\n\nProgramme · Number\nEngineering and Technology · 9\nSocial Sciences – (Psychology) · 7\nComputer Science · 6\nBusiness/Management · 6\n\n**Universities with the most offers in February are:**\n\nUniversity · Number\nUniversity of Bristol · 8\nUniversity of Bath · 6\nUniversity of Exeter · 5\n\nUniversity · Number\nUCL · 12\nUniversity of Bath · 8\nUniversity of Bristol · 8\n\n**At Bangkok Prep, we prepare students for life beyond school. Their next steps will usually be to join a top university, anywhere in the world but, usually North America, Europe, the UK, Hong Kong, Australia and the top international programmes in the highest achieving Thai universities.\n\n### Congratulations on your University Offers Prim S\nCongratulations to Prim S in Year 13, who has received offers from The University of Bath, University ...\n---\nFuture Pathways https://www.bangkokprep.ac.th/sixth-form/university-destinations/ 422 days ago\nUniversity outcomes: **BSP Business and Law School, Berlin** · **IST University of Applied Sciences, Düsseldorf** · Lancaster University Leipzig … University outcomes: The American University of Paris … University outcomes: University of Navarra\n\nDiscover your future at Bangkok Prep!\n\nBangkok International Preparatory & Secondary School\n\nFrom Year 7 onwards, students at Bangkok Prep follow a structured programme of advice, support and guidance encouraging them to explore their interests, identify potential options and then strategically plan their future objectives.\n\nUltimately, Bangkok Prep has an enviable track record of students successfully progressing to a range of top universities throughout the world including The United States, Canada, The UK and Europe, Australia, Japan, China and Hong Kong, as well as leading universities here in Thailand\n\nBangkok Prep students consistently progress to the most prestigious universities around the world.\n\nKanthanut joined Bangkok Prep in 2023 as the school’s dedicated specialist in university pathways within Thailand.\n\nRatanon is an alumnus of Bangkok Prep School.\n\nShalini is a Bangkok Prep alumna who completed her A-Levels in ICT, Mathematics, Chemistry, and Physics before earning a BBA in International Business from Chulalongkorn University, graduating in 2019 with Second Class Honours.\n\nThe Bangkok Prep Alumni family is incredibly proud of her achievements and looks forward to seeing what she accomplishes next, wishing her every success in her future endeavors.\n\nStudents apply to a wide range of global university destinations each year.\n---\nBangkok Prep Celebrates Graduation - Scandasia https://scandasia.com/bangkok-prep-celebrates-graduation/ 3812 days ago\nThis is Bangkok Prep’s fifth graduating class and students have been offered places at leading universities in the US, UK, Canada and other countries including University of British Columbia (UBC), Canada; Seoul National University (SNU); Hong…\n\n# Bangkok Prep Celebrates Graduation\nBangkok Prep Graduation\n\nShows the proud graduates with Mr Joshua Morris (left), Year 13 Leader and Ms Valerie Thomas-Peter (right), Head of School.\n\nBangkok Prep Graduation\n\nBangkok Prep students recently celebrated their Secondary School graduation among families and friends. Former Secretary General of ASEAN, Dr Surin Pitsuwan was the guest speaker who presented the diplomas to the students.\n\nThis is Bangkok Prep’s fifth graduating class and students have been offered places at leading universities in the US, UK, Canada and other countries including University of British Columbia (UBC), Canada; Seoul National University (SNU); Hong Kong University of Science and Technology (HKUST); London School of Economics (LSE), UK; Imperial College London, UK; University College London, UK; Lancaster University, UK; University of Exeter, UK; University of Bath, UK; University of Leeds, UK; University of Birmingham, UK; Cardiff University, UK, to name a few.\n\n**About Bangkok Prep**\n\nBangkok International Preparatory & Secondary School (Bangkok Prep) is a private co-educational mid-size school located adjacent to the Thong Lo BTS station, making it the most accessible and conveniently located international school in Bangkok.\n---\nBangkok Prep British International School https://www.bangkokprep.ac.th/our-students/ 1178 days ago\nGraduates secured places at leading universities around the world, including the University of Cambridge, Imperial College London, the London School of Economics, University College London (UCL), New York University (NYU), the University of…\n\n# Discover Bangkok Prep\nFor over 20 years, Bangkok Prep has delivered world-class education to a diverse community 60+ nationalities. Supported by International Schools Partnership’s global network, our programmes lead graduates to top QS-ranked universities worldwide, including Oxbridge, UCL and Brown.\n\n## A journey of evidenced success in Bangkok\n\nGraduates went on to renowned universities worldwide, including Cambridge and Ivy League colleges.\n\nIn 2012, Bangkok Prep celebrated its first graduating class with Prime Minister Abhisit Vejjajiva as inaugural guest speaker, marking a proud milestone for the school community. Graduates secured places at leading universities around the world, including the University of Cambridge, Imperial College London, the London School of Economics, University College London (UCL), New York University (NYU), the University of California, Los Angeles (UCLA), Brown University and Cornell University, reflecting the strong academic foundations and global outlook nurtured at the school.\n\n### Why choose Bangkok Prep\n\n- Future pathways support Future pathways support Bangkok Prep students consistently secure places at top QS-ranked universities worldwide, including Oxbridge, Ivy League and UCL, empowered by the largest dedicated Futures Team in Bangkok and a proven university preparation programme.\n---\nBangkok Prep Class of 2022 Graduation - Bangkok Prep https://www.bangkokprep.ac.th/news/graduation-class-of-2022/ 1535 days ago\nThis is Bangkok Prep’s 10th cohort to graduate and 83 students this year have been offered places at leading universities around the world including USA Top 50 ranked: Carnegie Mellon University, Georgia Institute of Technology, Purdue University…\n\n# Bangkok Prep Class of 2022 Graduation\n### Congratulations to all 83 Graduates from our Class of 2022.\n**Bangkok Prep students celebrated their graduation among their families and friends on Thursday 7th July. Tana Pothikamjorn of Kasikorn LINE was the guest speaker and presenter of diplomas to 83 Year 13 students from the Class of 2022.**\n\n**This is Bangkok Prep’s 10th cohort to graduate and 83 students this year have been offered places at leading universities around the world including USA Top 50 ranked: Carnegie Mellon University, Georgia Institute of Technology, Purdue University, University of Michigan Ann-Arbor, UC Davis, UC Irvine, UC San Diego, University of Illinois – Urbana-Champaign, University of Wisconsin – Madison, 87 offers from world-class Russell Group universities in the\n\nUK including: UCL, University of Edinburgh, London School of Economics, Durham University and 14 offers from Medical/Dentist schools across the globe.**\n---\nBangkok Prep at a Glance - Bangkok Prep https://www.bangkokprep.ac.th/bangkok-prep-at-a-glance/ 462 days ago\nAll graduating students at Bangkok Prep have been offered a place at the University of their choice and some of these are among the top Universities around the world, including: Cambridge University; London School of Economics (LSE), UK; Imperial…\n\n# Bangkok Prep at a Glance\n## Bangkok International Preparatory & Secondary School (Bangkok Prep) is one of the leading International Schools in Bangkok\n### Now in to its 23rd year of operation (August 2025 - June 2026).\nAll graduating students at Bangkok Prep have been offered a place at the University of their choice and some of these are among the top Universities around the world, including: Cambridge University; London School of Economics (LSE), UK; Imperial College London, UK; University College London (UCL), UK; Lancaster University, UK; University of\n\nExeter, UK; University of Bath, UK; University of Edinburgh; British Columbia (UBC), Canada; Nanyang Technological University, Singapore; University of California, Los Angeles (UCLA); NYU-Poly, NY, USA; Rensselaer Polytechnic Institute (RPI), NY, USA;\n\n## Secondary School\nIn Key Stage 4 (Years 10-11), students choose option subjects alongside a core curriculum, culminating in IGCSE examinations. Key Stage 5 (Years 12-13) sees students specialize in Advanced Level courses while also engaging in a core curriculum and receiving support for university applications.\n---\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSyQUKEAgUGAI4AUIIdGhpbmtpbmcSDDmoARdl2KS6YeAsgRoMk48lFVsLWZ/kPcGVIjBnU11Vljxze+TLzNBVP4a+4w22EgT+MUygHp2gtr33YYRJSBJmOqGUpCm2E+kPL9gq5gQQRfbJ5XDUGd/ApESJTvcRdwUmDiwyYB+gzYAhQ2RoJ23cuMCGN3tHD9tCDq4I4/LHrPw5M2Za1vBdLOx+Iy1K+Utk7vdzRHrUq0gllUjt05rx2j0bIhAq36e1Z8qihq1hUtpBGPy1s1TcWwWkpWQyv4QqeBlG6oLSJfQsTH8/9ZcOFvlXyxthypl5/uD85LqykB8SX+KBAWQKxSvh5FBAiSEvVtIxaOXXaVjirXIGcx4lfF82TJ1F8XlON31yKLfuLXCHikOk1auVfTBmXkzZL7Sw8ZD4vY445yfwYLUvOvo4GBhAedHQDdMP0qlmRW2JdHubebhBTOw8lM8d8OB9lmMcGQpgnWGd/Fs2w90W9VehW+4ea4cdRjD8i299S8+4g5VgzmrSmqtgoEEs3EboRr/T1W3n2Ei0PGQ5jL7qUwpJL7OGIFIMfoe3kjLLXM+eZD/kVxCFaovqzjtSB+y80BGhLARWZce/oxFXTrgq1c+y6JNZIAnDXI47ixi6BCIqdfUiqJ2ewNCclvz1tmtVo/K7lHSTPjIbN9QziKDUaYhn0WQd9RsrDZCj20xRF8322xNXmSKUsSdvbz0OPzjla27OExCXUON1iXE3RBmg5xAiSZ+87PjXHgmDBNkgAUocqnXNSENM7d6SDpkgQ7FwJGdDivPSK0oEfORBIF3KHzVGl46aLGFWatxgfTas+Pz1TY/sDRRXLSFQiKk1FoCLfvF/4O7O4oK1zrr8bZkBeZuDJGNrmXO1QuR7FwYB8++GMuPTqNUoYgrJmHWSS2qvRqQ0j4ZSENX7AXVEYIyF+ild8LeT9RgB"
+          },
+          {
+            "type": "text",
+            "text": "Bangkok Prep graduates mostly go to universities in the UK. Others go to the US, Canada, Asia, Europe and to top Thai universities.\n\n**UK (the most common choice)**\n- The school says graduates have gone to "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "the University of Cambridge, Imperial College London, the London School of Economics, University College London (UCL)"
+          },
+          {
+            "type": "text",
+            "text": ".\n- For the Class of 2020, the universities with the most offers were "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "UCL, University of Bristol, University of Bath, University of Manchester, UAL, Imperial College London, University of Exeter, Newcastle University, Durham University"
+          },
+          {
+            "type": "text",
+            "text": ". UCL led with 12 offers, and Bath and Bristol had 8 each.\n- The Class of 2022 received "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "87 offers from world-class Russell Group universities in the UK including: UCL, University of Edinburgh, London School of Economics, Durham University and 14 offers from Medical/Dentist schools across the globe."
+          },
+          {
+            "type": "text",
+            "text": "\n\n**United States**\n- Earlier graduates went to "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "New York University (NYU), the University of California, Los Angeles (UCLA), Brown University and Cornell University"
+          },
+          {
+            "type": "text",
+            "text": ".\n- The Class of 2022 had offers from "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Carnegie Mellon University, Georgia Institute of Technology, Purdue University, University of Michigan Ann-Arbor, UC Davis, UC Irvine, UC San Diego, University of Illinois – Urbana-Champaign, University of Wisconsin – Madison"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**Canada and Asia**\n- Graduates have been offered places at the "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "University of British Columbia (UBC), Canada; Seoul National University (SNU); Hong Kong University of Science and Technology (HKUST)"
+          },
+          {
+            "type": "text",
+            "text": ", "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Nanyang Technological University, Singapore"
+          },
+          {
+            "type": "text",
+            "text": ", and the "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "University of Toronto"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**Continental Europe**\n- Listed outcomes include "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "BSP Business and Law School, Berlin · IST University of Applied Sciences, Düsseldorf · Lancaster University Leipzig … The American University of Paris … University of Navarra"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**Thailand**\n- Some students stay in Thailand. The school hired "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "the school's dedicated specialist in university pathways within Thailand"
+          },
+          {
+            "type": "text",
+            "text": " in 2023. One alumna mentioned on the school's site went on to "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "earn a BBA in International Business from Chulalongkorn University"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**Popular subjects:** For the Class of 2020, engineering and technology was the most common subject, followed by psychology, computer science and business.\n\nMost of these lists come from Bangkok Prep's own website and announcements, so they show the school's best results rather than where a typical student ends up. The school also says "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "all graduating students at Bangkok Prep have been offered a place at the University of their choice"
+          },
+          {
+            "type": "text",
+            "text": ", but that's the school's own claim, not an independent figure. If you're thinking about enrolling, ask the admissions office for a full, recent list of where graduates actually went, not just where they got offers."
+          }
+        ],
+        "container": {
+          "id": "container_01KNTso3czbgqETprmtJ5v8h",
+          "expires_at": "2026-11-20T17:56:49.356845Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 30931,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1461,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5900,
+              "output_tokens": 128,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6382,
+              "output_tokens": 62,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7597,
+              "output_tokens": 108,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 11052,
+              "output_tokens": 1163,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 40
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

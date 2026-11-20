@@ -1,0 +1,752 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "b07",
+    "type": "branded",
+    "text": "방콕 프렙(Bangkok Prep)은 학비가 비싼 만큼 가치가 있나요?"
+  },
+  "started": "2026-11-20T17:02:07.453Z",
+  "finished": "2026-11-20T17:02:45.330Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "방콕 프렙(Bangkok Prep)은 학비가 비싼 만큼 가치가 있나요?"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEYGdU7Yr5vNRpQm21yJ",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS2QUKEAgUGAI4AUIIdGhpbmtpbmcSDOtOqMbnhHOBDkipghoMO7SUtYb+7RVpImBUIjA8S2jCGDOuVwzDwRJwADI5mbjxTbfHiyZeIUSATBqScFQpnp2MJVVTJsHoSA+C23kq9gRu7dcphpSj9BU+M+zV6aOH6xQL03y7Ttvp4Y3XZV0SbLaE7Nysz31DG8iFmpyYUVaex1MJNYrGu9Tz82LVnvS6C1yMSzewvSOF3Dr2jqWxx55cFIwOajHthrWu9A15Q0ItleBjqnVCICRATHcXPwu4AxdBCzLe9IkBuQh+VoCp3XLWWr4cG3/K4Ku5TTfV0XP1rkN50r00Dg0l2lo8B8zXOYLcCwdBUknuND5krovRqGM+8vssiiZewTzzWfB+/deII+Efb53elhU2Z0+6zc3uGGxnmGvoHTHLEyoSd4xU+8gx1uG8azmyQHMoZxV1pYlGOSPrvoCU6VYpC4C6xvvhdmxI94C4gz3C2SF86MyjalCbFsjEeqS45a4mSbtR7DwBugiwT2X5Kqx66FLy1AsSKqpffQnNjOfcMysEALXib/jcEf29gEkDDxOw9CpGfIGzg+RFlDXCmKFCoyAxBBM3f6P2PkZqKBm9FJL8XAOfF/yHJvC2hlTp/SBO9pUXeLQDArU9DIVKs5KBjnbXFG5ItW/vNcsH9xLsX7MuHdEHs97JxciY8O2bsJoN+TKp3Pcl7bRwWkogQdh96vnx7TrL95sXz0zf4fZ/+ugfTCXPEkHk/6oPKKHAp8oCvuUETscVPHWk0G67WjikZDspSxOaukyZhPKUqbNxqTzpAlgex/YUAH8+BsUu2Kq1LRgm7YjuUbYzgwjBbeRSU6ESPE3QTp3Q74HKNTwUNXzAHj+8vadIqd+Tf2J6Or/LwkO2VUU+JZ5XxocShiOCur2NTlBo6JRVaPSPGuMoUi4PGGapBBMqXvyweYCrdlSAKVB3Im2/8RU+o9kYAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01GYEUvJxfv4fu66QuE8yZRF",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"Bangkok Prep international school tuition fees 2025\",\"Bangkok Prep IB results review\",\"Bangkok Prep school review parents\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:5]:\n        print(x.get('title'),x.get('url'),x.get('page_age'))\n        print(x.get('content','')[:1200].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01SpsbmUVBRcXznxAM4kMhh1",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep international school tuition fees 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01GYEUvJxfv4fu66QuE8yZRF"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01SpsbmUVBRcXznxAM4kMhh1",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Affordable International Schools in Thailand (2025 Guide)",
+                "url": "https://blog.doris.school/affordable-international-schools-thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": "8 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok - TutorChase",
+                "url": "https://www.tutorchase.com/blog/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "845 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School",
+                "url": "https://en.wikipedia.org/wiki/Shrewsbury_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent%27s International School, Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Regent%27s_International_School,_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory & Secondary School Bangkok",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-international-preparatory-secondary-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "901 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.edarabia.com/lf/?id=163498",
+                "encrypted_content": "[omitted]",
+                "page_age": "415 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.bkkschools.com/bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International School Fees 2026",
+                "url": "https://schoolvita.com/blog/school-fees-in-bangkok-what-parents-need-to-know",
+                "encrypted_content": "[omitted]",
+                "page_age": "54 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01GYEUvJxfv4fu66QuE8yZRF"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01GYEUvJxfv4fu66QuE8yZRF",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDHzDZoJnuHrVexIAJxoMQ9YZM4P9op/Rq5UgIjDFzscVRwKsvYgVPTWgVzMV96kBll/bdSIK60rv/EkAXNRKO2EkbPLIS8kWkiysJCMqErUANw0Jxmc3qYEAunZLE7sh/RgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01GYEUvJxfv4fu66QuE8yZRF/cell.py\", line 13, in <module>\n    print(x.get('title'),x.get('url'),x.get('page_age'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01P5ZGnGLFoBPuuCUU6BHYX8",
+            "name": "code_execution",
+            "input": {
+              "code": "r=await web_search({\"query\":\"Bangkok Prep tuition fees 2025\"})\nprint(type(r), str(r)[:3000])"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_0141zFxVyvfot15FG4RtFFDa",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep tuition fees 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01P5ZGnGLFoBPuuCUU6BHYX8"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_0141zFxVyvfot15FG4RtFFDa",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Admissions - Tuition fees",
+                "url": "https://www.bangkokprep.ac.th/wp-content/uploads/Bangkok-Prep-School-Fees-2025.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory School (Sukhumvit 77) Fees & Availability - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-international-preparatory-school-sukhumvit-77/fees-and-availability",
+                "encrypted_content": "[omitted]",
+                "page_age": "469 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Affordable International Schools in Thailand (2025 Guide)",
+                "url": "https://blog.doris.school/affordable-international-schools-thailand",
+                "encrypted_content": "[omitted]",
+                "page_age": "8 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Fees for Academic Year August 2024",
+                "url": "https://www.bangkokprep.ac.th/wp-content/uploads/5.SCHOOL-FEES-School-Website-09-08-24.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "833 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.edarabia.com/lf/?id=163498",
+                "encrypted_content": "[omitted]",
+                "page_age": "415 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.bkkschools.com/bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep ดีไหม ค่าเทอมเป็นอย่างไร? (รีวิวโรงเรียน) - ลงทุนมัม",
+                "url": "https://www.longtunmom.com/bangkok-prep-expense/",
+                "encrypted_content": "[omitted]",
+                "page_age": "859 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://bkkfamilies.com/schools/bangkok-prep/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Regent%27s International School, Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Regent%27s_International_School,_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01P5ZGnGLFoBPuuCUU6BHYX8"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01P5ZGnGLFoBPuuCUU6BHYX8",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in [\"Bangkok Prep A level IGCSE results 2025\",\"Bangkok Prep review parents strengths weaknesses\",\"Bangkok Prep Year 12 13 fees secondary campus\"]:\n    r=json.loads(await web_search({\"query\":q}))\n    for x in r[:4]:\n        print(x.get('title'),x.get('url'),x.get('page_age'))\n        print(x.get('content','')[:1500].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01RqrcykprE1i27uYg1k5vpb",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep A level IGCSE results 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01RqrcykprE1i27uYg1k5vpb",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory & Secondary School Bangkok",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-international-preparatory-secondary-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "901 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep British International School",
+                "url": "https://www.bangkokprep.ac.th/our-school/discover-bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": "280 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep A-Level Class of 2025: Record-Breaking Results! - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/news/bangkok-prep-a-level-class-of-2025-record-breaking-results/",
+                "encrypted_content": "[omitted]",
+                "page_age": "462 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep: British Curriculum School on Sukhumvit near On Nut BTS, Bangkok, Thailand",
+                "url": "https://expatsinbangkok.com/listing/bangkok-international-preparatory-secondary-school-bangkok-prep.html",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep: British International School in Bangkok",
+                "url": "https://www.bangkokprep.ac.th/",
+                "encrypted_content": "[omitted]",
+                "page_age": "197 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.bkkschools.com/bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best Sixth Form Bangkok",
+                "url": "https://www.bangkokprep.ac.th/learning-journey/sixth-form",
+                "encrypted_content": "[omitted]",
+                "page_age": "281 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "American School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/American_School_of_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "IGCSE Exam Success - Magi - Bangkok Prep",
+                "url": "https://www.bangkokprep.ac.th/news/igcse-exam-succes-magi/",
+                "encrypted_content": "[omitted]",
+                "page_age": "424 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01ShEn15HVkWBz68NV7iLKQy",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep review parents strengths weaknesses"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01ShEn15HVkWBz68NV7iLKQy",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "School reviews",
+                "url": "https://www.bangkokprep.ac.th/school-reviews",
+                "encrypted_content": "[omitted]",
+                "page_age": "281 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep: Helping children flourish to be global citizens",
+                "url": "https://studyinternational.com/news/bangkok-prep-helping-children-flourish-to-be-global-citizens/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1044 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory & Secondary School Bangkok",
+                "url": "https://www.goodschoolsguide.co.uk/international/review/bangkok-international-preparatory-secondary-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "901 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep - Reviews & info",
+                "url": "https://www.ischooladvisor.com/view/bangkok-international-preparatory--secondary-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "267 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep - Bangkok International Preparatory and Secondary School (Fees & Reviews) Bangkok, Thailand, 23 Sukhumvit 53, Vadhana",
+                "url": "https://www.edarabia.com/bangkok-prep-bangkok-international-preparatory-secondary-school-bangkok-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "172 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep in Bangkok",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": "18 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Review: BKK Kids Checks Into Bangkok Prep Primary Campus - BKK Kids",
+                "url": "https://www.bkkkids.com/blog/school-review-bkk-kids-checks-into-bangkok-prep-primary-campus/",
+                "encrypted_content": "[omitted]",
+                "page_age": "981 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep Review 2026: British International School in Bangkok",
+                "url": "https://brightkey.co/en/schools/bangkok/bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": "171 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok for Expat Families",
+                "url": "https://thairanked.com/en/rankings/best-international-schools-bangkok-expat-families/",
+                "encrypted_content": "[omitted]",
+                "page_age": "226 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01A6vF64jWWCab5sKMvCm7eZ",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Prep Year 12 13 fees secondary campus"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01A6vF64jWWCab5sKMvCm7eZ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok International Preparatory & Secondary School",
+                "url": "https://search.openapply.com/schools/1425",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fees for D-PREP International School - Secondary Campus, Thailand",
+                "url": "https://www.doris.school/schools/thailand/d-prep-international-school-secondary-campus/fees",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://en.wikipedia.org/wiki/Bangkok_Prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Admissions - Tuition fees",
+                "url": "https://www.bangkokprep.ac.th/admissions/tuition-fees",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.bkkschools.com/bangkok-prep",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Prep",
+                "url": "https://www.edarabia.com/lf/?id=163498&ins=bangkok-prep-bangkok-international-preparatory-and-secondary-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "172 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Fees for Academic Year August 2024",
+                "url": "https://www.bangkokprep.ac.th/wp-content/uploads/5.SCHOOL-FEES-School-Website-09-08-24.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "833 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Fees for Academic Year August 2023",
+                "url": "https://www.bangkokprep.ac.th/wp-content/uploads/5-SCHOOL-FEES-2023-24.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": "1220 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01W6uTL3PiKCk2oynVDfvV8X",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSiAcKEAgUGAI4AUIIdGhpbmtpbmcSDK19Wx3WBGFoPGl4vRoM8oEt150qCsWAVmzCIjAVc3/Z8lNIduwkGxm3pwWGCRBo60yAFOHG1F9ec2OQxfzrkVocbazt4jDvq9rKn6sqpQaFwPWU18KwsCRmCMqvEe5+q66wDfm3qs02nQuYCnMpLZfWHFVanlrBr0tHJYapoGQfENkC3vDrB9SEl4YI+6IgTX7PEw4j+4++6ljZ/kBMVaK1t4JEeCSIV6rBmDeqwpQDFwdtJGKJXKEk66BGnHNollsZK8y1H9irl88P/f8QaigTByigorZq7GfeLZ7UMHnuIhfcfPqUmxEq6xKIV930eWJfzFZrhtG8bBEgqTrfr7cfhK2o3Jf36g1BjEZCichNbFHK+U1Vs/S+BYxYnrc9gmwexi4hlG5gePyUOntnhuxgn9702GToIFIE52FgfuPAH3loxPc4A5CVzVdTo0pSPeR9CeGdb32cnTt/G0KyMh36arZ3zU38KIdkCO7RCAp3dseodGliWQFWhLkRzpqu5IDfnCPjfJbsobRSZgzk6Kc9zZtMKKbe2lY82HIPl9iUeDN2W9ObeyFmfdVk0POq+hZqZfyW/RL3n/F15S2b4gLMZbuntJg3iMLqOahMwvwnT+mP5ppfEL8zhY1umGYCQFXOFmQD5d8w3bsexR7KAB7F2UvCf36ZdpRRhb1hhidoXe/5OMl41kxAEnSSRjTzw2auMIGYpf3sQYFHNGTigBkgHMqx6tOqtpmT9mNi1/TfI8IymCb4f5ZVnHIvGbzURcjoQwnfLeJRZhBPFYJ2Hi7V6owlcvnlQHAyBnh6yrD76HF4T6/fvp7oi1a+bVfzy6TOeS/j1+K9aPW20jh24Et/McA1wAre+G2XJvK2Fhj86jtlzPSoZLyLvX+tIthbKnt5fC2jVTf844hFqF4Zj4efuUbVLDLiw+aWLXXJdz+aYg2DsfJQ7839oYUkQJQNVcs/+b88qaVJK+jcQx5pXVWK5OFL1WCtGttky0ALnLKgscbcsXaeHXKBIz7D5MELozzzKaCn6YUbs2f2koak8MEzaxElk1dkGShCauGRAZ9jFQBSEcAvGtXFekSJ6CYJCnBh/a8IaMPSkldQap7qg7XZ9971Xmda1nIj4w1r5bCvXX350XbLenoLjChavHQRtE+ZDHdZpNzqoSGhCiuqWPPiCxslGAE="
+          },
+          {
+            "type": "text",
+            "text": "방콕 프렙은 학비 대비 가치가 꽤 좋은 편이에요. 다만 아이와 가족이 무엇을 원하는지에 따라 판단이 달라집니다. 아래 근거를 정리했어요.\n\n## 1. 학비\n2026/27학년도 공식 학비는 다음과 같아요.\n- **초등**: 1~2학년은 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "연 706,400바트, 3~4학년은 733,100바트"
+          },
+          {
+            "type": "text",
+            "text": "입니다.\n- **중등·식스폼(Year 12~13, 대학 진학 준비 과정)**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Year 7~9는 790,800바트, Year 10~11은 846,500바트, Year 12는 862,200바트, Year 13은 771,200바트"
+          },
+          {
+            "type": "text",
+            "text": "입니다.\n- **입학 시 추가 비용**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "초등 입학 등록비만 160,000바트이고, 배치비 30,000바트(환불 불가)와 보증금 60,000바트(환불 가능)"
+          },
+          {
+            "type": "text",
+            "text": "가 따로 듭니다.\n- **포함 항목**: 학비에 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "급식, 제2외국어, 현장학습, 스포츠 경기, 졸업앨범(대부분 학년)"
+          },
+          {
+            "type": "text",
+            "text": "이 포함돼 있어요. 다른 학교와 비교할 때 이 점을 감안하세요.\n\n방콕의 최상위권 영국계 학교들(브라이튼 칼리지, 해로우, 슈루즈버리, 파타나 등)은 보통 연 100만 바트를 넘는 것으로 알고 있습니다. 그래서 방콕 프렙은 상위권 중 중상단 가격대라고 볼 수 있어요. 정확한 비교는 각 학교의 최신 학비표로 확인하시는 게 좋습니다.\n\n## 2. 가치가 있다고 볼 근거\n- **학업 성과**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년 IGCSE 성적의 58%가 9~7등급(최상위권)이었고, A레벨에서는 52%가 A*/A, 72%가 A*~B"
+          },
+          {
+            "type": "text",
+            "text": "였습니다. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2024년에는 IGCSE 46%, A레벨 A*/A 35%"
+          },
+          {
+            "type": "text",
+            "text": "였으니 1년 사이 크게 올랐어요.\n- **대학 진학**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년에 브라운, 코넬, NYU, RISD, 미시간, UCLA 등에 진학"
+          },
+          {
+            "type": "text",
+            "text": "했습니다. 학교 발표로는 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년 세계 Top 50 대학 합격 50건, Top 100 대학 합격 101건"
+          },
+          {
+            "type": "text",
+            "text": "이에요. 이는 학교 측 자료라는 점을 감안하세요.\n- **인증**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2011년 CIS, NEASC, ONESQA 3중 인증"
+          },
+          {
+            "type": "text",
+            "text": "을 받았습니다.\n- **외부 평가**: 영국 학교 평가 기관인 Good Schools Guide는 이 학교가 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "대형 브랜드 학교들과 겨룰 만하며, 다양성과 지원이 좋은 영국계 학교로 빠르게 평판을 얻고 있다"
+          },
+          {
+            "type": "text",
+            "text": "고 평했어요. "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "독특한 숲 캠퍼스와 공동체 분위기"
+          },
+          {
+            "type": "text",
+            "text": "도 장점으로 꼽았습니다.\n\n## 3. 고려할 점\n- **성적의 의미**: "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "2025년 졸업생은 95명"
+          },
+          {
+            "type": "text",
+            "text": "입니다. 소규모라 해마다 결과가 크게 달라질 수 있어요.\n- **추가 비용**: 영어 보충 수업(EAL)은 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "추가 비용이 듭니다"
+          },
+          {
+            "type": "text",
+            "text": ". 영어가 아직 부족한 아이라면 실제 부담이 더 커져요.\n- **엇갈리는 평가**: 리뷰 사이트 평균 평점은 4.79/5로 높습니다. 하지만 "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "유치원·초등 저학년은 좋지만 중등부는 학업적 엄격함이 부족하다"
+          },
+          {
+            "type": "text",
+            "text": "는 비판적 리뷰도 있어요. 개별 리뷰라 일반화하긴 어렵지만, 중등 입학을 생각한다면 직접 확인할 부분입니다.\n- **캠퍼스 이동**: 초등은 수쿰빗 53(통로역), 중등은 수쿰빗 77(온눗역) 캠퍼스로 분리돼 있습니다. 거주지와 통학 동선을 확인하세요.\n\n## 결론\n- **가치가 높은 경우**: 영국식 커리큘럼(IGCSE·A레벨)을 원하고, 최고가 학교보다 조금 낮은 비용으로 좋은 학업 성과와 따뜻한 공동체를 원하는 가정\n- **다시 고민할 경우**: IB 과정을 원하거나, 최상위 명문 브랜드나 대규모 시설을 최우선으로 두거나, 영어 보충이 많이 필요해 추가 비용이 클 경우\n\n학교 투어 때 지원하려는 학년의 담임 교사 근속 연수, 학급 규모, 한국 학생 비율, 중등 과목 선택 폭을 직접 물어보시면 판단에 도움이 될 거예요. 아이의 나이와 지원 학년을 알려주시면 더 구체적으로 비교해 드릴게요."
+          }
+        ],
+        "container": {
+          "id": "container_01UsReZSQMbpB6PkvyFrbNBf",
+          "expires_at": "2026-11-20T18:02:24.350730Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 35787,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2589,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 5,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5921,
+              "output_tokens": 242,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6525,
+              "output_tokens": 92,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 8030,
+              "output_tokens": 206,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 15311,
+              "output_tokens": 2049,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 141
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}

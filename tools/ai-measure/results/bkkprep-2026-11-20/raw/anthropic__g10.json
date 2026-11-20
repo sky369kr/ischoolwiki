@@ -1,0 +1,1214 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g10",
+    "type": "generic",
+    "text": "International schools in Bangkok with the best sports and arts facilities"
+  },
+  "started": "2026-11-20T16:54:09.024Z",
+  "finished": "2026-11-20T16:54:47.654Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "International schools in Bangkok with the best sports and arts facilities"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXfN5SQT1G8n3LXfE3J",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSxQUKEAgUGAI4AUIIdGhpbmtpbmcSDC7r0pq2h2qMHqbPFxoM5wVXbZc5UIlaaqnUIjDrPg5C+H8wQubcy9HY5K2MZEQaRNs0dgC89j7/k6UZTYRNqlg+Qz/cYyAKlghm1eQq4gSEnlixGOLaYx/9q3iP3Fgii4vnqIh5PWvO0B1vEZvPIdww5q7Pp6Ap3pCMfCP9ZRUHq+aE0CSNO7PHOEY9QNzejNiZTjoJXio8g7LIaN7lzih0t84oYZPbgiC3H8510FiGUHYZ2U/G1XOahSduo8kZAS/16DMte3Yu/i/xewWtx7P/RsOXo9i0Yjd+sOX9AC3sgjY8lM9zxdF/8eRH/r/dGX+evPpoWULFKhtUxuVJbQFjXb1Yl5NXasiYJlYbt6O7XITdq2KeJf8hEiMQzdtBjkLKynNBa3yQWqvYosnM+CNm8yZqqD2DxrL0Ki0UShK2m6RH0eNlcKCwVHsiZq/l2Ey9f0pv5lF1zBTpl3C1UucDhlTGj9Qt8NAP8UfTg641P7mqqx0Ks2tz7wfKYtN7tebWVK5z+NASaNjFETZgjqBByPmLX++liCzPhYt6vZ1iBgd3SCfy6+YPVaDxKAlqMBpeSVCf8yR+GcsTPYWmzhXMY62r9j1Hdkz8Ao3BwSIeFJcGskSBBbkK/yqBhyedV6t4PjgB2yX9LzkgmFe1OrrbRFhPQ3RIAsMg+i7hy5fMIgXGNxBi1gkIzliq4tkRVnzx3TgETLILSCEcdTNjjhI4nPgCk/OpxR6c3Kx5+rCFdB3/67ORjbef5bnZJ8u+gIVAnPpsxuJevkuoDlrqLCp0FbSKkSzJZJPY4tzJTaWLZMXKODva20qTxGLEgLB1d8MwvgLUSwH1byag3kUvvvhaTpMO8C6LxRzeI2QhgmHXW+X1PaXYs4XMpWZpHYV0VWKIibF/37UL8DQfmXDmWwvuGAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01JXWD3X3ksrQWayeoTU6aXb",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nqs=[\"Bangkok international school best sports facilities\",\"Bangkok international school performing arts centre theatre\",\"Harrow Bangkok NIST Shrewsbury sports arts facilities\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:5]:\n        print(x['title'],x['url'])\n        print(x['content'][:800].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_015SpASYwCg4vpLbBjvnebo6",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school best sports facilities"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01JXWD3X3ksrQWayeoTU6aXb"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_015SpASYwCg4vpLbBjvnebo6",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Athletics - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/arts-activities-athletics/athletics",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 international schools in Bangkok offering world-class education",
+                "url": "https://thethaiger.com/guides/education/international-schools-in-bangkok-offering-world-class-education",
+                "encrypted_content": "[omitted]",
+                "page_age": "849 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Facilities at International School Bangkok (ISB), Thailand",
+                "url": "https://www.doris.school/schools/thailand/international-school-bangkok-isb/facilities",
+                "encrypted_content": "[omitted]",
+                "page_age": "232 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Sports and Athletics",
+                "url": "https://basis.ac.th/student-life/sports-clubs-activities/sports/",
+                "encrypted_content": "[omitted]",
+                "page_age": "67 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Bangkok 2026: Costs & Options",
+                "url": "https://expatden.com/thailand/international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "193 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok (ISB) in Bangkok",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/international-school-bangkok-isb",
+                "encrypted_content": "[omitted]",
+                "page_age": "22 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International Schools in Bangkok: Academic Year 2022/2023",
+                "url": "https://propertyscout.co.th/en/property-insights/top-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "360 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01JXWD3X3ksrQWayeoTU6aXb"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01JXWD3X3ksrQWayeoTU6aXb",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBMO64IEILtB3HPzehoMQ89clmJu/cnD4jRVIjCDIkVHLcAPW5MF/mKppsxywwnVPUTlJEeeFf9HLbxCUVapFty8B41TWAkn/zvI2gkqEhF90wuKjzBH6HAId6xBHPz3OhgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01JXWD3X3ksrQWayeoTU6aXb/cell.py\", line 13, in <module>\n    print(x['title'],x['url'])\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_013SWXRiou965nbvQtS2XnKY",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    print(type(r), str(r)[:300] if not isinstance(r,list) else '')\n    for x in (r if isinstance(r,list) else r.get('results',[]))[:5]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:800].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_019tvLedvS65bCv4VXwgcqgz",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school best sports facilities"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_019tvLedvS65bCv4VXwgcqgz",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Athletics - International School Bangkok, Premier International School in Thailand since 1951",
+                "url": "https://www.isb.ac.th/arts-activities-athletics/athletics",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 international schools in Bangkok offering world-class education",
+                "url": "https://thethaiger.com/guides/education/international-schools-in-bangkok-offering-world-class-education",
+                "encrypted_content": "[omitted]",
+                "page_age": "849 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Facilities at International School Bangkok (ISB), Thailand",
+                "url": "https://www.doris.school/schools/thailand/international-school-bangkok-isb/facilities",
+                "encrypted_content": "[omitted]",
+                "page_age": "232 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "School Sports and Athletics",
+                "url": "https://basis.ac.th/student-life/sports-clubs-activities/sports/",
+                "encrypted_content": "[omitted]",
+                "page_age": "67 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Bangkok 2026: Costs & Options",
+                "url": "https://expatden.com/thailand/international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "193 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok (ISB) in Bangkok",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/international-school-bangkok-isb",
+                "encrypted_content": "[omitted]",
+                "page_age": "22 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St. Mark%27s International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/St._Mark%27s_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top International Schools in Bangkok: Academic Year 2022/2023",
+                "url": "https://propertyscout.co.th/en/property-insights/top-international-schools-in-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "360 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: 2026 Guide for Expat Families",
+                "url": "https://www.ischooladvisor.com/articles/schooling-and-school-choice/guide-to-choosing-a-school/best-international-schools-bangkok-2026-guide",
+                "encrypted_content": "[omitted]",
+                "page_age": "24 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_016NkevGoovaVa3NnWU7WqsZ",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok international school performing arts centre theatre"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_016NkevGoovaVa3NnWU7WqsZ",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - The British International school in Thailand",
+                "url": "https://www.patana.ac.th/life-at-patana/about/interactive-map/",
+                "encrypted_content": "[omitted]",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok High School Campus",
+                "url": "https://www.nordangliaeducation.com/sta-bangkok/campus",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok - High School Campus",
+                "url": "https://www.doris.school/schools/thailand/st-andrews-international-school-bangkok-high-school-campus",
+                "encrypted_content": "[omitted]",
+                "page_age": "49 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/harrow-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "51 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "KIS International School Bangkok in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/kis-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "51 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fine Arts, Music and Drama",
+                "url": "https://basis.ac.th/student-life/sports-clubs-activities/fine-arts/",
+                "encrypted_content": "[omitted]",
+                "page_age": "67 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Our International Campus in Bangkok",
+                "url": "https://www.bangkokprep.ac.th/our-school/campus",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fine Arts",
+                "url": "https://www.ics.ac.th/finearts",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01X1zbCPcYSFEwjNwgVHX7Ka",
+            "name": "web_search",
+            "input": {
+              "query": "Harrow Bangkok NIST Shrewsbury sports arts facilities"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01X1zbCPcYSFEwjNwgVHX7Ka",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok - TutorChase",
+                "url": "https://www.tutorchase.com/blog/best-international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "845 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Campus Facilities - Harrow Bangkok",
+                "url": "https://www.harrowschool.ac.th/about-us/campus-facilities",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/harrow-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "126 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 25 International Schools Bangkok - 2024 List",
+                "url": "https://www.thethailandlife.com/international-schools-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "806 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "NIST International School vs Shrewsbury International School Bangkok Riverside",
+                "url": "https://www.doris.school/international-schools/compare/nist-international-school-vs-shrewsbury-international-school-bangkok-riverside",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok: Fees & Reviews",
+                "url": "https://www.ischooladvisor.com/thailand/bangkok/bangkok/harrow-international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "25 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok : British Chamber of Commerce Thailand",
+                "url": "https://members.bccthai.com/bcct/asp/corpdetail.asp?CorpID=510",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Harrow_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok: A 2026 Comparison Guide — ExpatSchoolGuide",
+                "url": "https://expatschoolguide.com/guides/best-international-schools-bangkok/",
+                "encrypted_content": "[omitted]",
+                "page_age": "259 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_013SWXRiou965nbvQtS2XnKY",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSlQYKEAgUGAI4AUIIdGhpbmtpbmcSDK9/4m0M9JGtcDzFDhoMSiuuLz20Pap7srj3IjANqrVOvXeTMN7XDPVONbPeZM7t6B6dIcvFHWc4w9No8NmwFVyzAj5Ks8126W93yEUqsgWRbPKI20llWVwMJWRQeHTUEhqzE9t/nJ/lMFPI/SzPY0gqHLubPpwYNN+2g6APcrj3UC/zs1jd38niX+tPq/VYnWoh9PIh2rPsdR5utmamSNb6h2aWTB/vFQXMQ46zYssKEOFlHwcEd1DsV/HQOg/S6ce/uBmDL819hMeFvoHxV5HK37BvkCqE+YGQhm/oUxsBSFXEWSNC79H+70XjGafe5QXAds7/St8qGbRYCvv5sIl36Ug4z9kk4hTugzRyW3UzIwUO6Vx/e+PoHJeXt5mAEoU1LEScvhfiCgVjBFb6xIxWtNpK81mCZCs3oGRrxJoY0OAziuDYFPzo39+/JfgjPkKe5zI4+5YGYCzQBHhWnw6mUOrf/ORfvSyMN5BA4VxpjK0EE6oKsMLXGaV8FIbfMMd4PcrudXWVBHoLs+Wvk7cXjt+AbRXEd2qIWR1GeaJYRIXYSz/CM8oAnmyB/ZxCrpyW4wgqnNOlQ9T/UN6ydUYFEAY3QLkd7fFrkMERhafQIrtxNQkMBOS8rvxQt6ouoRVlhKMO9qpkNZuFVPubgw7ASP28Qo+IJSisGyorehNxHUaiEEmlvVQKGnC2tn91iJ4LOa1fnT5N7zecuyfn5ECrc7+zor37LXowtzLjq0ALLBCikQJBTcrHq3tze94Xq7K/iO53x1y9EURrN+FxGTE3tmaIAgNW9S+/AfuwDsxLLFt7wPW9+SxYcveYD1E7lMSGQUIwMkymHVBY7sTtcqi5jvm4wCXxYeQ3zIu49R56ibYeq57sF48vHYP9knuL8a9jbozGARQEetpfVBBrlLi3Q0kPf6NPaFVcKcFcXw9MTiSW9M7MD5Rw+Er0yazwgWeTG1Jrt5KtU5qbkLJ0FUYW7IvhGZwqsXzeyAvNhJCMVcUDLUVfbV5l5ASKEo0wOM4YAQ=="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Q5nuiBPeqdujmWyJ844V6S",
+            "name": "code_execution",
+            "input": {
+              "code": "qs=[\"Bangkok Patana School sports facilities 50m pool\",\"International School Bangkok performing arts center theater seats\",\"Shrewsbury International School Bangkok sports performing arts facilities\",\"Brighton College Bangkok facilities sports arts\"]\nfor q in qs:\n    r=await web_search({\"query\":q})\n    for x in r[:3]:\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:700].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01BRpn5WRGp3cg23JsurhC6G",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana School sports facilities 50m pool"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01Q5nuiBPeqdujmWyJ844V6S"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01BRpn5WRGp3cg23JsurhC6G",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - The British International school in Thailand",
+                "url": "https://www.patana.ac.th/life-at-patana/about/interactive-map/",
+                "encrypted_content": "[omitted]",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Staff Reflections- Bangkok Patana School",
+                "url": "https://www.patana.ac.th/staff-reflections/",
+                "encrypted_content": "[omitted]",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://lp.studyinternational.com/bangkok-patana-school-4/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Experience - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school/experience",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Exploring Nature in the Outdoor Classroom - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/exploring-nature-in-the-outdoor-classroom/",
+                "encrypted_content": "[omitted]",
+                "page_age": "2447 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BPS Sports",
+                "url": "https://www.facebook.com/BpsSports/mentions/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "73 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School (BPS) - HoneyKids Asia Thailand",
+                "url": "https://honeykidsasia.com/thailand/bangkok-patana-school-bps/",
+                "encrypted_content": "[omitted]",
+                "page_age": "344 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01Q5nuiBPeqdujmWyJ844V6S"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01Q5nuiBPeqdujmWyJ844V6S",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIbQh4FOaeC7VfkohxoMxYXX+DtDdxKOKEE6IjAGuNo0l8WRxqrYClhh2+/mQjVkSACG3dRnKgIbNbw9+co+O35jy1oyAfWAY1npvoIqEk8ud6ybAhvzIEPyG28qtZIobBgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01Q5nuiBPeqdujmWyJ844V6S/cell.py\", line 12, in <module>\n    print(x.get('title'),x.get('url'))\n          ^^^^^\nAttributeError: 'str' object has no attribute 'get'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p",
+            "name": "code_execution",
+            "input": {
+              "code": "for q in qs:\n    r=await web_search({\"query\":q})\n    if isinstance(r,str): r=json.loads(r)\n    if not isinstance(r,list): print(str(r)[:200]); continue\n    for x in r[:3]:\n        if isinstance(x,str): print(x[:200]); continue\n        print(x.get('title'),x.get('url'))\n        print(x.get('content','')[:700].replace('\\n',' '))\n        print('--')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01S4RrM6S7TyUjwLjTPV4yCo",
+            "name": "web_search",
+            "input": {
+              "query": "Bangkok Patana School sports facilities 50m pool"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01S4RrM6S7TyUjwLjTPV4yCo",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School - The British International school in Thailand",
+                "url": "https://www.patana.ac.th/life-at-patana/about/interactive-map/",
+                "encrypted_content": "[omitted]",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Staff Reflections- Bangkok Patana School",
+                "url": "https://www.patana.ac.th/staff-reflections/",
+                "encrypted_content": "[omitted]",
+                "page_age": "43 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School",
+                "url": "https://lp.studyinternational.com/bangkok-patana-school-4/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School Experience - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school/experience",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Exploring Nature in the Outdoor Classroom - Bangkok Patana School",
+                "url": "https://www.patana.ac.th/exploring-nature-in-the-outdoor-classroom/",
+                "encrypted_content": "[omitted]",
+                "page_age": "2447 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BPS Sports",
+                "url": "https://www.facebook.com/BpsSports/mentions/",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School in Bangkok",
+                "url": "https://www.doris.school/schools/thailand/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "73 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/bangkok-patana-school",
+                "encrypted_content": "[omitted]",
+                "page_age": "114 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Bangkok Patana School (BPS) - HoneyKids Asia Thailand",
+                "url": "https://honeykidsasia.com/thailand/bangkok-patana-school-bps/",
+                "encrypted_content": "[omitted]",
+                "page_age": "344 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01CbmTRfiyeqYdh12ax1Fm3J",
+            "name": "web_search",
+            "input": {
+              "query": "International School Bangkok performing arts center theater seats"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01CbmTRfiyeqYdh12ax1Fm3J",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok High School Campus",
+                "url": "https://www.nordangliaeducation.com/sta-bangkok/campus",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "St Andrews International School Bangkok - High School Campus",
+                "url": "https://www.doris.school/schools/thailand/st-andrews-international-school-bangkok-high-school-campus",
+                "encrypted_content": "[omitted]",
+                "page_age": "49 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "International School Bangkok Review - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/international-school-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "126 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Campus Facilities - NIST INTERNATIONAL SCHOOL in Bangkok, Thailand",
+                "url": "https://www.nist.ac.th/professional-learning/information-package/campus-facilities",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "International Schools in Bangkok 2026: Costs & Options",
+                "url": "https://expatden.com/thailand/international-schools-in-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "193 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Ruamrudee International School",
+                "url": "https://en.wikipedia.org/wiki/Ruamrudee_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Fine Arts",
+                "url": "https://www.ics.ac.th/finearts",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Sound sustainability",
+                "url": "https://www.proavl-central.com/details/79218-sound-sustainability",
+                "encrypted_content": "[omitted]",
+                "page_age": "373 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Thailand - The Luxury Address",
+                "url": "https://www.theluxuryaddress.com/2021/11/best-international-schools-in-thailand/",
+                "encrypted_content": "[omitted]",
+                "page_age": "1836 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01TCjnNbVMvdkkdUfGpkMzJq",
+            "name": "web_search",
+            "input": {
+              "query": "Shrewsbury International School Bangkok sports performing arts facilities"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01TCjnNbVMvdkkdUfGpkMzJq",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok (Riverside) Review - WhichSchoolAdvisor",
+                "url": "https://whichschooladvisor.com/thailand/school-review/shrewsbury-international-school-bangkok-riverside",
+                "encrypted_content": "[omitted]",
+                "page_age": "126 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Overview & Key Info - Shrewsbury International School Bangkok Riverside, Thailand",
+                "url": "https://www.doris.school/schools/thailand/shrewsbury-international-school-bangkok-riverside/overview-key-info",
+                "encrypted_content": "[omitted]",
+                "page_age": "232 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Campus Facilities - Shrewsbury International School Bangkok",
+                "url": "https://www.shrewsbury.ac.th/riverside-campus/campus-facilities/",
+                "encrypted_content": "[omitted]",
+                "page_age": "205 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Sports - Shrewsbury International School Bangkok",
+                "url": "https://www.shrewsbury.ac.th/riverside-campus/sport/",
+                "encrypted_content": "[omitted]",
+                "page_age": "269 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School, Bangkok, Thailand",
+                "url": "https://expatsinbangkok.com/listing/shrewsbury-international-school.html",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School Bangkok City Campus - HoneyKids Asia Thailand",
+                "url": "https://honeykidsasia.com/thailand/shrewsbury-international-school-bangkok-city-campus/",
+                "encrypted_content": "[omitted]",
+                "page_age": "329 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School",
+                "url": "https://en.wikipedia.org/wiki/Shrewsbury_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Harrow International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Harrow_International_School_Bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Ruamrudee International School",
+                "url": "https://en.wikipedia.org/wiki/Ruamrudee_International_School",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01F6uH5YKpEKxtur2wUGkUfs",
+            "name": "web_search",
+            "input": {
+              "query": "Brighton College Bangkok facilities sports arts"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01F6uH5YKpEKxtur2wUGkUfs",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Brighton College Bangkok: Review",
+                "url": "https://whichschooladvisor.com/thailand/school-review/brighton-college-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "126 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "BRIGHTON COLLEGE BANGKOK",
+                "url": "https://www.paulpoole.co.th/brightoncollegebangkok/downloads/english.pdf",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Brighton College Bangkok",
+                "url": "https://www.linkedin.com/company/brighton-college-bangkok",
+                "encrypted_content": "[omitted]",
+                "page_age": "2391 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Sport for All",
+                "url": "https://brightoncollege.ac.th/vibhavadi/sixth-form/beyond/sport",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Sport for All",
+                "url": "https://brightoncollege.ac.th/krungthep-kreetha/senior/beyond1/sports",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Sport for All",
+                "url": "https://brightoncollege.ac.th/vibhavadi/prep/beyond/sports",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Sport for All",
+                "url": "https://brightoncollege.ac.th/sports",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Brighton College Bangkok - Vibhavadi",
+                "url": "https://brightoncollegebangkok.com/vibhavadi",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "University of Brighton",
+                "url": "https://en.wikipedia.org/wiki/University_of_Brighton",
+                "encrypted_content": "[omitted]",
+                "page_age": null
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01DYDmhKegVhpUXogxQgMi1p",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "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",
+              "stderr": "",
+              "return_code": 0,
+              "content": []
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSjgYKEAgUGAI4AUIIdGhpbmtpbmcSDGWewNhbH6iZANOtaRoMWUWDjILUt3AWypllIjAtTaqGDDvVjRowowwpr9jReIVml/pUrJlaI2lxwcPo+CNe/hKATcTJu25Z55rXWRQqqwU1Jto1FLst+BKKfT28jfQ9Jcx0voU1Cjx+bS1TUqJAgc02+2PG9NERiYb7SxOY4aLQOr8n9NXIME6oxjHK+bpwiZh6jVopJEjQKA5ILzP4fR7fgD13z3ojv3GI5TY3P3FHX8NbfWeUty0y5szMFvejtyVvRCaka3TFx5RWxo7cF+owb9BKQ5z3FJbh3CcnOYlOOSiQ+YbZL/N17/ldsOrMIbdrU1+iA6QcAd4VdlbPXnr+zIhZ6ERfQPrMnLd06ENELqxsD4lmluXpyBdykcd//U3jPTD4QsYj0j/QgZO/s6QPRXqSEYjNugBu1LmlMszOzLk9tf+fsULXmP41qyQbi73Yne2IyiXjMg8p8Gh+hCe1v95gSZlIbtHV0T5zVTlxhxfOg+2qicvlRPJZs8Pljm8KAbEtYPeCBlvz6Pz3kvSMZT5acnaUr5gXwIsBpNHfmqJ6DW8peGOZp3Nkgvwt07tfJGpGOlSxRS/ICEHXdLNoCKlsV6t5fwk14UfvGZlt418KXbL3k1susmkxc6+Yvn7JPfGgSVKHJwDi+XbERsk3F2kDN7dOa8P1NbTjrU62PXWdOz983FY+ttc7vki/vZLQhmXv6jlSyqab7NC5sYhNviM8uWIAePhGlIkPwM6Q2jti/arahdZIAHT5cH4jlbFdl9VwlDxcdJmxPoxCm0jQ/ldFT3RvAEzCdPx/xdse/jXxuq13GcRV3fje3j1z0IvBmYCBo7Je4M5lYO9NiiLHmtCfUZpUFF3Ff5GwLkhgiwWMA7VH5zV12E5sicIclT6d7wfjZ0P/SLoKGERb8bFzzfvepjSPDZKEmn6uJMHn6JamciVe7JlU0d00PpuOT0vwkVQ6nLgqzPMfnizayowxzHZj6utJOdIhsaJoa/rAhY/XQONqpk21ExgB"
+          },
+          {
+            "type": "text",
+            "text": "Based on what the schools say about themselves and what independent review sites report, these are the Bangkok international schools that stand out most for sports and arts facilities:\n\n## Strongest for both sports and arts\n\n**1. International School Bangkok (ISB)**, in Nichada Thani, Pakkret (US curriculum, with IB as an option)\n- **Sports:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "five indoor gymnasiums, ample outdoor grass pitches, a running track and cross-country course, an Olympic-size 50-meter swimming pool and a 25-meter pool, a gymnastics gym with a rock climbing wall"
+          },
+          {
+            "type": "text",
+            "text": ". It also has "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "the only baseball field in Bangkok, a state-of-the-art fitness center, and a golf center"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **Arts:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "a five-storey cultural centre and 700-seat theatre"
+          },
+          {
+            "type": "text",
+            "text": ".\n- The campus "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "spans 37 acres (15 hectares) in Nichada Thani"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**2. Bangkok Patana School**, in Bangna (British curriculum, with IB)\n- **Sports:** its 50-metre pool "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "not only hosts our own competitions but also international competitions"
+          },
+          {
+            "type": "text",
+            "text": ". The school also runs a Gymnastics Academy, and its "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "Gymnasium Hall features top-tier equipment, including three uneven bar sets, a pommel horse"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **Arts:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "In 2010, the school opened an impressive arts centre, which includes the 600-seat Rosamund Stuetzel theatre, a 300-seat black box, practice and rehearsal rooms, an orchestra practice room, multi-media production studios, and art and drama studios."
+          },
+          {
+            "type": "text",
+            "text": " Its Dance Academy has "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "six purpose-built dance studios"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**3. Harrow International School Bangkok**, in Don Mueang (British curriculum, boarding available)\n- **Sports:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "the multi-purpose athletics centre, 'The Den', plus a large air-conditioned sports hall, a 500 sqm gymnastics centre, extensive first-class floodlit rugby and football pitches with natural grass surfaces, a 25m swimming"
+          },
+          {
+            "type": "text",
+            "text": " pool. The "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "golf academy training facility is located just outside the campus main gate."
+          },
+          {
+            "type": "text",
+            "text": " The campus also has "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "a lake for water-based activities"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **Arts:** a newer Creative and Performing Arts Centre with "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "photography studios, the Black Box theatre, drama classrooms, a high-grade recital hall, orchestral room, acoustically treated music practice rooms"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**4. Shrewsbury International School (Riverside campus)** (British curriculum)\n- **Sports:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "two sports fields, a running track, sports hall, gymnastics hall, tennis and squash courts, aquatics centre with learners' pool, junior pool and championship pool, a dance studio, and a climbing wall."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Arts:** the school is "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "enormously proud of its music department"
+          },
+          {
+            "type": "text",
+            "text": ". It also "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "takes IGCSE and A Level drama students to the annual Hong Kong Performing Arts festival"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n**5. Brighton College Bangkok**, in Krungthep Kreetha (British curriculum, newer campus)\n- **Sports:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "a 50m and 25m swimming pool, sports hall, sports pitches, a fitness centre and dance studio, 400m athletics track, and tennis courts."
+          },
+          {
+            "type": "text",
+            "text": "\n- **Arts:** "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "dance and drama studios, instrumental music practice rooms and a stunning 650-seat theatre"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n## Also worth considering\n- **St Andrews International School (Sukhumvit):** this is mainly an arts pick. Its performing arts programme runs "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "in collaboration with The Juilliard School"
+          },
+          {
+            "type": "text",
+            "text": ", and it has a 260-seat theatre. Its sports facilities are smaller because it's a city-centre campus.\n- **NIST International School:** an IB school known for "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "a dedicated performing arts center, expansive sports facilities"
+          },
+          {
+            "type": "text",
+            "text": ".\n- **BASIS International School Bangkok:** a mid-sized option with a "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "25 meter competition pool, 1,600 square meter indoor sports complex, more than 12 rai of fields, 500 meter cross-country track and a gymnastics room"
+          },
+          {
+            "type": "text",
+            "text": ".\n\n## Quick summary\n- **Biggest sports facilities:** ISB and Bangkok Patana, then Harrow, Shrewsbury and Brighton.\n- **Biggest theatres:** ISB (700 seats), Brighton (650) and Patana (600).\n- **Music, drama and dance:** Patana, Harrow, Shrewsbury, and St Andrews for its Juilliard link.\n- **Things to weigh up:** fees are high. For example, ISB charges about "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "THB659,000 to THB1,197,000"
+          },
+          {
+            "type": "text",
+            "text": " a year, and Harrow about "
+          },
+          {
+            "citations": [],
+            "type": "text",
+            "text": "THB757,600 to THB1,063,000"
+          },
+          {
+            "type": "text",
+            "text": ". The campuses are also far apart, with ISB to the north in Nonthaburi, Harrow in Don Mueang and Patana in Bangna, so the commute from your home may matter as much as the facilities.\n\nIt's best to visit in person, ideally during an after-school activities session or a performance, to see how much the facilities are actually used."
+          }
+        ],
+        "container": {
+          "id": "container_01CHYxVtpyAgB6TRLFrGk4s4",
+          "expires_at": "2026-11-20T17:54:31.786806Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 52615,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 2885,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 9,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5902,
+              "output_tokens": 224,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6478,
+              "output_tokens": 198,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 11769,
+              "output_tokens": 256,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 12378,
+              "output_tokens": 195,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 16088,
+              "output_tokens": 2012,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 100
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
