@@ -1,0 +1,249 @@
+{
+  "ok": true,
+  "provider": "anthropic",
+  "model": "claude-opus-5-5",
+  "question": {
+    "id": "g03",
+    "type": "generic",
+    "text": "Top 5 international schools in Bangkok for primary and secondary education"
+  },
+  "started": "2026-11-20T16:49:57.130Z",
+  "finished": "2026-11-20T16:50:20.497Z",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 64000,
+    "betas": [
+      "server-side-fallback-2026-07-01"
+    ],
+    "fallbacks": "default",
+    "tools": [
+      {
+        "type": "web_search_20260209",
+        "name": "web_search"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Top 5 international schools in Bangkok for primary and secondary education"
+      }
+    ]
+  },
+  "response": {
+    "turns": [
+      {
+        "model": "claude-opus-5-5",
+        "id": "msg_011ChEXLnzrFxNf2gUeQdxLE",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSuQUKEAgUGAI4AUIIdGhpbmtpbmcSDEJewvRwU+Ks1Jt6HhoMI4kLNiIyXwAxXv18IjBgonIqQ0aqyrO1gZfOieMyFEBBAjcH/n4i9lbmjUwTal8h5yGuZ6paH4PXngo/Eo8q1gSPG5BY/oHcxr/ik+R3mZgd+/7p3aB6iYzVa9t7zsjhjRB1w2VYYKA5a8nbl3VJpYRiDqo/7qdO18aBI8UKeBHJGRn7p4VwFVnaYFdHhpWaQjDwUPYMwFcBjZ186JoNWex5v+6aOehryUBrfFvj7KmMnNUeTocGJBUVItQ0E5WQps76gUjTUnlk5rKGqBDjgWPA2wHpGckMyW+5/Aord0TklEcQ/U0zAkHCy3iQAs10KUwsakvO80AI53o8swJBE3jKQv1WRkMWugosqRCXSOMwsIvzX3ycitMRatv/zuqbNaaneYpIPG8nwjgX5I/c1McGb1HC3NAbpqMiXJ/flmGuklqkNuAFUCwE2dnYRymBrbIc6M/7l/WeXFhqhGZGXC4rvQ5ZXHYSoQo7GVk9ji4mQ5mVVXzZcZbcmTXy1gTlwcBiELkSPwWxQoywwKF+SCxCsgPuXbBtgVsbC5wix4lNVUwMrsuhH3AHvDc0AiyzeQRotkeH3pBTkQv/OxzI+EYbdkEIhyq5L5NXciFD+tQY0h4cOvQsHuTAu1NB9pvCvv0wwoo2mOMzJDQNeDFPbwwOUg+vZ8+LfAK+cU4tJ/a+IciPnJ8otqXRretcXcUzGZv6VWJ3SefiT/RsvoRyGDPJpSRKAEBmTK/7hTzbUuf36Yho2dkDt1yw72RTVABnFx3mthsf7FhIZmpI0250LVTvhP7R1+dOHS5R0Bgu+con0PS7OrwcUZUrEiOxPtOhd1o04Qb9Dh55lyUBYOfyed3745RmNMqPD6sUpNAOuyvbqJw2/M51GAE="
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01Fcp7zSv3nMCZ6RgWuBBru3",
+            "name": "code_execution",
+            "input": {
+              "code": "import json\nr = await web_search({\"query\": \"best international schools Bangkok ranking 2025\"})\nfor x in r[:6]:\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')"
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01AwUfrXYLvjxtUv7yedKZkw",
+            "name": "web_search",
+            "input": {
+              "query": "best international schools Bangkok ranking 2025"
+            },
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01Fcp7zSv3nMCZ6RgWuBBru3"
+            }
+          },
+          {
+            "type": "web_search_tool_result",
+            "tool_use_id": "srvtoolu_01AwUfrXYLvjxtUv7yedKZkw",
+            "content": [
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok (2026 Guide)",
+                "url": "https://blog.doris.school/best-international-schools-in-bangkok",
+                "encrypted_content": "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",
+                "page_age": "8 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 10 Best International Schools in Bangkok 2026",
+                "url": "https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Best International Schools in Bangkok 2025–2026",
+                "url": "https://www.tutopiya.com/blog/international-school-fees/best-international-schools-bangkok/",
+                "encrypted_content": "EswLCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDPjSruAPlFGGVqA70hoMxEnKG5LQ/t01hgWgIjDDsUR3BxAwvMLmR0vEwI0PNOdzePK8/C+9ngzyNw7vyZyDON1BJUttJxBztjmHIPMqzwr+aV1s57+k3gxvjHBCbc0XSShiQPS2MFK/zdCyDayzh6BxfRxQrczxDl8Mfz+KxQl09YNpfdSZYCm2BPKsTwcAUhHTA2yGm9J+dfbb92ydgEaTaDrDvV2UI/HVYdCkz/NQLDCOycvgssanfReuy9/J9x7d674Oxey0vrSmUWUOTOmW7PE8gH1VE5xoSM+dT/WiCt2FmFUXLH+RAfSZSAGGAFJ0j+qClXf6B3hNskWrvKXoQ96LMSrEPVtGThB4UYgxGONHair0H1nSOymoC5yeUmycvWtE7pt+JpsVzF3CrZgCY6dgyowRCXHhZLrBxi5OD4glri0zRpIoVZWZQnJvVL529vmpOxDca+wwV7483hg4WHoJ9uoIYSilGyxy3iPAqEXvTZh9RXL3mwNltVaOvV+8P5Ju+8/K+cx/+PUZdyO6Ba63VhFDXztxoaNu5deUxyzh5nRXYgRYJHy4WEdNZuz2NoKDVKXVtkeUKoz/EdAViZdII05uf4mX7UelCeIt+n9hSdy6dRh5ZqGCnOJ5wS4O81u5sTiXUKQLbYJ0b4OTu2mUtYujaWMIRypGlF6fw+OLhs8p1uMdzs8aXHr1QJ3QJwZgYMLH6KUe+yDw60jwKDfcKQM0t/skV5P+7XDHR3Rpz5Qef2Yxq4fjg3lCjxwVcr189DB+JjCh/xJemsI5nVmsaXnS2238HXKqw+En6g4PHVKtDjXfwkmVgOmapbclyZtKy49DcY6MxEgcftI+RLwawfB5VvZjHJ35aOY8T6tYIBWC1XptaR8N8iDa1AZ3iWGC5VP88CzN6ccSM9pA9iDsJ/wpFobVEPN9llVA7ejJsCmsGM2bS+vlTaTsF9B1szfg+cdwHGh2xtde1Nwzps2Rm4RHql/gn1YaezSbJAIk9CSZolBfxpbNW/PkFsX18d+TO5sj2ChyW/4xeqbHN8WInleDWukxOiM4/yCG5xMLTb7wHKiC2v4SSGJMjW+OQHxojY/pvTn3AtShuOW3fucBJWOgnu1kR3xgbwPku223nlFpfB7imO5SQz/XuPieyJCXue18wqriLLVA6Y9NxVNxjFNFi31HbvMVrVYbFI190G6loN41XC6USxzPRB3/k7yT6b1bxdeaKdb1pD5ylTqCBmoG42mw1xXtH/J/Xa1BfpAJmSI12F3aBZcJ0PbVQqp5J1GsUCW5EpaOZxSqTHRVlz1kRt6vcqAtW9FAVofj5g7rIzPrMEfj+0FQS4cDEm5cUhjtxezMEiULbE0H2HeA1NNLZb55lAskRZaU6thQxJwoufPMAk35zt7h3nqQVeb3FmtKmgPsHykL0eKsL6h9CkXX1vy6tHC7y3+qDRz4rbvGVaAyoUUREwt9Q58MLkwNk1QFGKUFMFaquFuZMoF9oCk9cMtot4QMT2L00A80k0Fn0hkzIqtuj1+QVcyFbohh5aTeU/1GT0NgLFQH5hyeFGox+4VgeW5s8D83xbHmYwbNV4wt7Fr9UAWADX/Xo0hTTbCEAmW0ujQFOCS5/xNpYK8sT272fJxoMPCxqe5gsypTXgg6/d05bHp4O4WnOzB3iXsl98feQ2l0XCCLHI8hmH1D3+9u7lefCGEoGNL2VNh/Ji/k9cmzzE66O6cbk2OT7f7Ge8gAM4va3csnKRyqnoiBYIUHECNad6dB931CSZkrED1G24yLkI7OdFL+a+Kcjgxq6VIQDS2xeXNJG3QLOkyEhE0XIXtABdo2aBuw/25CLsIPhGN0hWmJQfGr9ZVB5aCtbKnJKZLCOSjjeiKXE7nbbWXfG0+Y5x5eKuveR1iOs4V5K579dHcYAw==",
+                "page_age": "294 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "Garden International School Bangkok",
+                "url": "https://en.wikipedia.org/wiki/Garden_International_School_Bangkok",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Shrewsbury International School",
+                "url": "https://en.wikipedia.org/wiki/Shrewsbury_International_School",
+                "encrypted_content": "EsoNCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDIxOYfdny+0pk2ljUxoMyGxzuX0gYSMK0ZTaIjCKVhDaBwy1YTOvdqx/Q/YHdsgWn8LshjZnrIms24zhBuHptv+k1AFHQ5dYWo3sE1IqzQwLzITTkiUauWf/H6vgjsR9b4pcQaLS6bXWZoc1V3Nd889JNeNOfr8JjEip5lf/JN28u816/y4OJKN82wuXSpL1k9cdlFzl6WMO3RDSWjbf2r3Hut0sROhabTNG5crQugr7zdfoGllWdbEu1b2yiSRH2pbRP7Pvq+YQvT5WnqlPC9PZ+AvoEqdNEtzJ8tWK6HZGJOwZ383T8WFStEMR/ZYWnXGTpTFh2EVbKmz8pbXsvcnTjUiFi5vqm1PyYQ8N9532ekAfY94Rwe3cgmo/uXrIm5IZuAY0onzD1WGo47QQbKctxyBp/6mnEs8oqNXnT+xThEaDc9PPBh2wRTXAp1y2CgziK82IMvrRQg4eCoM8N+m77zr5ySQaUUacZCHyowxmubt3cAVb5/usE500NGAv4jUaAdLHamZcfmn9aON9jWwGdIqvOTbaYK2WCH7fzyE74zSOUoFSSx/MhQL3xWoWry5JcmQLG53FRuyQ2/FEpcyIHtnjmU0XH9PuSpJ10HW8uZ49jVr6bn1WkY72syl6Nn9imqN2bCGs+Ajvn1ex6etVOoV9QUI9bGGv49GYGC73Mx2b6hiqsw23H3q7t4Xpp9/ccOQdeI++XI6kOVJckObhPBwbCN3RQ46kKab0/PTjgjuf3xFPeYH4vTBP0JQ0R8y5eHgiGi9llC8kLDSLrAOpzcl+Ht+zANtSXL/UNYeTgDZG0wWOJtyahEcmvj/c6LYLJKRU+fF9Zfk92xOyyZ3D+yuMEIYYRN/xyv3yz3Pi3sZ9WAFGv23UR66ihgJAP182L2wRzMxMaf3khib92d+0wOFbSfEedyaINfEl4Bx6z+PcEiqO1ze26IQRRA6MKQR7JkS8uqwgPu7UVXzPSBj/Oj3weRdGBUsPS78f3BiFecEv9Vc9Ub5bxpSEO4yV+MfgMopg2ug7g3rcknirqyer3rmvU6I9xMeaME+AjPoRGrowRiyQEHb5dieTtBGJuFydahZoJOFDrg+nm6IydntsP2c95qULYTgCTJ8or9d+qmGKyKXLXb1qjsNe2uSMc5+QjKMTKWnpyRWSteTKd9DZPWxnBUD8SbJKnikjYBYsZDS2P6xnHnWmvbDMaEQQi+Jn/YXYa4flfhZn1TZZNeTTGGgeunkB3guXjBpuOqsVdi7PTKax//8vcgp4W0ejf1hyMRFMWaYCaNqCsSwc8cUKvXTVK4xZOcF/8GY0U6Ngf/6An8ee6gWGZ2EA5uzpOnMSFcDi/3xUZL3WC31fQ/hAEMSjCYtgRdaGXonxaVPQbwry0iun8TLfNzYl0aSvhTet6VqrrrJQkjYhjI2ossWemJHKjs4uMA4fdOGnBvgK4QWrzjP4zx0cpqMBiyze/Ll/7vLuSNH6ctJQeOFS0g8pnlCkDXvWU7UnlsRq+hI/jFiVGlGc0XpGdhe5lLTsHS5sxCK6s1ZSxVjm5eKsPiexXm7pHZE0oo3WX8JTxKxnCYVKkDREUm3gW0c7WRmZkoEf2RHLplFFpY3YZAFWPvj6Cr02dqUT/Dct5Cs8ki0gXcFSwYEoP/5r2v0p7ZK/GjOA+WQfeom9ms2kh5b8L0ZTBkaijv/8nZJxO86y02WBwd39kEL56aoktC5Krbe6NU+zM+3rG4cgRzqq9qSrC0i4dtXlpj0jR9K0lyNTcJ1uri+SJmQP83l7rrAkARmEguzRb9z+L780HxkJ/E9h77s0P1pAI2GXFHyBZqq2W6n9ofJBrwLLIyn2mm8p8+HLvNOfEqasRBdsq+KsbzHkGnSjvgwxS5ZAdZINS6Ssm6aF1dNbz639BSzTUx2Z3ooRdNEub9WTq+gMprsqzwyZjIin5i4sO/XryEonMdXl0u+irIc5lKyhobrAypvNbLCI/AhBUvWR5GLnoeNr3pAF+mVebjxWrznke6bNf3yyEv73jDw/o07JzRg2Da5btnpUPTXeVGiTjLmFpvEoruRMot9bXvyhercSbOA6TCUodauLnps1F0oQ1y82WcrEadxdnYWHo4T1EjA4jsT6wKN9duk+aWIvR4Cx6eray51vFuDuFgYmdWeIzzR15K7OrUWYiRB9mz30pQLgQrZv5qo8ZqPiZbF25iGORYdibp/1VhwEBmbChRo/v/1v9X1pP+lawN8MMp37NGCIRVPruRgD",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "VERSO International School",
+                "url": "https://en.wikipedia.org/wiki/VERSO_International_School",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "American School of Bangkok",
+                "url": "https://en.wikipedia.org/wiki/American_School_of_Bangkok",
+                "encrypted_content": "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",
+                "page_age": null
+              },
+              {
+                "type": "web_search_result",
+                "title": "Top 5 International Schools in Bangkok (2026)",
+                "url": "https://international-schools-guide.com/insights/top-5-international-schools-bangkok/",
+                "encrypted_content": "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",
+                "page_age": "140 days ago"
+              },
+              {
+                "type": "web_search_result",
+                "title": "10 Best International Schools in Bangkok (November 2026 Rankings)",
+                "url": "https://www.international-schools-database.com/in/bangkok/top-schools-in-bangkok",
+                "encrypted_content": "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",
+                "page_age": "192 days ago"
+              }
+            ],
+            "caller": {
+              "type": "code_execution_20260120",
+              "tool_id": "srvtoolu_01Fcp7zSv3nMCZ6RgWuBBru3"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01Fcp7zSv3nMCZ6RgWuBBru3",
+            "content": {
+              "type": "encrypted_code_execution_result",
+              "encrypted_stdout": "Eo4BCioIFhgCIiRlOGYzNGI4My1kYTRmLTRmYjMtYmExNC0xNjNhM2RhZWI5YzUSDBYTriUDIRzNE4znYBoMZ7LNQDk35Cypvb9CIjCMDxKjP+KfDpXehlSb72gw7CaMB0nTLHz8+3QRfOoFtj07MxNcXBg0e+NPAAqAqkoqEnnCMzBB6TeeYRXb2KzMUntQDRgD",
+              "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/tmp/srvtoolu_01Fcp7zSv3nMCZ6RgWuBBru3/cell.py\", line 11, in <module>\n    print(x['title'], x['url']); print(x['content'][:1500]); print('---')\n          ~^^^^^^^^^\nTypeError: string indices must be integers, not 'str'\n",
+              "return_code": 1,
+              "content": []
+            }
+          },
+          {
+            "type": "server_tool_use",
+            "id": "srvtoolu_01W2Yj8gZK2TJveUa7c8iCAt",
+            "name": "code_execution",
+            "input": {
+              "code": "print(type(r)); print(str(r)[:3000])"
+            }
+          },
+          {
+            "type": "code_execution_tool_result",
+            "tool_use_id": "srvtoolu_01W2Yj8gZK2TJveUa7c8iCAt",
+            "content": {
+              "type": "code_execution_result",
+              "stdout": "<class 'str'>\n[{\"type\": \"web_search_result\", \"title\": \"Best International Schools in Bangkok (2026 Guide)\", \"url\": \"https://blog.doris.school/best-international-schools-in-bangkok\", \"content\": \"What\\u2019s the best international school in Bangkok? There\\u2019s no single \\u201cbest\\u201d, each school offers different strengths. Families often shortlist **Dulwich College Bangkok, St.\\n\\n# Best International Schools in Bangkok (2026 Guide)\\n### Best International Schools in Bangkok (2025 Overview)\\n\\n| --- | --- | --- | --- |\\n| Dulwich College International School Bangkok View Dulwich College Bangkok School Profile  | British, IGCSE, A Levels | 2\\u201318 | Follows the English National Curriculum with IGCSE and A Level qualifications |\\n\\nAndrews International School Bangkok View St Andrews International School Bangkok \\u00a0School Profile  | British, IB Diploma | 2\\u201318 | Offers the English National Curriculum through to the IB Diploma Programme |\\n\\n### Other International Schools in Bangkok\\n\\nBangkok has a broad selection of international schools serving different curricula and family preferences. The following schools are also part of the city\\u2019s international education landscape:\\n\\n### Other International Schools in Bangkok\\n**Harrow International School Bangkok** \\u2013 Offers the English National Curriculum with boarding options and co-curricular programmes.\\n\\n**International School Bangkok (ISB)** \\u2013 Combines an American curriculum framework with IB and AP course availability.\\n\\n**Shrewsbury International School Bangkok** \\u2013 Provides an English National Curriculum pathway from early years to A Levels.\\n\\n**What\\u2019s the best international school in Bangkok?** There\\u2019s no single \\u201cbest\\u201d, each school offers different strengths.\\n\\n**Which international schools offer IB in Bangkok?** NIST, St.\", \"page_age\": \"8 days ago\"}, {\"type\": \"web_search_result\", \"title\": \"Top 10 Best International Schools in Bangkok 2026\", \"url\": \"https://www.thailandprivilege.co.th/why-thailand/best-international-schools-bangkok\", \"content\": \"**International School Bangkok (ISB)** \\u2026 3. St Andrew's International School Bangkok \\u2026 4. **KIS International School Reignwood Park**\\n\\n# Best International Schools in Bangkok for Expat Children\\n## The 10 Best International Schools in Bangkok for Expat Families\\nThe schools listed below represent a cross section of the best schools in Bangkok for expats, selected across curricula, age range, and community profile.\\n\\nInternational School Bangkok (ISB)**\\n\\nISB is one of Bangkok's oldest and most established international schools, consistently recognized for its academic rigor, extensive extracurricular programs, and large, diverse student community drawn from over 50 nationalities.\\n\\nRegent's International School Bangkok**\\n\\nSt Andrew's International School Bangkok**\\n\\nKIS International School Reignwood Park**\\n\\nGarden International School Bangkok**\\n\\nAustralian International School Bangkok (AISB\n",
+              "stderr": "",
+              "return_code": 0,
+              "content": [],
+              "abort_reason": null
+            }
+          },
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "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"
+          },
+          {
+            "type": "text",
+            "text": "Bangkok has no official ranking of international schools. The five below are the ones most often named as the city's top schools, based on exam results, how long they've been running, accreditation and reputation. All of them teach children from early years through age 18.\n\n## 1. Shrewsbury International School Bangkok\n- **Curriculum:** British (English National Curriculum), with IGCSE and A Levels\n- **Location:** Riverside campus on Charoen Krung, plus a separate City Campus for primary near Rama 9\n- **Known for:** Some of the best A Level results in Asia, many graduates going to Oxbridge, UK Russell Group and US Ivy League universities, and strong music and performing arts\n\n## 2. Bangkok Patana School\n- **Curriculum:** British curriculum through IGCSE, then the IB Diploma\n- **Location:** Bang Na (Sukhumvit 105)\n- **Known for:** It's the oldest British international school in Thailand (founded 1957) and is not-for-profit. It has a large campus with excellent sports facilities, steady IB results and a very international student body.\n\n## 3. International School Bangkok (ISB)\n- **Curriculum:** American, offering both IB Diploma and AP courses\n- **Location:** Nichada Thani, Pak Kret (north of the city)\n- **Known for:** It's the oldest international school in Thailand (founded 1951) and is not-for-profit. It has a huge campus, a wide range of activities and a strong record of sending students to US universities.\n\n## 4. Harrow International School Bangkok\n- **Curriculum:** British curriculum through IGCSE and A Levels\n- **Location:** Don Mueang\n- **Known for:** It's linked to Harrow School in the UK and is one of the few top Bangkok schools that offers boarding. It focuses on leadership, house traditions and character education.\n\n## 5. NIST International School\n- **Curriculum:** Full IB, meaning all three IB programmes (PYP, MYP and Diploma)\n- **Location:** Sukhumvit Soi 15, central Bangkok\n- **Known for:** It's not-for-profit, has strong IB results and is the most central of the five, so it suits families living downtown.\n\n## Other strong options\n- **St Andrews International School Bangkok:** British curriculum plus IB Diploma\n- **Dulwich College Bangkok:** British curriculum, IGCSE and A Levels\n- **Regent's International School Bangkok:** Full IB\n- **Wells International School:** IB, and one of the cheaper choices\n\n## Things to consider\n- **Fees:** Top-tier schools charge roughly **฿600,000–1,100,000+ a year**, with higher fees for older year groups. Many also charge one-off enrolment, application or debenture fees. Check each school's website for current figures.\n- **Curriculum fit:** British schools leading to A Levels usually suit families aiming for UK universities. IB is accepted worldwide and suits families who might move again. American schools offering AP courses fit US university plans.\n- **Commute:** Bangkok traffic is a real problem. ISB and Harrow are far north, Patana is in the southeast and NIST is central, so choose a school near where you'll live, or the other way round.\n- **Waitlists:** The most popular schools, especially Shrewsbury, Patana and NIST, often have waiting lists for certain year groups, so apply early.\n- **Accreditation:** Look for international accreditation such as CIS, WASC or BSO, or membership of FOBISIA, a group of British-curriculum schools in Asia.\n\nIf you tell me your child's age, your preferred curriculum, budget and the area you'll live in, I can narrow this list down."
+          }
+        ],
+        "container": {
+          "id": "container_01DhfKgrdqtmdzwAduh4vGgS",
+          "expires_at": "2026-11-20T17:50:03.681806Z"
+        },
+        "stop_reason": "end_turn",
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 19927,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens": 1832,
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard",
+          "server_tool_use": {
+            "web_search_requests": 1,
+            "web_fetch_requests": 0
+          },
+          "iterations": [
+            {
+              "input_tokens": 5904,
+              "output_tokens": 153,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 6427,
+              "output_tokens": 65,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            },
+            {
+              "input_tokens": 7596,
+              "output_tokens": 1614,
+              "cache_read_input_tokens": 0,
+              "cache_creation_input_tokens": 0,
+              "cache_creation": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              },
+              "type": "message",
+              "model": null
+            }
+          ],
+          "output_tokens_details": {
+            "thinking_tokens": 432
+          }
+        },
+        "diagnostics": null,
+        "parsed_output": null
+      }
+    ]
+  }
+}
