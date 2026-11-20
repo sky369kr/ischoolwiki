@@ -125,3 +125,9 @@
 - 결과: B-02 수정 완료. PR #24 병합 진행
 ### VERDICT
 - 결과: PASS / 단계/대상: 안정화 / B-02 (R-02) / 근거: 파일럿 2차 출처 대조, 사람 원문 대조 확인, check.sh PASS / 다음 담당: 사람(운영 배포)
+
+## 2026-11-19 · release(메인) · 안정화 / R-02 출시 후 확인
+- 한 일: 사람이 main(aa72bc8)을 운영 배포(Worker 31574c4f). verify-live.sh 실행: 1·2회차는 두 경로(docs/log.md와 비밀 파일 경로)가 접속 실패로 SKIP, 3회차 19항목 모두 404 PASS
+- 결과: B-02(R-02) 완료. docs/ops/releases.md v1.0.2
+### VERDICT
+- 결과: PASS / 단계/대상: 안정화 / R-02 출시 후 확인 / 근거: verify-live.sh 19항목 PASS / 다음 담당: ops(매일 점검에서 보류 건수·출처 관찰)
