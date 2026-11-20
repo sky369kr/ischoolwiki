@@ -137,3 +137,9 @@
 - 결과: check.sh 전체 PASS. BSN 파일럿은 사람이 맥에서 실행
 ### VERDICT
 - 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / BSN Nanjing 소식 수집 / 근거: 링크 형식 확인, 단위 테스트, check.sh PASS, 파일럿 미실행 / 다음 담당: 사람(맥에서 ONLY=bsn-nanjing 파일럿)
+
+## 2026-11-20 · qa(메인) · 안정화 / BSN Nanjing 파일럿 (사람 맥, 7d84021, ONLY=bsn-nanjing RUNS=3)
+- 한 일: 영어 월 이름 수정 뒤 파일럿. 소식 20건 수집, 날짜 모두 URL과 일치(일 없는 2025/august 경로 2건은 8월 1일). 사실 32건(school_site). 영어 3편 중 2편 게시(학생회·학생 리더십, Greenhouse 식당·새 교과 리더)와 번역 2편, 1편 보류(Oxbridge 모의 면접·Academic Cup: "older students"라는 추론을 근거 검사가 잡음 — 안전한 동작)
+- 결과: 학생 개인 이야기(Liya), 개별 대학 합격 소식, 입학 안내·캠프 홍보는 사실 0건으로 걸러짐(used_by NULL). 출처는 글마다 쓴 소식 페이지와 일치. 관찰: "Part of the Nord Anglia Education family"·과정 목록 같은 학교 소개 사실이 소식 페이지(11월 9일 첫 합격 소식 등)의 공통 문구에서 뽑혀, 그 소식 페이지가 학교 소개 문단의 출처로 붙음 — 사실과 출처는 맞지만 독자에게는 어색함. 학비 등 수동 사실 없음. 남은 확인: 게시 글을 학교 소식 원문과 사람이 대조
+### VERDICT
+- 결과: NEEDS_APPROVAL / 단계/대상: 안정화 / BSN Nanjing 소식 수집 (PR #30) / 근거: 파일럿 수집·출처 정상, check.sh PASS, 원문 대조 사람 확인 대기 / 다음 담당: 사람(원문 대조 "확인")
